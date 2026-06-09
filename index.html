@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AHR Verified Reasoning Demo</title>
+  <meta name="description" content="A lightweight AHR chatbot demo with exact verified answers and honest abstentions.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="chat-panel" aria-label="AHR chatbot">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AHR verified reasoning</p>
+          <h1>Ask the lightweight demo</h1>
+        </div>
+        <div class="status-pill" title="The demo answers only verified supported question families.">
+          <span class="status-dot"></span>
+          Exact backends only
+        </div>
+      </header>
+
+      <div class="messages" id="messages" aria-live="polite"></div>
+
+      <form class="composer" id="chatForm">
+        <textarea id="questionInput" rows="3" placeholder="Paste one question, or several numbered questions..." aria-label="Question"></textarea>
+        <div class="composer-actions">
+          <button type="button" id="clearBtn" class="icon-button" title="Clear chat" aria-label="Clear chat">
+            <span aria-hidden="true">R</span>
+          </button>
+          <button type="submit" class="send-button">Ask</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="side-panel" aria-label="Demo controls and status">
+      <canvas id="reasoningCanvas" width="620" height="300" aria-label="AHR finite verification graph"></canvas>
+
+      <section class="panel-section">
+        <div class="section-title">
+          <h2>Supported live questions</h2>
+          <span id="supportedCount"></span>
+        </div>
+        <div class="question-list" id="questionList"></div>
+      </section>
+
+      <section class="panel-section compact">
+        <h2>What it will not do</h2>
+        <p>
+          If a question is outside these verified families, the demo abstains.
+          That is intentional: the current research solver is not a broad math chatbot.
+        </p>
+      </section>
+    </aside>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
