@@ -1,0 +1,83 @@
+{
+  "best_selection_score": 4.820380917635096,
+  "completed_games": 115,
+  "current_game": "ahr-selfplay-2026100709-115",
+  "current_ply": 29,
+  "elapsed_seconds": 28800.11470461903,
+  "event_step": 199177,
+  "global_step": 199177,
+  "is_smoke": false,
+  "last_calibration": {
+    "selection_basis": "heldout_joint_plus_Brier_no_training_loss",
+    "selection_score": 5.114664760515804,
+    "splits": {
+      "dev": {
+        "accuracy": 0.65625,
+        "brier": 0.5196449431635096,
+        "ece_10_bins": 0.1948348935693503,
+        "game_families": [
+          "ahr-selfplay-2026100709-12",
+          "ahr-selfplay-2026100709-14",
+          "ahr-selfplay-2026100709-17",
+          "ahr-selfplay-2026100709-22",
+          "ahr-selfplay-2026100709-23",
+          "ahr-selfplay-2026100709-59",
+          "ahr-selfplay-2026100709-89",
+          "ahr-selfplay-2026100709-107"
+        ],
+        "games": 8,
+        "joint_loss": 4.595019817352295,
+        "mean_confidence": 0.7947359662503004,
+        "ownership_mse": 0.5471533977275461,
+        "rows": 32,
+        "score_mae": 0.25309443609859883
+      },
+      "train": {
+        "accuracy": 0.71875,
+        "brier": 0.31239059109549705,
+        "ece_10_bins": 0.12817117013037208,
+        "game_families": [
+          "ahr-selfplay-2026100709-98",
+          "ahr-selfplay-2026100709-99",
+          "ahr-selfplay-2026100709-101",
+          "ahr-selfplay-2026100709-102",
+          "ahr-selfplay-2026100709-103",
+          "ahr-selfplay-2026100709-104",
+          "ahr-selfplay-2026100709-105",
+          "ahr-selfplay-2026100709-106"
+        ],
+        "games": 8,
+        "joint_loss": 3.682105779647827,
+        "mean_confidence": 0.7394644785672426,
+        "ownership_mse": 0.36930982903698173,
+        "rows": 32,
+        "score_mae": 0.12828732614882626
+      }
+    }
+  },
+  "last_loss": 3.0495283603668213,
+  "latest_checkpoint": "step-000199177-108430c8.pt",
+  "optimizer_step": 752,
+  "remaining_seconds": 0,
+  "replay_dev_games": 8,
+  "replay_lockbox_games": 13,
+  "replay_train_games": 94,
+  "replay_train_rows": 8153,
+  "run_id": "ahr-v2-repair-20261007-8h",
+  "schema": "ahr-v2-training-progress-v1",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/09_calibrated_selfplay_training.ipynb": "d316a791e00c5b7d585cdfc57a560c8f8d3eaf93789f44f8dcf19a53121c351b"
+  },
+  "stage": "selfplay",
+  "status": "TIME_BUDGET_COMPLETE",
+  "tactical_rows_seen": 12032,
+  "total_games": 115,
+  "training_source": "ahr_selfplay_plus_exact_bounded_tactics",
+  "unknown_games": 0,
+  "updated_at_utc": "2026-10-08T00:33:27.250742+00:00"
+}

@@ -1,0 +1,66 @@
+{
+  "assignment_failure_count": 0,
+  "assignment_failures": [],
+  "clinical_use": "forbidden",
+  "created_at_unix": 1780602478.8661637,
+  "dataset_path": "/home/benjamin/02_ahr_csp_math_words/.1AHR_maths&words/ahr_csp_v0/data/reasoning_challenge_v0/compiled_ahr_csp_v0/reasoning_curriculum_v16v_operation_synthesis_len3_unhinted55_4096_1024_1024.jsonl",
+  "execution_failure_count": 0,
+  "execution_failures": [],
+  "kind": "reasoning_curriculum_v16v_operation_synthesis_len3_unhinted55_4096_1024_1024_verifier_report",
+  "passed": true,
+  "record_count": 6144,
+  "semantic_failure_count": 0,
+  "semantic_failures": [],
+  "z3_failure_count": 0,
+  "z3_results": [
+    {
+      "family": "operation_synthesis_len2_factored",
+      "id": "reasoning_curriculum_v16v_operation_synthesis_len3_unhinted55_4096_1024_1024_train_operation_synthesis_len2_retention_00000",
+      "passed": true,
+      "split": "train",
+      "z3_status": "sat",
+      "z3_verified_valid": true
+    },
+    {
+      "family": "operation_synthesis_len3_factored",
+      "id": "reasoning_curriculum_v16v_operation_synthesis_len3_unhinted55_4096_1024_1024_train_operation_synthesis_len3_unhinted55_01843",
+      "passed": true,
+      "split": "train",
+      "z3_status": "sat",
+      "z3_verified_valid": true
+    },
+    {
+      "family": "operation_synthesis_len2_factored",
+      "id": "reasoning_curriculum_v16v_operation_synthesis_len3_unhinted55_4096_1024_1024_val_operation_synthesis_len2_retention_00000",
+      "passed": true,
+      "split": "val",
+      "z3_status": "sat",
+      "z3_verified_valid": true
+    },
+    {
+      "family": "operation_synthesis_len3_factored",
+      "id": "reasoning_curriculum_v16v_operation_synthesis_len3_unhinted55_4096_1024_1024_val_operation_synthesis_len3_unhinted55_00460",
+      "passed": true,
+      "split": "val",
+      "z3_status": "sat",
+      "z3_verified_valid": true
+    },
+    {
+      "family": "operation_synthesis_len2_factored",
+      "id": "reasoning_curriculum_v16v_operation_synthesis_len3_unhinted55_4096_1024_1024_test_operation_synthesis_len2_retention_00000",
+      "passed": true,
+      "split": "test",
+      "z3_status": "sat",
+      "z3_verified_valid": true
+    },
+    {
+      "family": "operation_synthesis_len3_factored",
+      "id": "reasoning_curriculum_v16v_operation_synthesis_len3_unhinted55_4096_1024_1024_test_operation_synthesis_len3_unhinted55_00460",
+      "passed": true,
+      "split": "test",
+      "z3_status": "sat",
+      "z3_verified_valid": true
+    }
+  ],
+  "z3_sample_count": 6
+}

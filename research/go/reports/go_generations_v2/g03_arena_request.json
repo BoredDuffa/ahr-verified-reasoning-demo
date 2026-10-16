@@ -1,0 +1,6 @@
+{
+  "candidate_run": "go09-v2-generation-03",
+  "configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+  "generation": 3,
+  "reference_run": "go09-first-selfplay-v1"
+}

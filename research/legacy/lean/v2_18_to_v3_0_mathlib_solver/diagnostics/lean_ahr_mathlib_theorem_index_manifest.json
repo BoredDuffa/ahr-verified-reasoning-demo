@@ -1,0 +1,12 @@
+{
+  "bytes": 133669977,
+  "index_included_in_package": false,
+  "index_path": "/home/benjamin/03_ahr_lean_foundation_plan_20260508/datasets/lean_ahr_mathlib_theorem_index.jsonl",
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "line_count": 173442,
+  "mathlib_tag": "v4.30.0",
+  "reason_not_included": "Full theorem index is large; package includes reproducibility metadata and checksum instead.",
+  "schema": "ahr_lean_mathlib_index_manifest",
+  "sha256": "14affa664f12efedf2c5094fc85c448083965fc3e1cfad30d984e6b1fdbe8ffe",
+  "workspace": "/home/benjamin/03_ahr_lean_foundation_plan_20260508/lean_ahr_mathlib_workspace"
+}

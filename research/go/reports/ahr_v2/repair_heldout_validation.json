@@ -1,0 +1,61 @@
+{
+  "audit": {
+    "selection_basis": "heldout_joint_plus_Brier_no_training_loss",
+    "selection_score": 4.024486676063948,
+    "splits": {
+      "dev": {
+        "accuracy": 0.5,
+        "brier": 0.5863391312031084,
+        "ece_10_bins": 0.0690041072666645,
+        "game_families": [
+          "ahr-selfplay-2026100709-12",
+          "ahr-selfplay-2026100709-14"
+        ],
+        "games": 2,
+        "joint_loss": 3.43814754486084,
+        "mean_confidence": 0.4309958927333355,
+        "ownership_mse": 1.0336159230808462,
+        "rows": 8,
+        "score_mae": 0.18574988864068137
+      },
+      "train": {
+        "accuracy": 0.5,
+        "brier": 0.5912346542291541,
+        "ece_10_bins": 0.10321983893712364,
+        "game_families": [
+          "ahr-selfplay-2026100709-5",
+          "ahr-selfplay-2026100709-6",
+          "ahr-selfplay-2026100709-7",
+          "ahr-selfplay-2026100709-8",
+          "ahr-selfplay-2026100709-9",
+          "ahr-selfplay-2026100709-10",
+          "ahr-selfplay-2026100709-11",
+          "ahr-selfplay-2026100709-13"
+        ],
+        "games": 8,
+        "joint_loss": 3.786187171936035,
+        "mean_confidence": 0.4233015199502309,
+        "ownership_mse": 1.0150966591642923,
+        "rows": 30,
+        "score_mae": 0.7078558173349225
+      }
+    }
+  },
+  "best_loaded": true,
+  "best_selection_basis": "heldout_joint_plus_Brier_no_training_loss",
+  "completed_games": 15,
+  "development_games": 2,
+  "development_rows": 8,
+  "optimizer_step": 26,
+  "run_id": "ahr-v2-repair-heldout-smoke-d6d8e4a56",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/09_calibrated_selfplay_training.ipynb": "d316a791e00c5b7d585cdfc57a560c8f8d3eaf93789f44f8dcf19a53121c351b"
+  },
+  "status": "PASS",
+  "whole_families_disjoint": true
+}

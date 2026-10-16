@@ -1,0 +1,19 @@
+{
+  "complete": false,
+  "metrics": [
+    {
+      "development": {
+        "loss": 5.043399333953857,
+        "ownership": 0.6183944940567017,
+        "policy": 3.7643826007843018,
+        "score": 0.003498068079352379,
+        "value": 0.968070387840271
+      },
+      "kind": "initial",
+      "optimizer_step": 0
+    }
+  ],
+  "optimizer_step": 1,
+  "resumed_from": 0,
+  "run_id": "go08-smoke-resumed-3da42e69"
+}

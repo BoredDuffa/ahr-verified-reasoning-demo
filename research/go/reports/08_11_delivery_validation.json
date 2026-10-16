@@ -1,0 +1,128 @@
+{
+  "checked_at_utc": "2026-09-23T16:27:35.008836+00:00",
+  "checkpoint_handoffs_same_model": true,
+  "exact_recovery": {
+    "08": [
+      {
+        "device": "cpu",
+        "status": "PASS",
+        "steps": 16
+      },
+      {
+        "device": "cuda:0",
+        "status": "PASS",
+        "steps": 16
+      }
+    ],
+    "09": [
+      {
+        "actor": "cpu",
+        "exact_resume": true,
+        "learner": "cpu",
+        "steps": 4
+      },
+      {
+        "actor": "cuda:1",
+        "exact_resume": true,
+        "learner": "cuda:0",
+        "steps": 4
+      }
+    ],
+    "11": true
+  },
+  "graphical_review": "NOT_PERFORMED: no graphical viewer available",
+  "historical_00_07_code_unchanged": true,
+  "historical_source_reference": "reports/07_transfer_validation.json",
+  "long_selfplay_started": false,
+  "model_promoted": false,
+  "notebooks": [
+    {
+      "code_cells_executed": 7,
+      "code_sha256": "79989fa6cd91262aaf6a1184749775bd9a60054f046071c87d99eabdbe410f23",
+      "errors": 0,
+      "graphical_review": "NOT_PERFORMED: no graphical viewer available",
+      "hash_encoding": "code cells joined with two newlines",
+      "html_bytes": 546847,
+      "html_preview": "reports/08_go_learning_preview.html",
+      "html_structural_check": "PASS",
+      "notebook": "notebooks/08_go_specific_adaptation.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_cells_executed": 12,
+      "code_sha256": "5c09e2cf8d3d933ba343a099e54fd64f058307c96ddd65303b844152fc463bf3",
+      "errors": 0,
+      "graphical_review": "NOT_PERFORMED: no graphical viewer available",
+      "hash_encoding": "code cells joined with two newlines",
+      "html_bytes": 494624,
+      "html_preview": "reports/09_selfplay_preview.html",
+      "html_structural_check": "PASS",
+      "notebook": "notebooks/09_selfplay_and_improvement.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_cells_executed": 8,
+      "code_sha256": "e764388b4ef131fc039faf993c218509af29c6e76a64f25978b9fb820ec64b3f",
+      "errors": 0,
+      "graphical_review": "NOT_PERFORMED: no graphical viewer available",
+      "hash_encoding": "code cells joined with two newlines",
+      "html_bytes": 461080,
+      "html_preview": "reports/previews/10_gtp_engine_interface.html",
+      "html_structural_check": "PASS",
+      "notebook": "notebooks/10_gtp_engine_interface.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_cells_executed": 6,
+      "code_sha256": "da8a19f43fb64297cbbf81d89b6cae61ea5b4e65d564df3f26f28680d918277e",
+      "errors": 0,
+      "graphical_review": "NOT_PERFORMED: no graphical viewer available",
+      "hash_encoding": "code cells joined with two newlines",
+      "html_bytes": 485110,
+      "html_preview": "reports/11_arena_preview.html",
+      "html_structural_check": "PASS",
+      "notebook": "notebooks/11_engine_arena_and_evaluation.ipynb",
+      "status": "PASS"
+    }
+  ],
+  "receipt_sources_match_current_code": true,
+  "remaining_notebooks": [
+    12,
+    13
+  ],
+  "schema": "ahr08-11-delivery-v1",
+  "scope": "Four next new notebooks 08-11",
+  "status": "PASS",
+  "strength_status": "NOT_EVALUATED",
+  "validation_reports": {
+    "8": "reports/08_go_learning_validation.json",
+    "9": "reports/09_selfplay_validation.json",
+    "10": "reports/10_gtp_validation.json",
+    "11": "reports/11_arena_validation.json"
+  },
+  "warmup": {
+    "all_retained_payload_hashes_verified": true,
+    "checkpoint_sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51",
+    "counts": {
+      "dev_black_to_move": 8,
+      "dev_capture_rows": 8,
+      "dev_outcome_-1": 8,
+      "dev_outcome_1": 8,
+      "dev_rows": 16,
+      "dev_white_to_move": 8,
+      "train_black_to_move": 32,
+      "train_capture_rows": 34,
+      "train_outcome_-1": 32,
+      "train_outcome_1": 32,
+      "train_rows": 64,
+      "train_white_to_move": 32
+    },
+    "epochs": 12,
+    "manifest": "checkpoints/go08-initial-warmup-v2/manifest.json",
+    "model_sha256": "5f6222557e4b7fa72fdfd655d336b953987c47dd281df3aedde8c4e32c6ac04b",
+    "optimizer_steps": 96,
+    "retained_checkpoints": 3,
+    "run_id": "go08-initial-warmup-v2",
+    "selected_optimizer_step": 32
+  }
+}

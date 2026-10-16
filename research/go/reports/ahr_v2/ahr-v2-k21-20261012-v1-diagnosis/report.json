@@ -1,0 +1,37 @@
+{
+  "contestable_positions": 0,
+  "first_costly_sampled_moves": [],
+  "fixed_simulations": 128,
+  "interpretation": "Teacher estimates diagnose sampled choices, not proofs. Equal simulation counts may take different wall times. Scout uses one network evaluation.",
+  "matched_search_comparison": {
+    "no_reading": {
+      "mean_teacher_estimated_winrate_regret": null,
+      "positions": 0
+    },
+    "scout": {
+      "mean_teacher_estimated_winrate_regret": null,
+      "positions": 0
+    },
+    "search": {
+      "mean_teacher_estimated_winrate_regret": null,
+      "positions": 0
+    }
+  },
+  "positions_completed": 0,
+  "positions_planned": 80,
+  "purpose": "consumed_development_only",
+  "rows": [],
+  "run_id": "ahr-v2-k21-20261012-v1-diagnosis",
+  "source": {
+    "games": 8,
+    "path": "/home/benjamin/workspace/ahr_go/reports/ahr_v2/benchmarks/ahr-v2-katago-econ-20261011-v1-confirmation-candidate-katago/report.json",
+    "purpose": "consumed_development_only",
+    "sampling": "chronological early turns, evenly spread across games; first costly sampled move is not necessarily first costly move",
+    "sha256": "40a0be8324a3243bc2058896536513b5d68f181d0f9586c566e64d709c8454df",
+    "training_rows": 0
+  },
+  "status": "ERROR",
+  "training_rows": 0,
+  "unknown_positions": 0,
+  "updated_at_utc": "2026-10-12T21:55:59.620877+00:00"
+}

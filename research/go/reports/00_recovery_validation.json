@@ -1,0 +1,88 @@
+{
+  "checkpoint_cadence_checks": 4,
+  "corrupt_latest_fallback": "PASS",
+  "devices": [
+    {
+      "child_runtime": {
+        "cuda": "13.0",
+        "executable": "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+        "torch": "2.14.0+cu130"
+      },
+      "device": "cpu",
+      "exact_all_state_match": true,
+      "final_loss": 0.13596707582473755,
+      "final_step": 8,
+      "new_checkpointed_optimizer_steps": 0,
+      "resumed_from_step": 8,
+      "retained_checkpoints": 2
+    },
+    {
+      "child_runtime": {
+        "cuda": "13.0",
+        "executable": "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+        "torch": "2.14.0+cu130"
+      },
+      "device": "cuda:0",
+      "exact_all_state_match": true,
+      "final_loss": 0.1694212108850479,
+      "final_step": 8,
+      "new_checkpointed_optimizer_steps": 0,
+      "resumed_from_step": 8,
+      "retained_checkpoints": 2
+    },
+    {
+      "child_runtime": {
+        "cuda": "13.0",
+        "executable": "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+        "torch": "2.14.0+cu130"
+      },
+      "device": "cuda:1",
+      "exact_all_state_match": true,
+      "final_loss": 0.1694212108850479,
+      "final_step": 8,
+      "new_checkpointed_optimizer_steps": 0,
+      "resumed_from_step": 8,
+      "retained_checkpoints": 2
+    }
+  ],
+  "duplicate_writer_rejected": true,
+  "fresh_kernel_phases": 2,
+  "incomplete_state_rejected": true,
+  "interrupt_phase": [
+    {
+      "action": "existing_checkpoint_preserved",
+      "child_runtime": {
+        "cuda": "13.0",
+        "executable": "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+        "torch": "2.14.0+cu130"
+      },
+      "device": "cpu",
+      "saved_step": 8
+    },
+    {
+      "action": "existing_checkpoint_preserved",
+      "child_runtime": {
+        "cuda": "13.0",
+        "executable": "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+        "torch": "2.14.0+cu130"
+      },
+      "device": "cuda:0",
+      "saved_step": 8
+    },
+    {
+      "action": "existing_checkpoint_preserved",
+      "child_runtime": {
+        "cuda": "13.0",
+        "executable": "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+        "torch": "2.14.0+cu130"
+      },
+      "device": "cuda:1",
+      "saved_step": 8
+    }
+  ],
+  "missing_manifest_rejected": true,
+  "model_training": "NOT STARTED; synthetic recovery fixture only",
+  "persistent_volume_identified": true,
+  "semantic_mismatch_fallback_and_resave": "PASS",
+  "status": "PASS"
+}

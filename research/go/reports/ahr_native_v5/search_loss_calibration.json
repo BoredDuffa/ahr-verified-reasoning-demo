@@ -1,0 +1,432 @@
+{
+  "case_identity_sha256": "575609ad259b4b82eb3cda6bd57dcbc6fe667a4ba764505fd21efd9bc272df9b",
+  "coherent_offline": true,
+  "count": 16,
+  "fast_success": 15,
+  "fixed_search_config": {
+    "baseline_replies": 6,
+    "branch_width": 8,
+    "goal_proposals_per_task": 2,
+    "goal_tasks": 2,
+    "immediate_loss_weight": 0.6,
+    "max_depth": 4,
+    "max_nodes": 768,
+    "ownership_weight": 0.1,
+    "policy_temperature": 0.15,
+    "prior_weight": 0.015,
+    "queen_cycles": 2,
+    "quiescence_extensions": 0,
+    "reconsideration_width": 4,
+    "reserve_fraction": 0.2,
+    "score_weight": 0.25,
+    "static_weight": 0.4,
+    "tactical_prior_weight": 0.025,
+    "tactical_width": 6,
+    "time_budget_s": 1.0
+  },
+  "offline_search_config": {
+    "baseline_replies": 6,
+    "branch_width": 12,
+    "goal_proposals_per_task": 2,
+    "goal_tasks": 2,
+    "immediate_loss_weight": 0.6,
+    "max_depth": 4,
+    "max_nodes": 2048,
+    "ownership_weight": 0.1,
+    "policy_temperature": 0.15,
+    "prior_weight": 0.015,
+    "queen_cycles": 2,
+    "quiescence_extensions": 0,
+    "reconsideration_width": 4,
+    "reserve_fraction": 0.2,
+    "score_weight": 0.25,
+    "static_weight": 0.4,
+    "tactical_prior_weight": 0.025,
+    "tactical_width": 6,
+    "time_budget_s": 3.0
+  },
+  "offline_success": 16,
+  "rows": [
+    {
+      "family_id": "0215f1d894364f99dafbd76484470e19bc45fa325b1c6d966f79629dfcdf610b",
+      "fast": {
+        "action": 7,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8033823439618573,
+        "success": true
+      },
+      "goal": "capture_one_ply",
+      "offline": {
+        "action": 7,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 3,
+        "deadline_missed": false,
+        "elapsed_s": 2.405243261018768,
+        "success": true
+      }
+    },
+    {
+      "family_id": "11490055973ca85f1bb5031772101a2668d818d84383b3aca7f000d55b319113",
+      "fast": {
+        "action": 36,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8024042750475928,
+        "success": true
+      },
+      "goal": "survive_two_plies",
+      "offline": {
+        "action": 36,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.4126519080018625,
+        "success": true
+      }
+    },
+    {
+      "family_id": "0546adde66f8281ac6994885d2d95e685a7221c020322448ec223e67540aca65",
+      "fast": {
+        "action": 78,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.807356136967428,
+        "success": true
+      },
+      "goal": "capture_one_ply",
+      "offline": {
+        "action": 78,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 3,
+        "deadline_missed": false,
+        "elapsed_s": 2.414295145950746,
+        "success": true
+      }
+    },
+    {
+      "family_id": "1a4dbfc448623180b293fe8916508d6d960335ae9b06dd94a4fea2596faa53ed",
+      "fast": {
+        "action": 13,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.814228143019136,
+        "success": true
+      },
+      "goal": "survive_two_plies",
+      "offline": {
+        "action": 13,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.4173134680022486,
+        "success": true
+      }
+    },
+    {
+      "family_id": "2c492330c190df52e39cf81d9a1cb814ee18cc7d0f1e9a0bc60ad578ce44345c",
+      "fast": {
+        "action": 1,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8109422629931942,
+        "success": true
+      },
+      "goal": "capture_one_ply",
+      "offline": {
+        "action": 1,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.416936155001167,
+        "success": true
+      }
+    },
+    {
+      "family_id": "4c1d42276038a0c6d296bf850dc2601ca9a9e20c2384ad24eb13a38cf05901f1",
+      "fast": {
+        "action": 42,
+        "bounded_status": "UNSAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8103549799998291,
+        "success": false
+      },
+      "goal": "survive_two_plies",
+      "offline": {
+        "action": 55,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 3,
+        "deadline_missed": false,
+        "elapsed_s": 2.404073897982016,
+        "success": true
+      }
+    },
+    {
+      "family_id": "3281de813ec838bcdebce6a2fa5a47adc4ca29604bc8778a80778e2c4fc936fa",
+      "fast": {
+        "action": 22,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8165620230138302,
+        "success": true
+      },
+      "goal": "capture_one_ply",
+      "offline": {
+        "action": 22,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 3,
+        "deadline_missed": false,
+        "elapsed_s": 2.409055083000567,
+        "success": true
+      }
+    },
+    {
+      "family_id": "73f211ba7c6d18f36092a134b1dadea1b604390b72caec71b1219680e3c78744",
+      "fast": {
+        "action": 33,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.817153095966205,
+        "success": true
+      },
+      "goal": "survive_two_plies",
+      "offline": {
+        "action": 33,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.410287759033963,
+        "success": true
+      }
+    },
+    {
+      "family_id": "4c2fb7182ec4855b2acfea1b38c7a6ebbad1272e232f1b8f25ac2d159a151aa4",
+      "fast": {
+        "action": 80,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8176005040295422,
+        "success": true
+      },
+      "goal": "capture_one_ply",
+      "offline": {
+        "action": 80,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.4158792839734815,
+        "success": true
+      }
+    },
+    {
+      "family_id": "8195625e8d93324f7433969ad2c0714403502f9150c55136f914ad948fa9c805",
+      "fast": {
+        "action": 19,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8007465479895473,
+        "success": true
+      },
+      "goal": "survive_two_plies",
+      "offline": {
+        "action": 19,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.41570098802913,
+        "success": true
+      }
+    },
+    {
+      "family_id": "59e35c34a25e33e1bc770af7c1f52262eeab735668c24dedb0b2bebbb93f6da8",
+      "fast": {
+        "action": 53,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8074195520021021,
+        "success": true
+      },
+      "goal": "capture_one_ply",
+      "offline": {
+        "action": 53,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.4102967000217177,
+        "success": true
+      }
+    },
+    {
+      "family_id": "865fce9113751e97bdf7065f99bd296ca6b6f406b16ff23104150abcbb96ce86",
+      "fast": {
+        "action": 57,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.817094968049787,
+        "success": true
+      },
+      "goal": "survive_two_plies",
+      "offline": {
+        "action": 57,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.4096936330315657,
+        "success": true
+      }
+    },
+    {
+      "family_id": "5d9ba7ff94d5d58266191e5840d63c2293c4218c9cce5b9dbcf22864154bdd9f",
+      "fast": {
+        "action": 16,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8012123390217312,
+        "success": true
+      },
+      "goal": "capture_one_ply",
+      "offline": {
+        "action": 16,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 3,
+        "deadline_missed": false,
+        "elapsed_s": 2.4068762020324357,
+        "success": true
+      }
+    },
+    {
+      "family_id": "8c1d0c72888879b842956681296d3e73a068e116659167ce6be15ed2f948e446",
+      "fast": {
+        "action": 22,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8138545969850384,
+        "success": true
+      },
+      "goal": "survive_two_plies",
+      "offline": {
+        "action": 22,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.405242310022004,
+        "success": true
+      }
+    },
+    {
+      "family_id": "68c5cef8a4055042a03c37556c109c02f7dfae84fb6933bd5dfb4940074d5fce",
+      "fast": {
+        "action": 27,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8128067999496125,
+        "success": true
+      },
+      "goal": "capture_one_ply",
+      "offline": {
+        "action": 27,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 2.4067922809626907,
+        "success": true
+      }
+    },
+    {
+      "family_id": "ab70a692a79e156733d69bd9b23ba3402f89a7c8aae26d7808207ca96f4d49b8",
+      "fast": {
+        "action": 33,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 2,
+        "deadline_missed": false,
+        "elapsed_s": 0.8092925699893385,
+        "success": true
+      },
+      "goal": "survive_two_plies",
+      "offline": {
+        "action": 33,
+        "bounded_status": "SAT",
+        "comparison_complete": true,
+        "comparison_depth": 3,
+        "deadline_missed": false,
+        "elapsed_s": 2.4096651619765908,
+        "success": true
+      }
+    }
+  ],
+  "scope": "Fixed development regression set; no full-game strength claim",
+  "selection": "Same previously saved eight capture and eight sole-own-atari families; no failed task removed",
+  "sources": {
+    "experiments/ahr_native_v4/00_shared.ipynb": "4f2c0fc446f76dfc691e89c6fe58aeb4a8b3fd4a044221200efda6bfcf93e1ec",
+    "experiments/ahr_native_v4/01_native_ahr_and_tactics.ipynb": "9c13461a8d3aa116847420c4af26924d6093ec701acd77e7a7991850d65efb05",
+    "experiments/ahr_native_v4/02_competitive_training.ipynb": "7a9374b5a2f1038d187966479a72b6358268ca3da5498a5db4f53d752bd9411c",
+    "experiments/ahr_native_v4/03_gnugo_evaluation.ipynb": "12e4713c45fafda3d26c9fb766f9e138c5ed01ea423baf719ec1024727c90547",
+    "experiments/ahr_native_v5/00_shared.ipynb": "2f4e466a0d48d77f3d9910fcd6ee19ce470f67ea24f5a0a2394fe2e1a0c41e0d",
+    "experiments/ahr_native_v5/01_model_and_search.ipynb": "a9ffa0a7fa7b3ac3203f122a4bc7020b735c886fb1d7b6513d482d878d1052dc",
+    "experiments/ahr_native_v5/02_verified_curriculum.ipynb": "963fc090e8d328d3242596984012cd0c1e8c36185eb77f6cbfecaeab5d5757f9",
+    "experiments/ahr_native_v5/03_learning.ipynb": "8082c0c389e40721101b140b4cf0b5fa3bd27f14a9f7ea379ceffe3b5ef63212",
+    "experiments/ahr_native_v5/04_evaluation_and_gates.ipynb": "73de9eae9a9e916af3b494997ba65bb455d47cae4b8ba398a9273fac91178610",
+    "experiments/ahr_native_v5/05_budgeted_pipeline.ipynb": "5d6b8f48197a8efadaac3e31fc380dc71d5b64e44ce27aee7be1ace336e8b003",
+    "notebooks/00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+    "notebooks/03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+    "notebooks/04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+    "notebooks/05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+    "notebooks/06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb": "a6c9b3d4b0152be85e9ed20c55e65eab600ecb3b2167dc653c4be4611a287a14",
+    "notebooks/08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3",
+    "notebooks/09_selfplay_and_improvement.ipynb": "047054ba779c78928c2265f2aac63e1c2c7d15f1a65081019d8a404f7d07478a",
+    "notebooks/10_gtp_engine_interface.ipynb": "2306b2f28310a163d3bcc0526590bd42c8eda85e85f60d00c20653b505f7d482",
+    "notebooks/11_engine_arena_and_evaluation.ipynb": "d90aeecd75541c1f815a1d8df831f67ad844650f721e5d841dcf0e1f780ae60e",
+    "notebooks/12_play_and_watch.ipynb": "6d5490cf8885de99e175dc3d00d9ad3225f98e975fdc72c56a275f45058680b4",
+    "notebooks/13_export_backup_and_restore.ipynb": "c6a1425022746f381acf855d889065a768385fdcf385dcf82fd2cee2e6b34568"
+  },
+  "status": "PASS"
+}

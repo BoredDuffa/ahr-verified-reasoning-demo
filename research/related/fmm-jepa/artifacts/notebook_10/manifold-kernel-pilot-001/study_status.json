@@ -1,0 +1,20 @@
+{
+  "stage": "complete_after_diagnostic_device_repair",
+  "status": "COMPLETED",
+  "updated_unix": 1791329408.2582712,
+  "elapsed_seconds": 9009.785020112991,
+  "updates": 350,
+  "seeds": [
+    20261301,
+    20261302
+  ],
+  "variants": [
+    "vit",
+    "spatial_kernel",
+    "learned_kernel"
+  ],
+  "heldout_status": "NOT_RUN",
+  "results": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_10/manifold-kernel-pilot-001/stages/learning/stage_results.md",
+  "recovery_binding": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_10/manifold-kernel-pilot-001/evaluation_recovery_v1/recovery_binding.json",
+  "evaluation_repair": "Diagnostic input placement only; frozen training, features and probe protocol preserved."
+}

@@ -1,0 +1,52 @@
+{
+  "checked_at_utc": "2026-09-23T12:57:37Z",
+  "cpu_threads": 24,
+  "executable": "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+  "gpu": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "0, NVIDIA A100-SXM4-80GB, 81920 MiB, 610.57.04\n1, NVIDIA A100-SXM4-80GB, 81920 MiB, 610.57.04"
+  },
+  "gpu_checks": [
+    {
+      "device": 0,
+      "matrix_check": "PASS",
+      "memory_gib": 79.27,
+      "name": "NVIDIA A100-SXM4-80GB"
+    },
+    {
+      "device": 1,
+      "matrix_check": "PASS",
+      "memory_gib": 79.27,
+      "name": "NVIDIA A100-SXM4-80GB"
+    }
+  ],
+  "host": "znstance-20260904-145513",
+  "packages": {
+    "ipykernel": "7.3.0",
+    "matplotlib": "3.11.2",
+    "nbclient": "0.11.0",
+    "nbconvert": "7.17.1",
+    "nbformat": "5.11.1",
+    "numpy": "2.5.3",
+    "torch": "2.14.0"
+  },
+  "project": "/home/benjamin/workspace/ahr_go",
+  "python": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+  "schema_version": 1,
+  "storage": {
+    "free_gib": 154.96,
+    "instance_delete_policy": "NOT VERIFIED: backup required before deletion/recycle",
+    "matching_disk_ids": [
+      "google-instance-20260904-145513-part1",
+      "scsi-0Google_PersistentDisk_instance-20260904-145513-part1"
+    ],
+    "mount": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/\",\n         \"source\": \"/dev/sda1\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,relatime,discard,errors=remount-ro\"\n      }\n   ]\n}"
+    },
+    "persistent_volume_identified": true
+  },
+  "torch_cuda": "13.0"
+}

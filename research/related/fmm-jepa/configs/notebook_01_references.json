@@ -1,0 +1,44 @@
+[
+  {
+    "name": "hf_loading",
+    "url": "https://huggingface.co/docs/datasets/loading",
+    "resolved_url": "https://huggingface.co/docs/datasets/loading",
+    "accessed_utc": "2026-09-23T17:09:31.890753+00:00",
+    "sha256": "111c869a4f9c5d880129cbb5d482260f5ec965043a0406339897adf9f176d9de",
+    "status": "VERIFIED"
+  },
+  {
+    "name": "torch_sdpa",
+    "url": "https://docs.pytorch.org/docs/main/generated/torch.nn.functional.scaled_dot_product_attention.html",
+    "status": "VERIFIED_VIA_WEB_READER",
+    "direct_http_status": "HTTP Error 403: Forbidden",
+    "content_hash": null,
+    "accessed_utc": "2026-09-23",
+    "retrieval_method": "web tool official primary page"
+  },
+  {
+    "name": "torch_reproducibility",
+    "url": "https://docs.pytorch.org/docs/main/notes/randomness.html",
+    "status": "VERIFIED_VIA_WEB_READER",
+    "direct_http_status": "HTTP Error 403: Forbidden",
+    "content_hash": null,
+    "accessed_utc": "2026-09-23",
+    "retrieval_method": "web tool official primary page"
+  },
+  {
+    "name": "ijepa_train",
+    "url": "https://raw.githubusercontent.com/facebookresearch/ijepa/52c1ae95d05f743e000e8f10a1f3a79b10cff048/src/train.py",
+    "resolved_url": "https://raw.githubusercontent.com/facebookresearch/ijepa/52c1ae95d05f743e000e8f10a1f3a79b10cff048/src/train.py",
+    "accessed_utc": "2026-09-23T17:09:32.239098+00:00",
+    "sha256": "6b5467b6663ace871ede718168b152d6759a2ec26b94bb688ae6e46c80e835aa",
+    "status": "VERIFIED"
+  },
+  {
+    "name": "ijepa_masks",
+    "url": "https://raw.githubusercontent.com/facebookresearch/ijepa/52c1ae95d05f743e000e8f10a1f3a79b10cff048/src/masks/multiblock.py",
+    "resolved_url": "https://raw.githubusercontent.com/facebookresearch/ijepa/52c1ae95d05f743e000e8f10a1f3a79b10cff048/src/masks/multiblock.py",
+    "accessed_utc": "2026-09-23T17:09:32.358017+00:00",
+    "sha256": "a06c593636f81e760bd26b615b2a7a976790dcc027d4b9244f3e8e7a2e5a8804",
+    "status": "VERIFIED"
+  }
+]

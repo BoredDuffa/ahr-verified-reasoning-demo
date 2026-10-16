@@ -1,0 +1,15 @@
+{
+  "checkpoint": {
+    "file": "step-000000001-b7948ed8.pt",
+    "global_step": 1,
+    "sha256": "f5286b7b9c983be92e83f6dfd00d9378e0585a84534c5773794f54a68e98be38"
+  },
+  "completed_stages": [
+    "diagnosis"
+  ],
+  "error": "ValueError('State history does not equal exact chronological replay.')",
+  "run_id": "ahr-v2-k21-20261014-full-v2",
+  "stage": "collect_0",
+  "status": "ERROR",
+  "updated_at_utc": "2026-10-14T16:24:39.175650+00:00"
+}

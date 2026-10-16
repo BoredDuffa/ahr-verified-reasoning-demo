@@ -1,0 +1,15 @@
+{
+  "checkpoint": {
+    "file": "step-000000001-a2ea9f6f.pt",
+    "global_step": 1,
+    "sha256": "9752028a98c3d4bcda5ad4a6319b9426eab494f96e14441c07fdb5a4cf7a123b"
+  },
+  "completed_stages": [
+    "diagnosis"
+  ],
+  "error": "RuntimeError('Fresh collection produced fewer than the required1024 rows; optimizer training refused.')",
+  "run_id": "ahr-v2-k21-20261016-gpu0-v1",
+  "stage": "collect_0",
+  "status": "ERROR",
+  "updated_at_utc": "2026-10-16T16:56:56.254678+00:00"
+}

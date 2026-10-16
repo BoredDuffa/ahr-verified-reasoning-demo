@@ -1,0 +1,1492 @@
+{
+  "development_available": 740,
+  "generation_checkpoint": {
+    "file": "step-000000205-8fc3ad7b.pt",
+    "global_step": 205,
+    "sha256": "3618855dd840a051f19fbe5f909ed9a556bf87829a9d518f2fc70f3195697579"
+  },
+  "initial_model_provenance": {
+    "config": {
+      "board_size": 9,
+      "dropout": 0.1,
+      "hidden_dim": 64,
+      "queen_cycles": 2,
+      "scout_steps": 2,
+      "spatial_channels": 32,
+      "tactical_weight": 0.5,
+      "worker_steps": 2
+    },
+    "external_engine_labels": false,
+    "external_engine_policy_labels": false,
+    "initial_checkpoint_sha256": "1cba3e08d002e3882a14ea7230d33ead290e4920810ab6995ba909bc3435647c",
+    "initial_run": "ahr-v3-B-s01",
+    "initialization_seed": 2026100104,
+    "jepa": false,
+    "kind": "native_ahr_v5",
+    "native_architecture_changed": false,
+    "new_components": "Goal embedding, target-mask encoder, conditioned tactical Worker energy",
+    "retained_components": "Go spatial encoder, native Queen/Worker/Scout/pheromone, policy/value/score/ownership",
+    "search_teacher": "coherent bounded AHR continuations only",
+    "selection_rule": "Fixed first AHR-only seed, final checkpoint; no evaluation-based selection"
+  },
+  "raw_selected_target_gate": {
+    "checks": {
+      "minimum_teacher_success": true,
+      "observed_improvement_or_saturation": false,
+      "offline_coherent_completed_comparisons": true,
+      "teacher_nonregression": false
+    },
+    "confidence_scope": "Intervals are descriptive for distinct selected development families; thresholds use observed fractions, not population guarantees",
+    "count": 16,
+    "external_engine_labels": false,
+    "fast_success": 12,
+    "fast_success_rate": 0.75,
+    "fast_wilson_interval": [
+      0.5050168346449122,
+      0.8981793250878696
+    ],
+    "final_data_used": false,
+    "full_game_optimality": "NOT_ESTABLISHED",
+    "identity": {
+      "config": {
+        "bounded_tactical_threshold": 0.95,
+        "immediate_capture_threshold": 0.99,
+        "teacher_cases": 16,
+        "teacher_fast_s": 1.0,
+        "teacher_minimum_gain": 0.05,
+        "teacher_minimum_success": 0.5,
+        "teacher_offline_s": 3.0,
+        "teacher_saturated_success": 0.95
+      },
+      "model_weights_sha256": "8ee7d6ff9bfad4c3c6d7a19349a779204d1bc60306d794ba3b4a601713c8a017",
+      "sources": {
+        "experiments/ahr_native_v4/00_shared.ipynb": "4f2c0fc446f76dfc691e89c6fe58aeb4a8b3fd4a044221200efda6bfcf93e1ec",
+        "experiments/ahr_native_v4/01_native_ahr_and_tactics.ipynb": "9c13461a8d3aa116847420c4af26924d6093ec701acd77e7a7991850d65efb05",
+        "experiments/ahr_native_v4/02_competitive_training.ipynb": "7a9374b5a2f1038d187966479a72b6358268ca3da5498a5db4f53d752bd9411c",
+        "experiments/ahr_native_v4/03_gnugo_evaluation.ipynb": "12e4713c45fafda3d26c9fb766f9e138c5ed01ea423baf719ec1024727c90547",
+        "experiments/ahr_native_v5/00_shared.ipynb": "2f4e466a0d48d77f3d9910fcd6ee19ce470f67ea24f5a0a2394fe2e1a0c41e0d",
+        "experiments/ahr_native_v5/01_model_and_search.ipynb": "69b0876c42755f812e0a722b40eb22a9cb1b7b7c1043d1e048fce81929ce3a85",
+        "experiments/ahr_native_v5/02_verified_curriculum.ipynb": "92c002b4eb23c7eca7b102627b0e1d3f3841d705ee490be0de0f2e8c299c7676",
+        "experiments/ahr_native_v5/03_learning.ipynb": "08a46d60bf360d30854015961acbd192cfa7a0c41bbfefd85363bff6d24bcd2b",
+        "experiments/ahr_native_v5/04_evaluation_and_gates.ipynb": "ac1410105993328a82e1bc883771ea511449a037daa13e80d5188455b6d92e17",
+        "experiments/ahr_native_v5/05_budgeted_pipeline.ipynb": "5d6b8f48197a8efadaac3e31fc380dc71d5b64e44ce27aee7be1ace336e8b003",
+        "notebooks/00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+        "notebooks/01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+        "notebooks/02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+        "notebooks/03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+        "notebooks/04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+        "notebooks/05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+        "notebooks/06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+        "notebooks/07_csp_to_go_transfer_tests.ipynb": "a6c9b3d4b0152be85e9ed20c55e65eab600ecb3b2167dc653c4be4611a287a14",
+        "notebooks/08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3",
+        "notebooks/09_selfplay_and_improvement.ipynb": "047054ba779c78928c2265f2aac63e1c2c7d15f1a65081019d8a404f7d07478a",
+        "notebooks/10_gtp_engine_interface.ipynb": "2306b2f28310a163d3bcc0526590bd42c8eda85e85f60d00c20653b505f7d482",
+        "notebooks/11_engine_arena_and_evaluation.ipynb": "d90aeecd75541c1f815a1d8df831f67ad844650f721e5d841dcf0e1f780ae60e",
+        "notebooks/12_play_and_watch.ipynb": "6d5490cf8885de99e175dc3d00d9ad3225f98e975fdc72c56a275f45058680b4",
+        "notebooks/13_export_backup_and_restore.ipynb": "c6a1425022746f381acf855d889065a768385fdcf385dcf82fd2cee2e6b34568"
+      },
+      "tasks_sha256": "bcb2654e3e2dcae1b3e5b00ddc528a01e6dc7df6896e2f32b380f5be8f6a9384"
+    },
+    "observed_gain": -0.0625,
+    "offline_success": 11,
+    "offline_success_rate": 0.6875,
+    "offline_wilson_interval": [
+      0.44404355834740666,
+      0.8583535614521796
+    ],
+    "rows": [
+      {
+        "family_id": "008c3598988c7c2be72cf9700d201292b878775876c4b2baba40029b54ae2051",
+        "fast": {
+          "action": 72,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8119929159875028,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 72,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.4183753320248798,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          73
+        ]
+      },
+      {
+        "family_id": "016c06be43224a43e0a27d38706526f4c95b68fde74e01f23e8a83ae19c6c5aa",
+        "fast": {
+          "action": 55,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8045698539935984,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 55,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.4013929170323536,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          45
+        ]
+      },
+      {
+        "family_id": "010438e063bfef41be6830096941db8c808f55aa37c95228bf110b2b5041b96d",
+        "fast": {
+          "action": 54,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8125284599955194,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 54,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.4102818469982594,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          9,
+          10,
+          18,
+          27,
+          28,
+          29,
+          38
+        ]
+      },
+      {
+        "family_id": "017806c14adb6da643565b94d94a3e267ac6825426e09816c7999c909040f6d5",
+        "fast": {
+          "action": 43,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8141844689962454,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 43,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.292313796002418,
+          "reason": "node_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          35
+        ]
+      },
+      {
+        "family_id": "01697985f02570b80883730db3ab4fe3dcc6fa4e1b96bef0cb097c7cd89d64b6",
+        "fast": {
+          "action": 76,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8164152789977379,
+          "reason": "time_budget",
+          "root_candidates": 8,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 17,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.4010219119954854,
+          "reason": "time_budget",
+          "root_candidates": 8,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          63,
+          65,
+          66,
+          67,
+          72,
+          73,
+          74,
+          75
+        ]
+      },
+      {
+        "family_id": "02fc5c682755d788740fc136e1c0fb93f73279ebb2acd22427ab0698880ecfb1",
+        "fast": {
+          "action": 32,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8059395510354079,
+          "reason": "time_budget",
+          "root_candidates": 13,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 32,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.4187368939747103,
+          "reason": "time_budget",
+          "root_candidates": 17,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          62
+        ]
+      },
+      {
+        "family_id": "020119ac9c05e0ce98d0a0dbd0f50d68376b09bc8d698d2c760398804422a40f",
+        "fast": {
+          "action": 20,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.800931405974552,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 20,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.4098782839719206,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          1,
+          10,
+          19
+        ]
+      },
+      {
+        "family_id": "057427c8d5c5e715cd4ce4f48f102c546e3454a771d0e6f170270ca6dc714780",
+        "fast": {
+          "action": 56,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8190397070138715,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 56,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.406247474020347,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          37
+        ]
+      },
+      {
+        "family_id": "0215f1d894364f99dafbd76484470e19bc45fa325b1c6d966f79629dfcdf610b",
+        "fast": {
+          "action": 7,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8065865149837919,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 7,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.4111800080281682,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          24,
+          25,
+          26,
+          33
+        ]
+      },
+      {
+        "family_id": "0784b820cd385f9d375bf36a293f830a259fdfecffee421aba5970d7a10f9b76",
+        "fast": {
+          "action": 33,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.827709166042041,
+          "reason": "time_budget",
+          "root_candidates": 15,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 33,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.3005690349964425,
+          "reason": "node_budget",
+          "root_candidates": 18,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          26
+        ]
+      },
+      {
+        "family_id": "02b40053f53d888fdf38cad256f8cef1ebfd7d37446ce234b23004c4b057ade1",
+        "fast": {
+          "action": 22,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8183029029751197,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 22,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.412857148970943,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          20,
+          21
+        ]
+      },
+      {
+        "family_id": "08597aa1f444374564b2711a0a45cf187f10cbb700a415c2078d320bfd44bc33",
+        "fast": {
+          "action": 42,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8012592740124092,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 50,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.4036640570266172,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          44
+        ]
+      },
+      {
+        "family_id": "0384ed034444f4e848a53725d66c56b090aa566f2955c63bfd8637f109235b55",
+        "fast": {
+          "action": 48,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8112037110258825,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 48,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.408122009015642,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          54,
+          63,
+          64,
+          73
+        ]
+      },
+      {
+        "family_id": "0a52a2ecaef613f548a3cfc19a78ba6a78f2eff5cd7a19c7d13bbd8960e9ecee",
+        "fast": {
+          "action": 71,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8033376669627614,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 71,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.4240866209729575,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          44,
+          52,
+          53,
+          61
+        ]
+      },
+      {
+        "family_id": "038f12ce2fcc9bcd1772000ef3be99beefff154cddb5558b60e16c34efeeb27d",
+        "fast": {
+          "action": 65,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8179337659967132,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 65,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.41055689699715,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          74
+        ]
+      },
+      {
+        "family_id": "0bedc3ca812e956a9ec0332f00088d953a4fda42ab1e9b35c2e7b9c3cf55ba7b",
+        "fast": {
+          "action": 53,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8049453579587862,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 53,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.4098980390117504,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          16,
+          24,
+          25,
+          26,
+          35,
+          44
+        ]
+      }
+    ],
+    "scope": "Actual whole-board AHR decisions checked against one independently verified selected bounded tactical target. Other groups may be more urgent; this is a diagnostic gate, not a global best-move theorem.",
+    "status": "FAIL"
+  },
+  "schema": "v5_teacher_baseline_diagnostic",
+  "scope": "Actual initialized AHR decisions on a saved partial development curriculum; diagnostic only, no training or final games",
+  "source_identity": {
+    "experiments/ahr_native_v4/00_shared.ipynb": "4f2c0fc446f76dfc691e89c6fe58aeb4a8b3fd4a044221200efda6bfcf93e1ec",
+    "experiments/ahr_native_v4/01_native_ahr_and_tactics.ipynb": "9c13461a8d3aa116847420c4af26924d6093ec701acd77e7a7991850d65efb05",
+    "experiments/ahr_native_v4/02_competitive_training.ipynb": "7a9374b5a2f1038d187966479a72b6358268ca3da5498a5db4f53d752bd9411c",
+    "experiments/ahr_native_v4/03_gnugo_evaluation.ipynb": "12e4713c45fafda3d26c9fb766f9e138c5ed01ea423baf719ec1024727c90547",
+    "experiments/ahr_native_v5/00_shared.ipynb": "2f4e466a0d48d77f3d9910fcd6ee19ce470f67ea24f5a0a2394fe2e1a0c41e0d",
+    "experiments/ahr_native_v5/01_model_and_search.ipynb": "69b0876c42755f812e0a722b40eb22a9cb1b7b7c1043d1e048fce81929ce3a85",
+    "experiments/ahr_native_v5/02_verified_curriculum.ipynb": "92c002b4eb23c7eca7b102627b0e1d3f3841d705ee490be0de0f2e8c299c7676",
+    "experiments/ahr_native_v5/03_learning.ipynb": "08a46d60bf360d30854015961acbd192cfa7a0c41bbfefd85363bff6d24bcd2b",
+    "experiments/ahr_native_v5/04_evaluation_and_gates.ipynb": "ac1410105993328a82e1bc883771ea511449a037daa13e80d5188455b6d92e17",
+    "experiments/ahr_native_v5/05_budgeted_pipeline.ipynb": "5d6b8f48197a8efadaac3e31fc380dc71d5b64e44ce27aee7be1ace336e8b003",
+    "notebooks/00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+    "notebooks/03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+    "notebooks/04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+    "notebooks/05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+    "notebooks/06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb": "a6c9b3d4b0152be85e9ed20c55e65eab600ecb3b2167dc653c4be4611a287a14",
+    "notebooks/08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3",
+    "notebooks/09_selfplay_and_improvement.ipynb": "047054ba779c78928c2265f2aac63e1c2c7d15f1a65081019d8a404f7d07478a",
+    "notebooks/10_gtp_engine_interface.ipynb": "2306b2f28310a163d3bcc0526590bd42c8eda85e85f60d00c20653b505f7d482",
+    "notebooks/11_engine_arena_and_evaluation.ipynb": "d90aeecd75541c1f815a1d8df831f67ad844650f721e5d841dcf0e1f780ae60e",
+    "notebooks/12_play_and_watch.ipynb": "6d5490cf8885de99e175dc3d00d9ad3225f98e975fdc72c56a275f45058680b4",
+    "notebooks/13_export_backup_and_restore.ipynb": "c6a1425022746f381acf855d889065a768385fdcf385dcf82fd2cee2e6b34568"
+  },
+  "unique_urgent_available": {
+    "capture_one_ply": 14,
+    "survive_two_plies": 9
+  },
+  "unique_urgent_selected_target_gate": {
+    "checks": {
+      "minimum_teacher_success": true,
+      "observed_improvement_or_saturation": false,
+      "offline_coherent_completed_comparisons": true,
+      "teacher_nonregression": true
+    },
+    "confidence_scope": "Intervals are descriptive for distinct selected development families; thresholds use observed fractions, not population guarantees",
+    "count": 16,
+    "external_engine_labels": false,
+    "fast_success": 15,
+    "fast_success_rate": 0.9375,
+    "fast_wilson_interval": [
+      0.7167126242970107,
+      0.9888806552353576
+    ],
+    "final_data_used": false,
+    "full_game_optimality": "NOT_ESTABLISHED",
+    "identity": {
+      "config": {
+        "bounded_tactical_threshold": 0.95,
+        "immediate_capture_threshold": 0.99,
+        "teacher_cases": 16,
+        "teacher_fast_s": 1.0,
+        "teacher_minimum_gain": 0.05,
+        "teacher_minimum_success": 0.5,
+        "teacher_offline_s": 3.0,
+        "teacher_saturated_success": 0.95
+      },
+      "model_weights_sha256": "8ee7d6ff9bfad4c3c6d7a19349a779204d1bc60306d794ba3b4a601713c8a017",
+      "sources": {
+        "experiments/ahr_native_v4/00_shared.ipynb": "4f2c0fc446f76dfc691e89c6fe58aeb4a8b3fd4a044221200efda6bfcf93e1ec",
+        "experiments/ahr_native_v4/01_native_ahr_and_tactics.ipynb": "9c13461a8d3aa116847420c4af26924d6093ec701acd77e7a7991850d65efb05",
+        "experiments/ahr_native_v4/02_competitive_training.ipynb": "7a9374b5a2f1038d187966479a72b6358268ca3da5498a5db4f53d752bd9411c",
+        "experiments/ahr_native_v4/03_gnugo_evaluation.ipynb": "12e4713c45fafda3d26c9fb766f9e138c5ed01ea423baf719ec1024727c90547",
+        "experiments/ahr_native_v5/00_shared.ipynb": "2f4e466a0d48d77f3d9910fcd6ee19ce470f67ea24f5a0a2394fe2e1a0c41e0d",
+        "experiments/ahr_native_v5/01_model_and_search.ipynb": "69b0876c42755f812e0a722b40eb22a9cb1b7b7c1043d1e048fce81929ce3a85",
+        "experiments/ahr_native_v5/02_verified_curriculum.ipynb": "92c002b4eb23c7eca7b102627b0e1d3f3841d705ee490be0de0f2e8c299c7676",
+        "experiments/ahr_native_v5/03_learning.ipynb": "08a46d60bf360d30854015961acbd192cfa7a0c41bbfefd85363bff6d24bcd2b",
+        "experiments/ahr_native_v5/04_evaluation_and_gates.ipynb": "ac1410105993328a82e1bc883771ea511449a037daa13e80d5188455b6d92e17",
+        "experiments/ahr_native_v5/05_budgeted_pipeline.ipynb": "5d6b8f48197a8efadaac3e31fc380dc71d5b64e44ce27aee7be1ace336e8b003",
+        "notebooks/00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+        "notebooks/01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+        "notebooks/02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+        "notebooks/03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+        "notebooks/04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+        "notebooks/05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+        "notebooks/06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+        "notebooks/07_csp_to_go_transfer_tests.ipynb": "a6c9b3d4b0152be85e9ed20c55e65eab600ecb3b2167dc653c4be4611a287a14",
+        "notebooks/08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3",
+        "notebooks/09_selfplay_and_improvement.ipynb": "047054ba779c78928c2265f2aac63e1c2c7d15f1a65081019d8a404f7d07478a",
+        "notebooks/10_gtp_engine_interface.ipynb": "2306b2f28310a163d3bcc0526590bd42c8eda85e85f60d00c20653b505f7d482",
+        "notebooks/11_engine_arena_and_evaluation.ipynb": "d90aeecd75541c1f815a1d8df831f67ad844650f721e5d841dcf0e1f780ae60e",
+        "notebooks/12_play_and_watch.ipynb": "6d5490cf8885de99e175dc3d00d9ad3225f98e975fdc72c56a275f45058680b4",
+        "notebooks/13_export_backup_and_restore.ipynb": "c6a1425022746f381acf855d889065a768385fdcf385dcf82fd2cee2e6b34568"
+      },
+      "tasks_sha256": "99b7aac9810e0bcc2cbd3374e09ac3446f4e8a79905d8d4703a779277058a545"
+    },
+    "observed_gain": 0.0,
+    "offline_success": 15,
+    "offline_success_rate": 0.9375,
+    "offline_wilson_interval": [
+      0.7167126242970107,
+      0.9888806552353576
+    ],
+    "rows": [
+      {
+        "family_id": "0215f1d894364f99dafbd76484470e19bc45fa325b1c6d966f79629dfcdf610b",
+        "fast": {
+          "action": 7,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8012431939714588,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 7,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.406708939000964,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          24,
+          25,
+          26,
+          33
+        ]
+      },
+      {
+        "family_id": "11490055973ca85f1bb5031772101a2668d818d84383b3aca7f000d55b319113",
+        "fast": {
+          "action": 36,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8131437519914471,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 36,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.41656724299537,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          45
+        ]
+      },
+      {
+        "family_id": "0546adde66f8281ac6994885d2d95e685a7221c020322448ec223e67540aca65",
+        "fast": {
+          "action": 78,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8165267749573104,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 78,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.403977295034565,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          70,
+          79
+        ]
+      },
+      {
+        "family_id": "1a4dbfc448623180b293fe8916508d6d960335ae9b06dd94a4fea2596faa53ed",
+        "fast": {
+          "action": 13,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.810936231049709,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 13,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.4190450250171125,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          4
+        ]
+      },
+      {
+        "family_id": "2c492330c190df52e39cf81d9a1cb814ee18cc7d0f1e9a0bc60ad578ce44345c",
+        "fast": {
+          "action": 1,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8142564669833519,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 1,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.418640438001603,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          0
+        ]
+      },
+      {
+        "family_id": "4c1d42276038a0c6d296bf850dc2601ca9a9e20c2384ad24eb13a38cf05901f1",
+        "fast": {
+          "action": 42,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8162141510401852,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 60,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.415675516007468,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": false,
+          "task_status": "UNSAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          46
+        ]
+      },
+      {
+        "family_id": "3281de813ec838bcdebce6a2fa5a47adc4ca29604bc8778a80778e2c4fc936fa",
+        "fast": {
+          "action": 22,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8152352640172467,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 22,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.4172161769820377,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          2,
+          10,
+          11,
+          20,
+          21
+        ]
+      },
+      {
+        "family_id": "73f211ba7c6d18f36092a134b1dadea1b604390b72caec71b1219680e3c78744",
+        "fast": {
+          "action": 33,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8150302760186605,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 33,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.41653490497265,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          34
+        ]
+      },
+      {
+        "family_id": "4c2fb7182ec4855b2acfea1b38c7a6ebbad1272e232f1b8f25ac2d159a151aa4",
+        "fast": {
+          "action": 80,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8128302530385554,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 80,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.4095798779744655,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          79
+        ]
+      },
+      {
+        "family_id": "8195625e8d93324f7433969ad2c0714403502f9150c55136f914ad948fa9c805",
+        "fast": {
+          "action": 19,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8121447149896994,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 19,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.415590820950456,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          18
+        ]
+      },
+      {
+        "family_id": "59e35c34a25e33e1bc770af7c1f52262eeab735668c24dedb0b2bebbb93f6da8",
+        "fast": {
+          "action": 53,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8060701139620505,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 53,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.414910903025884,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          62
+        ]
+      },
+      {
+        "family_id": "865fce9113751e97bdf7065f99bd296ca6b6f406b16ff23104150abcbb96ce86",
+        "fast": {
+          "action": 57,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8147247519809753,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 57,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.407536946993787,
+          "reason": "time_budget",
+          "root_candidates": 13,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          56,
+          65,
+          66
+        ]
+      },
+      {
+        "family_id": "5d9ba7ff94d5d58266191e5840d63c2293c4218c9cce5b9dbcf22864154bdd9f",
+        "fast": {
+          "action": 16,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8127265039947815,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 16,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.4154067969648167,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "family_id": "8c1d0c72888879b842956681296d3e73a068e116659167ce6be15ed2f948e446",
+        "fast": {
+          "action": 22,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8158418440143578,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 22,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.4051323810126632,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          2,
+          10,
+          11,
+          20,
+          21
+        ]
+      },
+      {
+        "family_id": "68c5cef8a4055042a03c37556c109c02f7dfae84fb6933bd5dfb4940074d5fce",
+        "fast": {
+          "action": 27,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8182819170178846,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "capture_one_ply",
+        "offline": {
+          "action": 27,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 2.4021701060119085,
+          "reason": "time_budget",
+          "root_candidates": 16,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 1,
+          "kind": "capture_one_ply",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          0,
+          9,
+          18
+        ]
+      },
+      {
+        "family_id": "ab70a692a79e156733d69bd9b23ba3402f89a7c8aae26d7808207ca96f4d49b8",
+        "fast": {
+          "action": 33,
+          "coherent_completed_comparison": true,
+          "completed_depth": 2,
+          "deadline_missed": false,
+          "elapsed_s": 0.8016956860083155,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "goal": "survive_two_plies",
+        "offline": {
+          "action": 33,
+          "coherent_completed_comparison": true,
+          "completed_depth": 3,
+          "deadline_missed": false,
+          "elapsed_s": 2.410055373038631,
+          "reason": "time_budget",
+          "root_candidates": 12,
+          "strategic_status": "UNKNOWN",
+          "success": true,
+          "task_status": "SAT"
+        },
+        "scope": {
+          "cutoff_status": "UNKNOWN",
+          "full_game_result": "UNKNOWN",
+          "horizon": 2,
+          "kind": "survive_two_plies",
+          "status": "VERIFIED_POSITIVE_AND_NEGATIVE_ACTIONS"
+        },
+        "target_stones": [
+          32
+        ]
+      }
+    ],
+    "scope": "Actual whole-board AHR decisions checked against one independently verified selected bounded tactical target. Other groups may be more urgent; this is a diagnostic gate, not a global best-move theorem.",
+    "status": "FAIL"
+  }
+}

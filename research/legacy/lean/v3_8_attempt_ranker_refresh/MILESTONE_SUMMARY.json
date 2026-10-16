@@ -1,0 +1,216 @@
+{
+  "baseline_v3_7_smoke": {
+    "elapsed_s": 795.623,
+    "failure_reason_counts": {
+      "lean_verification_failed": 4,
+      "target_verified": 2
+    },
+    "lean_calls_total": 105,
+    "record_count": 6,
+    "retrieval_cluster_success_count": 6,
+    "target_verified_count": 2,
+    "translated_count": 6
+  },
+  "bridge_smoke": {
+    "all_rows": [
+      {
+        "failure_reason": "lean_timeout",
+        "id": "Munkres|exercise_29_4",
+        "lean_calls": 1,
+        "proof_lines": [],
+        "target_verified": false,
+        "translated": false
+      },
+      {
+        "failure_reason": "lean_timeout",
+        "id": "Munkres|exercise_30_10",
+        "lean_calls": 1,
+        "proof_lines": [],
+        "target_verified": false,
+        "translated": false
+      },
+      {
+        "failure_reason": "lean_type_mismatch",
+        "id": "Axler|exercise_1_2",
+        "lean_calls": 24,
+        "proof_lines": [],
+        "target_verified": false,
+        "translated": true
+      },
+      {
+        "failure_reason": null,
+        "id": "Axler|exercise_1_4",
+        "lean_calls": 2,
+        "proof_lines": [
+          "simp [smul_eq_zero]"
+        ],
+        "target_verified": true,
+        "translated": true
+      },
+      {
+        "failure_reason": "lean_verification_failed",
+        "id": "Shakarchi|exercise_5_1",
+        "lean_calls": 24,
+        "proof_lines": [],
+        "target_verified": false,
+        "translated": true
+      },
+      {
+        "failure_reason": null,
+        "id": "Pugh|exercise_2_32a",
+        "lean_calls": 2,
+        "proof_lines": [
+          "simpa using MeasureTheory.SignedMeasure.subset_negative_null_set"
+        ],
+        "target_verified": true,
+        "translated": true
+      }
+    ],
+    "elapsed_s": 498.754,
+    "failure_reason_counts": {
+      "lean_timeout": 2,
+      "lean_type_mismatch": 1,
+      "lean_verification_failed": 1,
+      "target_verified": 2
+    },
+    "lean_calls_total": 54,
+    "record_count": 6,
+    "retrieval_cluster_success_count": 4,
+    "run_name": "lean_ahr_v3_8_offset50_ranker_refresh_smoke6",
+    "solved_rows": [
+      {
+        "failure_reason": null,
+        "id": "Axler|exercise_1_4",
+        "lean_calls": 2,
+        "proof_lines": [
+          "simp [smul_eq_zero]"
+        ],
+        "selected_module": null
+      },
+      {
+        "failure_reason": null,
+        "id": "Pugh|exercise_2_32a",
+        "lean_calls": 2,
+        "proof_lines": [
+          "simpa using MeasureTheory.SignedMeasure.subset_negative_null_set"
+        ],
+        "selected_module": null
+      }
+    ],
+    "target_verified_count": 2,
+    "translated_count": 4
+  },
+  "clinical_use": "forbidden",
+  "created_utc": "2026-06-25T17:49:25Z",
+  "dataset": {
+    "example_count": 3427,
+    "inputs": {
+      "datasets/lean_ahr_v3_1_hf_proofnet50_bridge_records.jsonl": {
+        "examples": 71,
+        "records": 50
+      },
+      "datasets/lean_ahr_v3_2_hf_proofnet50_translation_bridge_records.jsonl": {
+        "examples": 487,
+        "records": 50
+      },
+      "datasets/lean_ahr_v3_4_hf_proofnet50_ranker_guided_bridge_records.jsonl": {
+        "examples": 487,
+        "records": 50
+      },
+      "datasets/lean_ahr_v3_5b_hf_proofnet50_offset50_translation_repair_bridge_records.jsonl": {
+        "examples": 298,
+        "records": 50
+      },
+      "datasets/lean_ahr_v3_5b_hf_proofnet50_translation_repair_bridge_records.jsonl": {
+        "examples": 647,
+        "records": 50
+      },
+      "datasets/lean_ahr_v3_6_hf_proofnet50_offset50_translation_repair_bridge_records.jsonl": {
+        "examples": 719,
+        "records": 50
+      },
+      "datasets/lean_ahr_v3_7_hf_proofnet50_offset50_proof_template_bridge_records.jsonl": {
+        "examples": 718,
+        "records": 50
+      }
+    },
+    "label_counts": {
+      "0": 3405,
+      "1": 22
+    },
+    "positive_by_split": {
+      "test": 6,
+      "train": 10,
+      "val": 6
+    },
+    "rows_with_positive_count": 7,
+    "split_counts": {
+      "test": 545,
+      "train": 2070,
+      "val": 812
+    }
+  },
+  "delta_vs_v3_7_smoke": {
+    "elapsed_s": -296.869,
+    "lean_calls_total": -51,
+    "target_verified_count": 0,
+    "translated_count": -2
+  },
+  "milestone": "Lean-AHR v3.8 ProofNet attempt-ranker refresh",
+  "next_step": "Run a timeout/error-aware v3.9 bridge that uses the v3.8 checkpoint for ordering but pre-filters topology/analysis rows that time out at translation, and compare full offset-50 against v3.7 before promoting the checkpoint into default bridge settings.",
+  "remote_host": "benjamin@136.115.202.117",
+  "remote_project": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "training": {
+    "acceptance": {
+      "test_row_top1_positive_ge_0_80": true,
+      "val_row_top1_positive_ge_0_80": true
+    },
+    "best_epoch": 2,
+    "device": "cuda",
+    "elapsed_s": 685.457,
+    "interpretation": "The checkpoint is useful as an attempt ranker: validation/test row_top1_positive_rate and row_mrr are 1.0 on rows with positives, but threshold F1 is 0.0 on validation/test because calibrated positive probabilities remain below 0.5. Use it for ordering candidates, not binary acceptance.",
+    "metrics": {
+      "test": {
+        "count": 545,
+        "f1": 0.0,
+        "fn": 6,
+        "fp": 0,
+        "positive_count": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "row_mrr": 1.0,
+        "row_top1_positive_rate": 1.0,
+        "rows_with_positive": 2,
+        "tp": 0
+      },
+      "train": {
+        "count": 2070,
+        "f1": 0.8235294117647058,
+        "fn": 3,
+        "fp": 0,
+        "positive_count": 10,
+        "precision": 1.0,
+        "recall": 0.7,
+        "row_mrr": 1.0,
+        "row_top1_positive_rate": 1.0,
+        "rows_with_positive": 3,
+        "tp": 7
+      },
+      "val": {
+        "count": 812,
+        "f1": 0.0,
+        "fn": 6,
+        "fp": 0,
+        "positive_count": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "row_mrr": 1.0,
+        "row_top1_positive_rate": 1.0,
+        "rows_with_positive": 2,
+        "tp": 0
+      }
+    },
+    "run_name": "lean_ahr_v3_8_proofnet_attempt_ranker_e150",
+    "vocab_size": 4532
+  }
+}

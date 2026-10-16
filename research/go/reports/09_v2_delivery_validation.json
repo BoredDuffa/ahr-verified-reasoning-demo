@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "notebooks": [
+    {
+      "notebook": "notebooks/09_selfplay_and_improvement.ipynb",
+      "executed_code_cells": 12,
+      "errors": 0,
+      "preview": "reports/09_v2_selfplay_preview.html",
+      "html_structure": "PASS",
+      "graphical_layout_review": "NOT_PERFORMED"
+    },
+    {
+      "notebook": "reports/09_v2_profile_and_recovery.ipynb",
+      "executed_code_cells": 3,
+      "errors": 0,
+      "preview": "reports/09_v2_profile_preview.html",
+      "html_structure": "PASS",
+      "graphical_layout_review": "NOT_PERFORMED"
+    },
+    {
+      "notebook": "reports/09_v2_real_pilot.ipynb",
+      "executed_code_cells": 2,
+      "errors": 0,
+      "preview": "reports/09_v2_real_pilot_preview.html",
+      "html_structure": "PASS",
+      "graphical_layout_review": "NOT_PERFORMED"
+    }
+  ],
+  "source_hash": "f1c9bfea127d737339682d88a281d88e03450518ea105bdf552e4fa2307236df",
+  "before_after_segment_speedup": 7.196729331718288,
+  "exact_recovery_gpu_devices": [
+    "cuda:0",
+    "cuda:1"
+  ],
+  "in_game_exact": true,
+  "update_boundary_exact": true,
+  "new_generation_handoff_exact": true,
+  "pilot_completed_games": 2,
+  "pilot_unknown_games": 0,
+  "pilot_optimizer_steps": 16,
+  "pilot_active_elapsed_s": 79.90134083200246,
+  "source_documents_or_external_engine_labels_used_for_training": false,
+  "strength_claim": "NOT_EVALUATED"
+}

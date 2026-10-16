@@ -1,0 +1,1 @@
+You have these four operations on integer sequences: REV, DELTA, DOUBLE-EVENS, and ZIP-SELF. Apply some composition of exactly five of these operations, with repetition allowed, to the input [1, 4, 9, 16, 25, 36] to produce the output [1, 6, 5, 14, 9]. Provide the composition and verify by execution. If no five-operation composition produces this output, prove it.

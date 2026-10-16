@@ -1,0 +1,323 @@
+{
+  "actual_ahr_plies": 239,
+  "checkpoint_manifest": "checkpoints/go09-first-selfplay-v1/manifest.json",
+  "complete": false,
+  "completed_games": 2,
+  "config": {
+    "actor_device": "cuda:1",
+    "batch_size": 32,
+    "board_size": 9,
+    "device": "cuda:0",
+    "exploration": 0.15,
+    "games": 64,
+    "komi": 7.5,
+    "learning_rate": 0.0003,
+    "max_plies": 256,
+    "opponent_probability": 0.25,
+    "opponent_snapshots": 4,
+    "purpose": "go_training",
+    "replay_capacity": 2048,
+    "search": {
+      "branch_width": 4,
+      "max_depth": 2,
+      "max_nodes": 32,
+      "queen_cycles": 1,
+      "temperature": 1.0
+    },
+    "seed": 20260925,
+    "snapshot_every_games": 8,
+    "temperature": 1.0,
+    "time_budget_s": 0.5,
+    "updates_per_game": 8,
+    "validation_force_pass": false,
+    "weight_decay": 0.0001
+  },
+  "examples_admitted": 234,
+  "game_history": [
+    {
+      "admitted": true,
+      "game_id": 0,
+      "plies": 157,
+      "reason": "two_legal_passes",
+      "status": "VERIFIED_TERMINAL"
+    },
+    {
+      "admitted": true,
+      "game_id": 1,
+      "plies": 77,
+      "reason": "two_legal_passes",
+      "status": "VERIFIED_TERMINAL"
+    }
+  ],
+  "games_finished": 2,
+  "global_step": 260,
+  "initialization": {
+    "checkpoint_metadata": {
+      "candidate_only": true,
+      "checkpoint_file": "checkpoints/go08-initial-warmup-v2/step-000000004-d56193ce.pt",
+      "checkpoint_sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51",
+      "dataset_sha256": "974491b7799d061381f15659505190ac1bf0ddf248ee0ce7dab76627e641d286",
+      "model_config": {
+        "board_size": 9,
+        "dropout": 0.1,
+        "hidden_dim": 64,
+        "queen_cycles": 2,
+        "scout_steps": 2,
+        "spatial_channels": 32,
+        "worker_steps": 2
+      },
+      "model_sha256": "5f6222557e4b7fa72fdfd655d336b953987c47dd281df3aedde8c4e32c6ac04b",
+      "optimizer_step": 32,
+      "provenance": {
+        "candidate_only": true,
+        "dataset_sha256": "974491b7799d061381f15659505190ac1bf0ddf248ee0ce7dab76627e641d286",
+        "purpose": "go_training",
+        "target_scope": "recorded terminal continuation and bounded immediate captures",
+        "trained_on_go": true,
+        "training_route": "go_supervised"
+      },
+      "purpose": "go_training",
+      "run_id": "go08-initial-warmup-v2",
+      "schema": "ahr_go_learning_v1",
+      "selection": "best",
+      "source_hashes": {
+        "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+        "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+        "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+        "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+        "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+        "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+        "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+        "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+      },
+      "target_scope": "recorded terminal continuation and bounded immediate captures",
+      "trained_on_go": true,
+      "training_route": "go_supervised"
+    },
+    "model_digest": "5f6222557e4b7fa72fdfd655d336b953987c47dd281df3aedde8c4e32c6ac04b",
+    "seed": 20260925,
+    "source": "checkpoint"
+  },
+  "last_update": {
+    "examples": 32.0,
+    "gradient_norm": 1.7100414037704468,
+    "loss": 3.9448509216308594,
+    "optimizer_step": 16,
+    "ownership": 0.993943452835083,
+    "policy": 2.388942241668701,
+    "replay_positions": 234,
+    "score": 0.14635613560676575,
+    "value": 0.9857586622238159
+  },
+  "loss_history": [
+    {
+      "examples": 32.0,
+      "gradient_norm": 3.9038710594177246,
+      "loss": 6.660791397094727,
+      "optimizer_step": 1,
+      "ownership": 0.95528244972229,
+      "policy": 2.3161325454711914,
+      "replay_positions": 157,
+      "score": 0.16215163469314575,
+      "value": 3.7859420776367188
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 2.9615325927734375,
+      "loss": 6.577197551727295,
+      "optimizer_step": 2,
+      "ownership": 0.8864169716835022,
+      "policy": 2.3406691551208496,
+      "replay_positions": 157,
+      "score": 0.13103991746902466,
+      "value": 3.727799892425537
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 3.667163133621216,
+      "loss": 6.348702430725098,
+      "optimizer_step": 3,
+      "ownership": 0.8235302567481995,
+      "policy": 2.2459802627563477,
+      "replay_positions": 157,
+      "score": 0.10582387447357178,
+      "value": 3.638045310974121
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 4.424662113189697,
+      "loss": 6.260132312774658,
+      "optimizer_step": 4,
+      "ownership": 0.784463107585907,
+      "policy": 2.292048215866089,
+      "replay_positions": 157,
+      "score": 0.08721533417701721,
+      "value": 3.5322446823120117
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 9.683239936828613,
+      "loss": 5.852517127990723,
+      "optimizer_step": 5,
+      "ownership": 0.7730340957641602,
+      "policy": 2.259483814239502,
+      "replay_positions": 157,
+      "score": 0.08322962373495102,
+      "value": 3.1649010181427
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 10.195082664489746,
+      "loss": 5.550812721252441,
+      "optimizer_step": 6,
+      "ownership": 0.7494709491729736,
+      "policy": 2.167658567428589,
+      "replay_positions": 157,
+      "score": 0.07399127632379532,
+      "value": 2.9714231491088867
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 10.237345695495605,
+      "loss": 5.339798927307129,
+      "optimizer_step": 7,
+      "ownership": 0.7542622685432434,
+      "policy": 2.21773099899292,
+      "replay_positions": 157,
+      "score": 0.0741506814956665,
+      "value": 2.7078614234924316
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 9.889525413513184,
+      "loss": 4.947587966918945,
+      "optimizer_step": 8,
+      "ownership": 0.7951849102973938,
+      "policy": 2.23789119720459,
+      "replay_positions": 157,
+      "score": 0.08951792120933533,
+      "value": 2.2673451900482178
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 2.0818376541137695,
+      "loss": 4.542187213897705,
+      "optimizer_step": 9,
+      "ownership": 0.8450616598129272,
+      "policy": 2.278590679168701,
+      "replay_positions": 234,
+      "score": 0.09573175013065338,
+      "value": 1.7932002544403076
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 3.345801830291748,
+      "loss": 4.051171779632568,
+      "optimizer_step": 10,
+      "ownership": 0.9521070718765259,
+      "policy": 2.288353681564331,
+      "replay_positions": 234,
+      "score": 0.12971176207065582,
+      "value": 1.2219089269638062
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 3.7031655311584473,
+      "loss": 4.590333461761475,
+      "optimizer_step": 11,
+      "ownership": 0.8857122659683228,
+      "policy": 2.353773593902588,
+      "replay_positions": 234,
+      "score": 0.10476070642471313,
+      "value": 1.7413229942321777
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 2.84676456451416,
+      "loss": 4.473010063171387,
+      "optimizer_step": 12,
+      "ownership": 0.9084985852241516,
+      "policy": 2.332704544067383,
+      "replay_positions": 234,
+      "score": 0.11612287908792496,
+      "value": 1.6279947757720947
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 2.128201961517334,
+      "loss": 4.199216365814209,
+      "optimizer_step": 13,
+      "ownership": 0.921623170375824,
+      "policy": 2.2002975940704346,
+      "replay_positions": 234,
+      "score": 0.12695372104644775,
+      "value": 1.47463059425354
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 2.4891505241394043,
+      "loss": 4.374066352844238,
+      "optimizer_step": 14,
+      "ownership": 0.9175659418106079,
+      "policy": 2.2605769634246826,
+      "replay_positions": 234,
+      "score": 0.12385594099760056,
+      "value": 1.5927783250808716
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 2.024486541748047,
+      "loss": 4.216752052307129,
+      "optimizer_step": 15,
+      "ownership": 0.9498372673988342,
+      "policy": 2.2554526329040527,
+      "replay_positions": 234,
+      "score": 0.13543973863124847,
+      "value": 1.4186607599258423
+    },
+    {
+      "examples": 32.0,
+      "gradient_norm": 1.7100414037704468,
+      "loss": 3.9448509216308594,
+      "optimizer_step": 16,
+      "ownership": 0.993943452835083,
+      "policy": 2.388942241668701,
+      "replay_positions": 234,
+      "score": 0.14635613560676575,
+      "value": 0.9857586622238159
+    }
+  ],
+  "model_config": {
+    "board_size": 9,
+    "dropout": 0.1,
+    "hidden_dim": 64,
+    "queen_cycles": 2,
+    "scout_steps": 2,
+    "spatial_channels": 32,
+    "worker_steps": 2
+  },
+  "optimizer_steps": 16,
+  "phase": "play",
+  "promotion_recommended": false,
+  "replay_positions": 234,
+  "resume_notebook": "reports/09_first_selfplay_run.ipynb",
+  "run_id": "go09-first-selfplay-v1",
+  "schema": "ahr09-real-selfplay-result-v1",
+  "search_deadline_exceedances": 0,
+  "search_model_calls": 1877,
+  "selfplay_source_hash": "18f7a26c744990e3acc22efbc5714047d5025aff196268872fa76c706c7016a3",
+  "session_elapsed_s": 171.1229983700032,
+  "source_hashes": {
+    "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+    "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+    "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+    "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+    "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+    "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+    "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+    "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+  },
+  "strength_status": "NOT_EVALUATED",
+  "unknown_games": 0,
+  "verified_plies": 239
+}

@@ -1,0 +1,306 @@
+{
+  "schema": "notebook19-development-result/v1",
+  "status": "COMPLETE",
+  "run_id": "compute-gate-002",
+  "phase": "finished",
+  "seeds": [
+    20262201,
+    20262202
+  ],
+  "variants": [
+    "vit",
+    "learned_optimized",
+    "learned_global_prior"
+  ],
+  "endpoints": {
+    "initial": {
+      "status": "COMPLETE",
+      "comparisons": {
+        "learned_optimized": {
+          "status": "COMPLETE",
+          "n_pairs": 2,
+          "mean_delta_pp": -0.27227722772277163,
+          "observed_delta_range_pp": [
+            -0.2970297029702973,
+            -0.24752475247524597
+          ],
+          "mean_knn_delta_pp": 0.024752475247524774,
+          "paired_results": [
+            {
+              "seed": 20262201,
+              "candidate": "learned_optimized",
+              "vit_percent": 7.128712871287128,
+              "candidate_percent": 6.881188118811882,
+              "delta_pp": -0.24752475247524597,
+              "knn_delta_pp": 0.14851485148514865
+            },
+            {
+              "seed": 20262202,
+              "candidate": "learned_optimized",
+              "vit_percent": 7.673267326732673,
+              "candidate_percent": 7.376237623762376,
+              "delta_pp": -0.2970297029702973,
+              "knn_delta_pp": -0.0990099009900991
+            }
+          ],
+          "scope": "Observed two-pair DEV effects; no confidence interval or pvalue"
+        },
+        "learned_global_prior": {
+          "status": "COMPLETE",
+          "n_pairs": 2,
+          "mean_delta_pp": 0.04950495049504955,
+          "observed_delta_range_pp": [
+            -0.04950495049504955,
+            0.14851485148514865
+          ],
+          "mean_knn_delta_pp": -0.22277227722772297,
+          "paired_results": [
+            {
+              "seed": 20262201,
+              "candidate": "learned_global_prior",
+              "vit_percent": 7.128712871287128,
+              "candidate_percent": 7.079207920792078,
+              "delta_pp": -0.04950495049504955,
+              "knn_delta_pp": -0.2970297029702973
+            },
+            {
+              "seed": 20262202,
+              "candidate": "learned_global_prior",
+              "vit_percent": 7.673267326732673,
+              "candidate_percent": 7.821782178217822,
+              "delta_pp": 0.14851485148514865,
+              "knn_delta_pp": -0.14851485148514865
+            }
+          ],
+          "scope": "Observed two-pair DEV effects; no confidence interval or pvalue"
+        }
+      },
+      "missing": []
+    },
+    "matched": {
+      "status": "COMPLETE",
+      "comparisons": {
+        "learned_optimized": {
+          "status": "COMPLETE",
+          "n_pairs": 2,
+          "mean_delta_pp": -0.4950495049504955,
+          "observed_delta_range_pp": [
+            -0.8910891089108919,
+            -0.0990099009900991
+          ],
+          "mean_knn_delta_pp": -0.3465346534653466,
+          "paired_results": [
+            {
+              "seed": 20262201,
+              "candidate": "learned_optimized",
+              "vit_percent": 8.118811881188119,
+              "candidate_percent": 7.227722772277227,
+              "delta_pp": -0.8910891089108919,
+              "knn_delta_pp": -0.24752475247524774
+            },
+            {
+              "seed": 20262202,
+              "candidate": "learned_optimized",
+              "vit_percent": 6.980198019801981,
+              "candidate_percent": 6.881188118811882,
+              "delta_pp": -0.0990099009900991,
+              "knn_delta_pp": -0.4455445544554455
+            }
+          ],
+          "scope": "Observed two-pair DEV effects; no confidence interval or pvalue"
+        },
+        "learned_global_prior": {
+          "status": "COMPLETE",
+          "n_pairs": 2,
+          "mean_delta_pp": 0.6435643564356437,
+          "observed_delta_range_pp": [
+            0.04950495049505044,
+            1.237623762376237
+          ],
+          "mean_knn_delta_pp": -0.12376237623762387,
+          "paired_results": [
+            {
+              "seed": 20262201,
+              "candidate": "learned_global_prior",
+              "vit_percent": 8.118811881188119,
+              "candidate_percent": 8.16831683168317,
+              "delta_pp": 0.04950495049505044,
+              "knn_delta_pp": -0.04950495049504955
+            },
+            {
+              "seed": 20262202,
+              "candidate": "learned_global_prior",
+              "vit_percent": 6.980198019801981,
+              "candidate_percent": 8.217821782178218,
+              "delta_pp": 1.237623762376237,
+              "knn_delta_pp": -0.1980198019801982
+            }
+          ],
+          "scope": "Observed two-pair DEV effects; no confidence interval or pvalue"
+        }
+      },
+      "missing": []
+    },
+    "final": {
+      "status": "COMPLETE",
+      "comparisons": {
+        "learned_optimized": {
+          "status": "COMPLETE",
+          "n_pairs": 2,
+          "mean_delta_pp": 0.34653465346534684,
+          "observed_delta_range_pp": [
+            -0.5445544554455441,
+            1.2376237623762378
+          ],
+          "mean_knn_delta_pp": -0.7425742574257423,
+          "paired_results": [
+            {
+              "seed": 20262201,
+              "candidate": "learned_optimized",
+              "vit_percent": 7.623762376237623,
+              "candidate_percent": 8.861386138613861,
+              "delta_pp": 1.2376237623762378,
+              "knn_delta_pp": -0.5940594059405941
+            },
+            {
+              "seed": 20262202,
+              "candidate": "learned_optimized",
+              "vit_percent": 8.861386138613861,
+              "candidate_percent": 8.316831683168317,
+              "delta_pp": -0.5445544554455441,
+              "knn_delta_pp": -0.8910891089108905
+            }
+          ],
+          "scope": "Observed two-pair DEV effects; no confidence interval or pvalue"
+        },
+        "learned_global_prior": {
+          "status": "COMPLETE",
+          "n_pairs": 2,
+          "mean_delta_pp": 0.22277227722772253,
+          "observed_delta_range_pp": [
+            -0.8415841584158414,
+            1.2871287128712865
+          ],
+          "mean_knn_delta_pp": -0.39603960396039595,
+          "paired_results": [
+            {
+              "seed": 20262201,
+              "candidate": "learned_global_prior",
+              "vit_percent": 7.623762376237623,
+              "candidate_percent": 8.91089108910891,
+              "delta_pp": 1.2871287128712865,
+              "knn_delta_pp": 0.0
+            },
+            {
+              "seed": 20262202,
+              "candidate": "learned_global_prior",
+              "vit_percent": 8.861386138613861,
+              "candidate_percent": 8.01980198019802,
+              "delta_pp": -0.8415841584158414,
+              "knn_delta_pp": -0.7920792079207919
+            }
+          ],
+          "scope": "Observed two-pair DEV effects; no confidence interval or pvalue"
+        }
+      },
+      "missing": []
+    }
+  },
+  "signals": {
+    "learned_optimized": "NO_COMPLETE_FAVORABLE_SIGNAL",
+    "learned_global_prior": "NO_COMPLETE_FAVORABLE_SIGNAL"
+  },
+  "official_test": "CLOSED",
+  "official_test_pixels_read": 0,
+  "matched_status": "COMPLETE",
+  "inference": "Descriptive pilot only; no statistical significance or superiority claim",
+  "additional_online_parameters": 98328,
+  "profiling_status": "COMPLETE",
+  "source_hashes": {
+    "fmm_jepa/bootstrap.ipynb": "c61b5924dc644c86a179f4c538711fd9afbbf3fed331fe68a59e3cc58d6982cd",
+    "fmm_jepa/data.ipynb": "7d3f014558698469ac67a553ab5930d4381e7b93b8c0647d14ebe003f5ffdfba",
+    "fmm_jepa/evaluation.ipynb": "a51d2c491ee784a78ceb67107a07e886165dee772cf9740f8daf95d6ff3f6f61",
+    "fmm_jepa/food101_benchmark.ipynb": "d4a0e92b4941dc6717c03c966466047765fc042fe35851f416aac9020297ff06",
+    "fmm_jepa/food101_data.ipynb": "a36ff7a9135de4ac8095a9fdb45e9f2361945b350fcb9c3c4574abdad6eac5e7",
+    "fmm_jepa/food101_evaluation.ipynb": "2a60db96e4e9cf9384c77264018d9dd6500088a05a6112d24259f841b8e49249",
+    "fmm_jepa/food101_training.ipynb": "fb3997eddf8bda2c55c26e6cefb2185b1b20d901997e1e5a732c2c53ce7cb9db",
+    "fmm_jepa/food101_workflow.ipynb": "79c09b1e87198a7e45742bbfbdd1015169e3f5e481c96488a1a3abb859e301ea",
+    "fmm_jepa/geometry.ipynb": "91ff1d35ffeba001a25be0ac4563cb91d442bcf93c24c225b1d580236e9c3fbb",
+    "fmm_jepa/models.ipynb": "47d84ac809c0f0c1372e34a63e6745baafff328aaa2d536f33267d6f3c406a7b",
+    "fmm_jepa/operators.ipynb": "caf0847ef5d12fd199d7ff2216f7bcebcf218e7cfb16fff21c758440ba502d67",
+    "fmm_jepa/reporting.ipynb": "5c4a70b3f8703320ee730c56c140694c7b8ea659c5531f3a89f5dc0b9df9e265",
+    "fmm_jepa/semantic_attention.ipynb": "d0e40385abca3bc156de1e4f504f8589545a38fb3d0b9bbed01a0402fa44f6c6",
+    "fmm_jepa/semantic_evaluation.ipynb": "2a5906ff380be0a0437b5b1aee1ef3ca2cba4cd69dbe707f4edb70018d514a68",
+    "fmm_jepa/semantic_pilot.ipynb": "420dca446ea1df35078b9b5e7243578d62c7f68ceb7438799588585288443011",
+    "fmm_jepa/tiny_evaluation.ipynb": "740291aa21e67638a55f2d55826c2dd91c0c13b8fdacb679f11eda1c3021e09f",
+    "fmm_jepa/tiny_figures.ipynb": "73c565809eca635fbbe116fb0551918483f419362906f414aa94cdf6b8176fc2",
+    "fmm_jepa/tiny_imagenet.ipynb": "aede3ef94e08f5725c68eefd34d0de2476820a6466bd426deb83f1c5d772aaf2",
+    "fmm_jepa/tiny_performance.ipynb": "07409d3266e72280269328547bcfee94e1621a263e3f7d332373f9499e580784",
+    "fmm_jepa/tiny_pilot.ipynb": "0322db37f937c79db16949857038bf18a38ded00c385c87047a5f2b57132d5b6",
+    "fmm_jepa/tiny_training.ipynb": "54f4072e05f934c03f0f2a2ec4f0622f1357ca882042e8b47023588a8fcdce8f",
+    "fmm_jepa/tiny_workflow.ipynb": "a8ea3721813bade922153e14f2b9e7faee64d342391604543b5b10a7daf953a3",
+    "fmm_jepa/training.ipynb": "a2e301b84b073c6fcd92acda8f6bff0c850d4a38884418ee309ec7e45691e375",
+    "experiments/04_followup/deadline_watchdog.ipynb": "a0d57fbafc8d9f27c240d1abc9e7858517ae40e21f08bbfcff874381e9a27e4e",
+    "experiments/04_followup/diagnostics.ipynb": "38230c247f15bc0db816a15140d602fbb47abf465f5866eecab7eb108de31cc9",
+    "experiments/04_followup/engineering.ipynb": "b777ad5ede60ac262c6da8100a2a6c8f3fcf82f29be99134c86d1b545a762698",
+    "experiments/04_followup/runner.ipynb": "048dbe1ad7518aa695d873a74240e877c6e22cb7ea559eb46f8f68ee58dee62c",
+    "experiments/04_followup/workflow.ipynb": "336eafa60589ff5f5ffca01196aa74c76380aa10cb07dd7b1cbb198e0575fbf9",
+    "experiments/05_scaling/deadline_watchdog.ipynb": "8ef420018be052b9c1e9b2a551988acc8fa32c8c9990d1e42ab075f789f9db57",
+    "experiments/05_scaling/evaluation.ipynb": "7dbc07109485e0a97206a2b9ee3b243ebcc775b60948042b9866cd19d01958b3",
+    "experiments/05_scaling/preparation.ipynb": "935bec2c1e61154915897981440574515ce8b7f91e405d3a5603709832bf3289",
+    "experiments/05_scaling/runner.ipynb": "d365c958e4b2a7491f13e0ce0b9cfa60f1541e59e0820fcff91bc1599d9af457",
+    "experiments/05_scaling/stable_attention.ipynb": "7fcc47475874daf7e99278dba2729488036e3e677a252d72c3aea9fd7214cfea",
+    "experiments/05_scaling/workflow.ipynb": "5957e383f7ae97a5356aa7c1a8865450e8ea2b49c781fb1584e6597873696054",
+    "experiments/11_manifold_long/deadline_watchdog.ipynb": "c6cdd39adcb5336dce79be42a8c05c46242f117ed14b5520bd1608265aca6b16",
+    "experiments/11_manifold_long/encoder.ipynb": "ddea4c6621a25514f3b9df356234fe201e9c6ab78d3060d4996c3bf6eec71de0",
+    "experiments/11_manifold_long/engineering.ipynb": "a2e1825a41f299e2c2ad7e5f2c4aaaa1c41132a50df0305cc289464b214b090b",
+    "experiments/11_manifold_long/evaluation.ipynb": "71b2c7c46859354e9c0eff79f0e837872098f37d934abfa965d7364e28c33cac",
+    "experiments/11_manifold_long/heartbeat.ipynb": "8a4534eceb6d69083c72efe018ed42fdbe22b2e2832c3afff022127a4150d27d",
+    "experiments/11_manifold_long/input_pipeline.ipynb": "a42650cda369966a5f8759577b278b39de4ec359c4a478e20c072245e1e43422",
+    "experiments/11_manifold_long/preparation.ipynb": "ff009bedda6624c1963c5b339c473781a48c3b20a56c5a1c3013d3bc095b68f0",
+    "experiments/11_manifold_long/runner.ipynb": "7ac573eb89b1a1f6447d5f29a7824343d05feb7283d38dc912ac84c0c33f54b9",
+    "experiments/11_manifold_long/visualization.ipynb": "903710ff70e333d536083bee6d79dd32466cf79e5b824eb8b094288540e5de7a",
+    "experiments/11_manifold_long/workflow.ipynb": "7b4c623e631a88dbeb6aff38b5591f04d2f18eefa53362395efaea9aa763cbb1",
+    "experiments/15_vit_geometry/encoder.ipynb": "df020cf5cdeb27ba8e965486fd3c6414f77ff72af3f0b570d855c1785555b7aa",
+    "experiments/15_vit_geometry/evaluation.ipynb": "eadf70350fe79086fc12666b54813c22f391bcd889062ce0ec81ffe73149fb4f",
+    "experiments/15_vit_geometry/runner.ipynb": "38d0138bfa17873981963609473cace0fd2eb73e160ccd685b1aabfbacaf29bf",
+    "experiments/15_vit_geometry/workflow.ipynb": "af0d5aa6280665cccac44e0e08c03ae0c23c9a425a51d65a7bdf39256ebd06d2",
+    "experiments/16_hierarchical_confirmation/benchmark.ipynb": "c9344391769dc53258c3688c34401a253e8be6cc12599e138b3b64e646f0454d",
+    "experiments/16_hierarchical_confirmation/common.ipynb": "d60d5f22cddb5268e50db35ffc66db8859899d5a3c1fb81f854308a19359a473",
+    "experiments/16_hierarchical_confirmation/confirmation.ipynb": "ce914e0cb130f740403b3abf4f6d8e4809be54104950b75f816478dcef61f71a",
+    "experiments/16_hierarchical_confirmation/operator.ipynb": "759541232098981011deba43ddc384ca46b2fadc6153d43f64f47ad0e105d331",
+    "experiments/16_hierarchical_confirmation/runner.ipynb": "163b67824a577d96d83363ccbca617cd2a823d388374584446dabe60e175bf9a",
+    "experiments/16_hierarchical_confirmation/workflow.ipynb": "adef8db522e66a4c521b39310f0195c48e8910ae774e59155bd57d8de48811e2",
+    "experiments/17_fixed_kernel/benchmark.ipynb": "41bef214ea7a1a32893f948dbe24fa4357dbbde1a5c42817dd2dd759fef95ff5",
+    "experiments/17_fixed_kernel/common.ipynb": "7f301e411e13de2f96f80fcfd1e1730a7d24b25318b504f190eebd8e562aa4fd",
+    "experiments/17_fixed_kernel/confirmation.ipynb": "a8ce0f703d20c4e415c4cec68837a1e335c75bf834fde1d9fd84cec267a158bc",
+    "experiments/17_fixed_kernel/operator.ipynb": "db22407054765c9eb4b186248c6272c6e59766280b3cf48c183e9b9154a6fc43",
+    "experiments/17_fixed_kernel/pipeline.ipynb": "ad5563bd42f3d4305a6d5f6ce785b26f805e837b93f7f218ec0a466c0b408ce1",
+    "experiments/17_fixed_kernel/report.ipynb": "67e94347b74d43f473243a888baf32925f1baa6dc6668d4e75a46316b6e03e9a",
+    "experiments/17_fixed_kernel/runner.ipynb": "e2a572cf7012a77a3f5c902c7ed02ba82fe12368ffc5d648b7721ae15c7f093b",
+    "experiments/17_fixed_kernel/workflow.ipynb": "62d3d24a9ed23bd6cf8ad68b82c3188e5f682802b847820d3bb28547dccf19ee",
+    "experiments/18_learned_kernel/common.ipynb": "774b906038e8497f55f00f945e3f0b22592c5320938cd6b45eff297b1d50876e",
+    "experiments/18_learned_kernel/confirmation.ipynb": "2a60006102a22ae61605bda410ca465b106f953fda7e63a93e286cb2f7147cc5",
+    "experiments/18_learned_kernel/diagnostics.ipynb": "26878c77356c7c0fed18199c786aeb4c87b3efb23cbd15c218fab1d01ad93029",
+    "experiments/18_learned_kernel/operator.ipynb": "7ed011a167261ba1e937cc0ba85b393051685536bf1651b4e965469f27592008",
+    "experiments/18_learned_kernel/report.ipynb": "040d018b8b4d7f6eb1a4a4d4ffd9e7d2354e631a0e79542e3673a7e1bd92bb95",
+    "experiments/18_learned_kernel/runner.ipynb": "7f6dd1c4ccd7e0e43a021234b4cc632a37e8a04f248e58adf448f845ce7c4364",
+    "experiments/18_learned_kernel/workflow.ipynb": "c7612e450d2425343f374c6a67c5d2b83cb5868da21a52b7d251d1484d8ef39c",
+    "experiments/19_compute_and_gate/common.ipynb": "2549c9904ca0f892d299d50659d0778b3adede32af59cec8f6cb97cb8bf2ae23",
+    "experiments/19_compute_and_gate/operator.ipynb": "56bdc2c19adb79047093e378e1d1f2c582c664d56dcac34ef31c820f24e8ab2e",
+    "experiments/19_compute_and_gate/profiling.ipynb": "328a156e627f58d63201fdfb54bcca58d2d4ccefa61f7d9d6c0630e73d21bd22",
+    "experiments/19_compute_and_gate/protocol.ipynb": "6f1c5d1368d52c6329d43d2949f7667eb5b1e6d7e0e861750e89672b8063bbef",
+    "experiments/19_compute_and_gate/report.ipynb": "bda7a18ea699d2dddea5e5c596cfadcf62dea54eef4351813af1cb37ceacdb39",
+    "experiments/19_compute_and_gate/runner.ipynb": "070c24a559b5edd7f824224ab18960ef69acc263ddd11e1d7cd762c0002f7e9d",
+    "experiments/19_compute_and_gate/workflow.ipynb": "a1ac8cfd0cb465ff8a60e5fcfae6f95c377a574dd8837a781f2335db5022daa7"
+  },
+  "plan_hash": "334c56341714fd050094f4b24f7ab0684c0c39010fce90b75637c3149020cfc3",
+  "clock": {
+    "deadline_unix": 1792007438.232557,
+    "maximum_seconds": 10800.0,
+    "restart_policy": "No deadline reset or extension",
+    "scope": "Preregistration, boundedsyntheticwholeJEPAprofile,6arms,initial/matched/finalDEVprobes and checkpoints; noofficialreadout",
+    "started_unix": 1791996638.232557
+  },
+  "training_performance_status": "OBSERVED_NO_FOREIGN_COMPUTE"
+}

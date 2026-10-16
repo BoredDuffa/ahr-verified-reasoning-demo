@@ -1,0 +1,219 @@
+{
+  "clinical_use": "forbidden",
+  "created_at_unix": 1780928689.4081624,
+  "items": [
+    {
+      "answer": "The probability is 3/8 = 0.375000.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_coin_exactly_two_heads",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_coin_exactly_two_heads"
+      },
+      "verification": {
+        "favorable": 3,
+        "formula": "C(3,2) / 2^3",
+        "total": 8
+      }
+    },
+    {
+      "answer": "The probability is 1/6 = 0.166667.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_dice_sum_seven",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_dice_sum_seven"
+      },
+      "verification": {
+        "favorable_pairs": 6,
+        "pairs": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "total_pairs": 36
+      }
+    },
+    {
+      "answer": "The probability is 4/13 = 0.307692.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_card_king_or_heart",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_card_king_or_heart"
+      },
+      "verification": {
+        "formula": "(kings + hearts - king_of_hearts) / 52",
+        "hearts": 13,
+        "kings": 4,
+        "overlap": 1
+      }
+    },
+    {
+      "answer": "The probability is 2/9 = 0.222222.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_balls_both_red",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_balls_both_red"
+      },
+      "verification": {
+        "formula": "(5/10) * (4/9)",
+        "without_replacement": true
+      }
+    },
+    {
+      "answer": "The probability is 1/17 = 0.058824.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_second_ace_given_first_ace",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_second_ace_given_first_ace"
+      },
+      "verification": {
+        "given": "first card is an ace",
+        "remaining_aces": 3,
+        "remaining_cards": 51
+      }
+    },
+    {
+      "answer": "The probability is 1/6 = 16.6667%.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_bayes_disease_positive",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_bayes_disease_positive"
+      },
+      "verification": {
+        "false_positive_rate": "5%",
+        "formula": "sensitivity*prevalence / (sensitivity*prevalence + false_positive_rate*(1-prevalence))",
+        "prevalence": "1%",
+        "sensitivity": "99%",
+        "specificity": "95%"
+      }
+    },
+    {
+      "answer": "The probability is approximately 0.507297.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_birthday_23",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_birthday_23"
+      },
+      "verification": {
+        "exact_fraction": "38093904702297390785243708291056390518886454060947061/75091883268515350125426207425223147563269805908203125",
+        "formula": "1 - product_{i=0}^{22} (365-i)/365"
+      }
+    },
+    {
+      "answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_monty_hall_switch",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_monty_hall_switch"
+      },
+      "verification": {
+        "stay_win_probability": "1/3",
+        "switch_win_probability": "2/3"
+      }
+    },
+    {
+      "answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_coin_random_variable",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_coin_random_variable"
+      },
+      "verification": {
+        "distribution": "Binomial(n=5,p=1/2)",
+        "expectation": "5/2",
+        "p_x_eq_3": "5/16",
+        "variance": "5/4"
+      }
+    },
+    {
+      "answer": "The probability is 2/3 = 0.666667.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_three_boxes",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_three_boxes"
+      },
+      "verification": {
+        "gold_coin_observations": [
+          "A coin 1",
+          "A coin 2",
+          "C gold coin"
+        ],
+        "success_cases": 2,
+        "total_conditioned_cases": 3
+      }
+    },
+    {
+      "answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_100_prisoners_strategy",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_100_prisoners_strategy"
+      },
+      "verification": {
+        "exact_fraction": "21740752665556690246055199895649405434183/69720375229712477164533808935312303556800",
+        "probability_formula": "1 - sum_{k=51}^{100} 1/k",
+        "strategy": "Each prisoner starts at the box with their own number, then follows the number found in each opened box for up to 50 boxes.",
+        "success_condition": "The hidden permutation has no cycle longer than 50."
+      }
+    },
+    {
+      "answer": "The expected number of rolls is 6.",
+      "backend": "symbolic probability / combinatorics",
+      "backend_type": "exact probability calculator",
+      "id": "probability_expected_die_until_six",
+      "live_router": {
+        "match_score": "multi-prompt",
+        "matched_backend": "probability_expected_die_until_six"
+      },
+      "verification": {
+        "distribution": "Geometric(p=1/6)",
+        "expectation_formula": "1/p"
+      }
+    }
+  ],
+  "kind": "ahr_question_answer_demo",
+  "passed": true,
+  "question_set": "live:prob_questions.txt"
+}

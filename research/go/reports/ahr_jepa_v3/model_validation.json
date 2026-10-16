@@ -1,0 +1,149 @@
+{
+  "action_order_and_pass_checks": "PASS",
+  "base_checkpoint": {
+    "best_selection": "lowest_observed_training_loss_not_arena_strength",
+    "candidate_only": true,
+    "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+    "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+    "model_config": {
+      "board_size": 9,
+      "dropout": 0.1,
+      "hidden_dim": 64,
+      "queen_cycles": 2,
+      "scout_steps": 2,
+      "spatial_channels": 32,
+      "worker_steps": 2
+    },
+    "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+    "optimizer_step": 512,
+    "provenance": {
+      "best_selection": "lowest_observed_training_loss_not_arena_strength",
+      "candidate_only": true,
+      "purpose": "go_training",
+      "trained_on_go": true,
+      "training_route": "go_selfplay"
+    },
+    "purpose": "go_training",
+    "run_id": "go09-first-selfplay-v1",
+    "schema": "ahr_go_selfplay_v1",
+    "selection": "latest",
+    "source_hashes": {
+      "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+      "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+      "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+      "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+      "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+      "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+      "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+      "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+    },
+    "trained_on_go": true,
+    "training_route": "go_selfplay"
+  },
+  "claim": "Implementation validation only; no improved Go strength established",
+  "compute_parity": {
+    "control_auxiliary_gradients": "zero",
+    "control_base_gradients": "equal_supervised_only",
+    "forward_rng_schedule": "identical",
+    "graph": "same auxiliary forward/backward, coefficient zero in control",
+    "weight_decay": "AdamW may decay zero-gradient auxiliary parameters"
+  },
+  "cycle1_cycle2_diagnostic": "PASS",
+  "depth4_narrow_diagnostic": {
+    "completed_depth": 4,
+    "elapsed_s": 0.5530580810154788
+  },
+  "gradient_ema_mask_history_checks": "PASS",
+  "latent_default": "disabled",
+  "latent_gate_rejection": "PASS",
+  "prediction_diagnostics": {
+    "by_horizon": {
+      "1": {
+        "cosine": 0.8684863448143005,
+        "count": 3,
+        "persistence_mse": 0.00040044321212917566,
+        "prediction_mse": 0.004109805449843407
+      },
+      "2": {
+        "cosine": 0.7064144015312195,
+        "count": 3,
+        "persistence_mse": 5.865242565050721e-05,
+        "prediction_mse": 0.009174552746117115
+      },
+      "4": {
+        "cosine": 0.4570355713367462,
+        "count": 3,
+        "persistence_mse": 0.0002510275808162987,
+        "prediction_mse": 0.016967639327049255
+      },
+      "8": {
+        "cosine": 0.15573197603225708,
+        "count": 3,
+        "persistence_mse": 0.0010626442963257432,
+        "prediction_mse": 0.026383377611637115
+      }
+    },
+    "collapsed": false,
+    "latent_std": 0.06799055635929108,
+    "sequences": 12,
+    "target_encoder": "EMA",
+    "target_latent_std": 0.09607230126857758
+  },
+  "queen_cycles_training_and_search": 2,
+  "schema": "ahr_v3_model_search_validation_v1",
+  "search": [
+    {
+      "action": 11,
+      "case": "capture",
+      "completed_depth": 2,
+      "deadline_missed": false,
+      "elapsed_s": 0.7465752480202354,
+      "model_positions": 301,
+      "nodes": 192,
+      "reason": "node_budget"
+    },
+    {
+      "action": 11,
+      "case": "atari_escape",
+      "completed_depth": 2,
+      "deadline_missed": false,
+      "elapsed_s": 0.7505963169969618,
+      "model_positions": 301,
+      "nodes": 192,
+      "reason": "node_budget"
+    },
+    {
+      "action": 1,
+      "case": "opening",
+      "completed_depth": 2,
+      "deadline_missed": false,
+      "elapsed_s": 0.5019632410258055,
+      "model_positions": 203,
+      "nodes": 192,
+      "reason": "node_budget"
+    },
+    {
+      "action": 81,
+      "case": "zero_budget",
+      "completed_depth": 0,
+      "deadline_missed": true,
+      "elapsed_s": 8.003099355846643e-05,
+      "model_positions": 0,
+      "nodes": 0,
+      "reason": "zero_budget"
+    }
+  ],
+  "status": "PASS",
+  "synthetic_enabled_path": "PASS",
+  "terminal_pass": {
+    "independent_transition_and_score": "PASS",
+    "internal_nodes": "Mandatory terminating-pass branch; exact verified winning pass recognized before learned leaf evaluation",
+    "losing_pass_included": true,
+    "losing_pass_not_forced": true,
+    "winning_action": 81,
+    "winning_elapsed_s": 0.007228896953165531,
+    "winning_model_calls": 0
+  },
+  "training_scope": "disposable optimizer diagnostic only",
+  "training_steps": 1
+}

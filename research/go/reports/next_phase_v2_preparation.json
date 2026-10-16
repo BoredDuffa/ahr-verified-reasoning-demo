@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-09-24T14:33:18.957009+00:00",
+  "status": "IMPLEMENTATION_IN_PROGRESS",
+  "baseline_run": "go09-first-selfplay-v1",
+  "baseline_selection": "latest",
+  "scope": "Upgrade09/10/11/12, pipeline, local13backup; preserve00\u201308; full AHR selfplay authorized",
+  "off_instance_backup": "DEFERRED_BY_USER_PENDING_HUGGING_FACE_DESTINATION",
+  "files_at_start": {
+    "notebooks/00_instance_setup_and_recovery.ipynb": "679e342f216d65889c79ae18429de5ba64c251d9b47ff7222aa077ef3362cb52",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb": "5f5d1498a61c8e51764c83d030b9cdfa3900bdc335b9bf8fa7d2bc40068e8e1e",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb": "e65f075c1217f987408d89f893907090db4baed4610639fb30844efa58fef74e",
+    "notebooks/03_curricula_datasets_and_splits.ipynb": "b179dffe4980da048e00bdc1060230188cef13f840ec02807e877825c04eb081",
+    "notebooks/04_native_ahr_architecture.ipynb": "c7e2f25927d1edf3ce0df3670e91eb29fef06b99f62b5040c900144ea50f977a",
+    "notebooks/05_csp_qcsp_pretraining.ipynb": "17e3ac47ee584a25b386a901c4f6ab72df8954b99cf8554331110d450a604595",
+    "notebooks/06_ahr_go_search_engine.ipynb": "f6a822ab53b7551f8d2b761cebba1593bbfccf59df8650dc47c0440def258170",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb": "6980a54a97ec3b12296305e48e986a39126b8c25eedd5a6adb0a361b1d79831f",
+    "notebooks/08_go_specific_adaptation.ipynb": "00752ed755baa086beaa5725f6a661f8e3486358958de22ca72614cbe60c7a22",
+    "notebooks/09_selfplay_and_improvement.ipynb": "26555064ab7e500baea8cacb5fc9ba9eb2f97277023f3c8b1ed8e72d77ac9825",
+    "notebooks/10_gtp_engine_interface.ipynb": "a5a6ef1be48d57db715cf584edf6462085da887cec477f71abe26066d01a22f7",
+    "notebooks/11_engine_arena_and_evaluation.ipynb": "e54bb51df5c5d2016d3ae27ab7d955b2f735aa28abfb212088dd7217ce488cdb",
+    "notebooks/12_play_and_watch.ipynb": "0eb2a54effe3c1f3d9c763585fe1c0882c653af0a9c695082c069d2680a579bd",
+    "notebooks/13_export_backup_and_restore.ipynb": "2bb29bbb7c4a2d07eefeea7842ed9c7d42d1a03df5ccd863082b5694411fe52c",
+    "reports/09_first_selfplay_results.json": "1d086e4aaaf215073a83b23c9ac63765592cfb940c524573f5e8426fef70f441",
+    "reports/11_first_candidate_evaluation_results.json": "a972bf312f8915f71a1a98c50371dea8022d1d4a3aa31c8c4dfac3ee5cba7828",
+    "checkpoints/go09-first-selfplay-v1/manifest.json": "af47d4fcb6e5b4b88da1ed5e04ad3009b4f34734c4eef09f8b3057f5c535fc3b"
+  }
+}

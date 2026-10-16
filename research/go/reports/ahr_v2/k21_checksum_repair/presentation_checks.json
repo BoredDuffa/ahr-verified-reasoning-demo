@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "points": 81,
+  "horizontal_overflow": false,
+  "widget_errors": 0,
+  "full_run_launched": true,
+  "screenshots": [
+    "presentation-top.png",
+    "presentation-evidence.png",
+    "presentation-player.png"
+  ],
+  "visual_review": "PASS: repair notice and 81-point player board inspected; no clipped controls or widget errors."
+}

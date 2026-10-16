@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-24T14:49:00.789936+00:00",
+  "notebooks": {
+    "notebooks/10_gtp_engine_interface.ipynb": {
+      "code_cells": 9,
+      "all_executed": true,
+      "code_sha256": "001057f79592457105cba18355185caee61b3f5053097c41b4a743851d2d74ee"
+    },
+    "notebooks/12_play_and_watch.ipynb": {
+      "code_cells": 7,
+      "all_executed": true,
+      "code_sha256": "9fceec1d2ce0173c0853e8660849accacc561fab103abfd2f12cff86c0fe8a47"
+    },
+    "reports/10_v2_reference_and_latency.ipynb": {
+      "code_cells": 3,
+      "all_executed": true,
+      "code_sha256": "9b9a55634f02e89d91b4a5d699a88644c01b2decdb5dd658147e31d4f60df306"
+    },
+    "reports/12_v2_complete_games.ipynb": {
+      "code_cells": 3,
+      "all_executed": true,
+      "code_sha256": "ba113e3e6b6f243ca82240a6e0d00797ec268167e24ef22692d316bb673b6f91"
+    },
+    "reports/12_v2_browser_review.ipynb": {
+      "code_cells": 1,
+      "all_executed": true,
+      "code_sha256": "86294c51fc293eedb6b0bd2c66643a8c082ea2fdbb82f6c9d6327e0e9fa19652"
+    },
+    "reports/12_v2_live_browser.ipynb": {
+      "code_cells": 1,
+      "all_executed": true,
+      "code_sha256": "f0ef46d6bb4e61bb2788877107d3e10a94908ebbe0c4d73a8d7378cfc69ad5b0"
+    }
+  },
+  "reference_receipt": "reports/10_v2_reference_and_latency.json",
+  "complete_games_receipt": "reports/12_v2_complete_games.json",
+  "browser_review_receipt": "reports/12_v2_browser_review.json",
+  "limitations": [
+    "Automated interface checks do not replace a human usability study.",
+    "No hard real-time guarantee; whole interaction includes persistence.",
+    "GNU Go evaluation-only, no training teacher or Elo assignment."
+  ],
+  "independent_audit": "reports/10_v2_independent_reference_audit.json",
+  "production_source_freeze_respected": true,
+  "live_browser_receipt": "reports/12_v2_live_browser.json"
+}

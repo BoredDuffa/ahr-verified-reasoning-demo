@@ -1,0 +1,80 @@
+{
+  "completed_at_utc": "2026-09-26T23:22:39.309325+00:00",
+  "general_playing_strength": "NOT_ESTABLISHED_AS_A_RANK",
+  "generations": 3,
+  "off_instance_backup": "DEFERRED_BY_USER_PENDING_HUGGING_FACE_DESTINATION",
+  "reports": [
+    "reports/go_generations_v2/baseline_external.json",
+    "reports/go_generations_v2/baseline_external_request.json",
+    "reports/go_generations_v2/baseline_preflight_bundle.json",
+    "reports/go_generations_v2/baseline_tactics.json",
+    "reports/go_generations_v2/final_external.json",
+    "reports/go_generations_v2/final_external_request.json",
+    "reports/go_generations_v2/g01_arena.json",
+    "reports/go_generations_v2/g01_arena_request.json",
+    "reports/go_generations_v2/g01_bundle.json",
+    "reports/go_generations_v2/g01_tactics.json",
+    "reports/go_generations_v2/g01_training.json",
+    "reports/go_generations_v2/g01_training_request.json",
+    "reports/go_generations_v2/g02_arena.json",
+    "reports/go_generations_v2/g02_arena_request.json",
+    "reports/go_generations_v2/g02_bundle.json",
+    "reports/go_generations_v2/g02_tactics.json",
+    "reports/go_generations_v2/g02_training.json",
+    "reports/go_generations_v2/g02_training_request.json",
+    "reports/go_generations_v2/g03_arena.json",
+    "reports/go_generations_v2/g03_arena_request.json",
+    "reports/go_generations_v2/g03_bundle.json",
+    "reports/go_generations_v2/g03_tactics.json",
+    "reports/go_generations_v2/g03_training.json",
+    "reports/go_generations_v2/g03_training_request.json",
+    "reports/go_generations_v2/pilot_preflight_bundle.json",
+    "reports/go_generations_v2/play.json",
+    "reports/go_generations_v2/selected_bundle.json",
+    "reports/go_generations_v2/selected_complete_games.json",
+    "reports/go_generations_v2/selected_latency.json",
+    "reports/go_generations_v2/selection.json"
+  ],
+  "schema": "ahr_generations_v2",
+  "selection": {
+    "configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+    "decisions": [
+      {
+        "accepted": false,
+        "basis": "predeclared paired arena gate; training loss is not a selection criterion",
+        "candidate_checkpoint_sha256": "0873016b67e772fef791458d27e8d3ae6a4fd965726113e187a8091f38db63c9",
+        "candidate_run": "go09-v2-generation-01",
+        "evaluation_sha256": "7549ed05f9d670a0575edfb4843761450387947513c2899b09515f318d429b5d",
+        "generation": 1,
+        "reference_run": "go09-first-selfplay-v1",
+        "selected_run": "go09-first-selfplay-v1"
+      },
+      {
+        "accepted": false,
+        "basis": "predeclared paired arena gate; training loss is not a selection criterion",
+        "candidate_checkpoint_sha256": "6ad366922d3a95c7670410c9e2cff809a9f02f77c8bc138f5e46b39b5ac07cc1",
+        "candidate_run": "go09-v2-generation-02",
+        "evaluation_sha256": "2cac6880f0c9c0740ec77e2b61f6ec75f4a3b951429c9debe3e52192b96c5442",
+        "generation": 2,
+        "reference_run": "go09-first-selfplay-v1",
+        "selected_run": "go09-first-selfplay-v1"
+      },
+      {
+        "accepted": false,
+        "basis": "predeclared paired arena gate; training loss is not a selection criterion",
+        "candidate_checkpoint_sha256": "91174fa9c646b903eadced98e4aaaa51810ee7dc26bafcc5d461f348a3b318d9",
+        "candidate_run": "go09-v2-generation-03",
+        "evaluation_sha256": "7b9842cc1dd133cd5f5a21f52da4fbfd6fb73612925b4a1637b8ea0b86b694fb",
+        "generation": 3,
+        "reference_run": "go09-first-selfplay-v1",
+        "selected_run": "go09-first-selfplay-v1"
+      }
+    ],
+    "last_candidate_run": "go09-v2-generation-03",
+    "schema": "ahr_generations_v2",
+    "selected_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+    "selected_run": "go09-first-selfplay-v1"
+  },
+  "status": "COMPLETE_LOCAL_EXPERIMENT",
+  "training_games_planned": 384
+}

@@ -1,0 +1,44 @@
+{
+  "config": {
+    "actor_device": "cuda:1",
+    "batch_size": 32,
+    "board_size": 9,
+    "checkpoint_every_events": 32,
+    "checkpoint_every_optimizer_steps": 250,
+    "checkpoint_interval_s": 600,
+    "device": "cuda:0",
+    "exploration": 0.15,
+    "games": 128,
+    "historical_opponents": [
+      {
+        "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+        "run_id": "go09-first-selfplay-v1",
+        "selection": "latest"
+      }
+    ],
+    "komi": 7.5,
+    "learning_rate": 0.0003,
+    "max_plies": 256,
+    "opponent_probability": 0.25,
+    "opponent_snapshots": 4,
+    "purpose": "go_training",
+    "replay_capacity": 2048,
+    "search": {
+      "branch_width": 4,
+      "max_depth": 2,
+      "max_nodes": 32,
+      "queen_cycles": 1
+    },
+    "seed": 2026092410,
+    "snapshot_every_games": 8,
+    "temperature": 1.0,
+    "time_budget_s": 0.5,
+    "updates_per_game": 8,
+    "validation_force_pass": false,
+    "weight_decay": 0.0001
+  },
+  "configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+  "initial_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+  "initial_run": "go09-first-selfplay-v1",
+  "run_id": "go09-v2-generation-01"
+}

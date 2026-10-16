@@ -1,0 +1,103 @@
+{
+  "curriculum": {
+    "counts": {
+      "development": 58,
+      "train": 270
+    },
+    "global_policy_supervision": false,
+    "goals": [
+      "capture_one_ply",
+      "survive_two_plies",
+      "connect_one_ply",
+      "force_capture_three_plies"
+    ],
+    "lockbox_used": false,
+    "scope": "Exact bounded predicates with explicit goals/targets; no full-game strength label",
+    "source": "experiments/ahr_jepa_v3/data/curriculum.json",
+    "source_sha256": "08016eee499c1dc3460908687027df575457b44cce989979487ccd2cfa2bfcf4"
+  },
+  "decisions": [
+    {
+      "action": 8,
+      "case": "opening",
+      "completed_depth": 3,
+      "completed_root_checks": 9,
+      "deadline_missed": false,
+      "elapsed_s": 0.9042987230350263,
+      "model_positions": 314,
+      "nodes": 170,
+      "selected_policy_probability": 0.6578844914870287
+    },
+    {
+      "action": 41,
+      "case": "one_ply_capture",
+      "completed_depth": 2,
+      "completed_root_checks": 8,
+      "deadline_missed": false,
+      "elapsed_s": 0.9084656260092743,
+      "model_positions": 320,
+      "nodes": 191,
+      "selected_policy_probability": 0.6720728508795908
+    },
+    {
+      "action": 2,
+      "case": "training_tactical_position",
+      "completed_depth": 2,
+      "completed_root_checks": 12,
+      "deadline_missed": false,
+      "elapsed_s": 0.9070410630083643,
+      "model_positions": 268,
+      "nodes": 177,
+      "selected_policy_probability": 0.6752898121725066
+    }
+  ],
+  "device": "cpu",
+  "exact_terminal_pass": "PASS",
+  "initialization": {
+    "config": {
+      "board_size": 9,
+      "dropout": 0.1,
+      "hidden_dim": 64,
+      "queen_cycles": 2,
+      "scout_steps": 2,
+      "spatial_channels": 32,
+      "tactical_weight": 0.5,
+      "worker_steps": 2
+    },
+    "external_engine_labels": false,
+    "initial_checkpoint_sha256": "1cba3e08d002e3882a14ea7230d33ead290e4920810ab6995ba909bc3435647c",
+    "initial_run": "ahr-v3-B-s01",
+    "initialization_seed": 2026100104,
+    "jepa": false,
+    "kind": "native_ahr_v4",
+    "new_components": "Goal embedding, target-mask encoder, conditioned tactical Worker energy",
+    "retained_components": "Go spatial encoder, native Queen/Worker/Scout/pheromone, policy/value/score/ownership",
+    "selection_rule": "Fixed first AHR-only seed, final checkpoint; no evaluation-based selection"
+  },
+  "model_config": {
+    "board_size": 9,
+    "dropout": 0.1,
+    "hidden_dim": 64,
+    "queen_cycles": 2,
+    "scout_steps": 2,
+    "spatial_channels": 32,
+    "tactical_weight": 0.5,
+    "worker_steps": 2
+  },
+  "model_notebook_sha256": "540e6d3f01bfd47c0114686323d0acd5af7defb642d0074431d2b440abab0f54",
+  "native_forward_max_error": {
+    "ownership": 0.0,
+    "policy_logits": 0.0,
+    "score": 0.0,
+    "value": 0.0
+  },
+  "native_gradient_max_error": 0.0,
+  "parameters": 259928,
+  "production_training_started": false,
+  "status": "PASS",
+  "strength_claim": "NOT_ESTABLISHED",
+  "tactical_conditioning_loss": 4.009971618652344,
+  "tactical_policy_separation_checked_parameters": 24,
+  "tactical_target_effect": 0.031819313764572144,
+  "zero_budget_unknown": "PASS"
+}

@@ -1,0 +1,21 @@
+{
+  "board_size": 9,
+  "checkpoint_keep": "latest two and best",
+  "checkpoint_minutes": 15,
+  "checkpoint_optimizer_steps": 250,
+  "first_notebooks": [
+    "00",
+    "01",
+    "02",
+    "03"
+  ],
+  "ko": "positional_superko; pass exempt",
+  "komi": 7.5,
+  "no_model_training_in_foundation": true,
+  "project": "ahr_go",
+  "schema_version": 1,
+  "scoring": "area; dead stones must be captured",
+  "seed": 20260923,
+  "suicide": false,
+  "termination": "two consecutive passes"
+}

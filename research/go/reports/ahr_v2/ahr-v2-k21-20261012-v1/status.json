@@ -1,0 +1,13 @@
+{
+  "checkpoint": {
+    "file": "step-000000000-ecf238d4.pt",
+    "global_step": 0,
+    "sha256": "4610315c517294989ad149b625e2acbf748a6961986d4097bf864c6515c6eaa5"
+  },
+  "completed_stages": [],
+  "error": "RuntimeError('Teacher cache checksum mismatch.')",
+  "run_id": "ahr-v2-k21-20261012-v1",
+  "stage": "diagnosis",
+  "status": "ERROR",
+  "updated_at_utc": "2026-10-12T21:55:59.632645+00:00"
+}

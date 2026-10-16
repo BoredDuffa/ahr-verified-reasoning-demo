@@ -1,0 +1,7 @@
+{
+  "stage": "interrupted",
+  "status": "FAILED",
+  "updated_unix": 1790605930.4752312,
+  "error": "RuntimeError: Repeated nonfinite attempts exceeded cap",
+  "elapsed_seconds": 9482.162904024124
+}

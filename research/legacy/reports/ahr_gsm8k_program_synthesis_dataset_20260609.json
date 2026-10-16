@@ -1,0 +1,35 @@
+{
+  "clinical_use": "forbidden",
+  "created_at_utc": "2026-06-08T23:42:12Z",
+  "kind": "gsm8k_program_synthesis_dataset_v0_full_refresh",
+  "paths": {
+    "test": "data/gsm8k_program_synthesis_v0/test.jsonl",
+    "train": "data/gsm8k_program_synthesis_v0/train.jsonl",
+    "val": "data/gsm8k_program_synthesis_v0/val.jsonl"
+  },
+  "source": {
+    "config": "main",
+    "dataset": "openai/gsm8k",
+    "transport": "huggingface_parquet"
+  },
+  "splits": {
+    "test": {
+      "avg_program_length": 3.246398786959818,
+      "replay_valid": 1296,
+      "total": 1319,
+      "with_equations": 1301
+    },
+    "train": {
+      "avg_program_length": 3.1775714285714285,
+      "replay_valid": 6899,
+      "total": 7000,
+      "with_equations": 6911
+    },
+    "val": {
+      "avg_program_length": 3.1141649048625792,
+      "replay_valid": 467,
+      "total": 473,
+      "with_equations": 467
+    }
+  }
+}

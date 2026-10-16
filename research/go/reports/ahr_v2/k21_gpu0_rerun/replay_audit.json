@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checkpoint": "checkpoints/ahr-v2-k21-20261014-full-v2-cycle-01-buffer-shard-0000-collection/step-000002622-8de6110a.pt",
+  "checkpoint_sha256": "df4e6945b76794a7d73229e3c76faf8b927400258583b876cf0042e88846876c",
+  "game_count": 8,
+  "pending_rows": 256,
+  "pending_states_verified": 512,
+  "game_finals_verified": 8,
+  "saved_state_field_corruption_found": false,
+  "foreign_class": "<class 'audit_collection_rules.Go2State'>",
+  "local_class": "<class 'audit_outer_rules.Go2State'>",
+  "field_differences": [],
+  "cross_namespace_equality": false,
+  "cross_namespace_replay_error": "State history does not equal exact chronological replay.",
+  "canonicalization_preserves_every_state_field": true,
+  "canonical_replay_passed": true,
+  "tampered_chronology_rejected": true,
+  "cuda_initialized": false,
+  "recommendation": "Canonicalize the full exact state schema at the borrowed teacher boundary or in Go2K21Teacher._request before go2_verify_replay. Preserve the original complete chronology; never reconstruct only from the current board or disable replay validation."
+}

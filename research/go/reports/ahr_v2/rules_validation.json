@@ -1,0 +1,104 @@
+{
+  "schema": "go2_rules_validation_v1",
+  "status": "PASS",
+  "definition_sha256": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+  "definition_sha256_algorithm": "canonical JSON list of tagged source strings",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa"
+  },
+  "rules": {
+    "profile": "area_no_suicide_psk_v1",
+    "main_size": 9,
+    "main_komi": 7.5,
+    "scoring": "area",
+    "suicide": false,
+    "ko": "positional_superko",
+    "pass_exempt_superko": true,
+    "terminal_passes": 2,
+    "dead_stones": "must_be_captured_before_passing",
+    "recent_board_frames": 8,
+    "move_cap": null
+  },
+  "checks": [
+    {
+      "check": "Single/multiple-group capture before suicide; independent transitions",
+      "status": "PASS"
+    },
+    {
+      "check": "Single-stone and joined multi-group suicide rejection",
+      "status": "PASS"
+    },
+    {
+      "check": "Immediate and distant positional superko; history-sensitive cache",
+      "status": "PASS"
+    },
+    {
+      "check": "Pass exemption, two-pass terminal, no terminal actions and perspective signs",
+      "status": "PASS"
+    },
+    {
+      "check": "Area ownership, neutral territory and no automatic dead-stone removal",
+      "status": "PASS"
+    },
+    {
+      "check": "Complete JSON replay, chronology corruption rejection and D4 covariance",
+      "status": "PASS"
+    },
+    {
+      "check": "Six complete random 9\u00d79 games: every legal action, successor and ownership independently checked",
+      "status": "PASS"
+    }
+  ],
+  "random_complete_games": [
+    {
+      "game": 0,
+      "plies": 101,
+      "terminal": "two legal passes",
+      "Black area margin": 22.5,
+      "winner": "Black"
+    },
+    {
+      "game": 1,
+      "plies": 102,
+      "terminal": "two legal passes",
+      "Black area margin": -0.5,
+      "winner": "White"
+    },
+    {
+      "game": 2,
+      "plies": 99,
+      "terminal": "two legal passes",
+      "Black area margin": -27.5,
+      "winner": "White"
+    },
+    {
+      "game": 3,
+      "plies": 83,
+      "terminal": "two legal passes",
+      "Black area margin": -0.5,
+      "winner": "White"
+    },
+    {
+      "game": 4,
+      "plies": 103,
+      "terminal": "two legal passes",
+      "Black area margin": 44.5,
+      "winner": "Black"
+    },
+    {
+      "game": 5,
+      "plies": 104,
+      "terminal": "two legal passes",
+      "Black area margin": 10.5,
+      "winner": "Black"
+    }
+  ],
+  "complete_game_plies": 592,
+  "runtime_seconds": 4.351,
+  "checkpoint": "not applicable: deterministic CPU fixtures",
+  "source_models_imported": false,
+  "source_training_imported": false
+}

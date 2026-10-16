@@ -1,0 +1,160 @@
+{
+  "checked_at_utc": "2026-09-23T15:53:08.817486+00:00",
+  "development_data": "new deterministic fixtures only",
+  "fault_and_semantic_checks": [
+    "corrupt_checkpoint_rejected",
+    "malformed_manifest_rejected",
+    "changed_protocol_rejected",
+    "UNKNOWN_TIMEOUT",
+    "ERROR_ILLEGAL_PROPOSAL",
+    "UNKNOWN_MOVE_LIMIT",
+    "independent_rule_and_score_agreement",
+    "same_name_opponent_role_metrics_separated",
+    "duplicate_budgets_rejected",
+    "duplicate_opponents_rejected"
+  ],
+  "limitations": [
+    "No learned transfer result exists without a real CSP-only pretrained checkpoint.",
+    "Development smoke and pilot results cannot establish full-game optimality or a final transfer claim.",
+    "Wall-clock deadlines can change decisions after restart despite exact saved states.",
+    "UNKNOWN games do not become losses; complete-case estimates can be selection-biased.",
+    "3x3 development tests do not establish 9x9 playing strength."
+  ],
+  "lockbox_or_final_data_opened": false,
+  "optimizer_steps": 0,
+  "recovery": {
+    "exact_resumed_decisions_and_metrics": true,
+    "final_stage": 8,
+    "fresh_kernels": 2,
+    "nonempty_board_and_superko_history_restored": true,
+    "python_numpy_torch_rng_probes_identical": true,
+    "resumed_from_stage": 8,
+    "run_id": "transfer-07-recovery-ebcf1644b5fe",
+    "status": "PASS",
+    "timing_excluded_from_exact_comparison": true
+  },
+  "schema": "ahr07-frozen-transfer-v1",
+  "sources": {
+    "00_instance_setup_and_recovery.ipynb": "4477b570d0eb6d7ab20542ff9e4ee05c0eda82c0f192d5c78c3dee17b304695f",
+    "01_go_rules_and_independent_verifier.ipynb": "fbb3a59b50faabdad8b12d7482c6e7dce822669929347e36f7091b39cf4daa87",
+    "02_go_to_csp_and_qcsp.ipynb": "07e3462bf22a96e6724ba60a2ddcf7a24f449270b762e10aef5caea1ca48a141",
+    "03_curricula_datasets_and_splits.ipynb": "dcd7776c4cdb33f3e64e5a5ce0bbcf69f3d0b69aa42333b79bfe53b9668a1853",
+    "04_native_ahr_architecture.ipynb": "b90cf1e04c39b90be2b1ebdd9cd587dddeeae11b18b3b076a96b924678595ab6",
+    "05_csp_qcsp_pretraining.ipynb": "db1b44b34672ab9da5b2b57dca30d1a06c4fc05ce1e5cebdb6039ef0baf99027",
+    "06_ahr_go_search_engine.ipynb": "61bca0d7fe18da9344551701b48da0abad1ca80533fe05eab38046f330fff063",
+    "07_csp_to_go_transfer_tests.ipynb": "db010ffae33e172baa438f61a651473fe15b8d51d7bcd26201d49153d08bd9f0"
+  },
+  "status": "PASS",
+  "training_performed": false,
+  "transfer_experiment": {
+    "learned_transfer_established": false,
+    "status": "NOT_RUN_NO_PRETRAINED_CHECKPOINT",
+    "training_performed": false
+  },
+  "untrained_9x9_wiring": {
+    "receipt": {
+      "complete": true,
+      "frozen_hashes_verified": {
+        "untrained_ahr": "75039b113d2589b536fba229e191fe71c001f275b99cea2a4351538010ea29bd"
+      },
+      "new_stages": 0,
+      "resumed_from_step": 8,
+      "run_id": "transfer-07-wiring9-0f8136bf70d1"
+    },
+    "summary": {
+      "candidates": {
+        "untrained_ahr": {
+          "all_planned_score_bounds": [
+            0.0,
+            1.0
+          ],
+          "bounded_inapplicable_or_unjudged_positions": 0,
+          "bounded_judged_positions": 0,
+          "bounded_mistakes": 0,
+          "bounded_unknown_chosen_positions": 0,
+          "candidate_deadline_misses": 0,
+          "candidate_fallback_passes": 0,
+          "candidate_illegal_proposals": 0,
+          "candidate_mean_call_seconds": 0.016105023751151748,
+          "candidate_moves": 4,
+          "completed_game_mean_score": null,
+          "completed_games": 0,
+          "deadline_misses": 0,
+          "illegal_proposals": 0,
+          "mean_call_seconds": 0.008278675375549938,
+          "moves": 8,
+          "p95_call_seconds": 0.016519583350236643,
+          "planned_games": 2,
+          "probe_scope": "horizon-two area objective; UNKNOWN excluded and counted in statuses",
+          "recorded_games": 2
+        }
+      },
+      "completed_jobs": 2,
+      "elo": null,
+      "final_claim": "NOT_ESTABLISHED",
+      "label": "wiring_smoke",
+      "optimizer_steps": 0,
+      "paired_effects": {},
+      "planned_jobs": 2,
+      "schema": "ahr07-frozen-transfer-v1",
+      "status_counts": {
+        "UNKNOWN_MOVE_LIMIT": 2
+      },
+      "training_performed": false
+    }
+  },
+  "untrained_wiring": {
+    "receipt": {
+      "complete": true,
+      "frozen_hashes_verified": {
+        "untrained_ahr": "75039b113d2589b536fba229e191fe71c001f275b99cea2a4351538010ea29bd"
+      },
+      "new_stages": 0,
+      "resumed_from_step": 7,
+      "run_id": "transfer-07-wiring-13258d5f9f80"
+    },
+    "summary": {
+      "candidates": {
+        "untrained_ahr": {
+          "all_planned_score_bounds": [
+            0.0,
+            0.5
+          ],
+          "bounded_inapplicable_or_unjudged_positions": 0,
+          "bounded_judged_positions": 1,
+          "bounded_mistakes": 1,
+          "bounded_unknown_chosen_positions": 0,
+          "candidate_deadline_misses": 0,
+          "candidate_fallback_passes": 0,
+          "candidate_illegal_proposals": 0,
+          "candidate_mean_call_seconds": 0.010525020668865182,
+          "candidate_moves": 3,
+          "completed_game_mean_score": 0.0,
+          "completed_games": 1,
+          "deadline_misses": 0,
+          "illegal_proposals": 0,
+          "mean_call_seconds": 0.005304675500762339,
+          "moves": 6,
+          "p95_call_seconds": 0.010583741501250188,
+          "planned_games": 2,
+          "probe_scope": "horizon-two area objective; UNKNOWN excluded and counted in statuses",
+          "recorded_games": 2
+        }
+      },
+      "completed_jobs": 3,
+      "elo": null,
+      "final_claim": "NOT_ESTABLISHED",
+      "label": "wiring_smoke",
+      "optimizer_steps": 0,
+      "paired_effects": {},
+      "planned_jobs": 3,
+      "schema": "ahr07-frozen-transfer-v1",
+      "status_counts": {
+        "COMPLETED_TWO_PASSES": 1,
+        "UNKNOWN_MOVE_LIMIT": 1,
+        "VERIFIED_BOUNDED_PROBE": 1
+      },
+      "training_performed": false
+    }
+  }
+}

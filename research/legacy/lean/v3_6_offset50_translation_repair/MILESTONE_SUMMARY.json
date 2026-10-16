@@ -1,0 +1,60 @@
+{
+  "milestone": "Lean-AHR v3.6 offset-50 translation repair and held-out proof rerun",
+  "remote_host": "benjamin@34.70.49.55",
+  "remote_project": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "date": "2026-06-17",
+  "dataset": {
+    "name": "hoskinson-center/proofnet",
+    "config": "plain_text",
+    "split": "test",
+    "offset": 50,
+    "length": 50,
+    "row_idx_range": "50-99"
+  },
+  "changes": [
+    "Mined offset-50 unknown identifiers by source family.",
+    "Added verified Lean3/mathlib3-to-Lean4 translations for topology, linear algebra, number theory, analysis, polynomial, periodicity, and clopen syntax.",
+    "Ran a parse/retrieval-only audit with zero proof-attempt budget.",
+    "Reran the full proof bridge after audit coverage improved."
+  ],
+  "parse_retrieval_audit": {
+    "run_name": "lean_ahr_v3_6_hf_proofnet50_offset50_translation_audit",
+    "translated_count": 33,
+    "retrieval_cluster_success_count": 33,
+    "lean_calls_total": 50,
+    "elapsed_s": 1365.685
+  },
+  "full_bridge": {
+    "run_name": "lean_ahr_v3_6_hf_proofnet50_offset50_translation_repair_bridge",
+    "translated_count": 33,
+    "retrieval_cluster_success_count": 33,
+    "target_verified_count": 2,
+    "lean_calls_total": 769,
+    "elapsed_s": 5361.805,
+    "verified_rows": [
+      "Axler|exercise_1_4",
+      "Pugh|exercise_2_32a"
+    ],
+    "failure_reason_counts": {
+      "target_verified": 2,
+      "lean_unknown_identifier": 10,
+      "lean_verification_failed": 29,
+      "lean_type_mismatch": 5,
+      "lean_typeclass_synthesis_failed": 2,
+      "lean_unsolved_goals": 2
+    }
+  },
+  "baseline_v3_5_offset50": {
+    "translated_count": 13,
+    "retrieval_cluster_success_count": 13,
+    "target_verified_count": 0,
+    "lean_calls_total": 348
+  },
+  "interpretation": {
+    "translation_change": "Offset-50 translation/retrieval coverage improved from 13/50 to 33/50.",
+    "solve_rate_change": "Held-out verified proofs improved from 0/50 to 2/50.",
+    "cost_change": "Lean calls increased from 348 to 769 because 20 additional rows now parse and run proof attempts.",
+    "frontier_shift": "The dominant blocker is now proof-script synthesis for translated Munkres/Axler/Ireland-Rosen/Shakarchi/Putnam/Pugh targets."
+  },
+  "next_step": "Train or script a proof-attempt expansion pass using the newly translated offset-50 failure records, prioritizing direct theorem retrieval and type-aware exact/simpa/apply scripts for the 29 verification failures."
+}

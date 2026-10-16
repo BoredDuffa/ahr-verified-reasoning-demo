@@ -1,0 +1,72 @@
+{
+  "schema": "ahr-go-v2-repair-play-visual-validation-v1",
+  "status": "PASS",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/09_calibrated_selfplay_training.ipynb": "d316a791e00c5b7d585cdfc57a560c8f8d3eaf93789f44f8dcf19a53121c351b",
+    "experiments/ahr_v2/11_play_revised_player.ipynb": "057297d539964559fbec4444a0c83688d026aba4828840ef317e222b18f8f419"
+  },
+  "inspected_at_utc": "2026-10-07T15:27:11.675494+00:00",
+  "viewport_width": 1360,
+  "browser_page_errors": [],
+  "pages": [
+    {
+      "html": "11_repair_play_saved_preview.html",
+      "rendered_widget_buttons": 87,
+      "horizontal_overflow": false,
+      "optimizer_step_8_visible": true
+    },
+    {
+      "html": "repair_play_main_position.html",
+      "rendered_widget_buttons": 87,
+      "horizontal_overflow": false,
+      "optimizer_step_8_visible": true
+    }
+  ],
+  "artifact_sha256": {
+    "reports/ahr_v2/11_repair_play_saved_preview.html": "c97c9c05a5ab8c16cd0d4a08e4183aac3f0107241504a6daf4675da984fb92f8",
+    "reports/ahr_v2/repair_play_saved_preview.png": "e59e6baafdba423cdd6ce8f3e0b3e47247eaad89cbfebb95bfedfce1f54afb19",
+    "reports/ahr_v2/repair_play_controls_preview.png": "cabfed1a9fc24a1448d93364408b0223f189c56372da5a9b22f33d9b424c48e0",
+    "reports/ahr_v2/repair_play_main_position.html": "a6f3bd5d714908a6597766bc6f3196622ca2a1300c8a085058ed211293907c6a",
+    "reports/ahr_v2/repair_play_main_position.png": "91a3dced8ec16ac0192f0d23a49f0e47d9f04bf1709c7e40623ad5bb042d7f38",
+    "reports/ahr_v2/repair_play_main_controls.png": "3d4d35ed38d5c0d6444d0083d48b10dbff6f0344e2d11c664837f692b2f0d8bc"
+  },
+  "observations": [
+    "Official revised training checkpoint at optimizer step 8 is loaded in the main notebook saved UI.",
+    "All six action buttons and nine board coordinate columns are readable without truncation.",
+    "Human Black E5 and the legal neural White F8 response are both visible in the main integration board.",
+    "Default 128 visits and 1.5-second tree budget are displayed.",
+    "Frozen opponent identity, held-out checkpoint selection criterion and bounded UNKNOWN caveat remain visible."
+  ],
+  "main_player_integration": {
+    "ahr_action": "F8",
+    "checkpoint_file": "step-000002948-324f2e5e.pt",
+    "checkpoint_sha256": "3b780e20ef33523f4465e90d00db65f8c0e4690b2a50647c2749e6858f965496",
+    "claim": "Revised production checkpoint loaded into human interface and returned a legal response; no strength claim.",
+    "counters": {
+      "atomic_batches": 16,
+      "cache_hits": 0,
+      "depth_cutoffs": 0,
+      "duplicate_reservations": 28,
+      "neural_batches": 17,
+      "neural_positions": 129,
+      "terminal_simulations": 0
+    },
+    "event_step": 2948,
+    "human_action": "E5",
+    "model_identity": "ef845648ee7cb2cc8126ce97fbb0a35f5fc3182de0f5ee9b4dc6531131bce701",
+    "optimizer_step": 8,
+    "real_visits": 128,
+    "response_seconds": 0.6728492260008352,
+    "run_id": "ahr-v2-repair-20261007-8h",
+    "search_status": "UNKNOWN",
+    "status": "PASS",
+    "tactical_reserved_replies": [],
+    "tactical_verified_actions": 81
+  },
+  "limits": "Browser renders actual saved widget state; Python widget click dispatch and fresh-kernel game recovery were independently executed. No playing strength claim."
+}

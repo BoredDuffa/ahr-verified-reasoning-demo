@@ -1,0 +1,59 @@
+{
+  "status": "PASS_STATIC_ONLY",
+  "utc": "2026-09-24T14:17:05.753065+00:00",
+  "notebooks": [
+    {
+      "path": "notebooks/02_Food101_Main.ipynb",
+      "cells": 18,
+      "all_unexecuted": true,
+      "sha256": "7d1c54316b662d9e9bac088fb5d5fb26e48b6200c3d4a04330ae9049145ab5a4"
+    },
+    {
+      "path": "fmm_jepa/food101_benchmark.ipynb",
+      "cells": 8,
+      "all_unexecuted": true,
+      "sha256": "c95c5ca5dbc1cc7cdfa533afc3093e113c6273230e170b619d5c37e3825f8694"
+    },
+    {
+      "path": "fmm_jepa/food101_data.ipynb",
+      "cells": 9,
+      "all_unexecuted": true,
+      "sha256": "927c9a9af2c1357a78e23266c0145ccbe33193ea32348b7a9d32c0f61a715f94"
+    },
+    {
+      "path": "fmm_jepa/food101_evaluation.ipynb",
+      "cells": 3,
+      "all_unexecuted": true,
+      "sha256": "1d7e5b551fe1b53bfac92f3bd76d6ea95273fb3e0411bffa49a254327f0f7287"
+    },
+    {
+      "path": "fmm_jepa/food101_training.ipynb",
+      "cells": 3,
+      "all_unexecuted": true,
+      "sha256": "7c243b69a460fec40ee54afd4972e25976691709e4538f17af562a63f84ea319"
+    },
+    {
+      "path": "fmm_jepa/food101_workflow.ipynb",
+      "cells": 7,
+      "all_unexecuted": true,
+      "sha256": "f0fe795d13efc5dcf48a17a9998f80de8f563b917686f32da5dff047c12ab32a"
+    }
+  ],
+  "run_all_behavior": "FULL_EXPERIMENT",
+  "download_behavior": "automatic_if_missing_when_user_executes",
+  "automatic_stages": [
+    "validate-run-context",
+    "benchmark-compute",
+    "prepare-food101",
+    "verify-exact-resume",
+    "launch-detached-pilot",
+    "review-quality-cost"
+  ],
+  "syntax": "PASS",
+  "local_tagged_import_sites": 29,
+  "predecessor_exports_unchanged": 15,
+  "author_executed_cells": false,
+  "runtime_validation": "NOT_RUN",
+  "training": "NOT_RUN",
+  "limitations": "Static checks only. No dataset download, project-cell execution or worker launch during this correction."
+}

@@ -1,0 +1,123 @@
+{
+  "notebooks": [
+    {
+      "code_sha256": "7bd240da000783f69e8b9e6d7d3736ce9848dcc072203f9ef3a5881290aac306",
+      "elapsed_s": 10.881010279001202,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-00_shared.log",
+      "notebook": "experiments/ahr_jepa_v3/00_shared.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "3b16bb2bbd199ddc78f3077d302a6068f9001388df7633091bf1dfc5206b0713",
+      "elapsed_s": 17.160635882988572,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-08_predictive_ahr.log",
+      "notebook": "experiments/ahr_jepa_v3/08_predictive_ahr.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "6e278b3087ab84d7ca4f7f2340c660bbdaec32d70f2aec3e16653fd2eaaf7e67",
+      "elapsed_s": 20.33887760102516,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-09_trajectory_learning.log",
+      "notebook": "experiments/ahr_jepa_v3/09_trajectory_learning.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "e530e32581e664bf850ccddd299c7095d85426cf61d3da2e04da379269ba9fa7",
+      "elapsed_s": 24.975066677026916,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-11_controlled_evaluation.log",
+      "notebook": "experiments/ahr_jepa_v3/11_controlled_evaluation.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "8d9bf835d93677d652d7a9ee2e549dda72e75169ca79fcf25e204f58bbf97e14",
+      "elapsed_s": 10.919505551981274,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-12_play_predictive_ahr.log",
+      "notebook": "experiments/ahr_jepa_v3/12_play_predictive_ahr.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "7a8e3035ce008d274bf3758bb672786d7478c67eec596800721202385fd8cb67",
+      "elapsed_s": 6.464012119977269,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-13_local_handoff.log",
+      "notebook": "experiments/ahr_jepa_v3/13_local_handoff.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "3bcc94bf7cd4e7b1e1d991bd53e4ed373a45813e05bffeb1f6c9b4f087d23176",
+      "elapsed_s": 6.429791907023173,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-restore_inference.log",
+      "notebook": "experiments/ahr_jepa_v3/restore_inference.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "c4f75d1d82bc33281df8c084b662b63072bd75385bf2c38870acdedc1da3e86f",
+      "elapsed_s": 6.994145885983016,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-protocol_and_run.log",
+      "notebook": "experiments/ahr_jepa_v3/protocol_and_run.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "elapsed_s": 7.0152968050097115,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-run_stage.log",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "481ea1b71b89f3b867f9aade1a84cb204252a01f064d272f830ca13aa5be45a2",
+      "elapsed_s": 7.0828905460075475,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-progress.log",
+      "notebook": "experiments/ahr_jepa_v3/progress.ipynb",
+      "status": "PASS"
+    },
+    {
+      "code_sha256": "daf3387f49b48cb290e8ab42c5533deb211d3e77b5cd5d01c3eda2066579d8e5",
+      "elapsed_s": 7.130434899008833,
+      "fresh_kernel": true,
+      "log": "reports/ahr_jepa_v3/final-check-monitor.log",
+      "notebook": "experiments/ahr_jepa_v3/monitor.ipynb",
+      "status": "PASS"
+    }
+  ],
+  "sources": {
+    "experiments/ahr_jepa_v3/00_shared.ipynb": "7bd240da000783f69e8b9e6d7d3736ce9848dcc072203f9ef3a5881290aac306",
+    "experiments/ahr_jepa_v3/08_predictive_ahr.ipynb": "3b16bb2bbd199ddc78f3077d302a6068f9001388df7633091bf1dfc5206b0713",
+    "experiments/ahr_jepa_v3/09_trajectory_learning.ipynb": "6e278b3087ab84d7ca4f7f2340c660bbdaec32d70f2aec3e16653fd2eaaf7e67",
+    "experiments/ahr_jepa_v3/11_controlled_evaluation.ipynb": "e530e32581e664bf850ccddd299c7095d85426cf61d3da2e04da379269ba9fa7",
+    "experiments/ahr_jepa_v3/12_play_predictive_ahr.ipynb": "8d9bf835d93677d652d7a9ee2e549dda72e75169ca79fcf25e204f58bbf97e14",
+    "experiments/ahr_jepa_v3/13_local_handoff.ipynb": "7a8e3035ce008d274bf3758bb672786d7478c67eec596800721202385fd8cb67",
+    "experiments/ahr_jepa_v3/monitor.ipynb": "daf3387f49b48cb290e8ab42c5533deb211d3e77b5cd5d01c3eda2066579d8e5",
+    "experiments/ahr_jepa_v3/progress.ipynb": "481ea1b71b89f3b867f9aade1a84cb204252a01f064d272f830ca13aa5be45a2",
+    "experiments/ahr_jepa_v3/protocol_and_run.ipynb": "c4f75d1d82bc33281df8c084b662b63072bd75385bf2c38870acdedc1da3e86f",
+    "experiments/ahr_jepa_v3/restore_inference.ipynb": "3bcc94bf7cd4e7b1e1d991bd53e4ed373a45813e05bffeb1f6c9b4f087d23176",
+    "experiments/ahr_jepa_v3/run_stage.ipynb": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+    "experiments/ahr_jepa_v3/validate_and_launch.ipynb": "45be912da48c71392b13eb6f62d7922f96e21be80e1ed3a8b6f2e6dfc99ea442",
+    "notebooks/00_instance_setup_and_recovery.ipynb": "da7bfd449091fb1687f97ef9bf3dc36d12c3b648399350857008cef6635d289e",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb": "ff915840e0300487fc4968f9fcb68f301bfceff6ac6eef7619326231aef8d02e",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb": "3ebc5719c42649af29d6132b7f515ee6b5460c9145c3f5d57eaf7f7e53c680bc",
+    "notebooks/03_curricula_datasets_and_splits.ipynb": "91ab4b748e577c7e766c280a713a098a7ae285553bc15c759c11362cb5d3e54e",
+    "notebooks/04_native_ahr_architecture.ipynb": "b5b7d2865f7455f8e019a4a59ed90cfd167581876b7a3737b1690eba2c6ef646",
+    "notebooks/05_csp_qcsp_pretraining.ipynb": "125f9b3f75cc04dcfce1dab1c0dfc7977851a705f2185edd1b41461e0731749d",
+    "notebooks/06_ahr_go_search_engine.ipynb": "140934efd0b7f3c1c6a4934c54ba05a10e675367468f1442750a2397c25eafb8",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb": "33da024819ed61451646e7a3df8f71ac65cbbecfb7c6face26a22df97bf9dce6",
+    "notebooks/08_go_specific_adaptation.ipynb": "60df8096127c902f4aff30ed7f96a51cb5abbf63355a82557f250d430a67dced",
+    "notebooks/09_selfplay_and_improvement.ipynb": "877c9cdc6f08c58ef264bb6713e6c934aaa1c0eb5ea04a677543c5c8762f1085",
+    "notebooks/10_gtp_engine_interface.ipynb": "dbffac378b276f5193b89fe65742497e2d4f65c40684e7e80037aee7b1266bb7",
+    "notebooks/11_engine_arena_and_evaluation.ipynb": "87ede02356c36b823ffb473a44756d2014a943186462f178ea70cf59f240bead",
+    "notebooks/12_play_and_watch.ipynb": "1a732e7d7decfc0d286194eae64b8a7b51f31fe49cc042eeb36aba3af8bd9768",
+    "notebooks/13_export_backup_and_restore.ipynb": "4769e5d782bdda4681c12b6d84fefeb088c28f815d6ab30768d79cd647699455",
+    "reports/09_13_training_pipeline.ipynb": "f93f85ae6316b493833eaee3b4947f6b7616202478f3d0afabaa23bf973aaa3b"
+  },
+  "status": "PASS",
+  "training_scope": "Only explicitly labeled bounded fixtures in default validation; full runs not launched"
+}

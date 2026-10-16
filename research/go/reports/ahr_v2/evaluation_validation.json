@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "UNKNOWN_denominators_draws_and_Wilson": true,
+    "active_search_and_game_checkpointed": true,
+    "corrupt_arena_checkpoint_rejected": true,
+    "fresh_kernel_exact_games_and_outcomes": true,
+    "gtp_coordinates_including_skipped_I_and_pass": true,
+    "invalid_coordinates_and_resignation_rejected": true,
+    "latest_two_plus_best_retained": true,
+    "real_GNU_Go_seed_and_genmove_replay": true,
+    "real_neural_GNU_Go_smoke_cutoffs_remain_UNKNOWN": true
+  },
+  "fresh_kernel_notebook": "reports/ahr_v2/fixtures/eval-resume-f4ff1a1468.ipynb",
+  "full_fixture": "ahr-v2-eval-fixture-f4ff1a1468-full",
+  "gnu_smoke": "ahr-v2-eval-gnu-smoke-f4ff1a1468",
+  "opponent": {
+    "executable": "/usr/bin/gnugo",
+    "level": 1,
+    "name": "GNU Go",
+    "rules": "chinese_no_suicide_positional_superko_capture_all_dead_never_resign",
+    "sha256": "b530fbddbfd613345ea31c45ddf81be22be4328782a8a7b09f5d2d80a6613e93",
+    "version": "GNU Go 3.8"
+  },
+  "resume_fixture": "ahr-v2-eval-fixture-f4ff1a1468-resume",
+  "scope": "Correctness fixtures only. No trained-player strength claim or training data.",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928"
+  },
+  "status": "PASS",
+  "validated_at_utc": "2026-10-06T18:48:58.320308+00:00"
+}

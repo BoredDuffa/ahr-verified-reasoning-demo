@@ -1,0 +1,9 @@
+{
+  "bundle": "exports/bundles/ahr-native-v5-62c30be2c98c.tar.gz",
+  "bytes": 158530618,
+  "members": 676,
+  "off_instance_backup": "DEFERRED_BY_USER_PENDING_HUGGING_FACE_DESTINATION",
+  "restore": "Extract with tarfile filter=data; verify bundle_hashes.json; recreate recorded dependencies; exact checkpoint resume with unchanged source/config.",
+  "sha256": "205cdb2b32d4ea15288a1b88ee2a2a8119bae209acc229bb3d3b4797167d9d6c",
+  "status": "VERIFIED_LOCAL"
+}

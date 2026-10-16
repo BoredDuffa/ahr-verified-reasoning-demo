@@ -1,0 +1,64 @@
+{
+  "all_parameter_gradients_finite": true,
+  "codec_round_trip": true,
+  "counts": {
+    "dev": {
+      "SAT": 164,
+      "UNSAT": 802,
+      "no_ranking_pair": 262,
+      "ranking_contexts": 100
+    },
+    "train": {
+      "SAT": 3688,
+      "UNSAT": 8556,
+      "no_ranking_pair": 3182,
+      "ranking_contexts": 1246
+    }
+  },
+  "curriculum_file": "data/csp_decisions_daae749c690e.json",
+  "curriculum_sha256": "0623352e5f5de6f074fdf65ddf0b5af276af6297356f9f21c8c0339bb3ff2082",
+  "optimizer_updates": 0,
+  "provenance": {
+    "dataset": "starter_v1_0687ec005196",
+    "derivation_source_hashes": {
+      "00_instance_setup_and_recovery.ipynb": "34337372acfb3c8ff7ef6bbea20683ef6703f584940ee1f5e7375bf86d794475",
+      "01_go_rules_and_independent_verifier.ipynb": "9aa8577677264d3c73aa6e6597799ba82f68bc49a393606efbd83ab01f8bbece",
+      "02_go_to_csp_and_qcsp.ipynb": "a862190c1cd19ae254b5fc1417c06dd2aec5d5e7fb6f1ec55d0fe33f4434f05a",
+      "03_curricula_datasets_and_splits.ipynb": "4a3e1c0f87d3d41e3191218a66b79e4d9819e8ec27909c422adf0f68388c50fa",
+      "04_native_ahr_architecture.ipynb": "5e006a200433da6d3b6c7e142018750880bd95385299b9909da3acbb452840af",
+      "05_csp_qcsp_pretraining.ipynb": "2deb9ff454a9e6571090bcd5a6636ecdd50488fecbf9c21fe6c4cf19b9802066"
+    },
+    "dev_groups": 7,
+    "manifest_sha256": "e01cfbe4bf799109726925953166e4d030cc414cf756436dffde4c64f63e3ab1",
+    "purpose": "csp_pretraining",
+    "renaming_copies": 1,
+    "shards": {
+      "boolean_sat_dev.jsonl": "2c2ed1bf7be91c2fa2e94bfa2d370e01879490fbe1848948a72eb60ae3898cad",
+      "boolean_sat_train.jsonl": "2122ebb6821dbe072fb157d13d04877118bdabcd58c29c5b253d1933bc180bbb",
+      "graph_coloring_dev.jsonl": "3f7fcdd8d3da3c4afbce36531f8d46152f5e7cf50add2acd91f0456249d1e016",
+      "graph_coloring_train.jsonl": "d509195662a11d5aa9d67bfe8d27c162de0cd04f031c555a8828e119684c975f",
+      "quantified_sat_dev.jsonl": "c20864d851aca926ac2c5a9f070c4b3bbbd7643e90f9cbe4f0606bf1052dd54b",
+      "quantified_sat_train.jsonl": "2fe89076043498fdf07877050a86b36884cbbfb31ec7dd277df2512e262766c5"
+    },
+    "source_rows": {
+      "dev": 14,
+      "train": 132
+    },
+    "train_groups": 66,
+    "trained_on_go": false,
+    "training_route": "csp_only"
+  },
+  "quantifier_order": true,
+  "source_hashes": {
+    "00_instance_setup_and_recovery.ipynb": "34337372acfb3c8ff7ef6bbea20683ef6703f584940ee1f5e7375bf86d794475",
+    "01_go_rules_and_independent_verifier.ipynb": "9aa8577677264d3c73aa6e6597799ba82f68bc49a393606efbd83ab01f8bbece",
+    "02_go_to_csp_and_qcsp.ipynb": "a862190c1cd19ae254b5fc1417c06dd2aec5d5e7fb6f1ec55d0fe33f4434f05a",
+    "03_curricula_datasets_and_splits.ipynb": "4a3e1c0f87d3d41e3191218a66b79e4d9819e8ec27909c422adf0f68388c50fa",
+    "04_native_ahr_architecture.ipynb": "5e006a200433da6d3b6c7e142018750880bd95385299b9909da3acbb452840af",
+    "05_csp_qcsp_pretraining.ipynb": "2deb9ff454a9e6571090bcd5a6636ecdd50488fecbf9c21fe6c4cf19b9802066"
+  },
+  "status": "PASS",
+  "training_status": "NOT_RUN_IN_DEFAULT_VALIDATION",
+  "unknown_excluded": true,
+  "visual_review": "saved outputs inspected; no graphical notebook renderer available"
+}

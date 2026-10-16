@@ -1,0 +1,657 @@
+{
+  "schema": "notebook14-screening-analysis/v1",
+  "status": "COMPLETE",
+  "role": "DEVELOPMENTAL_SCREENING_NOT_CONFIRMATORY",
+  "n_training_pairs": 4,
+  "updates": 600,
+  "probe_endpoints": [
+    "final"
+  ],
+  "scores": [
+    {
+      "variant": "vit",
+      "final_mean_top1_percent": 5.99009900990099,
+      "mean_own_initialization_gain_pp": null,
+      "median_jepa_step_seconds": 0.918326215665089,
+      "median_peak_training_GiB": 3.6866073608398438,
+      "mean_effective_rank": 3.0956804245773073,
+      "numerical_valid": true
+    },
+    {
+      "variant": "normalized_kernel",
+      "final_mean_top1_percent": 4.702970297029703,
+      "mean_own_initialization_gain_pp": null,
+      "median_jepa_step_seconds": 1.0215979375416646,
+      "median_peak_training_GiB": 5.440377235412598,
+      "mean_effective_rank": 2.7635465053513135,
+      "numerical_valid": true
+    },
+    {
+      "variant": "compensated_kernel",
+      "final_mean_top1_percent": 5.532178217821782,
+      "mean_own_initialization_gain_pp": null,
+      "median_jepa_step_seconds": 1.0141138621769497,
+      "median_peak_training_GiB": 5.665907621383667,
+      "mean_effective_rank": 2.832761317718978,
+      "numerical_valid": true
+    },
+    {
+      "variant": "compensated_wide_kernel",
+      "final_mean_top1_percent": 4.888613861386139,
+      "mean_own_initialization_gain_pp": null,
+      "median_jepa_step_seconds": 1.0190395833075163,
+      "median_peak_training_GiB": null,
+      "mean_effective_rank": 2.7837162198125176,
+      "numerical_valid": true
+    }
+  ],
+  "exploratory_vit_family": {
+    "compensated_kernel_minus_vit": {
+      "n_training_pairs": 4,
+      "degrees_of_freedom": 3,
+      "mean_percentage_points": -0.4579207920792079,
+      "sd_percentage_points": 0.7268691250573279,
+      "standard_error_percentage_points": 0.36343456252866396,
+      "raw_t_ci95_percentage_points": [
+        -1.6145317728109552,
+        0.6986901886525394
+      ],
+      "bonferroni_t_ci975_percentage_points": [
+        -1.9758179067589188,
+        1.059976322600503
+      ],
+      "zero_variance_deltas": false,
+      "paired_t_two_sided_p_value": 0.2967744414815914,
+      "t_statistic": -1.259981408738724,
+      "positive_pairs": 1,
+      "negative_pairs": 3,
+      "zero_pairs": 0,
+      "exact_signflip_two_sided_p_value": 0.375,
+      "exact_signflip_assignments": 16,
+      "exact_sign_test_two_sided_p_value": 0.625,
+      "paired_seed_deltas": [
+        {
+          "seed": 20261601,
+          "delta_percentage_points": -0.14851485148514865
+        },
+        {
+          "seed": 20261602,
+          "delta_percentage_points": -1.4851485148514856
+        },
+        {
+          "seed": 20261603,
+          "delta_percentage_points": -0.3960396039603955
+        },
+        {
+          "seed": 20261604,
+          "delta_percentage_points": 0.1980198019801982
+        }
+      ],
+      "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability.",
+      "exploratory_holm_adjusted_p_value": 0.2967744414815914
+    },
+    "compensated_wide_kernel_minus_vit": {
+      "n_training_pairs": 4,
+      "degrees_of_freedom": 3,
+      "mean_percentage_points": -1.1014851485148518,
+      "sd_percentage_points": 0.2752611768582883,
+      "standard_error_percentage_points": 0.13763058842914416,
+      "raw_t_ci95_percentage_points": [
+        -1.5394871061552042,
+        -0.6634831908744994
+      ],
+      "bonferroni_t_ci975_percentage_points": [
+        -1.6763040969790395,
+        -0.526666200050664
+      ],
+      "zero_variance_deltas": false,
+      "paired_t_two_sided_p_value": 0.004071864739758394,
+      "t_statistic": -8.003200168557916,
+      "positive_pairs": 0,
+      "negative_pairs": 4,
+      "zero_pairs": 0,
+      "exact_signflip_two_sided_p_value": 0.125,
+      "exact_signflip_assignments": 16,
+      "exact_sign_test_two_sided_p_value": 0.125,
+      "paired_seed_deltas": [
+        {
+          "seed": 20261601,
+          "delta_percentage_points": -0.7920792079207928
+        },
+        {
+          "seed": 20261602,
+          "delta_percentage_points": -1.435643564356436
+        },
+        {
+          "seed": 20261603,
+          "delta_percentage_points": -0.9900990099009901
+        },
+        {
+          "seed": 20261604,
+          "delta_percentage_points": -1.1881188118811883
+        }
+      ],
+      "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability.",
+      "exploratory_holm_adjusted_p_value": 0.008143729479516788
+    }
+  },
+  "mechanism_contrasts": {
+    "compensated_kernel_minus_normalized_kernel": {
+      "n_training_pairs": 4,
+      "degrees_of_freedom": 3,
+      "mean_percentage_points": 0.8292079207920797,
+      "sd_percentage_points": 0.7358052316705133,
+      "standard_error_percentage_points": 0.36790261583525663,
+      "raw_t_ci95_percentage_points": [
+        -0.341622399677044,
+        2.0000382412612034
+      ],
+      "bonferroni_t_ci975_percentage_points": [
+        -0.707350174216868,
+        2.3657660158010274
+      ],
+      "zero_variance_deltas": false,
+      "paired_t_two_sided_p_value": 0.10954417043586924,
+      "t_statistic": 2.253878839402956,
+      "positive_pairs": 4,
+      "negative_pairs": 0,
+      "zero_pairs": 0,
+      "exact_signflip_two_sided_p_value": 0.125,
+      "exact_signflip_assignments": 16,
+      "exact_sign_test_two_sided_p_value": 0.125,
+      "paired_seed_deltas": [
+        {
+          "seed": 20261601,
+          "delta_percentage_points": 0.4950495049504955
+        },
+        {
+          "seed": 20261602,
+          "delta_percentage_points": 0.1980198019801982
+        },
+        {
+          "seed": 20261603,
+          "delta_percentage_points": 0.7425742574257432
+        },
+        {
+          "seed": 20261604,
+          "delta_percentage_points": 1.881188118811882
+        }
+      ],
+      "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability."
+    },
+    "compensated_wide_kernel_minus_compensated_kernel": {
+      "n_training_pairs": 4,
+      "degrees_of_freedom": 3,
+      "mean_percentage_points": -0.6435643564356439,
+      "sd_percentage_points": 0.5871434612098085,
+      "standard_error_percentage_points": 0.29357173060490427,
+      "raw_t_ci95_percentage_points": [
+        -1.5778406258349655,
+        0.2907119129636777
+      ],
+      "bonferroni_t_ci975_percentage_points": [
+        -1.8696769191382303,
+        0.5825482062669425
+      ],
+      "zero_variance_deltas": false,
+      "paired_t_two_sided_p_value": 0.11601653264456376,
+      "t_statistic": -2.1921877665454375,
+      "positive_pairs": 1,
+      "negative_pairs": 3,
+      "zero_pairs": 0,
+      "exact_signflip_two_sided_p_value": 0.25,
+      "exact_signflip_assignments": 16,
+      "exact_sign_test_two_sided_p_value": 0.625,
+      "paired_seed_deltas": [
+        {
+          "seed": 20261601,
+          "delta_percentage_points": -0.6435643564356441
+        },
+        {
+          "seed": 20261602,
+          "delta_percentage_points": 0.04950495049504955
+        },
+        {
+          "seed": 20261603,
+          "delta_percentage_points": -0.5940594059405946
+        },
+        {
+          "seed": 20261604,
+          "delta_percentage_points": -1.3861386138613865
+        }
+      ],
+      "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability."
+    }
+  },
+  "candidate_vs_control": {
+    "compensated_kernel_minus_normalized_kernel": {
+      "n_training_pairs": 4,
+      "degrees_of_freedom": 3,
+      "mean_percentage_points": 0.8292079207920797,
+      "sd_percentage_points": 0.7358052316705133,
+      "standard_error_percentage_points": 0.36790261583525663,
+      "raw_t_ci95_percentage_points": [
+        -0.341622399677044,
+        2.0000382412612034
+      ],
+      "bonferroni_t_ci975_percentage_points": [
+        -0.707350174216868,
+        2.3657660158010274
+      ],
+      "zero_variance_deltas": false,
+      "paired_t_two_sided_p_value": 0.10954417043586924,
+      "t_statistic": 2.253878839402956,
+      "positive_pairs": 4,
+      "negative_pairs": 0,
+      "zero_pairs": 0,
+      "exact_signflip_two_sided_p_value": 0.125,
+      "exact_signflip_assignments": 16,
+      "exact_sign_test_two_sided_p_value": 0.125,
+      "paired_seed_deltas": [
+        {
+          "seed": 20261601,
+          "delta_percentage_points": 0.4950495049504955
+        },
+        {
+          "seed": 20261602,
+          "delta_percentage_points": 0.1980198019801982
+        },
+        {
+          "seed": 20261603,
+          "delta_percentage_points": 0.7425742574257432
+        },
+        {
+          "seed": 20261604,
+          "delta_percentage_points": 1.881188118811882
+        }
+      ],
+      "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability."
+    },
+    "compensated_wide_kernel_minus_normalized_kernel": {
+      "n_training_pairs": 4,
+      "degrees_of_freedom": 3,
+      "mean_percentage_points": 0.1856435643564358,
+      "sd_percentage_points": 0.26620900668154607,
+      "standard_error_percentage_points": 0.13310450334077303,
+      "raw_t_ci95_percentage_points": [
+        -0.23795437051703028,
+        0.6092414992299019
+      ],
+      "bonferroni_t_ci975_percentage_points": [
+        -0.370272032019736,
+        0.7415591607326076
+      ],
+      "zero_variance_deltas": false,
+      "paired_t_two_sided_p_value": 0.25743137945419836,
+      "t_statistic": 1.3947203865909232,
+      "positive_pairs": 3,
+      "negative_pairs": 1,
+      "zero_pairs": 0,
+      "exact_signflip_two_sided_p_value": 0.375,
+      "exact_signflip_assignments": 16,
+      "exact_sign_test_two_sided_p_value": 0.625,
+      "paired_seed_deltas": [
+        {
+          "seed": 20261601,
+          "delta_percentage_points": -0.14851485148514865
+        },
+        {
+          "seed": 20261602,
+          "delta_percentage_points": 0.24752475247524774
+        },
+        {
+          "seed": 20261603,
+          "delta_percentage_points": 0.14851485148514865
+        },
+        {
+          "seed": 20261604,
+          "delta_percentage_points": 0.4950495049504955
+        }
+      ],
+      "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability."
+    }
+  },
+  "screening": {
+    "compensated_kernel": {
+      "status": "NO_GO_UNCHANGED_DESIGN",
+      "direct_quality_route": false,
+      "mechanism_quality_route": false,
+      "all_conditions_numerically_valid": true,
+      "quality_pass": false,
+      "learning_gate": "UNKNOWN_BY_FINAL_ONLY_DESIGN",
+      "median_paired_step_ratio_vs_vit": 1.103393885602245,
+      "median_paired_memory_ratio_vs_vit": 1.5361285400397438,
+      "paired_step_ratios": [
+        1.1048219711682874,
+        1.1037922317911004,
+        1.1029955394133892,
+        1.1028618885096526
+      ],
+      "paired_memory_ratios": [
+        1.5495702585389202,
+        1.5482107707902941,
+        1.5240463092891936,
+        1.5120454576252946
+      ],
+      "cost_gate": "PASS",
+      "vs_vit": {
+        "n_training_pairs": 4,
+        "degrees_of_freedom": 3,
+        "mean_percentage_points": -0.4579207920792079,
+        "sd_percentage_points": 0.7268691250573279,
+        "standard_error_percentage_points": 0.36343456252866396,
+        "raw_t_ci95_percentage_points": [
+          -1.6145317728109552,
+          0.6986901886525394
+        ],
+        "bonferroni_t_ci975_percentage_points": [
+          -1.9758179067589188,
+          1.059976322600503
+        ],
+        "zero_variance_deltas": false,
+        "paired_t_two_sided_p_value": 0.2967744414815914,
+        "t_statistic": -1.259981408738724,
+        "positive_pairs": 1,
+        "negative_pairs": 3,
+        "zero_pairs": 0,
+        "exact_signflip_two_sided_p_value": 0.375,
+        "exact_signflip_assignments": 16,
+        "exact_sign_test_two_sided_p_value": 0.625,
+        "paired_seed_deltas": [
+          {
+            "seed": 20261601,
+            "delta_percentage_points": -0.14851485148514865
+          },
+          {
+            "seed": 20261602,
+            "delta_percentage_points": -1.4851485148514856
+          },
+          {
+            "seed": 20261603,
+            "delta_percentage_points": -0.3960396039603955
+          },
+          {
+            "seed": 20261604,
+            "delta_percentage_points": 0.1980198019801982
+          }
+        ],
+        "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability.",
+        "exploratory_holm_adjusted_p_value": 0.2967744414815914
+      },
+      "vs_control": {
+        "n_training_pairs": 4,
+        "degrees_of_freedom": 3,
+        "mean_percentage_points": 0.8292079207920797,
+        "sd_percentage_points": 0.7358052316705133,
+        "standard_error_percentage_points": 0.36790261583525663,
+        "raw_t_ci95_percentage_points": [
+          -0.341622399677044,
+          2.0000382412612034
+        ],
+        "bonferroni_t_ci975_percentage_points": [
+          -0.707350174216868,
+          2.3657660158010274
+        ],
+        "zero_variance_deltas": false,
+        "paired_t_two_sided_p_value": 0.10954417043586924,
+        "t_statistic": 2.253878839402956,
+        "positive_pairs": 4,
+        "negative_pairs": 0,
+        "zero_pairs": 0,
+        "exact_signflip_two_sided_p_value": 0.125,
+        "exact_signflip_assignments": 16,
+        "exact_sign_test_two_sided_p_value": 0.125,
+        "paired_seed_deltas": [
+          {
+            "seed": 20261601,
+            "delta_percentage_points": 0.4950495049504955
+          },
+          {
+            "seed": 20261602,
+            "delta_percentage_points": 0.1980198019801982
+          },
+          {
+            "seed": 20261603,
+            "delta_percentage_points": 0.7425742574257432
+          },
+          {
+            "seed": 20261604,
+            "delta_percentage_points": 1.881188118811882
+          }
+        ],
+        "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability."
+      }
+    },
+    "compensated_wide_kernel": {
+      "status": "NO_GO_UNCHANGED_DESIGN",
+      "direct_quality_route": false,
+      "mechanism_quality_route": false,
+      "all_conditions_numerically_valid": true,
+      "quality_pass": false,
+      "learning_gate": "UNKNOWN_BY_FINAL_ONLY_DESIGN",
+      "median_paired_step_ratio_vs_vit": null,
+      "median_paired_memory_ratio_vs_vit": null,
+      "paired_step_ratios": null,
+      "paired_memory_ratios": null,
+      "cost_gate": "UNKNOWN",
+      "vs_vit": {
+        "n_training_pairs": 4,
+        "degrees_of_freedom": 3,
+        "mean_percentage_points": -1.1014851485148518,
+        "sd_percentage_points": 0.2752611768582883,
+        "standard_error_percentage_points": 0.13763058842914416,
+        "raw_t_ci95_percentage_points": [
+          -1.5394871061552042,
+          -0.6634831908744994
+        ],
+        "bonferroni_t_ci975_percentage_points": [
+          -1.6763040969790395,
+          -0.526666200050664
+        ],
+        "zero_variance_deltas": false,
+        "paired_t_two_sided_p_value": 0.004071864739758394,
+        "t_statistic": -8.003200168557916,
+        "positive_pairs": 0,
+        "negative_pairs": 4,
+        "zero_pairs": 0,
+        "exact_signflip_two_sided_p_value": 0.125,
+        "exact_signflip_assignments": 16,
+        "exact_sign_test_two_sided_p_value": 0.125,
+        "paired_seed_deltas": [
+          {
+            "seed": 20261601,
+            "delta_percentage_points": -0.7920792079207928
+          },
+          {
+            "seed": 20261602,
+            "delta_percentage_points": -1.435643564356436
+          },
+          {
+            "seed": 20261603,
+            "delta_percentage_points": -0.9900990099009901
+          },
+          {
+            "seed": 20261604,
+            "delta_percentage_points": -1.1881188118811883
+          }
+        ],
+        "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability.",
+        "exploratory_holm_adjusted_p_value": 0.008143729479516788
+      },
+      "vs_control": {
+        "n_training_pairs": 4,
+        "degrees_of_freedom": 3,
+        "mean_percentage_points": 0.1856435643564358,
+        "sd_percentage_points": 0.26620900668154607,
+        "standard_error_percentage_points": 0.13310450334077303,
+        "raw_t_ci95_percentage_points": [
+          -0.23795437051703028,
+          0.6092414992299019
+        ],
+        "bonferroni_t_ci975_percentage_points": [
+          -0.370272032019736,
+          0.7415591607326076
+        ],
+        "zero_variance_deltas": false,
+        "paired_t_two_sided_p_value": 0.25743137945419836,
+        "t_statistic": 1.3947203865909232,
+        "positive_pairs": 3,
+        "negative_pairs": 1,
+        "zero_pairs": 0,
+        "exact_signflip_two_sided_p_value": 0.375,
+        "exact_signflip_assignments": 16,
+        "exact_sign_test_two_sided_p_value": 0.625,
+        "paired_seed_deltas": [
+          {
+            "seed": 20261601,
+            "delta_percentage_points": -0.14851485148514865
+          },
+          {
+            "seed": 20261602,
+            "delta_percentage_points": 0.24752475247524774
+          },
+          {
+            "seed": 20261603,
+            "delta_percentage_points": 0.14851485148514865
+          },
+          {
+            "seed": 20261604,
+            "delta_percentage_points": 0.4950495049504955
+          }
+        ],
+        "interpretation": "Four-seed developmental screening; uncertainty is conditional on reused images. Raw t intervals and p values assume an appropriate paired-effect distribution. Exact sign flips require symmetric independent paired effects or exchangeability."
+      }
+    }
+  },
+  "screening_decision": "DO_NOT_SCALE_UNCHANGED_DESIGNS",
+  "promising_variants": [],
+  "no_followup_launched": true,
+  "official_test": "NOT_RUN",
+  "development_status": "REUSED_PREVIOUSLY_REPORTED_2020_IMAGES",
+  "own_initialization_learning": "UNKNOWN_BY_DESIGN",
+  "limitations": [
+    "Four training seeds screen direction and size; they do not provide robust significance at .05. The minimum two-sided exact sign-flip p is .125.",
+    "Ideas were selected using previous outcomes on this reused 2,020-image development set. New seeds do not make image membership independently held out.",
+    "Fixed final epoch20 probes have labels only in evaluation. Final-only probes do not establish improvement over each encoder's own initialization.",
+    "Raw 95% paired t intervals and Holm-adjusted exploratory p values rely strongly on distribution assumptions with df=3; nonsignificance does not establish equivalence.",
+    "Dense exact kernel interactions are quadratic; this screen neither implements nor establishes FMM acceleration.",
+    "Kernel and ViT encoder parameter counts differ. This is a controlled full-JEPA pipeline comparison, not a parameter-matched optimality result.",
+    "Screening thresholds are an operational decision rule, not a significance test or authorization to start another run.",
+    "The initial two-hour run failed at output publication; final results required a separate next-day recovery capped at the unused allowance. Original FAILEDstatus/clock preserved."
+  ],
+  "run_id": "routing-capacity-001",
+  "source_predictions": [
+    {
+      "model_id": "s20261601-vit-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker0/probes/s20261601-vit-u600/final_epoch_predictions.csv",
+      "sha256": "3ca5deefc325c655598ac5e184212dbf8cc5e05088cc5fe6bd8dfa4928be29db",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261601-normalized_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker0/probes/s20261601-normalized_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "1b9996dab0cfe5e632a6d33f763d690d99e74ef43f2d2fa8916d930606c8d55a",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261601-compensated_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker0/probes/s20261601-compensated_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "b27e1dcd85b11d59c0cf4f2e826390aca57bd08fe9918283c71ee422440fb173",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261601-compensated_wide_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker0/probes/s20261601-compensated_wide_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "4e44ac4b43590f28859f0ce7a4390275b796e4c2ecb03bb69544d0c72987fcf4",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261602-vit-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker0/probes/s20261602-vit-u600/final_epoch_predictions.csv",
+      "sha256": "3339e21e4d7a3814685aa9c43321acd552c6f3d507ab743791fb61ec11ba41d7",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261602-normalized_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker0/probes/s20261602-normalized_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "66a363cc17431df2e1f03402718be1a17823bc93963cb69e9a0782e661184f50",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261602-compensated_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker0/probes/s20261602-compensated_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "22dc19da7d16b338dd5dab2c498bd0114d85c056efae37a34aaaa0714b7f7e7d",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261602-compensated_wide_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker0/probes/s20261602-compensated_wide_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "e0a6be34aa403d9475b8839376069288739786a225156c7e05657bf902ca8d3a",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261603-vit-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker1/probes/s20261603-vit-u600/final_epoch_predictions.csv",
+      "sha256": "aa75a0eea8aeb5569df54e4c7f91560eff7337d76995d4fbc1f27e32bf458e13",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261603-normalized_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker1/probes/s20261603-normalized_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "f787fd66e7bdc0f2a4af17c44ab54c4e21e2d9a0899654281cdacc0bb91a48e3",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261603-compensated_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker1/probes/s20261603-compensated_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "ab9c4920ab0e18deee1f364cc7b55b9819e7b43b6613529702a149cf69279472",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261603-compensated_wide_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker1/probes/s20261603-compensated_wide_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "2c98ea08d9574450232a48a3157e0e9eb1228f087a93b9d7cd4126286a82c946",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261604-vit-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker1/probes/s20261604-vit-u600/final_epoch_predictions.csv",
+      "sha256": "2966f2a3bc3cda6ee18c37c40adbbc08336f74f94201e10c080f7231fe9e739f",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261604-normalized_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker1/probes/s20261604-normalized_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "ee3f46b1bf598bd8625c9982176feaa391f07f23b6654c0938aa984ed6744bdc",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261604-compensated_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker1/probes/s20261604-compensated_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "45dd4f2c539c7877f8ab9dc9e1783f8cefb4d20d648a9275b4821f67a31aaca2",
+      "examples": 2020
+    },
+    {
+      "model_id": "s20261604-compensated_wide_kernel-u600",
+      "path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/stages/worker1/probes/s20261604-compensated_wide_kernel-u600/final_epoch_predictions.csv",
+      "sha256": "6af9875784412b769a451c5e1e058bfebd8c5ea67be9c6b9e473066f538bf4a5",
+      "examples": 2020
+    }
+  ],
+  "analysis_source_sha256": "2f4845bcc6f67b79dc2bd85f3c2af4f07d3e18b778aeb61bf00518c9167094e7",
+  "plan_hash": "62ad7c124826fa88f5a06016b55d12b8ab4ca97d1cb809b8a9490f60021eda03",
+  "fixture_source": null,
+  "completion_provenance": {
+    "original_run_status": "FAILED",
+    "original_failure_sha256": "2095b26e85ce401a65de3c830136920bbf10491f2f577f292d3139a17dbe9a44",
+    "recovery_role": "Separate next-day bounded completion;47updatesexactresumed plusregistered16fixedprobes",
+    "original_clock_unchanged": true,
+    "original_elapsed_seconds": 6458.365711927414,
+    "recovery_max_seconds": 741,
+    "scientific_sources_changed": false,
+    "scientific_plan_changed": false,
+    "seeds_or_conditions_changed": false,
+    "official_test": "NOT_RUN",
+    "completion_unix": 1791546250.706564
+  }
+}

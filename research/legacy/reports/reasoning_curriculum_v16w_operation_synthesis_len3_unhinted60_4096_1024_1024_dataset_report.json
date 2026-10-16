@@ -1,0 +1,66 @@
+{
+  "caps": {
+    "max_level_domain": 16,
+    "max_state_count": 96,
+    "max_transition_rows": 96
+  },
+  "clinical_use": "forbidden",
+  "created_at_unix": 1780634545.7797806,
+  "dataset_path": "/home/benjamin/02_ahr_csp_math_words/.1AHR_maths&words/ahr_csp_v0/data/reasoning_challenge_v0/compiled_ahr_csp_v0/reasoning_curriculum_v16w_operation_synthesis_len3_unhinted60_4096_1024_1024.jsonl",
+  "expected_split_counts": {
+    "test": 1024,
+    "train": 4096,
+    "val": 1024
+  },
+  "family_counts": {
+    "operation_synthesis_len2_factored": 2456,
+    "operation_synthesis_len3_factored": 3688
+  },
+  "kind": "reasoning_curriculum_v16w_operation_synthesis_len3_unhinted60_4096_1024_1024_dataset_report",
+  "max_constraint_scope": 3,
+  "max_finite_domain_size": 14,
+  "max_table_rows": 28,
+  "metadata_counts": {
+    "level_size_1": 6144,
+    "level_size_11": 63,
+    "level_size_12": 223,
+    "level_size_13": 2855,
+    "level_size_14": 528,
+    "level_size_3": 4828,
+    "level_size_4": 2941,
+    "level_size_5": 1352,
+    "level_size_7": 3094,
+    "level_size_8": 46,
+    "level_size_9": 46,
+    "state_count_bucket_0": 2475,
+    "state_count_bucket_10": 3669,
+    "transition_rows_bucket_0": 6144,
+    "transition_rows_bucket_16": 2651,
+    "transition_rows_bucket_24": 2353,
+    "transition_rows_bucket_8": 4828
+  },
+  "passed": true,
+  "record_count": 6144,
+  "split_counts": {
+    "test": 1024,
+    "train": 4096,
+    "val": 1024
+  },
+  "split_family_counts": {
+    "test": {
+      "operation_synthesis_len2_factored": 409,
+      "operation_synthesis_len3_factored": 615
+    },
+    "train": {
+      "operation_synthesis_len2_factored": 1638,
+      "operation_synthesis_len3_factored": 2458
+    },
+    "val": {
+      "operation_synthesis_len2_factored": 409,
+      "operation_synthesis_len3_factored": 615
+    }
+  },
+  "status_counts": {
+    "sat": 6144
+  }
+}

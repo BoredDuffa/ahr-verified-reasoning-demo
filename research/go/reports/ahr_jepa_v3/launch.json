@@ -1,0 +1,9 @@
+{
+  "attach": "tmux attach -t ahr-go-jepa-v3",
+  "configuration_sha256": "d0178b03bcbf6ac2bd20d9b946a562285424b271eb2eee32c1b6048f111eb6fc",
+  "controller_log": "reports/ahr_jepa_v3/controller.log",
+  "detach": "Ctrl-b, then d",
+  "resume": "AHRV3_MODE=run; fresh ahr-go kernel Run All in experiments/ahr_jepa_v3/protocol_and_run.ipynb",
+  "session": "ahr-go-jepa-v3",
+  "status": "LAUNCHED"
+}

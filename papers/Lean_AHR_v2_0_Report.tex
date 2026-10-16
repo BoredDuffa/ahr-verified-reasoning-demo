@@ -1,0 +1,528 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  urlcolor=blue!55!black,
+  citecolor=blue!55!black
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Lean-AHR v2.0 Milestone}
+\rhead{Benjamin A. Aenlle Falkenburg}
+\cfoot{\thepage\ of \pageref{LastPage}}
+\setlength{\headheight}{14pt}
+
+\setlist[itemize]{topsep=2pt,itemsep=2pt,leftmargin=1.4em}
+\setlist[enumerate]{topsep=2pt,itemsep=2pt,leftmargin=1.6em}
+\renewcommand{\arraystretch}{1.15}
+
+\lstdefinestyle{leanstyle}{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  framerule=0.2pt,
+  columns=fullflexible,
+  keepspaces=true,
+  backgroundcolor=\color{black!2}
+}
+
+\title{\textbf{Lean-AHR v2.0 Arithmetic Primitives Milestone Report}\\
+\large Verified Proof Search, Arithmetic Bridge, and MVP Interaction Upgrade}
+\author{Benjamin A. Aenlle Falkenburg}
+\date{2026-05-31 Europe/Dublin}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This report documents the Lean-AHR v2.0 arithmetic-primitives milestone completed on 2026-05-31. The run
+\texttt{lean\_ahr\_v2\_0\_arith\_primitives\_repeats27} evaluated 810 Lean-verified proof-search records across
+top-1, top-2, and top-4 search budgets. It reached 100\% proof completion at every tested top-k level, including
+the new v2.0 families for natural-number inequalities, divisibility, parity encoded as divisibility by 2, and
+existential witness construction. The run produced a diagnostic atlas, milestone package, JSONL proof records,
+checkmark logs, and an updated MVP command-line interface that can answer new arithmetic prompts and emit
+Lean-checked proof files. This is a narrow but meaningful proof-search landmark: AHR is no longer only handling
+propositional micro-proofs and addition rewrites; it now has a verified bridge into small arithmetic reasoning
+patterns.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Executive Summary}
+
+Lean-AHR v2.0 is the first milestone where the proof-search system consistently solved a mixed suite containing
+both previous propositional/rewriting tasks and new arithmetic primitives. The important result is not merely that
+the examples compiled in Lean. The important result is that the AHR-guided search loop selected tactic sequences,
+validated local proof-state transitions with Lean, produced final theorem files, and completed the entire evaluation
+without failures.
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Run name & \texttt{lean\_ahr\_v2\_0\_arith\_primitives\_repeats27} \\
+Remote host at completion & \texttt{benjamin@35.239.179.142} \\
+Project path & \texttt{/home/benjamin/03\_ahr\_lean\_foundation\_plan\_20260508} \\
+Records & 810 \\
+Top-k budgets & 1, 2, 4 \\
+Completion & 100\% at top-1, top-2, and top-4 \\
+Failure count & 0 \\
+Clinical use flag & \texttt{forbidden} \\
+GitHub archive commit & \texttt{f0ed3c1} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The immediate interpretation is:
+
+\begin{itemize}
+  \item AHR's Lean proof-search layer is stable on this finite arithmetic/propositional benchmark.
+  \item The top-1 policy is strong on v2.0: it solved all 270 top-1 records.
+  \item The wider search budgets did not expose hidden brittleness: top-2 and top-4 also reached 100\%.
+  \item The MVP interface is now able to turn a small set of controlled English prompts into Lean theorem templates and verified proofs.
+  \item The next scientific step is not a bigger demo claim; it is less-templated generalization in v2.1.
+\end{itemize}
+
+\section{What Lean-AHR Is Doing}
+
+Lean-AHR is being built as a verified reasoning layer around Lean. The working model is:
+
+\begin{enumerate}
+  \item A theorem statement defines a formal target.
+  \item The current proof state is treated as a finite decision context.
+  \item Candidate tactics are generated from the local state, theorem family, hypotheses, target shape, and known proof patterns.
+  \item AHR scores candidate actions using a learned branch-cost/ranking model plus hand-coded safety priors.
+  \item Lean checks each local step. Invalid branches are rejected by the verifier rather than trusted.
+  \item If a complete proof is found, a final Lean file is written and compiled without \texttt{sorry}.
+\end{enumerate}
+
+This architecture deliberately avoids treating the neural model as an oracle. The neural component is used to rank
+finite choices. Lean is the final source of truth. In other words, AHR proposes; Lean disposes.
+
+\section{Mathematical Scope of v2.0}
+
+Before v2.0, the strongest Lean-AHR results were primarily in propositional logic, local lemma construction, cases,
+contradiction, and small natural-number addition rewrites such as associativity and commutativity. v2.0 extends the
+mathematical surface area to the following natural-number primitives.
+
+\subsection{Inequality}
+
+The v2.0 inequality family included reflexivity, zero lower bounds, successor bounds, additive bounds, and
+transitivity:
+
+\begin{align*}
+n &\le n,\\
+0 &\le n,\\
+n &< n.\mathrm{succ},\\
+n &\le n + m,\\
+n &\le m + n,\\
+n \le m \wedge m \le k &\Rightarrow n \le k.
+\end{align*}
+
+The key Lean tactics included direct use of \texttt{Nat.le\_refl}, \texttt{Nat.le\_add\_right},
+\texttt{Nat.le\_add\_left}, and \texttt{Nat.le\_trans}. This is modest arithmetic, but it matters because it
+introduces order reasoning and hypothesis chaining beyond equality rewriting.
+
+\subsection{Divisibility}
+
+The divisibility family introduced goals of the form:
+
+\begin{align*}
+n &\mid n,\\
+n \mid m \wedge n \mid k &\Rightarrow n \mid m+k,\\
+n \mid m \wedge m \mid k &\Rightarrow n \mid k.
+\end{align*}
+
+The proof search used Lean primitives such as \texttt{Nat.dvd\_refl}, \texttt{Nat.dvd\_add}, and
+\texttt{Nat.dvd\_trans}. This extends AHR into relational arithmetic where proof success depends on selecting the
+right hypothesis pair, not only rewriting a target.
+
+\subsection{Parity as Divisibility}
+
+Lean core did not expose a convenient \texttt{Even}/\texttt{Odd} layer in the current no-mathlib setup, so v2.0
+encoded parity through divisibility by 2:
+
+\[
+2 \mid n \Rightarrow 2 \mid n+n.
+\]
+
+This was solved using \texttt{Nat.dvd\_add h h}. It is a useful engineering compromise: it keeps the benchmark inside
+core Lean while still representing a common arithmetic concept.
+
+\subsection{Existential Witnesses}
+
+The existential family introduced witness construction:
+
+\[
+\exists k : \mathbb{N},\ k = n.
+\]
+
+The proof term is short but structurally important:
+
+\begin{lstlisting}[style=leanstyle]
+exact Exists.intro n rfl
+\end{lstlisting}
+
+This matters because future theorem proving cannot only discharge universally quantified equations. It must also
+construct objects. v2.0 adds the first reliable witness-construction path.
+
+\section{Engineering Changes}
+
+\subsection{New v2.0 Runner}
+
+The main experiment script was:
+
+\begin{lstlisting}[style=leanstyle]
+tools/run_lean_ahr_v2_0_arith_primitives.py
+\end{lstlisting}
+
+The detached launcher was:
+
+\begin{lstlisting}[style=leanstyle]
+tools/run_lean_ahr_v2_0_arith_primitives_detached.sh
+\end{lstlisting}
+
+The run was explicitly resumable. This mattered operationally because the VM/IP changed during the job. The run had
+already written 607 row-level records out of 810. After reconnecting to \texttt{35.239.179.142}, the runner resumed
+from the existing JSONL file rather than restarting the whole experiment. It then completed the remaining top-4
+records and wrote the final report.
+
+\subsection{Detached Execution and Evidence Trail}
+
+The execution pattern produced:
+
+\begin{itemize}
+  \item a PID file,
+  \item detached stdout/stderr log,
+  \item GPU telemetry log,
+  \item 15-minute checkmark snapshots,
+  \item row-level JSONL proof records,
+  \item progress JSON,
+  \item final report JSON,
+  \item diagnostic atlas,
+  \item milestone package with SHA-256 manifest.
+\end{itemize}
+
+This is important for research discipline. A successful proof-search run is not just a console message; it has
+replayable artifacts, row-level records, and a packaged audit trail.
+
+\subsection{MVP CLI Upgrade}
+
+The interactive MVP CLI was upgraded:
+
+\begin{lstlisting}[style=leanstyle]
+tools/lean_ahr_mvp_cli.py
+\end{lstlisting}
+
+It now supports prompt templates and curated examples for:
+
+\begin{itemize}
+  \item addition associativity and commutativity,
+  \item addition reordering,
+  \item implication chains,
+  \item conjunction projection,
+  \item contradiction,
+  \item disjunction/case-style bridges,
+  \item natural-number inequalities,
+  \item natural-number divisibility,
+  \item parity as divisibility by 2,
+  \item existential witness construction.
+\end{itemize}
+
+The smoke suite:
+
+\begin{lstlisting}[style=leanstyle]
+tools/run_lean_ahr_mvp_smoke_suite.sh
+\end{lstlisting}
+
+was expanded to include v2.0 arithmetic prompts and solved all six tested examples.
+
+\section{Experiment Results}
+
+\subsection{Top-k Completion}
+
+\begin{center}
+\begin{tabular}{rrrrrr}
+\toprule
+Top-k & Count & Solved & Completion & Mean Lean calls & Mean elapsed s \\
+\midrule
+1 & 270 & 270 & 1.000 & 16.20 & 6.46 \\
+2 & 270 & 270 & 1.000 & 35.93 & 13.68 \\
+4 & 270 & 270 & 1.000 & 64.53 & 25.32 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The result is unusually clean: all tested search budgets passed. The top-1 score is especially useful because it
+means the ranker and tactic priors are now choosing the correct first branch across the v2.0 suite, not merely
+recovering through wider search.
+
+\subsection{Acceptance Gates}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Gate & Result \\
+\midrule
+top-1 completion $\ge 0.90$ & pass \\
+top-2 completion $\ge 0.90$ & pass \\
+top-4 completion $\ge 0.95$ & pass \\
+zero final Lean failures & pass \\
+clinical use marked forbidden & pass \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Family-Level Coverage}
+
+The v2.0 run intentionally retained prior proof families while adding arithmetic primitives. This tests regression as
+well as new capability.
+
+\begin{longtable}{p{0.42\linewidth}rrrr}
+\toprule
+Family & Count & Solved & Completion & Mean Lean calls \\
+\midrule
+\endhead
+\texttt{have\_construct} & 27 & 27 & 1.000 & 86.00 \\
+\texttt{have\_contradiction} & 27 & 27 & 1.000 & 22.67 \\
+\texttt{have\_imp\_chain} & 27 & 27 & 1.000 & 48.67 \\
+\texttt{have\_or\_elim} & 27 & 27 & 1.000 & 46.67 \\
+\texttt{have\_projection} & 27 & 27 & 1.000 & 36.00 \\
+\texttt{v16\_deep\_chain\_conj} & 27 & 27 & 1.000 & 139.00 \\
+\texttt{v16\_nested\_or\_bridge} & 27 & 27 & 1.000 & 56.33 \\
+\texttt{v16\_or\_to\_local\_conj} & 27 & 27 & 1.000 & 72.67 \\
+\texttt{v16\_project\_contradiction} & 27 & 27 & 1.000 & 57.67 \\
+\texttt{v17\_contra\_with\_distractor} & 27 & 27 & 1.000 & 83.67 \\
+\texttt{v17\_deep\_reordered\_bridge} & 27 & 27 & 1.000 & 84.33 \\
+\texttt{v17\_distractor\_projection} & 27 & 27 & 1.000 & 47.67 \\
+\texttt{v17\_or\_with\_distractor} & 27 & 27 & 1.000 & 46.67 \\
+\texttt{v17\_reordered\_chain} & 27 & 27 & 1.000 & 52.67 \\
+\texttt{v18\_nat\_assoc} & 27 & 27 & 1.000 & 9.33 \\
+\texttt{v18\_nat\_comm} & 27 & 27 & 1.000 & 11.67 \\
+\texttt{v18\_nat\_reorder} & 27 & 27 & 1.000 & 58.00 \\
+\texttt{v18\_nat\_rewrite} & 54 & 54 & 1.000 & 10.17 \\
+\texttt{v20\_nat\_divisibility} & 81 & 81 & 1.000 & 23.89 \\
+\texttt{v20\_nat\_exists} & 27 & 27 & 1.000 & 8.33 \\
+\texttt{v20\_nat\_inequality} & 135 & 135 & 1.000 & 10.40 \\
+\texttt{v20\_nat\_inequality\_trans} & 27 & 27 & 1.000 & 26.67 \\
+\texttt{v20\_nat\_parity\_div2} & 27 & 27 & 1.000 & 28.67 \\
+\bottomrule
+\end{longtable}
+
+\section{MVP Smoke Results}
+
+After the proof-search run passed, the MVP CLI was updated and tested. The smoke suite solved six out of six examples.
+
+\begin{center}
+\small
+\begin{tabular}{p{0.32\linewidth}p{0.40\linewidth}rr}
+\toprule
+Prompt or task & Proof sketch & Lean calls & Solved \\
+\midrule
+prove addition is associative & \texttt{rw [Nat.add\_assoc]} & 4 & yes \\
+prove a natural number is less equal itself & \texttt{exact Nat.le\_refl n} & 4 & yes \\
+prove divisibility addition & \texttt{intro h0; intro h1; exact Nat.dvd\_add h0 h1} & 11 & yes \\
+prove parity of a double & \texttt{intro h0; exact Nat.dvd\_add h0 h0} & 8 & yes \\
+prove existential witness identity & \texttt{exact Exists.intro n rfl} & 4 & yes \\
+custom projection theorem & \texttt{intro h0; intro h1; exact h0} & 31 & yes \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The MVP is still a controlled prototype, not an open-ended theorem prover. However, it is now interactive enough to
+serve as a real demonstration: a user can give a supported prompt or theorem statement and receive a Lean-checked
+proof file.
+
+\section{Artifact Inventory}
+
+The milestone package is archived locally and pushed to GitHub.
+
+\begin{lstlisting}[style=leanstyle]
+Local archive:
+/Users/benjaminfalkenburg/Documents/primumai/github_exports/
+  ahr_verified_reasoning_20260509/
+    remote_tools/remote_lean_35_239_179_142_20260531/
+      v2_0_arith_primitives/
+        lean_ahr_v2_0_arith_primitives_repeats27_MILESTONE_PACKAGE_20260531T221022Z/
+
+GitHub:
+https://github.com/BoredDuffa/ahr-verified-reasoning-20260509
+
+Commit:
+f0ed3c1 Archive Lean AHR v2.0 arithmetic milestone
+\end{lstlisting}
+
+The milestone package contains:
+
+\begin{itemize}
+  \item final report JSON,
+  \item progress report JSON,
+  \item 810-record JSONL proof trace dataset,
+  \item detached logs,
+  \item GPU telemetry logs,
+  \item pre-resume logs,
+  \item checkmark snapshots,
+  \item diagnostic atlas JSON and Markdown,
+  \item updated MVP CLI,
+  \item MVP smoke suite and smoke results,
+  \item SHA-256 manifest.
+\end{itemize}
+
+\section{Interpretation}
+
+This milestone means AHR has crossed an important narrow threshold. It can now solve and verify a controlled set of
+Lean theorem-proving tasks that require:
+
+\begin{itemize}
+  \item proposition introduction,
+  \item projection from conjunctions,
+  \item contradiction handling,
+  \item disjunction/case-style bridges,
+  \item local lemma construction,
+  \item addition rewriting,
+  \item inequality facts,
+  \item divisibility facts,
+  \item witness construction for existential goals.
+\end{itemize}
+
+The system is not yet proving advanced number theory. It is not yet proving irrationality of $\sqrt{2}$. But the
+engineering direction is now clearer: build outward from verified local theorem families, keep Lean as the final
+verifier, and only claim capability when a held-out proof-search run and an interactive MVP smoke both pass.
+
+\section{Current Limitations}
+
+\begin{itemize}
+  \item The theorem templates are still narrow. v2.0 success does not prove broad theorem-proving generality.
+  \item The prompt translator is a rule-based template router, not a trained language model.
+  \item The current benchmark mostly uses Lean core. Mathlib-backed theorem proving is a separate next step.
+  \item The system is CPU/Lean-verifier bound during proof search; GPU utilization is naturally low for these runs.
+  \item Search completeness is bounded by max depth, max nodes, tactic candidates, and timeout.
+  \item The benchmark contains validation/test-style splits, but v2.1 needs more aggressive de-templating to test real generalization.
+\end{itemize}
+
+\section{Next Research Step: v2.1}
+
+The correct next step is Lean-AHR v2.1: less-templated arithmetic generalization.
+
+\subsection{Recommended v2.1 Families}
+
+\begin{enumerate}
+  \item Reordered inequality transitivity:
+  \[
+  m \le k \rightarrow n \le m \rightarrow n \le k.
+  \]
+  \item Divisibility chains with distractor hypotheses:
+  \[
+  n \mid m \rightarrow x \mid y \rightarrow m \mid k \rightarrow n \mid k.
+  \]
+  \item Existential witnesses with nontrivial witness terms:
+  \[
+  \exists k : \mathbb{N},\ k = n + 0.
+  \]
+  \item Mixed propositional and arithmetic gates:
+  \[
+  P \rightarrow (P \rightarrow n \le m) \rightarrow n \le m.
+  \]
+  \item Parity/divisibility goals with irrelevant assumptions.
+\end{enumerate}
+
+\subsection{v2.1 Acceptance}
+
+The proposed gates should be:
+
+\begin{itemize}
+  \item top-1 completion at least 90\%,
+  \item top-2 completion at least 95\%,
+  \item top-4 completion at least 98\%,
+  \item zero Lean expectation mismatches,
+  \item all final proofs compile without \texttt{sorry},
+  \item a failure atlas for every unsolved theorem.
+\end{itemize}
+
+\section{Path Toward Mathlib and Harder Proofs}
+
+The route from v2.0 to proofs such as irrationality of $\sqrt{2}$ should be staged.
+
+\begin{enumerate}
+  \item Finish v2.1 less-templated arithmetic.
+  \item Add a Mathlib environment smoke test and import discipline.
+  \item Build a small Mathlib theorem selection set: divisibility lemmas, parity lemmas, prime facts, square facts.
+  \item Create a retrieval layer for named lemmas.
+  \item Evaluate local proof search where AHR chooses among lemma applications.
+  \item Only then attempt multi-lemma proofs such as irrationality of $\sqrt{2}$.
+\end{enumerate}
+
+The mathematical challenge in $\sqrt{2}$ is not simply arithmetic. It requires a chain of definitions and lemmas about
+irrationality, divisibility, parity, squares, primes, and contradiction. Lean can verify such proofs, but AHR needs a
+controlled way to discover the required lemmas and route through them.
+
+\section{Conclusion}
+
+Lean-AHR v2.0 is a clean milestone. The run completed 810 Lean-verified proof-search records with 100\% completion
+at top-1, top-2, and top-4. It introduced working arithmetic primitives, preserved earlier propositional capability,
+upgraded the MVP interaction path, and produced a packaged, checksummed artifact set pushed to GitHub.
+
+The next milestone should deliberately stress generalization. v2.1 should keep the same verifier discipline but make
+the arithmetic proofs less templated, more reordered, and more distractor-heavy. If that passes, the project will be
+ready for its first serious Mathlib bridge.
+
+\appendix
+\section{Handoff Commands}
+
+\subsection{Check Remote Status}
+
+\begin{lstlisting}[style=leanstyle]
+ssh benjamin@35.239.179.142
+cd /home/benjamin/03_ahr_lean_foundation_plan_20260508
+ls -lh reports/lean_ahr_v2_0_arith_primitives_repeats27_report.json
+tail -n 40 reports/lean_ahr_v2_0_arith_primitives_repeats27.detached.log
+\end{lstlisting}
+
+\subsection{Run MVP Examples}
+
+\begin{lstlisting}[style=leanstyle]
+cd /home/benjamin/03_ahr_lean_foundation_plan_20260508
+/opt/conda/bin/python tools/lean_ahr_mvp_cli.py --list-examples
+/opt/conda/bin/python tools/lean_ahr_mvp_cli.py \
+  --prompt "prove divisibility addition" \
+  --name demo_dvd_add \
+  --run-name lean_ahr_mvp_demo_dvd_add \
+  --max-k 1 \
+  --cpu
+\end{lstlisting}
+
+\subsection{Archive Location}
+
+\begin{lstlisting}[style=leanstyle]
+/Users/benjaminfalkenburg/Documents/primumai/github_exports/
+  ahr_verified_reasoning_20260509/
+    remote_tools/remote_lean_35_239_179_142_20260531/
+\end{lstlisting}
+
+\subsection{GitHub Push Already Completed}
+
+\begin{lstlisting}[style=leanstyle]
+cd /Users/benjaminfalkenburg/Documents/primumai/github_exports/ahr_verified_reasoning_20260509
+git log --oneline -1
+# f0ed3c1 Archive Lean AHR v2.0 arithmetic milestone
+\end{lstlisting}
+
+\end{document}

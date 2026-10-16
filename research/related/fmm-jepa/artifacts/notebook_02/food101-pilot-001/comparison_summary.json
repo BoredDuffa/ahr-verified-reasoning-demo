@@ -1,0 +1,261 @@
+{
+  "schema": "fmm-jepa-food-comparison/v1",
+  "run_mode": "pilot",
+  "results": {
+    "vit_untrained": {
+      "model_id": "vit_untrained",
+      "seed": 4404,
+      "phase": "linear_probe",
+      "split": "development",
+      "checkpoint_hash": "59ce875b94825d17a43d161c48f1f1c755fe3abfc0af2541190dbe1ff2f59470",
+      "probe_hash": "f8615dce5adabd17cea641e4e146fcd70689d06900d87bcacd7f7418b63140de",
+      "selected_epoch": 26,
+      "completed_epochs": 30,
+      "successful_probe_updates": 1200,
+      "budget": {
+        "epochs": 30,
+        "batch_size": 256,
+        "lr": 0.01,
+        "weight_decay": 0.0001,
+        "standardize": true,
+        "num_classes": 101,
+        "seed": 4404,
+        "order_seed": 4405,
+        "selection": "best_dev_top1_then_earliest",
+        "device": "cpu"
+      },
+      "initialization_hash": "a27e33bc39bfe637b99ed355df08919a8b66df9c43c2203af643b8c136be383c",
+      "encoder_unchanged": true,
+      "encoder_verification": "state_hash_before_after",
+      "train_examples": 10100,
+      "train_classes": 101,
+      "initialization_control": true,
+      "standardization_fit_scope": "probe_train_only",
+      "resumed": false,
+      "metrics": {
+        "loss": 4.521855354309082,
+        "top1": 0.06039603799581528,
+        "top5": 0.1683168262243271,
+        "examples": 2020,
+        "evaluated_classes": 101
+      },
+      "selected_probe_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/vit_untrained/selected_probe.pt",
+      "predictions_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/vit_untrained/development_predictions.csv",
+      "resume_manifest": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/vit_untrained/probe_manifest.json"
+    },
+    "vit_trained": {
+      "model_id": "vit_trained",
+      "seed": 4404,
+      "phase": "linear_probe",
+      "split": "development",
+      "checkpoint_hash": "dbdcfcd72881a26121856027744b373d45b2d32a60307508634d060a643e2766",
+      "probe_hash": "145cd4cf93b109bf464088afaee81f543219ed94621fdd61ce6a9ce6daf4a122",
+      "selected_epoch": 20,
+      "completed_epochs": 30,
+      "successful_probe_updates": 1200,
+      "budget": {
+        "epochs": 30,
+        "batch_size": 256,
+        "lr": 0.01,
+        "weight_decay": 0.0001,
+        "standardize": true,
+        "num_classes": 101,
+        "seed": 4404,
+        "order_seed": 4405,
+        "selection": "best_dev_top1_then_earliest",
+        "device": "cpu"
+      },
+      "initialization_hash": "a27e33bc39bfe637b99ed355df08919a8b66df9c43c2203af643b8c136be383c",
+      "encoder_unchanged": true,
+      "encoder_verification": "state_hash_before_after",
+      "train_examples": 10100,
+      "train_classes": 101,
+      "initialization_control": false,
+      "standardization_fit_scope": "probe_train_only",
+      "resumed": false,
+      "metrics": {
+        "loss": 4.241839408874512,
+        "top1": 0.10346534848213196,
+        "top5": 0.27079206705093384,
+        "examples": 2020,
+        "evaluated_classes": 101
+      },
+      "selected_probe_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/vit_trained/selected_probe.pt",
+      "predictions_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/vit_trained/development_predictions.csv",
+      "resume_manifest": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/vit_trained/probe_manifest.json"
+    },
+    "fmm_untrained": {
+      "model_id": "fmm_untrained",
+      "seed": 4404,
+      "phase": "linear_probe",
+      "split": "development",
+      "checkpoint_hash": "7009ac13c52229eeeb26716329a55b7baa6c0006f108a3dfcb2f9d3ac6e4dc28",
+      "probe_hash": "f55133e9b9296b6eda2df0a4216c4875fe9dbb364076b31f6471684caaf27886",
+      "selected_epoch": 26,
+      "completed_epochs": 30,
+      "successful_probe_updates": 1200,
+      "budget": {
+        "epochs": 30,
+        "batch_size": 256,
+        "lr": 0.01,
+        "weight_decay": 0.0001,
+        "standardize": true,
+        "num_classes": 101,
+        "seed": 4404,
+        "order_seed": 4405,
+        "selection": "best_dev_top1_then_earliest",
+        "device": "cpu"
+      },
+      "initialization_hash": "a27e33bc39bfe637b99ed355df08919a8b66df9c43c2203af643b8c136be383c",
+      "encoder_unchanged": true,
+      "encoder_verification": "state_hash_before_after",
+      "train_examples": 10100,
+      "train_classes": 101,
+      "initialization_control": true,
+      "standardization_fit_scope": "probe_train_only",
+      "resumed": false,
+      "metrics": {
+        "loss": 4.488999366760254,
+        "top1": 0.058415841311216354,
+        "top5": 0.17376238107681274,
+        "examples": 2020,
+        "evaluated_classes": 101
+      },
+      "selected_probe_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/fmm_untrained/selected_probe.pt",
+      "predictions_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/fmm_untrained/development_predictions.csv",
+      "resume_manifest": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/fmm_untrained/probe_manifest.json"
+    },
+    "fmm_trained": {
+      "model_id": "fmm_trained",
+      "seed": 4404,
+      "phase": "linear_probe",
+      "split": "development",
+      "checkpoint_hash": "cbfe337e0efd79f91f0c98581dfa3e95c4ff8b06e287cba62168f448f7e3e595",
+      "probe_hash": "2201f52d7ed93ecd58f376cf48adfdc517d786a931e083b5ad6235f5629fa0a1",
+      "selected_epoch": 25,
+      "completed_epochs": 30,
+      "successful_probe_updates": 1200,
+      "budget": {
+        "epochs": 30,
+        "batch_size": 256,
+        "lr": 0.01,
+        "weight_decay": 0.0001,
+        "standardize": true,
+        "num_classes": 101,
+        "seed": 4404,
+        "order_seed": 4405,
+        "selection": "best_dev_top1_then_earliest",
+        "device": "cpu"
+      },
+      "initialization_hash": "a27e33bc39bfe637b99ed355df08919a8b66df9c43c2203af643b8c136be383c",
+      "encoder_unchanged": true,
+      "encoder_verification": "state_hash_before_after",
+      "train_examples": 10100,
+      "train_classes": 101,
+      "initialization_control": false,
+      "standardization_fit_scope": "probe_train_only",
+      "resumed": false,
+      "metrics": {
+        "loss": 4.2821245193481445,
+        "top1": 0.09356435388326645,
+        "top5": 0.25445544719696045,
+        "examples": 2020,
+        "evaluated_classes": 101
+      },
+      "selected_probe_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/fmm_trained/selected_probe.pt",
+      "predictions_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/fmm_trained/development_predictions.csv",
+      "resume_manifest": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/food101-pilot-001/probes/fmm_trained/probe_manifest.json"
+    }
+  },
+  "deltas": {
+    "delta_vit": {
+      "correct_top1": {
+        "delta_percentage_points": 4.306930693069306,
+        "ci95_percentage_points": [
+          2.722772277227723,
+          5.743811881188118
+        ],
+        "examples": 2020,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top1",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      },
+      "correct_top5": {
+        "delta_percentage_points": 10.247524752475247,
+        "ci95_percentage_points": [
+          8.167079207920793,
+          12.377475247524751
+        ],
+        "examples": 2020,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top5",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      }
+    },
+    "delta_fmm": {
+      "correct_top1": {
+        "delta_percentage_points": 3.5148514851485153,
+        "ci95_percentage_points": [
+          2.178217821782178,
+          4.851485148514851
+        ],
+        "examples": 2020,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top1",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      },
+      "correct_top5": {
+        "delta_percentage_points": 8.06930693069307,
+        "ci95_percentage_points": [
+          6.138613861386139,
+          10.247524752475247
+        ],
+        "examples": 2020,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top5",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      }
+    },
+    "delta_architecture": {
+      "correct_top1": {
+        "delta_percentage_points": -0.9900990099009901,
+        "ci95_percentage_points": [
+          -2.4752475247524752,
+          0.5445544554455445
+        ],
+        "examples": 2020,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top1",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      },
+      "correct_top5": {
+        "delta_percentage_points": -1.6336633663366338,
+        "ci95_percentage_points": [
+          -3.663366336633663,
+          0.49504950495049505
+        ],
+        "examples": 2020,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top5",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      }
+    }
+  },
+  "learning_evidence": "positive",
+  "ready_for_next_stage": false,
+  "training_seeds": 1,
+  "heldout_status": "NOT_RUN",
+  "interpretation": "One-seed pilot. Interpret trained-minus-initial deltas with budget and collapse evidence; no robust architectural conclusion.",
+  "chance_reference_top1": 0.009900990099009901,
+  "chance_role": "sanity reference only; initialization controls are the learning baseline",
+  "completed_budgets": true,
+  "completed_probes": true,
+  "registered_degeneracy_flags": false,
+  "next_stage_requires_research_decision": true
+}

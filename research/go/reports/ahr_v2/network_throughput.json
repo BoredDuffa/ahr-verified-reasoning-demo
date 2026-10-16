@@ -1,0 +1,41 @@
+{
+  "batch_size": 32,
+  "config": {
+    "blocks": 4,
+    "board_size": 9,
+    "rule_profile": "area_no_suicide_psk_v1",
+    "scout_temperature": 1.0,
+    "width": 64,
+    "worker_temperature": 1.0
+  },
+  "device": "cuda:1",
+  "durable_training": false,
+  "fresh_weights": true,
+  "gpu_name": "NVIDIA A100-SXM4-80GB",
+  "measurements": {
+    "complete_evaluation_api": {
+      "batches": 9,
+      "elapsed_seconds": 0.5403150569982245,
+      "positions": 288,
+      "positions_per_second": 533.022347368984
+    },
+    "joint_loss_backward": {
+      "batches": 5,
+      "elapsed_seconds": 0.5442782669997541,
+      "positions": 160,
+      "positions_per_second": 293.967276852655
+    },
+    "native_forward": {
+      "batches": 572,
+      "elapsed_seconds": 1.00093160400138,
+      "positions": 18304,
+      "positions_per_second": 18286.963791358878
+    }
+  },
+  "optimizer_steps": 0,
+  "parameter_count": 325191,
+  "schema": "ahr-go-v2-fresh-network-throughput",
+  "scope": "Short native-shape throughput only. No game-strength or long-run estimate.",
+  "source_sha256": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+  "status": "PASS"
+}

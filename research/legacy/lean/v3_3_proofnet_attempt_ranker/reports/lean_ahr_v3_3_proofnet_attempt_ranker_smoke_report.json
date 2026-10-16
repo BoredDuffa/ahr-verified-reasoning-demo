@@ -1,0 +1,188 @@
+{
+  "acceptance": {
+    "test_row_top1_positive_ge_0_80": true,
+    "val_row_top1_positive_ge_0_80": true
+  },
+  "best_epoch": 1,
+  "clinical_use": "forbidden",
+  "dataset": "datasets/lean_ahr_v3_3_proofnet_attempt_ranker_records.jsonl",
+  "device": "cuda",
+  "elapsed_s": 7.504,
+  "history_tail": [
+    {
+      "elapsed_s": 0.989,
+      "epoch": 1,
+      "loss": 7.677543506509786,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 1.713,
+      "epoch": 2,
+      "loss": 6.652086201670599,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 0.3333333333333333,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 2.435,
+      "epoch": 3,
+      "loss": 4.431738624178906,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 3.148,
+      "epoch": 4,
+      "loss": 4.342598683989241,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 3.876,
+      "epoch": 5,
+      "loss": 1.8187779544702949,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 4.599,
+      "epoch": 6,
+      "loss": 1.8907845265854968,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 5.327,
+      "epoch": 7,
+      "loss": 1.5751951946409908,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 6.045,
+      "epoch": 8,
+      "loss": 1.6212097018370597,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 6.767,
+      "epoch": 9,
+      "loss": 1.5711792995451825,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    },
+    {
+      "elapsed_s": 7.497,
+      "epoch": 10,
+      "loss": 1.452857343577347,
+      "test_f1": 0.0,
+      "test_row_top1": 1.0,
+      "train_row_top1": 1.0,
+      "val_f1": 0.0,
+      "val_row_top1": 1.0
+    }
+  ],
+  "label_counts": {
+    "0": 572,
+    "1": 11
+  },
+  "metrics": {
+    "test": {
+      "accuracy": 0.9793103448275862,
+      "count": 145,
+      "f1": 0.0,
+      "fn": 3,
+      "fp": 0,
+      "positive_count": 3,
+      "precision": 0.0,
+      "ranked_failures": [],
+      "recall": 0.0,
+      "row_mrr": 1.0,
+      "row_top1_positive_rate": 1.0,
+      "rows_with_positive": 1,
+      "tn": 142,
+      "tp": 0
+    },
+    "train": {
+      "accuracy": 0.9852507374631269,
+      "count": 339,
+      "f1": 0.0,
+      "fn": 5,
+      "fp": 0,
+      "positive_count": 5,
+      "precision": 0.0,
+      "ranked_failures": [],
+      "recall": 0.0,
+      "row_mrr": 1.0,
+      "row_top1_positive_rate": 1.0,
+      "rows_with_positive": 3,
+      "tn": 334,
+      "tp": 0
+    },
+    "val": {
+      "accuracy": 0.9696969696969697,
+      "count": 99,
+      "f1": 0.0,
+      "fn": 3,
+      "fp": 0,
+      "positive_count": 3,
+      "precision": 0.0,
+      "ranked_failures": [],
+      "recall": 0.0,
+      "row_mrr": 1.0,
+      "row_top1_positive_rate": 1.0,
+      "rows_with_positive": 1,
+      "tn": 96,
+      "tp": 0
+    }
+  },
+  "model": {
+    "hidden_dim": 128,
+    "type": "proofnet_attempt_bag_of_tokens_mlp"
+  },
+  "run_name": "lean_ahr_v3_3_proofnet_attempt_ranker_smoke",
+  "schema": "ahr_lean_v3_3_proofnet_attempt_ranker_report",
+  "seed": 20260615,
+  "split_counts": {
+    "test": 145,
+    "train": 339,
+    "val": 99
+  },
+  "torch_version": "2.5.1+cu121",
+  "train_config": {
+    "epochs": 10,
+    "lr": 0.002,
+    "min_count": 1,
+    "pos_weight": 66.80000305175781,
+    "weight_decay": 0.0001
+  },
+  "vocab_size": 1804
+}

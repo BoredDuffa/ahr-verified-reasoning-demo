@@ -1,0 +1,642 @@
+{
+  "config": {
+    "stages": [
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "0"
+        },
+        "name": "baseline_diagnostics-A-s00",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "1"
+        },
+        "name": "train-B-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "2"
+        },
+        "name": "train-C-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "3"
+        },
+        "name": "compare-C_vs_B-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "4"
+        },
+        "name": "compare-B_vs_A-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "5"
+        },
+        "name": "compare-C_vs_A-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "6"
+        },
+        "name": "compare-B_vs_GNU-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "7"
+        },
+        "name": "compare-C_vs_GNU-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "8"
+        },
+        "name": "diagnostics-B-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "9"
+        },
+        "name": "diagnostics-C-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "10"
+        },
+        "name": "train-B-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "11"
+        },
+        "name": "train-C-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "12"
+        },
+        "name": "compare-C_vs_B-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "13"
+        },
+        "name": "compare-B_vs_A-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "14"
+        },
+        "name": "compare-C_vs_A-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "15"
+        },
+        "name": "compare-B_vs_GNU-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "16"
+        },
+        "name": "compare-C_vs_GNU-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "17"
+        },
+        "name": "diagnostics-B-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "18"
+        },
+        "name": "diagnostics-C-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "19"
+        },
+        "name": "train-B-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "20"
+        },
+        "name": "train-C-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "21"
+        },
+        "name": "compare-C_vs_B-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "22"
+        },
+        "name": "compare-B_vs_A-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "23"
+        },
+        "name": "compare-C_vs_A-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "24"
+        },
+        "name": "compare-B_vs_GNU-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "25"
+        },
+        "name": "compare-C_vs_GNU-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "26"
+        },
+        "name": "diagnostics-B-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "27"
+        },
+        "name": "diagnostics-C-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "28"
+        },
+        "name": "family--s00",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "29"
+        },
+        "name": "guided_comparison-C-s01",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "30"
+        },
+        "name": "guided_comparison-C-s02",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "31"
+        },
+        "name": "guided_comparison-C-s03",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "32"
+        },
+        "name": "bundle--s00",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRV3_STAGE_INDEX": "33"
+        },
+        "name": "report--s00",
+        "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+        "require": "process_success"
+      }
+    ]
+  },
+  "controller_pid": 39646,
+  "current": null,
+  "global_step": 8679,
+  "identity": "efbe5eaba3c620aa578a5dd7d1753559bf4bae4aba9bebc7af2213925036fb32",
+  "metrics": {
+    "completed_stages": 34
+  },
+  "run_id": "pipeline-ahr-jepa-v3",
+  "sampler": {
+    "stage_index": 34
+  },
+  "schema": "ahr_pipeline_v1",
+  "scientific_state": "Stored in the child run manifests; this controller performs no training itself",
+  "source_identity": {
+    "controller": "f93f85ae6316b493833eaee3b4947f6b7616202478f3d0afabaa23bf973aaa3b",
+    "stage_sources": {
+      "experiments/ahr_jepa_v3/run_stage.ipynb": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81"
+    }
+  },
+  "stage_index": 34,
+  "stage_records": [
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-baseline_diagnostics-A-s00.log",
+      "name": "baseline_diagnostics-A-s00",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 364864,
+      "process_token": "35012879",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-train-B-s01.log",
+      "name": "train-B-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 365057,
+      "process_token": "35016507",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-train-C-s01.log",
+      "name": "train-C-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 382512,
+      "process_token": "36572430",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_B-s01.log",
+      "name": "compare-C_vs_B-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 39747,
+      "process_token": "7279578",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-B_vs_A-s01.log",
+      "name": "compare-B_vs_A-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 65950,
+      "process_token": "11306795",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_A-s01.log",
+      "name": "compare-C_vs_A-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 67513,
+      "process_token": "11745524",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-B_vs_GNU-s01.log",
+      "name": "compare-B_vs_GNU-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 71037,
+      "process_token": "12203838",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_GNU-s01.log",
+      "name": "compare-C_vs_GNU-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 72628,
+      "process_token": "12321645",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-diagnostics-B-s01.log",
+      "name": "diagnostics-B-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 74136,
+      "process_token": "12432389",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-diagnostics-C-s01.log",
+      "name": "diagnostics-C-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 74231,
+      "process_token": "12444078",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-train-B-s02.log",
+      "name": "train-B-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 74309,
+      "process_token": "12455802",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-train-C-s02.log",
+      "name": "train-C-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 81317,
+      "process_token": "14013233",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_B-s02.log",
+      "name": "compare-C_vs_B-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 87248,
+      "process_token": "15571062",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-B_vs_A-s02.log",
+      "name": "compare-B_vs_A-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 114831,
+      "process_token": "19940402",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_A-s02.log",
+      "name": "compare-C_vs_A-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 116505,
+      "process_token": "20374610",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-B_vs_GNU-s02.log",
+      "name": "compare-B_vs_GNU-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 118123,
+      "process_token": "20771025",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_GNU-s02.log",
+      "name": "compare-C_vs_GNU-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 119625,
+      "process_token": "20888734",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-diagnostics-B-s02.log",
+      "name": "diagnostics-B-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 121018,
+      "process_token": "21000350",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-diagnostics-C-s02.log",
+      "name": "diagnostics-C-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 121146,
+      "process_token": "21012123",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-train-B-s03.log",
+      "name": "train-B-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 121224,
+      "process_token": "21024058",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-train-C-s03.log",
+      "name": "train-C-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 126272,
+      "process_token": "22428490",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_B-s03.log",
+      "name": "compare-C_vs_B-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 134813,
+      "process_token": "23876294",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-B_vs_A-s03.log",
+      "name": "compare-B_vs_A-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 169925,
+      "process_token": "28479827",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_A-s03.log",
+      "name": "compare-C_vs_A-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 171791,
+      "process_token": "28910975",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-B_vs_GNU-s03.log",
+      "name": "compare-B_vs_GNU-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 173843,
+      "process_token": "29394865",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-compare-C_vs_GNU-s03.log",
+      "name": "compare-C_vs_GNU-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 175357,
+      "process_token": "29510590",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-diagnostics-B-s03.log",
+      "name": "diagnostics-B-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 176951,
+      "process_token": "29623521",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-diagnostics-C-s03.log",
+      "name": "diagnostics-C-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 177032,
+      "process_token": "29635331",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-family--s00.log",
+      "name": "family--s00",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 177161,
+      "process_token": "29647146",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-guided_comparison-C-s01.log",
+      "name": "guided_comparison-C-s01",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 177207,
+      "process_token": "29648525",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-guided_comparison-C-s02.log",
+      "name": "guided_comparison-C-s02",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 177254,
+      "process_token": "29649648",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-guided_comparison-C-s03.log",
+      "name": "guided_comparison-C-s03",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 177306,
+      "process_token": "29650765",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-bundle--s00.log",
+      "name": "bundle--s00",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 177353,
+      "process_token": "29651888",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-ahr-jepa-v3-report--s00.log",
+      "name": "report--s00",
+      "notebook": "experiments/ahr_jepa_v3/run_stage.ipynb",
+      "pid": 177485,
+      "process_token": "29667883",
+      "returncode": 0,
+      "source_sha256": "bd56a80fa67b2fd8d6d71882d6b1415a0a9aff6d88bb79c111673414c1dbcb81",
+      "status": "COMPLETE"
+    }
+  ],
+  "status": "COMPLETE",
+  "updated_at_utc": "2026-10-01T00:46:43.540430+00:00"
+}

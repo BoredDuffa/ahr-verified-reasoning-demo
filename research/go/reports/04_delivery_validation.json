@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "implementation": "unified-theory-continuous-v2",
+  "notebook": "notebooks/04_native_ahr_architecture.ipynb",
+  "notebook_sha256": "c7e2f25927d1edf3ce0df3670e91eb29fef06b99f62b5040c900144ea50f977a",
+  "source_sha256": "c722ae51bf8c5d281f64d06b736a89c786156fb6513047f6188291914a4ab894",
+  "theory": {
+    "file": "AHR_Unified_Theory (1).pdf",
+    "mapped_sections": [
+      "4.1-4.4",
+      "5",
+      "6",
+      "7",
+      "8.1-8.2",
+      "15",
+      "23"
+    ],
+    "sha256": "4bfd9345e48f2cc5559295ebb5d43a31878feee57eecec118f53fd21e7c14554"
+  },
+  "executed_code_cells": 14,
+  "export_cells": 7,
+  "run_all": {
+    "method": "fresh ahr-go kernel through jupyter nbconvert --execute",
+    "phase": "all",
+    "status": "PASS",
+    "log": "logs/04_theory_run_all.log"
+  },
+  "fresh_kernel_resume": {
+    "checkpoint_micro_step": 1,
+    "continuation_micro_steps": 7,
+    "exact_resume": true,
+    "manifest": "/home/benjamin/workspace/ahr_go/checkpoints/architecture-04-theory-c722ae51bf8c/manifest.json",
+    "metrics": {
+      "exact_resume": true,
+      "optimizer_steps": 0,
+      "recurrent_iteration": 1,
+      "recurrent_micro_step": 8,
+      "stage": "complete"
+    },
+    "optimizer_steps": 0,
+    "reference_parameter_digest": "75039b113d2589b536fba229e191fe71c001f275b99cea2a4351538010ea29bd",
+    "resume_cell": "04: Architecture checkpoint validation \u2014 Run All (AHR04_PHASE=resume)",
+    "resumed_from_stage": 2,
+    "retained_stages": [
+      1,
+      2,
+      3
+    ],
+    "run_id": "architecture-04-theory-c722ae51bf8c",
+    "validation_stage": 3
+  },
+  "checkpoint_hashes_rechecked": 3,
+  "optimizer_steps": 0,
+  "datasets_opened": [],
+  "presentation": {
+    "html_preview": "reports/04_architecture_preview.html",
+    "saved_outputs_inspected": true,
+    "html_structure_inspected": true,
+    "graphical_browser_review": "Not performed: no graphical viewer installed. Open reports/04_architecture_preview.html in a browser to inspect rendered layout."
+  },
+  "scope": "Notebook04 rewrite and validation only; no training or Go engine implementation; prototype archived under reports/archive."
+}

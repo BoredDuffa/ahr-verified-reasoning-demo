@@ -1,0 +1,68 @@
+{
+  "schema": "fmm-jepa-references/v1",
+  "accessed_utc_date": "2026-09-23",
+  "sources": [
+    {
+      "id": "ijepa_paper",
+      "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+      "version": "arXiv:2301.08243v3",
+      "version_date": "2023-04-13",
+      "url": "https://arxiv.org/html/2301.08243v3",
+      "status": "accessed",
+      "relevant_sections": ["3 Method", "A Implementation Details"],
+      "decision": "Paper writes squared L2; use official implementation SmoothL1 and document the difference."
+    },
+    {
+      "id": "ijepa_official",
+      "repository": "https://github.com/facebookresearch/ijepa",
+      "commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048",
+      "commit_resolution": "git ls-remote origin refs/heads/main; source contents read through commit-pinned raw URLs",
+      "status": "accessed",
+      "source_files": [
+        "https://raw.githubusercontent.com/facebookresearch/ijepa/52c1ae95d05f743e000e8f10a1f3a79b10cff048/src/train.py",
+        "https://raw.githubusercontent.com/facebookresearch/ijepa/52c1ae95d05f743e000e8f10a1f3a79b10cff048/src/masks/multiblock.py",
+        "https://raw.githubusercontent.com/facebookresearch/ijepa/52c1ae95d05f743e000e8f10a1f3a79b10cff048/src/models/vision_transformer.py"
+      ],
+      "verified_behavior": "Full-image target encoding, feature LayerNorm, target masking, default SmoothL1 mean; copied frozen target; parameter EMA after optimizer; predictor mask-plus-position tokens."
+    },
+    {
+      "id": "fong_darve_2009",
+      "title": "The black-box fast multipole method",
+      "version": "Journal of Computational Physics 228(23), 8712-8725 (2009)",
+      "doi": "10.1016/j.jcp.2009.08.031",
+      "url": "https://mc.stanford.edu/cgi-bin/images/f/fa/Darve_bbfmm_2009.pdf",
+      "status": "accessed",
+      "relevant_sections": ["Chebyshev interpolation", "multilevel algorithm", "SVD compression (not implemented)"]
+    },
+    {
+      "id": "ying_biros_zorin_2004",
+      "title": "A kernel-independent adaptive fast multipole algorithm in two and three dimensions",
+      "version": "Journal of Computational Physics 196(2), 591-626 (2004)",
+      "doi": "10.1016/j.jcp.2003.11.021",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0021999103006090",
+      "author_pdf_url": "https://web.stanford.edu/~lexing/fmm.pdf",
+      "status": "publisher abstract and author-hosted PDF indexed excerpt accessed; direct PDF open unavailable",
+      "scope": "Equivalent-surface-density construction checked for distinction from Chebyshev construction; not a full derivation audit."
+    },
+    {
+      "id": "fmmformer",
+      "title": "FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention",
+      "version": "NeurIPS 2021; arXiv:2108.02347v1",
+      "url": "https://arxiv.org/abs/2108.02347v1",
+      "proceedings_pdf": "https://papers.nips.cc/paper_files/paper/2021/file/f621585df244e9596dc70a39b579efb1-Paper.pdf",
+      "status": "accessed",
+      "scope": "Banded near-field plus low-rank far-field prior art; no reproduction of results."
+    },
+    {
+      "id": "fast_multipole_attention",
+      "title": "Fast Multipole Attention: A Scalable Multilevel Attention Mechanism for Text and Images",
+      "version": "arXiv:2310.11960v4",
+      "version_date": "2025-09-18",
+      "url": "https://arxiv.org/html/2310.11960v4",
+      "status": "accessed",
+      "relevant_sections": ["3 Fast Multipole Attention"],
+      "scope": "Learned hierarchical summaries, 2-D variant, and query-downsampled linear variant; not this project's operator or cost certificate."
+    }
+  ],
+  "not_established": ["FMM-JEPA novelty", "FMM-JEPA learned representation quality", "reproduction of referenced experiments"]
+}

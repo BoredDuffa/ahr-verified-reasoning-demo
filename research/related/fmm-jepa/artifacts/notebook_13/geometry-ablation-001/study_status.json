@@ -1,0 +1,27 @@
+{
+  "stage": "complete",
+  "status": "COMPLETED",
+  "updated_unix": 1791420094.2056243,
+  "elapsed_seconds": 32532.799399614334,
+  "updates": 600,
+  "seeds": [
+    20261501,
+    20261502,
+    20261503,
+    20261504,
+    20261505,
+    20261506,
+    20261507,
+    20261508
+  ],
+  "variants": [
+    "vit",
+    "learned_kernel",
+    "normalized_kernel",
+    "product_kernel",
+    "sphere_kernel",
+    "multi_view_kernel"
+  ],
+  "heldout_status": "NOT_RUN",
+  "results": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_13/geometry-ablation-001/stages/learning/stage_results.md"
+}

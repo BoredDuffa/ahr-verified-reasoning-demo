@@ -1,0 +1,297 @@
+{
+  "checks": {
+    "bounded_proofs_do_not_replace_global_value": true,
+    "clock_cutoff_is_UNKNOWN": true,
+    "closed_corner_bounded_result": true,
+    "closed_corner_history_replays": true,
+    "closed_corner_shallow_no_false_capture": true,
+    "cpu_corrupt_search_refuses_restart": true,
+    "cpu_fresh_kernel_search_exact_resume": true,
+    "cpu_pending_reader_and_inference_saved": true,
+    "cuda:1_corrupt_search_refuses_restart": true,
+    "cuda:1_fresh_kernel_search_exact_resume": true,
+    "cuda:1_pending_reader_and_inference_saved": true,
+    "forced_counts_are_separate": true,
+    "independent_all_legal_three_ply_strategy": true,
+    "ladder_bounded_result": true,
+    "ladder_history_replays": true,
+    "ladder_shallow_no_false_capture": true,
+    "node_cutoff_is_UNKNOWN": true,
+    "old_six_stone_loss_verified_within_bound": true,
+    "policy_counts_exclude_forced_verification": true,
+    "policy_target_normalizes_support": true,
+    "production_all_legal_actions_retained": true,
+    "production_contains_multimove_capture_fact": true,
+    "reader_stack_exact_resume": true,
+    "safe_center_bounded_result": true,
+    "safe_center_history_replays": true,
+    "safe_center_shallow_no_false_capture": true,
+    "shared_reader_budget_retained": true
+  },
+  "claim": "Bounded capture, live integration, honest targets and exact recovery validated; no playing-strength claim.",
+  "fixtures": [
+    {
+      "depth": 3,
+      "elapsed_seconds": 0.01328840499627404,
+      "name": "closed_corner",
+      "nodes": 20,
+      "principal_variation": [
+        5,
+        3,
+        6
+      ],
+      "status": "PROVED_CAPTURE_WITHIN_BOUND"
+    },
+    {
+      "depth": 5,
+      "elapsed_seconds": 0.07685871500871144,
+      "name": "ladder",
+      "nodes": 29,
+      "principal_variation": [
+        18,
+        22,
+        21,
+        23,
+        24
+      ],
+      "status": "PROVED_CAPTURE_WITHIN_BOUND"
+    },
+    {
+      "depth": 3,
+      "elapsed_seconds": 0.0924469500023406,
+      "name": "safe_center",
+      "nodes": 49,
+      "principal_variation": [
+        7,
+        11,
+        6
+      ],
+      "status": "REFUTED_WITHIN_BOUND"
+    }
+  ],
+  "old_failure": {
+    "before_ply": 21,
+    "bounded_result": "PROVED_CAPTURE_WITHIN_BOUND",
+    "limitation": "The six-ply horizon does not certify the earlier sixteen-ply trap; stronger learned priors/value and deeper selective reading still matter.",
+    "nodes": 63,
+    "target_stones": 6
+  },
+  "recovery": [
+    {
+      "checkpoint": "step-000000004-9910e488.pt",
+      "device": "cpu",
+      "fixture": "reports/ahr_v2/fixtures/worker-reading-resume-bde63ff9e9.ipynb",
+      "run_dir": "checkpoints/ahr-v2-reader-validation-bde63ff9e9",
+      "sha256": "41cefc05d027077e1528f0acbc9e172976e9bf200b28cf19abdc2c1439548aa7"
+    },
+    {
+      "checkpoint": "step-000000004-b13ca2eb.pt",
+      "device": "cuda:1",
+      "fixture": "reports/ahr_v2/fixtures/worker-reading-resume-5c64dcd8cd.ipynb",
+      "run_dir": "checkpoints/ahr-v2-reader-validation-5c64dcd8cd",
+      "sha256": "de9dd9b6f56b269e2806c5e8499271b9771179b503fa4957d134adcbd565e69f"
+    }
+  ],
+  "runtime_seconds": 15.63445385999512,
+  "schema": "ahr-v2-worker-reading-validation-v1",
+  "search": {
+    "policy_support_simulations": 122,
+    "reading_facts": [
+      {
+        "action": null,
+        "all_legal_replies": true,
+        "attacker": 1,
+        "depth": 6,
+        "full_game_optimality": false,
+        "goal": "capture specified original stones within the stated number of plies",
+        "key": "ab5210e01f29cd125a0af7dbbb4a7ce9b1ca567ce36e60f734a396172c20b1f8",
+        "node_budget": 64,
+        "node_id": 0,
+        "nodes": 29,
+        "principal_variation": [
+          18,
+          22,
+          21,
+          23,
+          24
+        ],
+        "schema": "ahr-v2-bounded-reader-v1",
+        "scope": "attack",
+        "status": "PROVED_CAPTURE_WITHIN_BOUND",
+        "target_points": [
+          6,
+          11,
+          12,
+          17
+        ],
+        "transitions": 53
+      },
+      {
+        "action": 22,
+        "all_legal_replies": true,
+        "attacker": -1,
+        "cutoff": "node_budget",
+        "depth": 6,
+        "full_game_optimality": false,
+        "goal": "capture specified original stones within the stated number of plies",
+        "key": "811c686f0f913c6a94657d188974506026f8e5aea75ceb722668b788c9002c53",
+        "node_budget": 64,
+        "node_id": 0,
+        "nodes": 64,
+        "principal_variation": [],
+        "schema": "ahr-v2-bounded-reader-v1",
+        "scope": "candidate_group_risk",
+        "status": "UNKNOWN",
+        "target_points": [
+          5,
+          10
+        ],
+        "transitions": 117
+      },
+      {
+        "action": null,
+        "all_legal_replies": true,
+        "attacker": -1,
+        "cutoff": "node_budget",
+        "depth": 6,
+        "full_game_optimality": false,
+        "goal": "capture specified original stones within the stated number of plies",
+        "key": "c02cb3cb10e0236228a452eb87e3a110684ac78de2f6a12fbf044a6bfea17825",
+        "node_budget": 64,
+        "node_id": 1,
+        "nodes": 64,
+        "principal_variation": [],
+        "schema": "ahr-v2-bounded-reader-v1",
+        "scope": "attack",
+        "status": "UNKNOWN",
+        "target_points": [
+          5,
+          10
+        ],
+        "transitions": 117
+      },
+      {
+        "action": 21,
+        "all_legal_replies": true,
+        "attacker": 1,
+        "depth": 6,
+        "full_game_optimality": false,
+        "goal": "capture specified original stones within the stated number of plies",
+        "key": "5e9133627ad6d3a195ea3452792f2a8ccda96a3925c3cff0e6f93a3dc9954512",
+        "node_budget": 64,
+        "node_id": 1,
+        "nodes": 1,
+        "principal_variation": [
+          18
+        ],
+        "schema": "ahr-v2-bounded-reader-v1",
+        "scope": "candidate_group_risk",
+        "status": "PROVED_CAPTURE_WITHIN_BOUND",
+        "target_points": [
+          6,
+          11,
+          12,
+          17
+        ],
+        "transitions": 1
+      }
+    ],
+    "reading_nodes": 158,
+    "root_counts": [
+      1,
+      0,
+      4,
+      9,
+      5,
+      0,
+      0,
+      0,
+      4,
+      8,
+      0,
+      0,
+      0,
+      0,
+      11,
+      1,
+      0,
+      0,
+      44,
+      6,
+      4,
+      7,
+      9,
+      9,
+      5,
+      1
+    ],
+    "selected_action": 18,
+    "simulations": 128,
+    "support_counts": [
+      1,
+      0,
+      4,
+      9,
+      5,
+      0,
+      0,
+      0,
+      4,
+      8,
+      0,
+      0,
+      0,
+      0,
+      11,
+      1,
+      0,
+      0,
+      39,
+      6,
+      4,
+      7,
+      8,
+      9,
+      5,
+      1
+    ],
+    "verification_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "verification_simulations": 6
+  },
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa"
+  },
+  "status": "PASS"
+}

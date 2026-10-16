@@ -1,0 +1,47 @@
+{
+  "all_14_notebooks_implemented": true,
+  "checked_at_utc": "2026-09-24T13:56:35.375602+00:00",
+  "evaluation": {
+    "candidate_draws": 0,
+    "candidate_losses": 0,
+    "candidate_wins": 64,
+    "completed_games": 64,
+    "completed_paired_blocks": 32,
+    "deadline_misses": 0,
+    "illegal_proposals": 0,
+    "promotion_recommended": false
+  },
+  "evaluation_audit": "reports/11_independent_results_audit.json",
+  "evaluation_audit_sha256": "99cac30946205a9c1a06ee67ce3ca4b47b8963de1ea8f51df0efcb4f61d55826",
+  "export_repair": "reports/13_export_repair_validation.json",
+  "final_progress_chart_visual_review": "PASS",
+  "full_browser_layout_review": "NOT_PERFORMED",
+  "general_playing_strength": "NOT_ESTABLISHED",
+  "local_archive": "exports/bundles/go09-first-selfplay-v1-54c35167b33c.tar.gz",
+  "local_archive_sha256": "511c41b54f4173036abe12f83e2e977043a128efe5776acfd0e89653b7c5f48f",
+  "off_instance_backup": "PENDING_DESTINATION",
+  "restored_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+  "restored_inference": "PASS",
+  "source_notebooks_00_12_unchanged": [
+    "notebooks/00_instance_setup_and_recovery.ipynb",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb",
+    "notebooks/03_curricula_datasets_and_splits.ipynb",
+    "notebooks/04_native_ahr_architecture.ipynb",
+    "notebooks/05_csp_qcsp_pretraining.ipynb",
+    "notebooks/06_ahr_go_search_engine.ipynb",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb",
+    "notebooks/08_go_specific_adaptation.ipynb",
+    "notebooks/09_selfplay_and_improvement.ipynb",
+    "notebooks/10_gtp_engine_interface.ipynb",
+    "notebooks/11_engine_arena_and_evaluation.ipynb",
+    "notebooks/12_play_and_watch.ipynb"
+  ],
+  "status": "COMPLETE_LOCAL_PIPELINE",
+  "training": {
+    "completed_games": 63,
+    "games_finished": 64,
+    "optimizer_steps": 512,
+    "unknown_games": 1
+  }
+}

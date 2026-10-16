@@ -1,0 +1,21 @@
+{
+  "config": {
+    "deposit_scale": 0.1,
+    "dropout": 0.1,
+    "evaporation": 0.2,
+    "hidden_dim": 32,
+    "input_dim": 16,
+    "iterations": 2,
+    "max_iterations": 8,
+    "max_tokens": 256,
+    "pheromone_max": 2.0,
+    "pheromone_min": -2.0,
+    "pheromone_strength": 1.0,
+    "scout_steps": 3,
+    "worker_steps": 2
+  },
+  "implementation": "unified-theory-continuous-v2",
+  "source_sha256": "c722ae51bf8c5d281f64d06b736a89c786156fb6513047f6188291914a4ab894",
+  "theory_sha256": "4bfd9345e48f2cc5559295ebb5d43a31878feee57eecec118f53fd21e7c14554",
+  "training_authorized": false
+}

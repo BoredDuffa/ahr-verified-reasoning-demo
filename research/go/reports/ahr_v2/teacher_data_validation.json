@@ -1,0 +1,47 @@
+{
+  "checks": [
+    "immutable_full_source_checksums",
+    "source_npz_checksums_and_schema",
+    "whole_history_no_suicide_psk_replay",
+    "official_family_split_before_sampling",
+    "balanced_accepted_opponent_quotas",
+    "typed_external_teacher_targets",
+    "masked_unavailable_or_incompatible_auxiliary_targets",
+    "fresh_process_exact_producer_resume_all_fields",
+    "unsafe_cache_paths_refused",
+    "configuration_or_source_mismatch_refused",
+    "prepared_payload_corruption_refused",
+    "all_eight_d4_full_history_feature_correspondence",
+    "actual_real_data_public_batch_shapes_and_masks"
+  ],
+  "completed_utc": "2026-10-08T11:50:35.022858+00:00",
+  "fresh_process_resume": {
+    "cache_id": "teacher-recovery-593637e2ef",
+    "exact_all_field_arrays": true,
+    "interrupted_commits": 1
+  },
+  "release_id": "6a26ffa743f3c7be95d783102f6b3596e0ce69893c5a8e28dcca154dc54f05f4",
+  "schema": "ahr_teacher_data_validation_v1",
+  "smoke_accepted_games": {
+    "dev": 8,
+    "train": 32
+  },
+  "smoke_cache_id": "go9x9-teacher-smoke-v1",
+  "smoke_counts": {
+    "dev": 256,
+    "train": 1024
+  },
+  "smoke_identity": "c27f4d0d4538328d142061ef4af54391f376a44fdc635df3c6d1115588bd453b",
+  "smoke_rejected": {
+    "illegal_under_our_rules": 22
+  },
+  "source_commit": "4f579b0a21c456f3bb568174d384056351124cd5",
+  "source_identity": {
+    "00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee"
+  },
+  "status": "PASSED",
+  "test_consumed": false
+}

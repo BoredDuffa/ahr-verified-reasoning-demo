@@ -1,0 +1,102 @@
+{
+  "bundle": {
+    "archive": "/home/benjamin/workspace/ahr_go/exports/bundles/go09-first-selfplay-v1-54c35167b33c.tar.gz",
+    "bundle_id": "go09-first-selfplay-v1-54c35167b33c",
+    "bytes": 27308946,
+    "checkpoint": {
+      "best_selection": "lowest_observed_training_loss_not_arena_strength",
+      "candidate_only": true,
+      "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+      "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+      "model_config": {
+        "board_size": 9,
+        "dropout": 0.1,
+        "hidden_dim": 64,
+        "queen_cycles": 2,
+        "scout_steps": 2,
+        "spatial_channels": 32,
+        "worker_steps": 2
+      },
+      "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+      "optimizer_step": 512,
+      "provenance": {
+        "best_selection": "lowest_observed_training_loss_not_arena_strength",
+        "candidate_only": true,
+        "purpose": "go_training",
+        "trained_on_go": true,
+        "training_route": "go_selfplay"
+      },
+      "purpose": "go_training",
+      "run_id": "go09-first-selfplay-v1",
+      "schema": "ahr_go_selfplay_v1",
+      "selection": "latest",
+      "source_hashes": {
+        "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+        "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+        "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+        "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+        "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+        "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+        "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+        "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+      },
+      "trained_on_go": true,
+      "training_route": "go_selfplay"
+    },
+    "file_count": 37,
+    "off_instance_backup": "PENDING",
+    "retained_checkpoints": 3,
+    "sha256": "511c41b54f4173036abe12f83e2e977043a128efe5776acfd0e89653b7c5f48f"
+  },
+  "created_utc": "2026-09-24T13:55:16.051022+00:00",
+  "existing_destination_rejected": true,
+  "graphical_review": "NOT_PERFORMED; inspect generated HTML in a browser",
+  "inference": {
+    "action": 79,
+    "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+    "device": "cpu",
+    "elapsed_s": 0.018836892006220296,
+    "fresh_process": true,
+    "latest_optimizer_step": 512,
+    "legal": true,
+    "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+    "selected_optimizer_step": 512,
+    "status": "PASS",
+    "strategic_status": "UNKNOWN"
+  },
+  "rejections": {
+    "checks": [
+      "missing_bundle_manifest",
+      "corrupt_bundle_manifest",
+      "corrupt_payload",
+      "missing_checkpoint_manifest",
+      "corrupt_checkpoint_manifest",
+      "wrong_archive_digest",
+      "parent_traversal",
+      "absolute_path",
+      "symlink",
+      "hardlink",
+      "duplicate_member",
+      "unexpected_member",
+      "size_limit"
+    ],
+    "count": 13,
+    "status": "PASS"
+  },
+  "restored": {
+    "files": 37,
+    "off_instance_backup": "PENDING",
+    "sha256": "511c41b54f4173036abe12f83e2e977043a128efe5776acfd0e89653b7c5f48f",
+    "status": "PASS",
+    "workspace": "/home/benjamin/workspace/ahr_go/exports/restored/go09-first-selfplay-v1-54c35167b33c"
+  },
+  "source_exports_sha256": "0cf9bcaffa37fb2039359925542fb70091f7f0fe7b24c14a89a363afa90e603f",
+  "status": "PASS",
+  "storage": {
+    "authorized_destination": null,
+    "instance_deletion_policy": "UNVERIFIED",
+    "mount": "/ /dev/sda1 ext4",
+    "off_instance_backup": "PENDING"
+  },
+  "training_launched": false
+}

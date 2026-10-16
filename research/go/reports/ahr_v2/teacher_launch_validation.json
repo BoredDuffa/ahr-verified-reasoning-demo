@@ -1,0 +1,64 @@
+{
+  "artifacts": [
+    {
+      "path": "reports/ahr_v2/teacher_data_validation.json",
+      "sha256": "c58b062901a7507028ea257317f0cf0a8612c4655db49fdbc4a67410612c48a0"
+    },
+    {
+      "path": "reports/ahr_v2/teacher_data_visual_qa.json",
+      "sha256": "171eda2c7c049529c694f405af4015ebb1ca745a1c8428e0f9646fb836958a12"
+    },
+    {
+      "path": "reports/ahr_v2/teacher_training_validation.json",
+      "sha256": "3383cbf7a7bdd325c00d87de4ce8d1c7759afeb62f01c7495dd36dd0482915d0"
+    },
+    {
+      "path": "reports/ahr_v2/teacher_production_recovery.json",
+      "sha256": "496e9d6dc90af1da73796cc237a0ed1815b5e5f5e998bf5dda158cca122f9933"
+    },
+    {
+      "path": "reports/ahr_v2/teacher_training_visual_qa.json",
+      "sha256": "6bdc313386aab906bec38fd659f4221ffd05bc59808373fa5bcc37aae9d406f4"
+    },
+    {
+      "path": "reports/ahr_v2/worker_reading_validation.json",
+      "sha256": "0189f3c3c1f7073bdd7bbc63de3eeeff354ebadf68b6d579040bff0d2a860e7a"
+    },
+    {
+      "path": "reports/ahr_v2/worker_reading_visual_qa.json",
+      "sha256": "0947002e9dde25d28a554db6607b1be36fc9d3c6cb9b666be22dbb49aa549bc0"
+    },
+    {
+      "path": "reports/ahr_v2/teacher_arena_validation.json",
+      "sha256": "69028d60d7e92421916b8c65fc875d6f63c71f206eee0a9d43d39a7c5054334e"
+    },
+    {
+      "path": "reports/ahr_v2/teacher_play_validation.json",
+      "sha256": "14b278a68cf8adfd037141cbe587602703e9cabba1e401db9da0c061203c2d88"
+    },
+    {
+      "path": "reports/ahr_v2/teacher_control_visual_qa.json",
+      "sha256": "9652ad32a70f4b1e8e004ffa12ed56cf63cd08f7cd6e25651a8b1992510bd300"
+    },
+    {
+      "path": "reports/ahr_v2/teacher_play_visual_qa.json",
+      "sha256": "62e3bc61f4aa9b17e011b0770f34f762c1b23aeef3e78037f8beb42b1778d768"
+    }
+  ],
+  "scope": "Dataset, optimizer, exact GPU recovery, tactical search, arena recovery and human interface; no strength claim before matches.",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+    "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+    "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+    "experiments/ahr_v2/15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+    "experiments/ahr_v2/16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46"
+  },
+  "status": "PASS",
+  "validated_at_utc": "2026-10-08T13:04:31.048927+00:00"
+}

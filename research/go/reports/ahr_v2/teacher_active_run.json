@@ -1,0 +1,30 @@
+{
+  "attach_command": "tmux attach -t ahr-v2-teacher",
+  "checkpoint_path": "checkpoints/ahr-v2-teacher-20261008",
+  "config_path": "config/ahr_v2_teacher_pipeline.json",
+  "configuration_sha256": "a28beb277079b925a15d5228296dc57551f8a783312406087c732ca443832f2d",
+  "detach_keys": "Ctrl-b, then d",
+  "evaluation_gpu": 0,
+  "launched_at_utc": "2026-10-08T13:04:31.416752+00:00",
+  "log_path": "reports/ahr_v2/ahr-v2-teacher-20261008/tmux.log",
+  "play_notebook": "experiments/ahr_v2/16_play_teacher_trained_player.ipynb",
+  "resume": false,
+  "run_id": "ahr-v2-teacher-20261008",
+  "session": "ahr-v2-teacher",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+    "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+    "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+    "experiments/ahr_v2/15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+    "experiments/ahr_v2/16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46"
+  },
+  "storage_free_bytes": 60804608000,
+  "training_gpu": 1,
+  "validated_at_utc": "2026-10-08T13:04:31.410597+00:00"
+}

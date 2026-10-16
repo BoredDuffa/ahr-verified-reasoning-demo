@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "STOP_checkpoint_preserved_without_recursive_callback": true,
+    "UNKNOWN_denominator_explicit": true,
+    "changed_config_refused": true,
+    "cutoff_keeps_UNKNOWN": true,
+    "draws_not_counted_as_wins": true,
+    "fresh_kernel_exact_decisions": true,
+    "game_timeout_keeps_UNKNOWN": true,
+    "paired_openings_replayed": true,
+    "pending_reader_and_inference": true,
+    "presentation_timestamp_not_identity": true,
+    "real_GNU_neural_cutoff_keeps_UNKNOWN": true,
+    "real_GNU_trace_has_genmove": true
+  },
+  "claim": "Short disposable correctness fixtures only. No production benchmark or training launched.",
+  "fresh_fixture": "reports/ahr_v2/fixtures/benchmark17-fresh-validation-e918c882.ipynb",
+  "run_prefix": "ahr-v2-bench17-validation-e918c882",
+  "schema": "ahr-v2-benchmark-arena-validation-v1",
+  "status": "PASS"
+}

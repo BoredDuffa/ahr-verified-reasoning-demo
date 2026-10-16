@@ -1,0 +1,984 @@
+{
+  "baseline_tactics": {
+    "category_summary": {
+      "atari_escape": {
+        "cases": 4,
+        "status_counts": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 4
+        }
+      },
+      "capture": {
+        "cases": 8,
+        "status_counts": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 6,
+          "SATISFIED_BOUNDED_PREDICATE": 2
+        }
+      },
+      "ko": {
+        "cases": 8,
+        "status_counts": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 1,
+          "SATISFIED_BOUNDED_PREDICATE": 7
+        }
+      },
+      "ladder_bounded": {
+        "cases": 4,
+        "status_counts": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 4
+        }
+      },
+      "life_death_bounded": {
+        "cases": 4,
+        "status_counts": {
+          "SATISFIED_BOUNDED_PREDICATE": 4
+        }
+      },
+      "passing_endgame": {
+        "cases": 4,
+        "status_counts": {
+          "SATISFIED_BOUNDED_PREDICATE": 4
+        }
+      }
+    },
+    "identity": {
+      "device": "cuda:1",
+      "player": {
+        "config": {
+          "model": {
+            "board_size": 9,
+            "dropout": 0.1,
+            "hidden_dim": 64,
+            "queen_cycles": 2,
+            "scout_steps": 2,
+            "spatial_channels": 32,
+            "worker_steps": 2
+          },
+          "search": {
+            "branch_width": 4,
+            "max_depth": 2,
+            "max_nodes": 32,
+            "queen_cycles": 1,
+            "temperature": 1.0
+          },
+          "work_budget": {}
+        },
+        "full_history_preparation": false,
+        "name": "candidate",
+        "provenance": {
+          "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+          "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+          "kind": "ahr_checkpoint",
+          "loader_metadata": {
+            "best_selection": "lowest_observed_training_loss_not_arena_strength",
+            "candidate_only": true,
+            "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+            "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+            "model_config": {
+              "board_size": 9,
+              "dropout": 0.1,
+              "hidden_dim": 64,
+              "queen_cycles": 2,
+              "scout_steps": 2,
+              "spatial_channels": 32,
+              "worker_steps": 2
+            },
+            "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+            "optimizer_step": 512,
+            "provenance": {
+              "best_selection": "lowest_observed_training_loss_not_arena_strength",
+              "candidate_only": true,
+              "purpose": "go_training",
+              "trained_on_go": true,
+              "training_route": "go_selfplay"
+            },
+            "purpose": "go_training",
+            "run_id": "go09-first-selfplay-v1",
+            "schema": "ahr_go_selfplay_v1",
+            "selection": "latest",
+            "source_hashes": {
+              "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+              "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+              "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+              "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+              "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+              "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+              "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+              "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+            },
+            "trained_on_go": true,
+            "training_route": "go_selfplay"
+          },
+          "purpose": "go_training",
+          "source_hashes": {
+            "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+            "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+            "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+            "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+            "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+            "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+            "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+            "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+          },
+          "trained_optimizer_steps": 512
+        },
+        "runtime": "stateless",
+        "weights_sha256": "aa2615f4a7145d9c35de0fb373e9171c16c6a250843db45f002738c040fb7a6d"
+      },
+      "selection": "latest",
+      "sources": {
+        "00_instance_setup_and_recovery.ipynb": "4477b570d0eb6d7ab20542ff9e4ee05c0eda82c0f192d5c78c3dee17b304695f",
+        "01_go_rules_and_independent_verifier.ipynb": "fbb3a59b50faabdad8b12d7482c6e7dce822669929347e36f7091b39cf4daa87",
+        "11_engine_arena_and_evaluation.ipynb": "19993232d3678bf012ff38549e63b135eca008a7dee61b13e9d8fed01e411ca1"
+      },
+      "suite_sha256": "91ec7515e7f03bf3dca89310b7b7d0d69f7b8f1e872239d956002fa793f30690",
+      "time_budget_s": 1.0
+    },
+    "latency": {
+      "budget_s": 1.0,
+      "calls": 32,
+      "deadline_misses": 0,
+      "max_s": 0.5666186730086338,
+      "mean_s": 0.09323116850373481,
+      "p50_s": 0.08767904300475493,
+      "p95_s": 0.09156189134519081,
+      "p99_s": 0.4197084596651263,
+      "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+    },
+    "source": "pipeline_baseline",
+    "status_counts": {
+      "NOT_SATISFIED_BOUNDED_PREDICATE": 15,
+      "SATISFIED_BOUNDED_PREDICATE": 17
+    }
+  },
+  "declared_generations": 3,
+  "external_evaluations": [
+    {
+      "candidate_run": "go09-first-selfplay-v1",
+      "complete": true,
+      "evaluation": {
+        "all_planned_score_bounds": [
+          0.0,
+          0.0
+        ],
+        "alpha": 0.05,
+        "candidate_draws": 0,
+        "candidate_losses": 16,
+        "candidate_wins": 0,
+        "completed_games": 16,
+        "completed_paired_blocks": 8,
+        "deadline_misses": 0,
+        "elo": null,
+        "evaluation_status": "COMPLETE",
+        "failed_move_calls": 0,
+        "full_game_optimality": "NOT_ESTABLISHED",
+        "illegal_proposals": 0,
+        "latency_by_player": {
+          "candidate": {
+            "budget_s": 1.0,
+            "calls": 809,
+            "deadline_misses": 0,
+            "max_s": 0.17245248000836,
+            "mean_s": 0.12515742546550374,
+            "p50_s": 0.1242922599776648,
+            "p95_s": 0.15842476980178616,
+            "p99_s": 0.16555917474441229,
+            "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+          },
+          "reference": {
+            "budget_s": 1.0,
+            "calls": 817,
+            "deadline_misses": 0,
+            "max_s": 0.16693964099977165,
+            "mean_s": 0.05429371671799304,
+            "p50_s": 0.0509320650016889,
+            "p95_s": 0.08166487299604341,
+            "p99_s": 0.1045791410666425,
+            "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+          }
+        },
+        "minimum_blocks": 128,
+        "optimizer_steps": 0,
+        "paired_hoeffding_interval": [
+          0.0,
+          0.48016139565996035
+        ],
+        "paired_mean_score": 0.0,
+        "planned_games": 16,
+        "player_identities": {
+          "candidate": {
+            "config": {
+              "model": {
+                "board_size": 9,
+                "dropout": 0.1,
+                "hidden_dim": 64,
+                "queen_cycles": 2,
+                "scout_steps": 2,
+                "spatial_channels": 32,
+                "worker_steps": 2
+              },
+              "search": {
+                "branch_width": 4,
+                "max_depth": 2,
+                "max_nodes": 32,
+                "queen_cycles": 1,
+                "temperature": 1.0
+              },
+              "work_budget": {}
+            },
+            "full_history_preparation": false,
+            "name": "candidate",
+            "provenance": {
+              "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+              "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+              "kind": "ahr_checkpoint",
+              "loader_metadata": {
+                "best_selection": "lowest_observed_training_loss_not_arena_strength",
+                "candidate_only": true,
+                "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+                "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+                "model_config": {
+                  "board_size": 9,
+                  "dropout": 0.1,
+                  "hidden_dim": 64,
+                  "queen_cycles": 2,
+                  "scout_steps": 2,
+                  "spatial_channels": 32,
+                  "worker_steps": 2
+                },
+                "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+                "optimizer_step": 512,
+                "provenance": {
+                  "best_selection": "lowest_observed_training_loss_not_arena_strength",
+                  "candidate_only": true,
+                  "purpose": "go_training",
+                  "trained_on_go": true,
+                  "training_route": "go_selfplay"
+                },
+                "purpose": "go_training",
+                "run_id": "go09-first-selfplay-v1",
+                "schema": "ahr_go_selfplay_v1",
+                "selection": "latest",
+                "source_hashes": {
+                  "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+                  "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+                  "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+                  "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+                  "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+                  "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+                  "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+                  "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+                },
+                "trained_on_go": true,
+                "training_route": "go_selfplay"
+              },
+              "purpose": "go_training",
+              "source_hashes": {
+                "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+                "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+                "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+                "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+                "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+                "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+                "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+                "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+              },
+              "trained_optimizer_steps": 512
+            },
+            "runtime": "stateless",
+            "weights_sha256": "aa2615f4a7145d9c35de0fb373e9171c16c6a250843db45f002738c040fb7a6d"
+          },
+          "reference": {
+            "config": {
+              "command_timeout_s": 1.0,
+              "engine": "GNU Go",
+              "level": 1,
+              "recovery": "fresh process and state-derived seed every call; history rebuilt from saved arena moves",
+              "rule_flags": [
+                "--chinese-rules",
+                "--positional-superko",
+                "--forbid-suicide",
+                "--capture-all-dead",
+                "--never-resign"
+              ],
+              "rules": {
+                "consecutive_passes_to_end": 2,
+                "dead_stones": "must_be_captured_before_passing",
+                "default_komi": 7.5,
+                "default_size": 9,
+                "ko": "positional_superko",
+                "move_cap": null,
+                "name": "ahr_go_area_positional_superko_v1",
+                "passes_exempt_from_superko": true,
+                "scoring": "stones_plus_single_color_bordered_empty_regions_minus_komi",
+                "suicide": false
+              },
+              "scoring": "project independent final area scorer; GNU Go final_score never used",
+              "seed": 2026101409,
+              "timing": "whole call including chronological replay, process startup and cleanup; no hard realtime guarantee",
+              "work_budget": {}
+            },
+            "full_history_preparation": true,
+            "name": "reference",
+            "provenance": {
+              "binary_relative": ".venv/third_party/gnugo/usr/bin/gnugo",
+              "binary_sha256": "b530fbddbfd613345ea31c45ddf81be22be4328782a8a7b09f5d2d80a6613e93",
+              "debian_package": "gnugo_3.8-13_amd64.deb",
+              "kind": "external_engine",
+              "package_sha256": "f0feff31a6d743e6c6863c4cbabde26ee88c31918c230b57b83b6be1db78c3e5",
+              "purpose": "evaluation_only",
+              "strength_rating": "UNASSIGNED",
+              "training_labels": false,
+              "version": "GNU Go 3.8"
+            },
+            "runtime": "stateless",
+            "weights_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "promotion_effect": "Recommendation only; no checkpoint pointer or deployed service is changed.",
+        "promotion_eligible": false,
+        "promotion_recommended": false,
+        "promotion_threshold": 0.55,
+        "purpose": "development_strength",
+        "recorded_games": 16,
+        "schema": "ahr11-controlled-arena-v2",
+        "status_counts": {
+          "COMPLETE": 16
+        }
+      },
+      "label": "Baseline \u00b7 GNU Go L1",
+      "scope": "pipeline benchmark"
+    },
+    {
+      "candidate_run": "go09-first-selfplay-v1",
+      "complete": true,
+      "evaluation": {
+        "all_planned_score_bounds": [
+          0.0,
+          0.375
+        ],
+        "alpha": 0.05,
+        "candidate_draws": 0,
+        "candidate_losses": 10,
+        "candidate_wins": 0,
+        "completed_games": 10,
+        "completed_paired_blocks": 4,
+        "deadline_misses": 6,
+        "elo": null,
+        "evaluation_status": "COMPLETE",
+        "failed_move_calls": 6,
+        "full_game_optimality": "NOT_ESTABLISHED",
+        "illegal_proposals": 5,
+        "latency_by_player": {
+          "candidate": {
+            "budget_s": 1.0,
+            "calls": 570,
+            "deadline_misses": 0,
+            "max_s": 0.5620154810021631,
+            "mean_s": 0.12323716201246594,
+            "p50_s": 0.12021666800137609,
+            "p95_s": 0.15938559164496835,
+            "p99_s": 0.16564549706323303,
+            "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+          },
+          "reference": {
+            "budget_s": 1.0,
+            "calls": 578,
+            "deadline_misses": 6,
+            "max_s": 1.0270861129974946,
+            "mean_s": 0.19223497759248293,
+            "p50_s": 0.10955885749717709,
+            "p95_s": 0.6396533890947466,
+            "p99_s": 0.9892315528541807,
+            "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+          }
+        },
+        "minimum_blocks": 128,
+        "optimizer_steps": 0,
+        "paired_hoeffding_interval": [
+          0.0,
+          0.6790507578703098
+        ],
+        "paired_mean_score": 0.0,
+        "planned_games": 16,
+        "player_identities": {
+          "candidate": {
+            "config": {
+              "model": {
+                "board_size": 9,
+                "dropout": 0.1,
+                "hidden_dim": 64,
+                "queen_cycles": 2,
+                "scout_steps": 2,
+                "spatial_channels": 32,
+                "worker_steps": 2
+              },
+              "search": {
+                "branch_width": 4,
+                "max_depth": 2,
+                "max_nodes": 32,
+                "queen_cycles": 1,
+                "temperature": 1.0
+              },
+              "work_budget": {}
+            },
+            "full_history_preparation": false,
+            "name": "candidate",
+            "provenance": {
+              "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+              "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+              "kind": "ahr_checkpoint",
+              "loader_metadata": {
+                "best_selection": "lowest_observed_training_loss_not_arena_strength",
+                "candidate_only": true,
+                "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+                "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+                "model_config": {
+                  "board_size": 9,
+                  "dropout": 0.1,
+                  "hidden_dim": 64,
+                  "queen_cycles": 2,
+                  "scout_steps": 2,
+                  "spatial_channels": 32,
+                  "worker_steps": 2
+                },
+                "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+                "optimizer_step": 512,
+                "provenance": {
+                  "best_selection": "lowest_observed_training_loss_not_arena_strength",
+                  "candidate_only": true,
+                  "purpose": "go_training",
+                  "trained_on_go": true,
+                  "training_route": "go_selfplay"
+                },
+                "purpose": "go_training",
+                "run_id": "go09-first-selfplay-v1",
+                "schema": "ahr_go_selfplay_v1",
+                "selection": "latest",
+                "source_hashes": {
+                  "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+                  "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+                  "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+                  "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+                  "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+                  "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+                  "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+                  "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+                },
+                "trained_on_go": true,
+                "training_route": "go_selfplay"
+              },
+              "purpose": "go_training",
+              "source_hashes": {
+                "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+                "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+                "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+                "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+                "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+                "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+                "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+                "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+              },
+              "trained_optimizer_steps": 512
+            },
+            "runtime": "stateless",
+            "weights_sha256": "aa2615f4a7145d9c35de0fb373e9171c16c6a250843db45f002738c040fb7a6d"
+          },
+          "reference": {
+            "config": {
+              "command_timeout_s": 1.0,
+              "engine": "GNU Go",
+              "level": 10,
+              "recovery": "fresh process and state-derived seed every call; history rebuilt from saved arena moves",
+              "rule_flags": [
+                "--chinese-rules",
+                "--positional-superko",
+                "--forbid-suicide",
+                "--capture-all-dead",
+                "--never-resign"
+              ],
+              "rules": {
+                "consecutive_passes_to_end": 2,
+                "dead_stones": "must_be_captured_before_passing",
+                "default_komi": 7.5,
+                "default_size": 9,
+                "ko": "positional_superko",
+                "move_cap": null,
+                "name": "ahr_go_area_positional_superko_v1",
+                "passes_exempt_from_superko": true,
+                "scoring": "stones_plus_single_color_bordered_empty_regions_minus_komi",
+                "suicide": false
+              },
+              "scoring": "project independent final area scorer; GNU Go final_score never used",
+              "seed": 2026101409,
+              "timing": "whole call including chronological replay, process startup and cleanup; no hard realtime guarantee",
+              "work_budget": {}
+            },
+            "full_history_preparation": true,
+            "name": "reference",
+            "provenance": {
+              "binary_relative": ".venv/third_party/gnugo/usr/bin/gnugo",
+              "binary_sha256": "b530fbddbfd613345ea31c45ddf81be22be4328782a8a7b09f5d2d80a6613e93",
+              "debian_package": "gnugo_3.8-13_amd64.deb",
+              "kind": "external_engine",
+              "package_sha256": "f0feff31a6d743e6c6863c4cbabde26ee88c31918c230b57b83b6be1db78c3e5",
+              "purpose": "evaluation_only",
+              "strength_rating": "UNASSIGNED",
+              "training_labels": false,
+              "version": "GNU Go 3.8"
+            },
+            "runtime": "stateless",
+            "weights_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "promotion_effect": "Recommendation only; no checkpoint pointer or deployed service is changed.",
+        "promotion_eligible": false,
+        "promotion_recommended": false,
+        "promotion_threshold": 0.55,
+        "purpose": "development_strength",
+        "recorded_games": 16,
+        "schema": "ahr11-controlled-arena-v2",
+        "status_counts": {
+          "COMPLETE": 10,
+          "UNKNOWN_DEADLINE": 6
+        }
+      },
+      "label": "Final \u00b7 GNU Go L10",
+      "scope": "pipeline benchmark"
+    }
+  ],
+  "figure": {
+    "path": "reports/09_13_generations_progress.png",
+    "sha256": "c6b07f532da8b778bdbee8b2b18168a0e5757db6a714657bfac81ec3e528668e"
+  },
+  "generated_at_utc": "2026-09-26T23:22:41.189586+00:00",
+  "generations": [
+    {
+      "arena": {
+        "alpha": 0.016666666666666666,
+        "completed": 256,
+        "draws": 0,
+        "interval": [
+          0.46481038988742307,
+          0.7383146101125769
+        ],
+        "losses": 102,
+        "paired_blocks": 128,
+        "planned": 256,
+        "promotion_recommended": false,
+        "recorded": 256,
+        "unknown": 0,
+        "wins": 154
+      },
+      "arena_status": "COMPLETE",
+      "generation": 1,
+      "tactics_status": {
+        "NOT_SATISFIED_BOUNDED_PREDICATE": 14,
+        "SATISFIED_BOUNDED_PREDICATE": 18
+      },
+      "training": {
+        "actual_ahr_plies": 15118,
+        "complete": true,
+        "completed_games": 127,
+        "games_finished": 128,
+        "optimizer_steps": 1024,
+        "run_id": "go09-v2-generation-01",
+        "search_deadline_exceedances": 7,
+        "session_elapsed_s": 8871.894151721004,
+        "unknown_games": 1,
+        "updated_at_utc": "2026-09-24T17:23:55.686371+00:00",
+        "verified_plies": 15118
+      },
+      "training_status": "complete"
+    },
+    {
+      "arena": {
+        "alpha": 0.016666666666666666,
+        "completed": 256,
+        "draws": 0,
+        "interval": [
+          0.48434163988742307,
+          0.7578458601125769
+        ],
+        "losses": 97,
+        "paired_blocks": 128,
+        "planned": 256,
+        "promotion_recommended": false,
+        "recorded": 256,
+        "unknown": 0,
+        "wins": 159
+      },
+      "arena_status": "COMPLETE",
+      "generation": 2,
+      "tactics_status": {
+        "NOT_SATISFIED_BOUNDED_PREDICATE": 13,
+        "SATISFIED_BOUNDED_PREDICATE": 19
+      },
+      "training": {
+        "actual_ahr_plies": 16281,
+        "complete": true,
+        "completed_games": 126,
+        "games_finished": 128,
+        "optimizer_steps": 1024,
+        "run_id": "go09-v2-generation-02",
+        "search_deadline_exceedances": 5,
+        "session_elapsed_s": 9592.158184319997,
+        "unknown_games": 2,
+        "updated_at_utc": "2026-09-25T03:20:54.118151+00:00",
+        "verified_plies": 16281
+      },
+      "training_status": "complete"
+    },
+    {
+      "arena": {
+        "alpha": 0.016666666666666666,
+        "completed": 256,
+        "draws": 0,
+        "interval": [
+          0.30074788988742307,
+          0.5742521101125769
+        ],
+        "losses": 144,
+        "paired_blocks": 128,
+        "planned": 256,
+        "promotion_recommended": false,
+        "recorded": 256,
+        "unknown": 0,
+        "wins": 112
+      },
+      "arena_status": "COMPLETE",
+      "generation": 3,
+      "tactics_status": {
+        "NOT_SATISFIED_BOUNDED_PREDICATE": 14,
+        "SATISFIED_BOUNDED_PREDICATE": 18
+      },
+      "training": {
+        "actual_ahr_plies": 16678,
+        "complete": true,
+        "completed_games": 125,
+        "games_finished": 128,
+        "optimizer_steps": 1024,
+        "run_id": "go09-v2-generation-03",
+        "search_deadline_exceedances": 9,
+        "session_elapsed_s": 9892.923096682993,
+        "unknown_games": 3,
+        "updated_at_utc": "2026-09-25T13:14:58.752106+00:00",
+        "verified_plies": 16678
+      },
+      "training_status": "complete"
+    }
+  ],
+  "limitations": [
+    "Missing reports are unreported, never zero-valued completed work.",
+    "UNKNOWN outcomes remain separate from losses; unplayed games are not outcomes.",
+    "Baseline tactics are 32 rotations of eight synthetic development fixtures, not 32 independent strength samples.",
+    "The CPU profile covers 12 events and does not measure sustained games per hour.",
+    "Current snapshot may lag a running stage's next atomic report update; it does not infer progress from process presence.",
+    "No rank, Elo or full-game optimality claim; no model promotion is performed by this report."
+  ],
+  "notebook_code_sha256": "bdc3e37ed3bb26db72fbf57bc910b99c477641bb87444188faa71dc55bf8148a",
+  "pipeline": {
+    "completed_stages": 20,
+    "current_stage": null,
+    "planned_stages": 20,
+    "status": "COMPLETE",
+    "updated_at_utc": "2026-09-26T23:22:40.479489+00:00"
+  },
+  "profile_diagnostic": {
+    "actions_equal": true,
+    "after": {
+      "actions": [
+        79,
+        0,
+        1,
+        3,
+        9,
+        8,
+        0,
+        11,
+        80,
+        74,
+        71
+      ],
+      "actual_search_plies": 11,
+      "commits_in_segment": 2,
+      "elapsed_s": 13.642888533999212,
+      "events": 12,
+      "events_per_s": 0.8795791279900149,
+      "final_event": 8715,
+      "final_phase": "play",
+      "full_state_roundtrip_exact": true,
+      "initial_commit_s_excluded": 4.331143527000677,
+      "label": "after",
+      "retained_checkpoints": 3,
+      "run_id": "selfplay09-v2-profile-after-eb5146630a",
+      "timings_s": {
+        "actor_construction_s": {
+          "count": 1,
+          "mean": 0.0063901869871187955,
+          "total": 0.0063901869871187955
+        },
+        "commit_s": {
+          "count": 2,
+          "mean": 6.3834255449910415,
+          "total": 12.766851089982083
+        },
+        "event_s": {
+          "count": 12,
+          "mean": 0.0723964973318895,
+          "total": 0.868757967982674
+        },
+        "pack_s": {
+          "count": 2,
+          "mean": 0.003581199998734519,
+          "total": 0.007162399997469038
+        },
+        "search_and_behavior_s": {
+          "count": 11,
+          "mean": 0.07731573254303922,
+          "total": 0.8504730579734314
+        }
+      }
+    },
+    "baseline_notebook_sha256": "26555064ab7e500baea8cacb5fc9ba9eb2f97277023f3c8b1ed8e72d77ac9825",
+    "before": {
+      "actions": [
+        79,
+        0,
+        1,
+        3,
+        9,
+        8,
+        0,
+        11,
+        80,
+        74,
+        71
+      ],
+      "actual_search_plies": 11,
+      "commits_in_segment": 12,
+      "elapsed_s": 98.18417608199525,
+      "events": 12,
+      "events_per_s": 0.12221928704660717,
+      "final_event": 8715,
+      "final_phase": "play",
+      "full_state_roundtrip_exact": true,
+      "initial_commit_s_excluded": 4.462636588985333,
+      "label": "before",
+      "retained_checkpoints": 3,
+      "run_id": "selfplay09-v2-profile-before-f0e9f7cc43",
+      "timings_s": {
+        "actor_construction_s": {
+          "count": 11,
+          "mean": 0.00653179245471785,
+          "total": 0.07184971700189635
+        },
+        "commit_s": {
+          "count": 12,
+          "mean": 8.095059787997647,
+          "total": 97.14071745597175
+        },
+        "event_s": {
+          "count": 12,
+          "mean": 0.08363608749641571,
+          "total": 1.0036330499569885
+        },
+        "pack_s": {
+          "count": 12,
+          "mean": 0.003307117076474242,
+          "total": 0.0396854049176909
+        },
+        "search_and_behavior_s": {
+          "count": 11,
+          "mean": 0.07953199445513416,
+          "total": 0.8748519390064757
+        }
+      }
+    },
+    "device": "cpu",
+    "limits": "12-event CPU full-replay diagnostic; not sustained games/hour or a playing-strength result",
+    "new_export_source_sha256": "f1c9bfea127d737339682d88a281d88e03450518ea105bdf552e4fa2307236df",
+    "replay_positions": 2048,
+    "schema": "ahr_selfplay_v2_profile_v1",
+    "segment_speedup": 7.196729331718288,
+    "source_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+    "source_run": "go09-first-selfplay-v1",
+    "status": "PASS"
+  },
+  "real_pilot_timing": {
+    "active_elapsed_s": 79.90134083200246,
+    "completed": true,
+    "completed_at": "2026-09-24T14:45:03.078259+00:00",
+    "config": {
+      "actor_device": "cuda:1",
+      "batch_size": 32,
+      "board_size": 9,
+      "checkpoint_every_events": 32,
+      "checkpoint_every_optimizer_steps": 250,
+      "checkpoint_interval_s": 600.0,
+      "device": "cuda:0",
+      "exploration": 0.15,
+      "games": 2,
+      "historical_opponents": [
+        {
+          "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+          "run_id": "go09-first-selfplay-v1",
+          "selection": "latest"
+        }
+      ],
+      "komi": 7.5,
+      "learning_rate": 0.0003,
+      "max_plies": 256,
+      "opponent_probability": 0.25,
+      "opponent_snapshots": 4,
+      "purpose": "go_training",
+      "replay_capacity": 2048,
+      "search": {
+        "branch_width": 4,
+        "max_depth": 2,
+        "max_nodes": 32,
+        "queen_cycles": 1,
+        "temperature": 1.0
+      },
+      "seed": 2026092410,
+      "snapshot_every_games": 8,
+      "temperature": 1.0,
+      "time_budget_s": 0.5,
+      "updates_per_game": 8,
+      "validation_force_pass": false,
+      "weight_decay": 0.0001
+    },
+    "last_event": 314,
+    "last_optimizer_step": 16,
+    "run_id": "go09-v2-performance-pilot",
+    "source_hash": "f1c9bfea127d737339682d88a281d88e03450518ea105bdf552e4fa2307236df",
+    "started_at": "2026-09-24T14:43:43.151310+00:00"
+  },
+  "schema": "ahr_generation_progress_v2",
+  "selection": {
+    "configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+    "decisions": [
+      {
+        "accepted": false,
+        "basis": "predeclared paired arena gate; training loss is not a selection criterion",
+        "candidate_checkpoint_sha256": "0873016b67e772fef791458d27e8d3ae6a4fd965726113e187a8091f38db63c9",
+        "candidate_run": "go09-v2-generation-01",
+        "evaluation_sha256": "7549ed05f9d670a0575edfb4843761450387947513c2899b09515f318d429b5d",
+        "generation": 1,
+        "reference_run": "go09-first-selfplay-v1",
+        "selected_run": "go09-first-selfplay-v1"
+      },
+      {
+        "accepted": false,
+        "basis": "predeclared paired arena gate; training loss is not a selection criterion",
+        "candidate_checkpoint_sha256": "6ad366922d3a95c7670410c9e2cff809a9f02f77c8bc138f5e46b39b5ac07cc1",
+        "candidate_run": "go09-v2-generation-02",
+        "evaluation_sha256": "2cac6880f0c9c0740ec77e2b61f6ec75f4a3b951429c9debe3e52192b96c5442",
+        "generation": 2,
+        "reference_run": "go09-first-selfplay-v1",
+        "selected_run": "go09-first-selfplay-v1"
+      },
+      {
+        "accepted": false,
+        "basis": "predeclared paired arena gate; training loss is not a selection criterion",
+        "candidate_checkpoint_sha256": "91174fa9c646b903eadced98e4aaaa51810ee7dc26bafcc5d461f348a3b318d9",
+        "candidate_run": "go09-v2-generation-03",
+        "evaluation_sha256": "7b9842cc1dd133cd5f5a21f52da4fbfd6fb73612925b4a1637b8ea0b86b694fb",
+        "generation": 3,
+        "reference_run": "go09-first-selfplay-v1",
+        "selected_run": "go09-first-selfplay-v1"
+      }
+    ],
+    "last_candidate_run": "go09-v2-generation-03",
+    "schema": "ahr_generations_v2",
+    "selected_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+    "selected_run": "go09-first-selfplay-v1"
+  },
+  "source_inventory": {
+    "reports/09_v2_profile_results.json": {
+      "bytes": 3052,
+      "mtime_utc": "2026-09-24T14:39:59.305701+00:00",
+      "sha256": "27fdb9c60f846fc97bc4deccb2bd8a651b2a6ce225107275b6dfe9a46487b969"
+    },
+    "reports/09_v2_real_pilot_timing.json": {
+      "bytes": 1372,
+      "mtime_utc": "2026-09-24T14:45:03.075463+00:00",
+      "sha256": "dc4b7534f21b7476d1bbf968cf11bbd8582aeda806cc0ee93843db2cd1344c06"
+    },
+    "reports/11_v2_family_go-generations-v2.json": {
+      "bytes": 8215,
+      "mtime_utc": "2026-09-24T14:47:20.828960+00:00",
+      "sha256": "3d6074b2f2e52d32f3ad610a5d2fe1da9101211a5593001d6041a3c3b3ef95c3"
+    },
+    "reports/go_generations_v2/baseline_external.json": {
+      "bytes": 8501,
+      "mtime_utc": "2026-09-24T14:54:30.215032+00:00",
+      "sha256": "afba6ec2e44324456d10b463d597dd5b7b9cdd455f24586217ae571b5a2728f8"
+    },
+    "reports/go_generations_v2/baseline_tactics.json": {
+      "bytes": 140351,
+      "mtime_utc": "2026-09-24T14:49:06.059271+00:00",
+      "sha256": "1a39fae01bf243096d48eddf9e0e8efe101c1f8db3f84049dc035ed5efc91cf5"
+    },
+    "reports/go_generations_v2/final_external.json": {
+      "bytes": 8532,
+      "mtime_utc": "2026-09-25T20:57:23.485948+00:00",
+      "sha256": "704be9da2d6ba9e4c6ae4c38dff1ca746917dd61fe2ff532c8831f7e9c6b0df0"
+    },
+    "reports/go_generations_v2/g01_arena.json": {
+      "bytes": 10856,
+      "mtime_utc": "2026-09-25T00:40:01.388449+00:00",
+      "sha256": "7549ed05f9d670a0575edfb4843761450387947513c2899b09515f318d429b5d"
+    },
+    "reports/go_generations_v2/g01_tactics.json": {
+      "bytes": 140307,
+      "mtime_utc": "2026-09-24T17:24:11.858994+00:00",
+      "sha256": "705dd2df42b383e7b5361357c52c9e179930dd8c225bba66fd42fe951919a47c"
+    },
+    "reports/go_generations_v2/g01_training.json": {
+      "bytes": 342035,
+      "mtime_utc": "2026-09-24T17:23:55.693411+00:00",
+      "sha256": "45f1d2424cdec6fdaf67f0e064c97899064138a4536c4756b03ceb28eddf14cc"
+    },
+    "reports/go_generations_v2/g02_arena.json": {
+      "bytes": 10860,
+      "mtime_utc": "2026-09-25T10:29:06.210227+00:00",
+      "sha256": "2cac6880f0c9c0740ec77e2b61f6ec75f4a3b951429c9debe3e52192b96c5442"
+    },
+    "reports/go_generations_v2/g02_tactics.json": {
+      "bytes": 140343,
+      "mtime_utc": "2026-09-25T03:21:08.731332+00:00",
+      "sha256": "c35e98f6dbecf187c166623ee8c1178c30c3f207612175492831370c3b2401b2"
+    },
+    "reports/go_generations_v2/g02_training.json": {
+      "bytes": 342095,
+      "mtime_utc": "2026-09-25T03:20:54.121901+00:00",
+      "sha256": "8b2cc4884ce798fe2195b54e8500775e73ab6fd8a5c6bda9e07c99dd8f7e6e0e"
+    },
+    "reports/go_generations_v2/g03_arena.json": {
+      "bytes": 10849,
+      "mtime_utc": "2026-09-25T20:51:33.995727+00:00",
+      "sha256": "7b9842cc1dd133cd5f5a21f52da4fbfd6fb73612925b4a1637b8ea0b86b694fb"
+    },
+    "reports/go_generations_v2/g03_tactics.json": {
+      "bytes": 140312,
+      "mtime_utc": "2026-09-25T13:15:14.230585+00:00",
+      "sha256": "02cd015b6a66bd8cbd15bcbd215c3bef3e36f285cfb56f3107bafac1e5f21f9a"
+    },
+    "reports/go_generations_v2/g03_training.json": {
+      "bytes": 342428,
+      "mtime_utc": "2026-09-25T13:14:58.757070+00:00",
+      "sha256": "9db7e2ca7b9726bbcbafe6470bcc4a13196e67f56fc0c03c0e4fe56edd2a4b38"
+    },
+    "reports/go_generations_v2/selection.json": {
+      "bytes": 1836,
+      "mtime_utc": "2026-09-25T20:51:45.848888+00:00",
+      "sha256": "0faa22c608c4ac5719ccda08a43619d7899cc6d56fa56f31dc9e6ae3547c71d9"
+    },
+    "reports/pipeline-go-generations-v2.json": {
+      "bytes": 18338,
+      "mtime_utc": "2026-09-26T23:22:40.667689+00:00",
+      "sha256": "0efd288b472bc97694d6c88babffd8911edd13cf7367c62e7647f03e5f6d2f12"
+    }
+  },
+  "unavailable_inputs": []
+}

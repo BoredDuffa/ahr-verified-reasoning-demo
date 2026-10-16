@@ -1,0 +1,1 @@
+{"reason": "First finite generator smoke caught duplicate step checkpoint writes before full generation. Patched definition; preserve initial five-game checkpoint explicitly as superseded rather than silently restart.", "preserved": "checkpoints/ahr-v5-curriculum-generation-superseded-preflight-1790956905"}

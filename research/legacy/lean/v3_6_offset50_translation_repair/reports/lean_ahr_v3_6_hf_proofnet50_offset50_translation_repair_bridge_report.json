@@ -1,0 +1,38 @@
+{
+  "ahr_methodology": {
+    "hypothesize": "generates Lean4 translations, theorem clusters, imports, and proof scripts",
+    "observe": "records target question, original formal statement, src header excerpt, symbols, and Lean parse errors",
+    "rank": "orders attempts by retrieval score, target-symbol overlap, import cost, tactic cost, and optional learned v3.3 attempt-ranker score",
+    "refine": "records failed attempts and failure buckets for next bridge iteration",
+    "verify": "accepts only Lean-verified target theorem proofs"
+  },
+  "attempt_ranker_checkpoint": "checkpoints/lean_ahr_v3_3_proofnet_attempt_ranker_full.pt",
+  "baseline_v3_0_known_theorem_wrapper_verified_count": 0,
+  "baseline_v3_2_proofnet50_lean_calls_total": 537,
+  "baseline_v3_2_proofnet50_target_verified_count": 5,
+  "elapsed_s": 5361.805,
+  "failure_reason_counts": {
+    "lean_type_mismatch": 5,
+    "lean_typeclass_synthesis_failed": 2,
+    "lean_unknown_identifier": 10,
+    "lean_unsolved_goals": 2,
+    "lean_verification_failed": 29,
+    "target_verified": 2
+  },
+  "input_path": "datasets/lean_ahr_hf_proofnet50_questions_offset50.jsonl",
+  "lean_calls_total": 769,
+  "ranker_candidate_pool": 96,
+  "ranker_guided": true,
+  "record_count": 50,
+  "records_path": "datasets/lean_ahr_v3_6_hf_proofnet50_offset50_translation_repair_bridge_records.jsonl",
+  "retrieval_cluster_success_count": 33,
+  "run_name": "lean_ahr_v3_6_hf_proofnet50_offset50_translation_repair_bridge",
+  "schema": "ahr_lean_v3_4_ranker_guided_proofnet_bridge_report",
+  "selected_module_counts": {
+    "Mathlib": 2,
+    "Mathlib.RingTheory.PowerSeries.GaussNorm": 1,
+    "Mathlib.Topology.Clopen": 1
+  },
+  "target_verified_count": 2,
+  "translated_count": 33
+}

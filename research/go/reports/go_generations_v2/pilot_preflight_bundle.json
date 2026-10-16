@@ -1,0 +1,67 @@
+{
+  "archive": "/home/benjamin/workspace/ahr_go/exports/bundles/go09-v2-performance-pilot-eb50afcded67.tar.gz",
+  "bundle_id": "go09-v2-performance-pilot-eb50afcded67",
+  "bytes": 17952602,
+  "checkpoint": {
+    "best_selection": "lowest_observed_training_loss_not_arena_strength",
+    "candidate_only": true,
+    "checkpoint_file": "checkpoints/go09-v2-performance-pilot/step-000000314-c05301dc.pt",
+    "checkpoint_sha256": "81fd63ef4c93268fcaaa367158204bad3a0f6196420e54752c8d52773c8c27e6",
+    "model_config": {
+      "board_size": 9,
+      "dropout": 0.1,
+      "hidden_dim": 64,
+      "queen_cycles": 2,
+      "scout_steps": 2,
+      "spatial_channels": 32,
+      "worker_steps": 2
+    },
+    "model_sha256": "539268fa0ba694f65c9bd0b6c1b4e05b8647f24886b2cf3e252d870e466c75e4",
+    "optimizer_step": 16,
+    "provenance": {
+      "best_selection": "lowest_observed_training_loss_not_arena_strength",
+      "candidate_only": true,
+      "purpose": "go_training",
+      "trained_on_go": true,
+      "training_route": "go_selfplay"
+    },
+    "purpose": "go_training",
+    "run_id": "go09-v2-performance-pilot",
+    "schema": "ahr_go_selfplay_v1",
+    "selection": "latest",
+    "source_hashes": {
+      "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+      "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+      "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+      "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+      "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+      "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+      "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+      "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+    },
+    "trained_on_go": true,
+    "training_route": "go_selfplay"
+  },
+  "file_count": 40,
+  "off_instance_backup": "DEFERRED_BY_USER_PENDING_HUGGING_FACE_DESTINATION",
+  "recorded_at_utc": "2026-09-24T14:47:30.148190+00:00",
+  "restore_scope": "Individual run exact-resume state and inference. Full multi-run pipeline also requires prior run bundles and experiment reports.",
+  "restored_inference": {
+    "action": 79,
+    "checkpoint_sha256": "81fd63ef4c93268fcaaa367158204bad3a0f6196420e54752c8d52773c8c27e6",
+    "device": "cpu",
+    "elapsed_s": 0.019170841987943277,
+    "fresh_process": true,
+    "latest_optimizer_step": 16,
+    "legal": true,
+    "model_sha256": "539268fa0ba694f65c9bd0b6c1b4e05b8647f24886b2cf3e252d870e466c75e4",
+    "selected_optimizer_step": 16,
+    "status": "PASS",
+    "strategic_status": "UNKNOWN"
+  },
+  "retained_checkpoints": 3,
+  "run_id": "go09-v2-performance-pilot",
+  "schema": "ahr_generations_v2",
+  "sha256": "ed8e7d93560f6334d36a6b3856db00d02a8a48d6bcd0ed5c380eb32db48ca9de",
+  "status": "VERIFIED_LOCAL"
+}

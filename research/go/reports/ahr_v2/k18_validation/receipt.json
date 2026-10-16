@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-10-11T12:07:35.877994+00:00",
+  "dev_rows": 64,
+  "fixture_cache_id": "k18-fixture-resume-b0a41233ca",
+  "full_latest_two_and_best_valid": true,
+  "production_started": false,
+  "schema": "ahr_k18_validation_v1",
+  "searched_rows": 72,
+  "sources": {
+    "00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+    "08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+    "13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+    "14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+    "15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+    "16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46",
+    "17_strength_and_speed_benchmarks.ipynb": "c4c01826a61156e44dfabeec3fb869fc12b7cc2fbc97b4eddc4920a819a28c4e",
+    "18_diagnosis_and_stronger_teacher_data.ipynb": "3e30b867cca765cd21acf802a78df83dab3b19f37a3adb9037e0055eef8157ab"
+  },
+  "status": "PASS",
+  "teacher_query": {
+    "best_action": 57,
+    "engine_model_sha256": "a1298ce1adc1dad7bd868ca962b2384cc8388ed373a00e6bae1114fa6f9e2d61",
+    "forced_action": 57,
+    "value": -0.8271957638,
+    "visits": 4
+  },
+  "teacher_turn_rows": 72,
+  "test_consumed": false,
+  "train_rows": 128,
+  "uninterrupted_resume_rows_identical": true
+}

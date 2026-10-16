@@ -1,0 +1,73 @@
+{
+  "checked": [
+    "model",
+    "initial_model_state",
+    "optimizer",
+    "scheduler",
+    "scaler",
+    "rng",
+    "sampler",
+    "optimizer_step",
+    "config",
+    "metrics",
+    "distributed",
+    "best_dev_loss"
+  ],
+  "codec": {
+    "bytes_per_token": 12,
+    "max_actions": 128,
+    "max_payload_bytes": 65536,
+    "max_tokens": 4096
+  },
+  "comparison": "bitwise equality",
+  "cuda": "13.0",
+  "device": "cuda",
+  "final_optimizer_step": 4,
+  "framework": "2.14.0+cu130",
+  "full_run": "csp05-smoke-full-6df9340f",
+  "gpu_classes": [
+    {
+      "capability": [
+        8,
+        0
+      ],
+      "name": "NVIDIA A100-SXM4-80GB"
+    },
+    {
+      "capability": [
+        8,
+        0
+      ],
+      "name": "NVIDIA A100-SXM4-80GB"
+    }
+  ],
+  "interrupted_step": 1,
+  "model": {
+    "deposit_scale": 0.1,
+    "dropout": 0.1,
+    "evaporation": 0.2,
+    "hidden_dim": 32,
+    "input_dim": 16,
+    "iterations": 2,
+    "max_iterations": 8,
+    "max_tokens": 4096,
+    "pheromone_max": 2.0,
+    "pheromone_min": -2.0,
+    "pheromone_strength": 1.0,
+    "scout_steps": 3,
+    "worker_steps": 2
+  },
+  "resumed_run": "csp05-smoke-resumed-6df9340f",
+  "separate_fresh_process_launches": 3,
+  "sources": {
+    "00_instance_setup_and_recovery.ipynb": "34337372acfb3c8ff7ef6bbea20683ef6703f584940ee1f5e7375bf86d794475",
+    "01_go_rules_and_independent_verifier.ipynb": "9aa8577677264d3c73aa6e6597799ba82f68bc49a393606efbd83ab01f8bbece",
+    "02_go_to_csp_and_qcsp.ipynb": "a862190c1cd19ae254b5fc1417c06dd2aec5d5e7fb6f1ec55d0fe33f4434f05a",
+    "03_curricula_datasets_and_splits.ipynb": "4a3e1c0f87d3d41e3191218a66b79e4d9819e8ec27909c422adf0f68388c50fa",
+    "04_native_ahr_architecture.ipynb": "5e006a200433da6d3b6c7e142018750880bd95385299b9909da3acbb452840af",
+    "05_csp_qcsp_pretraining.ipynb": "2deb9ff454a9e6571090bcd5a6636ecdd50488fecbf9c21fe6c4cf19b9802066"
+  },
+  "status": "PASS",
+  "trained_on_go": false,
+  "world_size": 2
+}

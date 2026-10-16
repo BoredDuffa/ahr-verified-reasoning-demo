@@ -1,0 +1,9 @@
+{
+  "child_terminal": true,
+  "generated_rows_affected": 0,
+  "generator_step": 265,
+  "old_predicate_status": "SAT",
+  "retained_rows": 3258,
+  "status": "CONFIRMED_EDGE_CASE",
+  "surviving_target_stones": 1
+}

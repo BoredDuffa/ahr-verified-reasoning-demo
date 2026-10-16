@@ -1,0 +1,43 @@
+{
+  "attach_command": "tmux attach -t ahr-v2-selfplay-12h",
+  "checked_at_utc": "2026-10-06T18:46:07.570223+00:00",
+  "checkpoint_path": "checkpoints/ahr-v2-selfplay-20261006-12h",
+  "checks": {
+    "checkpoint": true,
+    "cuda_training_recovery": true,
+    "evaluation_validation": true,
+    "free_storage": true,
+    "gpu": true,
+    "gpu_isolation": true,
+    "network": true,
+    "play_validation": true,
+    "pure_ahr_learning": true,
+    "rules": true,
+    "search": true,
+    "tmux": true,
+    "training_recovery": true,
+    "training_source_binding": true
+  },
+  "config_path": "config/ahr_v2_training.json",
+  "config_sha256": "f33c34550bc2f41e57f2f8c83ae58ad567d442f899e79442effbf926b5dfc473",
+  "detach_keys": "Ctrl-b, then d",
+  "launched_at_utc": "2026-10-06T18:46:07.575618+00:00",
+  "log_path": "reports/ahr_v2/ahr-v2-selfplay-20261006-12h/tmux.log",
+  "play_notebook": "experiments/ahr_v2/06_play_and_watch.ipynb",
+  "requested_hours": 12.0,
+  "resume": false,
+  "run_id": "ahr-v2-selfplay-20261006-12h",
+  "session": "ahr-v2-selfplay-12h",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/04_selfplay_and_training.ipynb": "cb9ac31e64c6e8e50e3b37e1f5745f4bdb21a550361aac7edb69552668d58688",
+    "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+    "experiments/ahr_v2/06_play_and_watch.ipynb": "35c7f6d818c68e673dfa1efabb0e6d6832904babcd25d0bab939613745d5530a",
+    "experiments/ahr_v2/07_validate_and_launch.ipynb": "27bc21fa2cfee176c98d299ad4d11ad0aa2f9d886f53cbf1b683ed814d21d301"
+  },
+  "status": "PASS",
+  "worker_notebook": "reports/ahr_v2/ahr-v2-selfplay-20261006-12h/detached_worker.ipynb"
+}

@@ -1,0 +1,36 @@
+{
+  "ahr_action": "F8",
+  "checkpoint_file": "step-000002948-324f2e5e.pt",
+  "checkpoint_sha256": "3b780e20ef33523f4465e90d00db65f8c0e4690b2a50647c2749e6858f965496",
+  "claim": "Revised production checkpoint loaded into human interface and returned a legal response; no strength claim.",
+  "counters": {
+    "atomic_batches": 16,
+    "cache_hits": 0,
+    "depth_cutoffs": 0,
+    "duplicate_reservations": 28,
+    "neural_batches": 17,
+    "neural_positions": 129,
+    "terminal_simulations": 0
+  },
+  "event_step": 2948,
+  "human_action": "E5",
+  "model_identity": "ef845648ee7cb2cc8126ce97fbb0a35f5fc3182de0f5ee9b4dc6531131bce701",
+  "optimizer_step": 8,
+  "real_visits": 128,
+  "response_seconds": 0.6728492260008352,
+  "run_id": "ahr-v2-repair-20261007-8h",
+  "schema": "ahr-go-v2-repair-main-player-integration-v1",
+  "search_status": "UNKNOWN",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/09_calibrated_selfplay_training.ipynb": "d316a791e00c5b7d585cdfc57a560c8f8d3eaf93789f44f8dcf19a53121c351b",
+    "experiments/ahr_v2/11_play_revised_player.ipynb": "057297d539964559fbec4444a0c83688d026aba4828840ef317e222b18f8f419"
+  },
+  "status": "PASS",
+  "tactical_reserved_replies": [],
+  "tactical_verified_actions": 81
+}

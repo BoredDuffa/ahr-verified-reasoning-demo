@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "changed_identity_rejected": true,
+    "corruption_rejected": true,
+    "fresh_kernel_exact_full_state": true,
+    "genuine_optimizer_steps": true,
+    "latest_two_plus_best": true,
+    "private_and_global_rng_restored": true,
+    "second_writer_rejected": true
+  },
+  "full_run": "ahr-v2-recovery-84d21ca31f-full",
+  "optimizer_updates_per_path": 8,
+  "resume_notebook": "reports/ahr_v2/fixtures/optimizer-resume-84d21ca31f.ipynb",
+  "resumed_run": "ahr-v2-recovery-84d21ca31f-resumed",
+  "scope": "Checkpoint-engine fixture only; not an AHR training result",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa"
+  },
+  "status": "PASS",
+  "validated_at_utc": "2026-10-06T17:29:12.809505+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "changed_configuration_rejected": true,
+  "checked_at_utc": "2026-09-24T14:48:53.313431+00:00",
+  "completed_stages_not_repeated": true,
+  "controller_pause_resume": true,
+  "planned_scientific_stages": 20,
+  "sources": {
+    "notebooks/00_instance_setup_and_recovery.ipynb": "b67c4f978109cc69cce9ebd7aa598f629620a6515f2193c95c40afbb6bd48f09",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb": "fd62249a4a7eb7b971cc4fc0723910334efe8654a94bf430d118561dd1ba2d75",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb": "fa86ec35800d8597588471fd4fe6d2d478f5239ab63ab4f720257d35e77e6bc9",
+    "notebooks/03_curricula_datasets_and_splits.ipynb": "872cf592fa6579c8b12e3756b2152c70a7e8b0b7d12f6de04e5a479ce0208bc5",
+    "notebooks/04_native_ahr_architecture.ipynb": "8ee7c212f6c40764cb269eef2799b0d8bf934d33ab57023dfdb1dfc5228b86fe",
+    "notebooks/05_csp_qcsp_pretraining.ipynb": "b2c97600463dcbec1a86821e18a11d13d8e6aa6a362ea1085a9dc1c03db4a6a7",
+    "notebooks/06_ahr_go_search_engine.ipynb": "140934efd0b7f3c1c6a4934c54ba05a10e675367468f1442750a2397c25eafb8",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb": "a429efb00902ced925503c03fce94cb2fb06603337ce120aa2e6802359331e4c",
+    "notebooks/08_go_specific_adaptation.ipynb": "60df8096127c902f4aff30ed7f96a51cb5abbf63355a82557f250d430a67dced",
+    "notebooks/09_selfplay_and_improvement.ipynb": "877c9cdc6f08c58ef264bb6713e6c934aaa1c0eb5ea04a677543c5c8762f1085",
+    "notebooks/10_gtp_engine_interface.ipynb": "dbffac378b276f5193b89fe65742497e2d4f65c40684e7e80037aee7b1266bb7",
+    "notebooks/11_engine_arena_and_evaluation.ipynb": "87ede02356c36b823ffb473a44756d2014a943186462f178ea70cf59f240bead",
+    "notebooks/12_play_and_watch.ipynb": "da8c4826c47707b2a394ba6cae99376bdebfab0cbafea4f072503af16a8fb900",
+    "notebooks/13_export_backup_and_restore.ipynb": "7db27ece85fe5045ca3ddb0ece77a857e88182cf31241dc08a2917fa439f5a83",
+    "reports/09_13_generation_stage_v2.ipynb": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+    "reports/09_13_generations_v2.ipynb": "f1d89b693c2161d3a3e15ec7a641351c672498d2fe1f24b0555a362d3bc2e426",
+    "reports/09_13_training_pipeline.ipynb": "f93f85ae6316b493833eaee3b4947f6b7616202478f3d0afabaa23bf973aaa3b",
+    "reports/10_v2_reference_and_latency.ipynb": "763d397a9c883bb0138c75b1411976955658c5b8c2d30452a9b4589ac93f7e9e",
+    "reports/12_v2_complete_games.ipynb": "5efe5dc3d0ecd6f219e87b2697cd8f79e942b20cb34d97ae421335d218768799"
+  },
+  "status": "PASS",
+  "training_started_by_validation": false
+}

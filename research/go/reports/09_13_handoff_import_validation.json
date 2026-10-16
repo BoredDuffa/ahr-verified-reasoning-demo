@@ -1,0 +1,8 @@
+{
+  "configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+  "recorded_at_utc": "2026-09-26T23:18:53.736759+00:00",
+  "selected_run": "go09-first-selfplay-v1",
+  "status": "PASS",
+  "training_steps": 0,
+  "validation": "Widget constructed using only exported definitions and explicit UI imports"
+}

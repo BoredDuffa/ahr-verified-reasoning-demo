@@ -1,0 +1,66 @@
+{
+  "actual_go_checkpoint_integration": {
+    "actual_model_interrupt_resume": true,
+    "arena_run": "arena11-validation-4c57fe103db8-native-f8957805",
+    "checkpoint_sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51",
+    "cross_namespace_history_preserved": true,
+    "device": "cpu",
+    "resume_scope": "fixed-work bounded actions/history/eventcursor; elapsed time excluded",
+    "run_id": "go08-initial-warmup-v2",
+    "same_checkpoint_both_sides": true,
+    "status": "PASS",
+    "status_counts": {
+      "UNKNOWN_MOVE_CAP": 2
+    },
+    "strength_claim": false,
+    "trained_optimizer_steps": 32,
+    "weights_unchanged": true
+  },
+  "board_sizes": [
+    3,
+    9
+  ],
+  "checkpoint_run": "arena11-validation-4c57fe103db8-resume",
+  "cuda_rng_devices_checked": 2,
+  "exact_resume": true,
+  "exact_resume_scope": "deterministic fixture actions, history, all recorded RNG probes and event cursor; elapsed time excluded",
+  "final_or_lockbox_read": false,
+  "fresh_process_resume": true,
+  "frozen_model_resume": true,
+  "full_chronological_history_hook": "PASS",
+  "independent_transition_verifier": true,
+  "latency_summary": "PASS",
+  "minimum_128_pairs_not_relaxable": true,
+  "nine_by_nine_completed_fixture_games": 4,
+  "optimizer_steps": 0,
+  "promotion_recommended": false,
+  "rejected_faults": [
+    "cursor",
+    "history",
+    "protocol",
+    "invented result",
+    "optimizer",
+    "weights",
+    "invalid manifest",
+    "payload hash",
+    "missing manifest",
+    "frozen mutation"
+  ],
+  "schema": "ahr11-controlled-arena-v2",
+  "sources": {
+    "00_instance_setup_and_recovery.ipynb": "4477b570d0eb6d7ab20542ff9e4ee05c0eda82c0f192d5c78c3dee17b304695f",
+    "01_go_rules_and_independent_verifier.ipynb": "fbb3a59b50faabdad8b12d7482c6e7dce822669929347e36f7091b39cf4daa87",
+    "11_engine_arena_and_evaluation.ipynb": "19993232d3678bf012ff38549e63b135eca008a7dee61b13e9d8fed01e411ca1"
+  },
+  "stateful_player_resume": true,
+  "status": "PASS",
+  "strength_status": "NOT_EVALUATED",
+  "tactical_cases": 32,
+  "tactical_suite_sha256": "91ec7515e7f03bf3dca89310b7b7d0d69f7b8f1e872239d956002fa793f30690",
+  "unknown_checks": {
+    "cap": "UNKNOWN_MOVE_CAP",
+    "illegal": "UNKNOWN_ILLEGAL_MOVE",
+    "timeout": "UNKNOWN_DEADLINE"
+  },
+  "visual_review": "HTML preview generated separately; no graphical viewer available"
+}

@@ -1,0 +1,11 @@
+{
+  "attach": "tmux attach -t ahr-v2-katago-econ20",
+  "detach": "Ctrl-b then d",
+  "pipeline_id": "ahr-v2-katago-econ-20261011-v1",
+  "resume": "Run All with identical configuration after disconnection; an intentional STOP requires explicit Resume.",
+  "session": "ahr-v2-katago-econ20",
+  "started_at_utc": "2026-10-11T12:44:13.865042+00:00",
+  "status": "STARTED",
+  "timing": "Six hours of supervised-training caps plus collection/ablation/evaluation; actual stop can be much earlier when registered updates finish.",
+  "worker_notebook": "/home/benjamin/workspace/ahr_go/reports/ahr_v2/ahr-v2-katago-econ-20261011-v1/detached_worker.ipynb"
+}

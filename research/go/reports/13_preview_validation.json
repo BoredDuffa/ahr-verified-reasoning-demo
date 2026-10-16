@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "notebook": "notebooks/13_export_backup_and_restore.ipynb",
+  "code_cells": 6,
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "cell_errors": 0,
+  "tagged_definition_only_import": "PASS",
+  "html_preview": "reports/13_export_restore_preview.html",
+  "html_sha256": "9efeaea76454bddd1bdf925ec43ab1b0594ada7568a4d24a43f60419c5af3b69",
+  "html_structure_review": "PASS",
+  "headings": [
+    "13 \u2014 Export, backup and restore\u00b6",
+    "Goal\u00b6",
+    "Setup\u00b6",
+    "Package a fixed checkpoint\u00b6",
+    "Verify and restore safely\u00b6",
+    "Optional off-instance copy\u00b6",
+    "Checks\u00b6",
+    "Run the local handoff\u00b6",
+    "Exact continuation and handoff\u00b6",
+    "Result\u00b6"
+  ],
+  "graphical_review": "NOT_PERFORMED: browser notebook/widget viewer unavailable; open HTML preview to inspect at reading size."
+}

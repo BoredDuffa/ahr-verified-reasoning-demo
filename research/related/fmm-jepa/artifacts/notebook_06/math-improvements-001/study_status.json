@@ -1,0 +1,25 @@
+{
+  "stage": "complete",
+  "status": "COMPLETED",
+  "updated_unix": 1790789531.3012753,
+  "elapsed_seconds": 7597.744743585587,
+  "updates": 400,
+  "seeds": [
+    20261001,
+    20261002,
+    20261003
+  ],
+  "variants": [
+    "vit",
+    "stable",
+    "centered_tree"
+  ],
+  "feature_counts": [
+    64,
+    16,
+    16,
+    32
+  ],
+  "heldout_status": "NOT_RUN",
+  "results": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_06/math-improvements-001/stages/learning/stage_results.md"
+}

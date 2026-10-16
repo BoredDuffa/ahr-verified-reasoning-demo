@@ -1,0 +1,143 @@
+{
+  "config": {
+    "stages": [
+      {
+        "env": {},
+        "name": "selfplay",
+        "notebook": "reports/09_first_selfplay_run.ipynb",
+        "require": "selfplay_complete"
+      },
+      {
+        "env": {
+          "AHR11_CANDIDATE_ARENA_RUN": "arena11-first-selfplay-v1",
+          "AHR11_CANDIDATE_BLOCKS": "32",
+          "AHR11_CANDIDATE_DEVICE": "cuda:1",
+          "AHR11_CANDIDATE_MAX_PLIES": "256",
+          "AHR11_CANDIDATE_MODE": "evaluate",
+          "AHR11_CANDIDATE_RUN": "go09-first-selfplay-v1",
+          "AHR11_CANDIDATE_SECONDS": "1.0",
+          "AHR11_REFERENCE_RUN": "go08-initial-warmup-v2"
+        },
+        "name": "arena",
+        "notebook": "reports/11_first_candidate_evaluation.ipynb",
+        "require": "arena_finished"
+      },
+      {
+        "env": {
+          "AHR12_DEVICE": "cpu",
+          "AHR12_RUN_ID": "go09-first-selfplay-v1",
+          "AHR12_SELECTION": "latest",
+          "AHR12_SESSION_ID": "play12-first-selfplay"
+        },
+        "name": "play_interface",
+        "notebook": "notebooks/12_play_and_watch.ipynb",
+        "require": "play_validated"
+      },
+      {
+        "env": {},
+        "name": "progress_report",
+        "notebook": "reports/09_11_training_progress.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHR13_EXTRA_FILES": "[\"reports/09_first_selfplay_run.ipynb\", \"reports/09_first_selfplay_results.json\", \"reports/11_first_candidate_evaluation.ipynb\", \"reports/11_first_candidate_evaluation_results.json\", \"reports/09_13_training_pipeline.ipynb\", \"reports/09_11_training_progress.ipynb\", \"reports/09_11_progress.png\", \"reports/09_11_progress_snapshot.json\"]",
+          "AHR13_RUN_ID": "go09-first-selfplay-v1",
+          "AHR13_SELECTION": "latest"
+        },
+        "name": "bundle",
+        "notebook": "notebooks/13_export_backup_and_restore.ipynb",
+        "require": "process_success"
+      }
+    ]
+  },
+  "controller_pid": 126572,
+  "current": null,
+  "global_step": 9,
+  "identity": "6ab6a3d1dc47a660f26a95ba062c26d3c0bfbfd21ea13f1484db793e4abf70c4",
+  "metrics": {
+    "completed_stages": 5
+  },
+  "migration": {
+    "changed_sources": [
+      "notebooks/13_export_backup_and_restore.ipynb"
+    ],
+    "evaluation_report_sha256": "a972bf312f8915f71a1a98c50371dea8022d1d4a3aa31c8c4dfac3ee5cba7828",
+    "from_global_step": 2065,
+    "from_identity": "e424285c773fc530dd05f11def744f8984704a130ebf9ba6e1debe84b20d64b9",
+    "from_run_id": "pipeline09-13-v1",
+    "reason": "Allow the generated PNG report in the final export; preserve four completed stages",
+    "training_manifest_sha256": "af47d4fcb6e5b4b88da1ed5e04ad3009b4f34734c4eef09f8b3057f5c535fc3b"
+  },
+  "run_id": "pipeline09-13-export-repair-v1",
+  "sampler": {
+    "stage_index": 5
+  },
+  "schema": "ahr_pipeline_v1",
+  "scientific_state": "Stored in the child run manifests; this controller performs no training itself",
+  "source_identity": {
+    "controller": "f93f85ae6316b493833eaee3b4947f6b7616202478f3d0afabaa23bf973aaa3b",
+    "stage_sources": {
+      "notebooks/12_play_and_watch.ipynb": "99d74bcc6568e021594f929e7d6370aaa81287ed39b3664ce758e87e71bc3437",
+      "notebooks/13_export_backup_and_restore.ipynb": "7db27ece85fe5045ca3ddb0ece77a857e88182cf31241dc08a2917fa439f5a83",
+      "reports/09_11_training_progress.ipynb": "d11482b4daa507590e3753d278623bef9d52f846e83e60121fde63ad0b0d75fb",
+      "reports/09_first_selfplay_run.ipynb": "0dcdcf168510dcd14cee99caec591be5637f12d56f0454411a6facbb1051f35a",
+      "reports/11_first_candidate_evaluation.ipynb": "bfebbf0c024af70d44851a9302d5359ae549960f91db6b8853f79eafe7f897b4"
+    }
+  },
+  "stage_index": 5,
+  "stage_records": [
+    {
+      "log": "reports/pipeline09-13-v1-selfplay.log",
+      "name": "selfplay",
+      "notebook": "reports/09_first_selfplay_run.ipynb",
+      "pid": 69587,
+      "process_token": "6639819",
+      "returncode": 0,
+      "source_sha256": "0dcdcf168510dcd14cee99caec591be5637f12d56f0454411a6facbb1051f35a",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline09-13-v1-arena.log",
+      "name": "arena",
+      "notebook": "reports/11_first_candidate_evaluation.ipynb",
+      "pid": 114336,
+      "process_token": "12526104",
+      "returncode": 0,
+      "source_sha256": "bfebbf0c024af70d44851a9302d5359ae549960f91db6b8853f79eafe7f897b4",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline09-13-v1-play_interface.log",
+      "name": "play_interface",
+      "notebook": "notebooks/12_play_and_watch.ipynb",
+      "pid": 116298,
+      "process_token": "12743165",
+      "returncode": 0,
+      "source_sha256": "99d74bcc6568e021594f929e7d6370aaa81287ed39b3664ce758e87e71bc3437",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline09-13-v1-progress_report.log",
+      "name": "progress_report",
+      "notebook": "reports/09_11_training_progress.ipynb",
+      "pid": 116350,
+      "process_token": "12745341",
+      "returncode": 0,
+      "source_sha256": "d11482b4daa507590e3753d278623bef9d52f846e83e60121fde63ad0b0d75fb",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline09-13-export-repair-v1-bundle.log",
+      "name": "bundle",
+      "notebook": "notebooks/13_export_backup_and_restore.ipynb",
+      "pid": 126622,
+      "process_token": "13960284",
+      "returncode": 0,
+      "source_sha256": "7db27ece85fe5045ca3ddb0ece77a857e88182cf31241dc08a2917fa439f5a83",
+      "status": "COMPLETE"
+    }
+  ],
+  "status": "COMPLETE",
+  "updated_at_utc": "2026-09-24T13:55:16.803228+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PATCHED_PENDING_REGRESSION",
+  "old_source_sha256": "8082c0c389e40721101b140b4cf0b5fa3bd27f14a9f7ea379ceffe3b5ef63212",
+  "new_source_sha256": "6c5179db1adf8e886ac2115004400618e170c5250afce752728fce9b70560ee0",
+  "old_source_path": "experiments/ahr_native_v5/data/runtime_migrations/first-gate-1790960103/old_03_learning.ipynb",
+  "change": "Use [-500:] history slice, not [-500] single indexing; append read-only actual-1000-row regression definition; no optimizer or search changes"
+}

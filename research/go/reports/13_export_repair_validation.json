@@ -1,0 +1,15 @@
+{
+  "archive": "/home/benjamin/workspace/ahr_go/exports/bundles/go09-first-selfplay-v1-54c35167b33c.tar.gz",
+  "archive_sha256": "511c41b54f4173036abe12f83e2e977043a128efe5776acfd0e89653b7c5f48f",
+  "completed_stages_preserved": 4,
+  "evaluation_report_unchanged": true,
+  "final_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+  "new_controller_run": "pipeline09-13-export-repair-v1",
+  "off_instance_backup": "PENDING_DESTINATION",
+  "original_failed_controller_run": "pipeline09-13-v1",
+  "repaired_stage": "bundle",
+  "restore_validation": "PASS",
+  "selected_optimizer_step": 512,
+  "status": "PASS",
+  "training_manifest_unchanged": true
+}

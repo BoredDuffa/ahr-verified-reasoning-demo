@@ -1,0 +1,16 @@
+{
+  "active_seconds": 3.865397238994774,
+  "current_ply": 10,
+  "device": "cuda:1",
+  "event_step": 41,
+  "note": "Bounded9x9probeonly; incompletegame UNKNOWN nooutcome labels",
+  "run_id": "ahr-v2-9x9-throughput-probe-60230c8a",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/04_selfplay_and_training.ipynb": "e13567b5c777daf6b6dcf98e3ea0120257a42cb29285f5a900d22d73f4938e79"
+  },
+  "wall_seconds": 5.598818102000223
+}

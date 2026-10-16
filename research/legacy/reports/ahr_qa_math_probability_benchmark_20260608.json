@@ -1,0 +1,2482 @@
+{
+  "by_category": {
+    "balls_both_red": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "bayes_disease": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "birthday_23": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "card_king_or_heart": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "coin_exactly_two_heads": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "coin_random_variable": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "conditional_aces": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "dice_sum_seven": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "die_until_six": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "monty_hall": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "prisoners": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "three_boxes": {
+      "correct": 10,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 10,
+      "wrong": 0
+    },
+    "unsupported_controls": {
+      "correct": 0,
+      "correct_abstain": 24,
+      "not_answered": 0,
+      "total": 24,
+      "wrong": 0
+    }
+  },
+  "by_difficulty": {
+    "advanced": {
+      "correct": 30,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 30,
+      "wrong": 0
+    },
+    "basic": {
+      "correct": 30,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 30,
+      "wrong": 0
+    },
+    "control": {
+      "correct": 0,
+      "correct_abstain": 24,
+      "not_answered": 0,
+      "total": 24,
+      "wrong": 0
+    },
+    "intermediate": {
+      "correct": 30,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 30,
+      "wrong": 0
+    },
+    "very_challenging": {
+      "correct": 30,
+      "correct_abstain": 0,
+      "not_answered": 0,
+      "total": 30,
+      "wrong": 0
+    }
+  },
+  "clinical_use": "forbidden",
+  "created_at_unix": 1780934682.210093,
+  "created_at_utc": "2026-06-08T16:04:42Z",
+  "failures": [],
+  "kind": "ahr_qa_math_probability_benchmark",
+  "results": [
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_001",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "A fair coin is tossed 3 times. What is the probability of getting exactly 2 heads?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_002",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "If I flip a fair coin three times, what is P(exactly two heads)?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_003",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "Three fair coin tosses are made. Find the chance of seeing exactly two H outcomes.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_004",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "In 3 independent tosses of a fair coin, compute the probability of exactly 2 heads.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_005",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "A fair coin is flipped three times; what fraction of outcomes have precisely two heads?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_006",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "For three tosses of an unbiased coin, how likely are exactly two heads?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_007",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "Coin toss question: out of 3 fair flips, probability of exactly two heads?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_008",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "What is C(3,2)/2^3 as the probability for exactly two heads in three fair coin tosses?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_009",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "A fair coin lands heads/tails with equal chance. Toss it 3 times. Probability of exactly 2 heads?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_exactly_two_heads_010",
+      "category": "coin_exactly_two_heads",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "3/8"
+      ],
+      "expected_id": "probability_coin_exactly_two_heads",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 3/8 = 0.375000.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_exactly_two_heads",
+      "question": "Basic probability: fair coin tossed three times, exactly two heads.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_001",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "A fair six-sided die is rolled twice. What is the probability that the sum is 7?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_002",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "Roll two fair d6 dice. What is P(total = 7)?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_003",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "Two six-sided dice are rolled; calculate the chance the sum equals seven.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_004",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "If a fair die is rolled twice, how likely is a total of 7?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_005",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "Find the probability that two independent fair die rolls add to 7.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_006",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "What fraction of ordered pairs on two dice sum to 7?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_007",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "Dice roll: fair six-sided die twice, sum is seven.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_008",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "For two fair dice, what is the chance of one of the six pairs that total 7?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_009",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "A d6 is rolled two times. Probability the two results sum to 7?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "dice_sum_seven_010",
+      "category": "dice_sum_seven",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "1/6"
+      ],
+      "expected_id": "probability_dice_sum_seven",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 0.166667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_dice_sum_seven",
+      "question": "Compute P(sum 7) for two rolls of a fair six-sided die.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_001",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "A card is drawn from a standard 52-card deck. What is the probability of drawing a king or a heart?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_002",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "From a 52-card deck, what is P(king or heart)?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_003",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "One standard deck card is selected. Chance it is either a king or a heart?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_004",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "Draw one card from 52. What fraction are kings or hearts?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_005",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "Probability that a single card is a heart or one of the kings?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_006",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "In a normal deck, what is the chance of drawing a king or a heart?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_007",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "Cards: standard 52-card deck, event is king union heart.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_008",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "Use inclusion-exclusion for one card: king or heart from a 52-card deck.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_009",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "A random card is drawn. How likely is it to be a king or belong to hearts?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "card_king_or_heart_010",
+      "category": "card_king_or_heart",
+      "difficulty": "basic",
+      "expected_answer_contains": [
+        "4/13"
+      ],
+      "expected_id": "probability_card_king_or_heart",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 4/13 = 0.307692.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_card_king_or_heart",
+      "question": "Find P(king OR heart) for a standard deck.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_001",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "A bag contains 5 red, 3 blue, and 2 green balls. Two balls are drawn without replacement. What is the probability that both are red?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_002",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "From a bag with 5 red, 3 blue, 2 green balls, draw two without replacement. Chance both red?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_003",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "There are ten balls: 5 red, 3 blue, and 2 green. What is P(two red in two draws without replacement)?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_004",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "If I sample two balls without replacement from 5R/3B/2G, probability both are red?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_005",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "Bag problem: 5 red, 3 blue, 2 green; two draws, no replacement; both red.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_006",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "Compute (5/10)*(4/9) for drawing two red balls from a 5 red, 3 blue, 2 green bag.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_007",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "A bag has 5 red balls plus 5 non-red balls. Two are drawn without replacement. Probability both are red?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_008",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "What fraction of unordered pairs from 5 red, 3 blue, and 2 green balls are both red?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_009",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "Two balls are drawn without replacement from 5 red, 3 blue, 2 green. Find chance both red.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "balls_both_red_010",
+      "category": "balls_both_red",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "2/9"
+      ],
+      "expected_id": "probability_balls_both_red",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/9 = 0.222222.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_balls_both_red",
+      "question": "Intermediate probability: both drawn balls are red from a 5/3/2 colored bag.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_001",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "Two cards are drawn from a deck without replacement. Given that the first card is an ace, what is the probability that the second card is also an ace?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_002",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "If the first card drawn is an ace, what is P(second ace) when drawing two cards without replacement?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_003",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "Two cards, no replacement. Condition on first being ace. Chance second is ace?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_004",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "A deck has 52 cards. After drawing an ace first, probability the next card is another ace?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_005",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "Given first card is an ace, how many remaining aces over remaining cards for the second draw?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_006",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "Conditional probability: first card ace, second card ace without replacement.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_007",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "Draw two cards. Knowing the first is ace, find probability second is also ace.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_008",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "After one ace is removed from the deck, what is the probability the next card is ace?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_009",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "Cards without replacement: P(second ace | first ace).",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "conditional_aces_010",
+      "category": "conditional_aces",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/17"
+      ],
+      "expected_id": "probability_second_ace_given_first_ace",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/17 = 0.058824.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_second_ace_given_first_ace",
+      "question": "Given an ace appeared first, compute the probability of an ace on draw two.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_001",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "A disease affects 1% of a population. A test has 99% sensitivity and 95% specificity. If a person tests positive, what is the probability they actually have the disease?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_002",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "Disease prevalence is 1%, sensitivity 99%, specificity 95%. What is P(disease | positive test)?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_003",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "Bayes theorem: 1% base rate, 99% true positive, 95% true negative; after a positive, probability sick?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_004",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "A medical test has 99% sensitivity and 95% specificity for a disease with 1% prevalence. Find posterior probability given positive.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_005",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "If 1 in 100 have a disease, test sensitivity 99 and specificity 95 percent, what fraction of positives are true cases?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_006",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "Bayesian screening: prevalence 0.01, sensitivity 0.99, specificity 0.95, compute P(disease given positive).",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_007",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "Positive test probability problem with 1% disease rate, 99% sensitivity, 95% specificity.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_008",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "What is the chance someone actually has the disease after a positive test when prevalence is 1%, sensitivity 99%, specificity 95%?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_009",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "Use Bayes: disease affects 1%, true positive rate 99%, true negative rate 95%, observed positive.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "bayes_disease_010",
+      "category": "bayes_disease",
+      "difficulty": "intermediate",
+      "expected_answer_contains": [
+        "1/6",
+        "16.6667%"
+      ],
+      "expected_id": "probability_bayes_disease_positive",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 1/6 = 16.6667%.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_bayes_disease_positive",
+      "question": "Compute posterior disease probability for a positive result under 1% prevalence, 99% sensitivity, 95% specificity.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_001",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "In a room of 23 people, what is the probability that at least two people share the same birthday?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_002",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "Birthday problem: for 23 people, chance of a shared birthday?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_003",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "Assuming 365 equally likely birthdays, compute P(at least one match) among 23 people.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_004",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "What is the probability of at least two same birthdays in a group of 23?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_005",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "For 23 independent birthdays, no leap years, chance some pair shares a birthday?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_006",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "Classic birthday paradox with 23 people: probability at least one duplicate birthday.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_007",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "Room of twenty-three people: calculate probability two or more share a birthday.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_008",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "Use 1 - product formula for 23 birthdays to get at least one shared birthday.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_009",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "In 23 people, what is the approximate shared-birthday probability?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "birthday_23_010",
+      "category": "birthday_23",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "0.507297"
+      ],
+      "expected_id": "probability_birthday_23",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is approximately 0.507297.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_birthday_23",
+      "question": "Advanced probability: birthday match in a room of 23.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_001",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "There are 3 doors. One contains a car and two contain goats. You pick one door. The host opens another door showing a goat. Should you switch? What is the probability of winning if you switch?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_002",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "Monty Hall: 3 doors, one car, host reveals a goat. Should I switch and what is my win probability?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_003",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "In the three-door Monty Hall problem, after a goat door is opened, what is P(win by switching)?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_004",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "You choose one of 3 doors, host opens a goat door. Is switching better? Give probability.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_005",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "Car behind one of three doors, host shows goat after your pick. Probability of winning if you switch?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_006",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "Monty Hall probability: stay versus switch after host reveals goat.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_007",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "Should the contestant switch doors in Monty Hall? What chance of car if switching?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_008",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "Three doors, two goats, one car; host opens non-car door. What is switch-win probability?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_009",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "What is the optimal Monty Hall strategy and its probability?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "monty_hall_010",
+      "category": "monty_hall",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_monty_hall_switch",
+      "expected_id_ok": true,
+      "observed_answer": "Yes, switch. The probability of winning by switching is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_monty_hall_switch",
+      "question": "Advanced probability: Monty Hall with 3 doors, host opens goat, calculate switching odds.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_001",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "Let X be the number of heads obtained when flipping 5 fair coins. Find P(X=3), E[X], and Var(X).",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_002",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "For X ~ Binomial(5, 1/2), compute P(X=3), expectation, and variance.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_003",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "Flip five fair coins. If X counts heads, what are P(X=3), E[X], Var(X)?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_004",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "Random variable X is heads in 5 coin flips. Find probability of 3 heads, mean, and variance.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_005",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "Five unbiased coin flips: compute P exactly 3 heads plus E and Var of head count.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_006",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "Let X count successes in 5 fair Bernoulli trials. Give P(X=3), expected value, variance.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_007",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "Binomial random variable for 5 fair coins: P(X equals 3), E[X], Var(X).",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_008",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "What are P(X=3), E[X], and Var(X) if X is number of heads in 5 fair tosses?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_009",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "For five fair coin tosses, head-count distribution question: P3, mean, variance.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "coin_random_variable_010",
+      "category": "coin_random_variable",
+      "difficulty": "advanced",
+      "expected_answer_contains": [
+        "5/16",
+        "2.5",
+        "1.25"
+      ],
+      "expected_id": "probability_coin_random_variable",
+      "expected_id_ok": true,
+      "observed_answer": "P(X=3)=5/16 = 0.312500; E[X]=2.5; Var(X)=1.25.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_coin_random_variable",
+      "question": "Random variables: heads from flipping 5 fair coins; calculate P(X=3), E, Var.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_001",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "Box A contains 2 gold coins. Box B contains 2 silver coins. Box C contains 1 gold and 1 silver coin. A box is chosen at random, and one coin drawn is gold. What is the probability the other coin in the box is also gold?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_002",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "Three boxes puzzle: GG, SS, GS. Pick a box and draw a gold coin. Probability the other coin is gold?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_003",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "Boxes contain two gold, two silver, and mixed gold/silver. Given the observed coin is gold, chance the partner coin is gold?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_004",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "A box is selected randomly from GG, SS, GS; a random coin from it is gold. What is P(box is GG)?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_005",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "Bertrand box paradox: after drawing a gold coin, probability remaining coin in box is gold.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_006",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "One of three boxes is chosen: gold-gold, silver-silver, gold-silver. Drawn coin is gold; probability other is gold?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_007",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "Conditional probability with three boxes A=GG, B=SS, C=GS; observed gold coin. Find chance other coin gold.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_008",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "The drawn coin is gold from the classic three boxes puzzle. Is the other coin gold with what probability?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_009",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "Three boxes: 2G, 2S, 1G1S. Given one coin drawn is gold, probability same box contains another gold coin?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "three_boxes_010",
+      "category": "three_boxes",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "2/3"
+      ],
+      "expected_id": "probability_three_boxes",
+      "expected_id_ok": true,
+      "observed_answer": "The probability is 2/3 = 0.666667.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_three_boxes",
+      "question": "Very challenging probability: solve the three boxes gold coin puzzle.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_001",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "100 prisoners and 100 numbered boxes. Each prisoner may open 50 boxes. What strategy maximizes their survival probability?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_002",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "In the 100 prisoners 100 boxes problem, each opens 50 boxes. State the optimal strategy and survival probability.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_003",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "Prisoners problem: 100 prisoners, 100 boxes, 50 opens each. What is the best strategy?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_004",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "What strategy gives the highest chance in the 100 prisoners and boxes puzzle, and what is that chance approximately?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_005",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "For 100 prisoners each allowed to open half the boxes, explain cycle-following strategy and probability of success.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_006",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "How do 100 prisoners maximize survival when each can inspect 50 of 100 boxes?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_007",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "Classic 100 prisoners puzzle: give optimal cycle strategy and group success probability.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_008",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "100 numbered boxes and 100 prisoners; each may open 50. What survival strategy maximizes probability?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_009",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "What is the probability of all prisoners surviving using the best known cycle strategy in the 100 boxes problem?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "prisoners_010",
+      "category": "prisoners",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "0.311828"
+      ],
+      "expected_id": "probability_100_prisoners_strategy",
+      "expected_id_ok": true,
+      "observed_answer": "Use the cycle-following strategy. The group survival probability is about 0.311828.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_100_prisoners_strategy",
+      "question": "Very challenging probability: solve the 100 prisoners / 100 boxes strategy problem.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_001",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "You repeatedly roll a fair die until a 6 appears. What is the expected number of rolls?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_002",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "Expected value: roll a fair die until the first six. How many rolls on average?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_003",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "For a geometric process with success rolling 6 on a fair die, what is the expected waiting time?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_004",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "A fair d6 is rolled until a 6 appears. Find E[number of rolls].",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_005",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "How many rolls should we expect before the first 6 with a fair six-sided die?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_006",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "Repeatedly roll a die until success is face 6. Compute expected rolls.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_007",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "Expected number of trials to get a 6 on a fair die?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_008",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "Fair die, stop at first six. What is the expectation?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_009",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "Geometric distribution p=1/6: expected count of rolls until first success?",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "die_until_six_010",
+      "category": "die_until_six",
+      "difficulty": "very_challenging",
+      "expected_answer_contains": [
+        "6"
+      ],
+      "expected_id": "probability_expected_die_until_six",
+      "expected_id_ok": true,
+      "observed_answer": "The expected number of rolls is 6.",
+      "observed_backend_type": "exact probability calculator",
+      "observed_id": "probability_expected_die_until_six",
+      "question": "Very challenging expected value: die rolls until a 6 appears.",
+      "status": "correct"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_001",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A biased coin has unknown probability p of heads. It is tossed 10 times and lands heads 7 times. What is p exactly?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_002",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A bag has red and blue balls in an unknown ratio. After seeing one red, give the exact probability of red next without any prior.",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_003",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "What is the probability that a random real number selected uniformly from all real numbers is positive?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_004",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A six-sided die is loaded but the loading is not specified. What is the probability of rolling a 6?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_005",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A deck has some cards removed, but we do not know which. What is the probability the next card is an ace?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_006",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "Choose the simplest sequence rule for 2, 4, 8, 15, 26 and predict the next term.",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_007",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A test has unknown sensitivity and specificity. If someone tests positive, what is the probability of disease?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_008",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A box contains an unknown number of gold and silver coins. One drawn coin is gold. What is the probability the next is gold?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_009",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A random graph is generated by an unspecified distribution. What is the probability it is connected?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_010",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A person may or may not be lying with unknown probability. What is the probability their statement is true?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_011",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A coin is fair unless it is biased, but no prior is given. What is the probability of heads on the next toss?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_012",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A puzzle asks for the most elegant proof of an unstated theorem. Give the exact answer.",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_013",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. The prompt leaves a necessary probability model unspecified.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A die has faces with unknown probabilities. It was rolled twice and summed to 7. What is the exact probability of sum 7 next?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_014",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A disease prevalence is unknown and the test accuracy is unknown. What is P(disease | positive)?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_015",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. The prompt leaves a necessary probability model unspecified.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A card is drawn from a nonstandard deck whose composition is not given. What is P(king or heart)?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_016",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A process stops eventually with unknown stopping distribution. What is the expected stopping time?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_017",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A random variable X has unknown distribution but mean appears near 5 from samples. What is Var(X) exactly?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_018",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "There are many possible generating functions through these points. Which is the true one without assumptions?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_019",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. The prompt leaves a necessary probability model unspecified.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A host opens a door but may follow an unknown strategy. What is the exact Monty Hall switching probability?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_020",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "An urn has 100 balls with colors assigned by an unknown adversary. After observations, give a unique exact Bayesian posterior without a prior.",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_021",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A black-box model answers yes 60% on a hidden dataset. What is its true accuracy exactly?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_022",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A shuffled deck is missing an unknown card. What is the probability of drawing a heart?",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_023",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A probability problem omits whether replacement occurs. Give the exact numerical answer.",
+      "status": "correct_abstain"
+    },
+    {
+      "answer_ok": true,
+      "case_id": "unsupported_controls_024",
+      "category": "unsupported_controls",
+      "difficulty": "control",
+      "expected_answer_contains": [
+        "does not have a verified backend"
+      ],
+      "expected_id": "unsupported_question",
+      "expected_id_ok": true,
+      "observed_answer": "This live demo does not have a verified backend for the pasted question. It currently supports the ten boss_demo prompt families.",
+      "observed_backend_type": "router abstention",
+      "observed_id": "unsupported_question",
+      "question": "A fair-looking coin may be double-headed with unknown chance. What is the probability of heads?",
+      "status": "correct_abstain"
+    }
+  ],
+  "summary": {
+    "answered_accuracy": 1.0,
+    "correct": 120,
+    "correct_abstain": 24,
+    "not_answered": 0,
+    "overall_strict_score": 1.0,
+    "total": 144,
+    "wrong": 0
+  }
+}

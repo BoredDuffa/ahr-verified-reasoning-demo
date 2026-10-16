@@ -1,0 +1,8 @@
+{
+  "elapsed_s": 404.87,
+  "record_count": 50,
+  "records_path": "datasets/lean_ahr_v2_18_retrieval50_final_records.jsonl",
+  "run_name": "lean_ahr_v2_18_retrieval50_final",
+  "schema": "ahr_lean_v2_18_retrieval50_report",
+  "success_count": 50
+}

@@ -1,0 +1,286 @@
+{
+  "checked_utc": "2026-09-23T15:13:02.556094+00:00",
+  "checks": {
+    "checkpoint": {
+      "checkpoint_micro_step": 1,
+      "continuation_micro_steps": 7,
+      "exact_resume": true,
+      "manifest": "/home/benjamin/workspace/ahr_go/checkpoints/architecture-04-theory-c722ae51bf8c/manifest.json",
+      "metrics": {
+        "exact_resume": true,
+        "optimizer_steps": 0,
+        "recurrent_iteration": 1,
+        "recurrent_micro_step": 8,
+        "stage": "complete"
+      },
+      "optimizer_steps": 0,
+      "reference_parameter_digest": "75039b113d2589b536fba229e191fe71c001f275b99cea2a4351538010ea29bd",
+      "resume_cell": "04: Architecture checkpoint validation \u2014 Run All (AHR04_PHASE=resume)",
+      "resumed_from_stage": 3,
+      "retained_stages": [
+        1,
+        2,
+        3
+      ],
+      "run_id": "architecture-04-theory-c722ae51bf8c",
+      "validation_stage": 3
+    },
+    "checkpoint_fault_rejections": [
+      "malformed_manifest",
+      "hash_mismatch",
+      "missing_manifest",
+      "second_writer",
+      "invalid_latest_pointer",
+      "missing_provenance",
+      "changed_provenance",
+      "changed_config",
+      "changed_fixture",
+      "inconsistent_recurrence_cursor",
+      "missing_partial_summary",
+      "prototype_schema",
+      "restore_input_digest",
+      "restore_config_digest",
+      "restore_pheromone_bound",
+      "restore_state_dtype"
+    ],
+    "definition_only_import": {
+      "export_cells": 7,
+      "passed": true,
+      "upstream_workflows_executed": 0
+    },
+    "devices": [
+      {
+        "bfloat16_autocast": false,
+        "device": "cpu",
+        "gradient_norms": {
+          "encoder": 0.8440898545086384,
+          "initial_queen": 0.026041504926979542,
+          "memory": 0.46790502965450287,
+          "queen": 1.1363136139698327,
+          "reset_scout": 0.03287624008953571,
+          "reset_worker": 0.02259966731071472,
+          "scout": 1.6681714401056524,
+          "worker": 1.5460308389738202
+        },
+        "optimizer_steps": 0,
+        "parameter_tensors_with_finite_nonzero_gradient": 47,
+        "passed": true,
+        "same_device_save_load_bitwise": true,
+        "weights_unchanged": true
+      },
+      {
+        "bfloat16_autocast": true,
+        "device": "cuda:0",
+        "gradient_norms": {
+          "encoder": 0.85341477394104,
+          "initial_queen": 0.027601932175457478,
+          "memory": 0.46602822467684746,
+          "queen": 1.1378302536904812,
+          "reset_scout": 0.03387050703167915,
+          "reset_worker": 0.022859676741063595,
+          "scout": 1.7248570413212292,
+          "worker": 1.5517613543197513
+        },
+        "optimizer_steps": 0,
+        "parameter_tensors_with_finite_nonzero_gradient": 47,
+        "passed": true,
+        "same_device_save_load_bitwise": true,
+        "weights_unchanged": true
+      },
+      {
+        "bfloat16_autocast": true,
+        "device": "cuda:1",
+        "gradient_norms": {
+          "encoder": 0.85341477394104,
+          "initial_queen": 0.027601932175457478,
+          "memory": 0.46602822467684746,
+          "queen": 1.1378302536904812,
+          "reset_scout": 0.03387050703167915,
+          "reset_worker": 0.022859676741063595,
+          "scout": 1.7248570413212292,
+          "worker": 1.5517613543197513
+        },
+        "optimizer_steps": 0,
+        "parameter_tensors_with_finite_nonzero_gradient": 47,
+        "passed": true,
+        "same_device_save_load_bitwise": true,
+        "weights_unchanged": true
+      }
+    ],
+    "formal_controller": {
+      "ascending_order_transitions": 14,
+      "descending_order_transitions": 4,
+      "exhaustion_remains_unknown": true,
+      "final_audit_included_in_deadline": true,
+      "hard_energy_beats_arbitrary_soft_reward": true,
+      "learned_callback_changes_action_order": true,
+      "pruning_and_selection_effects_checked": true,
+      "six_qws_clauses_reject_invalid_actions": true,
+      "strict_transition_tamper_rejected": true,
+      "synthetic_only": true,
+      "training_steps": 0,
+      "verification_precedes_acceptance": true,
+      "verified_assignment": [
+        1,
+        1
+      ],
+      "verifier_bound_to_problem_and_worker": true,
+      "zero_budget_and_deadline_return_unknown": true
+    },
+    "gradient_through_explicit_state": true,
+    "invalid_input_rejections": [
+      "micro_steps_True",
+      "micro_steps_0",
+      "micro_steps_-1",
+      "micro_steps_1.5",
+      "micro_steps_10000",
+      "two_step_units",
+      "integer_input",
+      "wrong_dimension",
+      "float_mask",
+      "all_masked",
+      "empty_actions",
+      "padded_action",
+      "target_leak",
+      "cursor",
+      "configuration",
+      "shape",
+      "nan",
+      "pheromone_bound",
+      "other_task_state",
+      "{'hidden_dim': 1}",
+      "{'evaporation': 0}",
+      "{'evaporation': 2}",
+      "{'dropout': nan}",
+      "{'scout_steps': True}",
+      "{'max_iterations': 1000}"
+    ],
+    "neural_controller_integration": [
+      {
+        "assignment": [
+          1,
+          1
+        ],
+        "elapsed_seconds": 0.1213,
+        "finite_soft_energy": -4.025717922253534,
+        "fixture": "synthetic_unique",
+        "hard_energy_zero": true,
+        "reason": "independently verified certificate",
+        "status": "SAT",
+        "transitions": 14
+      },
+      {
+        "assignment": [
+          1,
+          0,
+          1
+        ],
+        "elapsed_seconds": 0.0697,
+        "finite_soft_energy": -1.0771630683448166,
+        "fixture": "synthetic_alternating",
+        "hard_energy_zero": true,
+        "reason": "independently verified certificate",
+        "status": "SAT",
+        "transitions": 8
+      },
+      {
+        "assignment": null,
+        "elapsed_seconds": 0.1171,
+        "finite_soft_energy": -2.424589521251619,
+        "fixture": "synthetic_empty",
+        "hard_energy_zero": false,
+        "reason": "frontier exhausted; abstention",
+        "status": "UNKNOWN",
+        "transitions": 14
+      }
+    ],
+    "theory_mechanisms": {
+      "clamp_and_carry": true,
+      "mid_scout_split_bitwise": true,
+      "padding_and_sample_isolation": true,
+      "parameters_independent_of_depth": true,
+      "pre_update_deposit": true,
+      "published_prior_example": [
+        0.6,
+        0.4
+      ],
+      "role_counts": {
+        "queen_update": 2,
+        "scout_reset": 4,
+        "scout_update": 12,
+        "worker_reset": 2,
+        "worker_update": 4
+      }
+    }
+  },
+  "config": {
+    "deposit_scale": 0.1,
+    "dropout": 0.1,
+    "evaporation": 0.2,
+    "hidden_dim": 32,
+    "input_dim": 16,
+    "iterations": 2,
+    "max_iterations": 8,
+    "max_tokens": 256,
+    "pheromone_max": 2.0,
+    "pheromone_min": -2.0,
+    "pheromone_strength": 1.0,
+    "scout_steps": 3,
+    "worker_steps": 2
+  },
+  "datasets_opened": [],
+  "elapsed_seconds": 5.502,
+  "environment": {
+    "cuda": "13.0",
+    "gpu_names": [
+      "NVIDIA A100-SXM4-80GB",
+      "NVIDIA A100-SXM4-80GB"
+    ],
+    "python": "3.13.5",
+    "torch": "2.14.0+cu130"
+  },
+  "export_sha256": "9c181b5e394b7f809acbaa5d208780f937f7b4b0ab93a041b462c0cd51fe7453",
+  "implementation": "unified-theory-continuous-v2",
+  "limits": [
+    "Untrained continuous neural realization with a bounded finite integration fixture",
+    "No full-game Go player, optimality, transfer or learned-strength claim",
+    "No global energy-minimizer claim",
+    "No learned coverage, admissible pruning or calibrated halting guarantee",
+    "Cooperative operation-boundary deadlines, not hard real-time preemption",
+    "No distributed training validation; future training needs its own resume smoke"
+  ],
+  "notebook": "notebooks/04_native_ahr_architecture.ipynb",
+  "optimizer_steps": 0,
+  "parameter_count": 50820,
+  "recovery_export_sha256": "60baf4401d49fc9daaa5e33246315a5bb234cc0644e62a99405dbb29e8e22af8",
+  "schema_version": 2,
+  "source_sha256": "c722ae51bf8c5d281f64d06b736a89c786156fb6513047f6188291914a4ab894",
+  "status": "PASS",
+  "storage": {
+    "instance_delete_policy": "UNVERIFIED",
+    "matching_disk_ids": [
+      "google-instance-20260904-145513-part1",
+      "scsi-0Google_PersistentDisk_instance-20260904-145513-part1"
+    ],
+    "mount": {
+      "fstype": "ext4",
+      "source": "/dev/sda1",
+      "target": "/"
+    },
+    "off_instance_backup_created": false,
+    "persistent_boot_disk_identified": true
+  },
+  "theory": {
+    "file": "AHR_Unified_Theory (1).pdf",
+    "mapped_sections": [
+      "4.1-4.4",
+      "5",
+      "6",
+      "7",
+      "8.1-8.2",
+      "15",
+      "23"
+    ],
+    "sha256": "4bfd9345e48f2cc5559295ebb5d43a31878feee57eecec118f53fd21e7c14554"
+  }
+}

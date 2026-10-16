@@ -1,0 +1,23 @@
+{
+  "checkpoint": {
+    "file": "step-000000004-cef09183.pt",
+    "global_step": 4,
+    "sha256": "0abb1a7ee390efea095642083047c87f5d98191340d39df63922c0fa9e351a53"
+  },
+  "completed_stages": [
+    "candidate_gnu",
+    "incumbent_gnu",
+    "speed",
+    "promotion_and_report"
+  ],
+  "katago_confirmation": {
+    "games": 100,
+    "unknown": 0,
+    "wins": 3
+  },
+  "run_id": "ahr-v2-katago-econ-20261011-v1-eval-recovery-v1",
+  "stage": null,
+  "status": "COMPLETE",
+  "training_complete": true,
+  "updated_at_utc": "2026-10-12T12:59:45.814443+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "explicit_terminal_reason": true,
+    "finite_capture_false_is_unsat": true,
+    "second_pass_is_terminal": true,
+    "target_survives_terminal": true
+  },
+  "definition_sha256": "963fc090e8d328d3242596984012cd0c1e8c36185eb77f6cbfecaeab5d5757f9",
+  "scope": "Terminal second pass cannot prove capture of a still-present enemy target",
+  "status": "PASS"
+}

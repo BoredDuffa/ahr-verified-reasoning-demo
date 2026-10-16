@@ -1,0 +1,63 @@
+{
+  "checks": {
+    "after_real_gnu_call_before_commit": true,
+    "before_real_gnu_call": true,
+    "deadline_resume_exact": true,
+    "deadline_retains_step": true,
+    "genuine_optimizer_steps": true,
+    "latest_two_and_best": true,
+    "real_gnu_moves": true,
+    "second_writer_rejected": true
+  },
+  "claim": "Disposable exact recovery fixtures; scripted learner passes and real GNU opponents, no playing-strength claim",
+  "details": {
+    "after_real_gnu_call_before_commit": {
+      "final_sha256": "daadec13ebe062ad1e4a391b5770567756ddb3823294ddb33a86d9794f33e1b3",
+      "gnu_calls": 3,
+      "interrupted_step": 8,
+      "optimizer_steps": 4,
+      "resumed_step": 34,
+      "run_id": "ahr-v5-recovery-99da29ea49-after_real_gnu_call_before_commit"
+    },
+    "before_real_gnu_call": {
+      "final_sha256": "d372b849654827b18e506b4ec821c1188399c6206be517610cb09d11514ba865",
+      "gnu_calls": 3,
+      "interrupted_step": 7,
+      "optimizer_steps": 4,
+      "resumed_step": 34,
+      "run_id": "ahr-v5-recovery-99da29ea49-before_real_gnu_call"
+    }
+  },
+  "device": "cuda:1",
+  "optimizer_steps": 4,
+  "real_gnu_moves": 3,
+  "schema": "ahr_native_competitive_training_v5",
+  "sources": {
+    "experiments/ahr_native_v4/00_shared.ipynb": "4f2c0fc446f76dfc691e89c6fe58aeb4a8b3fd4a044221200efda6bfcf93e1ec",
+    "experiments/ahr_native_v4/01_native_ahr_and_tactics.ipynb": "9c13461a8d3aa116847420c4af26924d6093ec701acd77e7a7991850d65efb05",
+    "experiments/ahr_native_v4/02_competitive_training.ipynb": "7a9374b5a2f1038d187966479a72b6358268ca3da5498a5db4f53d752bd9411c",
+    "experiments/ahr_native_v4/03_gnugo_evaluation.ipynb": "12e4713c45fafda3d26c9fb766f9e138c5ed01ea423baf719ec1024727c90547",
+    "experiments/ahr_native_v5/00_shared.ipynb": "2f4e466a0d48d77f3d9910fcd6ee19ce470f67ea24f5a0a2394fe2e1a0c41e0d",
+    "experiments/ahr_native_v5/01_model_and_search.ipynb": "a9ffa0a7fa7b3ac3203f122a4bc7020b735c886fb1d7b6513d482d878d1052dc",
+    "experiments/ahr_native_v5/02_verified_curriculum.ipynb": "963fc090e8d328d3242596984012cd0c1e8c36185eb77f6cbfecaeab5d5757f9",
+    "experiments/ahr_native_v5/03_learning.ipynb": "8082c0c389e40721101b140b4cf0b5fa3bd27f14a9f7ea379ceffe3b5ef63212",
+    "experiments/ahr_native_v5/04_evaluation_and_gates.ipynb": "73de9eae9a9e916af3b494997ba65bb455d47cae4b8ba398a9273fac91178610",
+    "experiments/ahr_native_v5/05_budgeted_pipeline.ipynb": "bb7b035d4cae662e0edcff8e4de963458f8c8c41fbf84688f574f3a8da01c80b",
+    "notebooks/00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+    "notebooks/03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+    "notebooks/04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+    "notebooks/05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+    "notebooks/06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb": "a6c9b3d4b0152be85e9ed20c55e65eab600ecb3b2167dc653c4be4611a287a14",
+    "notebooks/08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3",
+    "notebooks/09_selfplay_and_improvement.ipynb": "047054ba779c78928c2265f2aac63e1c2c7d15f1a65081019d8a404f7d07478a",
+    "notebooks/10_gtp_engine_interface.ipynb": "2306b2f28310a163d3bcc0526590bd42c8eda85e85f60d00c20653b505f7d482",
+    "notebooks/11_engine_arena_and_evaluation.ipynb": "d90aeecd75541c1f815a1d8df831f67ad844650f721e5d841dcf0e1f780ae60e",
+    "notebooks/12_play_and_watch.ipynb": "6d5490cf8885de99e175dc3d00d9ad3225f98e975fdc72c56a275f45058680b4",
+    "notebooks/13_export_backup_and_restore.ipynb": "c6a1425022746f381acf855d889065a768385fdcf385dcf82fd2cee2e6b34568"
+  },
+  "status": "PASS",
+  "validation_curriculum": "Frozen original verified tactical tasks, explicitly marked synthetic fixture; main training uses new v5 curriculum"
+}

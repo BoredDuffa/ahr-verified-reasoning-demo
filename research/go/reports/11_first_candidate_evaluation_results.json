@@ -1,0 +1,289 @@
+{
+  "arena_run": "arena11-first-selfplay-v1",
+  "automatic_promotion": false,
+  "device": "cuda:1",
+  "evaluation": {
+    "all_planned_score_bounds": [
+      1.0,
+      1.0
+    ],
+    "alpha": 0.05,
+    "candidate_draws": 0,
+    "candidate_losses": 0,
+    "candidate_wins": 64,
+    "completed_games": 64,
+    "completed_paired_blocks": 32,
+    "deadline_misses": 0,
+    "elo": null,
+    "evaluation_status": "COMPLETE",
+    "failed_move_calls": 0,
+    "full_game_optimality": "NOT_ESTABLISHED",
+    "illegal_proposals": 0,
+    "minimum_blocks": 128,
+    "optimizer_steps": 0,
+    "paired_hoeffding_interval": [
+      0.7599193021700198,
+      1.0
+    ],
+    "paired_mean_score": 1.0,
+    "planned_games": 64,
+    "player_identities": {
+      "selfplay_candidate": {
+        "config": {
+          "model": {
+            "board_size": 9,
+            "dropout": 0.1,
+            "hidden_dim": 64,
+            "queen_cycles": 2,
+            "scout_steps": 2,
+            "spatial_channels": 32,
+            "worker_steps": 2
+          },
+          "search": {
+            "branch_width": 4,
+            "max_depth": 2,
+            "max_nodes": 32,
+            "queen_cycles": 1,
+            "temperature": 1.0
+          },
+          "work_budget": {
+            "max_nodes": 32
+          }
+        },
+        "name": "selfplay_candidate",
+        "provenance": {
+          "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+          "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+          "kind": "ahr_checkpoint",
+          "loader_metadata": {
+            "best_selection": "lowest_observed_training_loss_not_arena_strength",
+            "candidate_only": true,
+            "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+            "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+            "model_config": {
+              "board_size": 9,
+              "dropout": 0.1,
+              "hidden_dim": 64,
+              "queen_cycles": 2,
+              "scout_steps": 2,
+              "spatial_channels": 32,
+              "worker_steps": 2
+            },
+            "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+            "optimizer_step": 512,
+            "provenance": {
+              "best_selection": "lowest_observed_training_loss_not_arena_strength",
+              "candidate_only": true,
+              "purpose": "go_training",
+              "trained_on_go": true,
+              "training_route": "go_selfplay"
+            },
+            "purpose": "go_training",
+            "run_id": "go09-first-selfplay-v1",
+            "schema": "ahr_go_selfplay_v1",
+            "selection": "latest",
+            "source_hashes": {
+              "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+              "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+              "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+              "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+              "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+              "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+              "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+              "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+            },
+            "trained_on_go": true,
+            "training_route": "go_selfplay"
+          },
+          "purpose": "go_training",
+          "source_hashes": {
+            "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+            "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+            "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+            "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+            "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+            "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+            "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+            "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+          },
+          "trained_optimizer_steps": 512
+        },
+        "runtime": "stateless",
+        "weights_sha256": "aa2615f4a7145d9c35de0fb373e9171c16c6a250843db45f002738c040fb7a6d"
+      },
+      "warmup_reference": {
+        "config": {
+          "model": {
+            "board_size": 9,
+            "dropout": 0.1,
+            "hidden_dim": 64,
+            "queen_cycles": 2,
+            "scout_steps": 2,
+            "spatial_channels": 32,
+            "worker_steps": 2
+          },
+          "search": {
+            "branch_width": 4,
+            "max_depth": 2,
+            "max_nodes": 32,
+            "queen_cycles": 1,
+            "temperature": 1.0
+          },
+          "work_budget": {
+            "max_nodes": 32
+          }
+        },
+        "name": "warmup_reference",
+        "provenance": {
+          "checkpoint_file": "checkpoints/go08-initial-warmup-v2/step-000000004-d56193ce.pt",
+          "checkpoint_sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51",
+          "kind": "ahr_checkpoint",
+          "loader_metadata": {
+            "candidate_only": true,
+            "checkpoint_file": "checkpoints/go08-initial-warmup-v2/step-000000004-d56193ce.pt",
+            "checkpoint_sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51",
+            "dataset_sha256": "974491b7799d061381f15659505190ac1bf0ddf248ee0ce7dab76627e641d286",
+            "model_config": {
+              "board_size": 9,
+              "dropout": 0.1,
+              "hidden_dim": 64,
+              "queen_cycles": 2,
+              "scout_steps": 2,
+              "spatial_channels": 32,
+              "worker_steps": 2
+            },
+            "model_sha256": "5f6222557e4b7fa72fdfd655d336b953987c47dd281df3aedde8c4e32c6ac04b",
+            "optimizer_step": 32,
+            "provenance": {
+              "candidate_only": true,
+              "dataset_sha256": "974491b7799d061381f15659505190ac1bf0ddf248ee0ce7dab76627e641d286",
+              "purpose": "go_training",
+              "target_scope": "recorded terminal continuation and bounded immediate captures",
+              "trained_on_go": true,
+              "training_route": "go_supervised"
+            },
+            "purpose": "go_training",
+            "run_id": "go08-initial-warmup-v2",
+            "schema": "ahr_go_learning_v1",
+            "selection": "best",
+            "source_hashes": {
+              "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+              "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+              "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+              "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+              "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+              "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+              "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+              "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+            },
+            "target_scope": "recorded terminal continuation and bounded immediate captures",
+            "trained_on_go": true,
+            "training_route": "go_supervised"
+          },
+          "purpose": "go_training",
+          "source_hashes": {
+            "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+            "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+            "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+            "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+            "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+            "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+            "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+            "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+          },
+          "trained_optimizer_steps": 32
+        },
+        "runtime": "stateless",
+        "weights_sha256": "0e5be3f664e5d7a175dd98a485e76d87a0850204f5680cd042aec491ec60d6ef"
+      }
+    },
+    "promotion_effect": "Recommendation only; no checkpoint pointer or deployed service is changed.",
+    "promotion_eligible": false,
+    "promotion_recommended": false,
+    "promotion_threshold": 0.55,
+    "purpose": "development_strength",
+    "recorded_games": 64,
+    "schema": "ahr11-controlled-arena-v1",
+    "status_counts": {
+      "COMPLETE": 64
+    }
+  },
+  "full_game_optimality": "NOT_ESTABLISHED",
+  "general_playing_strength": "NOT_ESTABLISHED",
+  "mode": "evaluate",
+  "presentation": {
+    "graphical_review": "NOT_PERFORMED: no graphical viewer available",
+    "saved_outputs": true
+  },
+  "protocol": {
+    "alpha": 0.05,
+    "candidate": "selfplay_candidate",
+    "error_budget_note": "First fixed development pilot; no promotion eligibility; repeated follow-up comparisons need separately declared error budgets.",
+    "komi": 7.5,
+    "max_plies": 256,
+    "minimum_blocks": 128,
+    "opening_plies": 2,
+    "opponent": "warmup_reference",
+    "promotion_threshold": 0.55,
+    "purpose": "development_strength",
+    "seeds": [
+      651740367,
+      1077916568,
+      1507217860,
+      1540905382,
+      847429563,
+      1262571628,
+      1406733226,
+      987857880,
+      708193312,
+      2111277604,
+      850286231,
+      1281483324,
+      1921754181,
+      2055608646,
+      1661957138,
+      484759507,
+      526717671,
+      2045589289,
+      744306449,
+      1194069368,
+      1644633990,
+      992480022,
+      145504564,
+      1540902900,
+      1074333760,
+      1907454623,
+      508234695,
+      1147000094,
+      1140914522,
+      579493399,
+      564750434,
+      1151558685
+    ],
+    "size": 9,
+    "time_budget_s": 1.0,
+    "work_budget": {
+      "max_nodes": 32
+    }
+  },
+  "readiness": {
+    "candidate_present": true,
+    "candidate_run": "go09-first-selfplay-v1",
+    "completed_training_games": 63,
+    "optimizer_steps": 512,
+    "phase": "complete",
+    "ready": true,
+    "reference_checkpoint_sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51",
+    "training_writer_active": false,
+    "unknown_training_games": 1
+  },
+  "schema": "ahr_first_selfplay_evaluation_v1",
+  "search": {
+    "branch_width": 4,
+    "max_depth": 2,
+    "max_nodes": 32,
+    "queen_cycles": 1,
+    "temperature": 1.0
+  },
+  "status": "FINISHED"
+}

@@ -1,0 +1,6 @@
+{
+  "previous_session": "ahr-go-native-v4-validate",
+  "current_session": "ahr-go-preflight-v4",
+  "reason": "tmux prefix matching mistook the validation session for the main session; rename avoids ambiguity without changing frozen scientific code.",
+  "time_utc": "2026-10-01T16:16:24.799211+00:00"
+}

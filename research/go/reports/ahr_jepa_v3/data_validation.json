@@ -1,0 +1,66 @@
+{
+  "categories": {
+    "atari_escape": 77,
+    "capture": 77,
+    "connection": 77,
+    "ladder_bounded": 77,
+    "life_death_bounded": 75
+  },
+  "claims": "Exact bounded target checks, not Go strength or full-game solving",
+  "curriculum": {
+    "categories": {
+      "atari_escape": 77,
+      "capture": 77,
+      "connection": 77,
+      "ladder_bounded": 77,
+      "life_death_bounded": 75
+    },
+    "examples": 383,
+    "family_count": 383,
+    "generation_config": {
+      "category_independent_families": true,
+      "max_category_examples_per_game": 4,
+      "max_examples_per_game": 12,
+      "max_games": 160,
+      "minimum_source_games": 30,
+      "positions": 384,
+      "schema": "v3-tactical-curriculum",
+      "seed": 20260927,
+      "split_unit": "canonical local target topology before augmentation"
+    },
+    "path": "experiments/ahr_jepa_v3/data/curriculum.json",
+    "sequence_splits": {
+      "development": 224,
+      "lockbox": 219,
+      "train": 1068
+    },
+    "sequences": 1511,
+    "sha256": "08016eee499c1dc3460908687027df575457b44cce989979487ccd2cfa2bfcf4",
+    "splits": {
+      "development": 58,
+      "lockbox": 55,
+      "train": 270
+    }
+  },
+  "d4_verified_transitions": 192,
+  "history_tamper_rejected": true,
+  "pattern_scope": "Five-by-five target topology; outside-board contexts are not a proof of statistical independence",
+  "sequence_counts": {
+    "('development', 1)": 58,
+    "('development', 2)": 56,
+    "('development', 4)": 56,
+    "('development', 8)": 54,
+    "('lockbox', 1)": 55,
+    "('lockbox', 2)": 55,
+    "('lockbox', 4)": 55,
+    "('lockbox', 8)": 54,
+    "('train', 1)": 270,
+    "('train', 2)": 267,
+    "('train', 4)": 266,
+    "('train', 8)": 265
+  },
+  "sequences": 1511,
+  "status": "PASS",
+  "unknown_transition_only_verified": true,
+  "whole_family_and_game_splits": true
+}

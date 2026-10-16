@@ -1,0 +1,238 @@
+{
+  "candidate_run": "go09-v2-generation-01",
+  "complete": true,
+  "evaluation": {
+    "all_planned_score_bounds": [
+      0.6015625,
+      0.6015625
+    ],
+    "alpha": 0.016666666666666666,
+    "candidate_draws": 0,
+    "candidate_losses": 102,
+    "candidate_wins": 154,
+    "completed_games": 256,
+    "completed_paired_blocks": 128,
+    "deadline_misses": 0,
+    "elo": null,
+    "evaluation_status": "COMPLETE",
+    "failed_move_calls": 0,
+    "full_game_optimality": "NOT_ESTABLISHED",
+    "illegal_proposals": 0,
+    "latency_by_player": {
+      "candidate": {
+        "budget_s": 1.0,
+        "calls": 12660,
+        "deadline_misses": 0,
+        "max_s": 0.579940039984649,
+        "mean_s": 0.11650309705065205,
+        "p50_s": 0.11658364901086316,
+        "p95_s": 0.1455401188606629,
+        "p99_s": 0.16976246122474548,
+        "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+      },
+      "reference": {
+        "budget_s": 1.0,
+        "calls": 12657,
+        "deadline_misses": 0,
+        "max_s": 0.202228581008967,
+        "mean_s": 0.11629898822289914,
+        "p50_s": 0.11656209200737067,
+        "p95_s": 0.14563049819553267,
+        "p99_s": 0.17007061811047622,
+        "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+      }
+    },
+    "minimum_blocks": 128,
+    "optimizer_steps": 0,
+    "paired_hoeffding_interval": [
+      0.46481038988742307,
+      0.7383146101125769
+    ],
+    "paired_mean_score": 0.6015625,
+    "planned_games": 256,
+    "player_identities": {
+      "candidate": {
+        "config": {
+          "model": {
+            "board_size": 9,
+            "dropout": 0.1,
+            "hidden_dim": 64,
+            "queen_cycles": 2,
+            "scout_steps": 2,
+            "spatial_channels": 32,
+            "worker_steps": 2
+          },
+          "search": {
+            "branch_width": 4,
+            "max_depth": 2,
+            "max_nodes": 32,
+            "queen_cycles": 1,
+            "temperature": 1.0
+          },
+          "work_budget": {
+            "max_nodes": 32
+          }
+        },
+        "full_history_preparation": false,
+        "name": "candidate",
+        "provenance": {
+          "checkpoint_file": "checkpoints/go09-v2-generation-01/step-000016400-542817ec.pt",
+          "checkpoint_sha256": "0873016b67e772fef791458d27e8d3ae6a4fd965726113e187a8091f38db63c9",
+          "kind": "ahr_checkpoint",
+          "loader_metadata": {
+            "best_selection": "lowest_observed_training_loss_not_arena_strength",
+            "candidate_only": true,
+            "checkpoint_file": "checkpoints/go09-v2-generation-01/step-000016400-542817ec.pt",
+            "checkpoint_sha256": "0873016b67e772fef791458d27e8d3ae6a4fd965726113e187a8091f38db63c9",
+            "model_config": {
+              "board_size": 9,
+              "dropout": 0.1,
+              "hidden_dim": 64,
+              "queen_cycles": 2,
+              "scout_steps": 2,
+              "spatial_channels": 32,
+              "worker_steps": 2
+            },
+            "model_sha256": "ffd97d51c23bedd735c5f272d634706de62eb0d37c4c4d05deef4022009b92e5",
+            "optimizer_step": 1024,
+            "provenance": {
+              "best_selection": "lowest_observed_training_loss_not_arena_strength",
+              "candidate_only": true,
+              "purpose": "go_training",
+              "trained_on_go": true,
+              "training_route": "go_selfplay"
+            },
+            "purpose": "go_training",
+            "run_id": "go09-v2-generation-01",
+            "schema": "ahr_go_selfplay_v1",
+            "selection": "latest",
+            "source_hashes": {
+              "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+              "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+              "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+              "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+              "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+              "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+              "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+              "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+            },
+            "trained_on_go": true,
+            "training_route": "go_selfplay"
+          },
+          "purpose": "go_training",
+          "source_hashes": {
+            "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+            "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+            "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+            "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+            "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+            "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+            "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+            "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+          },
+          "trained_optimizer_steps": 1024
+        },
+        "runtime": "stateless",
+        "weights_sha256": "103203f18c93fd31730f457763450cbfe994721c6f8fc600446c46ea3848202c"
+      },
+      "reference": {
+        "config": {
+          "model": {
+            "board_size": 9,
+            "dropout": 0.1,
+            "hidden_dim": 64,
+            "queen_cycles": 2,
+            "scout_steps": 2,
+            "spatial_channels": 32,
+            "worker_steps": 2
+          },
+          "search": {
+            "branch_width": 4,
+            "max_depth": 2,
+            "max_nodes": 32,
+            "queen_cycles": 1,
+            "temperature": 1.0
+          },
+          "work_budget": {
+            "max_nodes": 32
+          }
+        },
+        "full_history_preparation": false,
+        "name": "reference",
+        "provenance": {
+          "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+          "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+          "kind": "ahr_checkpoint",
+          "loader_metadata": {
+            "best_selection": "lowest_observed_training_loss_not_arena_strength",
+            "candidate_only": true,
+            "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+            "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+            "model_config": {
+              "board_size": 9,
+              "dropout": 0.1,
+              "hidden_dim": 64,
+              "queen_cycles": 2,
+              "scout_steps": 2,
+              "spatial_channels": 32,
+              "worker_steps": 2
+            },
+            "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+            "optimizer_step": 512,
+            "provenance": {
+              "best_selection": "lowest_observed_training_loss_not_arena_strength",
+              "candidate_only": true,
+              "purpose": "go_training",
+              "trained_on_go": true,
+              "training_route": "go_selfplay"
+            },
+            "purpose": "go_training",
+            "run_id": "go09-first-selfplay-v1",
+            "schema": "ahr_go_selfplay_v1",
+            "selection": "latest",
+            "source_hashes": {
+              "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+              "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+              "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+              "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+              "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+              "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+              "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+              "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+            },
+            "trained_on_go": true,
+            "training_route": "go_selfplay"
+          },
+          "purpose": "go_training",
+          "source_hashes": {
+            "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+            "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+            "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+            "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+            "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+            "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+            "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+            "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+          },
+          "trained_optimizer_steps": 512
+        },
+        "runtime": "stateless",
+        "weights_sha256": "aa2615f4a7145d9c35de0fb373e9171c16c6a250843db45f002738c040fb7a6d"
+      }
+    },
+    "promotion_effect": "Recommendation only; no checkpoint pointer or deployed service is changed.",
+    "promotion_eligible": true,
+    "promotion_recommended": false,
+    "promotion_threshold": 0.55,
+    "purpose": "development_strength",
+    "recorded_games": 256,
+    "schema": "ahr11-controlled-arena-v2",
+    "status_counts": {
+      "COMPLETE": 256
+    }
+  },
+  "generation": 1,
+  "reference_run": "go09-first-selfplay-v1",
+  "schema": "ahr_generations_v2",
+  "updated_at_utc": "2026-09-25T00:40:01.392121+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "clock": {
+    "deadline_unix": 1792405268.3205059,
+    "development_deadline_unix": 1792398068.3205059,
+    "maximum_seconds": 259200.0,
+    "restart_policy": "Never reset or extend clock",
+    "started_unix": 1792146068.3205059,
+    "training_deadline_unix": 1792376468.3205059
+  },
+  "official_test": "CLOSED",
+  "phase": "registered_launch",
+  "run_id": "multiday-confirmation-001",
+  "status": "RUNNING"
+}

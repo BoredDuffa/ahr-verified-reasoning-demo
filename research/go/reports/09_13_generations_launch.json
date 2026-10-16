@@ -1,0 +1,30 @@
+{
+  "attach": "tmux attach -t ahr-go-generations-v2",
+  "command": [
+    "env",
+    "AHRGEN_MODE=run",
+    "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+    "-u",
+    "-m",
+    "jupyter",
+    "nbconvert",
+    "--execute",
+    "--to",
+    "notebook",
+    "--inplace",
+    "--ExecutePreprocessor.kernel_name=ahr-go",
+    "--ExecutePreprocessor.timeout=-1",
+    "/home/benjamin/workspace/ahr_go/reports/09_13_generations_v2.ipynb"
+  ],
+  "configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+  "connection_independent": true,
+  "detach": "Ctrl-b, then d",
+  "launched_at_utc": "2026-09-24T14:48:45.768955+00:00",
+  "off_instance_backup": "DEFERRED_BY_USER_PENDING_HUGGING_FACE_DESTINATION",
+  "session": "ahr-go-generations-v2",
+  "status": "LAUNCHED",
+  "windows": [
+    "pipeline",
+    "progress"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "active_elapsed_s": 79.90134083200246,
+  "actual_ahr_plies": 293,
+  "completed_at": "2026-09-24T14:45:03.078259+00:00",
+  "completed_games": 2,
+  "config": {
+    "actor_device": "cuda:1",
+    "batch_size": 32,
+    "board_size": 9,
+    "checkpoint_every_events": 32,
+    "checkpoint_every_optimizer_steps": 250,
+    "checkpoint_interval_s": 600.0,
+    "device": "cuda:0",
+    "exploration": 0.15,
+    "games": 2,
+    "historical_opponents": [
+      {
+        "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+        "run_id": "go09-first-selfplay-v1",
+        "selection": "latest"
+      }
+    ],
+    "komi": 7.5,
+    "learning_rate": 0.0003,
+    "max_plies": 256,
+    "opponent_probability": 0.25,
+    "opponent_snapshots": 4,
+    "purpose": "go_training",
+    "replay_capacity": 2048,
+    "search": {
+      "branch_width": 4,
+      "max_depth": 2,
+      "max_nodes": 32,
+      "queen_cycles": 1,
+      "temperature": 1.0
+    },
+    "seed": 2026092410,
+    "snapshot_every_games": 8,
+    "temperature": 1.0,
+    "time_budget_s": 0.5,
+    "updates_per_game": 8,
+    "validation_force_pass": false,
+    "weight_decay": 0.0001
+  },
+  "game_history": [
+    {
+      "admitted": true,
+      "game_id": 0,
+      "plies": 186,
+      "reason": "two_legal_passes",
+      "status": "VERIFIED_TERMINAL"
+    },
+    {
+      "admitted": true,
+      "game_id": 1,
+      "plies": 107,
+      "reason": "two_legal_passes",
+      "status": "VERIFIED_TERMINAL"
+    }
+  ],
+  "games_per_active_hour": 90.11112861220249,
+  "last_update": {
+    "examples": 32.0,
+    "gradient_norm": 1.9158235788345337,
+    "loss": 2.1647911071777344,
+    "optimizer_step": 16,
+    "ownership": 0.5566969513893127,
+    "policy": 1.8303413391113281,
+    "replay_positions": 293,
+    "score": 0.10882671177387238,
+    "value": 0.0016879808390513062
+  },
+  "latest_checkpoint": {
+    "file": "step-000000314-c05301dc.pt",
+    "global_step": 314,
+    "sha256": "81fd63ef4c93268fcaaa367158204bad3a0f6196420e54752c8d52773c8c27e6"
+  },
+  "model_config": {
+    "board_size": 9,
+    "dropout": 0.1,
+    "hidden_dim": 64,
+    "queen_cycles": 2,
+    "scout_steps": 2,
+    "spatial_channels": 32,
+    "worker_steps": 2
+  },
+  "model_sha256": "539268fa0ba694f65c9bd0b6c1b4e05b8647f24886b2cf3e252d870e466c75e4",
+  "optimizer_steps": 16,
+  "parent_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+  "parent_run": "go09-first-selfplay-v1",
+  "recovery_receipt": "reports/09_recovery_receipts/4fdb47b6ed5d66bee316b3c05f99c7d5b17384109b59b9b5c72f3763692693fe.json",
+  "replay_positions": 293,
+  "run_id": "go09-v2-performance-pilot",
+  "scheduled_games": 2,
+  "schema": "ahr_selfplay_v2_real_pilot_v1",
+  "search_deadline_exceedances": 1,
+  "source_hash": "f1c9bfea127d737339682d88a281d88e03450518ea105bdf552e4fa2307236df",
+  "started_at": "2026-09-24T14:43:43.151310+00:00",
+  "status": "COMPLETE",
+  "strength_claim": "NOT_EVALUATED; pilot candidate only",
+  "timing_limits": "Two games starting with empty replay; active runtime excludes notebook imports/initial parent load and any uncommitted time lost to unexpected process death",
+  "unknown_games": 0
+}

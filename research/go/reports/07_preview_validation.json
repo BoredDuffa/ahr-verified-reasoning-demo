@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "notebook": "notebooks/07_csp_to_go_transfer_tests.ipynb",
+  "html": "reports/previews/07_csp_to_go_transfer_tests.html",
+  "notebook_sha256": "f670f8dd9a98a5156deee4b67f5326311ba085780a7a19e6eaccba10c61efb74",
+  "html_sha256": "ea141bed7558a3ede82b15fc1f9e03b1a8f464ecdaa4bd60746e3f0c13ac6294",
+  "code_cells_executed": 10,
+  "markdown_cells_rendered": 8,
+  "error_outputs": 0,
+  "current_dependency_sources_match": true,
+  "pilot_complete": true,
+  "scope": "structural HTML/output inspection; no browser screenshot"
+}

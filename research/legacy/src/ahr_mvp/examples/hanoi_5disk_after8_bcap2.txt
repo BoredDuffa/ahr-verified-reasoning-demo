@@ -1,0 +1,1 @@
+Solve the Tower of Hanoi for 5 disks moving from peg A to peg C. After move 8, a new constraint takes effect: peg B may hold at most 2 disks at any time, and any state violating this is illegal going forward. Complete the puzzle in the minimum total number of moves under the combined rule set, or prove the configuration at move 8 makes completion impossible.

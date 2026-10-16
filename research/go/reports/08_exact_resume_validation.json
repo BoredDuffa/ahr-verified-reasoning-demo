@@ -1,0 +1,87 @@
+{
+  "configurations": [
+    {
+      "compared": [
+        "model",
+        "optimizer",
+        "scheduler",
+        "scaler",
+        "rng",
+        "sampler",
+        "optimizer_step",
+        "config",
+        "metrics",
+        "best_dev_loss"
+      ],
+      "comparison": "bitwise equality",
+      "device": "cpu",
+      "final_optimizer_step": 16,
+      "fresh_process_launches": 3,
+      "full_run": "go08-smoke-full-2ef9dbf1",
+      "interrupted_step": 1,
+      "model_config": {
+        "board_size": 9,
+        "dropout": 0.1,
+        "hidden_dim": 64,
+        "queen_cycles": 2,
+        "scout_steps": 2,
+        "spatial_channels": 32,
+        "worker_steps": 2
+      },
+      "resumed_run": "go08-smoke-resumed-2ef9dbf1",
+      "source_hashes": {
+        "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+        "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+        "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+        "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+        "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+        "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+        "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+        "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+      },
+      "status": "PASS"
+    },
+    {
+      "compared": [
+        "model",
+        "optimizer",
+        "scheduler",
+        "scaler",
+        "rng",
+        "sampler",
+        "optimizer_step",
+        "config",
+        "metrics",
+        "best_dev_loss"
+      ],
+      "comparison": "bitwise equality",
+      "device": "cuda:0",
+      "final_optimizer_step": 16,
+      "fresh_process_launches": 3,
+      "full_run": "go08-smoke-full-678d9551",
+      "interrupted_step": 1,
+      "model_config": {
+        "board_size": 9,
+        "dropout": 0.1,
+        "hidden_dim": 64,
+        "queen_cycles": 2,
+        "scout_steps": 2,
+        "spatial_channels": 32,
+        "worker_steps": 2
+      },
+      "resumed_run": "go08-smoke-resumed-678d9551",
+      "source_hashes": {
+        "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+        "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+        "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+        "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+        "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+        "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+        "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+        "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+      },
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

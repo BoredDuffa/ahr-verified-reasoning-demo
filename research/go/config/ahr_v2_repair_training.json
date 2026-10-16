@@ -1,0 +1,68 @@
+{
+  "augmentation": true,
+  "batch_size": 64,
+  "board_size": 9,
+  "checkpoint_optimizer_steps": 64,
+  "checkpoint_seconds": 120,
+  "cpu_threads": 4,
+  "device": "cuda:1",
+  "diagnostic_every_games": 12,
+  "diagnostic_max_games": 8,
+  "diagnostic_positions_per_game": 4,
+  "early_temperature": 1.0,
+  "gradient_clip": 5.0,
+  "is_smoke": false,
+  "komi": 7.5,
+  "late_temperature": 0.25,
+  "learning_rate": 0.0003,
+  "loss": {
+    "l2_weight": 0.0,
+    "outcome_weight": 1.0,
+    "ownership_weight": 1.0,
+    "policy_weight": 1.0,
+    "score_weight": 1.0
+  },
+  "max_completed_games": null,
+  "max_plies": 729,
+  "max_total_games": null,
+  "network": {
+    "blocks": 4,
+    "width": 64
+  },
+  "opening_random_moves": 6,
+  "outcome_smoothing": 0.05,
+  "replay_dev_games": 64,
+  "replay_lockbox_games": 64,
+  "replay_train_games": 256,
+  "root_dirichlet_alpha": 0.15,
+  "root_noise_fraction": 0.2,
+  "run_id": "ahr-v2-repair-20261007-8h",
+  "schema": "ahr-v2-repair-training-config-v1",
+  "search_batch_size": 8,
+  "search_options": {
+    "fpu_reduction": 0.25,
+    "score_value_weight": 0.15,
+    "tactical_edge_weight": 0.6,
+    "tactical_prior_weight": 0.3,
+    "tactical_reply_reservations": 16
+  },
+  "search_schedule": [
+    [
+      0,
+      128
+    ],
+    [
+      64,
+      192
+    ]
+  ],
+  "seed": 2026100709,
+  "tactical_bank_size": 256,
+  "tactical_fraction": 0.25,
+  "temperature_moves": 30,
+  "time_budget_hours": 8.0,
+  "training_source": "ahr_selfplay_plus_exact_bounded_tactics",
+  "unknown_updates": 0,
+  "updates_per_game": 8,
+  "weight_decay": 0.0003
+}

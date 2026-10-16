@@ -1,0 +1,24 @@
+{
+  "by_goal": {
+    "capture_one_ply": 0.532,
+    "connect_one_ply": 0.576,
+    "force_capture_three_plies": 0.464,
+    "survive_two_plies": 0.524
+  },
+  "capture_success": 0.532,
+  "development_only": true,
+  "heldout_rows": 1000,
+  "lockbox_used": false,
+  "optimizer_step": 101888,
+  "scope": "bounded task competence and independently measured teacher improvement, not full-game strength",
+  "status": "FAIL",
+  "teacher": {
+    "reason": "skill gate not passed",
+    "status": "NOT_MEASURED"
+  },
+  "thresholds": {
+    "capture": 0.99,
+    "overall": 0.95
+  },
+  "top1_success": 0.524
+}

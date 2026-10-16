@@ -1,0 +1,14 @@
+{
+  "stage": "complete",
+  "status": "COMPLETED",
+  "updated_unix": 1790731393.2635732,
+  "outcome": "ALL_REQUESTED_STAGES_COMPLETE",
+  "learning_gate_passed": true,
+  "stage_statuses": {
+    "learning": "COMPLETE",
+    "resolution": "COMPLETE",
+    "data_volume": "COMPLETE"
+  },
+  "elapsed_seconds": 38251.66724562645,
+  "heldout_status": "NOT_RUN"
+}

@@ -1,0 +1,46 @@
+{
+  "active_seconds": 0.962943647056818,
+  "best_development_joint_loss": 4.635732650756836,
+  "budget_hours": 0.1,
+  "checkpoint": {
+    "file": "step-000000006-842335a4.pt",
+    "global_step": 6,
+    "sha256": "dc7f72d725f4e47ac450a7ef3091a1bc573ca5ef47c3b9acf83e96a04add3178"
+  },
+  "data_identity": {
+    "cache_id": "/home/benjamin/workspace/ahr_go/data/ahr_v2_teacher/prepared/go9x9-teacher-smoke-v1",
+    "dataset": "quintic/go9x9",
+    "manifest_sha256": "0ff496cb1aa39f5a2adeb39084d067a2688335d5f9dce06168ad2f3a3edf7fea",
+    "target_provenance": "teacher_estimates_and_distinct_observed_outcomes"
+  },
+  "epoch": 2,
+  "epoch_cursor": 1024,
+  "last_development": {
+    "duration_seconds": 0.009761070978129283,
+    "joint_loss": 4.635732650756836,
+    "observed_outcome_accuracy": 0.3333333333333333,
+    "observed_outcome_brier": 0.5422772566477457,
+    "observed_outcome_rows": 12,
+    "optimizer_step": 6,
+    "policy_cross_entropy": 3.5081262588500977,
+    "policy_kl": 1.4341106414794922,
+    "policy_top1_agreement": 0.21875,
+    "rows": 32,
+    "selection_basis": "fixed_official_development_joint_loss_not_playing_strength",
+    "selection_score": 4.635732650756836,
+    "teacher_score_mae_points": 44.61369669821955,
+    "teacher_score_rows": 31,
+    "teacher_value_mse": 0.9746818542480469,
+    "teacher_win_probability_brier": 0.24303629994392395
+  },
+  "last_loss": 4.6651082038879395,
+  "learning_source": "quintic_go9x9_katago_teacher_and_recorded_game_outcomes",
+  "optimizer_step": 6,
+  "rows_seen": 3072,
+  "run_id": "teacher-production-4884075459-continuous",
+  "schema": "ahr-go-v2-teacher-progress-v1",
+  "status": "STEP_LIMIT_COMPLETE",
+  "target_claim": "Teacher predictions are estimates; observed winners remain distinct; no test rows used",
+  "training_rows": 1024,
+  "updated_at_utc": "2026-10-08T11:55:05.144653+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "all_games_valid": false,
+  "checkpoint_path": "checkpoints/ahr-native-v5-dev-r000-g0000/frozen_model.pt",
+  "checkpoint_sha256": "b70449762f8ab45d257ac1ff80eba50da38a6179def0a0fc966e8940a1746d81",
+  "confidence_level": 0.95,
+  "confidence_method": "two-sided Hoeffding interval over independent paired opening blocks; conditional on one frozen model and declared opening distribution",
+  "draws": 0,
+  "eval_run": "ahr-native-v5-dev-r000-g0000",
+  "full_game_optimality": "NOT_ESTABLISHED",
+  "games_complete": 15,
+  "games_finished": 0,
+  "games_planned": 16,
+  "games_recorded": 16,
+  "latency_by_player": {
+    "candidate": {
+      "allocated_budget_s": 1.0,
+      "calls": 842,
+      "max_s": 0.8282688800245523,
+      "mean_s": 0.8066876776361033,
+      "over_budget": 0
+    },
+    "reference": {
+      "allocated_budget_s": 5.0,
+      "calls": 848,
+      "max_s": 0.20623632799834013,
+      "mean_s": 0.06009890383300547,
+      "over_budget": 0
+    }
+  },
+  "losses": 15,
+  "mean_score_margin": -48.03333333333333,
+  "observed_half_wins": false,
+  "optimizer_steps": 27580,
+  "paired_blocks_complete": 7,
+  "paired_confidence_interval": [
+    0.0,
+    0.5133141236899359
+  ],
+  "pending": 0,
+  "possible_win_rate_bounds": [
+    0.0,
+    0.0625
+  ],
+  "promotion_effect": "NONE",
+  "report_path": "reports/ahr_native_v5/development/ahr-native-v5-dev-r000-g0000-results.json",
+  "schema": "ahr-native-v5-gnu-evaluation-v1",
+  "split": "development",
+  "statistically_supported_above_half": false,
+  "status": "COMPLETE",
+  "training_run": "ahr-native-v5-main",
+  "unknown": 1,
+  "unknown_by_reason": {
+    "UNKNOWN_PLAYER_ERROR": 1
+  },
+  "win_rate_completed": 0.0,
+  "wins": 0,
+  "wins_over_planned": 0.0
+}

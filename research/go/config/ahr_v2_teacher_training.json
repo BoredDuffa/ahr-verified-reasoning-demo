@@ -1,0 +1,39 @@
+{
+  "batch_size": 512,
+  "board_size": 9,
+  "cache_id": "go9x9-teacher-v1",
+  "checkpoint_optimizer_steps": 100,
+  "checkpoint_seconds": 120,
+  "cpu_threads": 4,
+  "development_rows": 2048,
+  "device": "cuda:1",
+  "evaluate_every_steps": 500,
+  "gradient_clip": 2.0,
+  "is_smoke": false,
+  "learning_rate": 0.0005,
+  "loss_weights": {
+    "game_outcome": 0.0,
+    "ownership": 0.25,
+    "policy": 1.0,
+    "score": 0.5,
+    "teacher_value": 1.0
+  },
+  "max_epochs": 12,
+  "max_optimizer_steps": 11724,
+  "minimum_lr_fraction": 0.1,
+  "network": {
+    "blocks": 6,
+    "width": 96
+  },
+  "precision": "bfloat16",
+  "run_id": "ahr-v2-teacher-20261008",
+  "schema": "ahr-go-v2-teacher-training-v1",
+  "seed": 260810,
+  "shuffle_block_rows": 16384,
+  "time_budget_hours": 8.0,
+  "train_rows_limit": null,
+  "training_source": "quintic_go9x9_katago_teacher_and_recorded_game_outcomes",
+  "value_target_mapping": "signed_teacher_scalar_to_soft_loss_win_no_draw_claim",
+  "warmup_steps": 200,
+  "weight_decay": 0.0001
+}

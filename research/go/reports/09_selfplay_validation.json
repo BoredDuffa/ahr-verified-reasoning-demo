@@ -1,0 +1,210 @@
+{
+  "candidate_promotion": "NONE: requires notebook 11 arena",
+  "claims": {
+    "learned_strength_improvement": "NOT_EVALUATED",
+    "legal_transition_verification": true,
+    "strong_go_player": false,
+    "terminal_labels_only": true
+  },
+  "default_mode": "validate",
+  "full_selfplay_started": false,
+  "presentation": {
+    "graphical_review": "NOT_PERFORMED: no graphical viewer in this execution environment",
+    "html_preview": "reports/09_selfplay_preview.html",
+    "saved_outputs": true
+  },
+  "recovery": [
+    {
+      "actor_device": "cpu",
+      "actual_search_model_calls": 4,
+      "actual_search_plies": 2,
+      "checkpoint_runs": [
+        "selfplay09-smoke-cpu-ef58ed1948-full",
+        "selfplay09-smoke-cpu-ef58ed1948-resume",
+        "selfplay09-smoke-cpu-ef58ed1948-update-resume",
+        "selfplay09-smoke-cpu-ef58ed1948-unknown",
+        "selfplay09-smoke-cpu-ef58ed1948-search"
+      ],
+      "completed_synthetic_games": 2,
+      "device": "cpu",
+      "exact_resume": true,
+      "failure_checks": [
+        "bad_hash",
+        "missing_manifest",
+        "identity_mismatch"
+      ],
+      "fallback_policy_excluded": true,
+      "final_event": 13,
+      "fresh_process": true,
+      "interrupted_after_event": 2,
+      "interrupted_after_update": 1,
+      "key": "85ffdc148147ef64e651451ecf089f202011a9de0b7ac252d125f666bf432ba0",
+      "model_config": {
+        "board_size": 9,
+        "dropout": 0.1,
+        "hidden_dim": 16,
+        "queen_cycles": 1,
+        "scout_steps": 1,
+        "spatial_channels": 8,
+        "worker_steps": 1
+      },
+      "optimizer_steps": 4,
+      "production_config": null,
+      "retained_events": [
+        12,
+        13
+      ],
+      "schema": "ahr_selfplay_recovery_receipt_v1",
+      "selfplay_source_hash": "f1c9bfea127d737339682d88a281d88e03450518ea105bdf552e4fa2307236df",
+      "source_hashes": {
+        "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+        "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+        "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+        "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+        "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+        "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+        "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+        "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+      },
+      "strength_claim": "NONE: synthetic recovery fixtures only",
+      "tested_config": {
+        "actor_device": "cpu",
+        "batch_size": 2,
+        "board_size": 9,
+        "checkpoint_every_events": 32,
+        "checkpoint_every_optimizer_steps": 250,
+        "checkpoint_interval_s": 600.0,
+        "device": "cpu",
+        "exploration": 0.1,
+        "games": 2,
+        "historical_opponents": [],
+        "komi": 7.5,
+        "learning_rate": 0.0003,
+        "max_plies": 4,
+        "opponent_probability": 1.0,
+        "opponent_snapshots": 4,
+        "purpose": "synthetic_smoke",
+        "replay_capacity": 8,
+        "search": {
+          "branch_width": 2,
+          "max_depth": 1,
+          "max_nodes": 4,
+          "queen_cycles": 1,
+          "temperature": 1.0
+        },
+        "seed": 20260924,
+        "snapshot_every_games": 1,
+        "temperature": 1.0,
+        "time_budget_s": 0.25,
+        "updates_per_game": 2,
+        "validation_force_pass": true,
+        "weight_decay": 0.0001
+      },
+      "unknown_excluded": true,
+      "update_boundary_exact": true
+    },
+    {
+      "actor_device": "cuda:1",
+      "actual_search_model_calls": 4,
+      "actual_search_plies": 2,
+      "checkpoint_runs": [
+        "selfplay09-smoke-cuda-0-ff9c07e76d-full",
+        "selfplay09-smoke-cuda-0-ff9c07e76d-resume",
+        "selfplay09-smoke-cuda-0-ff9c07e76d-update-resume",
+        "selfplay09-smoke-cuda-0-ff9c07e76d-unknown",
+        "selfplay09-smoke-cuda-0-ff9c07e76d-search"
+      ],
+      "completed_synthetic_games": 2,
+      "device": "cuda:0",
+      "exact_resume": true,
+      "failure_checks": [
+        "bad_hash",
+        "missing_manifest",
+        "identity_mismatch"
+      ],
+      "fallback_policy_excluded": true,
+      "final_event": 13,
+      "fresh_process": true,
+      "interrupted_after_event": 2,
+      "interrupted_after_update": 1,
+      "key": "b3b3a148d15d88dcf06807acc388de8f15609093822a3c224e0643f0812efc1b",
+      "model_config": {
+        "board_size": 9,
+        "dropout": 0.1,
+        "hidden_dim": 16,
+        "queen_cycles": 1,
+        "scout_steps": 1,
+        "spatial_channels": 8,
+        "worker_steps": 1
+      },
+      "optimizer_steps": 4,
+      "production_config": null,
+      "retained_events": [
+        12,
+        13
+      ],
+      "schema": "ahr_selfplay_recovery_receipt_v1",
+      "selfplay_source_hash": "f1c9bfea127d737339682d88a281d88e03450518ea105bdf552e4fa2307236df",
+      "source_hashes": {
+        "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+        "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+        "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+        "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+        "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+        "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+        "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+        "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+      },
+      "strength_claim": "NONE: synthetic recovery fixtures only",
+      "tested_config": {
+        "actor_device": "cuda:1",
+        "batch_size": 2,
+        "board_size": 9,
+        "checkpoint_every_events": 32,
+        "checkpoint_every_optimizer_steps": 250,
+        "checkpoint_interval_s": 600.0,
+        "device": "cuda:0",
+        "exploration": 0.1,
+        "games": 2,
+        "historical_opponents": [],
+        "komi": 7.5,
+        "learning_rate": 0.0003,
+        "max_plies": 4,
+        "opponent_probability": 1.0,
+        "opponent_snapshots": 4,
+        "purpose": "synthetic_smoke",
+        "replay_capacity": 8,
+        "search": {
+          "branch_width": 2,
+          "max_depth": 1,
+          "max_nodes": 4,
+          "queen_cycles": 1,
+          "temperature": 1.0
+        },
+        "seed": 20260924,
+        "snapshot_every_games": 1,
+        "temperature": 1.0,
+        "time_budget_s": 0.25,
+        "updates_per_game": 2,
+        "validation_force_pass": true,
+        "weight_decay": 0.0001
+      },
+      "unknown_excluded": true,
+      "update_boundary_exact": true
+    }
+  ],
+  "schema": "ahr_notebook09_validation_v1",
+  "status": "PASS",
+  "training_optimizer_steps": 0,
+  "warmup_handoff": {
+    "exact_event_zero_resume": true,
+    "initial_model_sha256": "5f6222557e4b7fa72fdfd655d336b953987c47dd281df3aedde8c4e32c6ac04b",
+    "optimizer_fresh": true,
+    "run_id": "selfplay09-warmup-handoff-4308a2440b",
+    "selection": "best",
+    "selfplay_optimizer_steps": 0,
+    "source_optimizer_steps": 32,
+    "source_run": "go08-initial-warmup-v2",
+    "status": "PASS"
+  }
+}

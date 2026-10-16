@@ -1,0 +1,49 @@
+{
+  "created_utc": "20260609T183103Z",
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "mathlib_index": {
+    "bytes": 133669977,
+    "index_included_in_package": false,
+    "index_path": "/home/benjamin/03_ahr_lean_foundation_plan_20260508/datasets/lean_ahr_mathlib_theorem_index.jsonl",
+    "lean_toolchain": "leanprover/lean4:v4.30.0",
+    "line_count": 173442,
+    "mathlib_tag": "v4.30.0",
+    "reason_not_included": "Full theorem index is large; package includes reproducibility metadata and checksum instead.",
+    "schema": "ahr_lean_mathlib_index_manifest",
+    "sha256": "14affa664f12efedf2c5094fc85c448083965fc3e1cfad30d984e6b1fdbe8ffe",
+    "workspace": "/home/benjamin/03_ahr_lean_foundation_plan_20260508/lean_ahr_mathlib_workspace"
+  },
+  "mathlib_tag": "v4.30.0",
+  "mathlib_workspace": "lean_ahr_mathlib_workspace",
+  "release_smoke": {
+    "import": "Mathlib.Analysis.Real.Pi.Irrational",
+    "proof": "exact irrational_pi",
+    "query": "prove pi is irrational",
+    "theorem": "irrational_pi",
+    "verified": true
+  },
+  "remote_host": "benjamin@34.46.24.135",
+  "remote_root": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "results": {
+    "v2_18_retrieval": {
+      "record_count": 50,
+      "success_count": 50
+    },
+    "v2_19_exact_solver": {
+      "expectation_met_count": 100,
+      "record_count": 100,
+      "solved_count": 80
+    },
+    "v3_0_nl_known_theorem": {
+      "record_count": 50,
+      "solved_count": 50,
+      "unique_prompt_count": 10
+    }
+  },
+  "schema": "ahr_lean_v2_18_to_v3_0_milestone_summary",
+  "scope": {
+    "v2_18": "mathlib theorem/import retrieval with verified #check candidates",
+    "v2_19": "exact Lean statement solver using retrieved mathlib theorem exact/apply path",
+    "v3_0": "natural-language known-theorem lookup and verified wrapper, not novel proof invention"
+  }
+}

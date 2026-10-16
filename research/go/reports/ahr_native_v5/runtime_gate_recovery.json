@@ -1,0 +1,46 @@
+{
+  "attach": "tmux attach -t ahr-go-native-v5",
+  "detach": "Ctrl-b, then d",
+  "displaced_originals": "experiments/ahr_native_v5/data/runtime_recovery/gate-history-slice/displaced",
+  "journal_state": "COMMITTED",
+  "launch": {
+    "attach": "tmux attach -t ahr-go-native-v5",
+    "configuration_sha256": "3a1bca2afbe9538a3dea6f2fb3c9e37c59b0715977194f2a2534a17e6c257396",
+    "detach": "Ctrl-b, then d",
+    "device": "cuda:1",
+    "hard_limit_hours": 24,
+    "launched_at_utc": "2026-10-02T17:11:08.917136+00:00",
+    "log": "reports/ahr_native_v5/controller.log",
+    "resume": "Unchanged configuration/sources; AHR_NATIVE_V5_RUN=1; Run All in05_budgeted_pipeline.ipynb. Original start/deadlines are restored.",
+    "session": "ahr-go-native-v5",
+    "status": "LAUNCHED",
+    "target_hours": 18
+  },
+  "lifecycle_changes": "Each retained controller checkpoint is RUNNING with last_error=None; global steps, all other metrics and every RNG unchanged.",
+  "migration_journal": "experiments/ahr_native_v5/data/runtime_recovery/gate-history-slice/journal.json",
+  "original_clocks": {
+    "hard_deadline_unix": 1791045910.4058352,
+    "learning_deadline_unix": 1791017110.4058352,
+    "started_unix": 1790959510.4058352,
+    "target_deadline_unix": 1791024310.4058352
+  },
+  "scientific_state_preserved": true,
+  "status": "COMMITTED_AND_RUNNING",
+  "updated_at_utc": "2026-10-02T17:11:08.920481+00:00",
+  "verification": {
+    "checkpoint_sha256": "2004d35094335f585d8e4e85561196f55656ff5c8f9a8d1495f02e3826b098e1",
+    "clocks": {
+      "hard_deadline_unix": 1791045910.4058352,
+      "learning_deadline_unix": 1791017110.4058352,
+      "started_unix": 1790959510.4058352,
+      "target_deadline_unix": 1791024310.4058352
+    },
+    "configuration_sha256": "3a1bca2afbe9538a3dea6f2fb3c9e37c59b0715977194f2a2534a17e6c257396",
+    "global_step": 242,
+    "optimizer_step": 242,
+    "original_budget_preserved": true,
+    "status": "PASS",
+    "strict_controller_loader": "PASS",
+    "strict_current_source_training_loader": "PASS"
+  }
+}

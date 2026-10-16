@@ -1,0 +1,92 @@
+{
+  "buffer_id": "ahr-v2-k20-buffer-903caf7b-cuda-1-collection-full",
+  "collection_identity": {
+    "base_checkpoint": {
+      "checkpoint_file": "synthetic",
+      "checkpoint_sha256": "synthetic",
+      "model_identity": "ab02196d21a11488af855f1e14acc9ab5fcab7419218265321986affd7a5858b",
+      "run_id": "ahr-v2-k20-fixture-base"
+    },
+    "collection_config": {
+      "base_run_id": "ahr-v2-k20-fixture-base",
+      "base_which": "best",
+      "board_size": 9,
+      "buffer_id": "ahr-v2-k20-buffer-903caf7b-cuda-1-collection-full",
+      "cache_id": "k20-fixture",
+      "cpu_threads": 1,
+      "device": "cuda:1",
+      "exclude_benchmark_run_ids": [
+        "ahr-v2-benchmark-20261009-v1"
+      ],
+      "game_time_seconds": 900,
+      "games": 2,
+      "gamma": 1.0,
+      "komi": 7.5,
+      "max_plies": 400,
+      "opening_plies": 0,
+      "opening_temperature": 1.5,
+      "opponent_cycle": [
+        "self"
+      ],
+      "opponent_timeout_seconds": 90,
+      "potential_strength": 1.0,
+      "precision": "float32",
+      "purpose": "validation_fixture",
+      "reading_nodes": 16,
+      "reading_wall_seconds": null,
+      "root_noise_fraction": 0.0,
+      "rows_per_game": 2,
+      "schema": "ahr-go-v2-economic-guided-v1",
+      "search_batch_size": 2,
+      "search_wall_seconds": null,
+      "seed": 2026101120,
+      "simulations": 4,
+      "teacher_backend": "cpu",
+      "teacher_gpu_device": 0,
+      "teacher_timeout_seconds": 120,
+      "teacher_visits": 2
+    },
+    "opening_exclusions": {
+      "families": [],
+      "fixture": true,
+      "frozen_inventory": true,
+      "inputs": []
+    },
+    "opponents": {},
+    "schema": "ahr-go-v2-guided-buffer-v1",
+    "sources": {
+      "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+      "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+      "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+      "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+      "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+      "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+      "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+      "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+      "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+      "experiments/ahr_v2/15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+      "experiments/ahr_v2/16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46",
+      "experiments/ahr_v2/17_strength_and_speed_benchmarks.ipynb": "c4c01826a61156e44dfabeec3fb869fc12b7cc2fbc97b4eddc4920a819a28c4e",
+      "experiments/ahr_v2/18_diagnosis_and_stronger_teacher_data.ipynb": "3e30b867cca765cd21acf802a78df83dab3b19f37a3adb9037e0055eef8157ab",
+      "experiments/ahr_v2/19_stronger_scout_worker_training.ipynb": "d2da73d46782f3a3871719da105dbf94fdca35156940091dd5ee67f413f2cfef",
+      "experiments/ahr_v2/20_economic_rewards_and_teacher_guided_improvement.ipynb": "a8e23d36ed79b80c33f4d222983a39138f035f4b3748f29a240f368cede5ac9c"
+    },
+    "teacher": {
+      "kind": "synthetic_validation",
+      "schema": "k20-pass-teacher-v1"
+    }
+  },
+  "games_finished": 2,
+  "games_requested": 2,
+  "global_step": 26,
+  "label_failures": 0,
+  "labelled_rows": 4,
+  "opponent_used_only_during_rollout": true,
+  "run_id": "ahr-v2-k20-buffer-903caf7b-cuda-1-collection-full-collection",
+  "stage": "COMPLETE",
+  "status": "COMPLETE",
+  "teacher_queries": 4,
+  "teacher_used_only_for_offline_labels": true,
+  "unknown_games": 0,
+  "updated_at_utc": "2026-10-11T12:35:53.852561+00:00"
+}

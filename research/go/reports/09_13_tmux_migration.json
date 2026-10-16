@@ -1,0 +1,82 @@
+{
+  "operation": "move_existing_pipeline_to_tmux",
+  "controller_pid": 69538,
+  "child_pid": 69587,
+  "kernel_pid": 67011,
+  "controller_paused": true,
+  "requested_at_unix": 1790184691.8450568,
+  "saved_checkpoint": {
+    "run_id": "go09-first-selfplay-v1",
+    "identity": "1aa4550e4563507bec23dab3292af3e4a813850b793259a524debcaf8a1f0830",
+    "event": 548,
+    "optimizer_steps": 32,
+    "phase": "play",
+    "games_finished": 4,
+    "completed_games": 4,
+    "unknown_games": 0,
+    "current_game_plies": 74,
+    "game_history": [
+      {
+        "game_id": 0,
+        "status": "VERIFIED_TERMINAL",
+        "reason": "two_legal_passes",
+        "plies": 157,
+        "admitted": true
+      },
+      {
+        "game_id": 1,
+        "status": "VERIFIED_TERMINAL",
+        "reason": "two_legal_passes",
+        "plies": 77,
+        "admitted": true
+      },
+      {
+        "game_id": 2,
+        "status": "VERIFIED_TERMINAL",
+        "reason": "two_legal_passes",
+        "plies": 111,
+        "admitted": true
+      },
+      {
+        "game_id": 3,
+        "status": "VERIFIED_TERMINAL",
+        "reason": "two_legal_passes",
+        "plies": 88,
+        "admitted": true
+      }
+    ],
+    "last_update": {
+      "policy": 2.3252601623535156,
+      "value": 1.0184307098388672,
+      "score": 0.0435069277882576,
+      "ownership": 0.8820091485977173,
+      "loss": 3.8064489364624023,
+      "examples": 32.0,
+      "gradient_norm": 1.213767170906067,
+      "optimizer_step": 32,
+      "replay_positions": 433
+    },
+    "all_retained_hashes_verified": true
+  },
+  "tmux_session": "ahr-go-training",
+  "launched_at_utc": "2026-09-23T17:32:56.769169+00:00",
+  "panes": [
+    "ahr-go-training:pipeline 69538 python",
+    "ahr-go-training:progress 69541 watch"
+  ],
+  "attach_command": "tmux attach -t ahr-go-training",
+  "detach_keys": "Ctrl-b then d",
+  "status": "PASS",
+  "checked_at_utc": "2026-09-23T17:34:02.478957+00:00",
+  "resumed_same_identity": true,
+  "completed_history_preserved": true,
+  "forward_progress_while_detached": true,
+  "attached_clients": 0,
+  "current": {
+    "event": 578,
+    "optimizer_steps": 40,
+    "games_finished": 5,
+    "completed_games": 5,
+    "unknown_games": 0
+  }
+}

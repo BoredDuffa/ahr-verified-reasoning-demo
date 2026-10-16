@@ -1,0 +1,259 @@
+{
+  "schema": "fmm-jepa-tiny-comparison/v1",
+  "run_mode": "pilot",
+  "results": {
+    "vit_untrained": {
+      "model_id": "vit_untrained",
+      "seed": 4404,
+      "phase": "linear_probe",
+      "split": "development",
+      "checkpoint_hash": "e4be6f04866ba8d295714038d75f395fa87400b8677ce806fe9283c23738a1e6",
+      "probe_hash": "9d3596302d0e092cefa8482fd3c3532a3cb7cc36d38cff34df66950738dff7a5",
+      "selected_epoch": 15,
+      "completed_epochs": 30,
+      "successful_probe_updates": 2370,
+      "budget": {
+        "epochs": 30,
+        "batch_size": 256,
+        "lr": 0.01,
+        "weight_decay": 0.0001,
+        "standardize": true,
+        "num_classes": 200,
+        "seed": 4404,
+        "order_seed": 4405,
+        "selection": "best_dev_top1_then_earliest",
+        "device": "cpu"
+      },
+      "initialization_hash": "64ee67c2e21d3056e14f2f7ea72fe880844a299283c293ced9b4c15f427e4b4c",
+      "encoder_unchanged": true,
+      "encoder_verification": "state_hash_before_after",
+      "train_examples": 20000,
+      "train_classes": 200,
+      "initialization_control": true,
+      "standardization_fit_scope": "probe_train_only",
+      "resumed": false,
+      "metrics": {
+        "loss": 5.129586219787598,
+        "top1": 0.05000000074505806,
+        "top5": 0.13699999451637268,
+        "examples": 2000,
+        "evaluated_classes": 200
+      },
+      "selected_probe_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/vit_untrained/selected_probe.pt",
+      "predictions_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/vit_untrained/development_predictions.csv",
+      "resume_manifest": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/vit_untrained/probe_manifest.json"
+    },
+    "vit_trained": {
+      "model_id": "vit_trained",
+      "seed": 4404,
+      "phase": "linear_probe",
+      "split": "development",
+      "checkpoint_hash": "02e2a297b34a9561933d6b0645acf1df8e2f51675725b76a9be7c3eb751e5418",
+      "probe_hash": "f9f665506b120aff5cfa17157bbd1aba2c37ffabbf08c6b2addabf61d9a4ab36",
+      "selected_epoch": 16,
+      "completed_epochs": 30,
+      "successful_probe_updates": 2370,
+      "budget": {
+        "epochs": 30,
+        "batch_size": 256,
+        "lr": 0.01,
+        "weight_decay": 0.0001,
+        "standardize": true,
+        "num_classes": 200,
+        "seed": 4404,
+        "order_seed": 4405,
+        "selection": "best_dev_top1_then_earliest",
+        "device": "cpu"
+      },
+      "initialization_hash": "64ee67c2e21d3056e14f2f7ea72fe880844a299283c293ced9b4c15f427e4b4c",
+      "encoder_unchanged": true,
+      "encoder_verification": "state_hash_before_after",
+      "train_examples": 20000,
+      "train_classes": 200,
+      "initialization_control": false,
+      "standardization_fit_scope": "probe_train_only",
+      "resumed": false,
+      "metrics": {
+        "loss": 4.799522876739502,
+        "top1": 0.0885000005364418,
+        "top5": 0.22300000488758087,
+        "examples": 2000,
+        "evaluated_classes": 200
+      },
+      "selected_probe_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/vit_trained/selected_probe.pt",
+      "predictions_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/vit_trained/development_predictions.csv",
+      "resume_manifest": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/vit_trained/probe_manifest.json"
+    },
+    "fmm_untrained": {
+      "model_id": "fmm_untrained",
+      "seed": 4404,
+      "phase": "linear_probe",
+      "split": "development",
+      "checkpoint_hash": "1c637c394f2d8d35fe181f55f32120976ee83f1710a936dfb900c6c7a87da30c",
+      "probe_hash": "7137d13fbfa21e79e19a852b34dd5aa893cf544838e57883ffb3c6e1e6e69882",
+      "selected_epoch": 15,
+      "completed_epochs": 30,
+      "successful_probe_updates": 2370,
+      "budget": {
+        "epochs": 30,
+        "batch_size": 256,
+        "lr": 0.01,
+        "weight_decay": 0.0001,
+        "standardize": true,
+        "num_classes": 200,
+        "seed": 4404,
+        "order_seed": 4405,
+        "selection": "best_dev_top1_then_earliest",
+        "device": "cpu"
+      },
+      "initialization_hash": "64ee67c2e21d3056e14f2f7ea72fe880844a299283c293ced9b4c15f427e4b4c",
+      "encoder_unchanged": true,
+      "encoder_verification": "state_hash_before_after",
+      "train_examples": 20000,
+      "train_classes": 200,
+      "initialization_control": true,
+      "standardization_fit_scope": "probe_train_only",
+      "resumed": false,
+      "metrics": {
+        "loss": 5.097751617431641,
+        "top1": 0.04600000008940697,
+        "top5": 0.1469999998807907,
+        "examples": 2000,
+        "evaluated_classes": 200
+      },
+      "selected_probe_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/fmm_untrained/selected_probe.pt",
+      "predictions_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/fmm_untrained/development_predictions.csv",
+      "resume_manifest": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/fmm_untrained/probe_manifest.json"
+    },
+    "fmm_trained": {
+      "model_id": "fmm_trained",
+      "seed": 4404,
+      "phase": "linear_probe",
+      "split": "development",
+      "checkpoint_hash": "3aa9fe7e312bca99f53e6462e33b27b571ab6b295381edf0f42557e9402af0cb",
+      "probe_hash": "dcd6e4bad4adf215307f58379df31271b53ae173fb91d57bd6157fa76e4d86b0",
+      "selected_epoch": 22,
+      "completed_epochs": 30,
+      "successful_probe_updates": 2370,
+      "budget": {
+        "epochs": 30,
+        "batch_size": 256,
+        "lr": 0.01,
+        "weight_decay": 0.0001,
+        "standardize": true,
+        "num_classes": 200,
+        "seed": 4404,
+        "order_seed": 4405,
+        "selection": "best_dev_top1_then_earliest",
+        "device": "cpu"
+      },
+      "initialization_hash": "64ee67c2e21d3056e14f2f7ea72fe880844a299283c293ced9b4c15f427e4b4c",
+      "encoder_unchanged": true,
+      "encoder_verification": "state_hash_before_after",
+      "train_examples": 20000,
+      "train_classes": 200,
+      "initialization_control": false,
+      "standardization_fit_scope": "probe_train_only",
+      "resumed": false,
+      "metrics": {
+        "loss": 4.711581230163574,
+        "top1": 0.09849999845027924,
+        "top5": 0.24300000071525574,
+        "examples": 2000,
+        "evaluated_classes": 200
+      },
+      "selected_probe_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/fmm_trained/selected_probe.pt",
+      "predictions_path": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/fmm_trained/development_predictions.csv",
+      "resume_manifest": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/20260923T214538Z-9663c15f-probes/fmm_trained/probe_manifest.json"
+    }
+  },
+  "deltas": {
+    "delta_vit": {
+      "correct_top1": {
+        "delta_percentage_points": 3.85,
+        "ci95_percentage_points": [
+          2.4,
+          5.2
+        ],
+        "examples": 2000,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top1",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      },
+      "correct_top5": {
+        "delta_percentage_points": 8.6,
+        "ci95_percentage_points": [
+          6.7,
+          10.5
+        ],
+        "examples": 2000,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top5",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      }
+    },
+    "delta_fmm": {
+      "correct_top1": {
+        "delta_percentage_points": 5.25,
+        "ci95_percentage_points": [
+          3.85,
+          6.550000000000001
+        ],
+        "examples": 2000,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top1",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      },
+      "correct_top5": {
+        "delta_percentage_points": 9.6,
+        "ci95_percentage_points": [
+          7.69875,
+          11.4
+        ],
+        "examples": 2000,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top5",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      }
+    },
+    "delta_architecture": {
+      "correct_top1": {
+        "delta_percentage_points": 1.0,
+        "ci95_percentage_points": [
+          -0.45124999999999993,
+          2.4012499999999988
+        ],
+        "examples": 2000,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top1",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      },
+      "correct_top5": {
+        "delta_percentage_points": 2.0,
+        "ci95_percentage_points": [
+          0.05,
+          3.8
+        ],
+        "examples": 2000,
+        "bootstrap_repeats": 1000,
+        "bootstrap_seed": 5505,
+        "metric": "correct_top5",
+        "uncertainty_scope": "paired evaluation-image bootstrap conditional on these fixed trained models; excludes training-seed variability"
+      }
+    }
+  },
+  "learning_evidence": "positive",
+  "ready_for_notebook_02": true,
+  "training_seeds": 1,
+  "heldout_status": "NOT_RUN",
+  "interpretation": "One-seed pilot. Interpret trained-minus-initial deltas with budget and collapse evidence; no robust architectural conclusion.",
+  "chance_reference_top1": 0.005,
+  "chance_role": "sanity reference only; initialization controls are the learning baseline",
+  "degeneracy_flags_observed": false,
+  "diagnostic_scope": "200 fixed development images, raw pooled final-LayerNorm features before probe standardization; advisory rank<2 and variance<=1e-12 flags."
+}

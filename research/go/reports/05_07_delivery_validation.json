@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "notebooks": [
+    {
+      "notebook": "05_csp_qcsp_pretraining.ipynb",
+      "code_cells": 7,
+      "fresh_kernel_execution_order": true,
+      "error_outputs": 0,
+      "all_code_sha256": "db1b44b34672ab9da5b2b57dca30d1a06c4fc05ce1e5cebdb6039ef0baf99027"
+    },
+    {
+      "notebook": "06_ahr_go_search_engine.ipynb",
+      "code_cells": 7,
+      "fresh_kernel_execution_order": true,
+      "error_outputs": 0,
+      "all_code_sha256": "61bca0d7fe18da9344551701b48da0abad1ca80533fe05eab38046f330fff063"
+    },
+    {
+      "notebook": "07_csp_to_go_transfer_tests.ipynb",
+      "code_cells": 10,
+      "fresh_kernel_execution_order": true,
+      "error_outputs": 0,
+      "all_code_sha256": "db010ffae33e172baa438f61a651473fe15b8d51d7bcd26201d49153d08bd9f0"
+    }
+  ],
+  "training_run": "csp05-initial-12epochs",
+  "checkpoint_manifest_sha256": "c23a600d56100bbb795af74680863cd176e62c76a001127d58438f4895aca5ee",
+  "retained_checkpoints_hash_verified": [
+    {
+      "file": "checkpoints/csp05-initial-12epochs/step-000000004-3ffff13c.pt",
+      "sha256": "edf6431ca76ccf3eabf4b574c91ceec3e5c0b48a44c6d6bea739ab22b557dc51"
+    },
+    {
+      "file": "checkpoints/csp05-initial-12epochs/step-000000024-c8b7b27f.pt",
+      "sha256": "c0bb94e0421dc4e7958ffbac2511ba417047a887cbc3906a952d439332e6db8a"
+    },
+    {
+      "file": "checkpoints/csp05-initial-12epochs/step-000000025-259b7211.pt",
+      "sha256": "b0f46b18f19303ee352bf534e4b0597d66982c61fab2bf9bf6446517f800ab32"
+    }
+  ],
+  "training_receipt": "reports/05_training_results.json",
+  "exact_two_gpu_resume_receipt": "reports/05_exact_training_resume.json",
+  "search_receipt": "reports/06_go_search_validation.json",
+  "transfer_receipt": "reports/07_transfer_validation.json",
+  "graphical_review": "Not performed; saved outputs and generated HTML inspected structurally.",
+  "constraint_solving_companion": {
+    "notebook": "reports/05_constraint_solving_evaluation.ipynb",
+    "report": "reports/05_constraint_solving_results.json",
+    "executed_code_cells": 4,
+    "error_outputs": 0
+  },
+  "trained_9x9_companion": {
+    "notebook": "reports/06_trained_player_validation.ipynb",
+    "report": "reports/06_trained_player_validation.json",
+    "executed_code_cells": 5,
+    "error_outputs": 0
+  },
+  "completed_training": {
+    "epochs": 12,
+    "optimizer_steps": 936,
+    "gpus": 2,
+    "route": "csp_only"
+  },
+  "transfer_result": {
+    "games": 96,
+    "completed_games": 92,
+    "unknown_games": 4,
+    "bounded_probes": 24,
+    "improvement_observed": false
+  }
+}

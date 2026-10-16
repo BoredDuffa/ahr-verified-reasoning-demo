@@ -1,0 +1,92 @@
+{
+  "checks": {
+    "absolute_canadian_unlimited_and_zero_clock": true,
+    "capture_suicide_superko_and_exact_undo": true,
+    "cross_namespace_model_state_bridge": true,
+    "failed_commands_are_transactional": true,
+    "framing_comments_ids_coordinates": true,
+    "fresh_process_stdio_exact_round_trip": true,
+    "invalid_player_output_and_exceptions_are_transactional": true,
+    "out_of_turn_undo_komi_terminal": true,
+    "transcript_and_quit": true
+  },
+  "deadline_semantics": "cooperative; controller adjudicates timeouts",
+  "fixture_only": false,
+  "implemented_commands": [
+    "protocol_version",
+    "name",
+    "version",
+    "known_command",
+    "list_commands",
+    "quit",
+    "boardsize",
+    "clear_board",
+    "komi",
+    "play",
+    "genmove",
+    "undo",
+    "showboard",
+    "final_score",
+    "time_settings",
+    "time_left",
+    "ahr-rules",
+    "ahr-last-search"
+  ],
+  "notebook": "notebooks/10_gtp_engine_interface.ipynb",
+  "optimizer_steps": 0,
+  "protocol_version": 2,
+  "rules": {
+    "consecutive_passes_to_end": 2,
+    "dead_stones": "must_be_captured_before_passing",
+    "default_komi": 7.5,
+    "default_size": 9,
+    "ko": "positional_superko",
+    "move_cap": null,
+    "name": "ahr_go_area_positional_superko_v1",
+    "passes_exempt_from_superko": true,
+    "scoring": "stones_plus_single_color_bordered_empty_regions_minus_komi",
+    "suicide": false
+  },
+  "schema": "ahr_gtp_validation_v1",
+  "selected_checkpoint_check": {
+    "device": "cpu",
+    "full_state_namespace_bridge": true,
+    "legality_verified": true,
+    "move": "G1",
+    "occupied_move_rejected": true,
+    "run_id": "go09-first-selfplay-v1",
+    "search_diagnostics": {
+      "action": 78,
+      "checkpoint": {
+        "checkpoint_file": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+        "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+        "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+        "optimizer_step": 512,
+        "run_id": "go09-first-selfplay-v1",
+        "selection": "latest"
+      },
+      "deadline_exceeded": false,
+      "elapsed_s": 0.17393334698863328,
+      "legality_verified": true,
+      "player_identity": "go_ahr:go09-first-selfplay-v1:latest",
+      "player_reported_status": "UNKNOWN",
+      "strategic_status": "UNKNOWN",
+      "time_budget_s": 1.0,
+      "vertex": "G1"
+    },
+    "status": "PASS",
+    "time_budget_s": 1.0,
+    "undo_board_verified": true
+  },
+  "source_sha256": "001057f79592457105cba18355185caee61b3f5053097c41b4a743851d2d74ee",
+  "status": "PASS",
+  "strength_claim": "NOT_EVALUATED",
+  "subprocess_exit_code": 0,
+  "terminal_genmove": "pass acknowledgment; no state transition",
+  "trained_player_tested": true,
+  "upstream_export_sha256": {
+    "01_go_rules_and_independent_verifier.ipynb": "93f0269d4f9fcf62729fd7e3b3de6e9db1fa8ab7c150ab6e170e2b3a3378cebe",
+    "06_ahr_go_search_engine.ipynb": "0a2e85d389882bcc6e8a7263083d502002d6ceb698f5592f6ef36c79a0e25274"
+  },
+  "visual_inspection": "NOT_PERFORMED; open reports/previews/10_gtp_engine_interface.html in a graphical browser"
+}

@@ -1,0 +1,949 @@
+{
+  "clinical_use": "forbidden",
+  "dataset": "/home/benjamin/02_ahr_csp_math_words/.1AHR_maths&words/ahr_csp_v0/data/reasoning_challenge_v0/compiled_ahr_csp_v0/reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_4096_1024_1024.jsonl",
+  "elapsed_s": 118.9112012386322,
+  "families": {
+    "operation_synthesis_len2_factored": {
+      "row_stats": {
+        "program_lengths": {
+          "2": 1536
+        },
+        "rows": 1536,
+        "state_count_max": 17,
+        "state_count_median": 13,
+        "state_count_min": 4,
+        "witness_operation_counts": {
+          "DELTA": 634,
+          "DOUBLE-EVENS": 1548,
+          "REV": 434,
+          "ZIP-SELF": 456
+        }
+      },
+      "sample_counts": {
+        "test": 512,
+        "train": 512,
+        "val": 512
+      },
+      "splits": {
+        "test": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 512
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 512
+            },
+            "records": 512,
+            "split_counts": {
+              "test": 512
+            },
+            "status_counts": {
+              "sat": 512
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.9507812485098839,
+            "cpu_mean_energy": 0.0,
+            "cpu_valid_rate": 1.0,
+            "cpu_verified_count": 64.0,
+            "hard_valid_rate": 1.0,
+            "loss_total": 0.12305063288658857,
+            "mean_hard_energy": 0.0
+          }
+        },
+        "train": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 512
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 512
+            },
+            "records": 512,
+            "split_counts": {
+              "train": 512
+            },
+            "status_counts": {
+              "sat": 512
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.9625000059604645,
+            "cpu_mean_energy": 0.0,
+            "cpu_valid_rate": 1.0,
+            "cpu_verified_count": 64.0,
+            "hard_valid_rate": 1.0,
+            "loss_total": 0.09854743327014148,
+            "mean_hard_energy": 0.0
+          }
+        },
+        "val": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 512
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 512
+            },
+            "records": 512,
+            "split_counts": {
+              "val": 512
+            },
+            "status_counts": {
+              "sat": 512
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.9624999985098839,
+            "cpu_mean_energy": 0.0,
+            "cpu_valid_rate": 1.0,
+            "cpu_verified_count": 64.0,
+            "hard_valid_rate": 1.0,
+            "loss_total": 0.09219670132733881,
+            "mean_hard_energy": 0.0
+          }
+        }
+      },
+      "subset_path": "/home/benjamin/02_ahr_csp_math_words/.1AHR_maths&words/ahr_csp_v0/reports/v16r_family_atlas_subsets/v16r_operation_synthesis_len2_factored_sampled.jsonl",
+      "total_counts": {
+        "test": 614,
+        "train": 2457,
+        "val": 614
+      }
+    },
+    "operation_synthesis_len3_factored": {
+      "row_stats": {
+        "program_lengths": {
+          "3": 1230
+        },
+        "rows": 1230,
+        "state_count_max": 13,
+        "state_count_median": 13,
+        "state_count_min": 5,
+        "witness_operation_counts": {
+          "DELTA": 335,
+          "DOUBLE-EVENS": 2112,
+          "REV": 674,
+          "ZIP-SELF": 569
+        }
+      },
+      "sample_counts": {
+        "test": 359,
+        "train": 512,
+        "val": 359
+      },
+      "splits": {
+        "test": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 359
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 359
+            },
+            "records": 359,
+            "split_counts": {
+              "test": 359
+            },
+            "status_counts": {
+              "sat": 359
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.724330355723699,
+            "cpu_mean_energy": 0.0026041666666666665,
+            "cpu_valid_rate": 0.9973958333333334,
+            "cpu_verified_count": 59.833333333333336,
+            "hard_valid_rate": 0.9973958333333334,
+            "loss_total": 0.7148845692475637,
+            "mean_hard_energy": 0.0026041666666666665
+          }
+        },
+        "train": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 512
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 512
+            },
+            "records": 512,
+            "split_counts": {
+              "train": 512
+            },
+            "status_counts": {
+              "sat": 512
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.732421875,
+            "cpu_mean_energy": 0.0,
+            "cpu_valid_rate": 1.0,
+            "cpu_verified_count": 64.0,
+            "hard_valid_rate": 1.0,
+            "loss_total": 0.6943080723285675,
+            "mean_hard_energy": 0.0
+          }
+        },
+        "val": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 359
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 359
+            },
+            "records": 359,
+            "split_counts": {
+              "val": 359
+            },
+            "status_counts": {
+              "sat": 359
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.7449919879436493,
+            "cpu_mean_energy": 0.0,
+            "cpu_valid_rate": 1.0,
+            "cpu_verified_count": 59.833333333333336,
+            "hard_valid_rate": 1.0,
+            "loss_total": 0.6636705100536346,
+            "mean_hard_energy": 0.0
+          }
+        }
+      },
+      "subset_path": "/home/benjamin/02_ahr_csp_math_words/.1AHR_maths&words/ahr_csp_v0/reports/v16r_family_atlas_subsets/v16r_operation_synthesis_len3_factored_sampled.jsonl",
+      "total_counts": {
+        "test": 359,
+        "train": 1435,
+        "val": 359
+      }
+    },
+    "operation_synthesis_len3_factored_path_hinted": {
+      "row_stats": {
+        "program_lengths": {
+          "3": 306
+        },
+        "rows": 306,
+        "state_count_max": 13,
+        "state_count_median": 13,
+        "state_count_min": 5,
+        "witness_operation_counts": {
+          "DELTA": 91,
+          "DOUBLE-EVENS": 516,
+          "REV": 186,
+          "ZIP-SELF": 125
+        }
+      },
+      "sample_counts": {
+        "test": 51,
+        "train": 204,
+        "val": 51
+      },
+      "splits": {
+        "test": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 51
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 51
+            },
+            "records": 51,
+            "split_counts": {
+              "test": 51
+            },
+            "status_counts": {
+              "sat": 51
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.9607843160629272,
+            "cpu_mean_energy": 0.0,
+            "cpu_valid_rate": 1.0,
+            "cpu_verified_count": 51.0,
+            "hard_valid_rate": 1.0,
+            "loss_total": 0.033909037709236145,
+            "mean_hard_energy": 0.0
+          }
+        },
+        "train": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 204
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 204
+            },
+            "records": 204,
+            "split_counts": {
+              "train": 204
+            },
+            "status_counts": {
+              "sat": 204
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.958891361951828,
+            "cpu_mean_energy": 0.0,
+            "cpu_valid_rate": 1.0,
+            "cpu_verified_count": 51.0,
+            "hard_valid_rate": 1.0,
+            "loss_total": 0.034154211170971394,
+            "mean_hard_energy": 0.0
+          }
+        },
+        "val": {
+          "data_report": {
+            "generator_counts": {
+              "reasoning_curriculum_v16q_operation_synthesis_len3_more_dehint_builder": 51
+            },
+            "problem_type_counts": {
+              "bounded_arithmetic": 51
+            },
+            "records": 51,
+            "split_counts": {
+              "val": 51
+            },
+            "status_counts": {
+              "sat": 51
+            }
+          },
+          "metrics": {
+            "assignment_acc": 0.9691876769065857,
+            "cpu_mean_energy": 0.0,
+            "cpu_valid_rate": 1.0,
+            "cpu_verified_count": 51.0,
+            "hard_valid_rate": 1.0,
+            "loss_total": 0.031341180205345154,
+            "mean_hard_energy": 0.0
+          }
+        }
+      },
+      "subset_path": "/home/benjamin/02_ahr_csp_math_words/.1AHR_maths&words/ahr_csp_v0/reports/v16r_family_atlas_subsets/v16r_operation_synthesis_len3_factored_path_hinted_sampled.jsonl",
+      "total_counts": {
+        "test": 51,
+        "train": 204,
+        "val": 51
+      }
+    }
+  },
+  "final_passed": true,
+  "final_split_metrics": {
+    "test": {
+      "assignment_acc": 0.8719199933111668,
+      "cpu_mean_energy": 0.0009765625,
+      "cpu_valid_rate": 0.9990234375,
+      "cpu_verified_count": 64.0,
+      "hard_valid_rate": 0.9990234375,
+      "loss_total": 0.3232663853559643,
+      "mean_hard_energy": 0.0009765625
+    },
+    "train": {
+      "assignment_acc": 0.8762524602934718,
+      "cpu_mean_energy": 0.0,
+      "cpu_valid_rate": 1.0,
+      "cpu_verified_count": 64.0,
+      "hard_valid_rate": 1.0,
+      "loss_total": 0.31288595451042056,
+      "mean_hard_energy": 0.0
+    },
+    "val": {
+      "assignment_acc": 0.8832499273121357,
+      "cpu_mean_energy": 0.0,
+      "cpu_valid_rate": 1.0,
+      "cpu_verified_count": 64.0,
+      "hard_valid_rate": 1.0,
+      "loss_total": 0.2960330150090158,
+      "mean_hard_energy": 0.0
+    }
+  },
+  "history_summary": {
+    "available": true,
+    "epochs": 29,
+    "tail": [
+      {
+        "elapsed_s": 401.7344422340393,
+        "epoch": 25,
+        "global_step": 13909,
+        "train": {
+          "batch_idx": 31.5,
+          "epoch": 25.0,
+          "final/all_hard_zero_energy_rate": 0.999267578125,
+          "final/assignment_acc": 0.8602011138573289,
+          "final/assignment_loss": 0.4565411168150604,
+          "final/constraint_loss": 0.01867356142611243,
+          "final/constraint_nll_loss": 0.01976029343495611,
+          "final/entropy_loss": 0.06070095446193591,
+          "final/exact_reference_match_rate": 0.727783203125,
+          "final/expected_violation_loss": 0.01867356142611243,
+          "final/fixed_acc": 1.0,
+          "final/fixed_loss": 1.238953922094721e-10,
+          "final/graph_conflict_loss": 0.0,
+          "final/halt_loss": 0.7234068810939789,
+          "final/hard_valid_rate": 0.999267578125,
+          "final/logit_l2_loss": 228.75276255607605,
+          "final/loss_total": 0.35081525100395083,
+          "final/mean_expected_energy": 0.08404023427283391,
+          "final/mean_expected_energy_norm": 0.01751314348075539,
+          "final/mean_halt_prob": 0.486435214523226,
+          "final/mean_hard_energy": 0.000732421875,
+          "final/mean_hard_energy_norm": 0.00014648437718278728,
+          "final/query_acc": 0.8602011138573289,
+          "final/query_assignment_loss": 0.4565411168150604,
+          "final/sat_fraction": 1.0,
+          "final/unsat_fraction": 0.0,
+          "final/unsat_margin_loss": 0.0,
+          "full/all_hard_zero_energy_rate": 0.999267578125,
+          "full/assignment_acc": 0.8602011138573289,
+          "full/assignment_loss": 0.4565411168150604,
+          "full/constraint_loss": 0.01867356142611243,
+          "full/constraint_nll_loss": 0.01976029343495611,
+          "full/entropy_loss": 0.06070095446193591,
+          "full/exact_reference_match_rate": 0.727783203125,
+          "full/expected_violation_loss": 0.01867356142611243,
+          "full/fixed_acc": 1.0,
+          "full/fixed_loss": 1.238953922094721e-10,
+          "full/graph_conflict_loss": 0.0,
+          "full/halt_loss": 0.7234068810939789,
+          "full/hard_valid_rate": 0.999267578125,
+          "full/logit_l2_loss": 228.75276255607605,
+          "full/loss_total": 0.35081525100395083,
+          "full/mean_expected_energy": 0.08404023427283391,
+          "full/mean_expected_energy_norm": 0.01751314348075539,
+          "full/mean_halt_prob": 0.486435214523226,
+          "full/mean_hard_energy": 0.000732421875,
+          "full/mean_hard_energy_norm": 0.00014648437718278728,
+          "full/query_acc": 0.8602011138573289,
+          "full/query_assignment_loss": 0.4565411168150604,
+          "full/sat_fraction": 1.0,
+          "full/unsat_fraction": 0.0,
+          "full/unsat_margin_loss": 0.0,
+          "global_step": 13876.5,
+          "grad_norm": 3.410726032918319,
+          "loss_total": 0.38013423327356577,
+          "short/all_hard_zero_energy_rate": 0.9345703125,
+          "short/assignment_acc": 0.8510418301448226,
+          "short/assignment_loss": 0.48249936127103865,
+          "short/constraint_loss": 0.036245289200451225,
+          "short/constraint_nll_loss": 0.05094116835971363,
+          "short/entropy_loss": 0.07410139590501785,
+          "short/exact_reference_match_rate": 0.6826171875,
+          "short/expected_violation_loss": 0.036245289200451225,
+          "short/fixed_acc": 1.0,
+          "short/fixed_loss": 0.0,
+          "short/graph_conflict_loss": 0.0,
+          "short/halt_loss": 0.726419722661376,
+          "short/hard_valid_rate": 0.9345703125,
+          "short/logit_l2_loss": 302.81878757476807,
+          "short/loss_total": 0.4639028161764145,
+          "short/mean_expected_energy": 0.1628276698756963,
+          "short/mean_expected_energy_norm": 0.036536238563712686,
+          "short/mean_halt_prob": 0.48118102829903364,
+          "short/mean_hard_energy": 0.065673828125,
+          "short/mean_hard_energy_norm": 0.015893554653303,
+          "short/query_acc": 0.8510418301448226,
+          "short/query_assignment_loss": 0.48249936127103865,
+          "short/sat_fraction": 1.0,
+          "short/unsat_fraction": 0.0,
+          "short/unsat_margin_loss": 0.0
+        },
+        "val": {
+          "all_hard_zero_energy_rate": 1.0,
+          "assignment_acc": 0.8840299770236015,
+          "assignment_loss": 0.38873513927683234,
+          "constraint_loss": 0.015286068563000299,
+          "constraint_nll_loss": 0.016022104522562586,
+          "entropy_loss": 0.04895537841366604,
+          "exact_reference_match_rate": 0.7431640625,
+          "expected_violation_loss": 0.015286068563000299,
+          "fixed_acc": 1.0,
+          "fixed_loss": 0.0,
+          "graph_conflict_loss": 0.0,
+          "halt_loss": 0.7221118323504925,
+          "hard_valid_rate": 1.0,
+          "logit_l2_loss": 334.64451789855957,
+          "loss_total": 0.2958908914588392,
+          "mean_expected_energy": 0.0749702513567172,
+          "mean_expected_energy_norm": 0.015523204841883853,
+          "mean_halt_prob": 0.48721597343683243,
+          "mean_hard_energy": 0.0,
+          "mean_hard_energy_norm": 0.0,
+          "query_acc": 0.8840299770236015,
+          "query_assignment_loss": 0.38873513927683234,
+          "sat_fraction": 1.0,
+          "unsat_fraction": 0.0,
+          "unsat_margin_loss": 0.0
+        }
+      },
+      {
+        "elapsed_s": 402.2080500125885,
+        "epoch": 26,
+        "global_step": 13973,
+        "train": {
+          "batch_idx": 31.5,
+          "epoch": 26.0,
+          "final/all_hard_zero_energy_rate": 0.998779296875,
+          "final/assignment_acc": 0.8606607420369983,
+          "final/assignment_loss": 0.4558402025140822,
+          "final/constraint_loss": 0.019300931991892867,
+          "final/constraint_nll_loss": 0.02077155235747341,
+          "final/entropy_loss": 0.06103153055300936,
+          "final/exact_reference_match_rate": 0.72900390625,
+          "final/expected_violation_loss": 0.019300931991892867,
+          "final/fixed_acc": 1.0,
+          "final/fixed_loss": 0.0,
+          "final/graph_conflict_loss": 0.0,
+          "final/halt_loss": 0.7233395455405116,
+          "final/hard_valid_rate": 0.998779296875,
+          "final/logit_l2_loss": 300.8672184944153,
+          "final/loss_total": 0.35367917316034436,
+          "final/mean_expected_energy": 0.0869007232831791,
+          "final/mean_expected_energy_norm": 0.018183826308813877,
+          "final/mean_halt_prob": 0.48644592612981796,
+          "final/mean_hard_energy": 0.001220703125,
+          "final/mean_hard_energy_norm": 0.0002441406286379788,
+          "final/query_acc": 0.8606607420369983,
+          "final/query_assignment_loss": 0.4558402025140822,
+          "final/sat_fraction": 1.0,
+          "final/unsat_fraction": 0.0,
+          "final/unsat_margin_loss": 0.0,
+          "full/all_hard_zero_energy_rate": 0.998779296875,
+          "full/assignment_acc": 0.8606607420369983,
+          "full/assignment_loss": 0.4558402025140822,
+          "full/constraint_loss": 0.019300931991892867,
+          "full/constraint_nll_loss": 0.02077155235747341,
+          "full/entropy_loss": 0.06103153055300936,
+          "full/exact_reference_match_rate": 0.72900390625,
+          "full/expected_violation_loss": 0.019300931991892867,
+          "full/fixed_acc": 1.0,
+          "full/fixed_loss": 0.0,
+          "full/graph_conflict_loss": 0.0,
+          "full/halt_loss": 0.7233395455405116,
+          "full/hard_valid_rate": 0.998779296875,
+          "full/logit_l2_loss": 300.8672184944153,
+          "full/loss_total": 0.35367917316034436,
+          "full/mean_expected_energy": 0.0869007232831791,
+          "full/mean_expected_energy_norm": 0.018183826308813877,
+          "full/mean_halt_prob": 0.48644592612981796,
+          "full/mean_hard_energy": 0.001220703125,
+          "full/mean_hard_energy_norm": 0.0002441406286379788,
+          "full/query_acc": 0.8606607420369983,
+          "full/query_assignment_loss": 0.4558402025140822,
+          "full/sat_fraction": 1.0,
+          "full/unsat_fraction": 0.0,
+          "full/unsat_margin_loss": 0.0,
+          "global_step": 13940.5,
+          "grad_norm": 4.113936563953757,
+          "loss_total": 0.38457835116423666,
+          "short/all_hard_zero_energy_rate": 0.93017578125,
+          "short/assignment_acc": 0.8504528226330876,
+          "short/assignment_loss": 0.48334701359272003,
+          "short/constraint_loss": 0.03589034947799519,
+          "short/constraint_nll_loss": 0.05552127497503534,
+          "short/entropy_loss": 0.07196707493858412,
+          "short/exact_reference_match_rate": 0.677490234375,
+          "short/expected_violation_loss": 0.03589034947799519,
+          "short/fixed_acc": 1.0,
+          "short/fixed_loss": 0.0,
+          "short/graph_conflict_loss": 0.0,
+          "short/halt_loss": 0.7224019896239042,
+          "short/hard_valid_rate": 0.93017578125,
+          "short/logit_l2_loss": 303.1658434867859,
+          "short/loss_total": 0.47286177705973387,
+          "short/mean_expected_energy": 0.16154311830177903,
+          "short/mean_expected_energy_norm": 0.03635276929708198,
+          "short/mean_halt_prob": 0.48299710219725966,
+          "short/mean_hard_energy": 0.06982421875,
+          "short/mean_hard_energy_norm": 0.01705322265115683,
+          "short/query_acc": 0.8504528226330876,
+          "short/query_assignment_loss": 0.48334701359272003,
+          "short/sat_fraction": 1.0,
+          "short/unsat_fraction": 0.0,
+          "short/unsat_margin_loss": 0.0
+        },
+        "val": {
+          "all_hard_zero_energy_rate": 1.0,
+          "assignment_acc": 0.8828854113817215,
+          "assignment_loss": 0.36388112348504364,
+          "constraint_loss": 0.02048496762290597,
+          "constraint_nll_loss": 0.021782776093459688,
+          "entropy_loss": 0.05695393294445239,
+          "exact_reference_match_rate": 0.7353515625,
+          "expected_violation_loss": 0.02048496762290597,
+          "fixed_acc": 1.0,
+          "fixed_loss": 0.0,
+          "graph_conflict_loss": 0.0,
+          "halt_loss": 0.7213212177157402,
+          "hard_valid_rate": 1.0,
+          "logit_l2_loss": 275.5825672149658,
+          "loss_total": 0.3028917070478201,
+          "mean_expected_energy": 0.10011935402872041,
+          "mean_expected_energy_norm": 0.020804935149499215,
+          "mean_halt_prob": 0.4875101335346699,
+          "mean_hard_energy": 0.0,
+          "mean_hard_energy_norm": 0.0,
+          "query_acc": 0.8828854113817215,
+          "query_assignment_loss": 0.36388112348504364,
+          "sat_fraction": 1.0,
+          "unsat_fraction": 0.0,
+          "unsat_margin_loss": 0.0
+        }
+      },
+      {
+        "elapsed_s": 397.4443140029907,
+        "epoch": 27,
+        "global_step": 14037,
+        "train": {
+          "batch_idx": 31.5,
+          "epoch": 27.0,
+          "final/all_hard_zero_energy_rate": 0.99658203125,
+          "final/assignment_acc": 0.8589452486485243,
+          "final/assignment_loss": 0.4670981098897755,
+          "final/constraint_loss": 0.01994052379450295,
+          "final/constraint_nll_loss": 0.021664388870703988,
+          "final/entropy_loss": 0.06100537674501538,
+          "final/exact_reference_match_rate": 0.72509765625,
+          "final/expected_violation_loss": 0.01994052379450295,
+          "final/fixed_acc": 1.0,
+          "final/fixed_loss": 1.754342222898969e-07,
+          "final/graph_conflict_loss": 0.0,
+          "final/halt_loss": 0.7206166461110115,
+          "final/hard_valid_rate": 0.99658203125,
+          "final/logit_l2_loss": 239.13455533981323,
+          "final/loss_total": 0.3634927801322192,
+          "final/mean_expected_energy": 0.0897507097106427,
+          "final/mean_expected_energy_norm": 0.018649131612619385,
+          "final/mean_halt_prob": 0.48738705134019256,
+          "final/mean_hard_energy": 0.005126953125,
+          "final/mean_hard_energy_norm": 0.0010253906184516381,
+          "final/query_acc": 0.8589452486485243,
+          "final/query_assignment_loss": 0.4670981098897755,
+          "final/sat_fraction": 1.0,
+          "final/unsat_fraction": 0.0,
+          "final/unsat_margin_loss": 0.0,
+          "full/all_hard_zero_energy_rate": 0.99658203125,
+          "full/assignment_acc": 0.8589452486485243,
+          "full/assignment_loss": 0.4670981098897755,
+          "full/constraint_loss": 0.01994052379450295,
+          "full/constraint_nll_loss": 0.021664388870703988,
+          "full/entropy_loss": 0.06100537674501538,
+          "full/exact_reference_match_rate": 0.72509765625,
+          "full/expected_violation_loss": 0.01994052379450295,
+          "full/fixed_acc": 1.0,
+          "full/fixed_loss": 1.754342222898969e-07,
+          "full/graph_conflict_loss": 0.0,
+          "full/halt_loss": 0.7206166461110115,
+          "full/hard_valid_rate": 0.99658203125,
+          "full/logit_l2_loss": 239.13455533981323,
+          "full/loss_total": 0.3634927801322192,
+          "full/mean_expected_energy": 0.0897507097106427,
+          "full/mean_expected_energy_norm": 0.018649131612619385,
+          "full/mean_halt_prob": 0.48738705134019256,
+          "full/mean_hard_energy": 0.005126953125,
+          "full/mean_hard_energy_norm": 0.0010253906184516381,
+          "full/query_acc": 0.8589452486485243,
+          "full/query_assignment_loss": 0.4670981098897755,
+          "full/sat_fraction": 1.0,
+          "full/unsat_fraction": 0.0,
+          "full/unsat_margin_loss": 0.0,
+          "global_step": 14004.5,
+          "grad_norm": 6.033608518075198,
+          "loss_total": 0.4153570116031915,
+          "short/all_hard_zero_energy_rate": 0.888427734375,
+          "short/assignment_acc": 0.8445927817374468,
+          "short/assignment_loss": 0.508987189270556,
+          "short/constraint_loss": 0.04729146507452242,
+          "short/constraint_nll_loss": 0.08176749010453932,
+          "short/entropy_loss": 0.08101683354470879,
+          "short/exact_reference_match_rate": 0.64697265625,
+          "short/expected_violation_loss": 0.04729146507452242,
+          "short/fixed_acc": 1.0,
+          "short/fixed_loss": 0.0,
+          "short/graph_conflict_loss": 0.0,
+          "short/halt_loss": 0.7199569474905729,
+          "short/hard_valid_rate": 0.888427734375,
+          "short/logit_l2_loss": 303.4885983467102,
+          "short/loss_total": 0.5635405788198113,
+          "short/mean_expected_energy": 0.21274629747495055,
+          "short/mean_expected_energy_norm": 0.048126917594345286,
+          "short/mean_halt_prob": 0.4815576756373048,
+          "short/mean_hard_energy": 0.11181640625,
+          "short/mean_hard_energy_norm": 0.026733398510259576,
+          "short/query_acc": 0.8445927817374468,
+          "short/query_assignment_loss": 0.508987189270556,
+          "short/sat_fraction": 1.0,
+          "short/unsat_fraction": 0.0,
+          "short/unsat_margin_loss": 0.0
+        },
+        "val": {
+          "all_hard_zero_energy_rate": 1.0,
+          "assignment_acc": 0.8826063871383667,
+          "assignment_loss": 0.3460385021753609,
+          "constraint_loss": 0.02348908386193216,
+          "constraint_nll_loss": 0.02540768617473077,
+          "entropy_loss": 0.06076057834434323,
+          "exact_reference_match_rate": 0.7333984375,
+          "expected_violation_loss": 0.02348908386193216,
+          "fixed_acc": 1.0,
+          "fixed_loss": 2.095475543084646e-09,
+          "graph_conflict_loss": 0.0,
+          "halt_loss": 0.7197308167815208,
+          "hard_valid_rate": 1.0,
+          "logit_l2_loss": 263.8258399963379,
+          "loss_total": 0.30544302775524557,
+          "mean_expected_energy": 0.11510695097967982,
+          "mean_expected_energy_norm": 0.023837121698306873,
+          "mean_halt_prob": 0.4881230965256691,
+          "mean_hard_energy": 0.0,
+          "mean_hard_energy_norm": 0.0,
+          "query_acc": 0.8826063871383667,
+          "query_assignment_loss": 0.3460385021753609,
+          "sat_fraction": 1.0,
+          "unsat_fraction": 0.0,
+          "unsat_margin_loss": 0.0
+        }
+      },
+      {
+        "elapsed_s": 396.6166365146637,
+        "epoch": 28,
+        "global_step": 14101,
+        "train": {
+          "batch_idx": 31.5,
+          "epoch": 28.0,
+          "final/all_hard_zero_energy_rate": 0.997802734375,
+          "final/assignment_acc": 0.8593248147517443,
+          "final/assignment_loss": 0.458138725720346,
+          "final/constraint_loss": 0.019285549904452637,
+          "final/constraint_nll_loss": 0.020575534421368502,
+          "final/entropy_loss": 0.061015617684461176,
+          "final/exact_reference_match_rate": 0.724853515625,
+          "final/expected_violation_loss": 0.019285549904452637,
+          "final/fixed_acc": 1.0,
+          "final/fixed_loss": 0.0,
+          "final/graph_conflict_loss": 0.0,
+          "final/halt_loss": 0.7229914274066687,
+          "final/hard_valid_rate": 0.997802734375,
+          "final/logit_l2_loss": 268.1905007362366,
+          "final/loss_total": 0.3546322269830853,
+          "final/mean_expected_energy": 0.08684587187599391,
+          "final/mean_expected_energy_norm": 0.01808795156830456,
+          "final/mean_halt_prob": 0.48635826818645,
+          "final/mean_hard_energy": 0.002197265625,
+          "final/mean_hard_energy_norm": 0.00043945313518634066,
+          "final/query_acc": 0.8593248147517443,
+          "final/query_assignment_loss": 0.458138725720346,
+          "final/sat_fraction": 1.0,
+          "final/unsat_fraction": 0.0,
+          "final/unsat_margin_loss": 0.0,
+          "full/all_hard_zero_energy_rate": 0.997802734375,
+          "full/assignment_acc": 0.8593248147517443,
+          "full/assignment_loss": 0.458138725720346,
+          "full/constraint_loss": 0.019285549904452637,
+          "full/constraint_nll_loss": 0.020575534421368502,
+          "full/entropy_loss": 0.061015617684461176,
+          "full/exact_reference_match_rate": 0.724853515625,
+          "full/expected_violation_loss": 0.019285549904452637,
+          "full/fixed_acc": 1.0,
+          "full/fixed_loss": 0.0,
+          "full/graph_conflict_loss": 0.0,
+          "full/halt_loss": 0.7229914274066687,
+          "full/hard_valid_rate": 0.997802734375,
+          "full/logit_l2_loss": 268.1905007362366,
+          "full/loss_total": 0.3546322269830853,
+          "full/mean_expected_energy": 0.08684587187599391,
+          "full/mean_expected_energy_norm": 0.01808795156830456,
+          "full/mean_halt_prob": 0.48635826818645,
+          "full/mean_hard_energy": 0.002197265625,
+          "full/mean_hard_energy_norm": 0.00043945313518634066,
+          "full/query_acc": 0.8593248147517443,
+          "full/query_assignment_loss": 0.458138725720346,
+          "full/sat_fraction": 1.0,
+          "full/unsat_fraction": 0.0,
+          "full/unsat_margin_loss": 0.0,
+          "global_step": 14068.5,
+          "grad_norm": 4.950907289516181,
+          "loss_total": 0.38310798117890954,
+          "short/all_hard_zero_energy_rate": 0.930419921875,
+          "short/assignment_acc": 0.8504569912329316,
+          "short/assignment_loss": 0.4812571248039603,
+          "short/constraint_loss": 0.036757977650268,
+          "short/constraint_nll_loss": 0.051083386642858386,
+          "short/entropy_loss": 0.0760224373661913,
+          "short/exact_reference_match_rate": 0.676513671875,
+          "short/expected_violation_loss": 0.036757977650268,
+          "short/fixed_acc": 1.0,
+          "short/fixed_loss": 0.0,
+          "short/graph_conflict_loss": 0.0,
+          "short/halt_loss": 0.722922757267952,
+          "short/hard_valid_rate": 0.930419921875,
+          "short/logit_l2_loss": 303.3438968658447,
+          "short/loss_total": 0.46446734154596925,
+          "short/mean_expected_energy": 0.1653968832688406,
+          "short/mean_expected_energy_norm": 0.03714793160906993,
+          "short/mean_halt_prob": 0.48369398759678006,
+          "short/mean_hard_energy": 0.070068359375,
+          "short/mean_hard_energy_norm": 0.01705322264751885,
+          "short/query_acc": 0.8504569912329316,
+          "short/query_assignment_loss": 0.4812571248039603,
+          "short/sat_fraction": 1.0,
+          "short/unsat_fraction": 0.0,
+          "short/unsat_margin_loss": 0.0
+        },
+        "val": {
+          "all_hard_zero_energy_rate": 1.0,
+          "assignment_acc": 0.8833324387669563,
+          "assignment_loss": 0.3640409745275974,
+          "constraint_loss": 0.018571471446193755,
+          "constraint_nll_loss": 0.019613887678133324,
+          "entropy_loss": 0.05453915867838077,
+          "exact_reference_match_rate": 0.73828125,
+          "expected_violation_loss": 0.018571471446193755,
+          "fixed_acc": 1.0,
+          "fixed_loss": 2.3283062977608182e-10,
+          "graph_conflict_loss": 0.0,
+          "halt_loss": 0.7274023741483688,
+          "hard_valid_rate": 1.0,
+          "logit_l2_loss": 224.75619983673096,
+          "loss_total": 0.2948177845682949,
+          "mean_expected_energy": 0.09014854865381494,
+          "mean_expected_energy_norm": 0.01885160848905798,
+          "mean_halt_prob": 0.4844776540994644,
+          "mean_hard_energy": 0.0,
+          "mean_hard_energy_norm": 0.0,
+          "query_acc": 0.8833324387669563,
+          "query_assignment_loss": 0.3640409745275974,
+          "sat_fraction": 1.0,
+          "unsat_fraction": 0.0,
+          "unsat_margin_loss": 0.0
+        }
+      },
+      {
+        "elapsed_s": 339.1309139728546,
+        "epoch": 29,
+        "global_step": 14165,
+        "train": {
+          "batch_idx": 31.5,
+          "epoch": 29.0,
+          "final/all_hard_zero_energy_rate": 0.997802734375,
+          "final/assignment_acc": 0.8598106587305665,
+          "final/assignment_loss": 0.47497782693244517,
+          "final/constraint_loss": 0.019816767482552677,
+          "final/constraint_nll_loss": 0.02120090209064074,
+          "final/entropy_loss": 0.06081596133299172,
+          "final/exact_reference_match_rate": 0.73046875,
+          "final/expected_violation_loss": 0.019816767482552677,
+          "final/fixed_acc": 1.0,
+          "final/fixed_loss": 5.501881415737042e-11,
+          "final/graph_conflict_loss": 0.0,
+          "final/halt_loss": 0.7272257646545768,
+          "final/hard_valid_rate": 0.997802734375,
+          "final/logit_l2_loss": 236.49207210540771,
+          "final/loss_total": 0.36704568983986974,
+          "final/mean_expected_energy": 0.08919710793998092,
+          "final/mean_expected_energy_norm": 0.01859611061809119,
+          "final/mean_halt_prob": 0.4842447661794722,
+          "final/mean_hard_energy": 0.002197265625,
+          "final/mean_hard_energy_norm": 0.00043945313882431947,
+          "final/query_acc": 0.8598106587305665,
+          "final/query_assignment_loss": 0.47497782693244517,
+          "final/sat_fraction": 1.0,
+          "final/unsat_fraction": 0.0,
+          "final/unsat_margin_loss": 0.0,
+          "full/all_hard_zero_energy_rate": 0.997802734375,
+          "full/assignment_acc": 0.8598106587305665,
+          "full/assignment_loss": 0.47497782693244517,
+          "full/constraint_loss": 0.019816767482552677,
+          "full/constraint_nll_loss": 0.02120090209064074,
+          "full/entropy_loss": 0.06081596133299172,
+          "full/exact_reference_match_rate": 0.73046875,
+          "full/expected_violation_loss": 0.019816767482552677,
+          "full/fixed_acc": 1.0,
+          "full/fixed_loss": 5.501881415737042e-11,
+          "full/graph_conflict_loss": 0.0,
+          "full/halt_loss": 0.7272257646545768,
+          "full/hard_valid_rate": 0.997802734375,
+          "full/logit_l2_loss": 236.49207210540771,
+          "full/loss_total": 0.36704568983986974,
+          "full/mean_expected_energy": 0.08919710793998092,
+          "full/mean_expected_energy_norm": 0.01859611061809119,
+          "full/mean_halt_prob": 0.4842447661794722,
+          "full/mean_hard_energy": 0.002197265625,
+          "full/mean_hard_energy_norm": 0.00043945313882431947,
+          "full/query_acc": 0.8598106587305665,
+          "full/query_assignment_loss": 0.47497782693244517,
+          "full/sat_fraction": 1.0,
+          "full/unsat_fraction": 0.0,
+          "full/unsat_margin_loss": 0.0,
+          "global_step": 14132.5,
+          "grad_norm": 7.548243739176542,
+          "loss_total": 0.41618110705167055,
+          "short/all_hard_zero_energy_rate": 0.897216796875,
+          "short/assignment_acc": 0.8456794442608953,
+          "short/assignment_loss": 0.5136331669054925,
+          "short/constraint_loss": 0.043949594983132556,
+          "short/constraint_nll_loss": 0.0802292654698249,
+          "short/entropy_loss": 0.07620187097927555,
+          "short/exact_reference_match_rate": 0.6552734375,
+          "short/expected_violation_loss": 0.043949594983132556,
+          "short/fixed_acc": 1.0,
+          "short/fixed_loss": 0.0,
+          "short/graph_conflict_loss": 0.0,
+          "short/halt_loss": 0.7210212852805853,
+          "short/hard_valid_rate": 0.897216796875,
+          "short/logit_l2_loss": 304.55703687667847,
+          "short/loss_total": 0.55656807590276,
+          "short/mean_expected_energy": 0.19759436114691198,
+          "short/mean_expected_energy_norm": 0.04477028071414679,
+          "short/mean_halt_prob": 0.48205966129899025,
+          "short/mean_hard_energy": 0.10302734375,
+          "short/mean_hard_energy_norm": 0.024743652378674597,
+          "short/query_acc": 0.8456794442608953,
+          "short/query_assignment_loss": 0.5136331669054925,
+          "short/sat_fraction": 1.0,
+          "short/unsat_fraction": 0.0,
+          "short/unsat_margin_loss": 0.0
+        },
+        "val": {
+          "all_hard_zero_energy_rate": 1.0,
+          "assignment_acc": 0.8827999010682106,
+          "assignment_loss": 0.36159659759141505,
+          "constraint_loss": 0.019609191571362317,
+          "constraint_nll_loss": 0.020845673090661876,
+          "entropy_loss": 0.05398753719055094,
+          "exact_reference_match_rate": 0.7353515625,
+          "expected_violation_loss": 0.019609191571362317,
+          "fixed_acc": 1.0,
+          "fixed_loss": 0.0,
+          "graph_conflict_loss": 0.0,
+          "halt_loss": 0.7253921367228031,
+          "hard_valid_rate": 1.0,
+          "logit_l2_loss": 251.07263565063477,
+          "loss_total": 0.29789278912357986,
+          "mean_expected_energy": 0.0960163522977382,
+          "mean_expected_energy_norm": 0.019899095117580146,
+          "mean_halt_prob": 0.4854035433381796,
+          "mean_hard_energy": 0.0,
+          "mean_hard_energy_norm": 0.0,
+          "query_acc": 0.8827999010682106,
+          "query_assignment_loss": 0.36159659759141505,
+          "sat_fraction": 1.0,
+          "unsat_fraction": 0.0,
+          "unsat_margin_loss": 0.0
+        }
+      }
+    ]
+  },
+  "kind": "phase5r16r_family_atlas_sampled",
+  "run": "phase5r16r_operation_synthesis_more_dehint_train_stability_fullgpu_b64",
+  "sample_policy": {
+    "test": 512,
+    "train": 512,
+    "val": 512
+  },
+  "targets": {
+    "train_cpu_valid_rate": 0.95,
+    "val_cpu_valid_rate": 0.9,
+    "val_mean_hard_energy": 0.1
+  }
+}

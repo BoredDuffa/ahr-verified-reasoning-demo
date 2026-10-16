@@ -1,0 +1,149 @@
+{
+  "learned_transfer_established": false,
+  "receipt": {
+    "complete": true,
+    "frozen_hashes_verified": {
+      "csp_pretrained_ahr": "a5ae53b8b115c7d7e023005e21ef8d374a82b571e72a96d91935c95a06897649",
+      "untrained_ahr": "c3a3301ca871874d7e28811374b59a54b61fd0a42df6ea2889f08180e4eff89f"
+    },
+    "new_stages": 1500,
+    "resumed_from_step": null,
+    "run_id": "transfer-07-pilot-40866ad94670"
+  },
+  "run_id": "transfer-07-pilot-40866ad94670",
+  "status": "COMPLETED_DEVELOPMENT_PILOT",
+  "summary": {
+    "candidates": {
+      "csp_pretrained_ahr": {
+        "all_planned_score_bounds": [
+          0.5833333333333334,
+          0.6666666666666666
+        ],
+        "bounded_inapplicable_or_unjudged_positions": 0,
+        "bounded_judged_positions": 6,
+        "bounded_mistakes": 0,
+        "bounded_unknown_chosen_positions": 0,
+        "candidate_deadline_misses": 0,
+        "candidate_fallback_passes": 0,
+        "candidate_illegal_proposals": 0,
+        "candidate_mean_call_seconds": 0.03626008432035536,
+        "candidate_moves": 206,
+        "completed_game_mean_score": 0.6363636363636364,
+        "completed_games": 22,
+        "deadline_misses": 0,
+        "illegal_proposals": 0,
+        "mean_call_seconds": 0.01836437491172047,
+        "moves": 408,
+        "p95_call_seconds": 0.042768649001300216,
+        "planned_games": 24,
+        "probe_scope": "horizon-two area objective; UNKNOWN excluded and counted in statuses",
+        "recorded_games": 24
+      },
+      "greedy_area": {
+        "all_planned_score_bounds": [
+          0.75,
+          0.75
+        ],
+        "bounded_inapplicable_or_unjudged_positions": 0,
+        "bounded_judged_positions": 6,
+        "bounded_mistakes": 0,
+        "bounded_unknown_chosen_positions": 0,
+        "candidate_deadline_misses": 0,
+        "candidate_fallback_passes": 0,
+        "candidate_illegal_proposals": 0,
+        "candidate_mean_call_seconds": 0.0001351654493109993,
+        "candidate_moves": 178,
+        "completed_game_mean_score": 0.75,
+        "completed_games": 24,
+        "deadline_misses": 0,
+        "illegal_proposals": 0,
+        "mean_call_seconds": 0.00012153660568791176,
+        "moves": 350,
+        "p95_call_seconds": 0.00017922144870681224,
+        "planned_games": 24,
+        "probe_scope": "horizon-two area objective; UNKNOWN excluded and counted in statuses",
+        "recorded_games": 24
+      },
+      "random_legal": {
+        "all_planned_score_bounds": [
+          0.25,
+          0.25
+        ],
+        "bounded_inapplicable_or_unjudged_positions": 0,
+        "bounded_judged_positions": 6,
+        "bounded_mistakes": 0,
+        "bounded_unknown_chosen_positions": 0,
+        "candidate_deadline_misses": 0,
+        "candidate_fallback_passes": 0,
+        "candidate_illegal_proposals": 0,
+        "candidate_mean_call_seconds": 8.142356725839795e-05,
+        "candidate_moves": 164,
+        "completed_game_mean_score": 0.25,
+        "completed_games": 24,
+        "deadline_misses": 0,
+        "illegal_proposals": 0,
+        "mean_call_seconds": 9.679292847732121e-05,
+        "moves": 334,
+        "p95_call_seconds": 0.0001626243032660568,
+        "planned_games": 24,
+        "probe_scope": "horizon-two area objective; UNKNOWN excluded and counted in statuses",
+        "recorded_games": 24
+      },
+      "untrained_ahr": {
+        "all_planned_score_bounds": [
+          0.5833333333333334,
+          0.6666666666666666
+        ],
+        "bounded_inapplicable_or_unjudged_positions": 0,
+        "bounded_judged_positions": 6,
+        "bounded_mistakes": 0,
+        "bounded_unknown_chosen_positions": 0,
+        "candidate_deadline_misses": 0,
+        "candidate_fallback_passes": 0,
+        "candidate_illegal_proposals": 0,
+        "candidate_mean_call_seconds": 0.03617784470609586,
+        "candidate_moves": 194,
+        "completed_game_mean_score": 0.6363636363636364,
+        "completed_games": 22,
+        "deadline_misses": 0,
+        "illegal_proposals": 0,
+        "mean_call_seconds": 0.01833560096624372,
+        "moves": 384,
+        "p95_call_seconds": 0.042293467103445434,
+        "planned_games": 24,
+        "probe_scope": "horizon-two area objective; UNKNOWN excluded and counted in statuses",
+        "recorded_games": 24
+      }
+    },
+    "completed_jobs": 120,
+    "elo": null,
+    "final_claim": "NOT_ESTABLISHED",
+    "label": "development_pilot",
+    "optimizer_steps": 0,
+    "paired_effects": {
+      "0.05": {
+        "candidate_minus_untrained_mean": 0.0,
+        "complete_seed_blocks": 2,
+        "interpretation": "descriptive development evidence only; missing blocks may bias complete-case estimate",
+        "paired_seed_bootstrap_95_interval": null,
+        "planned_seed_blocks": 3
+      },
+      "0.25": {
+        "candidate_minus_untrained_mean": 0.0,
+        "complete_seed_blocks": 2,
+        "interpretation": "descriptive development evidence only; missing blocks may bias complete-case estimate",
+        "paired_seed_bootstrap_95_interval": null,
+        "planned_seed_blocks": 3
+      }
+    },
+    "planned_jobs": 120,
+    "schema": "ahr07-frozen-transfer-v1",
+    "status_counts": {
+      "COMPLETED_TWO_PASSES": 92,
+      "UNKNOWN_MOVE_LIMIT": 4,
+      "VERIFIED_BOUNDED_PROBE": 24
+    },
+    "training_performed": false
+  },
+  "training_performed": false
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "complete_after_evaluation_repair",
+  "status": "COMPLETED",
+  "updated_unix": 1790860512.7878087,
+  "elapsed_seconds": 6695.587196826935,
+  "updates": 350,
+  "seeds": [
+    20261011,
+    20261012
+  ],
+  "variants": [
+    "vit",
+    "energy"
+  ],
+  "heldout_status": "NOT_RUN",
+  "results": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_07/energy-encoder-001/evaluation_recovery_v1/stage_results.md",
+  "recovery_binding": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_07/energy-encoder-001/evaluation_recovery_v1/recovery_binding.json",
+  "evaluation_repair": "Corrected encoder-kind feature identity; original failed evidence preserved; no additional encoder training."
+}

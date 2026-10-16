@@ -1,0 +1,48 @@
+{
+  "milestone": "Lean-AHR v3.4 ranker-guided ProofNet bridge",
+  "remote_host": "benjamin@34.70.49.55",
+  "remote_project": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "date": "2026-06-16",
+  "base": "v3.2 ProofNet translation bridge plus v3.3 supervised attempt ranker",
+  "run_name": "lean_ahr_v3_4_hf_proofnet50_ranker_guided_bridge",
+  "smoke_run_name": "lean_ahr_v3_4_hf_proofnet50_ranker_guided_smoke10",
+  "configuration": {
+    "input": "datasets/lean_ahr_hf_proofnet50_questions.jsonl",
+    "limit": 50,
+    "retrieve_top_k": 12,
+    "max_clusters": 4,
+    "max_lean_calls": 24,
+    "timeout_s": 30,
+    "aesop": false,
+    "attempt_ranker_checkpoint": "checkpoints/lean_ahr_v3_3_proofnet_attempt_ranker_full.pt",
+    "ranker_candidate_pool": 96
+  },
+  "results": {
+    "record_count": 50,
+    "translated_count": 26,
+    "retrieval_cluster_success_count": 26,
+    "target_verified_count": 5,
+    "lean_calls_total": 537,
+    "elapsed_s": 3848.627,
+    "failure_reason_counts": {
+      "target_verified": 5,
+      "lean_unknown_identifier": 22,
+      "lean_verification_failed": 21,
+      "lean_unsolved_goals": 1,
+      "lean_type_mismatch": 1
+    }
+  },
+  "baseline_v3_2": {
+    "target_verified_count": 5,
+    "translated_count": 26,
+    "retrieval_cluster_success_count": 26,
+    "lean_calls_total": 537
+  },
+  "interpretation": {
+    "solve_rate_change": "No net solve-rate gain over v3.2 on the full 50-row benchmark.",
+    "budget_change": "No net Lean-call reduction over v3.2 under the 24-call cap because hard translated rows still exhaust the cap.",
+    "positive_signal": "Solved rows are ranked very early, typically verifying in two Lean calls, which confirms the v3.3 ranker can surface known-good attempt patterns.",
+    "main_bottleneck": "Translation coverage and target proof synthesis remain the limiting factors: unsupported or stale Lean3/mathlib3 identifiers account for 22 rows, and translated-but-unsolved rows account for most remaining budget."
+  },
+  "next_step": "Use the v3.4 diagnostics to train a failure-aware gate that predicts when to skip low-yield translated rows, then invest saved calls in translation repair and theorem-specific proof scripts."
+}

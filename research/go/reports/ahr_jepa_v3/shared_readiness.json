@@ -1,0 +1,10 @@
+{
+  "baseline_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+  "imports": "ahr-export definitions only",
+  "off_instance_backup": "DEFERRED_BY_USER",
+  "original_configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+  "schema": "ahr_predictive_go_v3",
+  "source_count": 18,
+  "status": "PASS",
+  "training_steps": 0
+}

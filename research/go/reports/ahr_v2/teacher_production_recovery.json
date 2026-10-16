@@ -1,0 +1,42 @@
+{
+  "active_training_seconds": 0.962943647056818,
+  "all_passed": true,
+  "batch_size": 512,
+  "continuous_run_id": "teacher-production-4884075459-continuous",
+  "data_identity": {
+    "cache_id": "/home/benjamin/workspace/ahr_go/data/ahr_v2_teacher/prepared/go9x9-teacher-smoke-v1",
+    "dataset": "quintic/go9x9",
+    "manifest_sha256": "0ff496cb1aa39f5a2adeb39084d067a2688335d5f9dce06168ad2f3a3edf7fea",
+    "target_provenance": "teacher_estimates_and_distinct_observed_outcomes"
+  },
+  "device": "cuda:1",
+  "exact_scientific_state": true,
+  "independent_fresh_kernels": true,
+  "network": {
+    "blocks": 6,
+    "width": 96
+  },
+  "optimizer_steps": 6,
+  "ownership_trained": true,
+  "parameters": 1053799,
+  "positions_per_active_second": 3190.217838177127,
+  "precision": "bfloat16",
+  "resumed_run_id": "teacher-production-4884075459-resumed",
+  "rows_seen": 3072,
+  "schema": "ahr-go-v2-production-shape-recovery-v1",
+  "source_identity": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+    "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c"
+  },
+  "target_rows_seen": {
+    "observed_outcome": 1440,
+    "ownership": 1440,
+    "policy": 3072,
+    "score": 2925,
+    "teacher_value": 3072
+  },
+  "updated_at_utc": "2026-10-08T11:55:24.845852+00:00"
+}

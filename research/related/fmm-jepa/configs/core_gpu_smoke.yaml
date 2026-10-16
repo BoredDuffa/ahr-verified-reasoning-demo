@@ -1,0 +1,65 @@
+{
+  "schema_version": "fmm-jepa-config/v1",
+  "profile": "core_gpu_smoke",
+  "seed": 20260923,
+  "device": "cuda:0",
+  "dtype": "float32",
+  "cpu_threads": 2,
+  "image_height": 224,
+  "image_width": 224,
+  "batch_size": 1,
+  "steps": 10,
+  "learning_rate": 0.0003,
+  "ema_momentum": 0.99,
+  "gradient_accumulation": 1,
+  "world_size": 1,
+  "checkpoint_every_steps": 1,
+  "model": {
+    "kind": "fmm",
+    "patch_size": 16,
+    "dim": 192,
+    "depth": 4,
+    "heads": 4,
+    "order": 2,
+    "leaf_size": 2,
+    "receiver_gate": true,
+    "predictor_dim": 96,
+    "predictor_depth": 1,
+    "predictor_heads": 4
+  },
+  "mask": {
+    "context_area": [
+      0.6,
+      0.9
+    ],
+    "target_area": [
+      0.1,
+      0.2
+    ],
+    "aspect_ratio": [
+      0.75,
+      1.5
+    ],
+    "target_count": 2
+  },
+  "benchmark": {
+    "grids": [
+      [
+        14,
+        14
+      ],
+      [
+        28,
+        28
+      ]
+    ],
+    "warmup": 2,
+    "repeats": 5,
+    "batch_size": 1,
+    "scopes": [
+      "mixer",
+      "encoder_block",
+      "full_jepa"
+    ]
+  }
+}

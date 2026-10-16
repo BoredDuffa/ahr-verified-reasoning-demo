@@ -1,0 +1,81 @@
+{
+  "clinical_use": "forbidden",
+  "created_at_unix": 1780718061.4388857,
+  "items": [
+    {
+      "answer": "No five-operation composition produces the target under the declared operation semantics.",
+      "backend": "exhaustive finite program search",
+      "id": "operation_synthesis_len5",
+      "live_router": {
+        "match_score": 5,
+        "matched_backend": "operation_synthesis_len5"
+      },
+      "verification": {
+        "closest_examples": [
+          {
+            "output": [
+              0
+            ],
+            "program": [
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DELTA"
+            ],
+            "score": 5
+          },
+          {
+            "output": [
+              0,
+              0
+            ],
+            "program": [
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DOUBLE-EVENS"
+            ],
+            "score": 10
+          },
+          {
+            "output": [
+              0,
+              0
+            ],
+            "program": [
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "REV"
+            ],
+            "score": 10
+          }
+        ],
+        "programs_checked": 1024,
+        "solutions_found": 0,
+        "start": [
+          1,
+          4,
+          9,
+          16,
+          25,
+          36
+        ],
+        "target": [
+          1,
+          6,
+          5,
+          14,
+          9
+        ],
+        "zip_self_semantics": "[a,b,c,d] -> [a,b,b,c,c,d]"
+      }
+    }
+  ],
+  "kind": "ahr_question_answer_demo",
+  "passed": true,
+  "question_set": "live:stdin"
+}

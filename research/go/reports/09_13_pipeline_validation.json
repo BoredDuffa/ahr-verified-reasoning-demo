@@ -1,0 +1,11 @@
+{
+  "changed_configuration_rejected": true,
+  "completed_stage_not_repeated": true,
+  "duplicate_child_rejected": true,
+  "failed_stage_resumed": true,
+  "failed_stage_status_committed": true,
+  "scientific_recovery": "reports/09_recovery_receipts; reports/11_arena_validation.json",
+  "smoke_run": "pipeline-smoke-07955320f1",
+  "stage_boundary_resume": true,
+  "status": "PASS"
+}

@@ -1,0 +1,1239 @@
+{
+  "bounds": {
+    "max_model_calls": 256,
+    "max_nodes": 1024,
+    "max_verifier_nodes": 1024
+  },
+  "claim": "Bounded finite CSP/QCSP development solving with AHR energy branch ordering and independent exact checking; no untouched-test or Go-strength claim",
+  "comparison_note": "Model-call/node budgets are deterministic; CPU runtime is descriptive. Reference assignment counts use a different algorithm and are not directly equivalent to search nodes.",
+  "development_data": {
+    "manifest_sha256": "e01cfbe4bf799109726925953166e4d030cc414cf756436dffde4c64f63e3ab1",
+    "shards": {
+      "boolean_sat_dev.jsonl": "2c2ed1bf7be91c2fa2e94bfa2d370e01879490fbe1848948a72eb60ae3898cad",
+      "graph_coloring_dev.jsonl": "3f7fcdd8d3da3c4afbce36531f8d46152f5e7cf50add2acd91f0456249d1e016",
+      "quantified_sat_dev.jsonl": "c20864d851aca926ac2c5a9f070c4b3bbbd7643e90f9cbe4f0606bf1052dd54b"
+    }
+  },
+  "model_digests_after": {
+    "initialization": "c3a3301ca871874d7e28811374b59a54b61fd0a42df6ea2889f08180e4eff89f",
+    "trained_best": "a5ae53b8b115c7d7e023005e21ef8d374a82b571e72a96d91935c95a06897649"
+  },
+  "model_digests_before": {
+    "initialization": "c3a3301ca871874d7e28811374b59a54b61fd0a42df6ea2889f08180e4eff89f",
+    "trained_best": "a5ae53b8b115c7d7e023005e21ef8d374a82b571e72a96d91935c95a06897649"
+  },
+  "optimizer_updates": 0,
+  "results": [
+    {
+      "family": "graph_coloring",
+      "group_id": "csp-bdc378d426a8c71c273887bcd313d10c413d49c133bee3eeaa46c16c2c325c12",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 5,
+          "model_calls": 5,
+          "nodes": 11,
+          "runtime_seconds": 0.04534009799681371,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "child": {
+                      "kind": "leaf"
+                    },
+                    "kind": "exists",
+                    "value": 2,
+                    "var": "x4"
+                  },
+                  "kind": "exists",
+                  "value": 1,
+                  "var": "x3"
+                },
+                "kind": "exists",
+                "value": 1,
+                "var": "x2"
+              },
+              "kind": "exists",
+              "value": 1,
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 6,
+          "witness": {
+            "x0": 0,
+            "x1": 1,
+            "x2": 1,
+            "x3": 1,
+            "x4": 2
+          }
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 5,
+          "model_calls": 5,
+          "nodes": 11,
+          "runtime_seconds": 0.04573986100149341,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "child": {
+                      "kind": "leaf"
+                    },
+                    "kind": "exists",
+                    "value": 2,
+                    "var": "x4"
+                  },
+                  "kind": "exists",
+                  "value": 1,
+                  "var": "x3"
+                },
+                "kind": "exists",
+                "value": 1,
+                "var": "x2"
+              },
+              "kind": "exists",
+              "value": 1,
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 6,
+          "witness": {
+            "x0": 0,
+            "x1": 1,
+            "x2": 1,
+            "x3": 1,
+            "x4": 2
+          }
+        }
+      },
+      "reference_assignments": 42,
+      "reference_status": "SAT",
+      "row_id": "f9aac9a0afab222acbcc4598f4f0a653a4c9c6392507591a52114099faba1605"
+    },
+    {
+      "family": "graph_coloring",
+      "group_id": "csp-bdc378d426a8c71c273887bcd313d10c413d49c133bee3eeaa46c16c2c325c12",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 4,
+          "model_calls": 5,
+          "nodes": 10,
+          "runtime_seconds": 0.04518784100218909,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "child": {
+                      "kind": "leaf"
+                    },
+                    "kind": "exists",
+                    "value": 2,
+                    "var": "renamed_4"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "renamed_3"
+                },
+                "kind": "exists",
+                "value": 1,
+                "var": "renamed_2"
+              },
+              "kind": "exists",
+              "value": 1,
+              "var": "renamed_1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_0"
+          },
+          "verifier_nodes": 6,
+          "witness": {
+            "renamed_0": 0,
+            "renamed_1": 1,
+            "renamed_2": 1,
+            "renamed_3": 0,
+            "renamed_4": 2
+          }
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 4,
+          "model_calls": 5,
+          "nodes": 10,
+          "runtime_seconds": 0.04519916400022339,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "child": {
+                      "kind": "leaf"
+                    },
+                    "kind": "exists",
+                    "value": 2,
+                    "var": "renamed_4"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "renamed_3"
+                },
+                "kind": "exists",
+                "value": 1,
+                "var": "renamed_2"
+              },
+              "kind": "exists",
+              "value": 1,
+              "var": "renamed_1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_0"
+          },
+          "verifier_nodes": 6,
+          "witness": {
+            "renamed_0": 0,
+            "renamed_1": 1,
+            "renamed_2": 1,
+            "renamed_3": 0,
+            "renamed_4": 2
+          }
+        }
+      },
+      "reference_assignments": 39,
+      "reference_status": "SAT",
+      "row_id": "4799bd9bf27b6482312cd7d4b8fe52a4be43625b5676c2737c18521248d96555"
+    },
+    {
+      "family": "boolean_sat",
+      "group_id": "csp-b0b5cebc716b44c2326598e9804668ff9e49575fab40d4d33f12a3c8df51c595",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 1,
+          "model_calls": 4,
+          "nodes": 6,
+          "runtime_seconds": 0.03497322800103575,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "x3"
+                },
+                "kind": "exists",
+                "value": 0,
+                "var": "x2"
+              },
+              "kind": "exists",
+              "value": 1,
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "x0": 0,
+            "x1": 1,
+            "x2": 0,
+            "x3": 0
+          }
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 1,
+          "model_calls": 4,
+          "nodes": 6,
+          "runtime_seconds": 0.03502503200434148,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "x3"
+                },
+                "kind": "exists",
+                "value": 0,
+                "var": "x2"
+              },
+              "kind": "exists",
+              "value": 1,
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "x0": 0,
+            "x1": 1,
+            "x2": 0,
+            "x3": 0
+          }
+        }
+      },
+      "reference_assignments": 5,
+      "reference_status": "SAT",
+      "row_id": "e44a7da05fde7e2d40e70eb5fedf897f2721b6400291a7c7656545fe8ee0520a"
+    },
+    {
+      "family": "boolean_sat",
+      "group_id": "csp-b0b5cebc716b44c2326598e9804668ff9e49575fab40d4d33f12a3c8df51c595",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 1,
+          "model_calls": 4,
+          "nodes": 6,
+          "runtime_seconds": 0.03526220600178931,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "renamed_3"
+                },
+                "kind": "exists",
+                "value": 1,
+                "var": "renamed_2"
+              },
+              "kind": "exists",
+              "value": 0,
+              "var": "renamed_1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "renamed_0": 0,
+            "renamed_1": 0,
+            "renamed_2": 1,
+            "renamed_3": 0
+          }
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 1,
+          "model_calls": 4,
+          "nodes": 6,
+          "runtime_seconds": 0.03516828799911309,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "renamed_3"
+                },
+                "kind": "exists",
+                "value": 1,
+                "var": "renamed_2"
+              },
+              "kind": "exists",
+              "value": 0,
+              "var": "renamed_1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "renamed_0": 0,
+            "renamed_1": 0,
+            "renamed_2": 1,
+            "renamed_3": 0
+          }
+        }
+      },
+      "reference_assignments": 3,
+      "reference_status": "SAT",
+      "row_id": "c2ae37e182a61eff83ddd4afd4f20d5ecea03a24a9fd1998523a5b2e0735652a"
+    },
+    {
+      "family": "boolean_sat",
+      "group_id": "csp-5ea73dcb6d12cc64a14462d1e6ea86f376ff61839c2ae9cbbbe2d0e86bb28f01",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 0,
+          "model_calls": 4,
+          "nodes": 5,
+          "runtime_seconds": 0.03455783000390511,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "x3"
+                },
+                "kind": "exists",
+                "value": 0,
+                "var": "x2"
+              },
+              "kind": "exists",
+              "value": 0,
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "x0": 0,
+            "x1": 0,
+            "x2": 0,
+            "x3": 0
+          }
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 0,
+          "model_calls": 4,
+          "nodes": 5,
+          "runtime_seconds": 0.03451933000178542,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "x3"
+                },
+                "kind": "exists",
+                "value": 0,
+                "var": "x2"
+              },
+              "kind": "exists",
+              "value": 0,
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "x0": 0,
+            "x1": 0,
+            "x2": 0,
+            "x3": 0
+          }
+        }
+      },
+      "reference_assignments": 1,
+      "reference_status": "SAT",
+      "row_id": "87281bf0593d2c235f4fd15653dc4db92cc2a8ce1aba725593d28412c06e2cd0"
+    },
+    {
+      "family": "boolean_sat",
+      "group_id": "csp-5ea73dcb6d12cc64a14462d1e6ea86f376ff61839c2ae9cbbbe2d0e86bb28f01",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 0,
+          "model_calls": 4,
+          "nodes": 5,
+          "runtime_seconds": 0.03469775800476782,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "renamed_3"
+                },
+                "kind": "exists",
+                "value": 0,
+                "var": "renamed_2"
+              },
+              "kind": "exists",
+              "value": 0,
+              "var": "renamed_1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "renamed_0": 0,
+            "renamed_1": 0,
+            "renamed_2": 0,
+            "renamed_3": 0
+          }
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 0,
+          "model_calls": 4,
+          "nodes": 5,
+          "runtime_seconds": 0.034721438998531085,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "renamed_3"
+                },
+                "kind": "exists",
+                "value": 0,
+                "var": "renamed_2"
+              },
+              "kind": "exists",
+              "value": 0,
+              "var": "renamed_1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "renamed_0": 0,
+            "renamed_1": 0,
+            "renamed_2": 0,
+            "renamed_3": 0
+          }
+        }
+      },
+      "reference_assignments": 1,
+      "reference_status": "SAT",
+      "row_id": "0126333fbb4e9b64721a92f10837e7a3b873cd474316580936e9185f12577982"
+    },
+    {
+      "family": "boolean_sat",
+      "group_id": "csp-7ba3e3bd55598dbb014ebde7768ae555752ed072c540caa0e80039c7478026d7",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 2,
+          "model_calls": 5,
+          "nodes": 8,
+          "runtime_seconds": 0.04393015499954345,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "x3"
+                },
+                "kind": "exists",
+                "value": 1,
+                "var": "x2"
+              },
+              "kind": "exists",
+              "value": 0,
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "x0": 0,
+            "x1": 0,
+            "x2": 1,
+            "x3": 0
+          }
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 2,
+          "model_calls": 5,
+          "nodes": 8,
+          "runtime_seconds": 0.04406747400207678,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "x3"
+                },
+                "kind": "exists",
+                "value": 1,
+                "var": "x2"
+              },
+              "kind": "exists",
+              "value": 0,
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "x0": 0,
+            "x1": 0,
+            "x2": 1,
+            "x3": 0
+          }
+        }
+      },
+      "reference_assignments": 3,
+      "reference_status": "SAT",
+      "row_id": "e7e2dd064e6701ae2296266245676d9b83991178686d4377d3f13a35459c79c0"
+    },
+    {
+      "family": "boolean_sat",
+      "group_id": "csp-7ba3e3bd55598dbb014ebde7768ae555752ed072c540caa0e80039c7478026d7",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 1,
+          "model_calls": 4,
+          "nodes": 6,
+          "runtime_seconds": 0.035462253996229265,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "renamed_3"
+                },
+                "kind": "exists",
+                "value": 0,
+                "var": "renamed_2"
+              },
+              "kind": "exists",
+              "value": 1,
+              "var": "renamed_1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "renamed_0": 0,
+            "renamed_1": 1,
+            "renamed_2": 0,
+            "renamed_3": 0
+          }
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 1,
+          "model_calls": 4,
+          "nodes": 6,
+          "runtime_seconds": 0.035529848995793145,
+          "scope": "finite_ordinary_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "child": {
+                "child": {
+                  "child": {
+                    "kind": "leaf"
+                  },
+                  "kind": "exists",
+                  "value": 0,
+                  "var": "renamed_3"
+                },
+                "kind": "exists",
+                "value": 0,
+                "var": "renamed_2"
+              },
+              "kind": "exists",
+              "value": 1,
+              "var": "renamed_1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_0"
+          },
+          "verifier_nodes": 5,
+          "witness": {
+            "renamed_0": 0,
+            "renamed_1": 1,
+            "renamed_2": 0,
+            "renamed_3": 0
+          }
+        }
+      },
+      "reference_assignments": 5,
+      "reference_status": "SAT",
+      "row_id": "37ea5e9f1bd8576acff36e202b2f44f8d87561a5459ad26e2c4f32a550d6838a"
+    },
+    {
+      "family": "quantified_sat",
+      "group_id": "csp-8bbefe41a8cb5f543b7970e631674f5b8bceef7ee32bae09afc5a0827aab512a",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 0,
+          "model_calls": 3,
+          "nodes": 10,
+          "runtime_seconds": 0.026001457998063415,
+          "scope": "finite_quantified_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "children": [
+                {
+                  "child": {
+                    "child": {
+                      "children": [
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 0
+                        },
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "kind": "forall",
+                      "var": "x3"
+                    },
+                    "kind": "exists",
+                    "value": 0,
+                    "var": "x2"
+                  },
+                  "value": 0
+                },
+                {
+                  "child": {
+                    "child": {
+                      "children": [
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 0
+                        },
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "kind": "forall",
+                      "var": "x3"
+                    },
+                    "kind": "exists",
+                    "value": 0,
+                    "var": "x2"
+                  },
+                  "value": 1
+                }
+              ],
+              "kind": "forall",
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 10,
+          "witness": null
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 0,
+          "model_calls": 3,
+          "nodes": 10,
+          "runtime_seconds": 0.025885945004120003,
+          "scope": "finite_quantified_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "children": [
+                {
+                  "child": {
+                    "child": {
+                      "children": [
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 0
+                        },
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "kind": "forall",
+                      "var": "x3"
+                    },
+                    "kind": "exists",
+                    "value": 0,
+                    "var": "x2"
+                  },
+                  "value": 0
+                },
+                {
+                  "child": {
+                    "child": {
+                      "children": [
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 0
+                        },
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "kind": "forall",
+                      "var": "x3"
+                    },
+                    "kind": "exists",
+                    "value": 0,
+                    "var": "x2"
+                  },
+                  "value": 1
+                }
+              ],
+              "kind": "forall",
+              "var": "x1"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "x0"
+          },
+          "verifier_nodes": 10,
+          "witness": null
+        }
+      },
+      "reference_assignments": 16,
+      "reference_status": "SAT",
+      "row_id": "fcc2e3e4fb30a8b62168c6901fab1fdfcf84de6ed7e88fc869c64a557f77b54a"
+    },
+    {
+      "family": "quantified_sat",
+      "group_id": "csp-8bbefe41a8cb5f543b7970e631674f5b8bceef7ee32bae09afc5a0827aab512a",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 0,
+          "model_calls": 3,
+          "nodes": 10,
+          "runtime_seconds": 0.026059135001560207,
+          "scope": "finite_quantified_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "children": [
+                {
+                  "child": {
+                    "child": {
+                      "children": [
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 0
+                        },
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "kind": "forall",
+                      "var": "renamed_0"
+                    },
+                    "kind": "exists",
+                    "value": 0,
+                    "var": "renamed_1"
+                  },
+                  "value": 0
+                },
+                {
+                  "child": {
+                    "child": {
+                      "children": [
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 0
+                        },
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "kind": "forall",
+                      "var": "renamed_0"
+                    },
+                    "kind": "exists",
+                    "value": 0,
+                    "var": "renamed_1"
+                  },
+                  "value": 1
+                }
+              ],
+              "kind": "forall",
+              "var": "renamed_2"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_3"
+          },
+          "verifier_nodes": 10,
+          "witness": null
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 0,
+          "model_calls": 3,
+          "nodes": 10,
+          "runtime_seconds": 0.025904026995704044,
+          "scope": "finite_quantified_constraints",
+          "status": "SAT",
+          "strategy": {
+            "child": {
+              "children": [
+                {
+                  "child": {
+                    "child": {
+                      "children": [
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 0
+                        },
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "kind": "forall",
+                      "var": "renamed_0"
+                    },
+                    "kind": "exists",
+                    "value": 0,
+                    "var": "renamed_1"
+                  },
+                  "value": 0
+                },
+                {
+                  "child": {
+                    "child": {
+                      "children": [
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 0
+                        },
+                        {
+                          "child": {
+                            "kind": "leaf"
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "kind": "forall",
+                      "var": "renamed_0"
+                    },
+                    "kind": "exists",
+                    "value": 0,
+                    "var": "renamed_1"
+                  },
+                  "value": 1
+                }
+              ],
+              "kind": "forall",
+              "var": "renamed_2"
+            },
+            "kind": "exists",
+            "value": 0,
+            "var": "renamed_3"
+          },
+          "verifier_nodes": 10,
+          "witness": null
+        }
+      },
+      "reference_assignments": 16,
+      "reference_status": "SAT",
+      "row_id": "03fc7d3d7fe726a97e3d1f6c8a7de80f0026989a4d51a06d16cbe4aeb9bdf664"
+    },
+    {
+      "family": "quantified_sat",
+      "group_id": "csp-cd4df2b92c09ba7bee59156e40734bfda80bbd97d56f058081d2b5e153e0f0f8",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 3,
+          "model_calls": 2,
+          "nodes": 6,
+          "runtime_seconds": 0.01782325899694115,
+          "scope": "finite_quantified_constraints",
+          "status": "UNSAT",
+          "strategy": null,
+          "verifier_nodes": 0,
+          "witness": null
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 3,
+          "model_calls": 2,
+          "nodes": 6,
+          "runtime_seconds": 0.017797523003537208,
+          "scope": "finite_quantified_constraints",
+          "status": "UNSAT",
+          "strategy": null,
+          "verifier_nodes": 0,
+          "witness": null
+        }
+      },
+      "reference_assignments": 16,
+      "reference_status": "UNSAT",
+      "row_id": "727654162361af97f27169d24e0d68cd9bca955d40b6aab30854e0571f8df745"
+    },
+    {
+      "family": "quantified_sat",
+      "group_id": "csp-cd4df2b92c09ba7bee59156e40734bfda80bbd97d56f058081d2b5e153e0f0f8",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 3,
+          "model_calls": 2,
+          "nodes": 6,
+          "runtime_seconds": 0.01808337200054666,
+          "scope": "finite_quantified_constraints",
+          "status": "UNSAT",
+          "strategy": null,
+          "verifier_nodes": 0,
+          "witness": null
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 3,
+          "model_calls": 2,
+          "nodes": 6,
+          "runtime_seconds": 0.018078419998346362,
+          "scope": "finite_quantified_constraints",
+          "status": "UNSAT",
+          "strategy": null,
+          "verifier_nodes": 0,
+          "witness": null
+        }
+      },
+      "reference_assignments": 16,
+      "reference_status": "UNSAT",
+      "row_id": "b57ab752d843a80cd6b6839fed75bba0c39a2a13e492644642375b5ba1ad8d0e"
+    },
+    {
+      "family": "quantified_sat",
+      "group_id": "csp-775f5c7653a3d700dea28af037104e3362031c7bcc6d4bb971d7326789e16b98",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 3,
+          "model_calls": 2,
+          "nodes": 10,
+          "runtime_seconds": 0.017920359001436736,
+          "scope": "finite_quantified_constraints",
+          "status": "UNSAT",
+          "strategy": null,
+          "verifier_nodes": 0,
+          "witness": null
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 3,
+          "model_calls": 2,
+          "nodes": 10,
+          "runtime_seconds": 0.017718010996759403,
+          "scope": "finite_quantified_constraints",
+          "status": "UNSAT",
+          "strategy": null,
+          "verifier_nodes": 0,
+          "witness": null
+        }
+      },
+      "reference_assignments": 16,
+      "reference_status": "UNSAT",
+      "row_id": "79987a94aed4fba3dbb446490455acad2b66d5a062af5f4bcefde518bfe932ee"
+    },
+    {
+      "family": "quantified_sat",
+      "group_id": "csp-775f5c7653a3d700dea28af037104e3362031c7bcc6d4bb971d7326789e16b98",
+      "models": {
+        "initialization": {
+          "cutoff_reasons": [],
+          "local_contradictions": 3,
+          "model_calls": 2,
+          "nodes": 10,
+          "runtime_seconds": 0.018137063998437952,
+          "scope": "finite_quantified_constraints",
+          "status": "UNSAT",
+          "strategy": null,
+          "verifier_nodes": 0,
+          "witness": null
+        },
+        "trained_best": {
+          "cutoff_reasons": [],
+          "local_contradictions": 3,
+          "model_calls": 2,
+          "nodes": 10,
+          "runtime_seconds": 0.018505549000110477,
+          "scope": "finite_quantified_constraints",
+          "status": "UNSAT",
+          "strategy": null,
+          "verifier_nodes": 0,
+          "witness": null
+        }
+      },
+      "reference_assignments": 16,
+      "reference_status": "UNSAT",
+      "row_id": "ff171a4ad99dc432d7fe8743846f903d437af22c10494e723eda1aff173e6921"
+    }
+  ],
+  "run_id": "csp05-initial-12epochs",
+  "selected_on_this_development_set": true,
+  "sources": {
+    "00_instance_setup_and_recovery.ipynb": "34337372acfb3c8ff7ef6bbea20683ef6703f584940ee1f5e7375bf86d794475",
+    "01_go_rules_and_independent_verifier.ipynb": "9aa8577677264d3c73aa6e6597799ba82f68bc49a393606efbd83ab01f8bbece",
+    "02_go_to_csp_and_qcsp.ipynb": "a862190c1cd19ae254b5fc1417c06dd2aec5d5e7fb6f1ec55d0fe33f4434f05a",
+    "03_curricula_datasets_and_splits.ipynb": "4a3e1c0f87d3d41e3191218a66b79e4d9819e8ec27909c422adf0f68388c50fa",
+    "04_native_ahr_architecture.ipynb": "5e006a200433da6d3b6c7e142018750880bd95385299b9909da3acbb452840af",
+    "05_csp_qcsp_pretraining.ipynb": "2deb9ff454a9e6571090bcd5a6636ecdd50488fecbf9c21fe6c4cf19b9802066"
+  },
+  "split": "development",
+  "status": "PASS",
+  "summary": {
+    "initialization": {
+      "definitive_correct": 14,
+      "model_calls": 49,
+      "nodes": 109,
+      "problems": 14,
+      "runtime_seconds": 0.4334360170032596,
+      "statuses": {
+        "SAT": 10,
+        "UNSAT": 4
+      },
+      "verifier_nodes": 62
+    },
+    "trained_best": {
+      "definitive_correct": 14,
+      "model_calls": 49,
+      "nodes": 109,
+      "problems": 14,
+      "runtime_seconds": 0.4338599120019353,
+      "statuses": {
+        "SAT": 10,
+        "UNSAT": 4
+      },
+      "verifier_nodes": 62
+    }
+  },
+  "tests": {
+    "all_three_cutoffs_preserve_unknown": true,
+    "contingent_strategy": true,
+    "quantifier_order": true
+  },
+  "trained_optimizer_step": 156,
+  "unique_groups": 7
+}

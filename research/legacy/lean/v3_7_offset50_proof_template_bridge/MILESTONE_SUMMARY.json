@@ -1,0 +1,93 @@
+{
+  "archive_contents": [
+    "tools/",
+    "datasets/",
+    "reports/",
+    "baselines/",
+    "MILESTONE_SUMMARY.json",
+    "MANIFEST.sha256.json"
+  ],
+  "baseline_v3_6": {
+    "elapsed_s": 5361.805,
+    "failure_reason_counts": {
+      "lean_type_mismatch": 5,
+      "lean_typeclass_synthesis_failed": 2,
+      "lean_unknown_identifier": 10,
+      "lean_unsolved_goals": 2,
+      "lean_verification_failed": 29,
+      "target_verified": 2
+    },
+    "lean_calls_total": 769,
+    "record_count": 50,
+    "retrieval_cluster_success_count": 33,
+    "run_name": "lean_ahr_v3_6_hf_proofnet50_offset50_translation_repair_bridge",
+    "target_verified_count": 2,
+    "translated_count": 33
+  },
+  "created_utc": "2026-06-21T09:46:28Z",
+  "delta_vs_v3_6": {
+    "elapsed_s": 37.529,
+    "lean_calls_total": -1,
+    "target_verified_count": 0,
+    "translated_count": 0
+  },
+  "full_run": {
+    "by_translated": {
+      "false": 17,
+      "true": 33
+    },
+    "elapsed_s": 5399.334,
+    "failure_reason_counts": {
+      "lean_type_mismatch": 5,
+      "lean_typeclass_synthesis_failed": 2,
+      "lean_unknown_identifier": 10,
+      "lean_unsolved_goals": 2,
+      "lean_verification_failed": 29,
+      "target_verified": 2
+    },
+    "lean_calls_total": 768,
+    "record_count": 50,
+    "retrieval_cluster_success_count": 33,
+    "solved_rows": [
+      {
+        "id": "Axler|exercise_1_4",
+        "lean_calls": 7,
+        "proof_lines": [
+          "simp [smul_eq_zero]"
+        ],
+        "selected_module": null,
+        "strategy": null,
+        "used_theorems": []
+      },
+      {
+        "id": "Pugh|exercise_2_32a",
+        "lean_calls": 2,
+        "proof_lines": [
+          "simpa"
+        ],
+        "selected_module": null,
+        "strategy": null,
+        "used_theorems": []
+      }
+    ],
+    "target_verified_count": 2,
+    "translated_count": 33
+  },
+  "interpretation": "v3.7 matched v3.6 at 2/50 target-verified proofs on held-out ProofNet offset-50, preserved 33/50 translation/retrieval coverage, and reduced total Lean calls by one. The direct proof-template patch is visible in the smoke/full diagnostics but does not yet move the held-out solve-rate frontier; the next bottleneck remains proof-script synthesis for translated analysis/topology/number-theory targets plus remaining Lean4 identifier repairs.",
+  "milestone": "Lean-AHR v3.7 offset-50 proof-template bridge",
+  "remote_host": "benjamin@136.119.114.226",
+  "remote_project": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "run_name": "lean_ahr_v3_7_hf_proofnet50_offset50_proof_template_bridge",
+  "smoke": {
+    "elapsed_s": 795.623,
+    "failure_reason_counts": {
+      "lean_verification_failed": 4,
+      "target_verified": 2
+    },
+    "lean_calls_total": 105,
+    "record_count": 6,
+    "run_name": "lean_ahr_v3_7_offset50_proof_template_smoke6",
+    "target_verified_count": 2,
+    "translated_count": 6
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "all_passed": true,
+  "cache_id": "go9x9-teacher-smoke-v1",
+  "checks": [
+    {
+      "name": "D4 matches exact legal-state features/actions/ownership all eight symmetries",
+      "passed": true
+    },
+    {
+      "name": "real compatible teacher batch targets/masks",
+      "passed": true,
+      "rows": 32
+    },
+    {
+      "name": "corrupt retained payload refuses fallback/restart",
+      "passed": true
+    }
+  ],
+  "fixtures": [
+    {
+      "continuous_run_id": "teacher-fixture-5dc6c2f737-continuous",
+      "cursor": 16,
+      "data_mismatch_refused": true,
+      "device": "cpu",
+      "epoch": 1,
+      "exact_scientific_state": true,
+      "fresh_kernel_per_invocation": true,
+      "model_sha256": "1e1ba71b392b23a9982adb2a23cfe06dbdb7fbbfe60b253e6ed76d2a5d02fa7b",
+      "precision": "float32",
+      "resumed_run_id": "teacher-fixture-5dc6c2f737-resumed",
+      "retained_checkpoints": 2,
+      "rows_seen": 96,
+      "steps": 6
+    },
+    {
+      "continuous_run_id": "teacher-fixture-84fabe3262-continuous",
+      "cursor": 16,
+      "data_mismatch_refused": true,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exact_scientific_state": true,
+      "fresh_kernel_per_invocation": true,
+      "model_sha256": "97ddeedae5c73bd0fc1accfcf3f778fbd5681a1ee0a0b9ef781de61fb2a86195",
+      "precision": "bfloat16",
+      "resumed_run_id": "teacher-fixture-84fabe3262-resumed",
+      "retained_checkpoints": 2,
+      "rows_seen": 96,
+      "steps": 6
+    }
+  ],
+  "schema": "ahr-go-v2-teacher-training-validation-v1",
+  "source_identity": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+    "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c"
+  },
+  "updated_at_utc": "2026-10-08T11:53:05.130895+00:00"
+}

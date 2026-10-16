@@ -1,0 +1,81 @@
+{
+  "all_persisted_labels_reverified": true,
+  "by_family": [
+    {
+      "dev": 2,
+      "family": "graph_coloring",
+      "groups": 16,
+      "test": 2,
+      "train": 28,
+      "unknown": 0
+    },
+    {
+      "dev": 6,
+      "family": "boolean_sat",
+      "groups": 32,
+      "test": 6,
+      "train": 52,
+      "unknown": 0
+    },
+    {
+      "dev": 6,
+      "family": "quantified_sat",
+      "groups": 32,
+      "test": 6,
+      "train": 52,
+      "unknown": 0
+    },
+    {
+      "dev": 2,
+      "family": "go_3x3",
+      "groups": 16,
+      "test": 2,
+      "train": 22,
+      "unknown": 6
+    },
+    {
+      "dev": 2,
+      "family": "go_5x5",
+      "groups": 12,
+      "test": 2,
+      "train": 16,
+      "unknown": 4
+    },
+    {
+      "dev": 2,
+      "family": "go_9x9",
+      "groups": 8,
+      "test": 2,
+      "train": 8,
+      "unknown": 4
+    }
+  ],
+  "canonical_groups_recomputed": true,
+  "claims": "Foundation only; small verified problems, no trained model or Go strength result",
+  "cross_split_group_overlap": 0,
+  "dataset_directory": "/home/benjamin/workspace/ahr_go/data/starter_v1_0687ec005196",
+  "dataset_manifest_sha256": "e01cfbe4bf799109726925953166e4d030cc414cf756436dffde4c64f63e3ab1",
+  "dataset_version": "starter_v1_0687ec005196",
+  "duplicate_row_ids": 0,
+  "execution": {
+    "complete": true,
+    "new_candidates": 0,
+    "resumed": true
+  },
+  "family_count": 6,
+  "known_rows": 218,
+  "resume_smoke": {
+    "next_three_candidates_identical": true,
+    "overwrite_refused": true,
+    "restored_next_candidate": 3,
+    "scope": "serialized cursor/config recovery; no model or optimizer",
+    "status": "PASS"
+  },
+  "rows": 232,
+  "runtime_seconds": 0.824,
+  "shard_count": 36,
+  "status": "PASS",
+  "training_started": false,
+  "unique_groups": 116,
+  "unknown_rows": 14
+}

@@ -1,0 +1,58 @@
+{
+  "all_passed": true,
+  "checks": [
+    "typed legal-state batches",
+    "masked auxiliary objectives",
+    "policy-only row weighting",
+    "invalid weight refusal",
+    "missing economic target refusal",
+    "exact CPU/GPU fresh-kernel recovery",
+    "latest-two/best retention",
+    "strict corruption/data mismatch refusal"
+  ],
+  "fixtures": [
+    {
+      "continuous_run_id": "k19-fixture-eedebcc813-continuous",
+      "cursor": 8,
+      "data_mismatch_refused": true,
+      "device": "cpu",
+      "epoch": 1,
+      "exact_scientific_state": true,
+      "fresh_kernel_per_invocation": true,
+      "model_sha256": "914e200018c22e1e0af22082409752900ffed95fa30dbbb9a95d5e5837a79ca5",
+      "precision": "float32",
+      "resumed_run_id": "k19-fixture-eedebcc813-resumed",
+      "retained_checkpoints": 2,
+      "rows_seen": 48,
+      "steps": 6
+    },
+    {
+      "continuous_run_id": "k19-fixture-e75df498fe-continuous",
+      "cursor": 8,
+      "data_mismatch_refused": true,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exact_scientific_state": true,
+      "fresh_kernel_per_invocation": true,
+      "model_sha256": "a0abcd5714c735e61413ed743703a535b71238d95d71f9771aab797c7ff34337",
+      "precision": "bfloat16",
+      "resumed_run_id": "k19-fixture-e75df498fe-resumed",
+      "retained_checkpoints": 2,
+      "rows_seen": 48,
+      "steps": 6
+    }
+  ],
+  "production_training_started": false,
+  "schema": "ahr-k19-training-validation-v1",
+  "source_identity": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+    "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+    "experiments/ahr_v2/18_diagnosis_and_stronger_teacher_data.ipynb": "3e30b867cca765cd21acf802a78df83dab3b19f37a3adb9037e0055eef8157ab",
+    "experiments/ahr_v2/19_stronger_scout_worker_training.ipynb": "d2da73d46782f3a3871719da105dbf94fdca35156940091dd5ee67f413f2cfef"
+  },
+  "updated_at_utc": "2026-10-11T12:08:43.584173+00:00"
+}

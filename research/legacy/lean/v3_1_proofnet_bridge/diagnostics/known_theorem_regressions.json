@@ -1,0 +1,100 @@
+[
+  {
+    "json": {
+      "clinical_use": "forbidden",
+      "failure_reason": null,
+      "final_check": {
+        "accepted": true,
+        "elapsed_s": 3.1813,
+        "returncode": 0,
+        "stderr_excerpt": null,
+        "stdout_excerpt": null
+      },
+      "imports": [
+        "Mathlib.Analysis.Real.Pi.Irrational"
+      ],
+      "proof_lines": [
+        "exact irrational_pi"
+      ],
+      "query": "prove pi is irrational",
+      "schema": "ahr_lean_nl_prove_v3_0_result",
+      "solved": true,
+      "statement": "theorem THEOREM_NAME : Irrational Real.pi := by",
+      "used_theorems": [
+        {
+          "check": {
+            "accepted": true,
+            "elapsed_s": 3.1887,
+            "returncode": 0,
+            "stderr_excerpt": null,
+            "stdout_excerpt": "irrational_pi : Irrational Real.pi"
+          },
+          "doc": null,
+          "full_name": "irrational_pi",
+          "import": "Mathlib.Analysis.Real.Pi.Irrational",
+          "kind": "theorem",
+          "line": 280,
+          "name": "irrational_pi",
+          "namespace": null,
+          "score": 77.2873,
+          "source_file": ".lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean",
+          "statement_excerpt": "@[simp] theorem irrational_pi : Irrational π := by apply Irrational.of_div_natCast 2 rw [Nat.cast_two] by_contra h' obtain ⟨a, b, hb, h⟩ := not_irrational_exists_rep h'"
+        }
+      ],
+      "verified": true
+    },
+    "query": "prove pi is irrational",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"clinical_use\": \"forbidden\", \"failure_reason\": null, \"final_check\": {\"accepted\": true, \"elapsed_s\": 3.1813, \"returncode\": 0, \"stderr_excerpt\": null, \"stdout_excerpt\": null}, \"imports\": [\"Mathlib.Analysis.Real.Pi.Irrational\"], \"proof_lines\": [\"exact irrational_pi\"], \"query\": \"prove pi is irrational\", \"schema\": \"ahr_lean_nl_prove_v3_0_result\", \"solved\": true, \"statement\": \"theorem THEOREM_NAME : Irrational Real.pi := by\", \"used_theorems\": [{\"check\": {\"accepted\": true, \"elapsed_s\": 3.1887, \"returncode\": 0, \"stderr_excerpt\": null, \"stdout_excerpt\": \"irrational_pi : Irrational Real.pi\"}, \"doc\": null, \"full_name\": \"irrational_pi\", \"import\": \"Mathlib.Analysis.Real.Pi.Irrational\", \"kind\": \"theorem\", \"line\": 280, \"name\": \"irrational_pi\", \"namespace\": null, \"score\": 77.2873, \"source_file\": \".lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean\", \"statement_excerpt\": \"@[simp] theorem irrational_pi : Irrational π := by apply Irrational.of_div_natCast 2 rw [Nat.cast_two] by_contra h' obtain ⟨a, b, hb, h⟩ := not_irrational_exists_rep h'\"}], \"verified\": true}"
+  },
+  {
+    "json": {
+      "clinical_use": "forbidden",
+      "failure_reason": null,
+      "final_check": {
+        "accepted": true,
+        "elapsed_s": 2.7796,
+        "returncode": 0,
+        "stderr_excerpt": null,
+        "stdout_excerpt": null
+      },
+      "imports": [
+        "Mathlib.NumberTheory.Real.Irrational"
+      ],
+      "proof_lines": [
+        "exact irrational_sqrt_two"
+      ],
+      "query": "prove sqrt 2 is irrational",
+      "schema": "ahr_lean_nl_prove_v3_0_result",
+      "solved": true,
+      "statement": "theorem THEOREM_NAME : Irrational √2 := by",
+      "used_theorems": [
+        {
+          "check": {
+            "accepted": true,
+            "elapsed_s": 2.7662,
+            "returncode": 0,
+            "stderr_excerpt": null,
+            "stdout_excerpt": "irrational_sqrt_two : Irrational √2"
+          },
+          "doc": "**Irrationality of the Square Root of 2**",
+          "full_name": "irrational_sqrt_two",
+          "import": "Mathlib.NumberTheory.Real.Irrational",
+          "kind": "theorem",
+          "line": 143,
+          "name": "irrational_sqrt_two",
+          "namespace": null,
+          "score": 31.8859,
+          "source_file": ".lake/packages/mathlib/Mathlib/NumberTheory/Real/Irrational.lean",
+          "statement_excerpt": "theorem irrational_sqrt_two : Irrational (√2) := by simpa using Nat.prime_two.irrational_sqrt"
+        }
+      ],
+      "verified": true
+    },
+    "query": "prove sqrt 2 is irrational",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"clinical_use\": \"forbidden\", \"failure_reason\": null, \"final_check\": {\"accepted\": true, \"elapsed_s\": 2.7796, \"returncode\": 0, \"stderr_excerpt\": null, \"stdout_excerpt\": null}, \"imports\": [\"Mathlib.NumberTheory.Real.Irrational\"], \"proof_lines\": [\"exact irrational_sqrt_two\"], \"query\": \"prove sqrt 2 is irrational\", \"schema\": \"ahr_lean_nl_prove_v3_0_result\", \"solved\": true, \"statement\": \"theorem THEOREM_NAME : Irrational √2 := by\", \"used_theorems\": [{\"check\": {\"accepted\": true, \"elapsed_s\": 2.7662, \"returncode\": 0, \"stderr_excerpt\": null, \"stdout_excerpt\": \"irrational_sqrt_two : Irrational √2\"}, \"doc\": \"**Irrationality of the Square Root of 2**\", \"full_name\": \"irrational_sqrt_two\", \"import\": \"Mathlib.NumberTheory.Real.Irrational\", \"kind\": \"theorem\", \"line\": 143, \"name\": \"irrational_sqrt_two\", \"namespace\": null, \"score\": 31.8859, \"source_file\": \".lake/packages/mathlib/Mathlib/NumberTheory/Real/Irrational.lean\", \"statement_excerpt\": \"theorem irrational_sqrt_two : Irrational (√2) := by simpa using Nat.prime_two.irrational_sqrt\"}], \"verified\": true}"
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "schema_version": "fmm-jepa-semantic-pilot-config/v1",
+  "run_mode": "pilot",
+  "device": "cuda:0",
+  "dtype": "float32",
+  "cpu_threads": 2,
+  "image_size": 128,
+  "world_size": 1,
+  "data": {
+    "repo_id": "ETH-Zurich/Food-101",
+    "source_revision": "official-food101-2014",
+    "train_per_class": 100,
+    "dev_per_class": 20,
+    "diagnostic_per_class": 2,
+    "split_seed": 314159
+  },
+  "seeds": {
+    "model_init": 20260925,
+    "data_order": 1101,
+    "augmentation": 2202,
+    "mask": 3303,
+    "probe": 4404,
+    "bootstrap": 5505
+  },
+  "preprocessing": {
+    "crop_scale": [
+      0.6,
+      1.0
+    ],
+    "crop_ratio": [
+      0.75,
+      1.3333333333333333
+    ],
+    "horizontal_flip": 0.5,
+    "mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "std": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "masking": {
+    "context_area": [
+      0.85,
+      1.0
+    ],
+    "target_area": [
+      0.15,
+      0.2
+    ],
+    "aspect_ratio": [
+      0.75,
+      1.5
+    ],
+    "target_count": 4,
+    "min_context": 4,
+    "max_retries": 32
+  },
+  "model": {
+    "patch_size": 8,
+    "dim": 192,
+    "depth": 4,
+    "heads": 3,
+    "order": 4,
+    "leaf_size": 2,
+    "receiver_gate": true,
+    "predictor_dim": 128,
+    "predictor_depth": 2,
+    "predictor_heads": 4,
+    "semantic_features": 32,
+    "feature_seed": 20260925,
+    "local_leaf_size": 2,
+    "local_radius": 1
+  },
+  "training": {
+    "updates": 1500,
+    "microbatch": 16,
+    "accumulation_steps": 8,
+    "lr": 0.0003,
+    "weight_decay": 0.05,
+    "warmup_fraction": 0.05,
+    "ema_start": 0.996,
+    "gradient_clip": 1.0,
+    "checkpoint_every": 50,
+    "max_consecutive_failures": 3
+  },
+  "probe": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.01,
+    "weight_decay": 0.0001,
+    "standardize": true,
+    "selection": "best_dev_top1_then_earliest",
+    "num_classes": 101,
+    "bootstrap_repeats": 1000
+  },
+  "evaluation": {
+    "batch_size": 16,
+    "diagnostic_per_class": 2,
+    "heldout_enabled": false,
+    "encoder": "ema_target",
+    "pooling": "mean_final_layernorm_patches",
+    "diagnostic_steps": [
+      0,
+      1500
+    ],
+    "diagnostic_batch_size": 4
+  },
+  "diagnostics": {
+    "zero_variance_epsilon": 1e-12,
+    "low_effective_rank_warning": 2.0,
+    "interpretation": "advisory diagnostic thresholds, not mathematical collapse guarantees"
+  },
+  "checkpoint_selection": "final_successful_update_budget",
+  "comparison": "same-scaffold_equal-update_equal-data_not-parameter-or-compute-matched",
+  "precision_policy": "FP32 only; AMP disabled pending operator-specific dtype certificates",
+  "benchmark": {
+    "token_counts": [
+      256,
+      1024
+    ],
+    "microbatch": 2,
+    "warmup": 3,
+    "repeats": 10
+  },
+  "preflight": {
+    "updates": 4,
+    "split_at": 2
+  },
+  "resolution_rationale": "128x128 patch8,256tokens. Fixed prior Food101 train/dev membership. Calibration selects equal successful-update budget <=1500 before training.",
+  "source_food_run_id": "food101-pilot-001",
+  "budget": {
+    "max_seconds": 10800,
+    "target_seconds": 7200,
+    "evaluation_reserve_seconds": 1200,
+    "calibration_margin": 1.5,
+    "round_updates": 100
+  }
+}

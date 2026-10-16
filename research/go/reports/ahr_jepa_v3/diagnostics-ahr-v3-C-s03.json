@@ -1,0 +1,3969 @@
+{
+  "checkpoint_sha256": "4888dc58a6c2dfefb66be3d0dcce61d75dbe6f02da37d84a645ab1911d858e93",
+  "curriculum_sha256": "08016eee499c1dc3460908687027df575457b44cce989979487ccd2cfa2bfcf4",
+  "development_families": [
+    "02c8d58963ebe2f9e7debfe2a17442720183bde8dea7219c8e82624b4bf04aa4",
+    "091a6ce29fde91f19ac976c7d33f1ce42ffabe77c98bdba43b3e4d1c957183f8",
+    "0e903760e06e0a9220075d43870f00b3c4fe4fbefba526c0dd0ede9f6d1633d2",
+    "0ef76dfb7d6fa63948070d1316ef6433cd15ea63dd4cc28b369d99e5da2fdf33",
+    "0f917fd4b9f5da83eab0482b909450b2fc682a03e050010518e36da81ee5b509",
+    "10403d085683a2047513169cdaa5a733406eb0a680622f4de0ffdb026e96cd3b",
+    "28fa76567bbb1acf5e534f7e7a82bc67ff3eac33795183218c5546f4d21a1b02",
+    "292866c422288e97765e2e4b68ccd71a5e6611ebc02d2814ed1ca61edd4aecab",
+    "295b4ac5f675a85295b84f6c9c0ecb3d74803041074384c46ca30e4126bc55be",
+    "2fa8c25170bdc70ccb802f0c913470833d3122670237180c81ee223854975934",
+    "3b334b78712fc6a75e5c0fcf51316b5a64368e321ad47ad38668a61719b0f0f3",
+    "3e55a617157d3df83f2c5a6f4f7ef34f06ccb579e156004195bf54c5f0e7cbe0",
+    "4aa13c640157c11ce28b856a5f01e853e6e6e6d51a4779b854490f5c0f3d2dd7",
+    "4d6f3c4f6464dc52b6200770c604ecceee0de0e8ebb49d203ef4d8d65c2c07da",
+    "507de9463c0718bfd7c958354e165b0a8dafd4dd499604fa4c86f3fd034e11d5",
+    "520e33c1db95adfdab22f28c97583c94d7e00fe1b9bbed402daa5e527f6147d6",
+    "536067a5544b387f5bc3b21eff2253098c561e86dcc7846bac02441f63c9e57b",
+    "58a3c379dfc2475cc10ee8f3d7996e20de9e1a13ffda98221c0ed4beb55c58e3",
+    "58c8f98d9510ac0f5fc544277b69a26919e8921e77d0f8c27b66c72fe7874b9f",
+    "5d12a46b0543400bfb51dc4e6b885fde524df131b068cb18d2b2f45ee410733e",
+    "5de23fa56e0ddb7c17081dea60c6b95391e28b4d8edcbd4e2b83bc20c983e0d8",
+    "648e50de16946f28af796436c30804b2bc5e8d2651f9ef7ab89960bc1d33a1b5",
+    "66fca5a7c7618b7b8b07015b8f89f5da3061b64919a3d5ae41085e24a29ea7a0",
+    "68c0b214e81e120e2a9e0d3f96eff77c988ac98502d0aa9b12e37702d5128040",
+    "6c7731c12a159e536158c5a652f991d0341823bcd646c56c31e21c1dfc2628d4",
+    "6d20e670e60153a7f4f9f5658113535559fcf27eaa1ab8b1bf6547ba5d683d39",
+    "6f1ba65244ad7563061f632e6894033da065b1c58467bbd6b4986d9550d1422d",
+    "734a463ce8bae73cc9206d78b5eaf5f97984c59df561220fb72528b1a06beb98",
+    "78cec3e70407ba2827eacb0d316ce28b21503070ad2b7b5c8eb014ebfa6add5c",
+    "7a47dccda81e0ce319ac7618165c4a9d29d15bee33c92f2023f314ddc3246aec",
+    "7f6ff7ee899e17f668698f3b0b4897e5f6f1480ec3dc0bdd05d8a32502505cbe",
+    "8f8cd50fdde2a17ad218f3b9e4bcf0140ba7fb9b307a9ed66015b4e3fd869c6d",
+    "93dac8e128e58b0fd2b0303d51705e3a6446965a5c7f1df25de40392b4826a07",
+    "9543f817531287b2421fd72335902efdf8ead646a92040ec9b3ef2aa67447b10",
+    "95a43e326e061efbdadccbc7e94b70a9df398d35b44d60dac4232dadd21ca846",
+    "a266e726d77f64518b489486267abccdce395a1ce1923b225ee5d4b73ef8b358",
+    "ab715d191461a425d0238fabff6b9b643d1a371f8ae187aad3919f8c2d78cd45",
+    "b21804cb367e340872f16adf09549011595b21f634a6fdbdaf0038584da27d68",
+    "b43801c99a17b028b8160ff3a2977b3cfaa5969a0013dad672daca8950d8ac5c",
+    "b87caba150283b5d5c0b019bcd95b8172f99886d16c7d512b841fb6c7d77145f",
+    "bbab5ca766989ae95a8824bf5dd6e20858a1f8846c25b7e2ac3dfa23f7cbc3ea",
+    "c1353cda8a515ea919eef0fc13b291560e0160b7770f9788e338f5a06802a94b",
+    "c393f3792cd80f06e00bc6b7639e131b55712d61a8aaac358cca8582c58b280f",
+    "c60ce233068bab43f02bd51a114a9e8a64be88d05bf1e0bb0dc1e7f5dc0ae8e0",
+    "cef5b699b87d95c917884dfbcb1d7059816e56a2ee98b03f7465e91a4ae0fba2",
+    "dd280e09d9364bf3c295013c27c0de5572abe7999a0343a77324bc2d97469132",
+    "dd9f0fc4f84d0c965f8d9682c9c2e4abc1c4c7db31614c8b4dc194965ae0f9bf",
+    "deef88b8e1f84a4b22ee75698a6fab2d65c633056cb76b5acd972503a699fa16",
+    "e01aa79f7350895ddc32d5665e37c95fdafae5bce27cb7244fcff6113c85c4c0",
+    "e0e1635e70cf8163284ed82ce3ba8f082e4989d5c57308adffc4b891ea587bf2",
+    "e5a0492842bef04ac83a2c7ced70b16799145a6e0b4b356f0e33d915d9a0a81d",
+    "ea0fa678ff43e017d38f66509e1926e4a8200657d97383335e47f1243cdab1d0",
+    "eb8b2ae9f2f904a317f24fe2b3fd71071b877487a66303a5610ec13437225724",
+    "ecae04cf7804fcf35ec3f52cdb1d0ee5dc0c6a5d044726b52fd50dd1df7755a4",
+    "edcb7cbf4ff26bfb824f72d16155f2ee4bc1fdf71a0fdf97489f238730836a34",
+    "ef0cfb1f9719177ec6ac2ffc9e2a08c531abc8c6bfa3e48a5025ad6e2519cdbe",
+    "f33ec036470410a62c66da70ace14d9561486b5b37e8390b61510a8a92e40e47",
+    "fc9ff847b6abe980ddc0f1e7d5b8c534a1514e0d8074c092c701aa41131e9532"
+  ],
+  "lockbox_used": false,
+  "model_sha256": "d48507efa0636604a2014fbdd5a13b3266b73929d848bdaad14299af33bbf3fb",
+  "predicate_scope": "Bounded exact tactical constraints, not full-game wins or general life-and-death proofs",
+  "prediction": {
+    "by_horizon": {
+      "1": {
+        "cosine": 0.4521326422691345,
+        "count": 21,
+        "persistence_mse": 0.012017588131129742,
+        "prediction_mse": 0.017120854929089546
+      },
+      "2": {
+        "cosine": 0.9615018367767334,
+        "count": 17,
+        "persistence_mse": 0.0001760741142788902,
+        "prediction_mse": 0.001203067833557725
+      },
+      "4": {
+        "cosine": 0.9102398753166199,
+        "count": 9,
+        "persistence_mse": 0.0001831510162446648,
+        "prediction_mse": 0.0028050034306943417
+      },
+      "8": {
+        "cosine": 0.8797932863235474,
+        "count": 17,
+        "persistence_mse": 0.0024581437464803457,
+        "prediction_mse": 0.0037564614322036505
+      }
+    },
+    "collapsed": false,
+    "latent_std": 0.36463385820388794,
+    "sequences": 64,
+    "target_encoder": "online",
+    "target_latent_std": 0.39683598279953003
+  },
+  "promotion_effect": "NONE",
+  "recurrence": {
+    "1": {
+      "by_category": {
+        "atari_escape": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 7,
+          "SATISFIED_BOUNDED_PREDICATE": 5
+        },
+        "capture": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 9,
+          "SATISFIED_BOUNDED_PREDICATE": 3
+        },
+        "connection": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 8,
+          "SATISFIED_BOUNDED_PREDICATE": 4
+        },
+        "ladder_bounded": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 11,
+          "SATISFIED_BOUNDED_PREDICATE": 1
+        },
+        "life_death_bounded": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 4,
+          "SATISFIED_BOUNDED_PREDICATE": 6
+        }
+      },
+      "cases": 58,
+      "latency": {
+        "budget_s": 1.0,
+        "calls": 58,
+        "deadline_misses": 0,
+        "max_s": 0.9610748629784212,
+        "mean_s": 0.8013224509466391,
+        "p50_s": 0.7993933999969158,
+        "p95_s": 0.9604613744100788,
+        "p99_s": 0.9610118683084147,
+        "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+      },
+      "rows": [
+        {
+          "action": 68,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 20,
+            "nodes": 122,
+            "root_candidates": [
+              17,
+              10,
+              1,
+              7,
+              4,
+              68,
+              71,
+              15,
+              18,
+              35
+            ],
+            "root_tactical_candidates": []
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9553171510342509,
+          "family_id": "66fca5a7c7618b7b8b07015b8f89f5da3061b64919a3d5ae41085e24a29ea7a0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 22,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 192,
+            "root_candidates": [
+              38,
+              22,
+              7,
+              31,
+              1,
+              62,
+              27,
+              18,
+              46,
+              3
+            ],
+            "root_tactical_candidates": [
+              38,
+              22,
+              7,
+              31
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6842080680071376,
+          "family_id": "dd280e09d9364bf3c295013c27c0de5572abe7999a0343a77324bc2d97469132",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 38,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 39,
+            "nodes": 192,
+            "root_candidates": [
+              38,
+              1,
+              18,
+              7,
+              77,
+              3,
+              62,
+              27,
+              78,
+              45
+            ],
+            "root_tactical_candidates": [
+              38,
+              1,
+              18,
+              7,
+              77
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8106806090218015,
+          "family_id": "2fa8c25170bdc70ccb802f0c913470833d3122670237180c81ee223854975934",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 13,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 3,
+            "model_calls": 34,
+            "nodes": 172,
+            "root_candidates": [
+              65,
+              16,
+              13,
+              26,
+              81,
+              18,
+              42
+            ],
+            "root_tactical_candidates": [
+              65,
+              16,
+              13,
+              26
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9516181270009838,
+          "family_id": "58c8f98d9510ac0f5fc544277b69a26919e8921e77d0f8c27b66c72fe7874b9f",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 67,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 42,
+            "nodes": 192,
+            "root_candidates": [
+              8,
+              76,
+              67,
+              40,
+              9,
+              3,
+              22,
+              36,
+              2,
+              73
+            ],
+            "root_tactical_candidates": [
+              8,
+              76,
+              67,
+              40
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9281359459855594,
+          "family_id": "e01aa79f7350895ddc32d5665e37c95fdafae5bce27cb7244fcff6113c85c4c0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 70,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 29,
+            "nodes": 191,
+            "root_candidates": [
+              70,
+              64,
+              29,
+              26,
+              65,
+              12,
+              81,
+              45,
+              46,
+              41
+            ],
+            "root_tactical_candidates": [
+              70,
+              64,
+              29,
+              26,
+              65,
+              12
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9529029349796474,
+          "family_id": "deef88b8e1f84a4b22ee75698a6fab2d65c633056cb76b5acd972503a699fa16",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 41,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 32,
+            "nodes": 192,
+            "root_candidates": [
+              25,
+              57,
+              33,
+              34,
+              41,
+              40,
+              75,
+              65,
+              17,
+              73
+            ],
+            "root_tactical_candidates": []
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.5475817970000207,
+          "family_id": "507de9463c0718bfd7c958354e165b0a8dafd4dd499604fa4c86f3fd034e11d5",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 38,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 40,
+            "nodes": 192,
+            "root_candidates": [
+              1,
+              38,
+              18,
+              7,
+              62,
+              4,
+              27,
+              3,
+              21,
+              46
+            ],
+            "root_tactical_candidates": [
+              1,
+              38,
+              18,
+              7
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7819678550004028,
+          "family_id": "5de23fa56e0ddb7c17081dea60c6b95391e28b4d8edcbd4e2b83bc20c983e0d8",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 8,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 29,
+            "nodes": 185,
+            "root_candidates": [
+              8,
+              66,
+              78,
+              81,
+              18,
+              50,
+              61,
+              28,
+              49,
+              59
+            ],
+            "root_tactical_candidates": [
+              8,
+              66,
+              78
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9529938479536213,
+          "family_id": "68c0b214e81e120e2a9e0d3f96eff77c988ac98502d0aa9b12e37702d5128040",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 22,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              15,
+              3,
+              70,
+              22,
+              8,
+              42,
+              26,
+              36,
+              9
+            ],
+            "root_tactical_candidates": [
+              64,
+              15
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7592369999620132,
+          "family_id": "292866c422288e97765e2e4b68ccd71a5e6611ebc02d2814ed1ca61edd4aecab",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 39,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 192,
+            "root_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39,
+              53,
+              42,
+              35,
+              80,
+              15
+            ],
+            "root_tactical_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6585810940014198,
+          "family_id": "cef5b699b87d95c917884dfbcb1d7059816e56a2ee98b03f7465e91a4ae0fba2",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 192,
+            "root_candidates": [
+              31,
+              38,
+              22,
+              27,
+              18,
+              7,
+              1,
+              0,
+              62,
+              17
+            ],
+            "root_tactical_candidates": [
+              31,
+              38,
+              22
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.71259224798996,
+          "family_id": "eb8b2ae9f2f904a317f24fe2b3fd71071b877487a66303a5610ec13437225724",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 64,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 42,
+            "nodes": 192,
+            "root_candidates": [
+              17,
+              41,
+              64,
+              6,
+              71,
+              1,
+              73,
+              10,
+              3,
+              70
+            ],
+            "root_tactical_candidates": [
+              17,
+              41,
+              64,
+              6
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8146505019976757,
+          "family_id": "bbab5ca766989ae95a8824bf5dd6e20858a1f8846c25b7e2ac3dfa23f7cbc3ea",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 192,
+            "root_candidates": [
+              31,
+              38,
+              22,
+              27,
+              18,
+              7,
+              1,
+              0,
+              62,
+              17
+            ],
+            "root_tactical_candidates": [
+              31,
+              38,
+              22
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7090362060116604,
+          "family_id": "7a47dccda81e0ce319ac7618165c4a9d29d15bee33c92f2023f314ddc3246aec",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 59,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              62,
+              60,
+              79,
+              66,
+              59,
+              75,
+              10,
+              40,
+              42,
+              33
+            ],
+            "root_tactical_candidates": [
+              62,
+              60,
+              79,
+              66
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.637307993019931,
+          "family_id": "e0e1635e70cf8163284ed82ce3ba8f082e4989d5c57308adffc4b891ea587bf2",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 19,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 192,
+            "root_candidates": [
+              19,
+              20,
+              7,
+              0,
+              1,
+              18,
+              2,
+              71,
+              62,
+              27
+            ],
+            "root_tactical_candidates": []
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.608257555984892,
+          "family_id": "95a43e326e061efbdadccbc7e94b70a9df398d35b44d60dac4232dadd21ca846",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 5,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 41,
+            "nodes": 179,
+            "root_candidates": [
+              53,
+              5,
+              10,
+              18,
+              64,
+              32,
+              81,
+              59,
+              56,
+              45
+            ],
+            "root_tactical_candidates": [
+              53,
+              5,
+              10,
+              18,
+              64,
+              32
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9561971189687029,
+          "family_id": "fc9ff847b6abe980ddc0f1e7d5b8c534a1514e0d8074c092c701aa41131e9532",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 42,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 32,
+            "nodes": 192,
+            "root_candidates": [
+              63,
+              64,
+              42,
+              36,
+              8,
+              52,
+              80,
+              17,
+              28,
+              46
+            ],
+            "root_tactical_candidates": [
+              63,
+              64
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.5514209299581125,
+          "family_id": "28fa76567bbb1acf5e534f7e7a82bc67ff3eac33795183218c5546f4d21a1b02",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 58,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              63,
+              8,
+              17,
+              65,
+              75,
+              71,
+              58,
+              18,
+              80
+            ],
+            "root_tactical_candidates": [
+              64,
+              63
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6139612590195611,
+          "family_id": "b21804cb367e340872f16adf09549011595b21f634a6fdbdaf0038584da27d68",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 25,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 41,
+            "nodes": 192,
+            "root_candidates": [
+              25,
+              76,
+              0,
+              38,
+              81,
+              47,
+              16,
+              52,
+              79,
+              6
+            ],
+            "root_tactical_candidates": [
+              25,
+              76
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9320508270175196,
+          "family_id": "b43801c99a17b028b8160ff3a2977b3cfaa5969a0013dad672daca8950d8ac5c",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 55,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 162,
+            "root_candidates": [
+              55,
+              1,
+              22,
+              39,
+              81,
+              13,
+              31,
+              23
+            ],
+            "root_tactical_candidates": [
+              55,
+              1,
+              22,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9610748629784212,
+          "family_id": "58a3c379dfc2475cc10ee8f3d7996e20de9e1a13ffda98221c0ed4beb55c58e3",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 6,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 42,
+            "nodes": 158,
+            "root_candidates": [
+              11,
+              6,
+              3,
+              81,
+              23,
+              28,
+              21
+            ],
+            "root_tactical_candidates": [
+              11,
+              6
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.951602348999586,
+          "family_id": "6f1ba65244ad7563061f632e6894033da065b1c58467bbd6b4986d9550d1422d",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 66,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 179,
+            "root_candidates": [
+              73,
+              11,
+              6,
+              66,
+              81,
+              2,
+              76,
+              12,
+              40,
+              42
+            ],
+            "root_tactical_candidates": [
+              73,
+              11,
+              6
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9579677669680677,
+          "family_id": "8f8cd50fdde2a17ad218f3b9e4bcf0140ba7fb9b307a9ed66015b4e3fd869c6d",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 41,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 37,
+            "nodes": 192,
+            "root_candidates": [
+              55,
+              17,
+              75,
+              41,
+              36,
+              6,
+              1,
+              71,
+              73,
+              20
+            ],
+            "root_tactical_candidates": [
+              55,
+              17,
+              75,
+              41,
+              36,
+              6
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7796714889700525,
+          "family_id": "091a6ce29fde91f19ac976c7d33f1ce42ffabe77c98bdba43b3e4d1c957183f8",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 43,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 37,
+            "nodes": 179,
+            "root_candidates": [
+              43,
+              12,
+              28,
+              81,
+              18,
+              19,
+              32
+            ],
+            "root_tactical_candidates": [
+              43,
+              12,
+              28
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.951732532994356,
+          "family_id": "ab715d191461a425d0238fabff6b9b643d1a371f8ae187aad3919f8c2d78cd45",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 39,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 192,
+            "root_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39,
+              53,
+              42,
+              35,
+              80,
+              15
+            ],
+            "root_tactical_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6606376540148631,
+          "family_id": "a266e726d77f64518b489486267abccdce395a1ce1923b225ee5d4b73ef8b358",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 39,
+            "nodes": 192,
+            "root_candidates": [
+              31,
+              20,
+              27,
+              71,
+              7,
+              18,
+              1,
+              46,
+              0,
+              38
+            ],
+            "root_tactical_candidates": [
+              31
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.698136521037668,
+          "family_id": "0e903760e06e0a9220075d43870f00b3c4fe4fbefba526c0dd0ede9f6d1633d2",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 58,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              39,
+              17,
+              15,
+              5,
+              58,
+              65,
+              55,
+              3,
+              54
+            ],
+            "root_tactical_candidates": [
+              64,
+              39,
+              17
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.641219460987486,
+          "family_id": "edcb7cbf4ff26bfb824f72d16155f2ee4bc1fdf71a0fdf97489f238730836a34",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 74,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 47,
+            "nodes": 191,
+            "root_candidates": [
+              74,
+              22,
+              61,
+              70,
+              44,
+              9,
+              10,
+              63,
+              24,
+              5
+            ],
+            "root_tactical_candidates": [
+              74,
+              22
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9603751299437135,
+          "family_id": "3b334b78712fc6a75e5c0fcf51316b5a64368e321ad47ad38668a61719b0f0f3",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 4,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 45,
+            "nodes": 180,
+            "root_candidates": [
+              4,
+              44,
+              36,
+              81,
+              60,
+              9,
+              70,
+              80,
+              42,
+              61
+            ],
+            "root_tactical_candidates": [
+              4,
+              44,
+              36
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9609643460134976,
+          "family_id": "c1353cda8a515ea919eef0fc13b291560e0160b7770f9788e338f5a06802a94b",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 1,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 40,
+            "nodes": 192,
+            "root_candidates": [
+              1,
+              17,
+              75,
+              55,
+              78,
+              43,
+              73,
+              44,
+              27,
+              29
+            ],
+            "root_tactical_candidates": [
+              1,
+              17,
+              75,
+              55,
+              78,
+              43
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9066207470023073,
+          "family_id": "3e55a617157d3df83f2c5a6f4f7ef34f06ccb579e156004195bf54c5f0e7cbe0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 192,
+            "root_candidates": [
+              12,
+              18,
+              34,
+              61,
+              33,
+              10,
+              21,
+              31,
+              2,
+              24
+            ],
+            "root_tactical_candidates": [
+              12
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7629472659900784,
+          "family_id": "4aa13c640157c11ce28b856a5f01e853e6e6e6d51a4779b854490f5c0f3d2dd7",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 21,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 44,
+            "nodes": 192,
+            "root_candidates": [
+              21,
+              38,
+              7,
+              24,
+              77,
+              40,
+              53,
+              17,
+              10,
+              44
+            ],
+            "root_tactical_candidates": [
+              21,
+              38,
+              7,
+              24,
+              77,
+              40
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9518970390199684,
+          "family_id": "5d12a46b0543400bfb51dc4e6b885fde524df131b068cb18d2b2f45ee410733e",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 10,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 43,
+            "nodes": 178,
+            "root_candidates": [
+              10,
+              58,
+              73,
+              70,
+              47,
+              43,
+              54,
+              13,
+              81,
+              5
+            ],
+            "root_tactical_candidates": [
+              10,
+              58,
+              73,
+              70,
+              47,
+              43,
+              54
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9609500930528156,
+          "family_id": "4d6f3c4f6464dc52b6200770c604ecceee0de0e8ebb49d203ef4d8d65c2c07da",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 15,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 41,
+            "nodes": 192,
+            "root_candidates": [
+              15,
+              64,
+              39,
+              8,
+              35,
+              26,
+              5,
+              42,
+              53,
+              80
+            ],
+            "root_tactical_candidates": [
+              15,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7881061909720302,
+          "family_id": "7f6ff7ee899e17f668698f3b0b4897e5f6f1480ec3dc0bdd05d8a32502505cbe",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 79,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 192,
+            "root_candidates": [
+              79,
+              12,
+              33,
+              34,
+              74,
+              31,
+              81,
+              65,
+              67,
+              55
+            ],
+            "root_tactical_candidates": [
+              79,
+              12
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8113476420403458,
+          "family_id": "b87caba150283b5d5c0b019bcd95b8172f99886d16c7d512b841fb6c7d77145f",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 78,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 32,
+            "nodes": 192,
+            "root_candidates": [
+              78,
+              1,
+              68,
+              4,
+              7,
+              17,
+              10,
+              31,
+              3,
+              29
+            ],
+            "root_tactical_candidates": [
+              78,
+              1
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6574855600483716,
+          "family_id": "c60ce233068bab43f02bd51a114a9e8a64be88d05bf1e0bb0dc1e7f5dc0ae8e0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 57,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 31,
+            "nodes": 192,
+            "root_candidates": [
+              1,
+              17,
+              80,
+              18,
+              49,
+              57,
+              48,
+              10,
+              75,
+              7
+            ],
+            "root_tactical_candidates": [
+              1
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.5537886009551585,
+          "family_id": "e5a0492842bef04ac83a2c7ced70b16799145a6e0b4b356f0e33d915d9a0a81d",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 63,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 43,
+            "nodes": 192,
+            "root_candidates": [
+              63,
+              70,
+              74,
+              10,
+              61,
+              3,
+              40,
+              9,
+              58,
+              43
+            ],
+            "root_tactical_candidates": [
+              63,
+              70,
+              74
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8705221109557897,
+          "family_id": "648e50de16946f28af796436c30804b2bc5e8d2651f9ef7ab89960bc1d33a1b5",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 58,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              39,
+              17,
+              15,
+              5,
+              58,
+              65,
+              55,
+              3,
+              54
+            ],
+            "root_tactical_candidates": [
+              64,
+              39,
+              17
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6400014529936016,
+          "family_id": "0ef76dfb7d6fa63948070d1316ef6433cd15ea63dd4cc28b369d99e5da2fdf33",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 58,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 32,
+            "nodes": 192,
+            "root_candidates": [
+              63,
+              71,
+              5,
+              16,
+              24,
+              35,
+              68,
+              75,
+              58,
+              44
+            ],
+            "root_tactical_candidates": [
+              63,
+              71
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6400711360038258,
+          "family_id": "520e33c1db95adfdab22f28c97583c94d7e00fe1b9bbed402daa5e527f6147d6",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 21,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 44,
+            "nodes": 191,
+            "root_candidates": [
+              21,
+              38,
+              7,
+              24,
+              77,
+              40,
+              53,
+              17,
+              10,
+              44
+            ],
+            "root_tactical_candidates": [
+              21,
+              38,
+              7,
+              24,
+              77,
+              40
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9582705470384099,
+          "family_id": "ecae04cf7804fcf35ec3f52cdb1d0ee5dc0c6a5d044726b52fd50dd1df7755a4",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 47,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 192,
+            "root_candidates": [
+              47,
+              57,
+              56,
+              76,
+              4,
+              74,
+              72,
+              7,
+              68,
+              69
+            ],
+            "root_tactical_candidates": [
+              47,
+              57
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7199543820461258,
+          "family_id": "93dac8e128e58b0fd2b0303d51705e3a6446965a5c7f1df25de40392b4826a07",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 77,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 43,
+            "nodes": 192,
+            "root_candidates": [
+              38,
+              7,
+              77,
+              53,
+              17,
+              16,
+              45,
+              44,
+              24,
+              69
+            ],
+            "root_tactical_candidates": [
+              38,
+              7,
+              77
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9120715470053256,
+          "family_id": "78cec3e70407ba2827eacb0d316ce28b21503070ad2b7b5c8eb014ebfa6add5c",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 44,
+            "nodes": 192,
+            "root_candidates": [
+              31,
+              20,
+              1,
+              62,
+              71,
+              18,
+              27,
+              7,
+              38,
+              79
+            ],
+            "root_tactical_candidates": [
+              31
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7484473980148323,
+          "family_id": "f33ec036470410a62c66da70ace14d9561486b5b37e8390b61510a8a92e40e47",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 38,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 40,
+            "nodes": 192,
+            "root_candidates": [
+              1,
+              38,
+              18,
+              7,
+              62,
+              4,
+              27,
+              3,
+              21,
+              46
+            ],
+            "root_tactical_candidates": [
+              1,
+              38,
+              18,
+              7
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7854207149939612,
+          "family_id": "ef0cfb1f9719177ec6ac2ffc9e2a08c531abc8c6bfa3e48a5025ad6e2519cdbe",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 22,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              15,
+              35,
+              8,
+              64,
+              39,
+              3,
+              22,
+              5,
+              34,
+              42
+            ],
+            "root_tactical_candidates": [
+              15,
+              35,
+              8,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7082031469908543,
+          "family_id": "536067a5544b387f5bc3b21eff2253098c561e86dcc7846bac02441f63c9e57b",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 57,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              1,
+              25,
+              17,
+              34,
+              57,
+              40,
+              9,
+              8,
+              75,
+              33
+            ],
+            "root_tactical_candidates": []
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.5910229150322266,
+          "family_id": "ea0fa678ff43e017d38f66509e1926e4a8200657d97383335e47f1243cdab1d0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 65,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 41,
+            "nodes": 192,
+            "root_candidates": [
+              65,
+              79,
+              12,
+              67,
+              21,
+              31,
+              81,
+              9,
+              61,
+              52
+            ],
+            "root_tactical_candidates": [
+              65,
+              79,
+              12
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9323503689956851,
+          "family_id": "6c7731c12a159e536158c5a652f991d0341823bcd646c56c31e21c1dfc2628d4",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 63,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 43,
+            "nodes": 192,
+            "root_candidates": [
+              63,
+              70,
+              74,
+              10,
+              61,
+              3,
+              40,
+              9,
+              58,
+              43
+            ],
+            "root_tactical_candidates": [
+              63,
+              70,
+              74
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8816127919708379,
+          "family_id": "10403d085683a2047513169cdaa5a733406eb0a680622f4de0ffdb026e96cd3b",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 22,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              15,
+              3,
+              70,
+              22,
+              8,
+              42,
+              26,
+              36,
+              9
+            ],
+            "root_tactical_candidates": [
+              64,
+              15
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7512718600337394,
+          "family_id": "6d20e670e60153a7f4f9f5658113535559fcf27eaa1ab8b1bf6547ba5d683d39",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 70,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 42,
+            "nodes": 185,
+            "root_candidates": [
+              70,
+              10,
+              16,
+              43,
+              58,
+              75,
+              35,
+              23,
+              81,
+              5
+            ],
+            "root_tactical_candidates": [
+              70,
+              10,
+              16,
+              43
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9510938439634629,
+          "family_id": "dd9f0fc4f84d0c965f8d9682c9c2e4abc1c4c7db31614c8b4dc194965ae0f9bf",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 6,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 43,
+            "nodes": 192,
+            "root_candidates": [
+              36,
+              6,
+              71,
+              75,
+              55,
+              17,
+              73,
+              1,
+              3,
+              43
+            ],
+            "root_tactical_candidates": [
+              36,
+              6,
+              71,
+              75,
+              55,
+              17
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8942593109677546,
+          "family_id": "c393f3792cd80f06e00bc6b7639e131b55712d61a8aaac358cca8582c58b280f",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 63,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 3,
+            "model_calls": 42,
+            "nodes": 180,
+            "root_candidates": [
+              27,
+              81,
+              63,
+              24,
+              37,
+              72
+            ],
+            "root_tactical_candidates": [
+              27
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9521475930232555,
+          "family_id": "295b4ac5f675a85295b84f6c9c0ecb3d74803041074384c46ca30e4126bc55be",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 1,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 40,
+            "nodes": 192,
+            "root_candidates": [
+              1,
+              17,
+              75,
+              55,
+              78,
+              43,
+              73,
+              44,
+              27,
+              29
+            ],
+            "root_tactical_candidates": [
+              1,
+              17,
+              75,
+              55,
+              78,
+              43
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8825698670116253,
+          "family_id": "9543f817531287b2421fd72335902efdf8ead646a92040ec9b3ef2aa67447b10",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 39,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 192,
+            "root_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39,
+              53,
+              42,
+              35,
+              80,
+              15
+            ],
+            "root_tactical_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6545660709962249,
+          "family_id": "0f917fd4b9f5da83eab0482b909450b2fc682a03e050010518e36da81ee5b509",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 74,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 45,
+            "nodes": 192,
+            "root_candidates": [
+              74,
+              61,
+              44,
+              70,
+              63,
+              10,
+              9,
+              24,
+              5,
+              16
+            ],
+            "root_tactical_candidates": [
+              74
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8971783529850654,
+          "family_id": "734a463ce8bae73cc9206d78b5eaf5f97984c59df561220fb72528b1a06beb98",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 66,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              62,
+              60,
+              79,
+              66,
+              75,
+              32,
+              31,
+              10,
+              72,
+              57
+            ],
+            "root_tactical_candidates": [
+              62,
+              60,
+              79,
+              66
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.6704424219788052,
+          "family_id": "02c8d58963ebe2f9e7debfe2a17442720183bde8dea7219c8e82624b4bf04aa4",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        }
+      ],
+      "satisfied": 19,
+      "status_counts": {
+        "NOT_SATISFIED_BOUNDED_PREDICATE": 39,
+        "SATISFIED_BOUNDED_PREDICATE": 19
+      }
+    },
+    "2": {
+      "by_category": {
+        "atari_escape": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 7,
+          "SATISFIED_BOUNDED_PREDICATE": 5
+        },
+        "capture": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 9,
+          "SATISFIED_BOUNDED_PREDICATE": 3
+        },
+        "connection": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 10,
+          "SATISFIED_BOUNDED_PREDICATE": 2
+        },
+        "ladder_bounded": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 11,
+          "SATISFIED_BOUNDED_PREDICATE": 1
+        },
+        "life_death_bounded": {
+          "NOT_SATISFIED_BOUNDED_PREDICATE": 3,
+          "SATISFIED_BOUNDED_PREDICATE": 7
+        }
+      },
+      "cases": 58,
+      "latency": {
+        "budget_s": 1.0,
+        "calls": 58,
+        "deadline_misses": 0,
+        "max_s": 0.9689296779688448,
+        "mean_s": 0.9073549876710127,
+        "p50_s": 0.9518268924730364,
+        "p95_s": 0.9657126944686751,
+        "p99_s": 0.968909946893691,
+        "timing_scope": "complete decision including position reconstruction; checkpoint I/O excluded"
+      },
+      "rows": [
+        {
+          "action": 68,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 32,
+            "nodes": 192,
+            "root_candidates": [
+              17,
+              10,
+              1,
+              7,
+              4,
+              68,
+              15,
+              71,
+              18,
+              80
+            ],
+            "root_tactical_candidates": []
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7776440669549629,
+          "family_id": "66fca5a7c7618b7b8b07015b8f89f5da3061b64919a3d5ae41085e24a29ea7a0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 22,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              38,
+              22,
+              7,
+              31,
+              1,
+              62,
+              27,
+              18,
+              46,
+              3
+            ],
+            "root_tactical_candidates": [
+              38,
+              22,
+              7,
+              31
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8407208200078458,
+          "family_id": "dd280e09d9364bf3c295013c27c0de5572abe7999a0343a77324bc2d97469132",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 38,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 186,
+            "root_candidates": [
+              38,
+              1,
+              18,
+              7,
+              77,
+              3,
+              62,
+              27,
+              78,
+              45
+            ],
+            "root_tactical_candidates": [
+              38,
+              1,
+              18,
+              7,
+              77
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9523064810200594,
+          "family_id": "2fa8c25170bdc70ccb802f0c913470833d3122670237180c81ee223854975934",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 13,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 3,
+            "model_calls": 27,
+            "nodes": 161,
+            "root_candidates": [
+              65,
+              16,
+              13,
+              26,
+              81,
+              18,
+              42
+            ],
+            "root_tactical_candidates": [
+              65,
+              16,
+              13,
+              26
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9569944649701938,
+          "family_id": "58c8f98d9510ac0f5fc544277b69a26919e8921e77d0f8c27b66c72fe7874b9f",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 67,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 169,
+            "root_candidates": [
+              8,
+              76,
+              67,
+              40,
+              9,
+              3,
+              22,
+              36,
+              73,
+              2
+            ],
+            "root_tactical_candidates": [
+              8,
+              76,
+              67,
+              40
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.964601801999379,
+          "family_id": "e01aa79f7350895ddc32d5665e37c95fdafae5bce27cb7244fcff6113c85c4c0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 70,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 25,
+            "nodes": 159,
+            "root_candidates": [
+              70,
+              64,
+              29,
+              26,
+              65,
+              12,
+              81,
+              41,
+              45,
+              46
+            ],
+            "root_tactical_candidates": [
+              70,
+              64,
+              29,
+              26,
+              65,
+              12
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9517859130282886,
+          "family_id": "deef88b8e1f84a4b22ee75698a6fab2d65c633056cb76b5acd972503a699fa16",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 57,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              25,
+              33,
+              57,
+              34,
+              41,
+              40,
+              75,
+              65,
+              17,
+              47
+            ],
+            "root_tactical_candidates": []
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7551653779810295,
+          "family_id": "507de9463c0718bfd7c958354e165b0a8dafd4dd499604fa4c86f3fd034e11d5",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 38,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 174,
+            "root_candidates": [
+              1,
+              38,
+              18,
+              7,
+              62,
+              4,
+              27,
+              3,
+              21,
+              46
+            ],
+            "root_tactical_candidates": [
+              1,
+              38,
+              18,
+              7
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9579926520236768,
+          "family_id": "5de23fa56e0ddb7c17081dea60c6b95391e28b4d8edcbd4e2b83bc20c983e0d8",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 8,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 25,
+            "nodes": 160,
+            "root_candidates": [
+              8,
+              66,
+              78,
+              81,
+              50,
+              18,
+              61,
+              28,
+              49,
+              59
+            ],
+            "root_tactical_candidates": [
+              8,
+              66,
+              78
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9626056490233168,
+          "family_id": "68c0b214e81e120e2a9e0d3f96eff77c988ac98502d0aa9b12e37702d5128040",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 22,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              15,
+              3,
+              70,
+              22,
+              8,
+              42,
+              26,
+              36,
+              9
+            ],
+            "root_tactical_candidates": [
+              64,
+              15
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9453924869885668,
+          "family_id": "292866c422288e97765e2e4b68ccd71a5e6611ebc02d2814ed1ca61edd4aecab",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 39,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 192,
+            "root_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39,
+              53,
+              42,
+              35,
+              80,
+              15
+            ],
+            "root_tactical_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8825761569896713,
+          "family_id": "cef5b699b87d95c917884dfbcb1d7059816e56a2ee98b03f7465e91a4ae0fba2",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 192,
+            "root_candidates": [
+              31,
+              38,
+              22,
+              27,
+              18,
+              7,
+              1,
+              46,
+              0,
+              62
+            ],
+            "root_tactical_candidates": [
+              31,
+              38,
+              22
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.931122237991076,
+          "family_id": "eb8b2ae9f2f904a317f24fe2b3fd71071b877487a66303a5610ec13437225724",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 64,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 183,
+            "root_candidates": [
+              17,
+              41,
+              64,
+              6,
+              71,
+              1,
+              73,
+              10,
+              3,
+              70
+            ],
+            "root_tactical_candidates": [
+              17,
+              41,
+              64,
+              6
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.958514477009885,
+          "family_id": "bbab5ca766989ae95a8824bf5dd6e20858a1f8846c25b7e2ac3dfa23f7cbc3ea",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 192,
+            "root_candidates": [
+              31,
+              38,
+              22,
+              27,
+              18,
+              7,
+              1,
+              46,
+              0,
+              62
+            ],
+            "root_tactical_candidates": [
+              31,
+              38,
+              22
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9346192430239171,
+          "family_id": "7a47dccda81e0ce319ac7618165c4a9d29d15bee33c92f2023f314ddc3246aec",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 59,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              62,
+              60,
+              79,
+              66,
+              59,
+              75,
+              10,
+              40,
+              42,
+              33
+            ],
+            "root_tactical_candidates": [
+              62,
+              60,
+              79,
+              66
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.83573043695651,
+          "family_id": "e0e1635e70cf8163284ed82ce3ba8f082e4989d5c57308adffc4b891ea587bf2",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 19,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              19,
+              20,
+              7,
+              0,
+              1,
+              18,
+              2,
+              71,
+              62,
+              27
+            ],
+            "root_tactical_candidates": []
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7609297690214589,
+          "family_id": "95a43e326e061efbdadccbc7e94b70a9df398d35b44d60dac4232dadd21ca846",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 5,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 153,
+            "root_candidates": [
+              53,
+              5,
+              10,
+              64,
+              18,
+              32,
+              81,
+              59,
+              56,
+              45
+            ],
+            "root_tactical_candidates": [
+              53,
+              5,
+              10,
+              64,
+              18,
+              32
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9636935739545152,
+          "family_id": "fc9ff847b6abe980ddc0f1e7d5b8c534a1514e0d8074c092c701aa41131e9532",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 42,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 32,
+            "nodes": 192,
+            "root_candidates": [
+              63,
+              64,
+              42,
+              36,
+              8,
+              52,
+              80,
+              17,
+              28,
+              46
+            ],
+            "root_tactical_candidates": [
+              63,
+              64
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7266221939935349,
+          "family_id": "28fa76567bbb1acf5e534f7e7a82bc67ff3eac33795183218c5546f4d21a1b02",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 58,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              63,
+              8,
+              17,
+              65,
+              75,
+              58,
+              71,
+              18,
+              80
+            ],
+            "root_tactical_candidates": [
+              64,
+              63
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7820786060183309,
+          "family_id": "b21804cb367e340872f16adf09549011595b21f634a6fdbdaf0038584da27d68",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 25,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 173,
+            "root_candidates": [
+              25,
+              76,
+              0,
+              38,
+              81,
+              47,
+              16,
+              79,
+              52,
+              6
+            ],
+            "root_tactical_candidates": [
+              25,
+              76
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9653325250255875,
+          "family_id": "b43801c99a17b028b8160ff3a2977b3cfaa5969a0013dad672daca8950d8ac5c",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 55,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 28,
+            "nodes": 140,
+            "root_candidates": [
+              55,
+              22,
+              1,
+              39,
+              81,
+              13,
+              23,
+              31
+            ],
+            "root_tactical_candidates": [
+              55,
+              22,
+              1,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.964377542026341,
+          "family_id": "58a3c379dfc2475cc10ee8f3d7996e20de9e1a13ffda98221c0ed4beb55c58e3",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 6,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 133,
+            "root_candidates": [
+              11,
+              6,
+              3,
+              81,
+              23,
+              28,
+              21
+            ],
+            "root_tactical_candidates": [
+              11,
+              6
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9543487499468029,
+          "family_id": "6f1ba65244ad7563061f632e6894033da065b1c58467bbd6b4986d9550d1422d",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 66,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 27,
+            "nodes": 170,
+            "root_candidates": [
+              11,
+              73,
+              6,
+              81,
+              66,
+              2,
+              12,
+              76,
+              40,
+              28
+            ],
+            "root_tactical_candidates": [
+              11,
+              73,
+              6
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9518260459881276,
+          "family_id": "8f8cd50fdde2a17ad218f3b9e4bcf0140ba7fb9b307a9ed66015b4e3fd869c6d",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 41,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 188,
+            "root_candidates": [
+              55,
+              17,
+              75,
+              41,
+              36,
+              6,
+              1,
+              71,
+              73,
+              20
+            ],
+            "root_tactical_candidates": [
+              55,
+              17,
+              75,
+              41,
+              36,
+              6
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9609079960500821,
+          "family_id": "091a6ce29fde91f19ac976c7d33f1ce42ffabe77c98bdba43b3e4d1c957183f8",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 43,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 30,
+            "nodes": 148,
+            "root_candidates": [
+              43,
+              12,
+              28,
+              81,
+              18,
+              19,
+              32
+            ],
+            "root_tactical_candidates": [
+              43,
+              12,
+              28
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9538973779999651,
+          "family_id": "ab715d191461a425d0238fabff6b9b643d1a371f8ae187aad3919f8c2d78cd45",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 39,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 192,
+            "root_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39,
+              53,
+              42,
+              35,
+              80,
+              15
+            ],
+            "root_tactical_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8752160939620808,
+          "family_id": "a266e726d77f64518b489486267abccdce395a1ce1923b225ee5d4b73ef8b358",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 42,
+            "nodes": 187,
+            "root_candidates": [
+              31,
+              20,
+              27,
+              71,
+              7,
+              18,
+              1,
+              46,
+              38,
+              0
+            ],
+            "root_tactical_candidates": [
+              31
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9634810319985263,
+          "family_id": "0e903760e06e0a9220075d43870f00b3c4fe4fbefba526c0dd0ede9f6d1633d2",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 39,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              39,
+              17,
+              15,
+              5,
+              58,
+              65,
+              55,
+              3,
+              54
+            ],
+            "root_tactical_candidates": [
+              64,
+              39,
+              17
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8312659629737027,
+          "family_id": "edcb7cbf4ff26bfb824f72d16155f2ee4bc1fdf71a0fdf97489f238730836a34",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 74,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 158,
+            "root_candidates": [
+              74,
+              22,
+              61,
+              44,
+              70,
+              9,
+              10,
+              63,
+              24,
+              5
+            ],
+            "root_tactical_candidates": [
+              74,
+              22
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9529254969675094,
+          "family_id": "3b334b78712fc6a75e5c0fcf51316b5a64368e321ad47ad38668a61719b0f0f3",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 4,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 154,
+            "root_candidates": [
+              4,
+              44,
+              36,
+              81,
+              60,
+              9,
+              70,
+              80,
+              42,
+              61
+            ],
+            "root_tactical_candidates": [
+              4,
+              44,
+              36
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9587232519988902,
+          "family_id": "c1353cda8a515ea919eef0fc13b291560e0160b7770f9788e338f5a06802a94b",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 1,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 171,
+            "root_candidates": [
+              1,
+              17,
+              75,
+              55,
+              78,
+              43,
+              73,
+              44,
+              29,
+              27
+            ],
+            "root_tactical_candidates": [
+              1,
+              17,
+              75,
+              55,
+              78,
+              43
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9565200980287045,
+          "family_id": "3e55a617157d3df83f2c5a6f4f7ef34f06ccb579e156004195bf54c5f0e7cbe0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 192,
+            "root_candidates": [
+              12,
+              18,
+              34,
+              61,
+              33,
+              10,
+              21,
+              31,
+              2,
+              24
+            ],
+            "root_tactical_candidates": [
+              12
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9500330989831127,
+          "family_id": "4aa13c640157c11ce28b856a5f01e853e6e6e6d51a4779b854490f5c0f3d2dd7",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 21,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 166,
+            "root_candidates": [
+              21,
+              38,
+              7,
+              24,
+              77,
+              40,
+              53,
+              10,
+              17,
+              45
+            ],
+            "root_tactical_candidates": [
+              21,
+              38,
+              7,
+              24,
+              77,
+              40
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9678669879795052,
+          "family_id": "5d12a46b0543400bfb51dc4e6b885fde524df131b068cb18d2b2f45ee410733e",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 10,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 154,
+            "root_candidates": [
+              10,
+              58,
+              73,
+              70,
+              47,
+              43,
+              54,
+              13,
+              81,
+              5
+            ],
+            "root_tactical_candidates": [
+              10,
+              58,
+              73,
+              70,
+              47,
+              43,
+              54
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9631498029921204,
+          "family_id": "4d6f3c4f6464dc52b6200770c604ecceee0de0e8ebb49d203ef4d8d65c2c07da",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 15,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 192,
+            "root_candidates": [
+              15,
+              64,
+              39,
+              8,
+              35,
+              26,
+              5,
+              42,
+              53,
+              80
+            ],
+            "root_tactical_candidates": [
+              15,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9478620660374872,
+          "family_id": "7f6ff7ee899e17f668698f3b0b4897e5f6f1480ec3dc0bdd05d8a32502505cbe",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 79,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 188,
+            "root_candidates": [
+              79,
+              12,
+              33,
+              34,
+              74,
+              31,
+              81,
+              65,
+              55,
+              18
+            ],
+            "root_tactical_candidates": [
+              79,
+              12
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9518277389579453,
+          "family_id": "b87caba150283b5d5c0b019bcd95b8172f99886d16c7d512b841fb6c7d77145f",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 78,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 32,
+            "nodes": 192,
+            "root_candidates": [
+              78,
+              1,
+              68,
+              4,
+              7,
+              17,
+              10,
+              3,
+              31,
+              29
+            ],
+            "root_tactical_candidates": [
+              78,
+              1
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8234703440102749,
+          "family_id": "c60ce233068bab43f02bd51a114a9e8a64be88d05bf1e0bb0dc1e7f5dc0ae8e0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 32,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 30,
+            "nodes": 192,
+            "root_candidates": [
+              1,
+              17,
+              80,
+              49,
+              48,
+              18,
+              57,
+              10,
+              32,
+              75
+            ],
+            "root_tactical_candidates": [
+              1
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7100274690310471,
+          "family_id": "e5a0492842bef04ac83a2c7ced70b16799145a6e0b4b356f0e33d915d9a0a81d",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 63,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 37,
+            "nodes": 170,
+            "root_candidates": [
+              63,
+              70,
+              74,
+              10,
+              61,
+              40,
+              3,
+              58,
+              9,
+              43
+            ],
+            "root_tactical_candidates": [
+              63,
+              70,
+              74
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9611969949910417,
+          "family_id": "648e50de16946f28af796436c30804b2bc5e8d2651f9ef7ab89960bc1d33a1b5",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 39,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              39,
+              17,
+              15,
+              5,
+              58,
+              65,
+              55,
+              3,
+              54
+            ],
+            "root_tactical_candidates": [
+              64,
+              39,
+              17
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8140377439558506,
+          "family_id": "0ef76dfb7d6fa63948070d1316ef6433cd15ea63dd4cc28b369d99e5da2fdf33",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 58,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 29,
+            "nodes": 192,
+            "root_candidates": [
+              63,
+              71,
+              5,
+              16,
+              24,
+              35,
+              68,
+              75,
+              58,
+              60
+            ],
+            "root_tactical_candidates": [
+              63,
+              71
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7436363640008494,
+          "family_id": "520e33c1db95adfdab22f28c97583c94d7e00fe1b9bbed402daa5e527f6147d6",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 21,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 166,
+            "root_candidates": [
+              21,
+              38,
+              7,
+              24,
+              77,
+              40,
+              53,
+              10,
+              17,
+              45
+            ],
+            "root_tactical_candidates": [
+              21,
+              38,
+              7,
+              24,
+              77,
+              40
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9511335120187141,
+          "family_id": "ecae04cf7804fcf35ec3f52cdb1d0ee5dc0c6a5d044726b52fd50dd1df7755a4",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 47,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 188,
+            "root_candidates": [
+              47,
+              57,
+              56,
+              76,
+              74,
+              4,
+              72,
+              7,
+              68,
+              69
+            ],
+            "root_tactical_candidates": [
+              47,
+              57
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9518913500360213,
+          "family_id": "93dac8e128e58b0fd2b0303d51705e3a6446965a5c7f1df25de40392b4826a07",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 77,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 174,
+            "root_candidates": [
+              38,
+              7,
+              77,
+              53,
+              17,
+              16,
+              45,
+              44,
+              24,
+              69
+            ],
+            "root_tactical_candidates": [
+              38,
+              7,
+              77
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9689296779688448,
+          "family_id": "78cec3e70407ba2827eacb0d316ce28b21503070ad2b7b5c8eb014ebfa6add5c",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 31,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 43,
+            "nodes": 176,
+            "root_candidates": [
+              31,
+              20,
+              1,
+              62,
+              71,
+              18,
+              7,
+              27,
+              38,
+              79
+            ],
+            "root_tactical_candidates": [
+              31
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9628072999767028,
+          "family_id": "f33ec036470410a62c66da70ace14d9561486b5b37e8390b61510a8a92e40e47",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 38,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 38,
+            "nodes": 177,
+            "root_candidates": [
+              1,
+              38,
+              18,
+              7,
+              62,
+              4,
+              27,
+              3,
+              21,
+              46
+            ],
+            "root_tactical_candidates": [
+              1,
+              38,
+              18,
+              7
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9530552449868992,
+          "family_id": "ef0cfb1f9719177ec6ac2ffc9e2a08c531abc8c6bfa3e48a5025ad6e2519cdbe",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 22,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 28,
+            "nodes": 192,
+            "root_candidates": [
+              15,
+              35,
+              8,
+              64,
+              39,
+              3,
+              22,
+              5,
+              34,
+              42
+            ],
+            "root_tactical_candidates": [
+              15,
+              35,
+              8,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.7775492090149783,
+          "family_id": "536067a5544b387f5bc3b21eff2253098c561e86dcc7846bac02441f63c9e57b",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 57,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              1,
+              25,
+              17,
+              34,
+              57,
+              40,
+              33,
+              8,
+              9,
+              75
+            ],
+            "root_tactical_candidates": []
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.761673618981149,
+          "family_id": "ea0fa678ff43e017d38f66509e1926e4a8200657d97383335e47f1243cdab1d0",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 65,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 170,
+            "root_candidates": [
+              65,
+              79,
+              12,
+              67,
+              31,
+              21,
+              9,
+              81,
+              61,
+              52
+            ],
+            "root_tactical_candidates": [
+              65,
+              79,
+              12
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9646613809745759,
+          "family_id": "6c7731c12a159e536158c5a652f991d0341823bcd646c56c31e21c1dfc2628d4",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 63,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 37,
+            "nodes": 172,
+            "root_candidates": [
+              63,
+              70,
+              74,
+              10,
+              61,
+              40,
+              3,
+              58,
+              9,
+              43
+            ],
+            "root_tactical_candidates": [
+              63,
+              70,
+              74
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9516412680386566,
+          "family_id": "10403d085683a2047513169cdaa5a733406eb0a680622f4de0ffdb026e96cd3b",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 22,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 192,
+            "root_candidates": [
+              64,
+              15,
+              3,
+              70,
+              22,
+              8,
+              42,
+              26,
+              36,
+              9
+            ],
+            "root_tactical_candidates": [
+              64,
+              15
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9301957910065539,
+          "family_id": "6d20e670e60153a7f4f9f5658113535559fcf27eaa1ab8b1bf6547ba5d683d39",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 70,
+          "category": "capture",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 34,
+            "nodes": 160,
+            "root_candidates": [
+              70,
+              10,
+              16,
+              43,
+              58,
+              75,
+              5,
+              23,
+              35,
+              81
+            ],
+            "root_tactical_candidates": [
+              70,
+              10,
+              16,
+              43
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9518789009889588,
+          "family_id": "dd9f0fc4f84d0c965f8d9682c9c2e4abc1c4c7db31614c8b4dc194965ae0f9bf",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 6,
+          "category": "connection",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 37,
+            "nodes": 171,
+            "root_candidates": [
+              36,
+              6,
+              71,
+              75,
+              55,
+              17,
+              73,
+              1,
+              3,
+              43
+            ],
+            "root_tactical_candidates": [
+              36,
+              6,
+              71,
+              75,
+              55,
+              17
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9688950620475225,
+          "family_id": "c393f3792cd80f06e00bc6b7639e131b55712d61a8aaac358cca8582c58b280f",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 27,
+          "category": "life_death_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 148,
+            "root_candidates": [
+              27,
+              81,
+              63,
+              24,
+              72,
+              37
+            ],
+            "root_tactical_candidates": [
+              27
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9569412309792824,
+          "family_id": "295b4ac5f675a85295b84f6c9c0ecb3d74803041074384c46ca30e4126bc55be",
+          "legal": true,
+          "status": "SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 1,
+          "category": "atari_escape",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 35,
+            "nodes": 171,
+            "root_candidates": [
+              1,
+              17,
+              75,
+              55,
+              78,
+              43,
+              73,
+              44,
+              29,
+              27
+            ],
+            "root_tactical_candidates": [
+              1,
+              17,
+              75,
+              55,
+              78,
+              43
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9606616959790699,
+          "family_id": "9543f817531287b2421fd72335902efdf8ead646a92040ec9b3ef2aa67447b10",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 39,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 36,
+            "nodes": 192,
+            "root_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39,
+              53,
+              42,
+              35,
+              80,
+              15
+            ],
+            "root_tactical_candidates": [
+              17,
+              63,
+              6,
+              64,
+              39
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8595899870269932,
+          "family_id": "0f917fd4b9f5da83eab0482b909450b2fc682a03e050010518e36da81ee5b509",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 74,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 37,
+            "nodes": 173,
+            "root_candidates": [
+              74,
+              61,
+              44,
+              70,
+              63,
+              10,
+              9,
+              40,
+              5,
+              24
+            ],
+            "root_tactical_candidates": [
+              74
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.9516390670323744,
+          "family_id": "734a463ce8bae73cc9206d78b5eaf5f97984c59df561220fb72528b1a06beb98",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        },
+        {
+          "action": 32,
+          "category": "ladder_bounded",
+          "counters": {
+            "completed_depth": 2,
+            "model_calls": 33,
+            "nodes": 192,
+            "root_candidates": [
+              62,
+              60,
+              79,
+              66,
+              75,
+              32,
+              31,
+              10,
+              72,
+              57
+            ],
+            "root_tactical_candidates": [
+              62,
+              60,
+              79,
+              66
+            ]
+          },
+          "deadline_missed": false,
+          "elapsed_s": 0.8404177949996665,
+          "family_id": "02c8d58963ebe2f9e7debfe2a17442720183bde8dea7219c8e82624b4bf04aa4",
+          "legal": true,
+          "status": "NOT_SATISFIED_BOUNDED_PREDICATE",
+          "strategic_result": "UNKNOWN"
+        }
+      ],
+      "satisfied": 18,
+      "status_counts": {
+        "NOT_SATISFIED_BOUNDED_PREDICATE": 40,
+        "SATISFIED_BOUNDED_PREDICATE": 18
+      }
+    }
+  },
+  "run_id": "ahr-v3-C-s03",
+  "schema": "ahr_v3_controlled_evaluation_v1",
+  "sources": {
+    "experiments/ahr_jepa_v3/00_shared.ipynb": "db6ef3dd12aa294109b818c8bb654ba9e167ce7e5aa4adf600fa4c6ad7924449",
+    "experiments/ahr_jepa_v3/08_predictive_ahr.ipynb": "4d4dd1799775e9592372205526450ab83f3d85a8609e97dce18866a651a85c72",
+    "experiments/ahr_jepa_v3/09_trajectory_learning.ipynb": "f5f5c20b3160f309ebe302674dec89ab1d486a67b7826e71cabdb4fe0c61cffd",
+    "experiments/ahr_jepa_v3/11_controlled_evaluation.ipynb": "832092e406f952cd4ad6114b45e9194c42a2ef4f69b25d5bc71d0088f69b7b7a",
+    "notebooks/00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+    "notebooks/03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+    "notebooks/04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+    "notebooks/05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+    "notebooks/06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb": "a6c9b3d4b0152be85e9ed20c55e65eab600ecb3b2167dc653c4be4611a287a14",
+    "notebooks/08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3",
+    "notebooks/09_selfplay_and_improvement.ipynb": "047054ba779c78928c2265f2aac63e1c2c7d15f1a65081019d8a404f7d07478a",
+    "notebooks/10_gtp_engine_interface.ipynb": "2306b2f28310a163d3bcc0526590bd42c8eda85e85f60d00c20653b505f7d482",
+    "notebooks/11_engine_arena_and_evaluation.ipynb": "d90aeecd75541c1f815a1d8df831f67ad844650f721e5d841dcf0e1f780ae60e",
+    "notebooks/12_play_and_watch.ipynb": "6d5490cf8885de99e175dc3d00d9ad3225f98e975fdc72c56a275f45058680b4",
+    "notebooks/13_export_backup_and_restore.ipynb": "c6a1425022746f381acf855d889065a768385fdcf385dcf82fd2cee2e6b34568"
+  },
+  "status": "COMPLETE",
+  "training_overlap": false,
+  "value_calibration": {
+    "brier_score": 0.24703708283220646,
+    "calibration_bins": [
+      {
+        "count": 19,
+        "lower": 0.0,
+        "observed": 0.0,
+        "predicted": 0.14707800275401064,
+        "upper": 0.2
+      },
+      {
+        "count": 34,
+        "lower": 0.2,
+        "observed": 0.0,
+        "predicted": 0.3121020592310849,
+        "upper": 0.4
+      },
+      {
+        "count": 305,
+        "lower": 0.4,
+        "observed": 0.19672131147540983,
+        "predicted": 0.4847567762507767,
+        "upper": 0.6000000000000001
+      },
+      {
+        "count": 67,
+        "lower": 0.6000000000000001,
+        "observed": 0.19402985074626866,
+        "predicted": 0.6895035007106725,
+        "upper": 0.8
+      },
+      {
+        "count": 87,
+        "lower": 0.8,
+        "observed": 0.6781609195402298,
+        "predicted": 0.9202994457606611,
+        "upper": 1.0
+      }
+    ],
+    "count": 512,
+    "expected_calibration_error": 0.3037491311552003,
+    "mean_outcome": 0.2578125,
+    "mean_prediction": 0.5615616311552003,
+    "scope": "Descriptive correlated positions sampled every eight plies; no independence-based confidence interval",
+    "sources": [
+      {
+        "identity": "a28698afd2000a30d111d40461e73a916a88910a7b44b59f76d4dd4138096e5e",
+        "run_id": "arena-v3-C_vs_B-s03"
+      },
+      {
+        "identity": "270f4539202dbf2a362c82e31317fd08ce0fa7cf0c73e5fbfafecad79479d6e1",
+        "run_id": "arena-v3-C_vs_A-s03"
+      }
+    ],
+    "status": "COMPLETE"
+  }
+}

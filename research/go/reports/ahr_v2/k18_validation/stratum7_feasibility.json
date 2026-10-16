@@ -1,0 +1,11 @@
+{
+  "accepted_rows_at96": 37021,
+  "compatible_fraction": 0.998,
+  "compatible_games": 499,
+  "estimated_full_available_rows": 780254.596,
+  "rejected": {
+    "illegal_under_our_rules": 1
+  },
+  "sample_games": 500,
+  "total_stratum7_train_games": 10538
+}

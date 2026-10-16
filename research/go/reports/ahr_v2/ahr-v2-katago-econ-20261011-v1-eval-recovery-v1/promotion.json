@@ -1,0 +1,56 @@
+{
+  "candidate_model_identity": "bcac91f735d0ebcf54a03ff6718d9f8c659d4a85a7c1fd5c5c6083aeb632ba82",
+  "champion_model_identity": "0e8ba8c5405815f7499945d4b83f3020a2ecbedf403227e8d532260da5b1df71",
+  "decision": "KEEP_CHAMPION",
+  "evidence_files": {
+    "gnu_candidate": {
+      "path": "reports/ahr_v2/benchmarks/ahr-v2-katago-econ-20261011-v1-eval-recovery-v1-gnu-candidate/report.json",
+      "sha256": "613c77986cbbc6fabab0e1e4e477de1be421b9fb626d187f7b01497429580a40"
+    },
+    "gnu_champion": {
+      "path": "reports/ahr_v2/benchmarks/ahr-v2-katago-econ-20261011-v1-eval-recovery-v1-gnu-incumbent/report.json",
+      "sha256": "d8f0f5302d858b52cc7a05658129835f5ed2732a12b70ec394ac28544557ebc8"
+    },
+    "katago_confirmation": {
+      "path": "reports/ahr_v2/benchmarks/ahr-v2-katago-econ-20261011-v1-confirmation-candidate-katago/report.json",
+      "sha256": "40a0be8324a3243bc2058896536513b5d68f181d0f9586c566e64d709c8454df"
+    }
+  },
+  "evidence_scope": "Development promotion gate; a point estimate is not a confidence or ranking claim.",
+  "family_exclusions": [
+    {
+      "path": "data/ahr_v2_teacher/prepared/go9x9-teacher-v1/manifest.json",
+      "sha256": "c3190966008a7561ca735b0e15e39a78a06d5f7c9fc7856e078a8ec3d27f8338"
+    },
+    {
+      "path": "data/ahr_v2_teacher/prepared/go9x9-competitive-v2/manifest.json",
+      "sha256": "51b434214b6135b550a8f46169eafcb67614066a6c592e05c34e21329fdccaab"
+    },
+    {
+      "path": "reports/ahr_v2/benchmarks/ahr-v2-benchmark-20261009-v1/report.json",
+      "sha256": "ccfb38e80b83925256f0d451e8a6dfe81ef3394c6a816a75e446230b1c7f0c5b"
+    }
+  ],
+  "fresh_gnu_families": 10,
+  "fresh_kata_families": 50,
+  "gnu_candidate_win_rate": 0.8,
+  "gnu_champion_win_rate": 0.85,
+  "gnu_drop": 0.04999999999999993,
+  "kata_games": 100,
+  "kata_wins": 3,
+  "policy": {
+    "ahr_soft_move_seconds": 2.0,
+    "max_gnu_drop": 0.1,
+    "max_unknown": 0,
+    "min_gnu_games": 20,
+    "min_gnu_win_rate": 0.7,
+    "min_kata_games": 100,
+    "min_kata_wins": 55,
+    "min_opening_plies": 8
+  },
+  "promoted": false,
+  "reasons": [
+    "KataGo1 confirmed wins below the promotion threshold."
+  ],
+  "verified_at_utc": "2026-10-12T12:59:45.787975+00:00"
+}

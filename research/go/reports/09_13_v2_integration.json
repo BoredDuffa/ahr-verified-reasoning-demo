@@ -1,0 +1,14 @@
+{
+  "baseline_archive": "/home/benjamin/workspace/ahr_go/exports/bundles/go09-first-selfplay-v1-54c35167b33c.tar.gz",
+  "baseline_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+  "checked_at_utc": "2026-09-24T14:47:44.484630+00:00",
+  "configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+  "full_experiment_started": false,
+  "games_per_generation": 128,
+  "generations": 3,
+  "off_instance_backup": "DEFERRED_BY_USER_PENDING_HUGGING_FACE_DESTINATION",
+  "paired_blocks_per_generation": 128,
+  "pilot_archive": "/home/benjamin/workspace/ahr_go/exports/bundles/go09-v2-performance-pilot-eb50afcded67.tar.gz",
+  "pilot_checkpoint_sha256": "81fd63ef4c93268fcaaa367158204bad3a0f6196420e54752c8d52773c8c27e6",
+  "status": "PASS"
+}

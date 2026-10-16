@@ -1,0 +1,31 @@
+{
+  "clinical_use": "forbidden",
+  "created_at_utc": "2026-06-08T16:19:00Z",
+  "kind": "gsm8k_program_synthesis_dataset_v0",
+  "paths": {
+    "test": "/Users/benjaminfalkenburg/Documents/primumai/archives/github_exports/ahr_verified_reasoning_20260509/data/gsm8k_program_synthesis_v0/test.jsonl",
+    "train": "/Users/benjaminfalkenburg/Documents/primumai/archives/github_exports/ahr_verified_reasoning_20260509/data/gsm8k_program_synthesis_v0/train.jsonl",
+    "val": "/Users/benjaminfalkenburg/Documents/primumai/archives/github_exports/ahr_verified_reasoning_20260509/data/gsm8k_program_synthesis_v0/val.jsonl"
+  },
+  "source": {
+    "config": "main",
+    "dataset": "openai/gsm8k"
+  },
+  "splits": {
+    "test": {
+      "replay_valid": 293,
+      "total": 300,
+      "with_equations": 295
+    },
+    "train": {
+      "replay_valid": 977,
+      "total": 1000,
+      "with_equations": 982
+    },
+    "val": {
+      "replay_valid": 199,
+      "total": 200,
+      "with_equations": 199
+    }
+  }
+}

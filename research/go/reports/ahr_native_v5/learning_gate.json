@@ -1,0 +1,17 @@
+{
+  "config": {
+    "bounded_tactical_threshold": 0.95,
+    "immediate_capture_threshold": 0.99,
+    "teacher_cases": 16,
+    "teacher_fast_s": 1.0,
+    "teacher_minimum_gain": 0.05,
+    "teacher_minimum_success": 0.5,
+    "teacher_offline_s": 3.0,
+    "teacher_saturated_success": 0.95
+  },
+  "full_game_strength": "NOT_ESTABLISHED",
+  "reason": "Reserved development curriculum and actual model required",
+  "status": "NOT_MEASURED",
+  "tactical_status": "NOT_MEASURED",
+  "teacher_status": "NOT_MEASURED"
+}

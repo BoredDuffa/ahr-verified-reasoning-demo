@@ -1,0 +1,105 @@
+{
+  "checks": {
+    "adversarial_two_ply": {
+      "chosen_action": 8,
+      "counters": {
+        "deepest_ply": 2,
+        "deferred_actions": 23,
+        "depth_cutoffs": 3,
+        "model_calls": 3,
+        "model_microsteps": 12,
+        "nodes": 3,
+        "opponent_nodes": 2
+      },
+      "root_candidates": [
+        {
+          "action": 9,
+          "soft_energy": -0.18977147061377764,
+          "value": -0.05549847010902636
+        },
+        {
+          "action": 8,
+          "soft_energy": -0.18851371575146914,
+          "value": 0.016427541491679243
+        }
+      ]
+    },
+    "codec_overflow_never_truncates_state": true,
+    "cutoff_semantics": {
+      "terminal_no_move": true,
+      "zero_budget_unknown": true,
+      "zero_budget_verified_pass": true
+    },
+    "final_audit_in_elapsed_and_deadline": true,
+    "hard_legality_mask": {
+      "masked_probability_zero": true,
+      "superko_action_excluded": true
+    },
+    "independent_rules": {
+      "capture": true,
+      "move_comparisons": 112,
+      "pass_terminal": true,
+      "suicide": true,
+      "superko": true
+    },
+    "invalid_budgets_rejected": true,
+    "latency_samples": [
+      {
+        "action": 8,
+        "board_size": 3,
+        "deadline_exceeded": false,
+        "elapsed_s": 0.02232846600236371,
+        "fallback_pass": false,
+        "model_microsteps": 12,
+        "reason": "bounded_search_complete"
+      },
+      {
+        "action": 19,
+        "board_size": 5,
+        "deadline_exceeded": false,
+        "elapsed_s": 0.024723759001062717,
+        "fallback_pass": false,
+        "model_microsteps": 12,
+        "reason": "bounded_search_complete"
+      },
+      {
+        "action": 29,
+        "board_size": 9,
+        "deadline_exceeded": false,
+        "elapsed_s": 0.03514141499908874,
+        "fallback_pass": false,
+        "model_microsteps": 12,
+        "reason": "bounded_search_complete"
+      }
+    ],
+    "native_energy_controls_frontier": {
+      "normal_retained": [
+        9,
+        8
+      ],
+      "reversed_retained": [
+        0,
+        1
+      ]
+    },
+    "optimizer_updates": 0,
+    "six_qws_guards": true,
+    "weights_unchanged": true
+  },
+  "dependency_exports_sha256": {
+    "00_instance_setup_and_recovery.ipynb": "60baf4401d49fc9daaa5e33246315a5bb234cc0644e62a99405dbb29e8e22af8",
+    "01_go_rules_and_independent_verifier.ipynb": "93f0269d4f9fcf62729fd7e3b3de6e9db1fa8ab7c150ab6e170e2b3a3378cebe",
+    "04_native_ahr_architecture.ipynb": "9c181b5e394b7f809acbaa5d208780f937f7b4b0ab93a041b462c0cd51fe7453",
+    "05_csp_qcsp_pretraining.ipynb": "35ea00b8b658b6897b4cd6d57a30ebb81cc0db9f7151d73aa8e54fa355266d77"
+  },
+  "final_lockbox_opened": false,
+  "full_game_optimality_claim": false,
+  "go_training": false,
+  "model_provenance": "untrained random initialization",
+  "source_sha256": "aa1ff50fd8d699e30104c4a4e872f3f7cc0be2b3fb57b459a7fdcc7ea5cbf149",
+  "status": "passed",
+  "strategic_status": "UNKNOWN",
+  "timing_contract": "cooperative; elapsed includes final independent audit",
+  "training_steps": 0,
+  "version": "ahr-go-energy-tree-v1"
+}

@@ -1,0 +1,135 @@
+{
+  "checked_at_utc": "2026-09-24T14:57:44.730152+00:00",
+  "configuration_sha256": "632dc0b99f66d7b41ae4df90f607c5a78d246be4cf59277776794be04df42e15",
+  "current_stage": "train-g01",
+  "executed_notebooks": {
+    "notebooks/09_selfplay_and_improvement.ipynb": {
+      "code_cells": 12,
+      "saved_execution_passed": true
+    },
+    "notebooks/10_gtp_engine_interface.ipynb": {
+      "code_cells": 9,
+      "saved_execution_passed": true
+    },
+    "notebooks/11_engine_arena_and_evaluation.ipynb": {
+      "code_cells": 7,
+      "saved_execution_passed": true
+    },
+    "notebooks/12_play_and_watch.ipynb": {
+      "code_cells": 7,
+      "saved_execution_passed": true
+    },
+    "reports/09_13_generation_stage_v2.ipynb": {
+      "code_cells": 2,
+      "saved_execution_passed": true
+    },
+    "reports/09_13_generations_launch.ipynb": {
+      "code_cells": 2,
+      "saved_execution_passed": true
+    },
+    "reports/09_13_generations_monitor.ipynb": {
+      "code_cells": 1,
+      "saved_execution_passed": true
+    },
+    "reports/09_13_generations_progress.ipynb": {
+      "code_cells": 2,
+      "saved_execution_passed": true
+    },
+    "reports/09_13_generations_v2.ipynb": {
+      "code_cells": 5,
+      "saved_execution_passed": true
+    },
+    "reports/09_13_v2_integration.ipynb": {
+      "code_cells": 2,
+      "saved_execution_passed": true
+    },
+    "reports/09_v2_profile_and_recovery.ipynb": {
+      "code_cells": 3,
+      "saved_execution_passed": true
+    },
+    "reports/09_v2_real_pilot.ipynb": {
+      "code_cells": 2,
+      "saved_execution_passed": true
+    },
+    "reports/10_v2_reference_and_latency.ipynb": {
+      "code_cells": 3,
+      "saved_execution_passed": true
+    },
+    "reports/11_v2_baseline_tactics.ipynb": {
+      "code_cells": 1,
+      "saved_execution_passed": true
+    },
+    "reports/11_v2_external_smoke.ipynb": {
+      "code_cells": 1,
+      "saved_execution_passed": true
+    },
+    "reports/11_v2_generation_api_validation.ipynb": {
+      "code_cells": 1,
+      "saved_execution_passed": true
+    },
+    "reports/12_v2_browser_review.ipynb": {
+      "code_cells": 1,
+      "saved_execution_passed": true
+    },
+    "reports/12_v2_complete_games.ipynb": {
+      "code_cells": 3,
+      "saved_execution_passed": true
+    },
+    "reports/12_v2_live_browser.ipynb": {
+      "code_cells": 1,
+      "saved_execution_passed": true
+    }
+  },
+  "experiment_completed": false,
+  "experiment_status": "RUNNING",
+  "external_benchmark_games_planned": 32,
+  "first_generation_progress": {
+    "completed_games": 2,
+    "games_finished": 2,
+    "optimizer_steps": 16,
+    "phase": "play",
+    "unknown_games": 0
+  },
+  "full_model_gpu_resume": "PASS",
+  "general_playing_strength": "NOT_ESTABLISHED",
+  "generations": 3,
+  "implementation_status": "VALIDATED_AND_LAUNCHED",
+  "live_browser_interaction_and_reload": "PASS",
+  "new_and_historical_local_restore": "PASS",
+  "off_instance_backup": "DEFERRED_BY_USER_PENDING_HUGGING_FACE_DESTINATION",
+  "preserved_historical_inputs": [
+    "notebooks/00_instance_setup_and_recovery.ipynb",
+    "notebooks/01_go_rules_and_independent_verifier.ipynb",
+    "notebooks/02_go_to_csp_and_qcsp.ipynb",
+    "notebooks/03_curricula_datasets_and_splits.ipynb",
+    "notebooks/04_native_ahr_architecture.ipynb",
+    "notebooks/05_csp_qcsp_pretraining.ipynb",
+    "notebooks/06_ahr_go_search_engine.ipynb",
+    "notebooks/07_csp_to_go_transfer_tests.ipynb",
+    "notebooks/08_go_specific_adaptation.ipynb",
+    "reports/09_first_selfplay_results.json",
+    "reports/11_first_candidate_evaluation_results.json",
+    "checkpoints/go09-first-selfplay-v1/manifest.json"
+  ],
+  "promotion_comparison_games_planned": 768,
+  "schema": "ahr_generations_v2",
+  "source_dependencies_match": true,
+  "stage_index": 1,
+  "temporary_browser_server_cleaned_up": true,
+  "tmux_session": "ahr-go-generations-v2",
+  "tmux_windows": [
+    "pipeline:0",
+    "progress:0",
+    "charts:0"
+  ],
+  "training_games_planned": 384,
+  "validation_receipts": [
+    "reports/09_v2_delivery_validation.json",
+    "reports/10_12_v2_delivery_validation.json",
+    "reports/11_arena_validation.json",
+    "reports/11_v2_generation_api_validation.json",
+    "reports/09_13_v2_integration.json",
+    "reports/09_13_generations_v2_validation.json",
+    "reports/12_v2_live_browser.json"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "checkpoint_cadence_checks": 4,
+  "corrupt_latest_fallback": "PASS",
+  "devices": [
+    {
+      "device": "cpu",
+      "exact_all_state_match": true,
+      "final_loss": 0.13596707582473755,
+      "final_step": 8,
+      "new_checkpointed_optimizer_steps": 5,
+      "resumed_from_step": 3,
+      "retained_checkpoints": 2
+    },
+    {
+      "device": "cuda:0",
+      "exact_all_state_match": true,
+      "final_loss": 0.1694212108850479,
+      "final_step": 8,
+      "new_checkpointed_optimizer_steps": 5,
+      "resumed_from_step": 3,
+      "retained_checkpoints": 2
+    },
+    {
+      "device": "cuda:1",
+      "exact_all_state_match": true,
+      "final_loss": 0.1694212108850479,
+      "final_step": 8,
+      "new_checkpointed_optimizer_steps": 5,
+      "resumed_from_step": 3,
+      "retained_checkpoints": 2
+    }
+  ],
+  "duplicate_writer_rejected": true,
+  "fresh_kernel_phases": 2,
+  "incomplete_state_rejected": true,
+  "interrupt_phase": [
+    {
+      "action": "interrupted_after_checkpoint",
+      "device": "cpu",
+      "saved_step": 3
+    },
+    {
+      "action": "interrupted_after_checkpoint",
+      "device": "cuda:0",
+      "saved_step": 3
+    },
+    {
+      "action": "interrupted_after_checkpoint",
+      "device": "cuda:1",
+      "saved_step": 3
+    }
+  ],
+  "missing_manifest_rejected": true,
+  "model_training": "NOT STARTED; synthetic recovery fixture only",
+  "persistent_volume_identified": true,
+  "status": "PASS"
+}

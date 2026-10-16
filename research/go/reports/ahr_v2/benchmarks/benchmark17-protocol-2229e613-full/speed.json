@@ -1,0 +1,153 @@
+{
+  "cold_starts": [
+    {
+      "at_probe_cursor": 0,
+      "device": "cpu",
+      "first_forward_seconds": 0.018634788983035833,
+      "model_transfer_seconds": 0.0054953619837760925,
+      "note": "Process startup measurement; subsequent probes use this warmed device model.",
+      "process_cuda_initialized_before": false
+    }
+  ],
+  "completed_probes": 3,
+  "deadline_note": "Soft search targets; observed medians/p95/max include replay, features, reading, search, and CUDA synchronization. Completed samples are retained exactly on restart; interrupted probes are rerun with new wall-clock measurements.",
+  "identity": {
+    "config": {
+      "batch_size": 2,
+      "board_size": 9,
+      "empty_board_baseline": true,
+      "komi": 7.5,
+      "max_opening_attempts": 128,
+      "opening_plies": 8,
+      "opening_temperature": 1.25,
+      "profiles": [
+        {
+          "games": 8,
+          "id": "gnugo10",
+          "kind": "gnugo",
+          "level": 10
+        }
+      ],
+      "run_id": "benchmark17-protocol-2229e613-full",
+      "seed": 2026100917,
+      "speed_devices": [
+        "cpu"
+      ],
+      "speed_max_simulations": 8,
+      "speed_move_seconds": [
+        null
+      ],
+      "speed_positions": 3,
+      "speed_reading_wall_time_seconds": null
+    },
+    "data": {
+      "plan_sha256": "aa9422de8a6e0b0071b43f97d7aaed2af7522c6b522dad346addd1ffafcf6689",
+      "timing_data": {
+        "positions_sha256": "64f6a1aaf53814718798f484710f349c043198621f39dddcf2f88ebd65b49a3f",
+        "rejected_incompatible_games": 0,
+        "source_commit": "4f579b0a21c456f3bb568174d384056351124cd5",
+        "test_payload_consumed": false,
+        "timing_positions_are_not_strength_trials": true
+      }
+    },
+    "model": {
+      "checkpoint_file": "playing_candidates/step-000008016-c19b207e.pt",
+      "checkpoint_sha256": "e7d1126c4ca962adb6eebcf5754341c4e6f1f3eb8396549e0fb8ee11e47fc1aa",
+      "model_identity": "0e8ba8c5405815f7499945d4b83f3020a2ecbedf403227e8d532260da5b1df71",
+      "run_id": "ahr-v2-teacher-20261008"
+    },
+    "sources": {
+      "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+      "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+      "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+      "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+      "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+      "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+      "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+      "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+      "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+      "experiments/ahr_v2/15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+      "experiments/ahr_v2/16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46",
+      "experiments/ahr_v2/17_strength_and_speed_benchmarks.ipynb": "c4c01826a61156e44dfabeec3fb869fc12b7cc2fbc97b4eddc4920a819a28c4e"
+    },
+    "stage": "speed-probes"
+  },
+  "planned_probes": 3,
+  "results": [
+    {
+      "action": 32,
+      "completed_simulations": 8,
+      "device": "cpu",
+      "elapsed_seconds": 0.07624527899315581,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": null,
+      "overrun_seconds": 0.0,
+      "ply": 8,
+      "position_id": "000521acefb8e68939cb7b35429050c21987905ba8eaf0e7a8b479993f6a7622-8",
+      "position_index": 0,
+      "reading_nodes": 0,
+      "search_status": "COMPLETE",
+      "stage": "opening",
+      "status": "MEASURED"
+    },
+    {
+      "action": 78,
+      "completed_simulations": 8,
+      "device": "cpu",
+      "elapsed_seconds": 0.17746456601889804,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": null,
+      "overrun_seconds": 0.0,
+      "ply": 31,
+      "position_id": "000521acefb8e68939cb7b35429050c21987905ba8eaf0e7a8b479993f6a7622-31",
+      "position_index": 1,
+      "reading_nodes": 48,
+      "search_status": "COMPLETE",
+      "stage": "middle",
+      "status": "MEASURED"
+    },
+    {
+      "action": 55,
+      "completed_simulations": 8,
+      "device": "cpu",
+      "elapsed_seconds": 0.07315758598269895,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": null,
+      "overrun_seconds": 0.0,
+      "ply": 59,
+      "position_id": "000521acefb8e68939cb7b35429050c21987905ba8eaf0e7a8b479993f6a7622-59",
+      "position_index": 2,
+      "reading_nodes": 0,
+      "search_status": "COMPLETE",
+      "stage": "late",
+      "status": "MEASURED"
+    }
+  ],
+  "run_id": "benchmark17-protocol-2229e613-full",
+  "schema": "ahr-v2-benchmark-speed-v1",
+  "status": "COMPLETE",
+  "summary": [
+    {
+      "device": "cpu",
+      "errors": 0,
+      "max_overrun_seconds": 0.0,
+      "max_seconds": 0.17746456601889804,
+      "max_visits": 8,
+      "measured": 3,
+      "median_seconds": 0.07624527899315581,
+      "median_visits": 8.0,
+      "min_visits": 8,
+      "move_seconds": null,
+      "overruns": 0,
+      "p95_seconds": 0.16734263731632382
+    }
+  ],
+  "timing_data": {
+    "positions_sha256": "64f6a1aaf53814718798f484710f349c043198621f39dddcf2f88ebd65b49a3f",
+    "rejected_incompatible_games": 0,
+    "source_commit": "4f579b0a21c456f3bb568174d384056351124cd5",
+    "test_payload_consumed": false,
+    "timing_positions_are_not_strength_trials": true
+  },
+  "updated_at_utc": "2026-10-09T16:02:16.177388+00:00"
+}

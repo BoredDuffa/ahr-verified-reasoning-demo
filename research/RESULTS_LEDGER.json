@@ -1,0 +1,172 @@
+{
+  "schema": "ahr-results-ledger/v1",
+  "snapshot_date": "2026-10-16",
+  "checks": [
+    {
+      "claim": "Ranker parameter count",
+      "source": "research/legacy/reports/ahr_multifamily_5m_ranker_v0_report_20260616.json",
+      "json_pointer": "/parameter_count",
+      "value": 4998161,
+      "scope": "Recorded ranker, not JavaScript demo or ARC architecture."
+    },
+    {
+      "claim": "Ranker test correct",
+      "source": "research/legacy/reports/ahr_multifamily_5m_ranker_v0_report_20260616.json",
+      "json_pointer": "/splits/test/correct",
+      "value": 340,
+      "scope": "Specified generated bounded suite; accepted-answer validity is conditional on exact execution/checking."
+    },
+    {
+      "claim": "Ranker test abstained",
+      "source": "research/legacy/reports/ahr_multifamily_5m_ranker_v0_report_20260616.json",
+      "json_pointer": "/splits/test/abstained",
+      "value": 20,
+      "scope": "Specified generated bounded suite; accepted-answer validity is conditional on exact execution/checking."
+    },
+    {
+      "claim": "Ranker test total",
+      "source": "research/legacy/reports/ahr_multifamily_5m_ranker_v0_report_20260616.json",
+      "json_pointer": "/splits/test/total",
+      "value": 360,
+      "scope": "Specified generated bounded suite; accepted-answer validity is conditional on exact execution/checking."
+    },
+    {
+      "claim": "Ranker test wrong",
+      "source": "research/legacy/reports/ahr_multifamily_5m_ranker_v0_report_20260616.json",
+      "json_pointer": "/splits/test/wrong",
+      "value": 0,
+      "scope": "Specified generated bounded suite; accepted-answer validity is conditional on exact execution/checking."
+    },
+    {
+      "claim": "Go JEPA v3 wins",
+      "source": "research/go/reports/ahr_jepa_v3/family_summary.json",
+      "json_pointer": "/aggregate/wins",
+      "value": 294,
+      "scope": "Primary C versus B, three training seeds; not wins against KataGo; family incomplete."
+    },
+    {
+      "claim": "Go JEPA v3 losses",
+      "source": "research/go/reports/ahr_jepa_v3/family_summary.json",
+      "json_pointer": "/aggregate/losses",
+      "value": 473,
+      "scope": "Primary C versus B, three training seeds; not wins against KataGo; family incomplete."
+    },
+    {
+      "claim": "Go JEPA v3 unknown_games",
+      "source": "research/go/reports/ahr_jepa_v3/family_summary.json",
+      "json_pointer": "/aggregate/unknown_games",
+      "value": 1,
+      "scope": "Primary C versus B, three training seeds; not wins against KataGo; family incomplete."
+    },
+    {
+      "claim": "Go JEPA v3 planned_games",
+      "source": "research/go/reports/ahr_jepa_v3/family_summary.json",
+      "json_pointer": "/aggregate/planned_games",
+      "value": 768,
+      "scope": "Primary C versus B, three training seeds; not wins against KataGo; family incomplete."
+    },
+    {
+      "claim": "Economic Go screen base wins",
+      "source": "research/go/reports/ahr_v2/ahr-v2-katago-econ-20261011-v1/results.json",
+      "json_pointer": "/results/economic_screen/candidates/base/summary/WIN",
+      "value": 5,
+      "scope": "Forty shared development games per arm against KataGo one visit; descriptive only."
+    },
+    {
+      "claim": "Economic Go screen control wins",
+      "source": "research/go/reports/ahr_v2/ahr-v2-katago-econ-20261011-v1/results.json",
+      "json_pointer": "/results/economic_screen/candidates/control/summary/WIN",
+      "value": 2,
+      "scope": "Forty shared development games per arm against KataGo one visit; descriptive only."
+    },
+    {
+      "claim": "Economic Go screen economics wins",
+      "source": "research/go/reports/ahr_v2/ahr-v2-katago-econ-20261011-v1/results.json",
+      "json_pointer": "/results/economic_screen/candidates/economics/summary/WIN",
+      "value": 4,
+      "scope": "Forty shared development games per arm against KataGo one visit; descriptive only."
+    },
+    {
+      "claim": "Selected screen model",
+      "source": "research/go/reports/ahr_v2/ahr-v2-katago-econ-20261011-v1/results.json",
+      "json_pointer": "/results/economic_screen/selected",
+      "value": "base",
+      "scope": "Confirmation concerns the base, not the economics arm."
+    },
+    {
+      "claim": "Selected base confirmation WIN",
+      "source": "research/go/reports/katago_confirmation_summary.json",
+      "json_pointer": "/summary/WIN",
+      "value": 3,
+      "scope": "9x9, komi 7.5, pinned KataGo one visit; 2-second soft AHR budget, recorded overruns."
+    },
+    {
+      "claim": "Selected base confirmation LOSS",
+      "source": "research/go/reports/katago_confirmation_summary.json",
+      "json_pointer": "/summary/LOSS",
+      "value": 97,
+      "scope": "9x9, komi 7.5, pinned KataGo one visit; 2-second soft AHR budget, recorded overruns."
+    },
+    {
+      "claim": "Selected base confirmation UNKNOWN",
+      "source": "research/go/reports/katago_confirmation_summary.json",
+      "json_pointer": "/summary/UNKNOWN",
+      "value": 0,
+      "scope": "9x9, komi 7.5, pinned KataGo one visit; 2-second soft AHR budget, recorded overruns."
+    },
+    {
+      "claim": "Selected base confirmation completed",
+      "source": "research/go/reports/katago_confirmation_summary.json",
+      "json_pointer": "/summary/completed",
+      "value": 100,
+      "scope": "9x9, komi 7.5, pinned KataGo one visit; 2-second soft AHR budget, recorded overruns."
+    },
+    {
+      "claim": "Go candidate promotion",
+      "source": "research/go/reports/ahr_v2/ahr-v2-katago-econ-20261011-v1-eval-recovery-v1/results.json",
+      "json_pointer": "/results/promotion_and_report/decision",
+      "value": "KEEP_CHAMPION",
+      "scope": "KataGo win threshold not reached; stronger gates skipped."
+    },
+    {
+      "claim": "Latest Go collection state",
+      "source": "research/go/reports/ahr_v2/ahr-v2-k21-20261016-gpu0-v1/status.json",
+      "json_pointer": "/status",
+      "value": "ERROR",
+      "scope": "Historical snapshot at 16 October 16:56:56 UTC: optimizer refused below minimum fresh rows."
+    },
+    {
+      "claim": "Native v5 readiness",
+      "source": "research/go/reports/ahr_native_v5/completion.json",
+      "json_pointer": "/final_readiness",
+      "value": "FAIL",
+      "scope": "Budget-complete curriculum run, not a successful final Go evaluation."
+    },
+    {
+      "claim": "Related FMM pilot status",
+      "source": "research/related/fmm-jepa/artifacts/notebook_19/compute-gate-002/result.json",
+      "json_pointer": "/status",
+      "value": "COMPLETE",
+      "scope": "Two-seed development pilot; no complete favorable signal or statistical superiority."
+    },
+    {
+      "claim": "Related FMM follow-up status",
+      "source": "research/related/fmm-jepa/artifacts/notebook_20/multiday-confirmation-001/study_status.json",
+      "json_pointer": "/status",
+      "value": "RUNNING",
+      "scope": "Snapshot only; not a completed confirmation."
+    }
+  ],
+  "report_only": [
+    {
+      "claim": "Lean v2.0 top-1 270/270",
+      "source": "papers/Lean_AHR_v2_0_Report.pdf",
+      "status": "historical report, not fresh recompilation"
+    },
+    {
+      "claim": "ARC 16 draft notebooks",
+      "source": "research/arc-agi-3/DELIVERY_MANIFEST.json",
+      "status": "static delivery, no official score"
+    }
+  ]
+}

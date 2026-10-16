@@ -1,0 +1,2035 @@
+{
+  "active_seconds": 603.8761125938618,
+  "arm": "control",
+  "base_run_id": "ahr-k19-20261011-challenger",
+  "buffer_id": "ahr-v2-katago-econ-20261011-v1-buffer",
+  "economic_credit_is_separate_from_worker": true,
+  "metrics": {
+    "best_development_loss": 2.342193365097046,
+    "credit_rows": 64000,
+    "development_history": [
+      {
+        "components": {
+          "economic_credit": 0.0,
+          "game_outcome": 0.40834060311317444,
+          "ownership": 0.4906490445137024,
+          "policy": 1.7368080615997314,
+          "score": 0.00804451759904623,
+          "teacher_value": 0.2745303809642792
+        },
+        "joint_loss": 2.342193365097046,
+        "observed_brier": 0.25855883955955505,
+        "observed_rows": 2756,
+        "optimizer_step": 0,
+        "teacher_value_mse": 0.17850139737129211
+      },
+      {
+        "components": {
+          "economic_credit": 0.0,
+          "game_outcome": 0.41999030113220215,
+          "ownership": 0.49498945474624634,
+          "policy": 1.7511521577835083,
+          "score": 0.01094147376716137,
+          "teacher_value": 0.32362449169158936
+        },
+        "joint_loss": 2.413990020751953,
+        "observed_brier": 0.2778933048248291,
+        "observed_rows": 2756,
+        "optimizer_step": 250,
+        "teacher_value_mse": 0.2561139762401581
+      },
+      {
+        "components": {
+          "economic_credit": 0.0,
+          "game_outcome": 0.39964917302131653,
+          "ownership": 0.4933896064758301,
+          "policy": 1.7559056282043457,
+          "score": 0.008732074871659279,
+          "teacher_value": 0.30988752841949463
+        },
+        "joint_loss": 2.3933310508728027,
+        "observed_brier": 0.2629012167453766,
+        "observed_rows": 2756,
+        "optimizer_step": 500,
+        "teacher_value_mse": 0.23533101379871368
+      },
+      {
+        "components": {
+          "economic_credit": 0.0,
+          "game_outcome": 0.3973841369152069,
+          "ownership": 0.493188738822937,
+          "policy": 1.748273491859436,
+          "score": 0.008426244370639324,
+          "teacher_value": 0.30787885189056396
+        },
+        "joint_loss": 2.382354736328125,
+        "observed_brier": 0.2605069875717163,
+        "observed_rows": 2756,
+        "optimizer_step": 750,
+        "teacher_value_mse": 0.23094666004180908
+      },
+      {
+        "components": {
+          "economic_credit": 0.0,
+          "game_outcome": 0.40602055191993713,
+          "ownership": 0.49395158886909485,
+          "policy": 1.748056173324585,
+          "score": 0.00848380010575056,
+          "teacher_value": 0.31243422627449036
+        },
+        "joint_loss": 2.391230583190918,
+        "observed_brier": 0.2688768804073334,
+        "observed_rows": 2756,
+        "optimizer_step": 1000,
+        "teacher_value_mse": 0.24000254273414612
+      }
+    ],
+    "last_development": {
+      "components": {
+        "economic_credit": 0.0,
+        "game_outcome": 0.40602055191993713,
+        "ownership": 0.49395158886909485,
+        "policy": 1.748056173324585,
+        "score": 0.00848380010575056,
+        "teacher_value": 0.31243422627449036
+      },
+      "joint_loss": 2.391230583190918,
+      "observed_brier": 0.2688768804073334,
+      "observed_rows": 2756,
+      "optimizer_step": 1000,
+      "teacher_value_mse": 0.24000254273414612
+    },
+    "last_loss": 1.997467279434204,
+    "observed_outcome_rows": 184547,
+    "recent_losses": [
+      {
+        "components": {
+          "economic_credit": 1.1294910907745361,
+          "game_outcome": 0.20835505425930023,
+          "ownership": 0.4139373004436493,
+          "policy": 1.5703246593475342,
+          "score": 0.013621598482131958,
+          "teacher_value": 0.17924341559410095
+        },
+        "credit_rows": 64,
+        "loss": 1.9640406370162964,
+        "observed_outcome_rows": 175,
+        "optimizer_step": 873,
+        "row_weight_mean": 1.2000489234924316
+      },
+      {
+        "components": {
+          "economic_credit": 1.8276658058166504,
+          "game_outcome": 0.2715368866920471,
+          "ownership": 0.42355120182037354,
+          "policy": 1.5129152536392212,
+          "score": 0.008030365221202374,
+          "teacher_value": 0.191584512591362
+        },
+        "credit_rows": 64,
+        "loss": 1.9501711130142212,
+        "observed_outcome_rows": 179,
+        "optimizer_step": 874,
+        "row_weight_mean": 1.1993945837020874
+      },
+      {
+        "components": {
+          "economic_credit": 1.6498832702636719,
+          "game_outcome": 0.23286253213882446,
+          "ownership": 0.35402411222457886,
+          "policy": 1.6345354318618774,
+          "score": 0.009722151793539524,
+          "teacher_value": 0.1982038915157318
+        },
+        "credit_rows": 64,
+        "loss": 2.0425376892089844,
+        "observed_outcome_rows": 181,
+        "optimizer_step": 875,
+        "row_weight_mean": 1.1955077648162842
+      },
+      {
+        "components": {
+          "economic_credit": 2.05971622467041,
+          "game_outcome": 0.2649206519126892,
+          "ownership": 0.38783177733421326,
+          "policy": 1.5299677848815918,
+          "score": 0.018547816202044487,
+          "teacher_value": 0.2174956351518631
+        },
+        "credit_rows": 64,
+        "loss": 1.98615562915802,
+        "observed_outcome_rows": 196,
+        "optimizer_step": 876,
+        "row_weight_mean": 1.2059472799301147
+      },
+      {
+        "components": {
+          "economic_credit": 1.6402506828308105,
+          "game_outcome": 0.25289037823677063,
+          "ownership": 0.38788333535194397,
+          "policy": 1.649001121520996,
+          "score": 0.010789801366627216,
+          "teacher_value": 0.19590488076210022
+        },
+        "credit_rows": 64,
+        "loss": 2.073716878890991,
+        "observed_outcome_rows": 198,
+        "optimizer_step": 877,
+        "row_weight_mean": 1.180087924003601
+      },
+      {
+        "components": {
+          "economic_credit": 1.70091712474823,
+          "game_outcome": 0.18803060054779053,
+          "ownership": 0.41114696860313416,
+          "policy": 1.6061830520629883,
+          "score": 0.009787416085600853,
+          "teacher_value": 0.173214390873909
+        },
+        "credit_rows": 64,
+        "loss": 1.9810932874679565,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 878,
+        "row_weight_mean": 1.2119922637939453
+      },
+      {
+        "components": {
+          "economic_credit": 2.1355481147766113,
+          "game_outcome": 0.2793236970901489,
+          "ownership": 0.3842976987361908,
+          "policy": 1.5299845933914185,
+          "score": 0.010266726836562157,
+          "teacher_value": 0.20294368267059326
+        },
+        "credit_rows": 64,
+        "loss": 1.9737979173660278,
+        "observed_outcome_rows": 192,
+        "optimizer_step": 879,
+        "row_weight_mean": 1.181767463684082
+      },
+      {
+        "components": {
+          "economic_credit": 2.173124313354492,
+          "game_outcome": 0.30581435561180115,
+          "ownership": 0.4244290292263031,
+          "policy": 1.54949951171875,
+          "score": 0.016876760870218277,
+          "teacher_value": 0.20824772119522095
+        },
+        "credit_rows": 64,
+        "loss": 2.0251998901367188,
+        "observed_outcome_rows": 183,
+        "optimizer_step": 880,
+        "row_weight_mean": 1.2118749618530273
+      },
+      {
+        "components": {
+          "economic_credit": 1.3298873901367188,
+          "game_outcome": 0.22038020193576813,
+          "ownership": 0.3337046205997467,
+          "policy": 1.6500754356384277,
+          "score": 0.011374182067811489,
+          "teacher_value": 0.1727161705493927
+        },
+        "credit_rows": 64,
+        "loss": 2.022094964981079,
+        "observed_outcome_rows": 184,
+        "optimizer_step": 881,
+        "row_weight_mean": 1.2137694358825684
+      },
+      {
+        "components": {
+          "economic_credit": 1.4929425716400146,
+          "game_outcome": 0.23662567138671875,
+          "ownership": 0.37571415305137634,
+          "policy": 1.4917672872543335,
+          "score": 0.014567981474101543,
+          "teacher_value": 0.1692131757736206
+        },
+        "credit_rows": 64,
+        "loss": 1.880505919456482,
+        "observed_outcome_rows": 182,
+        "optimizer_step": 882,
+        "row_weight_mean": 1.205996036529541
+      },
+      {
+        "components": {
+          "economic_credit": 1.4922313690185547,
+          "game_outcome": 0.2717651426792145,
+          "ownership": 0.35102662444114685,
+          "policy": 1.5882477760314941,
+          "score": 0.010953666642308235,
+          "teacher_value": 0.1668359339237213
+        },
+        "credit_rows": 64,
+        "loss": 1.9841997623443604,
+        "observed_outcome_rows": 181,
+        "optimizer_step": 883,
+        "row_weight_mean": 1.2013769149780273
+      },
+      {
+        "components": {
+          "economic_credit": 1.9177557229995728,
+          "game_outcome": 0.29470524191856384,
+          "ownership": 0.38636037707328796,
+          "policy": 1.5087933540344238,
+          "score": 0.008000671863555908,
+          "teacher_value": 0.1921471506357193
+        },
+        "credit_rows": 64,
+        "loss": 1.9488834142684937,
+        "observed_outcome_rows": 177,
+        "optimizer_step": 884,
+        "row_weight_mean": 1.224755883216858
+      },
+      {
+        "components": {
+          "economic_credit": 1.4860103130340576,
+          "game_outcome": 0.31963208317756653,
+          "ownership": 0.41557422280311584,
+          "policy": 1.5707117319107056,
+          "score": 0.01688360422849655,
+          "teacher_value": 0.17931842803955078
+        },
+        "credit_rows": 64,
+        "loss": 2.022181510925293,
+        "observed_outcome_rows": 182,
+        "optimizer_step": 885,
+        "row_weight_mean": 1.208066463470459
+      },
+      {
+        "components": {
+          "economic_credit": 1.1633784770965576,
+          "game_outcome": 0.24150781333446503,
+          "ownership": 0.36767277121543884,
+          "policy": 1.5632236003875732,
+          "score": 0.008839298970997334,
+          "teacher_value": 0.1800934374332428
+        },
+        "credit_rows": 64,
+        "loss": 1.9604088068008423,
+        "observed_outcome_rows": 182,
+        "optimizer_step": 886,
+        "row_weight_mean": 1.2006542682647705
+      },
+      {
+        "components": {
+          "economic_credit": 1.7555588483810425,
+          "game_outcome": 0.1870827078819275,
+          "ownership": 0.32132264971733093,
+          "policy": 1.5883206129074097,
+          "score": 0.005108299199491739,
+          "teacher_value": 0.15652351081371307
+        },
+        "credit_rows": 64,
+        "loss": 1.9212702512741089,
+        "observed_outcome_rows": 181,
+        "optimizer_step": 887,
+        "row_weight_mean": 1.2147363424301147
+      },
+      {
+        "components": {
+          "economic_credit": 2.1489720344543457,
+          "game_outcome": 0.2222454696893692,
+          "ownership": 0.405314177274704,
+          "policy": 1.5124768018722534,
+          "score": 0.020548516884446144,
+          "teacher_value": 0.19905507564544678
+        },
+        "credit_rows": 64,
+        "loss": 1.9342573881149292,
+        "observed_outcome_rows": 177,
+        "optimizer_step": 888,
+        "row_weight_mean": 1.2019628286361694
+      },
+      {
+        "components": {
+          "economic_credit": 2.3428404331207275,
+          "game_outcome": 0.30990809202194214,
+          "ownership": 0.4095379710197449,
+          "policy": 1.5737342834472656,
+          "score": 0.009946346282958984,
+          "teacher_value": 0.1834690272808075
+        },
+        "credit_rows": 64,
+        "loss": 2.019515037536621,
+        "observed_outcome_rows": 176,
+        "optimizer_step": 889,
+        "row_weight_mean": 1.1891601085662842
+      },
+      {
+        "components": {
+          "economic_credit": 1.1539630889892578,
+          "game_outcome": 0.3166202902793884,
+          "ownership": 0.39460188150405884,
+          "policy": 1.4840937852859497,
+          "score": 0.015107055194675922,
+          "teacher_value": 0.22776062786579132
+        },
+        "credit_rows": 64,
+        "loss": 1.9763686656951904,
+        "observed_outcome_rows": 191,
+        "optimizer_step": 890,
+        "row_weight_mean": 1.2246778011322021
+      },
+      {
+        "components": {
+          "economic_credit": 1.8364206552505493,
+          "game_outcome": 0.2130463570356369,
+          "ownership": 0.40067824721336365,
+          "policy": 1.61266028881073,
+          "score": 0.014543706551194191,
+          "teacher_value": 0.2004406750202179
+        },
+        "credit_rows": 64,
+        "loss": 2.0270655155181885,
+        "observed_outcome_rows": 183,
+        "optimizer_step": 891,
+        "row_weight_mean": 1.1931445598602295
+      },
+      {
+        "components": {
+          "economic_credit": 2.134108543395996,
+          "game_outcome": 0.2714928090572357,
+          "ownership": 0.44869062304496765,
+          "policy": 1.7085378170013428,
+          "score": 0.01786627247929573,
+          "teacher_value": 0.19354590773582458
+        },
+        "credit_rows": 64,
+        "loss": 2.158935785293579,
+        "observed_outcome_rows": 184,
+        "optimizer_step": 892,
+        "row_weight_mean": 1.1958593130111694
+      },
+      {
+        "components": {
+          "economic_credit": 1.5524193048477173,
+          "game_outcome": 0.2582559287548065,
+          "ownership": 0.37398797273635864,
+          "policy": 1.452617883682251,
+          "score": 0.01186106912791729,
+          "teacher_value": 0.21782420575618744
+        },
+        "credit_rows": 64,
+        "loss": 1.8989976644515991,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 893,
+        "row_weight_mean": 1.2167088985443115
+      },
+      {
+        "components": {
+          "economic_credit": 1.6255402565002441,
+          "game_outcome": 0.2501656413078308,
+          "ownership": 0.412964403629303,
+          "policy": 1.5689480304718018,
+          "score": 0.012486585415899754,
+          "teacher_value": 0.20458310842514038
+        },
+        "credit_rows": 64,
+        "loss": 2.008098602294922,
+        "observed_outcome_rows": 190,
+        "optimizer_step": 894,
+        "row_weight_mean": 1.19482421875
+      },
+      {
+        "components": {
+          "economic_credit": 1.6932727098464966,
+          "game_outcome": 0.32523274421691895,
+          "ownership": 0.3809342384338379,
+          "policy": 1.6259253025054932,
+          "score": 0.013471453450620174,
+          "teacher_value": 0.17479926347732544
+        },
+        "credit_rows": 64,
+        "loss": 2.065310001373291,
+        "observed_outcome_rows": 173,
+        "optimizer_step": 895,
+        "row_weight_mean": 1.1831152439117432
+      },
+      {
+        "components": {
+          "economic_credit": 1.6033068895339966,
+          "game_outcome": 0.26898840069770813,
+          "ownership": 0.3781416118144989,
+          "policy": 1.5817352533340454,
+          "score": 0.013114148750901222,
+          "teacher_value": 0.2211070954799652
+        },
+        "credit_rows": 64,
+        "loss": 2.038429021835327,
+        "observed_outcome_rows": 181,
+        "optimizer_step": 896,
+        "row_weight_mean": 1.206699252128601
+      },
+      {
+        "components": {
+          "economic_credit": 1.6518783569335938,
+          "game_outcome": 0.2492348998785019,
+          "ownership": 0.3963256776332855,
+          "policy": 1.5368701219558716,
+          "score": 0.010242448188364506,
+          "teacher_value": 0.22155404090881348
+        },
+        "credit_rows": 64,
+        "loss": 1.9872442483901978,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 897,
+        "row_weight_mean": 1.228369116783142
+      },
+      {
+        "components": {
+          "economic_credit": 1.1114438772201538,
+          "game_outcome": 0.24094396829605103,
+          "ownership": 0.3756934106349945,
+          "policy": 1.6088582277297974,
+          "score": 0.011584141291677952,
+          "teacher_value": 0.21967813372612
+        },
+        "credit_rows": 64,
+        "loss": 2.0487236976623535,
+        "observed_outcome_rows": 179,
+        "optimizer_step": 898,
+        "row_weight_mean": 1.2093456983566284
+      },
+      {
+        "components": {
+          "economic_credit": 1.557008981704712,
+          "game_outcome": 0.2885550558567047,
+          "ownership": 0.38084113597869873,
+          "policy": 1.5932801961898804,
+          "score": 0.009894144721329212,
+          "teacher_value": 0.1608150154352188
+        },
+        "credit_rows": 64,
+        "loss": 1.9985301494598389,
+        "observed_outcome_rows": 172,
+        "optimizer_step": 899,
+        "row_weight_mean": 1.1925195455551147
+      },
+      {
+        "components": {
+          "economic_credit": 1.4035179615020752,
+          "game_outcome": 0.23440052568912506,
+          "ownership": 0.39520981907844543,
+          "policy": 1.5320805311203003,
+          "score": 0.01809840276837349,
+          "teacher_value": 0.20000848174095154
+        },
+        "credit_rows": 64,
+        "loss": 1.9571409225463867,
+        "observed_outcome_rows": 180,
+        "optimizer_step": 900,
+        "row_weight_mean": 1.1966016292572021
+      },
+      {
+        "components": {
+          "economic_credit": 1.7085330486297607,
+          "game_outcome": 0.2672254741191864,
+          "ownership": 0.4319709539413452,
+          "policy": 1.608925700187683,
+          "score": 0.015213149599730968,
+          "teacher_value": 0.2153552621603012
+        },
+        "credit_rows": 64,
+        "loss": 2.073493003845215,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 901,
+        "row_weight_mean": 1.2082324028015137
+      },
+      {
+        "components": {
+          "economic_credit": 1.2832415103912354,
+          "game_outcome": 0.272249698638916,
+          "ownership": 0.42663905024528503,
+          "policy": 1.5489556789398193,
+          "score": 0.011208740994334221,
+          "teacher_value": 0.21256649494171143
+        },
+        "credit_rows": 64,
+        "loss": 2.009911060333252,
+        "observed_outcome_rows": 180,
+        "optimizer_step": 902,
+        "row_weight_mean": 1.2080957889556885
+      },
+      {
+        "components": {
+          "economic_credit": 1.395974040031433,
+          "game_outcome": 0.20539899170398712,
+          "ownership": 0.37537339329719543,
+          "policy": 1.5924822092056274,
+          "score": 0.009369711391627789,
+          "teacher_value": 0.1881439983844757
+        },
+        "credit_rows": 64,
+        "loss": 1.9818538427352905,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 903,
+        "row_weight_mean": 1.1996288299560547
+      },
+      {
+        "components": {
+          "economic_credit": 1.4450621604919434,
+          "game_outcome": 0.2040860801935196,
+          "ownership": 0.36562198400497437,
+          "policy": 1.6327911615371704,
+          "score": 0.006839662790298462,
+          "teacher_value": 0.191855788230896
+        },
+        "credit_rows": 64,
+        "loss": 2.021515369415283,
+        "observed_outcome_rows": 182,
+        "optimizer_step": 904,
+        "row_weight_mean": 1.1885058879852295
+      },
+      {
+        "components": {
+          "economic_credit": 1.4812982082366943,
+          "game_outcome": 0.25672855973243713,
+          "ownership": 0.35667482018470764,
+          "policy": 1.5938745737075806,
+          "score": 0.014330169185996056,
+          "teacher_value": 0.19360674917697906
+        },
+        "credit_rows": 64,
+        "loss": 2.012179374694824,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 905,
+        "row_weight_mean": 1.2094628810882568
+      },
+      {
+        "components": {
+          "economic_credit": 1.612632155418396,
+          "game_outcome": 0.2541170120239258,
+          "ownership": 0.3992559015750885,
+          "policy": 1.5733389854431152,
+          "score": 0.008550682105123997,
+          "teacher_value": 0.18999290466308594
+        },
+        "credit_rows": 64,
+        "loss": 1.9944796562194824,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 906,
+        "row_weight_mean": 1.2054882049560547
+      },
+      {
+        "components": {
+          "economic_credit": 1.9642550945281982,
+          "game_outcome": 0.24085968732833862,
+          "ownership": 0.40013808012008667,
+          "policy": 1.5059155225753784,
+          "score": 0.01545439101755619,
+          "teacher_value": 0.17748737335205078
+        },
+        "credit_rows": 64,
+        "loss": 1.9115943908691406,
+        "observed_outcome_rows": 190,
+        "optimizer_step": 907,
+        "row_weight_mean": 1.2133300304412842
+      },
+      {
+        "components": {
+          "economic_credit": 1.680355191230774,
+          "game_outcome": 0.21133852005004883,
+          "ownership": 0.3397391438484192,
+          "policy": 1.5442734956741333,
+          "score": 0.00849267840385437,
+          "teacher_value": 0.16459718346595764
+        },
+        "credit_rows": 64,
+        "loss": 1.9037210941314697,
+        "observed_outcome_rows": 176,
+        "optimizer_step": 908,
+        "row_weight_mean": 1.1922558546066284
+      },
+      {
+        "components": {
+          "economic_credit": 1.1572855710983276,
+          "game_outcome": 0.23967109620571136,
+          "ownership": 0.3737556040287018,
+          "policy": 1.563320517539978,
+          "score": 0.016240624710917473,
+          "teacher_value": 0.22492782771587372
+        },
+        "credit_rows": 64,
+        "loss": 2.009643077850342,
+        "observed_outcome_rows": 187,
+        "optimizer_step": 909,
+        "row_weight_mean": 1.2043945789337158
+      },
+      {
+        "components": {
+          "economic_credit": 1.4354068040847778,
+          "game_outcome": 0.2424549013376236,
+          "ownership": 0.3665631115436554,
+          "policy": 1.5810317993164062,
+          "score": 0.011830815114080906,
+          "teacher_value": 0.17431117594242096
+        },
+        "credit_rows": 64,
+        "loss": 1.9741266965866089,
+        "observed_outcome_rows": 187,
+        "optimizer_step": 910,
+        "row_weight_mean": 1.1983202695846558
+      },
+      {
+        "components": {
+          "economic_credit": 1.8938124179840088,
+          "game_outcome": 0.2601782977581024,
+          "ownership": 0.4218462407588959,
+          "policy": 1.5243276357650757,
+          "score": 0.011685066856443882,
+          "teacher_value": 0.20909279584884644
+        },
+        "credit_rows": 64,
+        "loss": 1.97481369972229,
+        "observed_outcome_rows": 181,
+        "optimizer_step": 911,
+        "row_weight_mean": 1.2367479801177979
+      },
+      {
+        "components": {
+          "economic_credit": 1.7927212715148926,
+          "game_outcome": 0.22037626802921295,
+          "ownership": 0.39010027050971985,
+          "policy": 1.4691978693008423,
+          "score": 0.012923951260745525,
+          "teacher_value": 0.1720498502254486
+        },
+        "credit_rows": 64,
+        "loss": 1.8554229736328125,
+        "observed_outcome_rows": 182,
+        "optimizer_step": 912,
+        "row_weight_mean": 1.2091894149780273
+      },
+      {
+        "components": {
+          "economic_credit": 0.9467427134513855,
+          "game_outcome": 0.2828293740749359,
+          "ownership": 0.4439445734024048,
+          "policy": 1.527902364730835,
+          "score": 0.011776569299399853,
+          "teacher_value": 0.19518479704856873
+        },
+        "credit_rows": 64,
+        "loss": 1.98137629032135,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 913,
+        "row_weight_mean": 1.2032713890075684
+      },
+      {
+        "components": {
+          "economic_credit": 1.752787709236145,
+          "game_outcome": 0.24083556234836578,
+          "ownership": 0.3573038876056671,
+          "policy": 1.5932122468948364,
+          "score": 0.011279620230197906,
+          "teacher_value": 0.1775437593460083
+        },
+        "credit_rows": 64,
+        "loss": 1.9861396551132202,
+        "observed_outcome_rows": 183,
+        "optimizer_step": 914,
+        "row_weight_mean": 1.2013866901397705
+      },
+      {
+        "components": {
+          "economic_credit": 1.541821002960205,
+          "game_outcome": 0.25614023208618164,
+          "ownership": 0.3912281394004822,
+          "policy": 1.5498449802398682,
+          "score": 0.011427285149693489,
+          "teacher_value": 0.21417942643165588
+        },
+        "credit_rows": 64,
+        "loss": 1.9956152439117432,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 915,
+        "row_weight_mean": 1.2125293016433716
+      },
+      {
+        "components": {
+          "economic_credit": 2.2923226356506348,
+          "game_outcome": 0.3413334786891937,
+          "ownership": 0.4648962914943695,
+          "policy": 1.4261287450790405,
+          "score": 0.016106193885207176,
+          "teacher_value": 0.2220885455608368
+        },
+        "credit_rows": 64,
+        "loss": 1.943161129951477,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 916,
+        "row_weight_mean": 1.2169629335403442
+      },
+      {
+        "components": {
+          "economic_credit": 1.8118269443511963,
+          "game_outcome": 0.2878052294254303,
+          "ownership": 0.39289456605911255,
+          "policy": 1.5216288566589355,
+          "score": 0.009891039691865444,
+          "teacher_value": 0.17977795004844666
+        },
+        "credit_rows": 64,
+        "loss": 1.9484786987304688,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 917,
+        "row_weight_mean": 1.2128710746765137
+      },
+      {
+        "components": {
+          "economic_credit": 1.8297805786132812,
+          "game_outcome": 0.2155778706073761,
+          "ownership": 0.34321480989456177,
+          "policy": 1.6402215957641602,
+          "score": 0.014286445453763008,
+          "teacher_value": 0.2009076178073883
+        },
+        "credit_rows": 64,
+        "loss": 2.041865110397339,
+        "observed_outcome_rows": 175,
+        "optimizer_step": 918,
+        "row_weight_mean": 1.2026660442352295
+      },
+      {
+        "components": {
+          "economic_credit": 1.3022894859313965,
+          "game_outcome": 0.22403736412525177,
+          "ownership": 0.37089651823043823,
+          "policy": 1.5625348091125488,
+          "score": 0.013763077557086945,
+          "teacher_value": 0.17242293059825897
+        },
+        "credit_rows": 64,
+        "loss": 1.9465820789337158,
+        "observed_outcome_rows": 177,
+        "optimizer_step": 919,
+        "row_weight_mean": 1.2026660442352295
+      },
+      {
+        "components": {
+          "economic_credit": 1.2602826356887817,
+          "game_outcome": 0.24933642148971558,
+          "ownership": 0.40887635946273804,
+          "policy": 1.6059777736663818,
+          "score": 0.015978828072547913,
+          "teacher_value": 0.1741602122783661
+        },
+        "credit_rows": 64,
+        "loss": 2.0150146484375,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 920,
+        "row_weight_mean": 1.218085765838623
+      },
+      {
+        "components": {
+          "economic_credit": 1.5996404886245728,
+          "game_outcome": 0.2981798052787781,
+          "ownership": 0.4615384340286255,
+          "policy": 1.4805861711502075,
+          "score": 0.01600034534931183,
+          "teacher_value": 0.21522006392478943
+        },
+        "credit_rows": 64,
+        "loss": 1.9682809114456177,
+        "observed_outcome_rows": 193,
+        "optimizer_step": 921,
+        "row_weight_mean": 1.2160155773162842
+      },
+      {
+        "components": {
+          "economic_credit": 1.4866160154342651,
+          "game_outcome": 0.269654244184494,
+          "ownership": 0.4090135395526886,
+          "policy": 1.5518431663513184,
+          "score": 0.014962296932935715,
+          "teacher_value": 0.18606093525886536
+        },
+        "credit_rows": 64,
+        "loss": 1.9824657440185547,
+        "observed_outcome_rows": 181,
+        "optimizer_step": 922,
+        "row_weight_mean": 1.1923828125
+      },
+      {
+        "components": {
+          "economic_credit": 1.4745748043060303,
+          "game_outcome": 0.2697111666202545,
+          "ownership": 0.4145543873310089,
+          "policy": 1.5243476629257202,
+          "score": 0.013303768821060658,
+          "teacher_value": 0.17441043257713318
+        },
+        "credit_rows": 64,
+        "loss": 1.9439042806625366,
+        "observed_outcome_rows": 191,
+        "optimizer_step": 923,
+        "row_weight_mean": 1.192441463470459
+      },
+      {
+        "components": {
+          "economic_credit": 1.406402826309204,
+          "game_outcome": 0.3049752414226532,
+          "ownership": 0.41941148042678833,
+          "policy": 1.5155655145645142,
+          "score": 0.012826762162148952,
+          "teacher_value": 0.23864281177520752
+        },
+        "credit_rows": 64,
+        "loss": 2.0179622173309326,
+        "observed_outcome_rows": 192,
+        "optimizer_step": 924,
+        "row_weight_mean": 1.2200586795806885
+      },
+      {
+        "components": {
+          "economic_credit": 2.176388740539551,
+          "game_outcome": 0.28206074237823486,
+          "ownership": 0.44176095724105835,
+          "policy": 1.5002261400222778,
+          "score": 0.012613852508366108,
+          "teacher_value": 0.2253130078315735
+        },
+        "credit_rows": 64,
+        "loss": 1.9833166599273682,
+        "observed_outcome_rows": 180,
+        "optimizer_step": 925,
+        "row_weight_mean": 1.1983788013458252
+      },
+      {
+        "components": {
+          "economic_credit": 1.863738775253296,
+          "game_outcome": 0.24728994071483612,
+          "ownership": 0.4100937843322754,
+          "policy": 1.5141702890396118,
+          "score": 0.017701955512166023,
+          "teacher_value": 0.2107326090335846
+        },
+        "credit_rows": 64,
+        "loss": 1.959922194480896,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 926,
+        "row_weight_mean": 1.2032032012939453
+      },
+      {
+        "components": {
+          "economic_credit": 1.1946964263916016,
+          "game_outcome": 0.21349936723709106,
+          "ownership": 0.3346422612667084,
+          "policy": 1.5823771953582764,
+          "score": 0.013588989153504372,
+          "teacher_value": 0.16451141238212585
+        },
+        "credit_rows": 64,
+        "loss": 1.9440933465957642,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 927,
+        "row_weight_mean": 1.2064062356948853
+      },
+      {
+        "components": {
+          "economic_credit": 1.3443049192428589,
+          "game_outcome": 0.2466171383857727,
+          "ownership": 0.34776970744132996,
+          "policy": 1.5269708633422852,
+          "score": 0.014358749613165855,
+          "teacher_value": 0.17147615551948547
+        },
+        "credit_rows": 64,
+        "loss": 1.915877342224121,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 928,
+        "row_weight_mean": 1.189638614654541
+      },
+      {
+        "components": {
+          "economic_credit": 1.6086444854736328,
+          "game_outcome": 0.24881169199943542,
+          "ownership": 0.35194092988967896,
+          "policy": 1.5571045875549316,
+          "score": 0.014556389302015305,
+          "teacher_value": 0.1920298933982849
+        },
+        "credit_rows": 64,
+        "loss": 1.968803882598877,
+        "observed_outcome_rows": 187,
+        "optimizer_step": 929,
+        "row_weight_mean": 1.1944921016693115
+      },
+      {
+        "components": {
+          "economic_credit": 1.5927261114120483,
+          "game_outcome": 0.25561508536338806,
+          "ownership": 0.4059749245643616,
+          "policy": 1.528357744216919,
+          "score": 0.013901357538998127,
+          "teacher_value": 0.1991143822669983
+        },
+        "credit_rows": 64,
+        "loss": 1.9637240171432495,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 930,
+        "row_weight_mean": 1.2004003524780273
+      },
+      {
+        "components": {
+          "economic_credit": 1.3744773864746094,
+          "game_outcome": 0.2525356113910675,
+          "ownership": 0.3958410918712616,
+          "policy": 1.560439109802246,
+          "score": 0.008366991765797138,
+          "teacher_value": 0.20431090891361237
+        },
+        "credit_rows": 64,
+        "loss": 1.994161605834961,
+        "observed_outcome_rows": 175,
+        "optimizer_step": 931,
+        "row_weight_mean": 1.209716796875
+      },
+      {
+        "components": {
+          "economic_credit": 1.9759517908096313,
+          "game_outcome": 0.23488052189350128,
+          "ownership": 0.4379585385322571,
+          "policy": 1.5622611045837402,
+          "score": 0.012030532583594322,
+          "teacher_value": 0.2025931179523468
+        },
+        "credit_rows": 64,
+        "loss": 1.9977993965148926,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 932,
+        "row_weight_mean": 1.2058300971984863
+      },
+      {
+        "components": {
+          "economic_credit": 1.3046056032180786,
+          "game_outcome": 0.2419499009847641,
+          "ownership": 0.3799011707305908,
+          "policy": 1.5498093366622925,
+          "score": 0.012307721190154552,
+          "teacher_value": 0.20563086867332458
+        },
+        "credit_rows": 64,
+        "loss": 1.9775443077087402,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 933,
+        "row_weight_mean": 1.2300000190734863
+      },
+      {
+        "components": {
+          "economic_credit": 0.9564502239227295,
+          "game_outcome": 0.22913067042827606,
+          "ownership": 0.3467281758785248,
+          "policy": 1.5317225456237793,
+          "score": 0.012508563697338104,
+          "teacher_value": 0.18339788913726807
+        },
+        "credit_rows": 64,
+        "loss": 1.9226222038269043,
+        "observed_outcome_rows": 181,
+        "optimizer_step": 934,
+        "row_weight_mean": 1.203310489654541
+      },
+      {
+        "components": {
+          "economic_credit": 1.5542242527008057,
+          "game_outcome": 0.19493235647678375,
+          "ownership": 0.37642693519592285,
+          "policy": 1.5667346715927124,
+          "score": 0.01598597690463066,
+          "teacher_value": 0.16256584227085114
+        },
+        "credit_rows": 64,
+        "loss": 1.9288663864135742,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 935,
+        "row_weight_mean": 1.1981347799301147
+      },
+      {
+        "components": {
+          "economic_credit": 1.080546259880066,
+          "game_outcome": 0.22942911088466644,
+          "ownership": 0.3613761365413666,
+          "policy": 1.5353151559829712,
+          "score": 0.008750800974667072,
+          "teacher_value": 0.1651928424835205
+        },
+        "credit_rows": 64,
+        "loss": 1.9099420309066772,
+        "observed_outcome_rows": 191,
+        "optimizer_step": 936,
+        "row_weight_mean": 1.1884863376617432
+      },
+      {
+        "components": {
+          "economic_credit": 1.3918951749801636,
+          "game_outcome": 0.20288945734500885,
+          "ownership": 0.37312403321266174,
+          "policy": 1.6013103723526,
+          "score": 0.008146807551383972,
+          "teacher_value": 0.16439764201641083
+        },
+        "credit_rows": 64,
+        "loss": 1.9645071029663086,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 937,
+        "row_weight_mean": 1.1867187023162842
+      },
+      {
+        "components": {
+          "economic_credit": 1.341780424118042,
+          "game_outcome": 0.20872104167938232,
+          "ownership": 0.3317999243736267,
+          "policy": 1.5736311674118042,
+          "score": 0.00939533207565546,
+          "teacher_value": 0.1758604347705841
+        },
+        "credit_rows": 64,
+        "loss": 1.9414997100830078,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 938,
+        "row_weight_mean": 1.1947753429412842
+      },
+      {
+        "components": {
+          "economic_credit": 1.5155274868011475,
+          "game_outcome": 0.28258445858955383,
+          "ownership": 0.40263497829437256,
+          "policy": 1.6061756610870361,
+          "score": 0.0106737045571208,
+          "teacher_value": 0.22310948371887207
+        },
+        "credit_rows": 64,
+        "loss": 2.076572895050049,
+        "observed_outcome_rows": 187,
+        "optimizer_step": 939,
+        "row_weight_mean": 1.2166210412979126
+      },
+      {
+        "components": {
+          "economic_credit": 1.980982780456543,
+          "game_outcome": 0.254563570022583,
+          "ownership": 0.37041419744491577,
+          "policy": 1.6072803735733032,
+          "score": 0.01625443622469902,
+          "teacher_value": 0.21503856778144836
+        },
+        "credit_rows": 64,
+        "loss": 2.0503313541412354,
+        "observed_outcome_rows": 180,
+        "optimizer_step": 940,
+        "row_weight_mean": 1.1820311546325684
+      },
+      {
+        "components": {
+          "economic_credit": 1.9420464038848877,
+          "game_outcome": 0.26609691977500916,
+          "ownership": 0.372897207736969,
+          "policy": 1.5257412195205688,
+          "score": 0.007345636375248432,
+          "teacher_value": 0.22334465384483337
+        },
+        "credit_rows": 64,
+        "loss": 1.9790314435958862,
+        "observed_outcome_rows": 200,
+        "optimizer_step": 941,
+        "row_weight_mean": 1.2192578315734863
+      },
+      {
+        "components": {
+          "economic_credit": 1.931037187576294,
+          "game_outcome": 0.25050801038742065,
+          "ownership": 0.35526278614997864,
+          "policy": 1.5087928771972656,
+          "score": 0.01199287548661232,
+          "teacher_value": 0.20139791071414948
+        },
+        "credit_rows": 64,
+        "loss": 1.930256962776184,
+        "observed_outcome_rows": 183,
+        "optimizer_step": 942,
+        "row_weight_mean": 1.1952050924301147
+      },
+      {
+        "components": {
+          "economic_credit": 1.5930286645889282,
+          "game_outcome": 0.2768462300300598,
+          "ownership": 0.38520967960357666,
+          "policy": 1.6414238214492798,
+          "score": 0.008851975202560425,
+          "teacher_value": 0.1966932862997055
+        },
+        "credit_rows": 64,
+        "loss": 2.077268600463867,
+        "observed_outcome_rows": 184,
+        "optimizer_step": 943,
+        "row_weight_mean": 1.1990039348602295
+      },
+      {
+        "components": {
+          "economic_credit": 1.416208267211914,
+          "game_outcome": 0.2620096504688263,
+          "ownership": 0.3678579032421112,
+          "policy": 1.5923347473144531,
+          "score": 0.01048895064741373,
+          "teacher_value": 0.2258310616016388
+        },
+        "credit_rows": 64,
+        "loss": 2.046379566192627,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 944,
+        "row_weight_mean": 1.2173047065734863
+      },
+      {
+        "components": {
+          "economic_credit": 1.1753807067871094,
+          "game_outcome": 0.2524753510951996,
+          "ownership": 0.4062366485595703,
+          "policy": 1.5268044471740723,
+          "score": 0.010546974837779999,
+          "teacher_value": 0.18815118074417114
+        },
+        "credit_rows": 64,
+        "loss": 1.9480258226394653,
+        "observed_outcome_rows": 184,
+        "optimizer_step": 945,
+        "row_weight_mean": 1.2225195169448853
+      },
+      {
+        "components": {
+          "economic_credit": 1.8346565961837769,
+          "game_outcome": 0.3141917288303375,
+          "ownership": 0.37052980065345764,
+          "policy": 1.537039041519165,
+          "score": 0.010995199903845787,
+          "teacher_value": 0.21943779289722443
+        },
+        "credit_rows": 64,
+        "loss": 2.0117027759552,
+        "observed_outcome_rows": 193,
+        "optimizer_step": 946,
+        "row_weight_mean": 1.2112011909484863
+      },
+      {
+        "components": {
+          "economic_credit": 1.5175460577011108,
+          "game_outcome": 0.21384571492671967,
+          "ownership": 0.37005916237831116,
+          "policy": 1.6589858531951904,
+          "score": 0.010829339735209942,
+          "teacher_value": 0.17923900485038757
+        },
+        "credit_rows": 64,
+        "loss": 2.043077230453491,
+        "observed_outcome_rows": 176,
+        "optimizer_step": 947,
+        "row_weight_mean": 1.1991113424301147
+      },
+      {
+        "components": {
+          "economic_credit": 1.3101081848144531,
+          "game_outcome": 0.23378916084766388,
+          "ownership": 0.40574583411216736,
+          "policy": 1.4616594314575195,
+          "score": 0.010164051316678524,
+          "teacher_value": 0.17924711108207703
+        },
+        "credit_rows": 64,
+        "loss": 1.8643196821212769,
+        "observed_outcome_rows": 196,
+        "optimizer_step": 948,
+        "row_weight_mean": 1.2058398723602295
+      },
+      {
+        "components": {
+          "economic_credit": 1.4893481731414795,
+          "game_outcome": 0.24838349223136902,
+          "ownership": 0.4018643796443939,
+          "policy": 1.5057836771011353,
+          "score": 0.014302426017820835,
+          "teacher_value": 0.1855904757976532
+        },
+        "credit_rows": 64,
+        "loss": 1.9231833219528198,
+        "observed_outcome_rows": 174,
+        "optimizer_step": 949,
+        "row_weight_mean": 1.2189159393310547
+      },
+      {
+        "components": {
+          "economic_credit": 1.7235149145126343,
+          "game_outcome": 0.2731764316558838,
+          "ownership": 0.3548484742641449,
+          "policy": 1.5807985067367554,
+          "score": 0.007041230332106352,
+          "teacher_value": 0.1871677190065384
+        },
+        "credit_rows": 64,
+        "loss": 1.996787190437317,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 950,
+        "row_weight_mean": 1.2199804782867432
+      },
+      {
+        "components": {
+          "economic_credit": 1.8089743852615356,
+          "game_outcome": 0.2478616088628769,
+          "ownership": 0.340196818113327,
+          "policy": 1.6619267463684082,
+          "score": 0.014380306005477905,
+          "teacher_value": 0.15824279189109802
+        },
+        "credit_rows": 64,
+        "loss": 2.03633975982666,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 951,
+        "row_weight_mean": 1.1825389862060547
+      },
+      {
+        "components": {
+          "economic_credit": 1.6310288906097412,
+          "game_outcome": 0.28733760118484497,
+          "ownership": 0.435211181640625,
+          "policy": 1.5265870094299316,
+          "score": 0.01660509966313839,
+          "teacher_value": 0.21834953129291534
+        },
+        "credit_rows": 64,
+        "loss": 2.0057106018066406,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 952,
+        "row_weight_mean": 1.214052677154541
+      },
+      {
+        "components": {
+          "economic_credit": 1.4657390117645264,
+          "game_outcome": 0.21777759492397308,
+          "ownership": 0.37820538878440857,
+          "policy": 1.5635069608688354,
+          "score": 0.014063266105949879,
+          "teacher_value": 0.1992470920085907
+        },
+        "credit_rows": 64,
+        "loss": 1.9732258319854736,
+        "observed_outcome_rows": 183,
+        "optimizer_step": 953,
+        "row_weight_mean": 1.2009179592132568
+      },
+      {
+        "components": {
+          "economic_credit": 1.6980780363082886,
+          "game_outcome": 0.22893072664737701,
+          "ownership": 0.31785163283348083,
+          "policy": 1.4420125484466553,
+          "score": 0.006633167155086994,
+          "teacher_value": 0.18219703435897827
+        },
+        "credit_rows": 64,
+        "loss": 1.8214545249938965,
+        "observed_outcome_rows": 180,
+        "optimizer_step": 954,
+        "row_weight_mean": 1.2222362756729126
+      },
+      {
+        "components": {
+          "economic_credit": 1.3575575351715088,
+          "game_outcome": 0.25378039479255676,
+          "ownership": 0.3938099443912506,
+          "policy": 1.5817620754241943,
+          "score": 0.009029345586895943,
+          "teacher_value": 0.18629491329193115
+        },
+        "credit_rows": 64,
+        "loss": 1.9979143142700195,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 955,
+        "row_weight_mean": 1.1935741901397705
+      },
+      {
+        "components": {
+          "economic_credit": 1.332707166671753,
+          "game_outcome": 0.23717103898525238,
+          "ownership": 0.40910136699676514,
+          "policy": 1.5474891662597656,
+          "score": 0.008755260147154331,
+          "teacher_value": 0.19748225808143616
+        },
+        "credit_rows": 64,
+        "loss": 1.9702098369598389,
+        "observed_outcome_rows": 174,
+        "optimizer_step": 956,
+        "row_weight_mean": 1.2230273485183716
+      },
+      {
+        "components": {
+          "economic_credit": 1.9027559757232666,
+          "game_outcome": 0.28128981590270996,
+          "ownership": 0.3898342251777649,
+          "policy": 1.5318794250488281,
+          "score": 0.013053487055003643,
+          "teacher_value": 0.19361642003059387
+        },
+        "credit_rows": 64,
+        "loss": 1.9701260328292847,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 957,
+        "row_weight_mean": 1.2044628858566284
+      },
+      {
+        "components": {
+          "economic_credit": 1.4763855934143066,
+          "game_outcome": 0.212820366024971,
+          "ownership": 0.3313463032245636,
+          "policy": 1.6456551551818848,
+          "score": 0.01232406497001648,
+          "teacher_value": 0.1600426733493805
+        },
+        "credit_rows": 64,
+        "loss": 2.0011065006256104,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 958,
+        "row_weight_mean": 1.1961231231689453
+      },
+      {
+        "components": {
+          "economic_credit": 1.3736159801483154,
+          "game_outcome": 0.32855838537216187,
+          "ownership": 0.3967873156070709,
+          "policy": 1.5020312070846558,
+          "score": 0.008408776484429836,
+          "teacher_value": 0.2031780481338501
+        },
+        "credit_rows": 64,
+        "loss": 1.9728896617889404,
+        "observed_outcome_rows": 184,
+        "optimizer_step": 959,
+        "row_weight_mean": 1.2197558879852295
+      },
+      {
+        "components": {
+          "economic_credit": 1.5069937705993652,
+          "game_outcome": 0.21377231180667877,
+          "ownership": 0.36021459102630615,
+          "policy": 1.547764539718628,
+          "score": 0.012354137375950813,
+          "teacher_value": 0.17274025082588196
+        },
+        "credit_rows": 64,
+        "loss": 1.923621654510498,
+        "observed_outcome_rows": 175,
+        "optimizer_step": 960,
+        "row_weight_mean": 1.1919530630111694
+      },
+      {
+        "components": {
+          "economic_credit": 1.5292023420333862,
+          "game_outcome": 0.19524894654750824,
+          "ownership": 0.36454102396965027,
+          "policy": 1.5750536918640137,
+          "score": 0.008853820152580738,
+          "teacher_value": 0.17808209359645844
+        },
+        "credit_rows": 64,
+        "loss": 1.9463224411010742,
+        "observed_outcome_rows": 184,
+        "optimizer_step": 961,
+        "row_weight_mean": 1.1928319931030273
+      },
+      {
+        "components": {
+          "economic_credit": 1.5427887439727783,
+          "game_outcome": 0.3011244833469391,
+          "ownership": 0.42838355898857117,
+          "policy": 1.4998241662979126,
+          "score": 0.015758944675326347,
+          "teacher_value": 0.20642514526844025
+        },
+        "credit_rows": 64,
+        "loss": 1.9717869758605957,
+        "observed_outcome_rows": 180,
+        "optimizer_step": 962,
+        "row_weight_mean": 1.226747989654541
+      },
+      {
+        "components": {
+          "economic_credit": 1.2986176013946533,
+          "game_outcome": 0.29560017585754395,
+          "ownership": 0.4122873544692993,
+          "policy": 1.459624171257019,
+          "score": 0.019313205033540726,
+          "teacher_value": 0.19365382194519043
+        },
+        "credit_rows": 64,
+        "loss": 1.913806438446045,
+        "observed_outcome_rows": 179,
+        "optimizer_step": 963,
+        "row_weight_mean": 1.200107455253601
+      },
+      {
+        "components": {
+          "economic_credit": 1.7789556980133057,
+          "game_outcome": 0.24994273483753204,
+          "ownership": 0.37776365876197815,
+          "policy": 1.6317023038864136,
+          "score": 0.009962712414562702,
+          "teacher_value": 0.1786852777004242
+        },
+        "credit_rows": 64,
+        "loss": 2.0347812175750732,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 964,
+        "row_weight_mean": 1.1823241710662842
+      },
+      {
+        "components": {
+          "economic_credit": 1.38127601146698,
+          "game_outcome": 0.24114766716957092,
+          "ownership": 0.40904784202575684,
+          "policy": 1.5218952894210815,
+          "score": 0.014483504928648472,
+          "teacher_value": 0.21339291334152222
+        },
+        "credit_rows": 64,
+        "loss": 1.9653656482696533,
+        "observed_outcome_rows": 170,
+        "optimizer_step": 965,
+        "row_weight_mean": 1.2151269912719727
+      },
+      {
+        "components": {
+          "economic_credit": 1.6454664468765259,
+          "game_outcome": 0.1831149309873581,
+          "ownership": 0.4263399839401245,
+          "policy": 1.5168575048446655,
+          "score": 0.011245149187743664,
+          "teacher_value": 0.1962454617023468
+        },
+        "credit_rows": 64,
+        "loss": 1.9168680906295776,
+        "observed_outcome_rows": 185,
+        "optimizer_step": 966,
+        "row_weight_mean": 1.1944239139556885
+      },
+      {
+        "components": {
+          "economic_credit": 1.6855525970458984,
+          "game_outcome": 0.33022820949554443,
+          "ownership": 0.44427454471588135,
+          "policy": 1.5132287740707397,
+          "score": 0.010452712886035442,
+          "teacher_value": 0.1869407296180725
+        },
+        "credit_rows": 64,
+        "loss": 1.9815787076950073,
+        "observed_outcome_rows": 174,
+        "optimizer_step": 967,
+        "row_weight_mean": 1.2177636623382568
+      },
+      {
+        "components": {
+          "economic_credit": 1.793228030204773,
+          "game_outcome": 0.3105761706829071,
+          "ownership": 0.4374779760837555,
+          "policy": 1.5985318422317505,
+          "score": 0.009875582531094551,
+          "teacher_value": 0.21075910329818726
+        },
+        "credit_rows": 64,
+        "loss": 2.0788862705230713,
+        "observed_outcome_rows": 190,
+        "optimizer_step": 968,
+        "row_weight_mean": 1.1971288919448853
+      },
+      {
+        "components": {
+          "economic_credit": 1.5612983703613281,
+          "game_outcome": 0.22499682009220123,
+          "ownership": 0.3651730418205261,
+          "policy": 1.5989910364151,
+          "score": 0.010713535360991955,
+          "teacher_value": 0.20131021738052368
+        },
+        "credit_rows": 64,
+        "loss": 2.0094497203826904,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 969,
+        "row_weight_mean": 1.2116014957427979
+      },
+      {
+        "components": {
+          "economic_credit": 1.4195120334625244,
+          "game_outcome": 0.3079691231250763,
+          "ownership": 0.3767659068107605,
+          "policy": 1.5528918504714966,
+          "score": 0.009166783653199673,
+          "teacher_value": 0.22879111766815186
+        },
+        "credit_rows": 64,
+        "loss": 2.03444242477417,
+        "observed_outcome_rows": 169,
+        "optimizer_step": 970,
+        "row_weight_mean": 1.1983788013458252
+      },
+      {
+        "components": {
+          "economic_credit": 1.233333945274353,
+          "game_outcome": 0.18614059686660767,
+          "ownership": 0.32159167528152466,
+          "policy": 1.5741528272628784,
+          "score": 0.011119123548269272,
+          "teacher_value": 0.18784047663211823
+        },
+        "credit_rows": 64,
+        "loss": 1.9410210847854614,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 971,
+        "row_weight_mean": 1.1835155487060547
+      },
+      {
+        "components": {
+          "economic_credit": 1.6967616081237793,
+          "game_outcome": 0.24780622124671936,
+          "ownership": 0.3911605775356293,
+          "policy": 1.6476000547409058,
+          "score": 0.011090374551713467,
+          "teacher_value": 0.18121041357517242
+        },
+        "credit_rows": 64,
+        "loss": 2.05604887008667,
+        "observed_outcome_rows": 171,
+        "optimizer_step": 972,
+        "row_weight_mean": 1.1916894912719727
+      },
+      {
+        "components": {
+          "economic_credit": 1.8173589706420898,
+          "game_outcome": 0.2791072726249695,
+          "ownership": 0.37586966156959534,
+          "policy": 1.608849048614502,
+          "score": 0.007237084209918976,
+          "teacher_value": 0.17030395567417145
+        },
+        "credit_rows": 64,
+        "loss": 2.0162925720214844,
+        "observed_outcome_rows": 189,
+        "optimizer_step": 973,
+        "row_weight_mean": 1.1828320026397705
+      },
+      {
+        "components": {
+          "economic_credit": 1.8419967889785767,
+          "game_outcome": 0.30509844422340393,
+          "ownership": 0.463419109582901,
+          "policy": 1.503235936164856,
+          "score": 0.013028938323259354,
+          "teacher_value": 0.19541162252426147
+        },
+        "credit_rows": 64,
+        "loss": 1.973565936088562,
+        "observed_outcome_rows": 198,
+        "optimizer_step": 974,
+        "row_weight_mean": 1.2179784774780273
+      },
+      {
+        "components": {
+          "economic_credit": 1.6140806674957275,
+          "game_outcome": 0.19654551148414612,
+          "ownership": 0.37976962327957153,
+          "policy": 1.619605302810669,
+          "score": 0.00820422638207674,
+          "teacher_value": 0.15913622081279755
+        },
+        "credit_rows": 64,
+        "loss": 1.976058840751648,
+        "observed_outcome_rows": 175,
+        "optimizer_step": 975,
+        "row_weight_mean": 1.19287109375
+      },
+      {
+        "components": {
+          "economic_credit": 1.437056541442871,
+          "game_outcome": 0.18157018721103668,
+          "ownership": 0.3697519898414612,
+          "policy": 1.5850287675857544,
+          "score": 0.011978714726865292,
+          "teacher_value": 0.1701284945011139
+        },
+        "credit_rows": 64,
+        "loss": 1.9443696737289429,
+        "observed_outcome_rows": 196,
+        "optimizer_step": 976,
+        "row_weight_mean": 1.1947559118270874
+      },
+      {
+        "components": {
+          "economic_credit": 1.3575294017791748,
+          "game_outcome": 0.22422176599502563,
+          "ownership": 0.3517073094844818,
+          "policy": 1.5680958032608032,
+          "score": 0.010888850316405296,
+          "teacher_value": 0.17603492736816406
+        },
+        "credit_rows": 64,
+        "loss": 1.9496128559112549,
+        "observed_outcome_rows": 180,
+        "optimizer_step": 977,
+        "row_weight_mean": 1.1839940547943115
+      },
+      {
+        "components": {
+          "economic_credit": 1.3571925163269043,
+          "game_outcome": 0.22242824733257294,
+          "ownership": 0.38261279463768005,
+          "policy": 1.5552253723144531,
+          "score": 0.010175906121730804,
+          "teacher_value": 0.16838088631629944
+        },
+        "credit_rows": 64,
+        "loss": 1.9355615377426147,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 978,
+        "row_weight_mean": 1.2034473419189453
+      },
+      {
+        "components": {
+          "economic_credit": 1.5785508155822754,
+          "game_outcome": 0.2747156620025635,
+          "ownership": 0.3425910174846649,
+          "policy": 1.5990643501281738,
+          "score": 0.009552896954119205,
+          "teacher_value": 0.23428094387054443
+        },
+        "credit_rows": 64,
+        "loss": 2.0611274242401123,
+        "observed_outcome_rows": 197,
+        "optimizer_step": 979,
+        "row_weight_mean": 1.2219433784484863
+      },
+      {
+        "components": {
+          "economic_credit": 0.7743082046508789,
+          "game_outcome": 0.2300277203321457,
+          "ownership": 0.3823927044868469,
+          "policy": 1.5457085371017456,
+          "score": 0.013700422830879688,
+          "teacher_value": 0.18848757445812225
+        },
+        "credit_rows": 64,
+        "loss": 1.9516583681106567,
+        "observed_outcome_rows": 186,
+        "optimizer_step": 980,
+        "row_weight_mean": 1.221523404121399
+      },
+      {
+        "components": {
+          "economic_credit": 2.193783760070801,
+          "game_outcome": 0.2637484669685364,
+          "ownership": 0.3851391077041626,
+          "policy": 1.5084830522537231,
+          "score": 0.011992553249001503,
+          "teacher_value": 0.23288363218307495
+        },
+        "credit_rows": 64,
+        "loss": 1.9755218029022217,
+        "observed_outcome_rows": 193,
+        "optimizer_step": 981,
+        "row_weight_mean": 1.2279393672943115
+      },
+      {
+        "components": {
+          "economic_credit": 2.4489188194274902,
+          "game_outcome": 0.3064363896846771,
+          "ownership": 0.4311753511428833,
+          "policy": 1.5422435998916626,
+          "score": 0.011711647734045982,
+          "teacher_value": 0.2174018770456314
+        },
+        "credit_rows": 64,
+        "loss": 2.0265133380889893,
+        "observed_outcome_rows": 196,
+        "optimizer_step": 982,
+        "row_weight_mean": 1.2083300352096558
+      },
+      {
+        "components": {
+          "economic_credit": 2.212106704711914,
+          "game_outcome": 0.2394075095653534,
+          "ownership": 0.3647461533546448,
+          "policy": 1.550316572189331,
+          "score": 0.010645990259945393,
+          "teacher_value": 0.18216483294963837
+        },
+        "credit_rows": 64,
+        "loss": 1.9486947059631348,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 983,
+        "row_weight_mean": 1.1954588890075684
+      },
+      {
+        "components": {
+          "economic_credit": 1.3503848314285278,
+          "game_outcome": 0.3181420862674713,
+          "ownership": 0.3988911509513855,
+          "policy": 1.561962604522705,
+          "score": 0.01970481313765049,
+          "teacher_value": 0.2249099314212799
+        },
+        "credit_rows": 64,
+        "loss": 2.055518865585327,
+        "observed_outcome_rows": 191,
+        "optimizer_step": 984,
+        "row_weight_mean": 1.2127344608306885
+      },
+      {
+        "components": {
+          "economic_credit": 1.7430644035339355,
+          "game_outcome": 0.27790844440460205,
+          "ownership": 0.3872853219509125,
+          "policy": 1.5376673936843872,
+          "score": 0.012034076265990734,
+          "teacher_value": 0.19292736053466797
+        },
+        "credit_rows": 64,
+        "loss": 1.972387433052063,
+        "observed_outcome_rows": 202,
+        "optimizer_step": 985,
+        "row_weight_mean": 1.2094628810882568
+      },
+      {
+        "components": {
+          "economic_credit": 1.706728219985962,
+          "game_outcome": 0.2184155136346817,
+          "ownership": 0.39198169112205505,
+          "policy": 1.5710865259170532,
+          "score": 0.016084661707282066,
+          "teacher_value": 0.2152797281742096
+        },
+        "credit_rows": 64,
+        "loss": 2.0016117095947266,
+        "observed_outcome_rows": 194,
+        "optimizer_step": 986,
+        "row_weight_mean": 1.21951162815094
+      },
+      {
+        "components": {
+          "economic_credit": 1.4777631759643555,
+          "game_outcome": 0.200464129447937,
+          "ownership": 0.3492503762245178,
+          "policy": 1.5421967506408691,
+          "score": 0.009248027577996254,
+          "teacher_value": 0.15874096751213074
+        },
+        "credit_rows": 64,
+        "loss": 1.893106460571289,
+        "observed_outcome_rows": 178,
+        "optimizer_step": 987,
+        "row_weight_mean": 1.191738247871399
+      },
+      {
+        "components": {
+          "economic_credit": 1.1646091938018799,
+          "game_outcome": 0.2322836071252823,
+          "ownership": 0.37351810932159424,
+          "policy": 1.5967905521392822,
+          "score": 0.015082404017448425,
+          "teacher_value": 0.18174809217453003
+        },
+        "credit_rows": 64,
+        "loss": 1.9956011772155762,
+        "observed_outcome_rows": 197,
+        "optimizer_step": 988,
+        "row_weight_mean": 1.1995116472244263
+      },
+      {
+        "components": {
+          "economic_credit": 1.6327238082885742,
+          "game_outcome": 0.25523221492767334,
+          "ownership": 0.3725653290748596,
+          "policy": 1.5310394763946533,
+          "score": 0.006546663586050272,
+          "teacher_value": 0.1704646348953247
+        },
+        "credit_rows": 64,
+        "loss": 1.9255348443984985,
+        "observed_outcome_rows": 188,
+        "optimizer_step": 989,
+        "row_weight_mean": 1.1860253810882568
+      },
+      {
+        "components": {
+          "economic_credit": 1.94087815284729,
+          "game_outcome": 0.29068464040756226,
+          "ownership": 0.3787943124771118,
+          "policy": 1.605190634727478,
+          "score": 0.016404740512371063,
+          "teacher_value": 0.19985194504261017
+        },
+        "credit_rows": 64,
+        "loss": 2.053285837173462,
+        "observed_outcome_rows": 179,
+        "optimizer_step": 990,
+        "row_weight_mean": 1.2127734422683716
+      },
+      {
+        "components": {
+          "economic_credit": 1.3734016418457031,
+          "game_outcome": 0.2215021848678589,
+          "ownership": 0.38911178708076477,
+          "policy": 1.5145353078842163,
+          "score": 0.013718090020120144,
+          "teacher_value": 0.14858272671699524
+        },
+        "credit_rows": 64,
+        "loss": 1.878006100654602,
+        "observed_outcome_rows": 177,
+        "optimizer_step": 991,
+        "row_weight_mean": 1.1972460746765137
+      },
+      {
+        "components": {
+          "economic_credit": 2.0245423316955566,
+          "game_outcome": 0.27157965302467346,
+          "ownership": 0.39419296383857727,
+          "policy": 1.4160608053207397,
+          "score": 0.009598994627594948,
+          "teacher_value": 0.22348596155643463
+        },
+        "credit_rows": 64,
+        "loss": 1.878684401512146,
+        "observed_outcome_rows": 182,
+        "optimizer_step": 992,
+        "row_weight_mean": 1.218662142753601
+      },
+      {
+        "components": {
+          "economic_credit": 1.5825889110565186,
+          "game_outcome": 0.18388818204402924,
+          "ownership": 0.3987557590007782,
+          "policy": 1.4978634119033813,
+          "score": 0.011618062853813171,
+          "teacher_value": 0.1648741066455841
+        },
+        "credit_rows": 64,
+        "loss": 1.8601795434951782,
+        "observed_outcome_rows": 173,
+        "optimizer_step": 993,
+        "row_weight_mean": 1.1948633193969727
+      },
+      {
+        "components": {
+          "economic_credit": 1.6135245561599731,
+          "game_outcome": 0.25000110268592834,
+          "ownership": 0.37445181608200073,
+          "policy": 1.533894658088684,
+          "score": 0.01254922617226839,
+          "teacher_value": 0.19973263144493103
+        },
+        "credit_rows": 64,
+        "loss": 1.9585154056549072,
+        "observed_outcome_rows": 190,
+        "optimizer_step": 994,
+        "row_weight_mean": 1.1989061832427979
+      },
+      {
+        "components": {
+          "economic_credit": 1.4003558158874512,
+          "game_outcome": 0.23181620240211487,
+          "ownership": 0.38067957758903503,
+          "policy": 1.555437684059143,
+          "score": 0.01449184026569128,
+          "teacher_value": 0.17631646990776062
+        },
+        "credit_rows": 64,
+        "loss": 1.9500781297683716,
+        "observed_outcome_rows": 175,
+        "optimizer_step": 995,
+        "row_weight_mean": 1.1991796493530273
+      },
+      {
+        "components": {
+          "economic_credit": 1.541013240814209,
+          "game_outcome": 0.2495477795600891,
+          "ownership": 0.4247193932533264,
+          "policy": 1.6015641689300537,
+          "score": 0.016799569129943848,
+          "teacher_value": 0.20147961378097534
+        },
+        "credit_rows": 64,
+        "loss": 2.0423974990844727,
+        "observed_outcome_rows": 182,
+        "optimizer_step": 996,
+        "row_weight_mean": 1.2109472751617432
+      },
+      {
+        "components": {
+          "economic_credit": 1.0722404718399048,
+          "game_outcome": 0.20098014175891876,
+          "ownership": 0.34350213408470154,
+          "policy": 1.6187623739242554,
+          "score": 0.012925758957862854,
+          "teacher_value": 0.17296051979064941
+        },
+        "credit_rows": 64,
+        "loss": 1.9845514297485352,
+        "observed_outcome_rows": 173,
+        "optimizer_step": 997,
+        "row_weight_mean": 1.2010643482208252
+      },
+      {
+        "components": {
+          "economic_credit": 1.6787617206573486,
+          "game_outcome": 0.26099351048469543,
+          "ownership": 0.3920997083187103,
+          "policy": 1.5790107250213623,
+          "score": 0.010408963076770306,
+          "teacher_value": 0.21287648379802704
+        },
+        "credit_rows": 64,
+        "loss": 2.025613307952881,
+        "observed_outcome_rows": 193,
+        "optimizer_step": 998,
+        "row_weight_mean": 1.2073047161102295
+      },
+      {
+        "components": {
+          "economic_credit": 1.9452078342437744,
+          "game_outcome": 0.22870242595672607,
+          "ownership": 0.4005367159843445,
+          "policy": 1.4698067903518677,
+          "score": 0.009684217162430286,
+          "teacher_value": 0.18566644191741943
+        },
+        "credit_rows": 64,
+        "loss": 1.8748008012771606,
+        "observed_outcome_rows": 179,
+        "optimizer_step": 999,
+        "row_weight_mean": 1.2092773914337158
+      },
+      {
+        "components": {
+          "economic_credit": 1.4859483242034912,
+          "game_outcome": 0.207599937915802,
+          "ownership": 0.3523001968860626,
+          "policy": 1.5893948078155518,
+          "score": 0.01327495463192463,
+          "teacher_value": 0.2095600813627243
+        },
+        "credit_rows": 64,
+        "loss": 1.997467279434204,
+        "observed_outcome_rows": 173,
+        "optimizer_step": 1000,
+        "row_weight_mean": 1.1970703601837158
+      }
+    ]
+  },
+  "model_type": "Go2K20Network",
+  "optimizer_step": 1000,
+  "optimizer_steps_requested": 1000,
+  "run_id": "ahr-v2-katago-econ-20261011-v1-guided-control",
+  "status": "COMPLETE",
+  "teacher_queries_during_play": false,
+  "true_objective": "terminal win +1 / loss -1 / draw 0",
+  "updated_at_utc": "2026-10-11T21:54:57.777908+00:00"
+}

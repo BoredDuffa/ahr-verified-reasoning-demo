@@ -1,0 +1,12 @@
+{
+  "attach_command": "tmux attach -t ahr-v2-benchmark17",
+  "configuration_sha256": "f0dbfc9b3ce1da4c0dd945b7231b3cb454f9ea8a1ca758f35adef99c2878693d",
+  "detach_keys": "Ctrl-b, then d",
+  "launched_at_utc": "2026-10-09T16:55:27.637768+00:00",
+  "log": "reports/ahr_v2/benchmarks/ahr-v2-benchmark-20261009-v1/tmux.log",
+  "resume_cell": "17: Run All with identical run ID and settings; completed stages remain saved.",
+  "run_id": "ahr-v2-benchmark-20261009-v1",
+  "session": "ahr-v2-benchmark17",
+  "status": "LAUNCHED",
+  "worker": "reports/ahr_v2/benchmarks/ahr-v2-benchmark-20261009-v1/detached_worker.ipynb"
+}

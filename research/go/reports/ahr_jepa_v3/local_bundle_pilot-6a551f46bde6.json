@@ -1,0 +1,238 @@
+{
+  "archive": "exports/bundles/ahr-jepa-v3-pilot-6a551f46bde6-360411ecf772.tar.gz",
+  "archive_sha256": "dd58594820b801b4303c8159c275e2e6d3628c1865151a24f9087e9345d7ca28",
+  "bytes_uncompressed": 406909435,
+  "controller_restart_scope": "Use protocol notebook with original checkpoint run; this bundle stores completed scientific runs, not a running controller PID.",
+  "files": 156,
+  "off_instance_backup": "DEFERRED_BY_USER",
+  "restore_inference": {
+    "device": "cpu",
+    "fresh_process": true,
+    "models": [
+      {
+        "action": 8,
+        "checkpoint": {
+          "checkpoint_file": "checkpoints/ahr-v3-pilot-B-29dff47d92/step-000000108-831dcc48.pt",
+          "checkpoint_sha256": "8f319916111be1291ead3be50b417f07b467ffe2383826fc1aeb154d211f1e54",
+          "config": {
+            "actor_device": "cuda:1",
+            "batch_size": 32,
+            "board_size": 9,
+            "checkpoint_every_events": 32,
+            "checkpoint_every_optimizer_steps": 250,
+            "checkpoint_interval_s": 600.0,
+            "curriculum_path": "experiments/ahr_jepa_v3/data/curriculum.json",
+            "device": "cuda:0",
+            "ema_decay": 0.99,
+            "exploration": 0.1,
+            "games": 1,
+            "initial_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+            "initial_run": "go09-first-selfplay-v1",
+            "initial_selection": "latest",
+            "jepa_weight": 0.1,
+            "komi": 7.5,
+            "learning_rate": 0.0003,
+            "max_plies": 256,
+            "opponent_probability": 0.25,
+            "opponent_snapshots": 8,
+            "purpose": "go_training",
+            "queen_cycles": 2,
+            "reanalysis_per_game": 2,
+            "reanalysis_search": {
+              "branch_width": 12,
+              "max_depth": 5,
+              "max_nodes": 384,
+              "queen_cycles": 2
+            },
+            "reanalysis_time_budget_s": 2.0,
+            "replay_capacity_games": 4096,
+            "search": {
+              "branch_width": 8,
+              "max_depth": 4,
+              "max_nodes": 192,
+              "queen_cycles": 2
+            },
+            "seed": 2026092799,
+            "snapshot_every_games": 8,
+            "tactical_fraction": 0.25,
+            "temperature": 1.0,
+            "time_budget_s": 1.0,
+            "updates_per_game": 2,
+            "use_jepa": false,
+            "validation_force_pass": false,
+            "warmup_updates": 8,
+            "weight_decay": 0.0001
+          },
+          "curriculum_sha256": "08016eee499c1dc3460908687027df575457b44cce989979487ccd2cfa2bfcf4",
+          "games_finished": 1,
+          "initialization_digest": "fa99f45262b69fd9efe4c872c2b5a9f08611e3416f7bb3aa11d3f90372e1d0c0",
+          "model_config": {
+            "action_dim": 32,
+            "base_config": {
+              "board_size": 9,
+              "dropout": 0.1,
+              "hidden_dim": 64,
+              "queen_cycles": 2,
+              "scout_steps": 2,
+              "spatial_channels": 32,
+              "worker_steps": 2
+            },
+            "latent_dim": 64
+          },
+          "model_sha256": "8cfb226e3146ca49be40a884e4f6aab8dff40d1fb4f4c4f713ed46f20612e8ed",
+          "optimizer_steps": 10,
+          "phase": "complete",
+          "provenance": {
+            "external_engine_labels": false,
+            "historical_replay_import": "NOT_IMPORTED: historical replay has not been reconstructed and verified as complete trajectories",
+            "initialization_shared_between_arms": true,
+            "purpose": "go_training",
+            "training_targets": "exact rules + AHR selfplay/search only",
+            "unknown_prefix_policy": "transitions only; no invented outcomes"
+          },
+          "run_id": "ahr-v3-pilot-B-29dff47d92",
+          "source_identity": {
+            "experiments/ahr_jepa_v3/00_shared.ipynb": "db6ef3dd12aa294109b818c8bb654ba9e167ce7e5aa4adf600fa4c6ad7924449",
+            "experiments/ahr_jepa_v3/08_predictive_ahr.ipynb": "4d4dd1799775e9592372205526450ab83f3d85a8609e97dce18866a651a85c72",
+            "experiments/ahr_jepa_v3/09_trajectory_learning.ipynb": "f5f5c20b3160f309ebe302674dec89ab1d486a67b7826e71cabdb4fe0c61cffd",
+            "experiments/ahr_jepa_v3/11_controlled_evaluation.ipynb": "832092e406f952cd4ad6114b45e9194c42a2ef4f69b25d5bc71d0088f69b7b7a",
+            "notebooks/00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+            "notebooks/01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+            "notebooks/02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+            "notebooks/03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+            "notebooks/04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+            "notebooks/05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+            "notebooks/06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+            "notebooks/07_csp_to_go_transfer_tests.ipynb": "a6c9b3d4b0152be85e9ed20c55e65eab600ecb3b2167dc653c4be4611a287a14",
+            "notebooks/08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3",
+            "notebooks/09_selfplay_and_improvement.ipynb": "047054ba779c78928c2265f2aac63e1c2c7d15f1a65081019d8a404f7d07478a",
+            "notebooks/10_gtp_engine_interface.ipynb": "2306b2f28310a163d3bcc0526590bd42c8eda85e85f60d00c20653b505f7d482",
+            "notebooks/11_engine_arena_and_evaluation.ipynb": "d90aeecd75541c1f815a1d8df831f67ad844650f721e5d841dcf0e1f780ae60e",
+            "notebooks/12_play_and_watch.ipynb": "6d5490cf8885de99e175dc3d00d9ad3225f98e975fdc72c56a275f45058680b4",
+            "notebooks/13_export_backup_and_restore.ipynb": "c6a1425022746f381acf855d889065a768385fdcf385dcf82fd2cee2e6b34568"
+          }
+        },
+        "legal": true,
+        "run_id": "ahr-v3-pilot-B-29dff47d92"
+      },
+      {
+        "action": 8,
+        "checkpoint": {
+          "checkpoint_file": "checkpoints/ahr-v3-pilot-C-29dff47d92/step-000000108-5b05e5ff.pt",
+          "checkpoint_sha256": "2ed9abcef52d020d0092df2e652da8f84f76d776a4ea4e84127a896cb4e3146a",
+          "config": {
+            "actor_device": "cuda:1",
+            "batch_size": 32,
+            "board_size": 9,
+            "checkpoint_every_events": 32,
+            "checkpoint_every_optimizer_steps": 250,
+            "checkpoint_interval_s": 600.0,
+            "curriculum_path": "experiments/ahr_jepa_v3/data/curriculum.json",
+            "device": "cuda:0",
+            "ema_decay": 0.99,
+            "exploration": 0.1,
+            "games": 1,
+            "initial_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+            "initial_run": "go09-first-selfplay-v1",
+            "initial_selection": "latest",
+            "jepa_weight": 0.1,
+            "komi": 7.5,
+            "learning_rate": 0.0003,
+            "max_plies": 256,
+            "opponent_probability": 0.25,
+            "opponent_snapshots": 8,
+            "purpose": "go_training",
+            "queen_cycles": 2,
+            "reanalysis_per_game": 2,
+            "reanalysis_search": {
+              "branch_width": 12,
+              "max_depth": 5,
+              "max_nodes": 384,
+              "queen_cycles": 2
+            },
+            "reanalysis_time_budget_s": 2.0,
+            "replay_capacity_games": 4096,
+            "search": {
+              "branch_width": 8,
+              "max_depth": 4,
+              "max_nodes": 192,
+              "queen_cycles": 2
+            },
+            "seed": 2026092799,
+            "snapshot_every_games": 8,
+            "tactical_fraction": 0.25,
+            "temperature": 1.0,
+            "time_budget_s": 1.0,
+            "updates_per_game": 2,
+            "use_jepa": true,
+            "validation_force_pass": false,
+            "warmup_updates": 8,
+            "weight_decay": 0.0001
+          },
+          "curriculum_sha256": "08016eee499c1dc3460908687027df575457b44cce989979487ccd2cfa2bfcf4",
+          "games_finished": 1,
+          "initialization_digest": "fa99f45262b69fd9efe4c872c2b5a9f08611e3416f7bb3aa11d3f90372e1d0c0",
+          "model_config": {
+            "action_dim": 32,
+            "base_config": {
+              "board_size": 9,
+              "dropout": 0.1,
+              "hidden_dim": 64,
+              "queen_cycles": 2,
+              "scout_steps": 2,
+              "spatial_channels": 32,
+              "worker_steps": 2
+            },
+            "latent_dim": 64
+          },
+          "model_sha256": "dc3a1aa13366feeed7c87c2a751728098477622b060e068ff12a0bd6a09afe63",
+          "optimizer_steps": 10,
+          "phase": "complete",
+          "provenance": {
+            "external_engine_labels": false,
+            "historical_replay_import": "NOT_IMPORTED: historical replay has not been reconstructed and verified as complete trajectories",
+            "initialization_shared_between_arms": true,
+            "purpose": "go_training",
+            "training_targets": "exact rules + AHR selfplay/search only",
+            "unknown_prefix_policy": "transitions only; no invented outcomes"
+          },
+          "run_id": "ahr-v3-pilot-C-29dff47d92",
+          "source_identity": {
+            "experiments/ahr_jepa_v3/00_shared.ipynb": "db6ef3dd12aa294109b818c8bb654ba9e167ce7e5aa4adf600fa4c6ad7924449",
+            "experiments/ahr_jepa_v3/08_predictive_ahr.ipynb": "4d4dd1799775e9592372205526450ab83f3d85a8609e97dce18866a651a85c72",
+            "experiments/ahr_jepa_v3/09_trajectory_learning.ipynb": "f5f5c20b3160f309ebe302674dec89ab1d486a67b7826e71cabdb4fe0c61cffd",
+            "experiments/ahr_jepa_v3/11_controlled_evaluation.ipynb": "832092e406f952cd4ad6114b45e9194c42a2ef4f69b25d5bc71d0088f69b7b7a",
+            "notebooks/00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+            "notebooks/01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+            "notebooks/02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+            "notebooks/03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+            "notebooks/04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+            "notebooks/05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+            "notebooks/06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+            "notebooks/07_csp_to_go_transfer_tests.ipynb": "a6c9b3d4b0152be85e9ed20c55e65eab600ecb3b2167dc653c4be4611a287a14",
+            "notebooks/08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3",
+            "notebooks/09_selfplay_and_improvement.ipynb": "047054ba779c78928c2265f2aac63e1c2c7d15f1a65081019d8a404f7d07478a",
+            "notebooks/10_gtp_engine_interface.ipynb": "2306b2f28310a163d3bcc0526590bd42c8eda85e85f60d00c20653b505f7d482",
+            "notebooks/11_engine_arena_and_evaluation.ipynb": "d90aeecd75541c1f815a1d8df831f67ad844650f721e5d841dcf0e1f780ae60e",
+            "notebooks/12_play_and_watch.ipynb": "6d5490cf8885de99e175dc3d00d9ad3225f98e975fdc72c56a275f45058680b4",
+            "notebooks/13_export_backup_and_restore.ipynb": "c6a1425022746f381acf855d889065a768385fdcf385dcf82fd2cee2e6b34568"
+          }
+        },
+        "legal": true,
+        "run_id": "ahr-v3-pilot-C-29dff47d92"
+      }
+    ],
+    "optimizer_steps_performed": 0,
+    "run_ids": [
+      "ahr-v3-pilot-B-29dff47d92",
+      "ahr-v3-pilot-C-29dff47d92"
+    ],
+    "status": "PASS"
+  },
+  "restored_workspace": "exports/restored/ahr-jepa-v3-pilot-6a551f46bde6-360411ecf772",
+  "run_ids": [
+    "ahr-v3-pilot-B-29dff47d92",
+    "ahr-v3-pilot-C-29dff47d92"
+  ],
+  "status": "VERIFIED_LOCAL"
+}

@@ -1,0 +1,24 @@
+{
+  "archive": "/home/benjamin/workspace/ahr_go/exports/bundles/go09-first-selfplay-v1-54c35167b33c.tar.gz",
+  "historical_source_matched_bundle": true,
+  "off_instance_backup": "DEFERRED_BY_USER_PENDING_HUGGING_FACE_DESTINATION",
+  "recorded_at_utc": "2026-09-24T14:47:44.480327+00:00",
+  "restore_scope": "Individual run exact-resume state and inference. Full multi-run pipeline also requires prior run bundles and experiment reports.",
+  "restored_inference": {
+    "action": 79,
+    "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+    "device": "cpu",
+    "elapsed_s": 0.019332741998368874,
+    "fresh_process": true,
+    "latest_optimizer_step": 512,
+    "legal": true,
+    "model_sha256": "fe976e95ee6e7f68f59ea9d4b32e2007aa2519242ec9634ae3c1fbad2a665233",
+    "selected_optimizer_step": 512,
+    "status": "PASS",
+    "strategic_status": "UNKNOWN"
+  },
+  "run_id": "go09-first-selfplay-v1",
+  "schema": "ahr_generations_v2",
+  "sha256": "511c41b54f4173036abe12f83e2e977043a128efe5776acfd0e89653b7c5f48f",
+  "status": "VERIFIED_LOCAL"
+}

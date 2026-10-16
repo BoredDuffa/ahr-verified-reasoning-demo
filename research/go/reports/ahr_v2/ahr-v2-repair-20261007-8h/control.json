@@ -1,0 +1,247 @@
+{
+  "active_review": null,
+  "last_review_at_utc": "2026-10-08T01:34:09.739493+00:00",
+  "reviews": [
+    {
+      "eval_id": "ahr-v2-repair-20261007-8h-periodic-dev-256",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-07T17:29:18.931238+00:00",
+      "optimizer_step": 256,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-256/report.json",
+      "status": "PASS",
+      "summary": {
+        "attempts": 2,
+        "by_color": {
+          "black": {
+            "attempts": 1,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 0
+          },
+          "white": {
+            "attempts": 1,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 0
+          }
+        },
+        "complete_games": 2,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 2,
+        "observed_half_target": false,
+        "unknown": 0,
+        "wilson_lower_at_least_half": false,
+        "win_rate_all_attempts_lower_bound": 0.0,
+        "win_rate_all_attempts_upper_bound": 0.0,
+        "win_rate_complete_games": 0.0,
+        "win_rate_wilson95_complete_games": [
+          0.0,
+          0.6576197724933469
+        ],
+        "wins": 0
+      },
+      "tactical_diagnostics": {
+        "interpretation": "Capture counts describe observed play, not a proof of optimal moves. Seeded trajectories can be correlated; Wilson intervals are descriptive development evidence.",
+        "total_ahr_stones_captured": 65,
+        "unique_game_trajectories": 2,
+        "wiped_out_games": 1
+      }
+    },
+    {
+      "eval_id": "ahr-v2-repair-20261007-8h-periodic-dev-456",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-07T19:41:27.393996+00:00",
+      "optimizer_step": 456,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-456/report.json",
+      "status": "PASS",
+      "summary": {
+        "attempts": 2,
+        "by_color": {
+          "black": {
+            "attempts": 1,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 0
+          },
+          "white": {
+            "attempts": 1,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 0
+          }
+        },
+        "complete_games": 2,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 2,
+        "observed_half_target": false,
+        "unknown": 0,
+        "wilson_lower_at_least_half": false,
+        "win_rate_all_attempts_lower_bound": 0.0,
+        "win_rate_all_attempts_upper_bound": 0.0,
+        "win_rate_complete_games": 0.0,
+        "win_rate_wilson95_complete_games": [
+          0.0,
+          0.6576197724933469
+        ],
+        "wins": 0
+      },
+      "tactical_diagnostics": {
+        "interpretation": "Capture counts describe observed play, not a proof of optimal moves. Seeded trajectories can be correlated; Wilson intervals are descriptive development evidence.",
+        "total_ahr_stones_captured": 69,
+        "unique_game_trajectories": 2,
+        "wiped_out_games": 1
+      }
+    },
+    {
+      "eval_id": "ahr-v2-repair-20261007-8h-periodic-dev-584",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-07T21:56:25.769850+00:00",
+      "optimizer_step": 584,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-584/report.json",
+      "status": "PASS",
+      "summary": {
+        "attempts": 2,
+        "by_color": {
+          "black": {
+            "attempts": 1,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 0
+          },
+          "white": {
+            "attempts": 1,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 0
+          }
+        },
+        "complete_games": 2,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 2,
+        "observed_half_target": false,
+        "unknown": 0,
+        "wilson_lower_at_least_half": false,
+        "win_rate_all_attempts_lower_bound": 0.0,
+        "win_rate_all_attempts_upper_bound": 0.0,
+        "win_rate_complete_games": 0.0,
+        "win_rate_wilson95_complete_games": [
+          0.0,
+          0.6576197724933469
+        ],
+        "wins": 0
+      },
+      "tactical_diagnostics": {
+        "interpretation": "Capture counts describe observed play, not a proof of optimal moves. Seeded trajectories can be correlated; Wilson intervals are descriptive development evidence.",
+        "total_ahr_stones_captured": 92,
+        "unique_game_trajectories": 2,
+        "wiped_out_games": 2
+      }
+    },
+    {
+      "eval_id": "ahr-v2-repair-20261007-8h-periodic-dev-728",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-08T00:08:20.987720+00:00",
+      "optimizer_step": 728,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-728/report.json",
+      "status": "PASS",
+      "summary": {
+        "attempts": 2,
+        "by_color": {
+          "black": {
+            "attempts": 1,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 0
+          },
+          "white": {
+            "attempts": 1,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 0
+          }
+        },
+        "complete_games": 2,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 2,
+        "observed_half_target": false,
+        "unknown": 0,
+        "wilson_lower_at_least_half": false,
+        "win_rate_all_attempts_lower_bound": 0.0,
+        "win_rate_all_attempts_upper_bound": 0.0,
+        "win_rate_complete_games": 0.0,
+        "win_rate_wilson95_complete_games": [
+          0.0,
+          0.6576197724933469
+        ],
+        "wins": 0
+      },
+      "tactical_diagnostics": {
+        "interpretation": "Capture counts describe observed play, not a proof of optimal moves. Seeded trajectories can be correlated; Wilson intervals are descriptive development evidence.",
+        "total_ahr_stones_captured": 69,
+        "unique_game_trajectories": 2,
+        "wiped_out_games": 2
+      }
+    },
+    {
+      "eval_id": "ahr-v2-repair-20261007-8h-final-dev-752",
+      "final_development_review": true,
+      "finished_at_utc": "2026-10-08T01:34:09.739493+00:00",
+      "optimizer_step": 752,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-final-dev-752/report.json",
+      "status": "PASS",
+      "summary": {
+        "attempts": 8,
+        "by_color": {
+          "black": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 4,
+            "unknown": 0,
+            "win": 0
+          },
+          "white": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 4,
+            "unknown": 0,
+            "win": 0
+          }
+        },
+        "complete_games": 8,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 8,
+        "observed_half_target": false,
+        "unknown": 0,
+        "wilson_lower_at_least_half": false,
+        "win_rate_all_attempts_lower_bound": 0.0,
+        "win_rate_all_attempts_upper_bound": 0.0,
+        "win_rate_complete_games": 0.0,
+        "win_rate_wilson95_complete_games": [
+          0.0,
+          0.32440756488388023
+        ],
+        "wins": 0
+      },
+      "tactical_diagnostics": {
+        "interpretation": "Capture counts describe observed play, not a proof of optimal moves. Seeded trajectories can be correlated; Wilson intervals are descriptive development evidence.",
+        "total_ahr_stones_captured": 380,
+        "unique_game_trajectories": 7,
+        "wiped_out_games": 8
+      }
+    }
+  ],
+  "run_id": "ahr-v2-repair-20261007-8h"
+}

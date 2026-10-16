@@ -1,0 +1,32 @@
+{
+  "schema": "ahr10-independent-reference-audit-v2",
+  "status": "ACCEPTABLE_FOR_CURRENT_FROZEN_7_5_KOMI_1_SECOND_PROTOCOL",
+  "reviewed_at": "2026-09-24T14:50:51.826147+00:00",
+  "scope": "Read-only review of notebook 10 GNU Go adapter and notebook 11 arena integration",
+  "verified": [
+    "Full chronological replay is compared with the complete supplied board/history.",
+    "Fresh state-derived seeded processes have no hidden engine runtime to recover.",
+    "Subprocess timeout kills and reaps the child; no fallback is scored as a win or loss.",
+    "Independent legality verification and project area scoring remain authoritative.",
+    "Whole-call arena timing includes preparation, startup, replay and cleanup.",
+    "External reference is evaluation-only; no training integration found."
+  ],
+  "limitations": [
+    {
+      "finding": "Standalone arena identity omits notebook 10 adapter source.",
+      "current_run_resolution": "Root production family configuration pins all 14 notebooks including 10 and checks the frozen request at every stage; current production covered.",
+      "future_fix": "Add adapter source digest to standalone arena identity in a separately versioned experiment."
+    },
+    {
+      "finding": "General nonstandard komi values are formatted with six significant digits.",
+      "current_run_resolution": "Current fixed komi 7.5 is represented exactly; no mismatch in this experiment.",
+      "future_fix": "Use an explicitly supported exact komi contract or round-trip formatting before broader komi experiments."
+    },
+    {
+      "finding": "An engine-specific timeout shorter than arena budget may be reported as UNKNOWN_PLAYER_ERROR rather than UNKNOWN_DEADLINE.",
+      "current_run_resolution": "Current engine cap is 2 seconds and arena budget is 1 second; the shorter-cap case does not apply. Timeout outcome is always UNKNOWN.",
+      "future_fix": "Classify explicit TimeoutError separately in a new arena version."
+    }
+  ],
+  "files_changed_by_reviewer": false
+}

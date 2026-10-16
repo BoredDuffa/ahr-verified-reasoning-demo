@@ -1,0 +1,85 @@
+{
+  "checks": {
+    "active_game_and_search_restored": true,
+    "all_D4_policy_legality": true,
+    "dev_lockbox_never_sampled": true,
+    "error_resume_exact_trajectory": true,
+    "fresh_kernel_exact_resume": true,
+    "nonempty_optimizer_and_tactical_cursor_fresh_kernel_resume": true,
+    "partial_optimizer_event_never_checkpointed": true,
+    "real_complete_game_and_optimizer_learning": true,
+    "split_before_augmentation": true,
+    "terminal_labels_match_02_oracle": true,
+    "unknown_policy_only": true
+  },
+  "fixtures": [
+    {
+      "bounded_policy_only_rows": true,
+      "completed_games": 2,
+      "device": "cpu",
+      "event_steps": 72,
+      "first_game_seconds": 0.27121139301743824,
+      "fixture_notebook": "reports/ahr_v2/fixtures/repair-training-resume-829eddcbc.ipynb",
+      "fresh_kernel_exact_scientific_state": true,
+      "full_run": "ahr-v2-repair-smoke-829eddcbc-full",
+      "optimizer_fresh_kernel_resume": true,
+      "optimizer_steps": 6,
+      "paused_active_search": true,
+      "paused_after_optimizer_step": true,
+      "player_loader": true,
+      "resumed_run": "ahr-v2-repair-smoke-829eddcbc-resumed",
+      "status": "PASS",
+      "tactical_sampler_cursor": 6,
+      "unknown_games": 0
+    },
+    {
+      "bounded_policy_only_rows": true,
+      "completed_games": 1,
+      "device": "cuda:1",
+      "event_steps": 25,
+      "first_game_seconds": 0.7894192770472728,
+      "fixture_notebook": "reports/ahr_v2/fixtures/repair-training-resume-55a27b2af.ipynb",
+      "fresh_kernel_exact_scientific_state": true,
+      "full_run": "ahr-v2-repair-smoke-55a27b2af-full",
+      "optimizer_fresh_kernel_resume": true,
+      "optimizer_steps": 3,
+      "paused_active_search": true,
+      "paused_after_optimizer_step": true,
+      "player_loader": true,
+      "resumed_run": "ahr-v2-repair-smoke-55a27b2af-resumed",
+      "status": "PASS",
+      "tactical_sampler_cursor": 3,
+      "unknown_games": 0
+    }
+  ],
+  "production_shape": {
+    "active_seconds": 273.9254962612031,
+    "board_size": 9,
+    "completed_games": 1,
+    "device": "cuda:1",
+    "final_loss": 3.6727089881896973,
+    "first_game_seconds": 268.2578525811987,
+    "game_plies": 131,
+    "is_smoke": true,
+    "network": {
+      "blocks": 4,
+      "width": 64
+    },
+    "optimizer_steps": 8,
+    "run_id": "ahr-v2-repair-9x9-smoke-61ef79271",
+    "status": "PASS",
+    "unknown_games": 0,
+    "wall_seconds": 286.56800468600704
+  },
+  "scope": "Disposable checks only; eight-hour production run is launched separately by 10",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/09_calibrated_selfplay_training.ipynb": "d316a791e00c5b7d585cdfc57a560c8f8d3eaf93789f44f8dcf19a53121c351b"
+  },
+  "status": "PASS",
+  "validated_at_utc": "2026-10-07T15:08:18.498233+00:00"
+}

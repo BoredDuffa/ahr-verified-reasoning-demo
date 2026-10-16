@@ -1,0 +1,14 @@
+{
+  "schema": "ahr-publication-static-validation/v1",
+  "manifest_files": 1118,
+  "notebooks": 246,
+  "code_cells": 979,
+  "json_files": 728,
+  "python_files": 93,
+  "source_hashes_verified": true,
+  "published_hashes_verified": true,
+  "notebook_code_hashes_verified": true,
+  "syntax_issues": [],
+  "headline_json_checks": 22,
+  "notebook_execution": "Not rerun: historical and GPU/asset-dependent research snapshots. Static schema/syntax checks are not runtime validation."
+}

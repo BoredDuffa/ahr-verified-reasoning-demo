@@ -1,0 +1,245 @@
+{
+  "clinical_use": "forbidden",
+  "created_at_unix": 1780861570.3731265,
+  "items": [
+    {
+      "answer": "No such graph exists.",
+      "backend": "theorem proof plus exhaustive graph check",
+      "backend_type": "exact proof + exhaustive symbolic verifier",
+      "id": "graph_global_constraint",
+      "verification": {
+        "edge_variables": 15,
+        "graphs_checked": 32768,
+        "proof": [
+          "If deleting any single edge disconnects a connected graph, then every edge is a bridge.",
+          "No edge lying on a cycle can be a bridge.",
+          "Therefore the graph is acyclic; a connected acyclic graph is a tree.",
+          "A tree has zero triangles, contradicting the requirement of exactly two triangles."
+        ],
+        "vertices": 6,
+        "witnesses_found": 0
+      }
+    },
+    {
+      "answer": "Impossible under the revised rule.",
+      "backend": "exact state-space search plus proof",
+      "backend_type": "exact state-space verifier",
+      "id": "hanoi_rule_revision",
+      "verification": {
+        "bfs_found_goal": false,
+        "expanded_states": 200,
+        "proof": [
+          "The largest disk must eventually move from A to C.",
+          "Before that move, all four smaller disks must be off A and off C, hence stacked on B.",
+          "Moving those four disks off A requires at least 2^4 - 1 = 15 moves, so this cannot happen before move 8.",
+          "After move 8, peg B may hold at most two disks.",
+          "The required precondition would put four disks on B, so completion is impossible."
+        ]
+      }
+    },
+    {
+      "answer": "Policy committed: use exact/proof backends with a 12-step explanation budget per question; decline or classify as underdetermined below 0.85 confidence.",
+      "backend": "demo policy wrapper",
+      "backend_type": "policy wrapper",
+      "id": "halting_calibration",
+      "verification": {
+        "answered_policy_before_attempts": true,
+        "confidence_threshold": 0.85,
+        "decline_behavior": "Return a determinate underdetermined/meta classification instead of fabricating assumptions.",
+        "step_budget_per_question": 12
+      }
+    },
+    {
+      "answer": "Beta of alpha is seven and gamma contains it 47.",
+      "backend": "symbolic memory/binding calculation",
+      "backend_type": "symbolic calculator",
+      "id": "long_range_binding",
+      "verification": {
+        "alpha": 211,
+        "beta_alpha": 7,
+        "delta": "obstinacy",
+        "epsilon_appended": 47,
+        "gamma_contains_beta_alpha": true,
+        "len_delta": 9,
+        "word_count_before_appended_epsilon": 9
+      }
+    },
+    {
+      "answer": "No single numerical probability is determined without a prior or model for the unknown red/blue proportion.",
+      "backend": "underdetermination detector",
+      "backend_type": "underdetermination detector",
+      "id": "insufficient_information_marbles",
+      "verification": {
+        "conditional_probability_if_R_known": "(R - 7) / 90",
+        "given_actual_red_count_R": "unknown",
+        "reason": "Different possible initial red counts R give different next-draw probabilities after observing 7 red and 3 blue."
+      }
+    },
+    {
+      "answer": "No five-operation composition produces the target under the declared operation semantics.",
+      "backend": "exhaustive finite program search",
+      "backend_type": "AHR domain verifier / exhaustive finite program search",
+      "id": "operation_synthesis_len5",
+      "verification": {
+        "closest_examples": [
+          {
+            "output": [
+              0
+            ],
+            "program": [
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DELTA"
+            ],
+            "score": 5
+          },
+          {
+            "output": [
+              0,
+              0
+            ],
+            "program": [
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DOUBLE-EVENS"
+            ],
+            "score": 10
+          },
+          {
+            "output": [
+              0,
+              0
+            ],
+            "program": [
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "DELTA",
+              "REV"
+            ],
+            "score": 10
+          }
+        ],
+        "programs_checked": 1024,
+        "solutions_found": 0,
+        "start": [
+          1,
+          4,
+          9,
+          16,
+          25,
+          36
+        ],
+        "target": [
+          1,
+          6,
+          5,
+          14,
+          9
+        ],
+        "zip_self_semantics": "[a,b,c,d] -> [a,b,b,c,c,d]"
+      }
+    },
+    {
+      "answer": "(a) $127.89; (b) $56.84; (c) $127.89.",
+      "backend": "exact rational branch arithmetic",
+      "backend_type": "symbolic exact arithmetic",
+      "id": "counterfactual_bank_balance",
+      "verification": {
+        "actual_branch": {
+          "after_09_deposit": "200.00",
+          "after_10_interest": "206.00",
+          "after_11_withdrawal": "126.00",
+          "after_12_interest": "127.89"
+        },
+        "contamination_detected": false,
+        "counterfactual_branch": {
+          "after_09_deposit": "200.00",
+          "after_10_interest": "206.00",
+          "after_11_withdrawal": "56.00",
+          "after_12_interest": "56.84"
+        },
+        "fresh_actual_branch": {
+          "after_09_deposit": "200.00",
+          "after_10_interest": "206.00",
+          "after_11_withdrawal": "126.00",
+          "after_12_interest": "127.89"
+        }
+      }
+    },
+    {
+      "answer": "As stated, there is no uniquely determined simplest function, so a single f^{-1}(73) is not well-posed. Under the unique cubic-interpolant convention, there are no integer preimages of 73.",
+      "backend": "well-posedness check plus optional polynomial convention",
+      "backend_type": "well-posedness detector + symbolic convention check",
+      "id": "inverse_nonunique_preimage",
+      "verification": {
+        "cubic_interpolant": "f(x)=(-2x^3 + 23x^2 + 7x + 15)/15",
+        "integer_root_equation_for_f_x_equals_73": "2x^3 - 23x^2 - 7x + 1080 = 0",
+        "integer_roots_under_cubic_convention": [],
+        "nonuniqueness_reason": "Infinitely many integer-valued rules can match four samples and disagree at 73.",
+        "observations": {
+          "-3": 17,
+          "0": 1,
+          "2": 7,
+          "5": 25
+        }
+      }
+    },
+    {
+      "answer": "All 40 green-eyed inhabitants leave together at midnight on the 40th night; the 60 amber-eyed inhabitants never leave.",
+      "backend": "standard common-knowledge induction proof",
+      "backend_type": "proof template",
+      "id": "green_eyes_common_knowledge",
+      "verification": {
+        "amber_group_knowledge": "Amber-eyed inhabitants see all 40 green-eyed people and therefore expect the 40-night induction; after they leave, amber-eyed people still cannot infer they are green.",
+        "base_case": "If there were 1 green-eyed person, that person would see no green eyes and leave on night 1.",
+        "induction": "If there are k green-eyed people, each sees k-1 green-eyed people. When no one leaves through night k-1, each infers they are the kth and all k leave on night k.",
+        "nested_depth_required": 40
+      }
+    },
+    {
+      "answer": "The next three terms are 256, 386, 562.",
+      "backend": "finite-difference rule verification",
+      "backend_type": "symbolic sequence verifier",
+      "id": "sequence_decoy",
+      "verification": {
+        "closed_form": "a_n = sum_{k=0}^4 binomial(n-1,k)",
+        "given": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          31,
+          57,
+          99,
+          163
+        ],
+        "matches_given": true,
+        "next_three": [
+          256,
+          386,
+          562
+        ],
+        "verified_prefix": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          31,
+          57,
+          99,
+          163
+        ]
+      }
+    }
+  ],
+  "kind": "ahr_question_answer_demo",
+  "passed": true,
+  "question_set": "boss_demo"
+}

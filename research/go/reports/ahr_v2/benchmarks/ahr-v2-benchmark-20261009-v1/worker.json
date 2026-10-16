@@ -1,0 +1,98 @@
+{
+  "configuration_sha256": "f0dbfc9b3ce1da4c0dd945b7231b3cb454f9ea8a1ca758f35adef99c2878693d",
+  "detail": {
+    "interpretation": "Observed development results; paired openings are correlated. CPU opponents and timed GPU AHR use different compute budgets.",
+    "speed_summary": [
+      {
+        "device": "cpu",
+        "errors": 0,
+        "max_overrun_seconds": 0.06451210897648707,
+        "max_seconds": 1.064512108976487,
+        "max_visits": 512,
+        "measured": 12,
+        "median_seconds": 1.0379023110144772,
+        "median_visits": 184.0,
+        "min_visits": 96,
+        "move_seconds": 1.0,
+        "overruns": 11,
+        "p95_seconds": 1.0613463843386852
+      },
+      {
+        "device": "cpu",
+        "errors": 0,
+        "max_overrun_seconds": 0.08297978196060285,
+        "max_seconds": 2.082979781960603,
+        "max_visits": 512,
+        "measured": 12,
+        "median_seconds": 2.027177706011571,
+        "median_visits": 320.0,
+        "min_visits": 280,
+        "move_seconds": 2.0,
+        "overruns": 9,
+        "p95_seconds": 2.066249174697441
+      },
+      {
+        "device": "cuda:0",
+        "errors": 0,
+        "max_overrun_seconds": 0.0644286090391688,
+        "max_seconds": 1.0644286090391688,
+        "max_visits": 512,
+        "measured": 12,
+        "median_seconds": 1.0398016829858534,
+        "median_visits": 200.0,
+        "min_visits": 120,
+        "move_seconds": 1.0,
+        "overruns": 10,
+        "p95_seconds": 1.059470878780121
+      },
+      {
+        "device": "cuda:0",
+        "errors": 0,
+        "max_overrun_seconds": 0.07831026194617152,
+        "max_seconds": 2.0783102619461715,
+        "max_visits": 512,
+        "measured": 12,
+        "median_seconds": 2.0433599689858966,
+        "median_visits": 344.0,
+        "min_visits": 272,
+        "move_seconds": 2.0,
+        "overruns": 9,
+        "p95_seconds": 2.071160452827462
+      }
+    ],
+    "summary": {
+      "DRAW": 0,
+      "LOSS": 69,
+      "UNKNOWN": 0,
+      "WIN": 31,
+      "ahr_moves": 3564,
+      "attempts": 100,
+      "completed": 100,
+      "timing": {
+        "budget_overrun_rate": 0.9323793490460157,
+        "budget_overruns": 3323,
+        "maximum": 2.225929016014561,
+        "mean": 2.008964731529577,
+        "p50": 2.040261565503897,
+        "p95": 2.0743112462805584,
+        "p99": 2.0959396913967794,
+        "policy_support_mean": 339.7253086419753,
+        "reading_nodes_mean": 109.09539842873176,
+        "simulations_mean": 347.37626262626264,
+        "zero_simulation_moves": 0
+      },
+      "wilson_95": [
+        0.22779697212376038,
+        0.40626055719489407
+      ],
+      "wilson_95_note": "Assumes independent Bernoulli games. Paired openings violate this assumption; descriptive only, not rank or strength certification.",
+      "win_rate_all_attempts_lower": 0.31,
+      "win_rate_completed": 0.31
+    }
+  },
+  "resume": "Run All in notebook 17 with the same settings and run ID.",
+  "run_id": "ahr-v2-benchmark-20261009-v1",
+  "stage": "finished",
+  "status": "COMPLETE",
+  "updated_at_utc": "2026-10-09T19:59:24.018933+00:00"
+}

@@ -1,0 +1,121 @@
+{
+  "actions_equal": true,
+  "after": {
+    "actions": [
+      79,
+      0,
+      1,
+      3,
+      9,
+      8,
+      0,
+      11,
+      80,
+      74,
+      71
+    ],
+    "actual_search_plies": 11,
+    "commits_in_segment": 2,
+    "elapsed_s": 13.642888533999212,
+    "events": 12,
+    "events_per_s": 0.8795791279900149,
+    "final_event": 8715,
+    "final_phase": "play",
+    "full_state_roundtrip_exact": true,
+    "initial_commit_s_excluded": 4.331143527000677,
+    "label": "after",
+    "retained_checkpoints": 3,
+    "run_id": "selfplay09-v2-profile-after-eb5146630a",
+    "timings_s": {
+      "actor_construction_s": {
+        "count": 1,
+        "mean": 0.0063901869871187955,
+        "total": 0.0063901869871187955
+      },
+      "commit_s": {
+        "count": 2,
+        "mean": 6.3834255449910415,
+        "total": 12.766851089982083
+      },
+      "event_s": {
+        "count": 12,
+        "mean": 0.0723964973318895,
+        "total": 0.868757967982674
+      },
+      "pack_s": {
+        "count": 2,
+        "mean": 0.003581199998734519,
+        "total": 0.007162399997469038
+      },
+      "search_and_behavior_s": {
+        "count": 11,
+        "mean": 0.07731573254303922,
+        "total": 0.8504730579734314
+      }
+    }
+  },
+  "baseline_notebook_sha256": "26555064ab7e500baea8cacb5fc9ba9eb2f97277023f3c8b1ed8e72d77ac9825",
+  "before": {
+    "actions": [
+      79,
+      0,
+      1,
+      3,
+      9,
+      8,
+      0,
+      11,
+      80,
+      74,
+      71
+    ],
+    "actual_search_plies": 11,
+    "commits_in_segment": 12,
+    "elapsed_s": 98.18417608199525,
+    "events": 12,
+    "events_per_s": 0.12221928704660717,
+    "final_event": 8715,
+    "final_phase": "play",
+    "full_state_roundtrip_exact": true,
+    "initial_commit_s_excluded": 4.462636588985333,
+    "label": "before",
+    "retained_checkpoints": 3,
+    "run_id": "selfplay09-v2-profile-before-f0e9f7cc43",
+    "timings_s": {
+      "actor_construction_s": {
+        "count": 11,
+        "mean": 0.00653179245471785,
+        "total": 0.07184971700189635
+      },
+      "commit_s": {
+        "count": 12,
+        "mean": 8.095059787997647,
+        "total": 97.14071745597175
+      },
+      "event_s": {
+        "count": 12,
+        "mean": 0.08363608749641571,
+        "total": 1.0036330499569885
+      },
+      "pack_s": {
+        "count": 12,
+        "mean": 0.003307117076474242,
+        "total": 0.0396854049176909
+      },
+      "search_and_behavior_s": {
+        "count": 11,
+        "mean": 0.07953199445513416,
+        "total": 0.8748519390064757
+      }
+    }
+  },
+  "device": "cpu",
+  "limits": "12-event CPU full-replay diagnostic; not sustained games/hour or a playing-strength result",
+  "new_export_source_sha256": "f1c9bfea127d737339682d88a281d88e03450518ea105bdf552e4fa2307236df",
+  "replay_positions": 2048,
+  "schema": "ahr_selfplay_v2_profile_v1",
+  "segment_speedup": 7.196729331718288,
+  "source_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+  "source_run": "go09-first-selfplay-v1",
+  "status": "PASS"
+}

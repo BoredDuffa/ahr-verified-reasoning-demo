@@ -1,0 +1,19 @@
+{
+  "attach": "tmux attach -t ahr-go-native-v4",
+  "configuration_sha256": "afa84701e1208496cb71b738af3bcc45a2cfa15da0798f7009019c8e08c455db",
+  "controller_log": "reports/ahr_native_v4/controller.log",
+  "detach": "Ctrl-b, then d",
+  "device": "cuda:1",
+  "final_games": 200,
+  "launched_at_utc": "2026-10-01T16:16:48.101343+00:00",
+  "resume": "Unchanged source/config; fresh ahr-go kernel with AHR_NATIVE_V4_RUN=1; Run All in 04_pipeline.ipynb",
+  "session": "ahr-go-native-v4",
+  "status": "LAUNCHED",
+  "training_targets": [
+    128,
+    256,
+    512,
+    1024,
+    2048
+  ]
+}

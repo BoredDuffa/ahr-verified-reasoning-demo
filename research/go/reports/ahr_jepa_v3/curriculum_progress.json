@@ -1,0 +1,15 @@
+{
+  "categories": {
+    "atari_escape": 77,
+    "capture": 77,
+    "connection": 77,
+    "ladder_bounded": 77,
+    "life_death_bounded": 75
+  },
+  "claims": "Actual case counts are reported; bounded collection does not imply every target quota was filled",
+  "collection_bound": 160,
+  "examples": 383,
+  "sequences": 1511,
+  "sha256": "08016eee499c1dc3460908687027df575457b44cce989979487ccd2cfa2bfcf4",
+  "status": "COMPLETE"
+}

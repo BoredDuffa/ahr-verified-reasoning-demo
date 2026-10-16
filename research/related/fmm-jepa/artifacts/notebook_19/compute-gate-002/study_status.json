@@ -1,0 +1,10 @@
+{
+  "phase": "finished",
+  "report": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_19/compute-gate-002/report.html",
+  "signals": {
+    "learned_global_prior": "NO_COMPLETE_FAVORABLE_SIGNAL",
+    "learned_optimized": "NO_COMPLETE_FAVORABLE_SIGNAL"
+  },
+  "status": "COMPLETE",
+  "updated_unix": 1792003676.6636949
+}

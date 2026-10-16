@@ -1,0 +1,19 @@
+{
+  "00_contracts_and_recovery.ipynb": "f62e0aaecc40bb863432624cece6d2b94ad52b8358b675af23da2c3d94ce2851",
+  "01_rules_and_replay.ipynb": "fbce9cd231d56a81854a79a05de9e729be5561070d1deff2c42e9719b58c8f28",
+  "02_scout_worker_network.ipynb": "c6528f7cb8a8a9f11b331ba528e98f86de7990672e5e1cfcbb58ddcd2a40834a",
+  "03_batched_puct_search.ipynb": "2e7b653d897df6927bebaa978509c1a0ac1b8cfd23358b65e7c69e481c350057",
+  "04_selfplay_and_training.ipynb": "7ad70b7d30f4591a5fad0aeba1eb4db0478d0380a460674365ca627947f1272c",
+  "05_evaluation_and_progress.ipynb": "c96848cdeec294ff6af0e716a70ef54389f284ad97fd08a0a35b90d45be7b19b",
+  "06_play_and_watch.ipynb": "dc225c94e11509a480fb52c4b07d448e3241cd24413fd2489b7dcd9342a2a2f4",
+  "07_validate_and_launch.ipynb": "557038685ec75ca1003bae3494769352d2adf3a1a5aed11cf7d7853a269a474b",
+  "08_tactical_constraints_and_search.ipynb": "3e949f963ce7a0c16d14ca6900fe88a2603006050adaa263bd503ca60b069d63",
+  "09_calibrated_selfplay_training.ipynb": "cd0cf23160f6684f7df91c715c0c9cbda2593df6aecd9367060a47f9653523fa",
+  "10_repaired_evaluation_and_launch.ipynb": "37e871c169150955c70263d7199509821adb4475909d66e4e5a8e75deaefa256",
+  "11_play_revised_player.ipynb": "ed84e7fe8d19e6282bace2496d6061579c19cac46bcd056176f9fa4702737d18",
+  "12_teacher_dataset_and_targets.ipynb": "32e1f5e8b34d9adbc41d172a6cf9f3b3c1fa524f991597b19af81e78ec792f01",
+  "13_teacher_pretraining_and_recovery.ipynb": "597c4989b9260b0814ac7d7a4a283dbb9869038be31e24afde93a12fa4961bd7",
+  "14_worker_reading_and_search.ipynb": "1e874260beba5f3c8adc79b675892e405d2681b6213b74024ae9093ded450fc9",
+  "15_teacher_evaluation_and_launch.ipynb": "e2e1a7c926edba96855dfeaee2f3e92f557d9e0f5094ac0fd6c1b03528cd0beb",
+  "16_play_teacher_trained_player.ipynb": "15fea67c0ea5fb664bb7596dfae016caf3e48fd77b6bf2ba8e0056ab757be2bd"
+}

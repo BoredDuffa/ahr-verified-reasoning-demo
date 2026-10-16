@@ -1,0 +1,114 @@
+{
+  "generated_at_utc": "2026-10-01T00:47:22.030789+00:00",
+  "interpretation": "Progress only. Training completion and prediction loss do not establish playing strength.",
+  "missing_inputs": [],
+  "pipeline": {
+    "current": null,
+    "stage_index": 34,
+    "status": "COMPLETE",
+    "updated_at_utc": "2026-10-01T00:46:43.540430+00:00"
+  },
+  "schema": "ahr_v3_progress",
+  "source_inventory": {
+    "config/ahr_jepa_v3.json": {
+      "bytes": 14429,
+      "sha256": "e3eb6f38bc606a419833a412b634c098e5a0625c135dcc7fbbbde9eb0b4d4c67"
+    },
+    "reports/ahr_jepa_v3/ahr-v3-B-s01_training.json": {
+      "bytes": 2091251,
+      "sha256": "9cacfb40884a0176468c4be2beb8745237542cab29e5ba56461a4791246117d5"
+    },
+    "reports/ahr_jepa_v3/ahr-v3-B-s02_training.json": {
+      "bytes": 2093301,
+      "sha256": "b13882c71876384f5c960d122399187de2e88610aa3610690ce8e89a82536af6"
+    },
+    "reports/ahr_jepa_v3/ahr-v3-B-s03_training.json": {
+      "bytes": 2092825,
+      "sha256": "05666c94713e2bf38eec1c59475547e82c7687125115675a9498f10c5e87ecd7"
+    },
+    "reports/ahr_jepa_v3/ahr-v3-C-s01_training.json": {
+      "bytes": 2074943,
+      "sha256": "cb350c85157ee7520a842801ab66eeedebdb0c801a1a640bbbf9d4f33137c1b1"
+    },
+    "reports/ahr_jepa_v3/ahr-v3-C-s02_training.json": {
+      "bytes": 2069650,
+      "sha256": "79d43dda3c983b4d5368eddba8dd4d5b7488546636d773a986f80a119a400c8f"
+    },
+    "reports/ahr_jepa_v3/ahr-v3-C-s03_training.json": {
+      "bytes": 2076070,
+      "sha256": "a530b93c6552ebb3e53ab1f91e4b25d880a3e4341e8d6695947458d38a18e721"
+    },
+    "reports/pipeline-ahr-jepa-v3.json": {
+      "bytes": 20912,
+      "sha256": "74506f2d8814549815f2372dc627524aff7d6abc13937fe764ff2b2a1f9984fb"
+    }
+  },
+  "training": [
+    {
+      "arm": "B",
+      "games": 128,
+      "optimizer_steps": 2304,
+      "planned_games": 128,
+      "planned_updates": 2304,
+      "run_id": "ahr-v3-B-s01",
+      "seed": 2026092701,
+      "status": "COMPLETE",
+      "unknown_games": 0
+    },
+    {
+      "arm": "C",
+      "games": 128,
+      "optimizer_steps": 2304,
+      "planned_games": 128,
+      "planned_updates": 2304,
+      "run_id": "ahr-v3-C-s01",
+      "seed": 2026092701,
+      "status": "COMPLETE",
+      "unknown_games": 0
+    },
+    {
+      "arm": "B",
+      "games": 128,
+      "optimizer_steps": 2304,
+      "planned_games": 128,
+      "planned_updates": 2304,
+      "run_id": "ahr-v3-B-s02",
+      "seed": 2026092702,
+      "status": "COMPLETE",
+      "unknown_games": 1
+    },
+    {
+      "arm": "C",
+      "games": 128,
+      "optimizer_steps": 2304,
+      "planned_games": 128,
+      "planned_updates": 2304,
+      "run_id": "ahr-v3-C-s02",
+      "seed": 2026092702,
+      "status": "COMPLETE",
+      "unknown_games": 0
+    },
+    {
+      "arm": "B",
+      "games": 128,
+      "optimizer_steps": 2304,
+      "planned_games": 128,
+      "planned_updates": 2304,
+      "run_id": "ahr-v3-B-s03",
+      "seed": 2026092703,
+      "status": "COMPLETE",
+      "unknown_games": 0
+    },
+    {
+      "arm": "C",
+      "games": 128,
+      "optimizer_steps": 2304,
+      "planned_games": 128,
+      "planned_updates": 2304,
+      "run_id": "ahr-v3-C-s03",
+      "seed": 2026092703,
+      "status": "COMPLETE",
+      "unknown_games": 0
+    }
+  ]
+}

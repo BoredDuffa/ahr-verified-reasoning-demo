@@ -1,0 +1,81 @@
+{
+  "preparation": {
+    "cache_id": "go9x9-teacher-v1",
+    "dev_positions": 8192,
+    "games_per_commit": 128,
+    "max_positions_per_game": 32,
+    "seed": 2026100812,
+    "train_positions": 500000
+  },
+  "reviews": {
+    "batch_size": 8,
+    "comparison_games": 8,
+    "confirmation_games": 16,
+    "game_time_seconds": 900.0,
+    "higher_level_games": 8,
+    "max_plies": 600,
+    "move_time_seconds": null,
+    "periodic_games": 4,
+    "periodic_steps": [
+      2000,
+      8000
+    ],
+    "seed": 2026100815,
+    "simulations": 128
+  },
+  "run_id": "ahr-v2-teacher-20261008",
+  "schema": "ahr-v2-teacher-pipeline-v1",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+    "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+    "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+    "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+    "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+    "experiments/ahr_v2/15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+    "experiments/ahr_v2/16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46"
+  },
+  "test_consumed": false,
+  "training": {
+    "batch_size": 512,
+    "board_size": 9,
+    "cache_id": "go9x9-teacher-v1",
+    "checkpoint_optimizer_steps": 100,
+    "checkpoint_seconds": 120,
+    "cpu_threads": 4,
+    "development_rows": 2048,
+    "device": "cuda:1",
+    "evaluate_every_steps": 500,
+    "gradient_clip": 2.0,
+    "is_smoke": false,
+    "learning_rate": 0.0005,
+    "loss_weights": {
+      "game_outcome": 0.0,
+      "ownership": 0.25,
+      "policy": 1.0,
+      "score": 0.5,
+      "teacher_value": 1.0
+    },
+    "max_epochs": 12,
+    "max_optimizer_steps": 11724,
+    "minimum_lr_fraction": 0.1,
+    "network": {
+      "blocks": 6,
+      "width": 96
+    },
+    "precision": "bfloat16",
+    "run_id": "ahr-v2-teacher-20261008",
+    "schema": "ahr-go-v2-teacher-training-v1",
+    "seed": 260810,
+    "shuffle_block_rows": 16384,
+    "time_budget_hours": 8.0,
+    "train_rows_limit": null,
+    "training_source": "quintic_go9x9_katago_teacher_and_recorded_game_outcomes",
+    "value_target_mapping": "signed_teacher_scalar_to_soft_loss_win_no_draw_claim",
+    "warmup_steps": 200,
+    "weight_decay": 0.0001
+  }
+}

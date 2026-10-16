@@ -1,0 +1,473 @@
+{
+  "config": {
+    "ahr_move_seconds": 2.0,
+    "batch_size": 8,
+    "board_size": 9,
+    "candidate_file": "step-000008016-c19b207e.pt",
+    "device": "cuda:1",
+    "empty_board_baseline": false,
+    "game_time_seconds": 1800.0,
+    "gtp_timeout_seconds": 90.0,
+    "komi": 7.5,
+    "max_opening_attempts": 10000,
+    "max_plies": 600,
+    "max_simulations": 512,
+    "opening_plies": 8,
+    "opening_temperature": 1.25,
+    "profiles": [
+      {
+        "games": 4,
+        "id": "katago-v1",
+        "kind": "katago",
+        "visits": 1
+      }
+    ],
+    "purpose": "development",
+    "reading_quantum": 16,
+    "reading_total_nodes": 256,
+    "reading_wall_time_seconds": 0.05,
+    "run_id": "ahr-v2-katago-econ-20261011-v1-previous-checkpoint-screen-plan",
+    "seed": 2026104279,
+    "speed_devices": [
+      "cuda:1"
+    ],
+    "speed_max_simulations": 512,
+    "speed_move_seconds": [
+      2.0
+    ],
+    "speed_positions": 6,
+    "torch_threads": 4,
+    "training_run_id": "ahr-v2-teacher-20261008"
+  },
+  "coverage": {
+    "attempts": 3,
+    "balanced_pairs": 2,
+    "development_family_overlap": 0,
+    "empty_board_pairs": 0,
+    "fresh_opening_families": 2,
+    "games": 4,
+    "opening_plies": 8,
+    "prior_review_family_overlap": 0,
+    "training_family_overlap": 0
+  },
+  "games": [
+    {
+      "ahr_color": 1,
+      "family_sha": "8feb5ef61732c7bc03e35dafe59d92896d714c9d022a253b97435c48384e2975",
+      "game_index": 0,
+      "opening_actions": [
+        20,
+        49,
+        33,
+        39,
+        37,
+        56,
+        51,
+        21
+      ],
+      "opening_family": "8feb5ef61732c7bc03e35dafe59d92896d714c9d022a253b97435c48384e2975",
+      "opening_id": "opening-000",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "katago-v1",
+      "pair_id": 0,
+      "paired_game_index": 1,
+      "profile": "katago-v1",
+      "seed": 2026104279
+    },
+    {
+      "ahr_color": -1,
+      "family_sha": "8feb5ef61732c7bc03e35dafe59d92896d714c9d022a253b97435c48384e2975",
+      "game_index": 1,
+      "opening_actions": [
+        20,
+        49,
+        33,
+        39,
+        37,
+        56,
+        51,
+        21
+      ],
+      "opening_family": "8feb5ef61732c7bc03e35dafe59d92896d714c9d022a253b97435c48384e2975",
+      "opening_id": "opening-000",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "katago-v1",
+      "pair_id": 0,
+      "paired_game_index": 0,
+      "profile": "katago-v1",
+      "seed": 2026104279
+    },
+    {
+      "ahr_color": 1,
+      "family_sha": "15f62e7405ed9fc30de534ac51a357b44eaf674bb1a148d660ace8c0c8e1f909",
+      "game_index": 2,
+      "opening_actions": [
+        58,
+        31,
+        40,
+        30,
+        32,
+        23,
+        24,
+        41
+      ],
+      "opening_family": "15f62e7405ed9fc30de534ac51a357b44eaf674bb1a148d660ace8c0c8e1f909",
+      "opening_id": "opening-001",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "katago-v1",
+      "pair_id": 1,
+      "paired_game_index": 3,
+      "profile": "katago-v1",
+      "seed": 2026104280
+    },
+    {
+      "ahr_color": -1,
+      "family_sha": "15f62e7405ed9fc30de534ac51a357b44eaf674bb1a148d660ace8c0c8e1f909",
+      "game_index": 3,
+      "opening_actions": [
+        58,
+        31,
+        40,
+        30,
+        32,
+        23,
+        24,
+        41
+      ],
+      "opening_family": "15f62e7405ed9fc30de534ac51a357b44eaf674bb1a148d660ace8c0c8e1f909",
+      "opening_id": "opening-001",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "katago-v1",
+      "pair_id": 1,
+      "paired_game_index": 2,
+      "profile": "katago-v1",
+      "seed": 2026104280
+    }
+  ],
+  "identity": {
+    "config": {
+      "ahr_move_seconds": 2.0,
+      "batch_size": 8,
+      "board_size": 9,
+      "candidate_file": "step-000008016-c19b207e.pt",
+      "device": "cuda:1",
+      "empty_board_baseline": false,
+      "game_time_seconds": 1800.0,
+      "gtp_timeout_seconds": 90.0,
+      "komi": 7.5,
+      "max_opening_attempts": 10000,
+      "max_plies": 600,
+      "max_simulations": 512,
+      "opening_plies": 8,
+      "opening_temperature": 1.25,
+      "profiles": [
+        {
+          "games": 4,
+          "id": "katago-v1",
+          "kind": "katago",
+          "visits": 1
+        }
+      ],
+      "purpose": "development",
+      "reading_quantum": 16,
+      "reading_total_nodes": 256,
+      "reading_wall_time_seconds": 0.05,
+      "run_id": "ahr-v2-katago-econ-20261011-v1-previous-checkpoint-screen-plan",
+      "seed": 2026104279,
+      "speed_devices": [
+        "cuda:1"
+      ],
+      "speed_max_simulations": 512,
+      "speed_move_seconds": [
+        2.0
+      ],
+      "speed_positions": 6,
+      "torch_threads": 4,
+      "training_run_id": "ahr-v2-teacher-20261008"
+    },
+    "data": {
+      "cache_identity": {
+        "new": "fb5a29c9a5615639b02da7cf54ae0496f9737c2784a5a53d1d33d770ab2fcfe1",
+        "previous": "dc1a57da4dc9e170e9d77d00219b5fdbc4106abf4caa518757bf2dc3332258ab"
+      },
+      "excluded_dev_sha": "2c2f76c24c7644b35f913aa01394503f236247636771d07d5cf730d63b3cf83a",
+      "excluded_prior_sha": "3425f5b7bdd61735b1409d90da37bbcc7a5f2fa6dc3cae00e42f6de267cd2619",
+      "excluded_train_sha": "9cd7cef31363bbf9696f9ecd15db45b883c7125207e1b324dab74a6d016bd094",
+      "prior_reviews": [
+        {
+          "families": 5,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-final-dev-752/report.json",
+          "sha256": "b3c1d6e26d450bde6887a2826c749183e8db50354046858ec50ac172e3bfb3d6"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-256/report.json",
+          "sha256": "45808a027b0879750f5c9a27cc8cfa8f21bfe781339db579494ec243240f348a"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-456/report.json",
+          "sha256": "756392e6102fdaac4fc762aa9adf88e939d0a5c4aa8e50ac4d87893d2f4d8141"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-584/report.json",
+          "sha256": "7581fca18b07f2683dd61d015a1a3efa4834999cd9ee097ab23f5fd99a8c90cc"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-728/report.json",
+          "sha256": "a04df3bbfd31d1b513b2abe39491de90b8aa90026a0bf7ebf19ecba28cf0587c"
+        },
+        {
+          "families": 7,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-final-dev-6080/report.json",
+          "sha256": "8a4a625d44dbaf8e7c8746dc1840de45d4e42f9c1c9e6fc53cde8a07f37b8ced"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-1920/report.json",
+          "sha256": "27d28474f3e5eceb295892a209e68539f21d00ee1423db41bc9293207494ba98"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-3264/report.json",
+          "sha256": "c4fd39aa9d7e3c6cacf337b4046252c8a38cc570e39920a62d42d62bb998688b"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-3904/report.json",
+          "sha256": "dd410d9b59359f4c856f98108e5a71d84d3036a5ba419b09313e6222abac9d6a"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-4512/report.json",
+          "sha256": "4c96d19a2aed7a2557b80e919e1103a89ae7382bd985a3b1efc381a3be408ad6"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-5216/report.json",
+          "sha256": "69cd43e65432760b42e61932b3a74816b3ec111f639acb0654f10ed28cef9943"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-5856/report.json",
+          "sha256": "16f09bd9957f952a748dc5cf77c32109a79c00b9a8aebc7e594a21e203e955e8"
+        },
+        {
+          "families": 5,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-comparison-dev-11724/report.json",
+          "sha256": "14e11f808e9b594c13812e4d6b1e682eb79d497ef19db1fa5955b6c22a5b7b91"
+        },
+        {
+          "families": 5,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-comparison-dev-8016/report.json",
+          "sha256": "845f8c70989d0a987b9ae7bf895dabd4ed3f8eef52195abba7a8e7fc29ebbd2a"
+        },
+        {
+          "families": 7,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-gnu-level-10-dev/report.json",
+          "sha256": "d956cf00eeb6c091bf81d90618008520009f0e7df4ec320f6d6183ee80875710"
+        },
+        {
+          "families": 7,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-gnu-level-5-dev/report.json",
+          "sha256": "137c7edab56ffc95be42807485653a2602b297354e7d65a083227d19ce40d8bf"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-periodic-dev-2054/report.json",
+          "sha256": "3f26b942a16063a465be367b62b7ce187c3090890bfe5402e1be4262e4a77cbe"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-periodic-dev-8016/report.json",
+          "sha256": "e15b683c9a705b12fb92cda73a2c371d76684b5ac154011dc4477fae3d7ecccd"
+        },
+        {
+          "families": 11,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-selected-confirmation-dev/report.json",
+          "sha256": "6cfb9baf80772cc129b187b45156d875751881389887fc83cd11c62ec9d18cb4"
+        },
+        {
+          "families": 46,
+          "file": "reports/ahr_v2/benchmarks/ahr-v2-benchmark-20261009-v1/plan.json",
+          "sha256": "a3d6f9129a3c5b9508dac6a2f55d136288506e75dd3bc2bb603a1f4408b35b95"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/benchmarks/ahr-v2-controller-plan-fixture-e7eee32c65-after-buffer-plan/plan.json",
+          "sha256": "dd17be5d38aaa8b5b1265921919f0bf9a3ec90b1762a22fbf217890af54d4dc1"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/benchmarks/ahr-v2-controller-plan-fixture-e7eee32c65-first-plan/plan.json",
+          "sha256": "3ad805a8ad5fb7dfa9bad2ccb62f9f3a4c82acef75aa33e6aea8fa517450c05b"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/benchmarks/ahr-v2-controller-plan-fixture-e7eee32c65-second-plan/plan.json",
+          "sha256": "1e72a2812b9fe8715191da5d739ed3959aa1ab1427c58bdf523d240324825251"
+        },
+        {
+          "families": 3,
+          "file": "reports/ahr_v2/benchmarks/benchmark17-protocol-2229e613-full/plan.json",
+          "sha256": "40004d96534a15a02e22cebb7d63fb777b6de6613103b32210b88699125edf1a"
+        },
+        {
+          "families": 3,
+          "file": "reports/ahr_v2/benchmarks/benchmark17-protocol-2229e613-resume/plan.json",
+          "sha256": "41683dd267db89e9003391051e4c47bdd7bb3dacffd40e9a2ae163f2e7e707b7"
+        },
+        {
+          "families": 3,
+          "file": "reports/ahr_v2/benchmarks/benchmark17-protocol-2378512a-full/plan.json",
+          "sha256": "adf13d89fbccd16a41e6a010ed6630999773186d67158dab7cf6420871006f0c"
+        },
+        {
+          "families": 3,
+          "file": "reports/ahr_v2/benchmarks/benchmark17-protocol-2378512a-resume/plan.json",
+          "sha256": "d6783147d753efbe8910c0e3012a5fe6e4f1192b24c5aba6171a4fc9771f0efc"
+        },
+        {
+          "families": 3,
+          "file": "reports/ahr_v2/benchmarks/benchmark17-protocol-3da55e47-full/plan.json",
+          "sha256": "1481dcdca54d421e5a12681d77e90d8ab94959bd4c90b45fe318df2ba473cf07"
+        },
+        {
+          "families": 3,
+          "file": "reports/ahr_v2/benchmarks/benchmark17-protocol-3da55e47-resume/plan.json",
+          "sha256": "9085f36eef22cc236b0fdf6ef12e63890ead6b6440c65e134853d8caf1afc7ce"
+        },
+        {
+          "families": 3,
+          "file": "reports/ahr_v2/benchmarks/benchmark17-protocol-fdf103cd-full/plan.json",
+          "sha256": "e86b685356793de08e925a322f7d3666ad071e2863a2fdb9efb2686e8a9c61a1"
+        },
+        {
+          "families": 3,
+          "file": "reports/ahr_v2/benchmarks/benchmark17-protocol-fdf103cd-resume/plan.json",
+          "sha256": "2148bd018fb3cb83ffc7bfadfcce708107b938f5551c0a9b697798b730ace7a8"
+        }
+      ]
+    },
+    "model": {
+      "checkpoint_file": "playing_candidates/step-000008016-c19b207e.pt",
+      "checkpoint_sha256": "e7d1126c4ca962adb6eebcf5754341c4e6f1f3eb8396549e0fb8ee11e47fc1aa",
+      "model_identity": "0e8ba8c5405815f7499945d4b83f3020a2ecbedf403227e8d532260da5b1df71",
+      "run_id": "ahr-v2-teacher-20261008"
+    },
+    "sources": {
+      "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+      "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+      "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+      "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+      "experiments/ahr_v2/04_selfplay_and_training.ipynb": "cb9ac31e64c6e8e50e3b37e1f5745f4bdb21a550361aac7edb69552668d58688",
+      "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+      "experiments/ahr_v2/06_play_and_watch.ipynb": "35c7f6d818c68e673dfa1efabb0e6d6832904babcd25d0bab939613745d5530a",
+      "experiments/ahr_v2/07_validate_and_launch.ipynb": "27bc21fa2cfee176c98d299ad4d11ad0aa2f9d886f53cbf1b683ed814d21d301",
+      "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+      "experiments/ahr_v2/09_calibrated_selfplay_training.ipynb": "d316a791e00c5b7d585cdfc57a560c8f8d3eaf93789f44f8dcf19a53121c351b",
+      "experiments/ahr_v2/10_repaired_evaluation_and_launch.ipynb": "23edfc757443c91f387e53efd60c1b529221561691a944ba2c9801c47e534c2b",
+      "experiments/ahr_v2/11_play_revised_player.ipynb": "057297d539964559fbec4444a0c83688d026aba4828840ef317e222b18f8f419",
+      "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+      "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+      "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+      "experiments/ahr_v2/15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+      "experiments/ahr_v2/16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46",
+      "experiments/ahr_v2/17_strength_and_speed_benchmarks.ipynb": "c4c01826a61156e44dfabeec3fb869fc12b7cc2fbc97b4eddc4920a819a28c4e",
+      "experiments/ahr_v2/18_diagnosis_and_stronger_teacher_data.ipynb": "3e30b867cca765cd21acf802a78df83dab3b19f37a3adb9037e0055eef8157ab",
+      "experiments/ahr_v2/19_stronger_scout_worker_training.ipynb": "d2da73d46782f3a3871719da105dbf94fdca35156940091dd5ee67f413f2cfef",
+      "experiments/ahr_v2/20_economic_rewards_and_teacher_guided_improvement.ipynb": "a8e23d36ed79b80c33f4d222983a39138f035f4b3748f29a240f368cede5ac9c"
+    },
+    "stage": "opening-plan"
+  },
+  "model": {
+    "best_selection_basis": "Matched 8-game GNU Go level-1 development comparison, equal 128-visit AHR budget; selection is not a final/lockbox result",
+    "checkpoint_file": "playing_candidates/step-000008016-c19b207e.pt",
+    "checkpoint_sha256": "e7d1126c4ca962adb6eebcf5754341c4e6f1f3eb8396549e0fb8ee11e47fc1aa",
+    "config": {
+      "batch_size": 512,
+      "board_size": 9,
+      "cache_id": "go9x9-teacher-v1",
+      "checkpoint_optimizer_steps": 100,
+      "checkpoint_seconds": 120,
+      "cpu_threads": 4,
+      "development_rows": 2048,
+      "device": "cuda:1",
+      "evaluate_every_steps": 500,
+      "gradient_clip": 2.0,
+      "is_smoke": false,
+      "learning_rate": 0.0005,
+      "loss_weights": {
+        "game_outcome": 0.0,
+        "ownership": 0.25,
+        "policy": 1.0,
+        "score": 0.5,
+        "teacher_value": 1.0
+      },
+      "max_epochs": 12,
+      "max_optimizer_steps": 11724,
+      "minimum_lr_fraction": 0.1,
+      "network": {
+        "blocks": 6,
+        "width": 96
+      },
+      "precision": "bfloat16",
+      "run_id": "ahr-v2-teacher-20261008",
+      "schema": "ahr-go-v2-teacher-training-v1",
+      "seed": 260810,
+      "shuffle_block_rows": 16384,
+      "time_budget_hours": 8.0,
+      "train_rows_limit": null,
+      "training_source": "quintic_go9x9_katago_teacher_and_recorded_game_outcomes",
+      "value_target_mapping": "signed_teacher_scalar_to_soft_loss_win_no_draw_claim",
+      "warmup_steps": 200,
+      "weight_decay": 0.0001
+    },
+    "data_identity": {
+      "cache_id": "/home/benjamin/workspace/ahr_go/data/ahr_v2_teacher/prepared/go9x9-teacher-v1",
+      "dataset": "quintic/go9x9",
+      "manifest_sha256": "28395ffde1d3260400009b1c6564e0ea970bfc7d80e2c5932ad7162999c2b31e",
+      "target_provenance": "teacher_estimates_and_distinct_observed_outcomes"
+    },
+    "development": {
+      "duration_seconds": 0.0812443729955703,
+      "joint_loss": 2.451500177383423,
+      "observed_outcome_accuracy": 0.7986577181208053,
+      "observed_outcome_brier": 0.29730190046681654,
+      "observed_outcome_rows": 894,
+      "optimizer_step": 7816,
+      "policy_cross_entropy": 2.1012452244758606,
+      "policy_kl": 0.4232422709465027,
+      "policy_top1_agreement": 0.61279296875,
+      "rows": 2048,
+      "selection_basis": "fixed_official_development_joint_loss_not_playing_strength",
+      "selection_score": 2.451500177383423,
+      "teacher_score_mae_points": 5.067473338535301,
+      "teacher_score_rows": 1972,
+      "teacher_value_mse": 0.18511611968278885,
+      "teacher_win_probability_brier": 0.04627908766269684
+    },
+    "global_step": 8016,
+    "is_smoke": false,
+    "label": "Teacher-trained AHR playing candidate",
+    "model_identity": "0e8ba8c5405815f7499945d4b83f3020a2ecbedf403227e8d532260da5b1df71",
+    "optimizer_step": 8016,
+    "run_id": "ahr-v2-teacher-20261008",
+    "sources": {
+      "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+      "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+      "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+      "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+      "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c"
+    },
+    "training_source": "quintic_go9x9_katago_teacher_and_recorded_game_outcomes"
+  },
+  "provenance": "Frozen champion Scout sampled legal openings; no outcomes or winning labels.",
+  "run_id": "ahr-v2-katago-econ-20261011-v1-previous-checkpoint-screen-plan",
+  "schema": "ahr-v2-benchmark-plan-v1",
+  "status": "COMPLETE",
+  "test_payload_consumed": false,
+  "updated_at_utc": "2026-10-11T13:37:20.575426+00:00"
+}

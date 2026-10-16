@@ -1,0 +1,28 @@
+{
+  "best_development_loss": "step-000019535-401d480a.pt",
+  "champion_selected": false,
+  "data_identity": {
+    "cache_path": "/home/benjamin/workspace/ahr_go/data/ahr_v2_teacher/prepared/go9x9-competitive-v2",
+    "identity": "fb5a29c9a5615639b02da7cf54ae0496f9737c2784a5a53d1d33d770ab2fcfe1",
+    "manifest_sha256": "9d0275edd8b624c46518bb3fceb08c4f5b1404ceeec53a6f717e2664f63b0fe6",
+    "target_provenance": "teacher estimates and separately masked observed outcomes"
+  },
+  "global_step": 20000,
+  "is_smoke": false,
+  "latest": "step-000020000-be3a05f9.pt",
+  "manifest_sha256": "b0da6dee357991302527e84417ceece474630e1f1f9abc812d9f3601151b3456",
+  "run_id": "ahr-k19-20261011-challenger",
+  "schema": "ahr-k19-candidate-registry-v1",
+  "selection_basis": "fixed_development_joint_loss_not_playing_strength",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+    "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+    "experiments/ahr_v2/18_diagnosis_and_stronger_teacher_data.ipynb": "3e30b867cca765cd21acf802a78df83dab3b19f37a3adb9037e0055eef8157ab",
+    "experiments/ahr_v2/19_stronger_scout_worker_training.ipynb": "d2da73d46782f3a3871719da105dbf94fdca35156940091dd5ee67f413f2cfef"
+  },
+  "variant": "challenger"
+}

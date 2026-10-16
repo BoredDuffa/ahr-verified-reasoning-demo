@@ -1,0 +1,36 @@
+{
+  "ahr_methodology": {
+    "hypothesize": "generates Lean4 translations, theorem clusters, imports, and proof scripts",
+    "observe": "records target question, original formal statement, src header excerpt, symbols, and Lean parse errors",
+    "rank": "orders attempts by retrieval score, target-symbol overlap, import cost, and tactic cost",
+    "refine": "records failed attempts and failure buckets for next bridge iteration",
+    "verify": "accepts only Lean-verified target theorem proofs"
+  },
+  "baseline_v3_0": {
+    "known_theorem_wrapper_verified_count": 0,
+    "record_count": 50
+  },
+  "created_utc": "20260609T225628Z",
+  "dataset": "hoskinson-center/proofnet/plain_text/test first 50",
+  "regressions": {
+    "pi_irrrational_verified": true,
+    "sqrt2_irrational_verified": true
+  },
+  "remote_host": "benjamin@34.46.24.135",
+  "remote_root": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "schema": "ahr_lean_v3_1_proofnet_bridge_milestone_summary",
+  "v3_1": {
+    "elapsed_s": 943.96,
+    "failure_reason_counts": {
+      "lean_typeclass_synthesis_failed": 1,
+      "lean_unknown_identifier": 28,
+      "lean_verification_failed": 18,
+      "target_verified": 3
+    },
+    "lean_calls_total": 121,
+    "record_count": 50,
+    "retrieval_cluster_success_count": 6,
+    "target_verified_count": 3,
+    "translated_count": 6
+  }
+}

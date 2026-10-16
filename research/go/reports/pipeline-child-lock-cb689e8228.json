@@ -1,0 +1,47 @@
+{
+  "config": {
+    "stages": [
+      {
+        "env": {},
+        "name": "first",
+        "notebook": "reports/pipeline-fixture-cb689e8228.ipynb",
+        "require": "process_success"
+      }
+    ]
+  },
+  "controller_pid": 66020,
+  "current": null,
+  "global_step": 9,
+  "identity": "dac52fe002cd1eb0d2075f2c4b2888259b98fffd1a1d354703f394c91acf4251",
+  "last_error": "RuntimeError: Pipeline stage failed; inspect /home/benjamin/workspace/ahr_go/reports/pipeline-child-lock-cb689e8228-first.log",
+  "metrics": {
+    "completed_stages": 1
+  },
+  "run_id": "pipeline-child-lock-cb689e8228",
+  "sampler": {
+    "stage_index": 1
+  },
+  "schema": "ahr_pipeline_v1",
+  "scientific_state": "Stored in the child run manifests; this controller performs no training itself",
+  "source_identity": {
+    "controller": "1b6bdf9506ab94aae429c9e86ad8c9987291a766113c06bed5caf330d9b08f77",
+    "stage_sources": {
+      "reports/pipeline-fixture-cb689e8228.ipynb": "69e9293fc23c69d0b9ce627114a4d06b9d414ec85bdde23b3bb742ef21cb7e2b"
+    }
+  },
+  "stage_index": 1,
+  "stage_records": [
+    {
+      "log": "reports/pipeline-child-lock-cb689e8228-first.log",
+      "name": "first",
+      "notebook": "reports/pipeline-fixture-cb689e8228.ipynb",
+      "pid": 66162,
+      "process_token": "6571876",
+      "returncode": 0,
+      "source_sha256": "69e9293fc23c69d0b9ce627114a4d06b9d414ec85bdde23b3bb742ef21cb7e2b",
+      "status": "COMPLETE"
+    }
+  ],
+  "status": "COMPLETE",
+  "updated_at_utc": "2026-09-23T17:21:40.713026+00:00"
+}

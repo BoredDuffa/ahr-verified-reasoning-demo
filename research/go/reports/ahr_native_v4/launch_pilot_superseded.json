@@ -1,0 +1,9 @@
+{
+  "status": "STOPPED_BEFORE_FREEZE_SOURCE_SUPERSEDED",
+  "previous_run": "ahr-native-v4-launch-pilot",
+  "preserved_checkpoint": "checkpoints/ahr-native-v4-launch-pilot/step-000000378-7ea9cf37.pt",
+  "finished_games": 1,
+  "reason": "Final nullable-cutoff safety and full-backup dependency fixes changed source identity; preserve old checkpoint and use explicitly new pilot ID.",
+  "new_run": "ahr-native-v4-launch-pilot-v2",
+  "recorded_at_utc": "2026-10-01T15:36:58.316564+00:00"
+}

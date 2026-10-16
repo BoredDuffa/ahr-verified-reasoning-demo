@@ -1,0 +1,288 @@
+{
+  "metrics": {
+    "game_plies": 8,
+    "games": 2,
+    "positions": 0
+  },
+  "receipt": {
+    "complete": true,
+    "frozen_hashes_verified": {},
+    "new_stages": 0,
+    "resumed_from_step": 8,
+    "run_id": "transfer-07-recovery-ebcf1644b5fe"
+  },
+  "results": [
+    {
+      "black_minus_white": -0.5,
+      "budget_s": 1.0,
+      "candidate": "recovery_fixture",
+      "candidate_color": 1,
+      "candidate_score": 0.0,
+      "final_state": {
+        "board": [
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "consecutive_passes": 2,
+        "history": [
+          [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "komi": 0.5,
+        "move_number": 4,
+        "size": 3,
+        "to_play": 1
+      },
+      "job_id": "492190971aafc6480c78",
+      "kind": "game",
+      "moves": [
+        {
+          "action": 4,
+          "color": 1,
+          "deadline_missed": false,
+          "is_candidate_turn": true,
+          "legal": true,
+          "metadata": {
+            "rng_probe": [
+              0.06402735304338003,
+              0.5625811567344682,
+              0.020774900913238525
+            ]
+          },
+          "player": "recovery_fixture",
+          "player_status": "RECOVERY_FIXTURE",
+          "time_budget_s": 1.0
+        },
+        {
+          "action": 2,
+          "color": -1,
+          "deadline_missed": false,
+          "is_candidate_turn": false,
+          "legal": true,
+          "metadata": {
+            "rng_probe": [
+              0.2772761072695644,
+              0.6964183872276789,
+              0.16313153505325317
+            ]
+          },
+          "player": "recovery_fixture",
+          "player_status": "RECOVERY_FIXTURE",
+          "time_budget_s": 1.0
+        },
+        {
+          "action": 9,
+          "color": 1,
+          "deadline_missed": false,
+          "is_candidate_turn": true,
+          "legal": true,
+          "metadata": {
+            "rng_probe": [
+              0.8161942359309091,
+              0.9604009034542472,
+              0.2831065058708191
+            ]
+          },
+          "player": "recovery_fixture",
+          "player_status": "RECOVERY_FIXTURE",
+          "time_budget_s": 1.0
+        },
+        {
+          "action": 9,
+          "color": -1,
+          "deadline_missed": false,
+          "is_candidate_turn": false,
+          "legal": true,
+          "metadata": {
+            "rng_probe": [
+              0.7938263913682199,
+              0.79461189865827,
+              0.8075612783432007
+            ]
+          },
+          "player": "recovery_fixture",
+          "player_status": "RECOVERY_FIXTURE",
+          "time_budget_s": 1.0
+        }
+      ],
+      "opponent": "recovery_fixture",
+      "seed": 19,
+      "status": "COMPLETED_TWO_PASSES",
+      "winner": -1
+    },
+    {
+      "black_minus_white": -0.5,
+      "budget_s": 1.0,
+      "candidate": "recovery_fixture",
+      "candidate_color": -1,
+      "candidate_score": 1.0,
+      "final_state": {
+        "board": [
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "consecutive_passes": 2,
+        "history": [
+          [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "komi": 0.5,
+        "move_number": 4,
+        "size": 3,
+        "to_play": 1
+      },
+      "job_id": "ba569183389fe0fa795e",
+      "kind": "game",
+      "moves": [
+        {
+          "action": 4,
+          "color": 1,
+          "deadline_missed": false,
+          "is_candidate_turn": false,
+          "legal": true,
+          "metadata": {
+            "rng_probe": [
+              0.24201122815277742,
+              0.20931196225446047,
+              0.8626323938369751
+            ]
+          },
+          "player": "recovery_fixture",
+          "player_status": "RECOVERY_FIXTURE",
+          "time_budget_s": 1.0
+        },
+        {
+          "action": 2,
+          "color": -1,
+          "deadline_missed": false,
+          "is_candidate_turn": true,
+          "legal": true,
+          "metadata": {
+            "rng_probe": [
+              0.39555009078390413,
+              0.4063663233737974,
+              0.07876330614089966
+            ]
+          },
+          "player": "recovery_fixture",
+          "player_status": "RECOVERY_FIXTURE",
+          "time_budget_s": 1.0
+        },
+        {
+          "action": 9,
+          "color": 1,
+          "deadline_missed": false,
+          "is_candidate_turn": false,
+          "legal": true,
+          "metadata": {
+            "rng_probe": [
+              0.8439772282710034,
+              0.11361548295820789,
+              0.42064547538757324
+            ]
+          },
+          "player": "recovery_fixture",
+          "player_status": "RECOVERY_FIXTURE",
+          "time_budget_s": 1.0
+        },
+        {
+          "action": 9,
+          "color": -1,
+          "deadline_missed": false,
+          "is_candidate_turn": true,
+          "legal": true,
+          "metadata": {
+            "rng_probe": [
+              0.7070565144215826,
+              0.8531486195917799,
+              0.9978885650634766
+            ]
+          },
+          "player": "recovery_fixture",
+          "player_status": "RECOVERY_FIXTURE",
+          "time_budget_s": 1.0
+        }
+      ],
+      "opponent": "recovery_fixture",
+      "seed": 19,
+      "status": "COMPLETED_TWO_PASSES",
+      "winner": -1
+    }
+  ]
+}

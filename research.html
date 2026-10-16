@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AHR — Research, source and evidence</title>
+  <meta name="description" content="Benjamin Falkenburg's Ant Hill Reasoning research: mathematical theory, learned guidance, verified search and documented experiments.">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .research-shell { max-width: 1040px; margin: 0 auto; padding: 40px 24px 64px; }
+    .research-shell h1 { max-width: 800px; margin: 16px 0 20px; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; }
+    .research-shell h2 { margin: 0 0 12px; font-size: 1.2rem; }
+    .research-shell p, .research-shell li { line-height: 1.65; }
+    .research-shell a { color: #075e66; text-underline-offset: 3px; }
+    .intro { max-width: 780px; font-size: 1.08rem; }
+    .research-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 24px 0 32px; }
+    .research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .research-card { background: white; border: 1px solid var(--line); padding: 24px; }
+    .research-card p:last-child { margin-bottom: 0; }
+    .research-card .label { color: #526570; font-size: .82rem; margin-bottom: 10px; }
+    .research-note { margin-top: 26px; padding: 22px 24px; background: #f7fafc; border-left: 4px solid var(--accent); }
+    .research-footer { margin-top: 30px; color: #526570; font-size: .9rem; }
+    @media (max-width: 660px) { .research-grid { grid-template-columns: 1fr; } .research-shell { padding: 28px 18px 44px; } }
+  </style>
+</head>
+<body>
+  <main class="research-shell">
+    <p class="eyebrow">Benjamin Falkenburg · Ant Hill Reasoning</p>
+    <h1>Learn to search.<br>Check what you accept.</h1>
+    <p class="intro">AHR explores Queen–Worker–Scout hierarchical reasoning: allocating computation, constructing candidates and exploring alternatives, with independent checks in a declared domain.</p>
+    <p class="intro">This research record brings together mathematical theory, source notebooks and measured outcomes—including negative and unfinished experiments. Updated 16 October 2026.</p>
+    <nav class="research-links" aria-label="Research resources">
+      <a href="https://github.com/BoredDuffa/ahr-verified-reasoning-demo">Read the repository</a>
+      <a href="./papers/AHR_Unified_Theory.pdf">Read the theory PDF</a>
+      <a href="./index.html">Try the exact demo</a>
+    </nav>
+    <div class="research-grid">
+      <section class="research-card">
+        <p class="label">Mathematical framework</p>
+        <h2>Queen, Worker and Scout</h2>
+        <p>Hierarchical energies, role compatibility, finite search and abstention. Soundness depends on the verifier and faithful formalisation; completeness needs additional coverage and pruning assumptions.</p>
+        <a href="https://github.com/BoredDuffa/ahr-verified-reasoning-demo/blob/main/docs/RESEARCH_OVERVIEW.md">Explore the architecture</a>
+      </section>
+      <section class="research-card">
+        <p class="label">Bounded recorded results</p>
+        <h2>Learned guidance with exact checks</h2>
+        <p>The Lean v2.0 report records 270/270 top-1 completions on its bounded suite. A separate 5M-parameter ranker answered 340/360 test questions correctly and abstained on 20.</p>
+        <a href="https://github.com/BoredDuffa/ahr-verified-reasoning-demo/blob/main/docs/RESULTS.md">Read the evidence and limits</a>
+      </section>
+      <section class="research-card">
+        <p class="label">Implemented pilot</p>
+        <h2>Economic credit in Go</h2>
+        <p>A frozen-buffer comparison tests opportunity-cost weighting and a separate credit head. Its small development screen did not establish a benefit; the incumbent remained after the selected base model failed promotion.</p>
+        <a href="https://github.com/BoredDuffa/ahr-verified-reasoning-demo/blob/main/docs/ECONOMIC_REWARDS.md">Read the economics work</a>
+      </section>
+      <section class="research-card">
+        <p class="label">Source, drafts and experiment records</p>
+        <h2>Inspect the work</h2>
+        <p>Go rules, search, teacher guidance and recovery; Lean bridge iterations; 16 ARC-style draft notebooks; and related FMM-JEPA vision experiments, kept separate from AHR performance claims.</p>
+        <a href="https://github.com/BoredDuffa/ahr-verified-reasoning-demo/blob/main/research/NOTEBOOK_INDEX.md">Open the source index</a>
+      </section>
+    </div>
+    <section class="research-note" aria-label="Evidence status">
+      <h2>Know which result you are reading</h2>
+      <p>The browser demonstration uses hand-written exact backends; it does not load these trained models. Recorded results are scoped to their datasets, controls and budgets. The ARC notebooks are drafts, the latest Go collection stopped below its required row count, and ongoing studies have no final outcome yet.</p>
+      <a href="https://github.com/BoredDuffa/ahr-verified-reasoning-demo/blob/main/docs/REPRODUCING.md">Reproduction instructions</a>
+    </section>
+    <p class="research-footer">Public source and evidence snapshot. Original hashes and notebook transformations are recorded in the repository. No general reasoning, clinical efficacy, competitive Go rank or official ARC score is claimed.</p>
+  </main>
+</body>
+</html>

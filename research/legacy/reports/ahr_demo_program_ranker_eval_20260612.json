@@ -1,0 +1,144 @@
+{
+  "acceptance": {
+    "publish": true,
+    "test_hard_energy_zero": true,
+    "test_zero_wrong": true,
+    "val_hard_energy_zero": true,
+    "val_zero_wrong": true
+  },
+  "clinical_use": "forbidden",
+  "created_at_unix": 1781235565.771441,
+  "history": [
+    {
+      "epoch": 1,
+      "items": 20400,
+      "mistake_rate": 0.002303921568627451,
+      "mistakes": 47
+    },
+    {
+      "epoch": 5,
+      "items": 20400,
+      "mistake_rate": 0.0,
+      "mistakes": 0
+    },
+    {
+      "epoch": 8,
+      "items": 20400,
+      "mistake_rate": 0.0,
+      "mistakes": 0
+    }
+  ],
+  "model_path": "/Users/benjaminfalkenburg/Documents/primumai/archives/github_exports/ahr_verified_reasoning_20260509/checkpoints/ahr_demo_program_ranker_v0.json",
+  "parameter_count": 757,
+  "run_name": "ahr_demo_program_ranker_v0",
+  "splits": {
+    "test": {
+      "abstained": 250,
+      "by_family": {
+        "finite_logic_constraints": {
+          "abstained": 0,
+          "correct": 250,
+          "total": 250,
+          "wrong": 0
+        },
+        "probability_counting_program": {
+          "abstained": 250,
+          "correct": 2000,
+          "total": 2250,
+          "wrong": 0
+        },
+        "short_arithmetic_program": {
+          "abstained": 0,
+          "correct": 1000,
+          "total": 1000,
+          "wrong": 0
+        },
+        "statistics_program": {
+          "abstained": 0,
+          "correct": 1000,
+          "total": 1000,
+          "wrong": 0
+        }
+      },
+      "correct": 4250,
+      "coverage": 0.9444444444444444,
+      "hard_valid": 4250,
+      "hard_valid_rate": 1.0,
+      "mean_hard_energy": 0.0,
+      "total": 4500,
+      "wrong": 0
+    },
+    "train": {
+      "abstained": 1200,
+      "by_family": {
+        "finite_logic_constraints": {
+          "abstained": 0,
+          "correct": 1200,
+          "total": 1200,
+          "wrong": 0
+        },
+        "probability_counting_program": {
+          "abstained": 1200,
+          "correct": 9600,
+          "total": 10800,
+          "wrong": 0
+        },
+        "short_arithmetic_program": {
+          "abstained": 0,
+          "correct": 4800,
+          "total": 4800,
+          "wrong": 0
+        },
+        "statistics_program": {
+          "abstained": 0,
+          "correct": 4800,
+          "total": 4800,
+          "wrong": 0
+        }
+      },
+      "correct": 20400,
+      "coverage": 0.9444444444444444,
+      "hard_valid": 20400,
+      "hard_valid_rate": 1.0,
+      "mean_hard_energy": 0.0,
+      "total": 21600,
+      "wrong": 0
+    },
+    "val": {
+      "abstained": 250,
+      "by_family": {
+        "finite_logic_constraints": {
+          "abstained": 0,
+          "correct": 250,
+          "total": 250,
+          "wrong": 0
+        },
+        "probability_counting_program": {
+          "abstained": 250,
+          "correct": 2000,
+          "total": 2250,
+          "wrong": 0
+        },
+        "short_arithmetic_program": {
+          "abstained": 0,
+          "correct": 1000,
+          "total": 1000,
+          "wrong": 0
+        },
+        "statistics_program": {
+          "abstained": 0,
+          "correct": 1000,
+          "total": 1000,
+          "wrong": 0
+        }
+      },
+      "correct": 4250,
+      "coverage": 0.9444444444444444,
+      "hard_valid": 4250,
+      "hard_valid_rate": 1.0,
+      "mean_hard_energy": 0.0,
+      "total": 4500,
+      "wrong": 0
+    }
+  }
+}

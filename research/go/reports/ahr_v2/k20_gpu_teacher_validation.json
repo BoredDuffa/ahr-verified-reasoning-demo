@@ -1,0 +1,64 @@
+{
+  "assets": {
+    "archive": "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/katago-cuda13.2.zip",
+    "archive_sha256": "7294a8d0717726d7a8cc33015d2eca71496cfbef6c0fbb69e5f30d6711f9f689",
+    "backend": "CUDA13.2-cuDNN9.24",
+    "binary_pins": {
+      "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/squashfs-root/usr/bin/katago": "7ff543f6bc73a99616bdb98df249133e5f5d30768cbd646e05568b45eab105ea"
+    },
+    "executable": "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/squashfs-root/AppRun",
+    "executable_sha256": "2ddcaa8755c73b980e895d1466fa8589b998c47686846a995fe3a8e258b4c122",
+    "library_paths": [
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cu13/lib",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cusparselt/lib",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/nccl/lib",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/nvshmem/lib",
+      "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/squashfs-root/usr/lib",
+      "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/squashfs-root/usr/lib/x86_64-linux-gnu"
+    ],
+    "model": "/home/benjamin/workspace/ahr_go/.venv/katago-benchmark17/kata9x9-b18c384nbt-20231025.bin.gz",
+    "model_sha256": "a1298ce1adc1dad7bd868ca962b2384cc8388ed373a00e6bae1114fa6f9e2d61",
+    "release": "v1.18.1",
+    "runtime_sha256": {
+      "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/squashfs-root/usr/lib/libbz2.so.1.0": "5e516f77fc36dd924fdf02c8489a217f55fa1548883d32c3a5e041fb25d47d6e",
+      "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/squashfs-root/usr/lib/libtcmalloc_minimal.so.4": "572af05b75e2366a3e8c06c29d3a04c0a538c9635c9957f2808846730ab81da5",
+      "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/squashfs-root/usr/lib/libz.so.1": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370",
+      "/home/benjamin/workspace/ahr_go/.venv/katago-k20-gpu/squashfs-root/usr/lib/libzip.so.4": "05746c16c79c34f3b408c5a6a5ddf9bd18e61c1cfd35f587e215ea37f23fe4ad",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cu13/lib/libcublas.so.13": "25cde432108543626df85d887c730bf2cab96803ca16f9654e4abc8d2b45833e",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cu13/lib/libcublasLt.so.13": "1489aeb75d55ee55782798343ac66f57771d561cc1fe1e0491568deefa0e6515",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cu13/lib/libcudart.so.13": "96c42e418cec19054186b9429c321603cc190bf26a18104e19408117a2a817b0",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn.so.9": "0f43113ec6b171f93236560541f3b95104fed2516b19000a0e7047a5cc12f8ee",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_adv.so.9": "f45caabe6c4a85ddb10b0a3c37080a935a1cfdd4339db46374673d90d683621c",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_cnn.so.9": "bd9d3afb466114f49cc3febacd72e791148a657e3b74369042b1dc9b7c9591fa",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_engines_precompiled.so.9": "0723ff6f2e611c73b62035b0f9e798f42c91bd3a671bc494139344b605097cf1",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_engines_runtime_compiled.so.9": "53e1b583bdfecf8714240f993ea2b524ecca8476e0d5111cde0aa5e06f274f59",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_engines_tensor_ir.so.9": "3d33ea0436c23dffbc00e6ee5f106d667342d2fb90bf3e46ebcdf38dca45d0e5",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_ext.so.9": "8cbeb50ea0b9c80849afa0816174d3d49af4e1401dac6d7ffe2eba926e008b69",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_graph.so.9": "2e8a0e4e66c0c8f9dc273c486698614c0561832626fadf76a8a37b94d0e2f895",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_heuristic.so.9": "6239e5cdef8ba0d9613bff776d1487b8a59a101c4cdf4b4e59a61fa340eb2539",
+      "/home/benjamin/workspace/ahr_go/.venv/lib/python3.13/site-packages/nvidia/cudnn/lib/libcudnn_ops.so.9": "267d032a500ca4f77328477087ace53be2e69588dcf81a402ff12feba6904412"
+    },
+    "schema": "ahr-k20-offline-gpu-teacher-v1",
+    "source_url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-cuda13.2-cudnn9.24.0-linux-x64.zip",
+    "version": "KataGo v1.18.1\nGit revision: 92ee95c0a4b25fec214da00951ab69e97e207729\nCompile Time: Aug 23 2026 22:55:51\nUsing CUDA backend\nCompiled with CUDA version 13.2.86\nCompiled with AVX2 and FMA instructions\nCompiled to support contributing to online distributed selfplay"
+  },
+  "results": [
+    {
+      "backend": "CUDA13.2-cuDNN9.24",
+      "best_action": 31,
+      "elapsed_seconds": 2.3896002259571105,
+      "value": -0.8678521228,
+      "visits": 4
+    },
+    {
+      "backend": "CUDA13.2-cuDNN9.24",
+      "best_action": 49,
+      "elapsed_seconds": 3.0352367940358818,
+      "value": -0.8385210374000001,
+      "visits": 64
+    }
+  ],
+  "scope": "Two disposable offline analysis queries, not training or matches.",
+  "status": "PASS"
+}

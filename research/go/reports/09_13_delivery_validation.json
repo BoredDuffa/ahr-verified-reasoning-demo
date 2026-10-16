@@ -1,0 +1,147 @@
+{
+  "automatic_promotion": false,
+  "checked_at_utc": "2026-09-23T17:26:41.237600+00:00",
+  "experiment_status": "RUNNING",
+  "historical_00_11_executable_code_preserved": true,
+  "implementation_status": "ALL_14_NOTEBOOKS_IMPLEMENTED_AND_EXECUTED",
+  "local_bundle_verified": {
+    "model_run": "go08-initial-warmup-v2",
+    "path": "exports/bundles/go08-initial-warmup-v2-d01e60c064ee.tar.gz",
+    "restored_fresh_process_inference": "PASS",
+    "sha256": "e387346ce04c6ba36d9adbf9cb4c0d84f25909c27cf833b6f88c6c5b918f8d69"
+  },
+  "new_validation": {
+    "12": "reports/12_play_validation.json",
+    "13": "reports/13_export_restore_validation.json"
+  },
+  "notebooks": [
+    {
+      "code_cells_executed": 6,
+      "code_sha256": "4477b570d0eb6d7ab20542ff9e4ee05c0eda82c0f192d5c78c3dee17b304695f",
+      "errors": 0,
+      "path": "notebooks/00_instance_setup_and_recovery.ipynb"
+    },
+    {
+      "code_cells_executed": 8,
+      "code_sha256": "fbb3a59b50faabdad8b12d7482c6e7dce822669929347e36f7091b39cf4daa87",
+      "errors": 0,
+      "path": "notebooks/01_go_rules_and_independent_verifier.ipynb"
+    },
+    {
+      "code_cells_executed": 9,
+      "code_sha256": "07e3462bf22a96e6724ba60a2ddcf7a24f449270b762e10aef5caea1ca48a141",
+      "errors": 0,
+      "path": "notebooks/02_go_to_csp_and_qcsp.ipynb"
+    },
+    {
+      "code_cells_executed": 6,
+      "code_sha256": "dcd7776c4cdb33f3e64e5a5ce0bbcf69f3d0b69aa42333b79bfe53b9668a1853",
+      "errors": 0,
+      "path": "notebooks/03_curricula_datasets_and_splits.ipynb"
+    },
+    {
+      "code_cells_executed": 14,
+      "code_sha256": "b90cf1e04c39b90be2b1ebdd9cd587dddeeae11b18b3b076a96b924678595ab6",
+      "errors": 0,
+      "path": "notebooks/04_native_ahr_architecture.ipynb"
+    },
+    {
+      "code_cells_executed": 7,
+      "code_sha256": "db1b44b34672ab9da5b2b57dca30d1a06c4fc05ce1e5cebdb6039ef0baf99027",
+      "errors": 0,
+      "path": "notebooks/05_csp_qcsp_pretraining.ipynb"
+    },
+    {
+      "code_cells_executed": 7,
+      "code_sha256": "61bca0d7fe18da9344551701b48da0abad1ca80533fe05eab38046f330fff063",
+      "errors": 0,
+      "path": "notebooks/06_ahr_go_search_engine.ipynb"
+    },
+    {
+      "code_cells_executed": 10,
+      "code_sha256": "db010ffae33e172baa438f61a651473fe15b8d51d7bcd26201d49153d08bd9f0",
+      "errors": 0,
+      "path": "notebooks/07_csp_to_go_transfer_tests.ipynb"
+    },
+    {
+      "code_cells_executed": 7,
+      "code_sha256": "79989fa6cd91262aaf6a1184749775bd9a60054f046071c87d99eabdbe410f23",
+      "errors": 0,
+      "path": "notebooks/08_go_specific_adaptation.ipynb"
+    },
+    {
+      "code_cells_executed": 12,
+      "code_sha256": "5c09e2cf8d3d933ba343a099e54fd64f058307c96ddd65303b844152fc463bf3",
+      "errors": 0,
+      "path": "notebooks/09_selfplay_and_improvement.ipynb"
+    },
+    {
+      "code_cells_executed": 8,
+      "code_sha256": "e764388b4ef131fc039faf993c218509af29c6e76a64f25978b9fb820ec64b3f",
+      "errors": 0,
+      "path": "notebooks/10_gtp_engine_interface.ipynb"
+    },
+    {
+      "code_cells_executed": 6,
+      "code_sha256": "da8a19f43fb64297cbbf81d89b6cae61ea5b4e65d564df3f26f28680d918277e",
+      "errors": 0,
+      "path": "notebooks/11_engine_arena_and_evaluation.ipynb"
+    },
+    {
+      "code_cells_executed": 7,
+      "code_sha256": "ad50717ec2efc6d3247f311f6b9ba0f9d0acbaafe0d093a823e3e4e5b99776d0",
+      "errors": 0,
+      "path": "notebooks/12_play_and_watch.ipynb"
+    },
+    {
+      "code_cells_executed": 6,
+      "code_sha256": "f2a290164d2ba97ace2f4f0563c7035dd8a95b94c470b94ab20368ac48989107",
+      "errors": 0,
+      "path": "notebooks/13_export_backup_and_restore.ipynb"
+    }
+  ],
+  "off_instance_backup": "PENDING_DESTINATION",
+  "pipeline": {
+    "controller_pid": 66968,
+    "current_child_pid": 67010,
+    "current_stage": "selfplay",
+    "fixed_arena_pairs": 32,
+    "fixed_selfplay_games": 64,
+    "live_status": "reports/09_13_pipeline_status.json",
+    "notebook": "reports/09_13_training_pipeline.ipynb",
+    "stage_sequence": [
+      "selfplay",
+      "arena",
+      "play_interface",
+      "progress_report",
+      "bundle"
+    ],
+    "status": "RUNNING",
+    "validation": "reports/09_13_pipeline_validation.json"
+  },
+  "presentation": {
+    "board_png_visual_review": "PASS",
+    "browser_widget_layout": "NOT_PERFORMED_NO_BROWSER_VIEWER",
+    "html_structural_checks": "PASS",
+    "previews": [
+      "reports/12_play_preview.html",
+      "reports/13_export_restore_preview.html",
+      "reports/09_13_training_pipeline_preview.html",
+      "reports/09_11_training_progress_preview.html"
+    ],
+    "progress_png_visual_review": "PASS"
+  },
+  "schema": "ahr-next-stage-delivery-v1",
+  "strength_status": "NOT_YET_EVALUATED",
+  "training_snapshot": {
+    "completed_games": 2,
+    "games_finished": 2,
+    "global_step": 360,
+    "optimizer_steps": 16,
+    "phase": "play",
+    "replay_positions": 234,
+    "run_id": "go09-first-selfplay-v1",
+    "unknown_games": 0,
+    "verified_plies": 339
+  }
+}

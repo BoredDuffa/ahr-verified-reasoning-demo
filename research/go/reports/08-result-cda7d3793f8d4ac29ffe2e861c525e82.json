@@ -1,0 +1,59 @@
+{
+  "complete": true,
+  "metrics": [
+    {
+      "development": {
+        "loss": 5.043399333953857,
+        "ownership": 0.6183945536613464,
+        "policy": 3.7643826007843018,
+        "score": 0.003498067846521735,
+        "value": 0.9680702686309814
+      },
+      "kind": "initial",
+      "optimizer_step": 0
+    },
+    {
+      "development": {
+        "loss": 4.142224311828613,
+        "ownership": 0.6050927639007568,
+        "policy": 3.717266798019409,
+        "score": 7.806508801877499e-05,
+        "value": 0.12237192690372467
+      },
+      "epoch": 1,
+      "kind": "epoch",
+      "optimizer_step": 4,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 4.252895832061768,
+        "ownership": 0.6164179444313049,
+        "policy": 3.688685655593872,
+        "score": 0.0016216676449403167,
+        "value": 0.2551901340484619
+      }
+    },
+    {
+      "development": {
+        "loss": 3.894681692123413,
+        "ownership": 0.6095987558364868,
+        "policy": 3.5855014324188232,
+        "score": 0.0059924316592514515,
+        "value": 0.001384778181090951
+      },
+      "epoch": 2,
+      "kind": "epoch",
+      "optimizer_step": 8,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 3.7424848079681396,
+        "ownership": 0.6190194487571716,
+        "policy": 3.426873207092285,
+        "score": 0.002685206476598978,
+        "value": 0.0047593796625733376
+      }
+    }
+  ],
+  "optimizer_step": 8,
+  "resumed_from": 1,
+  "run_id": "go08-smoke-resumed-aa62993e"
+}

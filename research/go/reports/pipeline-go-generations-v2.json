@@ -1,0 +1,459 @@
+{
+  "config": {
+    "stages": [
+      {
+        "env": {
+          "AHRGEN_NUMBER": "0",
+          "AHRGEN_STAGE": "baseline"
+        },
+        "name": "baseline-g00",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "1",
+          "AHRGEN_STAGE": "train"
+        },
+        "name": "train-g01",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "1",
+          "AHRGEN_STAGE": "tactics"
+        },
+        "name": "tactics-g01",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "1",
+          "AHRGEN_STAGE": "arena"
+        },
+        "name": "arena-g01",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "1",
+          "AHRGEN_STAGE": "select"
+        },
+        "name": "select-g01",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "1",
+          "AHRGEN_STAGE": "bundle"
+        },
+        "name": "bundle-g01",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "2",
+          "AHRGEN_STAGE": "train"
+        },
+        "name": "train-g02",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "2",
+          "AHRGEN_STAGE": "tactics"
+        },
+        "name": "tactics-g02",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "2",
+          "AHRGEN_STAGE": "arena"
+        },
+        "name": "arena-g02",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "2",
+          "AHRGEN_STAGE": "select"
+        },
+        "name": "select-g02",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "2",
+          "AHRGEN_STAGE": "bundle"
+        },
+        "name": "bundle-g02",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "3",
+          "AHRGEN_STAGE": "train"
+        },
+        "name": "train-g03",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "3",
+          "AHRGEN_STAGE": "tactics"
+        },
+        "name": "tactics-g03",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "3",
+          "AHRGEN_STAGE": "arena"
+        },
+        "name": "arena-g03",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "3",
+          "AHRGEN_STAGE": "select"
+        },
+        "name": "select-g03",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "3",
+          "AHRGEN_STAGE": "bundle"
+        },
+        "name": "bundle-g03",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "0",
+          "AHRGEN_STAGE": "reference_final"
+        },
+        "name": "reference_final-g00",
+        "notebook": "reports/09_13_generation_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "0",
+          "AHRGEN_STAGE": "play"
+        },
+        "name": "play-g00",
+        "notebook": "reports/09_13_generation_handoff_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "0",
+          "AHRGEN_STAGE": "bundle_selected"
+        },
+        "name": "bundle_selected-g00",
+        "notebook": "reports/09_13_generation_handoff_stage_v2.ipynb",
+        "require": "process_success"
+      },
+      {
+        "env": {
+          "AHRGEN_NUMBER": "0",
+          "AHRGEN_STAGE": "report"
+        },
+        "name": "report-g00",
+        "notebook": "reports/09_13_generation_handoff_stage_v2.ipynb",
+        "require": "process_success"
+      }
+    ]
+  },
+  "controller_pid": 339011,
+  "current": null,
+  "global_step": 30,
+  "identity": "dfb45136e96094dc32f22e7bac6ea1c1c19d5faaf2b461bb5088a2b84909585d",
+  "metrics": {
+    "completed_stages": 20
+  },
+  "migration": {
+    "completed_stages_preserved": 17,
+    "from_global_step": 3666,
+    "from_identity": "a063da1724f8a7db10d8d47d28385c999a92610edef741dd5964d6eb77c51079",
+    "from_run_id": "pipeline-go-generations-v2",
+    "preserved_sha256": {
+      "checkpoints/arena11-go-generations-v2-g01/manifest.json": "e23a4cd20d0c4adc509470a7db70bba2642601615ca2ba666a4ad66b6aa2f508",
+      "checkpoints/arena11-go-generations-v2-g02/manifest.json": "df878a9a054cb34a914d9c77519a1b09930fa3f25ae68458f669c11e6e257931",
+      "checkpoints/arena11-go-generations-v2-g03/manifest.json": "451c526aa2fc99bcb9d890a0341663fe80642c4c4901ccb811772d2ca86917eb",
+      "checkpoints/go09-first-selfplay-v1/manifest.json": "af47d4fcb6e5b4b88da1ed5e04ad3009b4f34734c4eef09f8b3057f5c535fc3b",
+      "checkpoints/go09-v2-generation-01/manifest.json": "075d403c2b15efe6600fa021a79dced4de27bf4a7f2929137da2942bf3f523fb",
+      "checkpoints/go09-v2-generation-02/manifest.json": "1cbb63e9b3669435e2c8de7d8ec60a3cf05dffbe97a8ca353f993e820eb3f72c",
+      "checkpoints/go09-v2-generation-03/manifest.json": "16881c57e5a84715b92aad48287dd6b6123d650c47d9dc5492eb4c0613219792",
+      "checkpoints/pipeline-go-generations-v2/manifest.json": "9f235dd60f8451df46b14d59d3395a984aa056ee7100efc8e9fc8681560822a8",
+      "config/go_generations_v2.json": "0a277c4ef890404071331d4ef8ce1430a2ed58128de5549768d8b9417fefac8d",
+      "reports/11_v2_family_go-generations-v2.json": "3d6074b2f2e52d32f3ad610a5d2fe1da9101211a5593001d6041a3c3b3ef95c3",
+      "reports/go_generations_v2/baseline_external.json": "afba6ec2e44324456d10b463d597dd5b7b9cdd455f24586217ae571b5a2728f8",
+      "reports/go_generations_v2/baseline_external_request.json": "63eae5647d4c39478670dbd4583bab0d8781e052d5d2c37576a1ecdbc586447d",
+      "reports/go_generations_v2/baseline_preflight_bundle.json": "df4380ce879ef74b747e9bed71578f0772b449cf8dfdf52b104d4f8fc790ace0",
+      "reports/go_generations_v2/baseline_tactics.json": "1a39fae01bf243096d48eddf9e0e8efe101c1f8db3f84049dc035ed5efc91cf5",
+      "reports/go_generations_v2/final_external.json": "704be9da2d6ba9e4c6ae4c38dff1ca746917dd61fe2ff532c8831f7e9c6b0df0",
+      "reports/go_generations_v2/final_external_request.json": "d42c706074ee1341c608702f3151d71a29cfb177b92abe93029dda36b2e1c373",
+      "reports/go_generations_v2/g01_arena.json": "7549ed05f9d670a0575edfb4843761450387947513c2899b09515f318d429b5d",
+      "reports/go_generations_v2/g01_arena_request.json": "84385857f1c96f255f75782f4e8ed657b790af697f7d75cfba712de18c606bf3",
+      "reports/go_generations_v2/g01_bundle.json": "dbdaca821cb5c463d2d2d125f83516bd5cf94c7516ccfa34bbc7eb921270b019",
+      "reports/go_generations_v2/g01_tactics.json": "705dd2df42b383e7b5361357c52c9e179930dd8c225bba66fd42fe951919a47c",
+      "reports/go_generations_v2/g01_training.json": "45f1d2424cdec6fdaf67f0e064c97899064138a4536c4756b03ceb28eddf14cc",
+      "reports/go_generations_v2/g01_training_request.json": "2c5afab16f6405e2bc4dc77c87a292db0b3a573e5cf1b61022d437ff3377aff2",
+      "reports/go_generations_v2/g02_arena.json": "2cac6880f0c9c0740ec77e2b61f6ec75f4a3b951429c9debe3e52192b96c5442",
+      "reports/go_generations_v2/g02_arena_request.json": "82984d02556a22cc7aba149a21ddab7121c2f506877c5fb55f2d0c7a72009915",
+      "reports/go_generations_v2/g02_bundle.json": "db4fb686a88b6fe41aac03476e537f295934315c910e48553e82322f5fe83058",
+      "reports/go_generations_v2/g02_tactics.json": "c35e98f6dbecf187c166623ee8c1178c30c3f207612175492831370c3b2401b2",
+      "reports/go_generations_v2/g02_training.json": "8b2cc4884ce798fe2195b54e8500775e73ab6fd8a5c6bda9e07c99dd8f7e6e0e",
+      "reports/go_generations_v2/g02_training_request.json": "66ed33c46d8059a2313817020e47f1561989e4766ae1edb5f0ed2dac944dd59d",
+      "reports/go_generations_v2/g03_arena.json": "7b9842cc1dd133cd5f5a21f52da4fbfd6fb73612925b4a1637b8ea0b86b694fb",
+      "reports/go_generations_v2/g03_arena_request.json": "6a499c3d1af6222278bcbf73072011b90da3ecbdab062e2d6d136e52d085d5da",
+      "reports/go_generations_v2/g03_bundle.json": "853ebf234da602840e6bdb94a1bc15ea21b9340748a6f41bd52c1e8630945b68",
+      "reports/go_generations_v2/g03_tactics.json": "02cd015b6a66bd8cbd15bcbd215c3bef3e36f285cfb56f3107bafac1e5f21f9a",
+      "reports/go_generations_v2/g03_training.json": "9db7e2ca7b9726bbcbafe6470bcc4a13196e67f56fc0c03c0e4fe56edd2a4b38",
+      "reports/go_generations_v2/g03_training_request.json": "20ac66f8a31fdee3f82c14ccb0fdb4760f10e365805260b34a17c6ad42ed4731",
+      "reports/go_generations_v2/pilot_preflight_bundle.json": "9b56f42f8ce3b4cbdfb24a7b8c7d9c4b56a53b149a80d08ddce18c53411f8c1f",
+      "reports/go_generations_v2/selection.json": "0faa22c608c4ac5719ccda08a43619d7899cc6d56fa56f31dc9e6ae3547c71d9"
+    },
+    "reason": "Supply missing widget imports in a separate child bootstrap; finish only the final handoff",
+    "repair_source_sha256": "4c79d1e922cd8de7b33a84c3f51e1daead8de95a2ccb4a3e0d4128871c46ba89"
+  },
+  "recovered_from_run_id": "pipeline-go-generations-v2",
+  "repair_notebook": "reports/09_13_finish_handoff_v2.ipynb",
+  "run_id": "pipeline-go-generations-v2-handoff-repair",
+  "sampler": {
+    "stage_index": 20
+  },
+  "schema": "ahr_pipeline_v1",
+  "scientific_state": "Stored in the child run manifests; this controller performs no training itself",
+  "source_identity": {
+    "controller": "f93f85ae6316b493833eaee3b4947f6b7616202478f3d0afabaa23bf973aaa3b",
+    "stage_sources": {
+      "reports/09_13_generation_handoff_stage_v2.ipynb": "45784d2e042b6f368b904a3ba6e9f9a2e080f8f492064d59224eceac58757fbc",
+      "reports/09_13_generation_stage_v2.ipynb": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1"
+    }
+  },
+  "stage_index": 20,
+  "stage_records": [
+    {
+      "log": "reports/pipeline-go-generations-v2-baseline-g00.log",
+      "name": "baseline-g00",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 140036,
+      "process_token": "14295315",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-train-g01.log",
+      "name": "train-g01",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 142377,
+      "process_token": "14329100",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-tactics-g01.log",
+      "name": "tactics-g01",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 153289,
+      "process_token": "15225815",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-arena-g01.log",
+      "name": "arena-g01",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 153351,
+      "process_token": "15227304",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-select-g01.log",
+      "name": "select-g01",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 177286,
+      "process_token": "17842330",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-bundle-g01.log",
+      "name": "bundle-g01",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 177339,
+      "process_token": "17843307",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-train-g02.log",
+      "name": "train-g02",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 177405,
+      "process_token": "17846384",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-tactics-g02.log",
+      "name": "tactics-g02",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 185365,
+      "process_token": "18807535",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-arena-g02.log",
+      "name": "arena-g02",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 185424,
+      "process_token": "18808973",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-select-g02.log",
+      "name": "select-g02",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 206490,
+      "process_token": "21376787",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-bundle-g02.log",
+      "name": "bundle-g02",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 206540,
+      "process_token": "21377759",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-train-g03.log",
+      "name": "train-g03",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 206607,
+      "process_token": "21380801",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-tactics-g03.log",
+      "name": "tactics-g03",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 216629,
+      "process_token": "22372007",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-arena-g03.log",
+      "name": "arena-g03",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 216691,
+      "process_token": "22373520",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-select-g03.log",
+      "name": "select-g03",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 251942,
+      "process_token": "25111632",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-bundle-g03.log",
+      "name": "bundle-g03",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 251991,
+      "process_token": "25112670",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-reference_final-g00.log",
+      "name": "reference_final-g00",
+      "notebook": "reports/09_13_generation_stage_v2.ipynb",
+      "pid": 252067,
+      "process_token": "25116358",
+      "returncode": 0,
+      "source_sha256": "e0aaf195727952235a410803bb6ba68c9559ad80b74a88cd51f989f6c3d109a1",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-handoff-repair-play-g00.log",
+      "name": "play-g00",
+      "notebook": "reports/09_13_generation_handoff_stage_v2.ipynb",
+      "pid": 339084,
+      "process_token": "34637898",
+      "returncode": 0,
+      "source_sha256": "45784d2e042b6f368b904a3ba6e9f9a2e080f8f492064d59224eceac58757fbc",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-handoff-repair-bundle_selected-g00.log",
+      "name": "bundle_selected-g00",
+      "notebook": "reports/09_13_generation_handoff_stage_v2.ipynb",
+      "pid": 340077,
+      "process_token": "34654990",
+      "returncode": 0,
+      "source_sha256": "45784d2e042b6f368b904a3ba6e9f9a2e080f8f492064d59224eceac58757fbc",
+      "status": "COMPLETE"
+    },
+    {
+      "log": "reports/pipeline-go-generations-v2-handoff-repair-report-g00.log",
+      "name": "report-g00",
+      "notebook": "reports/09_13_generation_handoff_stage_v2.ipynb",
+      "pid": 340165,
+      "process_token": "34657277",
+      "returncode": 0,
+      "source_sha256": "45784d2e042b6f368b904a3ba6e9f9a2e080f8f492064d59224eceac58757fbc",
+      "status": "COMPLETE"
+    }
+  ],
+  "status": "COMPLETE",
+  "updated_at_utc": "2026-09-26T23:22:40.479489+00:00"
+}

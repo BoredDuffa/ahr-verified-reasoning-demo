@@ -1,0 +1,110 @@
+{
+  "arena_run": "arena11-first-selfplay-v1",
+  "artifacts": {
+    "arena_checkpoint_5709": {
+      "global_step": 5709,
+      "path": "checkpoints/arena11-first-selfplay-v1/step-000005709-101728cd.pt",
+      "sha256": "52e248c4daeaccc16f083faa246fc3c545592f57bd586052397d31d2e9b333f8"
+    },
+    "arena_checkpoint_5710": {
+      "global_step": 5710,
+      "path": "checkpoints/arena11-first-selfplay-v1/step-000005710-9e59110f.pt",
+      "sha256": "d16a156cbfe29d38760f87946dc897b12cd0f31ba215efc730851f2b865b126b"
+    },
+    "arena_identity": {
+      "path": "checkpoints/arena11-first-selfplay-v1/identity.json",
+      "sha256": "c98f282cf3bf451fcc69dcca3768277b4606106883feafbbc429ec64ea96ef9f"
+    },
+    "arena_manifest": {
+      "path": "checkpoints/arena11-first-selfplay-v1/manifest.json",
+      "sha256": "cbce696277193ab55081c80d545f7ac30eb2b80c609f55ebc869fdb44f9eee3c"
+    },
+    "arena_summary": {
+      "path": "checkpoints/arena11-first-selfplay-v1/summary.json",
+      "sha256": "e52f9b6c5531d41a34998650d72e3d2a39c12321e9f1050ab6b00bc34d8e14e5"
+    },
+    "evaluation_report": {
+      "path": "reports/11_first_candidate_evaluation_results.json",
+      "sha256": "a972bf312f8915f71a1a98c50371dea8022d1d4a3aa31c8c4dfac3ee5cba7828"
+    },
+    "selfplay_candidate_checkpoint": {
+      "arena_weights_sha256": "aa2615f4a7145d9c35de0fb373e9171c16c6a250843db45f002738c040fb7a6d",
+      "optimizer_step": 512,
+      "path": "checkpoints/go09-first-selfplay-v1/step-000008703-3769a76f.pt",
+      "sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad"
+    },
+    "warmup_reference_checkpoint": {
+      "arena_weights_sha256": "0e5be3f664e5d7a175dd98a485e76d87a0850204f5680cd042aec491ec60d6ef",
+      "optimizer_step": 32,
+      "path": "checkpoints/go08-initial-warmup-v2/step-000000004-d56193ce.pt",
+      "sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51"
+    }
+  },
+  "audit_execution": "Completed before this receipt was written; no games or training were rerun.",
+  "audit_method": "Read-only independent review of saved arena checkpoints; imported only tagged notebook exports; replayed all actions with the notebook06 independent transition verifier; recomputed final area scores with separate per-empty-point reachability scoring; checked colour perspective, paired openings, payload hashes and frozen model weights.",
+  "checks": {
+    "actual_two_pass_terminal_games": 64,
+    "candidate_draws": 0,
+    "candidate_losses": 0,
+    "candidate_optimizer_steps": 512,
+    "candidate_wins_as_black": 32,
+    "candidate_wins_as_white": 32,
+    "deadline_misses": 0,
+    "declared_seconds_per_move": 1.0,
+    "failed_move_calls": 0,
+    "frozen_arena_weights_match_source_checkpoints": "PASS",
+    "full_saved_history_replay": "PASS",
+    "illegal_proposals": 0,
+    "independently_recomputed_matching_terminal_scores": 64,
+    "independently_verified_legal_moves": 5582,
+    "matched_search_configuration": {
+      "branch_width": 4,
+      "max_depth": 2,
+      "max_nodes": 32,
+      "queen_cycles": 1,
+      "temperature": 1.0
+    },
+    "paired_blocks": 32,
+    "recorded_players_match_side_to_play": "PASS",
+    "reference_is_candidates_exact_warmup_initialization": true,
+    "reference_optimizer_steps": 32,
+    "strict_retained_arena_manifest_and_payloads": "PASS",
+    "unique_opening_boards": 32,
+    "unique_opening_boards_modulo_d4": 32
+  },
+  "claim_scope": {
+    "limitation": "The weak warmup reference passed 572 times versus 64 candidate passes. This comparison does not calibrate strength against capable Go engines or humans, isolate which AHR component caused improvement, or establish general Go strength or full-game optimality.",
+    "observed_paired_blocks": 32,
+    "promotion_eligible": false,
+    "promotion_recommended": false,
+    "required_promotion_blocks": 128,
+    "supported": "The final self-play candidate won all 64 recorded games against its exact warmup initialization under the declared paired 9x9 development protocol."
+  },
+  "descriptive_results": {
+    "candidate_margin_as_black": {
+      "maximum": 73.5,
+      "median": 21.5,
+      "minimum": 0.5
+    },
+    "candidate_margin_as_white": {
+      "maximum": 88.5,
+      "median": 25.5,
+      "minimum": 3.5
+    },
+    "candidate_passes": 64,
+    "candidate_played_moves": 2807,
+    "game_plies_including_opening": {
+      "maximum": 151,
+      "median": 84.0,
+      "minimum": 54
+    },
+    "median_final_candidate_stones": 39.0,
+    "median_final_reference_stones": 15.0,
+    "reference_passes": 572,
+    "reference_played_moves": 2775
+  },
+  "original_results_modified": false,
+  "recorded_at_utc": "2026-09-24T13:55:28.619474+00:00",
+  "schema": "ahr_independent_arena_results_audit_v1",
+  "status": "PASS"
+}

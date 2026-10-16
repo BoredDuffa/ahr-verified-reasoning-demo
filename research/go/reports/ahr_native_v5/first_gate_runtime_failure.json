@@ -1,0 +1,34 @@
+{
+  "actual_heldout_rows": 1000,
+  "checkpoint_global_step": 242,
+  "checkpoint_optimizer_step": 242,
+  "checkpoint_sha256": "ee43fb7ab9848ac4dd2228ee707692fcfe579d9d02247448aa20cc242739d368",
+  "error": "IndexError: list index out of range",
+  "measured_gate_before_history_failure": {
+    "by_goal": {
+      "capture_one_ply": 0.34,
+      "connect_one_ply": 0.24,
+      "force_capture_three_plies": 0.204,
+      "survive_two_plies": 0.332
+    },
+    "capture_success": 0.34,
+    "development_only": true,
+    "heldout_rows": 1000,
+    "lockbox_used": false,
+    "optimizer_step": 242,
+    "scope": "bounded task competence and independently measured teacher improvement, not full-game strength",
+    "status": "FAIL",
+    "teacher": {
+      "reason": "skill gate not passed",
+      "status": "NOT_MEASURED"
+    },
+    "thresholds": {
+      "capture": 0.99,
+      "overall": 0.95
+    },
+    "top1_success": 0.279
+  },
+  "old_source_sha256": "8082c0c389e40721101b140b4cf0b5fa3bd27f14a9f7ea379ceffe3b5ef63212",
+  "seconds": 4.389630317687988,
+  "status": "REPRODUCED"
+}

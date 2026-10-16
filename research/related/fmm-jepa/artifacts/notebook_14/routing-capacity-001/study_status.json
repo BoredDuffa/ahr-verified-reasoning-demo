@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "stage": "interrupted",
+  "updated_unix": 1791466408.8762147,
+  "error": "RuntimeError('Detached paired_training_and_fixed_probes job exited without completed evidence: fmm-routing-routing-capacity-001-worker0')",
+  "elapsed_seconds": 6458.365711927414,
+  "conclusion": "UNKNOWN until all registered endpoints complete"
+}

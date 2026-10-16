@@ -1,0 +1,16 @@
+{
+  "elapsed_s": 295.46,
+  "expectation_met_count": 100,
+  "expected_negative": 20,
+  "expected_positive": 80,
+  "failure_reason_counts": {
+    "expected_negative_or_unverified": 20,
+    "solved": 80
+  },
+  "record_count": 100,
+  "records_path": "datasets/lean_ahr_v2_19_exact100_cached_records.jsonl",
+  "run_name": "lean_ahr_v2_19_exact100_cached",
+  "schema": "ahr_lean_v2_19_exact100_report",
+  "solved_count": 80,
+  "validation_mode": "cached_retrieval_verified_final_checks"
+}

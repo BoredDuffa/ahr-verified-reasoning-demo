@@ -1,0 +1,28 @@
+{
+  "balanced_color_pairs": true,
+  "checked_at_utc": "2026-10-09T16:02:35.740358+00:00",
+  "fixture_runs": [
+    "benchmark17-protocol-2229e613-full",
+    "benchmark17-protocol-2229e613-resume"
+  ],
+  "fresh_fixtures": [
+    "reports/ahr_v2/fixtures/benchmark17-protocol-2229e613-plan-pause.ipynb",
+    "reports/ahr_v2/fixtures/benchmark17-protocol-2229e613-plan-resume.ipynb",
+    "reports/ahr_v2/fixtures/benchmark17-protocol-2229e613-speed-pause.ipynb",
+    "reports/ahr_v2/fixtures/benchmark17-protocol-2229e613-speed-resume.ipynb"
+  ],
+  "legal_openings": true,
+  "mismatched_recipe_refused": true,
+  "note": "Wall-clock durations are measurements and deliberately excluded from exact scientific-state comparison.",
+  "opening_fresh_kernel_exact": true,
+  "schema": "ahr-v2-benchmark-protocol-validation-v1",
+  "speed_clockless_fresh_kernel_exact": true,
+  "speed_positions_by_stage": [
+    "opening",
+    "middle",
+    "late"
+  ],
+  "status": "PASS",
+  "test_payload_consumed": false,
+  "train_dev_prior_review_disjoint": true
+}

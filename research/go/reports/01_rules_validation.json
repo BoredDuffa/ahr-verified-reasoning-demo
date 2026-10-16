@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-09-23T12:58:30.153903+00:00",
+  "ruleset": {
+    "name": "ahr_go_area_positional_superko_v1",
+    "default_size": 9,
+    "default_komi": 7.5,
+    "suicide": false,
+    "ko": "positional_superko",
+    "passes_exempt_from_superko": true,
+    "consecutive_passes_to_end": 2,
+    "scoring": "stones_plus_single_color_bordered_empty_regions_minus_komi",
+    "dead_stones": "must_be_captured_before_passing",
+    "move_cap": null
+  },
+  "seed": 20260923,
+  "counts": {
+    "fixture_assertions": 28,
+    "malformed_state_rejections": 23,
+    "exhaustive_3x3_score_layouts": 19683,
+    "exhaustive_2x2_position_turn_pairs": 162,
+    "move_comparisons": 31592,
+    "replay_positions_by_size": {
+      "3": 199,
+      "5": 300,
+      "9": 256
+    },
+    "serialization_roundtrips": 755,
+    "symmetry_state_checks": 488,
+    "symmetry_transition_checks": 13520
+  },
+  "elapsed_seconds": 9.717498848003743,
+  "notebook_code_sha256": "fbb3a59b50faabdad8b12d7482c6e7dce822669929347e36f7091b39cf4daa87",
+  "exported_rules_sha256": "818b0bb43f1838abeb4c9dab7b014e4fe05fa63a7853c15e2287a70d7f00749f",
+  "origin_local_rules_sha256": "9e715328359f56c2003071a327328b618c20999ad54b058026568eba141b81d6",
+  "independent_implementation": "coordinate-map move oracle and per-empty-point score oracle",
+  "formal_proof": false,
+  "training_performed": false,
+  "limitations": [
+    "Exhaustive static layout checks are not exhaustive game-history checks.",
+    "Random 9x9 replays are sampled coverage.",
+    "Players must capture dead stones before passing.",
+    "No claim about Go playing strength or optimal moves is established."
+  ]
+}

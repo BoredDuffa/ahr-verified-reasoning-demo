@@ -1,0 +1,17 @@
+{
+  "changed_plan_rejected": true,
+  "family_digest": "652883ab298f0935519ab95d420cfa3de3ec9f1062fc534ae5bfd1cabb64a840",
+  "family_id": "v2-api-smoke-4c57fe103d",
+  "promotion_recommended": false,
+  "resume_previous_step": 2,
+  "resumed_step": 4,
+  "source_bound_generation_api": true,
+  "sources": {
+    "00_instance_setup_and_recovery.ipynb": "4477b570d0eb6d7ab20542ff9e4ee05c0eda82c0f192d5c78c3dee17b304695f",
+    "01_go_rules_and_independent_verifier.ipynb": "fbb3a59b50faabdad8b12d7482c6e7dce822669929347e36f7091b39cf4daa87",
+    "11_engine_arena_and_evaluation.ipynb": "19993232d3678bf012ff38549e63b135eca008a7dee61b13e9d8fed01e411ca1"
+  },
+  "status": "PASS",
+  "strength_claim": false,
+  "training_started": false
+}

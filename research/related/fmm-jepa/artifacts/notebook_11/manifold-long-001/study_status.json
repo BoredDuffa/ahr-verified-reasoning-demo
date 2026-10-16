@@ -1,0 +1,22 @@
+{
+  "stage": "complete",
+  "status": "COMPLETED",
+  "updated_unix": 1791364323.0196562,
+  "elapsed_seconds": 32988.08828473091,
+  "updates": 1800,
+  "seeds": [
+    20261401,
+    20261402,
+    20261403,
+    20261404,
+    20261405,
+    20261406
+  ],
+  "variants": [
+    "vit",
+    "spatial_kernel",
+    "learned_kernel"
+  ],
+  "heldout_status": "NOT_RUN",
+  "results": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_11/manifold-long-001/stages/learning/stage_results.md"
+}

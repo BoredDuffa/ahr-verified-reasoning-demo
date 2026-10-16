@@ -1,0 +1,24 @@
+{
+  "checkpoint": {
+    "file": "step-000000010-30455e4f.pt",
+    "global_step": 10,
+    "sha256": "11098bc7f7da644be0890dfd3b92410611caeef8bfb19f12c04d10bb5aa4be29"
+  },
+  "completed_stages": [
+    "diagnosis",
+    "prepare_competitive_data",
+    "previous_checkpoint_screen",
+    "train_control",
+    "train_challenger",
+    "supervised_screen",
+    "collect_guided_buffer",
+    "guided_control",
+    "guided_economics",
+    "economic_screen"
+  ],
+  "error": "ValueError('Game indices must be consecutive.')",
+  "pipeline_id": "ahr-v2-katago-econ-20261011-v1",
+  "stage": "fresh_confirmation",
+  "status": "ERROR",
+  "updated_at_utc": "2026-10-12T01:07:53.494226+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "checkpoint_sha256": "5e2233dffe19dffea21aabbc5fe7984bb6f1e528cc9c1b6cc2c64ca10423f796",
+  "compared_tensors": 33,
+  "exact_continuation": true,
+  "expected_loss": 0.5296098291873932,
+  "resumed_loss": 0.5296098291873932
+}

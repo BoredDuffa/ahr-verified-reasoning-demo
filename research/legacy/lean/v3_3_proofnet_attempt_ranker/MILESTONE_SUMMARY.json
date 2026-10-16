@@ -1,0 +1,115 @@
+{
+  "clinical_use": "forbidden",
+  "created_utc": "20260615T191605Z",
+  "dataset": {
+    "clinical_use": "forbidden",
+    "example_count": 583,
+    "inputs": {
+      "datasets/lean_ahr_v3_1_hf_proofnet50_bridge_records.jsonl": {
+        "examples": 71,
+        "records": 50
+      },
+      "datasets/lean_ahr_v3_2_hf_proofnet50_translation_audit_records.jsonl": {
+        "examples": 25,
+        "records": 50
+      },
+      "datasets/lean_ahr_v3_2_hf_proofnet50_translation_bridge_records.jsonl": {
+        "examples": 487,
+        "records": 50
+      }
+    },
+    "label_counts": {
+      "0": 572,
+      "1": 11
+    },
+    "out": "datasets/lean_ahr_v3_3_proofnet_attempt_ranker_records.jsonl",
+    "positive_by_split": {
+      "test": 3,
+      "train": 5,
+      "val": 3
+    },
+    "rows_with_positive_count": 5,
+    "schema": "ahr_lean_v3_3_proofnet_attempt_ranker_dataset_report",
+    "split_counts": {
+      "test": 145,
+      "train": 339,
+      "val": 99
+    }
+  },
+  "objective": "Train a neural AHR attempt ranker over ProofNet bridge hypotheses to prioritize Lean calls.",
+  "remote_host": "benjamin@34.70.49.55",
+  "remote_root": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "schema": "ahr_lean_v3_3_proofnet_attempt_ranker_milestone_summary",
+  "training": {
+    "acceptance": {
+      "test_row_top1_positive_ge_0_80": true,
+      "val_row_top1_positive_ge_0_80": true
+    },
+    "best_epoch": 5,
+    "device": "cuda",
+    "elapsed_s": 1508.781,
+    "epochs": 2000,
+    "hidden_dim": 512,
+    "label_counts": {
+      "0": 572,
+      "1": 11
+    },
+    "metrics": {
+      "test": {
+        "accuracy": 0.9103448275862069,
+        "count": 145,
+        "f1": 0.13333333333333333,
+        "fn": 2,
+        "fp": 11,
+        "positive_count": 3,
+        "precision": 0.08333333333333333,
+        "ranked_failures": [],
+        "recall": 0.3333333333333333,
+        "row_mrr": 1.0,
+        "row_top1_positive_rate": 1.0,
+        "rows_with_positive": 1,
+        "tn": 131,
+        "tp": 1
+      },
+      "train": {
+        "accuracy": 0.9941002949852508,
+        "count": 339,
+        "f1": 0.8000000000000002,
+        "fn": 1,
+        "fp": 1,
+        "positive_count": 5,
+        "precision": 0.8,
+        "ranked_failures": [],
+        "recall": 0.8,
+        "row_mrr": 1.0,
+        "row_top1_positive_rate": 1.0,
+        "rows_with_positive": 3,
+        "tn": 333,
+        "tp": 4
+      },
+      "val": {
+        "accuracy": 0.9797979797979798,
+        "count": 99,
+        "f1": 0.5,
+        "fn": 2,
+        "fp": 0,
+        "positive_count": 3,
+        "precision": 1.0,
+        "ranked_failures": [],
+        "recall": 0.3333333333333333,
+        "row_mrr": 1.0,
+        "row_top1_positive_rate": 1.0,
+        "rows_with_positive": 1,
+        "tn": 96,
+        "tp": 1
+      }
+    },
+    "run_name": "lean_ahr_v3_3_proofnet_attempt_ranker_full",
+    "split_counts": {
+      "test": 145,
+      "train": 339,
+      "val": 99
+    },
+    "vocab_size": 1804
+  }
+}

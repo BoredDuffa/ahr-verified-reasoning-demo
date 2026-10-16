@@ -1,0 +1,51 @@
+{
+  "milestone": "Lean-AHR v3.5 held-out ProofNet offset-50 generalization test",
+  "remote_host": "benjamin@34.70.49.55",
+  "remote_project": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "date": "2026-06-16",
+  "dataset": {
+    "name": "hoskinson-center/proofnet",
+    "config": "plain_text",
+    "split": "test",
+    "offset": 50,
+    "length": 50,
+    "row_idx_range": "50-99"
+  },
+  "run_name": "lean_ahr_v3_5b_hf_proofnet50_offset50_translation_repair_bridge",
+  "configuration": {
+    "retrieve_top_k": 12,
+    "max_clusters": 4,
+    "max_lean_calls": 24,
+    "timeout_s": 30,
+    "aesop": false,
+    "attempt_ranker_checkpoint": "checkpoints/lean_ahr_v3_3_proofnet_attempt_ranker_full.pt",
+    "ranker_candidate_pool": 96
+  },
+  "results": {
+    "record_count": 50,
+    "translated_count": 13,
+    "retrieval_cluster_success_count": 13,
+    "target_verified_count": 0,
+    "lean_calls_total": 348,
+    "elapsed_s": 2395.914,
+    "failure_reason_counts": {
+      "lean_unknown_identifier": 29,
+      "lean_verification_failed": 15,
+      "lean_typeclass_synthesis_failed": 3,
+      "lean_unsolved_goals": 2,
+      "lean_type_mismatch": 1
+    }
+  },
+  "baseline_v3_5_first_50": {
+    "translated_count": 33,
+    "retrieval_cluster_success_count": 33,
+    "target_verified_count": 5,
+    "lean_calls_total": 697
+  },
+  "interpretation": {
+    "generalization_result": "The current v3.5 bridge does not generalize to the next ProofNet slice: target verification fell from 5/50 on rows 0-49 to 0/50 on rows 50-99.",
+    "coverage_result": "Translation coverage fell from 33/50 to 13/50.",
+    "primary_bottleneck": "The offset-50 slice contains more Munkres topology, Axler linear algebra, Ireland-Rosen number theory, Shakarchi analysis, Putnam, and Pugh statements, exposing syntax and theorem areas outside the current translator/template set.",
+    "next_step": "Mine offset-50 unknown identifiers by source family and add domain-specific translation modules before training any larger attempt ranker."
+  }
+}

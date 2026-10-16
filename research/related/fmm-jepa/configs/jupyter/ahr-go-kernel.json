@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/home/benjamin/workspace/ahr_go/.venv/bin/python",
+    "-Xfrozen_modules=off",
+    "-m",
+    "ipykernel_launcher",
+    "-f",
+    "{connection_file}"
+  ],
+  "display_name": "AHR Go (.venv)",
+  "language": "python",
+  "metadata": {
+    "debugger": true,
+    "supported_encryption": "curve"
+  },
+  "kernel_protocol_version": "5.5",
+  "env": {
+    "MPLCONFIGDIR": "/home/benjamin/workspace/ahr_go/fmm_jeppa/.cache/matplotlib",
+    "XDG_CACHE_HOME": "/home/benjamin/workspace/ahr_go/fmm_jeppa/.cache",
+    "HF_HOME": "/home/benjamin/workspace/ahr_go/fmm_jeppa/.cache/huggingface",
+    "TORCH_HOME": "/home/benjamin/workspace/ahr_go/fmm_jeppa/.cache/torch"
+  }
+}

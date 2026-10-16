@@ -1,0 +1,21 @@
+# Notebook 05 numerical repair
+
+The original `learning-resolution-001` run stopped on 2026-09-28 at 14:32 UTC. It recorded 45, 56 and 81 failed attempts in the three semantic arms, while the ViT arms recorded none. Skipped attempts changed the consumed example streams, so those final states cannot supply the intended paired comparison. The failed artifacts, checkpoints and a verified snapshot of their source notebooks remain preserved.
+
+The [failure replay notebook](../tests/05_Numerical_Failure_Replay.ipynb) reconstructs the next batches from the saved update-970 state. The failure occurred in the second context mixer. For one receiver/head, the approximate global denominator was `1.0000528097`, while the nearby approximate contribution was `1.0000529289`. Subtraction produced `-1.1920929e-7`. The exact nearby contribution was only `5.1233943e-8`, leaving a negative total denominator even though the mathematical weights are positive. All numerator entries were finite. This establishes subtraction cancellation in this reproduced case.
+
+The [repaired operator](../experiments/05_scaling/stable_attention.ipynb) keeps the original learned parameters, neighborhoods and hybrid attention kernel. Numerically suspect rows are evaluated directly using logarithmic weights and FP64 arithmetic, in bounded chunks. Nearby weights use the exact query–key score; far weights use the same random-feature kernel through log-sum-exp. Normalization uses those actual combined weights. Padding is masked before exponentiation. Extremely small positive denominators also take the stable path because division can have finite outputs but invalid gradients. No denominator epsilon or weight clipping changes the operator.
+
+Validation evidence is separate from research outcomes:
+
+- [Operator validation](../tests/05_Stable_Attention_Validation.ipynb): reproduced failure, independent high-precision forward/gradient references, padding, invalid inputs and normalization edge cases.
+- [Training smoke](../tests/05_Stability_Training_Smoke.ipynb): 60 diagnostic optimizer updates from two old late-training states and fresh full-state checkpoint recovery for both architectures. These diagnostic continuations do not supply learning-quality evidence.
+- The launch gate requires a passing certificate at `artifacts/notebook_05/repair_validation/stability_certificate.json`, verifies its supporting report hashes and binds it to the repaired operator's exported source hash.
+
+The completed validation recorded 60 additional successful diagnostic updates with zero new failures, plus passing fresh-state recovery checks for both architectures. The first late-state test was interrupted and resumed from update 985. Its successful-update difference is cumulative from the parent checkpoint; the reported wall time and mixer counters cover only the final invocation and should not be divided into that cumulative update count to estimate speed.
+
+The replacement study uses `learning-resolution-stable-001` and starts fresh paired initializations. It retains 1,000 updates per arm, three paired seeds, the same fixed labeled probes, the learning gate, and a new explicitly authorized 24-hour maximum clock. The first numerical failure now stops the run; no invalid batch is silently skipped. Fallback counters are saved in each stage's `numerical_backend_stats.json` and describe the current worker process, resetting on process restart. Each fallback receiver directly visits its sources; if many receivers need it, computation can approach quadratic work. Measured costs include this work, so the repair is not evidence of linear-time scaling.
+
+Passing these bounded checks supports starting the repaired experiment. It does not prove universal numerical stability, better learned representations or an end-to-end efficiency advantage. The new study supplies those empirical comparisons when its training and evaluation finish.
+
+The repaired study launched on 2026-09-29 at 14:45:41 UTC in `fmm-scaling-learning-resolution-stable-001`; its original deadline is 2026-09-30 at 14:45:41 UTC. Use the [main Notebook 05](../notebooks/05_Learning_and_Resolution_Scaling.ipynb) with the same run ID to monitor or reconnect. Current state is authoritative in `artifacts/notebook_05/learning-resolution-stable-001/study_status.json`.

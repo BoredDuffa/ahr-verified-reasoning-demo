@@ -1,0 +1,59 @@
+{
+  "checked_at_utc": "2026-10-02T17:17:55.867689+00:00",
+  "configuration_sha256": "3a1bca2afbe9538a3dea6f2fb3c9e37c59b0715977194f2a2534a17e6c257396",
+  "device": "cuda:1",
+  "heldout_gate": {
+    "by_goal": {
+      "capture_one_ply": 0.452,
+      "connect_one_ply": 0.336,
+      "force_capture_three_plies": 0.308,
+      "survive_two_plies": 0.36
+    },
+    "capture_success": 0.452,
+    "development_only": true,
+    "heldout_rows": 1000,
+    "lockbox_used": false,
+    "optimizer_step": 768,
+    "scope": "bounded task competence and independently measured teacher improvement, not full-game strength",
+    "status": "FAIL",
+    "teacher": {
+      "reason": "skill gate not passed",
+      "status": "NOT_MEASURED"
+    },
+    "thresholds": {
+      "capture": 0.99,
+      "overall": 0.95
+    },
+    "top1_success": 0.364
+  },
+  "optimizer_steps": 970,
+  "original_clocks": {
+    "hard_deadline_unix": 1791045910.4058352,
+    "learning_deadline_unix": 1791017110.4058352,
+    "started_unix": 1790959510.4058352,
+    "target_deadline_unix": 1791024310.4058352
+  },
+  "phase": "warmup",
+  "session": "ahr-go-native-v5",
+  "status": "RUNNING_VERIFIED",
+  "valid_resumable_checkpoints": [
+    {
+      "file": "step-000000920-c29d0485.pt",
+      "history_measurements": 3,
+      "optimizer_step": 920,
+      "sha256": "9ca0a26538f215259884d3d9d05eae99c7bb23ac7c3e840f18bb3ee89d1f0c65"
+    },
+    {
+      "file": "step-000000938-f687cecd.pt",
+      "history_measurements": 3,
+      "optimizer_step": 938,
+      "sha256": "bc8858db5acad9392b947dd63adb29bcd8529d8ea67ffeb2c67a8f9eca31c2e7"
+    },
+    {
+      "file": "step-000000970-34b98938.pt",
+      "history_measurements": 3,
+      "optimizer_step": 970,
+      "sha256": "94662694e832d13cc12f0a1c8250aaa772064d6a8f37931c6a72def5423563bd"
+    }
+  ]
+}

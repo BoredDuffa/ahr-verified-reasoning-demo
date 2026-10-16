@@ -1,0 +1,14 @@
+{
+  "elapsed_s": 336.413,
+  "expectation_met_count": 50,
+  "failure_reason_counts": {
+    "solved": 50
+  },
+  "record_count": 50,
+  "records_path": "datasets/lean_ahr_v3_0_nl50_records.jsonl",
+  "run_name": "lean_ahr_v3_0_nl50",
+  "schema": "ahr_lean_v3_0_nl50_report",
+  "solved_count": 50,
+  "unique_prompt_count": 10,
+  "validation_mode": "natural_language_retrieval_plus_verified_wrapper_cached_by_prompt_class"
+}

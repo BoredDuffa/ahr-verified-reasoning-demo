@@ -1,0 +1,25 @@
+{
+  "active_training_run": "ahr-v2-repair-20261007-8h",
+  "board_size": 9,
+  "created_at_utc": "2026-10-06T17:29:15.748779+00:00",
+  "komi": 7.5,
+  "last_completed_training_run": "ahr-v2-selfplay-20261006-12h",
+  "lorentzian_workspace": "planned_separate_comparison",
+  "model_initialization": "fresh_random_weights",
+  "next_stage": "compare_tactical_survival_calibration_and_GNU_Go_development_results",
+  "previous_runs_preserved": true,
+  "queen": "fixed_batch_scheduler",
+  "schema": "ahr-go-v2-fresh",
+  "scout": "legal_move_energy",
+  "search": "batched_PUCT_real_visit_counts",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa"
+  },
+  "stage": "repair_long_run_in_progress",
+  "training_config": "config/ahr_v2_repair_training.json",
+  "training_source_preference": "ahr_self_play_for_this_run",
+  "worker": "loss_draw_win_energy_current_player"
+}

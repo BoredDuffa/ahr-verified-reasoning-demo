@@ -1,0 +1,525 @@
+{
+  "format_version": 1,
+  "status": "unexecuted_first_draft",
+  "notebook_count": 16,
+  "remote_root": "/workspace/arc-agi-3-ahrv2",
+  "validation": {
+    "nbformat": "5.11.1",
+    "checks": [
+      "schema",
+      "Python3.12 AST and compilation",
+      "dependency closure",
+      "export cell boundary",
+      "undefined name lint across explicit dependency closures",
+      "empty outputs and null execution counts"
+    ],
+    "executed_notebooks": false,
+    "installed_remote_dependencies": false,
+    "runtime_validated": false,
+    "trained_model": false
+  },
+  "notebooks": [
+    {
+      "name": "00_setup_and_hardware.ipynb",
+      "sha256": "337de1b256c41249743ddb4bd09a73c5fd43ada2265c6a8785634b734bee6ca0",
+      "code_source_hash": "bffb6739e714166802039f2714ad43ec8f35ba9ce1ce3bb0d665492332e16031",
+      "cells": 14,
+      "code_cells": 6,
+      "code_lines": 202,
+      "dependency_order": [
+        0
+      ],
+      "exported_definitions": [
+        "canonical_hash",
+        "sha256_file",
+        "atomic_json",
+        "default_config",
+        "ensure_layout",
+        "load_config",
+        "source_manifest",
+        "load_exports"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "01_runtime_and_recovery.ipynb",
+      "sha256": "d202550c3ecca7c54d363ba2b5d49c4fa9606ea8910aacc7b81db6acb39b6205",
+      "code_source_hash": "26a90725a09812fd5fae2cbce242abe0c3b9ebd46c19fcff62be299041c5686b",
+      "cells": 12,
+      "code_cells": 5,
+      "code_lines": 313,
+      "dependency_order": [
+        0,
+        1
+      ],
+      "exported_definitions": [
+        "seed_everything",
+        "capture_rng",
+        "restore_rng",
+        "runtime_fingerprint",
+        "StatefulSampler",
+        "append_metrics",
+        "RunLock",
+        "CheckpointManager",
+        "_nested_equal",
+        "validate_recovery",
+        "require_recovery_gate"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "02_arc_environment.ipynb",
+      "sha256": "0a070d52e7942f9226dc80850df63988ac4e9fdb968961a9b1a4a6bd342f2f29",
+      "code_source_hash": "3a1e2ce3295301d8641ef40e54ee58b748777306ece5d5d9865e7a5e5832f10b",
+      "cells": 14,
+      "code_cells": 6,
+      "code_lines": 291,
+      "dependency_order": [
+        0,
+        1,
+        2
+      ],
+      "exported_definitions": [
+        "ActionSpec",
+        "_arc_action_id",
+        "validate_grid",
+        "validate_available_actions",
+        "public_observation",
+        "observation_to_record",
+        "terminal_observation",
+        "ARCSession",
+        "acquire_public_assets"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "03_datasets_and_replay.ipynb",
+      "sha256": "ca50c17b732ac05c42f03b1595b0c194f8590bbac4bd044d00a16d78bf68a6c7",
+      "code_source_hash": "f30570e6d0653d3b6a891883d6933ae35d651dd2b97d7b863992755ad1ef0698",
+      "cells": 16,
+      "code_cells": 7,
+      "code_lines": 567,
+      "dependency_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "exported_definitions": [
+        "SplitRegistry",
+        "validate_transition",
+        "load_transitions",
+        "_action_xy",
+        "transition_batch",
+        "_nested_tuple",
+        "ReplayBuffer",
+        "sample_transition_batch",
+        "_atomic_jsonl",
+        "AtomicEpisodeWriter",
+        "make_transition",
+        "collect_public_rollouts",
+        "import_demonstrations",
+        "HumanDemonstrationRecorder",
+        "human_demonstration_widget"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "04_encoder_and_world_model.ipynb",
+      "sha256": "32a55ed5cc85932a99292ab779e30d88a0e2520b5f5210e4c9fbb30a35fd341f",
+      "code_source_hash": "60ca17cf817db264fd5a10a13d27b8eb56f8248f7b64991f472ef0771e771c3d",
+      "cells": 11,
+      "code_cells": 5,
+      "code_lines": 126,
+      "dependency_order": [
+        0,
+        1,
+        4
+      ],
+      "exported_definitions": [
+        "validate_grid_tensor",
+        "validate_action_mask",
+        "mask_logits",
+        "normalized_xy_to_pixels",
+        "GridEncoder",
+        "LatentWorldModel"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "05_lorentz_workspace_and_memory.ipynb",
+      "sha256": "e64515b33fb48de53c8afae4dac4cc782a8b1ce64e190b719bb7e9a3dfd3998e",
+      "code_source_hash": "f7b2ce5f8ba2265d918c55a8964420212a1a14d1c07f966a7cee4aa8ff792c85",
+      "cells": 11,
+      "code_cells": 5,
+      "code_lines": 201,
+      "dependency_order": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "exported_definitions": [
+        "minkowski_inner",
+        "lorentz_boost",
+        "EventGeometry",
+        "ReasoningBudget",
+        "EventWorkspace"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "06_worker.ipynb",
+      "sha256": "840cbd553c3a728c49a07e4566ad8120f13c998a21b9e6d5d11257ea186133ae",
+      "code_source_hash": "7d43537c8c67d40423ce86ea7be7d8d13311835079111f763d732577814b12fd",
+      "cells": 9,
+      "code_cells": 4,
+      "code_lines": 113,
+      "dependency_order": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "exported_definitions": [
+        "broadcast_semantics",
+        "ConditionalEnergy",
+        "ProposalHeads",
+        "WorkerEBM"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "07_scout.ipynb",
+      "sha256": "41f403224f851fffe51dcf5746130afc701abfe32535db14f444d93381c7ba18",
+      "code_source_hash": "dd924dc18118093cc0c86310042725d1af1d7253f16a6ce9df5928bb547b977c",
+      "cells": 7,
+      "code_cells": 3,
+      "code_lines": 51,
+      "dependency_order": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "exported_definitions": [
+        "ScoutEBM"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "08_queen.ipynb",
+      "sha256": "1a64769b3c1ccb8d2b3c15be8274c690c72e09d8c2f3b1669f26d4d63be8db72",
+      "code_source_hash": "2debb673683834bd9bb1bddaf92e7b7a986e5c0d28b4ef3e1f342a875eb377a2",
+      "cells": 7,
+      "code_cells": 3,
+      "code_lines": 66,
+      "dependency_order": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "exported_definitions": [
+        "QueenController"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "09_full_ahr_integration.ipynb",
+      "sha256": "8f1cd198931a19296287d3303732f557109816c78c657637024fdbaf49518a1e",
+      "code_source_hash": "df3e9bd257d32488a19a69fe974f63c6cd3befcd399084ef9198f6a3e2d91f9c",
+      "cells": 11,
+      "code_cells": 5,
+      "code_lines": 407,
+      "dependency_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "exported_definitions": [
+        "AHRModel",
+        "_policy_mask",
+        "_action_from_candidate",
+        "plan_ahr_action",
+        "full_model_recovery_signature",
+        "require_full_model_gate",
+        "_recovery_loss",
+        "_portable_state_equal",
+        "validate_full_model_recovery"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "10_supervised_training.ipynb",
+      "sha256": "27c787974633d0ecee16da7e8ed24612b32e63e2e4018431d2fee9751ec1aac6",
+      "code_source_hash": "6daefa85d9427d8ea9e9e99c6fee1ef68596a0725ac4ad4ad5c23513cc2e4535",
+      "cells": 11,
+      "code_cells": 5,
+      "code_lines": 368,
+      "dependency_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "exported_definitions": [
+        "read_ahr_checkpoint",
+        "load_training_rows",
+        "training_precision",
+        "legal_policy",
+        "action_log_loss",
+        "transition_objective",
+        "train_stage",
+        "train_supervised",
+        "training_readiness"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "11_joint_training.ipynb",
+      "sha256": "7cd1a820696d0cabc70d97bbb19aebbe2e1422bf907145331805ebd51c22150d",
+      "code_source_hash": "a6e5c127bb5370a029472cad5d555005b39491eb1228cbd64b23455563538635",
+      "cells": 9,
+      "code_cells": 4,
+      "code_lines": 43,
+      "dependency_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "exported_definitions": [
+        "train_joint"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "12_baselines_and_ablations.ipynb",
+      "sha256": "ebcfb7fd8139c9aa3b49badd35fd1d9d25edf9caad3bb692ec292dafa4647fb6",
+      "code_source_hash": "f4403015f287243a3a889540220ed9898b30bd9b7b2041567819eb3f4c4e6860",
+      "cells": 10,
+      "code_cells": 4,
+      "code_lines": 121,
+      "dependency_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "exported_definitions": [
+        "make_ablation_plan",
+        "run_ablation_job",
+        "launch_ablation_campaign"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "13_benchmark_and_generalization.ipynb",
+      "sha256": "553578026c4d2fa4d3345b1d048d7e05691e4b0cd02d00c6c22b2fc880e522f3",
+      "code_source_hash": "f0c9bbd202cfd0f83a46a5e23b1caff8f6cea59b1021515370435b1b5f9c0361",
+      "cells": 10,
+      "code_cells": 4,
+      "code_lines": 310,
+      "dependency_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "exported_definitions": [
+        "json_safe",
+        "load_ahr_for_evaluation",
+        "benchmark_state_terminal",
+        "_evaluation_progress_records",
+        "write_evaluation_progress",
+        "read_evaluation_progress",
+        "direct_policy_action",
+        "evaluate_checkpoint"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "14_inference_and_model_bundle.ipynb",
+      "sha256": "977dff14189f32f20e840bb5c867caff3aea3ecf0534d8aa8cbcd7c361e8d564",
+      "code_source_hash": "7c8d8e88bae14eac6f5337f71c27ac5c57b0bc685dbf5ba1453a9745edb7e64a",
+      "cells": 8,
+      "code_cells": 3,
+      "code_lines": 148,
+      "dependency_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "exported_definitions": [
+        "build_model_from_checkpoint",
+        "atomic_torch_save",
+        "atomic_copy_file",
+        "export_bundle",
+        "verify_bundle"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    },
+    {
+      "name": "15_play_and_watch.ipynb",
+      "sha256": "b97784837d7e35f0e53d2253043b003535f9ea69bca14b6b3b55dd29308d8837",
+      "code_source_hash": "1233777c345b8585a38601f4e681ed5ee5617b14c0751faea0b685120d73b523",
+      "cells": 14,
+      "code_cells": 6,
+      "code_lines": 419,
+      "dependency_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "exported_definitions": [
+        "resolve_demo_checkpoint",
+        "_json_portable",
+        "_scorecard_view",
+        "render_ahr_decision",
+        "load_watch_replay",
+        "FreshDemoPlayer",
+        "play_fresh",
+        "AHRWatchDashboard",
+        "make_watch_dashboard"
+      ],
+      "schema": "pass",
+      "python_3_12_syntax": "pass",
+      "undefined_name_lint": "pass",
+      "outputs": "empty",
+      "execution_count": "all_null"
+    }
+  ]
+}

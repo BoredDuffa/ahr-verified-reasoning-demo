@@ -1,0 +1,183 @@
+{
+  "fresh_optimizer": true,
+  "handoff_resume_exact": true,
+  "handoff_run": "selfplay09-v2-handoff-4c1668a006",
+  "historical_opponent_embedded": true,
+  "original_run_manifest_unchanged": true,
+  "parent_checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+  "parent_weights_exact": true,
+  "production_config": {
+    "actor_device": "cuda:1",
+    "batch_size": 32,
+    "board_size": 9,
+    "checkpoint_every_events": 32,
+    "checkpoint_every_optimizer_steps": 250,
+    "checkpoint_interval_s": 600.0,
+    "device": "cuda:0",
+    "exploration": 0.15,
+    "games": 128,
+    "historical_opponents": [
+      {
+        "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+        "run_id": "go09-first-selfplay-v1",
+        "selection": "latest"
+      }
+    ],
+    "komi": 7.5,
+    "learning_rate": 0.0003,
+    "max_plies": 256,
+    "opponent_probability": 0.25,
+    "opponent_snapshots": 4,
+    "purpose": "go_training",
+    "replay_capacity": 2048,
+    "search": {
+      "branch_width": 4,
+      "max_depth": 2,
+      "max_nodes": 32,
+      "queen_cycles": 1,
+      "temperature": 1.0
+    },
+    "seed": 20260926,
+    "snapshot_every_games": 8,
+    "temperature": 1.0,
+    "time_budget_s": 0.5,
+    "updates_per_game": 8,
+    "validation_force_pass": false,
+    "weight_decay": 0.0001
+  },
+  "recovery": {
+    "actor_device": "cuda:1",
+    "actual_search_model_calls": 16,
+    "actual_search_plies": 2,
+    "checkpoint_runs": [
+      "selfplay09-smoke-cuda-0-f03a4868d5-full",
+      "selfplay09-smoke-cuda-0-f03a4868d5-resume",
+      "selfplay09-smoke-cuda-0-f03a4868d5-update-resume",
+      "selfplay09-smoke-cuda-0-f03a4868d5-unknown",
+      "selfplay09-smoke-cuda-0-f03a4868d5-search"
+    ],
+    "completed_synthetic_games": 2,
+    "device": "cuda:0",
+    "exact_resume": true,
+    "failure_checks": [
+      "bad_hash",
+      "missing_manifest",
+      "identity_mismatch"
+    ],
+    "fallback_policy_excluded": true,
+    "final_event": 13,
+    "fresh_process": true,
+    "interrupted_after_event": 2,
+    "interrupted_after_update": 1,
+    "key": "4fdb47b6ed5d66bee316b3c05f99c7d5b17384109b59b9b5c72f3763692693fe",
+    "model_config": {
+      "board_size": 9,
+      "dropout": 0.1,
+      "hidden_dim": 64,
+      "queen_cycles": 2,
+      "scout_steps": 2,
+      "spatial_channels": 32,
+      "worker_steps": 2
+    },
+    "optimizer_steps": 4,
+    "production_config": {
+      "actor_device": "cuda:1",
+      "batch_size": 32,
+      "board_size": 9,
+      "checkpoint_every_events": 32,
+      "checkpoint_every_optimizer_steps": 250,
+      "checkpoint_interval_s": 600.0,
+      "device": "cuda:0",
+      "exploration": 0.15,
+      "games": 128,
+      "historical_opponents": [
+        {
+          "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+          "run_id": "go09-first-selfplay-v1",
+          "selection": "latest"
+        }
+      ],
+      "komi": 7.5,
+      "learning_rate": 0.0003,
+      "max_plies": 256,
+      "opponent_probability": 0.25,
+      "opponent_snapshots": 4,
+      "purpose": "go_training",
+      "replay_capacity": 2048,
+      "search": {
+        "branch_width": 4,
+        "max_depth": 2,
+        "max_nodes": 32,
+        "queen_cycles": 1,
+        "temperature": 1.0
+      },
+      "seed": 20260926,
+      "snapshot_every_games": 8,
+      "temperature": 1.0,
+      "time_budget_s": 0.5,
+      "updates_per_game": 8,
+      "validation_force_pass": false,
+      "weight_decay": 0.0001
+    },
+    "retained_events": [
+      11,
+      12,
+      13
+    ],
+    "schema": "ahr_selfplay_recovery_receipt_v1",
+    "selfplay_source_hash": "f1c9bfea127d737339682d88a281d88e03450518ea105bdf552e4fa2307236df",
+    "source_hashes": {
+      "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+      "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+      "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+      "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+      "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+      "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+      "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+      "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+    },
+    "strength_claim": "NONE: synthetic recovery fixtures only",
+    "tested_config": {
+      "actor_device": "cuda:1",
+      "batch_size": 32,
+      "board_size": 9,
+      "checkpoint_every_events": 32,
+      "checkpoint_every_optimizer_steps": 250,
+      "checkpoint_interval_s": 600.0,
+      "device": "cuda:0",
+      "exploration": 0.15,
+      "games": 2,
+      "historical_opponents": [
+        {
+          "checkpoint_sha256": "3e4287bc1e8885fa975660b07bc76800e22aa6f8627fd896cc3163280b1f95ad",
+          "run_id": "go09-first-selfplay-v1",
+          "selection": "latest"
+        }
+      ],
+      "komi": 7.5,
+      "learning_rate": 0.0003,
+      "max_plies": 4,
+      "opponent_probability": 1.0,
+      "opponent_snapshots": 4,
+      "purpose": "synthetic_smoke",
+      "replay_capacity": 2048,
+      "search": {
+        "branch_width": 4,
+        "max_depth": 2,
+        "max_nodes": 32,
+        "queen_cycles": 1,
+        "temperature": 1.0
+      },
+      "seed": 20260926,
+      "snapshot_every_games": 1,
+      "temperature": 1.0,
+      "time_budget_s": 0.5,
+      "updates_per_game": 2,
+      "validation_force_pass": true,
+      "weight_decay": 0.0001
+    },
+    "unknown_excluded": true,
+    "update_boundary_exact": true
+  },
+  "status": "PASS"
+}

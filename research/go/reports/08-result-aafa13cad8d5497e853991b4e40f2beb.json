@@ -1,0 +1,59 @@
+{
+  "complete": true,
+  "metrics": [
+    {
+      "development": {
+        "loss": 5.043399333953857,
+        "ownership": 0.6183944940567017,
+        "policy": 3.7643826007843018,
+        "score": 0.003498068079352379,
+        "value": 0.968070387840271
+      },
+      "kind": "initial",
+      "optimizer_step": 0
+    },
+    {
+      "development": {
+        "loss": 4.1413187980651855,
+        "ownership": 0.605027437210083,
+        "policy": 3.717426061630249,
+        "score": 7.910865679150447e-05,
+        "value": 0.1213395744562149
+      },
+      "epoch": 1,
+      "kind": "epoch",
+      "optimizer_step": 4,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 4.251026630401611,
+        "ownership": 0.6156378388404846,
+        "policy": 3.689034938812256,
+        "score": 0.0015685416292399168,
+        "value": 0.2533887028694153
+      }
+    },
+    {
+      "development": {
+        "loss": 3.8952810764312744,
+        "ownership": 0.6102324724197388,
+        "policy": 3.5859246253967285,
+        "score": 0.005776200443506241,
+        "value": 0.0013520228676497936
+      },
+      "epoch": 2,
+      "kind": "epoch",
+      "optimizer_step": 8,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 3.743450880050659,
+        "ownership": 0.6197075843811035,
+        "policy": 3.4275145530700684,
+        "score": 0.003079914255067706,
+        "value": 0.0045425002463161945
+      }
+    }
+  ],
+  "optimizer_step": 8,
+  "resumed_from": 0,
+  "run_id": "go08-smoke-full-3da42e69"
+}

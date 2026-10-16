@@ -1,0 +1,302 @@
+{
+  "complete": true,
+  "metrics": [
+    {
+      "development": {
+        "loss": 5.0230207443237305,
+        "ownership": 0.6183488965034485,
+        "policy": 3.7105162143707275,
+        "score": 0.004371297429315746,
+        "value": 1.0011445879936218
+      },
+      "kind": "initial",
+      "optimizer_step": 0
+    },
+    {
+      "development": {
+        "loss": 4.825573921203613,
+        "ownership": 0.6065595746040344,
+        "policy": 3.532700538635254,
+        "score": 0.004302149871364236,
+        "value": 0.9874424338340759
+      },
+      "epoch": 1,
+      "kind": "epoch",
+      "optimizer_step": 8,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 4.879045009613037,
+        "ownership": 0.6051834225654602,
+        "policy": 3.582979679107666,
+        "score": 0.0041061146184802055,
+        "value": 0.9914200305938721
+      }
+    },
+    {
+      "development": {
+        "loss": 4.485818147659302,
+        "ownership": 0.6047104597091675,
+        "policy": 3.2944058179855347,
+        "score": 0.0041243883315473795,
+        "value": 0.886994868516922
+      },
+      "epoch": 2,
+      "kind": "epoch",
+      "optimizer_step": 16,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 4.690554618835449,
+        "ownership": 0.6081919074058533,
+        "policy": 3.4738247394561768,
+        "score": 0.005783029366284609,
+        "value": 0.9097427129745483
+      }
+    },
+    {
+      "development": {
+        "loss": 3.6110825538635254,
+        "ownership": 0.6052847504615784,
+        "policy": 2.9212186336517334,
+        "score": 0.0017893227050080895,
+        "value": 0.3863269239664078
+      },
+      "epoch": 3,
+      "kind": "epoch",
+      "optimizer_step": 24,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 2.9474754333496094,
+        "ownership": 0.6079670190811157,
+        "policy": 2.116062879562378,
+        "score": 0.002034552861005068,
+        "value": 0.5264116525650024
+      }
+    },
+    {
+      "development": {
+        "loss": 2.8932461738586426,
+        "ownership": 0.6050866544246674,
+        "policy": 2.5863044261932373,
+        "score": 0.0029099062085151672,
+        "value": 0.0029433361487463117
+      },
+      "epoch": 4,
+      "kind": "epoch",
+      "optimizer_step": 32,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 2.6905195713043213,
+        "ownership": 0.604922354221344,
+        "policy": 2.381185293197632,
+        "score": 0.00030425310251303017,
+        "value": 0.006720969919115305
+      }
+    },
+    {
+      "development": {
+        "loss": 2.9200706481933594,
+        "ownership": 0.6042250096797943,
+        "policy": 2.616723418235779,
+        "score": 0.0022882554912939668,
+        "value": 9.052794848685153e-05
+      },
+      "epoch": 5,
+      "kind": "epoch",
+      "optimizer_step": 40,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 2.20249080657959,
+        "ownership": 0.6058855056762695,
+        "policy": 1.897646427154541,
+        "score": 0.0035410437267273664,
+        "value": 0.00013108545681461692
+      }
+    },
+    {
+      "development": {
+        "loss": 3.068052887916565,
+        "ownership": 0.6039130985736847,
+        "policy": 2.7658478021621704,
+        "score": 0.0004551672100205906,
+        "value": 2.0922218936902937e-05
+      },
+      "epoch": 6,
+      "kind": "epoch",
+      "optimizer_step": 48,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 2.190016508102417,
+        "ownership": 0.6083401441574097,
+        "policy": 1.8843750953674316,
+        "score": 0.0028888676315546036,
+        "value": 2.6815725505002774e-05
+      }
+    },
+    {
+      "development": {
+        "loss": 2.9804662466049194,
+        "ownership": 0.6035157144069672,
+        "policy": 2.678509473800659,
+        "score": 0.00037405406328616664,
+        "value": 1.1896042451553512e-05
+      },
+      "epoch": 7,
+      "kind": "epoch",
+      "optimizer_step": 56,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 0.5085721015930176,
+        "ownership": 0.6006364226341248,
+        "policy": 0.20798426866531372,
+        "score": 0.0005152008961886168,
+        "value": 1.2038224667776376e-05
+      }
+    },
+    {
+      "development": {
+        "loss": 3.0500108003616333,
+        "ownership": 0.6032410562038422,
+        "policy": 2.74828565120697,
+        "score": 0.0001895440109365154,
+        "value": 9.86639588518301e-06
+      },
+      "epoch": 8,
+      "kind": "epoch",
+      "optimizer_step": 64,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 1.1803233623504639,
+        "ownership": 0.6014604568481445,
+        "policy": 0.879377543926239,
+        "score": 0.000410561915487051,
+        "value": 1.0332904821552802e-05
+      }
+    },
+    {
+      "development": {
+        "loss": 3.2372313737869263,
+        "ownership": 0.6031347811222076,
+        "policy": 2.935571551322937,
+        "score": 0.00016764359861554112,
+        "value": 8.622032055427553e-06
+      },
+      "epoch": 9,
+      "kind": "epoch",
+      "optimizer_step": 72,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 1.48026704788208,
+        "ownership": 0.6039831042289734,
+        "policy": 1.17800772190094,
+        "score": 0.0005200107698328793,
+        "value": 7.719918357906863e-06
+      }
+    },
+    {
+      "development": {
+        "loss": 3.181954860687256,
+        "ownership": 0.6036444902420044,
+        "policy": 2.8799924850463867,
+        "score": 0.00026282739781890996,
+        "value": 8.717453511053463e-06
+      },
+      "epoch": 10,
+      "kind": "epoch",
+      "optimizer_step": 80,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 1.4226360321044922,
+        "ownership": 0.6183696985244751,
+        "policy": 1.1128710508346558,
+        "score": 0.0011407496640458703,
+        "value": 9.714407497085631e-06
+      }
+    },
+    {
+      "development": {
+        "loss": 3.2226743698120117,
+        "ownership": 0.6049914062023163,
+        "policy": 2.9200639724731445,
+        "score": 0.00021135246424819343,
+        "value": 9.188466265186435e-06
+      },
+      "epoch": 11,
+      "kind": "epoch",
+      "optimizer_step": 88,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 1.0982060432434082,
+        "ownership": 0.6064935326576233,
+        "policy": 0.7944463491439819,
+        "score": 0.0010091103613376617,
+        "value": 8.328710464411415e-06
+      }
+    },
+    {
+      "development": {
+        "loss": 3.4389989376068115,
+        "ownership": 0.6027211844921112,
+        "policy": 3.13758385181427,
+        "score": 8.877610889612697e-05,
+        "value": 1.0049142019852297e-05
+      },
+      "epoch": 12,
+      "kind": "epoch",
+      "optimizer_step": 96,
+      "training_last_batch": {
+        "examples": 8,
+        "loss": 0.9297561049461365,
+        "ownership": 0.6064894199371338,
+        "policy": 0.626340925693512,
+        "score": 0.0003186360700055957,
+        "value": 1.1144396921736188e-05
+      }
+    }
+  ],
+  "optimizer_step": 96,
+  "resumed_from": 0,
+  "run_id": "go08-initial-warmup-v2",
+  "selected_checkpoint": {
+    "candidate_only": true,
+    "checkpoint_file": "checkpoints/go08-initial-warmup-v2/step-000000004-d56193ce.pt",
+    "checkpoint_sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51",
+    "dataset_sha256": "974491b7799d061381f15659505190ac1bf0ddf248ee0ce7dab76627e641d286",
+    "model_config": {
+      "board_size": 9,
+      "dropout": 0.1,
+      "hidden_dim": 64,
+      "queen_cycles": 2,
+      "scout_steps": 2,
+      "spatial_channels": 32,
+      "worker_steps": 2
+    },
+    "model_sha256": "5f6222557e4b7fa72fdfd655d336b953987c47dd281df3aedde8c4e32c6ac04b",
+    "optimizer_step": 32,
+    "provenance": {
+      "candidate_only": true,
+      "dataset_sha256": "974491b7799d061381f15659505190ac1bf0ddf248ee0ce7dab76627e641d286",
+      "purpose": "go_training",
+      "target_scope": "recorded terminal continuation and bounded immediate captures",
+      "trained_on_go": true,
+      "training_route": "go_supervised"
+    },
+    "purpose": "go_training",
+    "run_id": "go08-initial-warmup-v2",
+    "schema": "ahr_go_learning_v1",
+    "selection": "best",
+    "source_hashes": {
+      "00_instance_setup_and_recovery.ipynb": "757bc956495623e790ef948db674378bb3fef2d09961c20fe5bea558b3717f18",
+      "01_go_rules_and_independent_verifier.ipynb": "2a3fdbed2eeb9f9d165ad7df0c97be9dbe302d406e5e14b293c91463305f786a",
+      "02_go_to_csp_and_qcsp.ipynb": "4000c4a844c6e64ee451bc5a87c94bf7f6bbb9d226c69a8155557f287eff6c69",
+      "03_curricula_datasets_and_splits.ipynb": "3f9208f0e0db71c3663e4f030796aadc0fbfaeea8b90f844b9268c8312788d33",
+      "04_native_ahr_architecture.ipynb": "9d4c4570dcdeb986bde1391b906748ddb313a8aa4dbde99e687a6496c9c50fb0",
+      "05_csp_qcsp_pretraining.ipynb": "be397dffa3a46ed546bfb1c7035ad497f24332c3c120888823eb4e8901501233",
+      "06_ahr_go_search_engine.ipynb": "cf313a92130e75abbdc7c56450ab47cbe2f1adea7fb8d1fbeb889219bbce5a1a",
+      "08_go_specific_adaptation.ipynb": "3b912e66f54f21c3f3efc21a9d850d21faadc7115468b6af01aa13f182674dd3"
+    },
+    "target_scope": "recorded terminal continuation and bounded immediate captures",
+    "trained_on_go": true,
+    "training_route": "go_supervised"
+  },
+  "strength": "NOT_EVALUATED"
+}

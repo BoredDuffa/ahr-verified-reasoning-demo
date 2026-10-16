@@ -1,0 +1,223 @@
+{
+  "cold_starts": [
+    {
+      "at_probe_cursor": 0,
+      "device": "cuda:1",
+      "first_forward_seconds": 0.05092231999151409,
+      "model_transfer_seconds": 0.009314927970990539,
+      "note": "Process startup measurement; subsequent probes use this warmed device model.",
+      "process_cuda_initialized_before": true
+    }
+  ],
+  "completed_probes": 6,
+  "deadline_note": "Soft search targets; observed medians/p95/max include replay, features, reading, search, and CUDA synchronization. Completed samples are retained exactly on restart; interrupted probes are rerun with new wall-clock measurements.",
+  "identity": {
+    "config": {
+      "ahr_move_seconds": 2.0,
+      "batch_size": 8,
+      "board_size": 9,
+      "candidate_file": "step-000008016-c19b207e.pt",
+      "device": "cuda:1",
+      "empty_board_baseline": false,
+      "game_time_seconds": 1800.0,
+      "gtp_timeout_seconds": 90.0,
+      "komi": 7.5,
+      "max_opening_attempts": 10000,
+      "max_plies": 600,
+      "max_simulations": 512,
+      "opening_plies": 8,
+      "opening_temperature": 1.25,
+      "profiles": [
+        {
+          "games": 100,
+          "id": "katago-v1",
+          "kind": "katago",
+          "visits": 1
+        }
+      ],
+      "purpose": "development",
+      "reading_quantum": 16,
+      "reading_total_nodes": 256,
+      "reading_wall_time_seconds": 0.05,
+      "run_id": "ahr-v2-katago-econ-20261011-v1-confirmation-candidate-katago",
+      "seed": 2026102881,
+      "speed_devices": [
+        "cuda:1"
+      ],
+      "speed_max_simulations": 512,
+      "speed_move_seconds": [
+        2.0
+      ],
+      "speed_positions": 6,
+      "torch_threads": 4,
+      "training_run_id": "ahr-v2-teacher-20261008"
+    },
+    "data": {
+      "plan_sha256": "2ec43d9675320160a2d2c840622ff55c6be07cd2f4703b4544668ab69f7e4cba",
+      "timing_data": {
+        "positions_sha256": "bbdf993ca19f4a0cae1cc9139c3e884d6f16861c3550a738a06d4ad78274a59d",
+        "rejected_incompatible_games": 0,
+        "source_commit": "4f579b0a21c456f3bb568174d384056351124cd5",
+        "test_payload_consumed": false,
+        "timing_positions_are_not_strength_trials": true
+      }
+    },
+    "model": {
+      "checkpoint_file": "step-000019535-401d480a.pt",
+      "checkpoint_sha256": "67751114381f36c01fb4b71dfa604a50e2262dfcbb1e1e8638e2fdd593241965",
+      "model_identity": "bcac91f735d0ebcf54a03ff6718d9f8c659d4a85a7c1fd5c5c6083aeb632ba82",
+      "run_id": "ahr-k19-20261011-challenger"
+    },
+    "sources": {
+      "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+      "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+      "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+      "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+      "experiments/ahr_v2/04_selfplay_and_training.ipynb": "cb9ac31e64c6e8e50e3b37e1f5745f4bdb21a550361aac7edb69552668d58688",
+      "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+      "experiments/ahr_v2/06_play_and_watch.ipynb": "35c7f6d818c68e673dfa1efabb0e6d6832904babcd25d0bab939613745d5530a",
+      "experiments/ahr_v2/07_validate_and_launch.ipynb": "27bc21fa2cfee176c98d299ad4d11ad0aa2f9d886f53cbf1b683ed814d21d301",
+      "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+      "experiments/ahr_v2/09_calibrated_selfplay_training.ipynb": "d316a791e00c5b7d585cdfc57a560c8f8d3eaf93789f44f8dcf19a53121c351b",
+      "experiments/ahr_v2/10_repaired_evaluation_and_launch.ipynb": "23edfc757443c91f387e53efd60c1b529221561691a944ba2c9801c47e534c2b",
+      "experiments/ahr_v2/11_play_revised_player.ipynb": "057297d539964559fbec4444a0c83688d026aba4828840ef317e222b18f8f419",
+      "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+      "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+      "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+      "experiments/ahr_v2/15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+      "experiments/ahr_v2/16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46",
+      "experiments/ahr_v2/17_strength_and_speed_benchmarks.ipynb": "c4c01826a61156e44dfabeec3fb869fc12b7cc2fbc97b4eddc4920a819a28c4e",
+      "experiments/ahr_v2/18_diagnosis_and_stronger_teacher_data.ipynb": "3e30b867cca765cd21acf802a78df83dab3b19f37a3adb9037e0055eef8157ab",
+      "experiments/ahr_v2/19_stronger_scout_worker_training.ipynb": "d2da73d46782f3a3871719da105dbf94fdca35156940091dd5ee67f413f2cfef",
+      "experiments/ahr_v2/20_economic_rewards_and_teacher_guided_improvement.ipynb": "a8e23d36ed79b80c33f4d222983a39138f035f4b3748f29a240f368cede5ac9c",
+      "reports/ahr_v2/ahr-v2-katago-econ-20261011-v1/evaluation_recovery.ipynb": "121cc79846c284f8e825c84cc3724172afa09111028ba5d8c1e41acc456a5be2"
+    },
+    "stage": "speed-probes"
+  },
+  "planned_probes": 6,
+  "results": [
+    {
+      "action": 32,
+      "completed_simulations": 344,
+      "device": "cuda:1",
+      "elapsed_seconds": 2.020785240980331,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": 2.0,
+      "overrun_seconds": 0.020785240980330855,
+      "ply": 8,
+      "position_id": "000521acefb8e68939cb7b35429050c21987905ba8eaf0e7a8b479993f6a7622-8",
+      "position_index": 0,
+      "reading_nodes": 0,
+      "search_status": "BUDGET_CUTOFF",
+      "stage": "opening",
+      "status": "MEASURED"
+    },
+    {
+      "action": 78,
+      "completed_simulations": 336,
+      "device": "cuda:1",
+      "elapsed_seconds": 2.030714916996658,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": 2.0,
+      "overrun_seconds": 0.03071491699665785,
+      "ply": 31,
+      "position_id": "000521acefb8e68939cb7b35429050c21987905ba8eaf0e7a8b479993f6a7622-31",
+      "position_index": 1,
+      "reading_nodes": 179,
+      "search_status": "BUDGET_CUTOFF",
+      "stage": "middle",
+      "status": "MEASURED"
+    },
+    {
+      "action": 1,
+      "completed_simulations": 408,
+      "device": "cuda:1",
+      "elapsed_seconds": 2.052596485998947,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": 2.0,
+      "overrun_seconds": 0.05259648599894717,
+      "ply": 59,
+      "position_id": "000521acefb8e68939cb7b35429050c21987905ba8eaf0e7a8b479993f6a7622-59",
+      "position_index": 2,
+      "reading_nodes": 0,
+      "search_status": "BUDGET_CUTOFF",
+      "stage": "late",
+      "status": "MEASURED"
+    },
+    {
+      "action": 32,
+      "completed_simulations": 344,
+      "device": "cuda:1",
+      "elapsed_seconds": 2.0301205050200224,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": 2.0,
+      "overrun_seconds": 0.030120505020022392,
+      "ply": 8,
+      "position_id": "000c3efcfe50688cdd34ca908e77dd1369d5bfcb749ab5aab4988f691bb523ea-8",
+      "position_index": 3,
+      "reading_nodes": 0,
+      "search_status": "BUDGET_CUTOFF",
+      "stage": "opening",
+      "status": "MEASURED"
+    },
+    {
+      "action": 80,
+      "completed_simulations": 328,
+      "device": "cuda:1",
+      "elapsed_seconds": 2.0592576860217378,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": 2.0,
+      "overrun_seconds": 0.059257686021737754,
+      "ply": 45,
+      "position_id": "000c3efcfe50688cdd34ca908e77dd1369d5bfcb749ab5aab4988f691bb523ea-45",
+      "position_index": 4,
+      "reading_nodes": 205,
+      "search_status": "BUDGET_CUTOFF",
+      "stage": "middle",
+      "status": "MEASURED"
+    },
+    {
+      "action": 46,
+      "completed_simulations": 512,
+      "device": "cuda:1",
+      "elapsed_seconds": 0.8679828790482134,
+      "measurement_includes": "Features, legality/replay checks, neural evaluation, tactical reading, search, and CUDA synchronization.",
+      "move_seconds": 2.0,
+      "overrun_seconds": 0.0,
+      "ply": 87,
+      "position_id": "000c3efcfe50688cdd34ca908e77dd1369d5bfcb749ab5aab4988f691bb523ea-87",
+      "position_index": 5,
+      "reading_nodes": 29,
+      "search_status": "COMPLETE",
+      "stage": "late",
+      "status": "MEASURED"
+    }
+  ],
+  "run_id": "ahr-v2-katago-econ-20261011-v1-eval-recovery-v1",
+  "schema": "ahr-v2-benchmark-speed-v1",
+  "status": "COMPLETE",
+  "summary": [
+    {
+      "device": "cuda:1",
+      "errors": 0,
+      "max_overrun_seconds": 0.059257686021737754,
+      "max_seconds": 2.0592576860217378,
+      "max_visits": 512,
+      "measured": 6,
+      "median_seconds": 2.03041771100834,
+      "median_visits": 344.0,
+      "min_visits": 328,
+      "move_seconds": 2.0,
+      "overruns": 5,
+      "p95_seconds": 2.05759238601604
+    }
+  ],
+  "timing_data": {
+    "positions_sha256": "bbdf993ca19f4a0cae1cc9139c3e884d6f16861c3550a738a06d4ad78274a59d",
+    "rejected_incompatible_games": 0,
+    "source_commit": "4f579b0a21c456f3bb568174d384056351124cd5",
+    "test_payload_consumed": false,
+    "timing_positions_are_not_strength_trials": true
+  },
+  "updated_at_utc": "2026-10-12T12:59:43.028464+00:00"
+}

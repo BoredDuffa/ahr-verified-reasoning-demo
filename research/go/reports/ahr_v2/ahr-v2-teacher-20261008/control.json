@@ -1,0 +1,400 @@
+{
+  "completed_at_utc": "2026-10-08T14:35:13.760499+00:00",
+  "confirmation": {
+    "diagnostics": {
+      "all_AHR_stones_gone": 0,
+      "mean_margin": 17.5625,
+      "unique_trajectories": 11
+    },
+    "eval_id": "ahr-v2-teacher-20261008-selected-confirmation-dev",
+    "summary": {
+      "attempts": 16,
+      "by_color": {
+        "black": {
+          "attempts": 8,
+          "draw": 0,
+          "loss": 0,
+          "unknown": 0,
+          "win": 8
+        },
+        "white": {
+          "attempts": 8,
+          "draw": 0,
+          "loss": 1,
+          "unknown": 0,
+          "win": 7
+        }
+      },
+      "complete_games": 16,
+      "draws": 0,
+      "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+      "losses": 1,
+      "observed_half_target": true,
+      "unknown": 0,
+      "wilson_lower_at_least_half": true,
+      "win_rate_all_attempts_lower_bound": 0.9375,
+      "win_rate_all_attempts_upper_bound": 0.9375,
+      "win_rate_complete_games": 0.9375,
+      "win_rate_wilson95_complete_games": [
+        0.7167126242970107,
+        0.9888806552353576
+      ],
+      "wins": 15
+    }
+  },
+  "data_identity": "dc1a57da4dc9e170e9d77d00219b5fdbc4106abf4caa518757bf2dc3332258ab",
+  "data_summary": [
+    {
+      "Complete games": 15632,
+      "Opening families": 7562,
+      "Opponent positions": [
+        62500,
+        62500,
+        62500,
+        62500,
+        62500,
+        62500,
+        62500,
+        62500
+      ],
+      "Positions": 500000,
+      "Split": "train"
+    },
+    {
+      "Complete games": 256,
+      "Opening families": 119,
+      "Opponent positions": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "Positions": 8192,
+      "Split": "dev"
+    }
+  ],
+  "final_comparison": [
+    {
+      "candidate_file": "step-000008016-c19b207e.pt",
+      "diagnostics": {
+        "all_AHR_stones_gone": 0,
+        "mean_margin": 7.75,
+        "unique_trajectories": 5
+      },
+      "eval_id": "ahr-v2-teacher-20261008-comparison-dev-8016",
+      "optimizer_step": 8016,
+      "summary": {
+        "attempts": 8,
+        "by_color": {
+          "black": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 4
+          },
+          "white": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 4
+          }
+        },
+        "complete_games": 8,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 0,
+        "observed_half_target": true,
+        "unknown": 0,
+        "wilson_lower_at_least_half": true,
+        "win_rate_all_attempts_lower_bound": 1.0,
+        "win_rate_all_attempts_upper_bound": 1.0,
+        "win_rate_complete_games": 1.0,
+        "win_rate_wilson95_complete_games": [
+          0.6755924351161198,
+          1.0
+        ],
+        "wins": 8
+      }
+    },
+    {
+      "candidate_file": "step-000011724-f31528f6.pt",
+      "diagnostics": {
+        "all_AHR_stones_gone": 0,
+        "mean_margin": 10.5,
+        "unique_trajectories": 5
+      },
+      "eval_id": "ahr-v2-teacher-20261008-comparison-dev-11724",
+      "optimizer_step": 11724,
+      "summary": {
+        "attempts": 8,
+        "by_color": {
+          "black": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 3
+          },
+          "white": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 4
+          }
+        },
+        "complete_games": 8,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 1,
+        "observed_half_target": true,
+        "unknown": 0,
+        "wilson_lower_at_least_half": true,
+        "win_rate_all_attempts_lower_bound": 0.875,
+        "win_rate_all_attempts_upper_bound": 0.875,
+        "win_rate_complete_games": 0.875,
+        "win_rate_wilson95_complete_games": [
+          0.5291118177871464,
+          0.9775825085499433
+        ],
+        "wins": 7
+      }
+    }
+  ],
+  "higher_levels": [
+    {
+      "diagnostics": {
+        "all_AHR_stones_gone": 0,
+        "mean_margin": 17.25,
+        "unique_trajectories": 7
+      },
+      "eval_id": "ahr-v2-teacher-20261008-gnu-level-5-dev",
+      "level": 5,
+      "summary": {
+        "attempts": 8,
+        "by_color": {
+          "black": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 4
+          },
+          "white": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 4
+          }
+        },
+        "complete_games": 8,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 0,
+        "observed_half_target": true,
+        "unknown": 0,
+        "wilson_lower_at_least_half": true,
+        "win_rate_all_attempts_lower_bound": 1.0,
+        "win_rate_all_attempts_upper_bound": 1.0,
+        "win_rate_complete_games": 1.0,
+        "win_rate_wilson95_complete_games": [
+          0.6755924351161198,
+          1.0
+        ],
+        "wins": 8
+      }
+    },
+    {
+      "diagnostics": {
+        "all_AHR_stones_gone": 0,
+        "mean_margin": 10.25,
+        "unique_trajectories": 8
+      },
+      "eval_id": "ahr-v2-teacher-20261008-gnu-level-10-dev",
+      "level": 10,
+      "summary": {
+        "attempts": 8,
+        "by_color": {
+          "black": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 4
+          },
+          "white": {
+            "attempts": 4,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 4
+          }
+        },
+        "complete_games": 8,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 0,
+        "observed_half_target": true,
+        "unknown": 0,
+        "wilson_lower_at_least_half": true,
+        "win_rate_all_attempts_lower_bound": 1.0,
+        "win_rate_all_attempts_upper_bound": 1.0,
+        "win_rate_complete_games": 1.0,
+        "win_rate_wilson95_complete_games": [
+          0.6755924351161198,
+          1.0
+        ],
+        "wins": 8
+      }
+    }
+  ],
+  "identity": "a28beb277079b925a15d5228296dc57551f8a783312406087c732ca443832f2d",
+  "next_periodic": 2,
+  "pending_review": null,
+  "reviews": [
+    {
+      "candidate_file": "step-000002054-13d3b0e6.pt",
+      "diagnostics": {
+        "all_AHR_stones_gone": 0,
+        "mean_margin": 1.5,
+        "unique_trajectories": 4
+      },
+      "eval_id": "ahr-v2-teacher-20261008-periodic-dev-2054",
+      "optimizer_step": 2054,
+      "summary": {
+        "attempts": 4,
+        "by_color": {
+          "black": {
+            "attempts": 2,
+            "draw": 0,
+            "loss": 1,
+            "unknown": 0,
+            "win": 1
+          },
+          "white": {
+            "attempts": 2,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 2
+          }
+        },
+        "complete_games": 4,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 1,
+        "observed_half_target": true,
+        "unknown": 0,
+        "wilson_lower_at_least_half": false,
+        "win_rate_all_attempts_lower_bound": 0.75,
+        "win_rate_all_attempts_upper_bound": 0.75,
+        "win_rate_complete_games": 0.75,
+        "win_rate_wilson95_complete_games": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "wins": 3
+      }
+    },
+    {
+      "candidate_file": "step-000008016-c19b207e.pt",
+      "diagnostics": {
+        "all_AHR_stones_gone": 0,
+        "mean_margin": 7.0,
+        "unique_trajectories": 4
+      },
+      "eval_id": "ahr-v2-teacher-20261008-periodic-dev-8016",
+      "optimizer_step": 8016,
+      "summary": {
+        "attempts": 4,
+        "by_color": {
+          "black": {
+            "attempts": 2,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 2
+          },
+          "white": {
+            "attempts": 2,
+            "draw": 0,
+            "loss": 0,
+            "unknown": 0,
+            "win": 2
+          }
+        },
+        "complete_games": 4,
+        "draws": 0,
+        "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+        "losses": 0,
+        "observed_half_target": true,
+        "unknown": 0,
+        "wilson_lower_at_least_half": true,
+        "win_rate_all_attempts_lower_bound": 1.0,
+        "win_rate_all_attempts_upper_bound": 1.0,
+        "win_rate_complete_games": 1.0,
+        "win_rate_wilson95_complete_games": [
+          0.5101091635454027,
+          1.0
+        ],
+        "wins": 4
+      }
+    }
+  ],
+  "run_id": "ahr-v2-teacher-20261008",
+  "schema": "ahr-v2-teacher-control-v1",
+  "selected": {
+    "candidate_file": "step-000008016-c19b207e.pt",
+    "diagnostics": {
+      "all_AHR_stones_gone": 0,
+      "mean_margin": 7.75,
+      "unique_trajectories": 5
+    },
+    "eval_id": "ahr-v2-teacher-20261008-comparison-dev-8016",
+    "optimizer_step": 8016,
+    "summary": {
+      "attempts": 8,
+      "by_color": {
+        "black": {
+          "attempts": 4,
+          "draw": 0,
+          "loss": 0,
+          "unknown": 0,
+          "win": 4
+        },
+        "white": {
+          "attempts": 4,
+          "draw": 0,
+          "loss": 0,
+          "unknown": 0,
+          "win": 4
+        }
+      },
+      "complete_games": 8,
+      "draws": 0,
+      "interpretation": "Development evidence only. UNKNOWN is excluded from complete-game rates and separately bounded; draws are not wins.",
+      "losses": 0,
+      "observed_half_target": true,
+      "unknown": 0,
+      "wilson_lower_at_least_half": true,
+      "win_rate_all_attempts_lower_bound": 1.0,
+      "win_rate_all_attempts_upper_bound": 1.0,
+      "win_rate_complete_games": 1.0,
+      "win_rate_wilson95_complete_games": [
+        0.6755924351161198,
+        1.0
+      ],
+      "wins": 8
+    }
+  },
+  "stage": "COMPLETE",
+  "training_status": "STEP_LIMIT_COMPLETE",
+  "updated_at_utc": "2026-10-08T14:35:13.760512+00:00"
+}

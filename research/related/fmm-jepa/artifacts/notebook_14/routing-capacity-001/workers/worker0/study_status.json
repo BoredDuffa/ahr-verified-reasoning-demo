@@ -1,0 +1,6 @@
+{
+  "status": "FAILED",
+  "stage": "interrupted",
+  "updated_unix": 1791466404.9037964,
+  "error": "FileNotFoundError(2, 'No such file or directory')"
+}

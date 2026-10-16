@@ -1,0 +1,1 @@
+Construct a 6-vertex undirected simple graph that is connected, has diameter exactly 3, becomes disconnected if any single edge is removed, and contains exactly two triangles. Provide the adjacency list and verify all four properties. If no such graph exists, prove it.

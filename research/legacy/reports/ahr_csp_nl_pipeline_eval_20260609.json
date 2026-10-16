@@ -1,0 +1,60 @@
+{
+  "clinical_use": "forbidden",
+  "kind": "ahr_csp_nl_pipeline_eval",
+  "known_untrained_families": [
+    "short_arithmetic_program",
+    "probability_counting_program",
+    "statistics_program",
+    "finite_logic_constraints",
+    "sequence_graph_reasoning"
+  ],
+  "mode": "qwen",
+  "published_answer_families": [
+    "operation_synthesis"
+  ],
+  "summary": {
+    "by_expected_family": {
+      "finite_logic_constraints": {
+        "correct": 30,
+        "total": 30,
+        "wrong": 0
+      },
+      "operation_synthesis": {
+        "correct": 30,
+        "total": 30,
+        "wrong": 0
+      },
+      "probability_counting_program": {
+        "correct": 30,
+        "total": 30,
+        "wrong": 0
+      },
+      "sequence_graph_reasoning": {
+        "correct": 30,
+        "total": 30,
+        "wrong": 0
+      },
+      "short_arithmetic_program": {
+        "correct": 30,
+        "total": 30,
+        "wrong": 0
+      },
+      "statistics_program": {
+        "correct": 30,
+        "total": 30,
+        "wrong": 0
+      },
+      "unsupported": {
+        "correct": 30,
+        "total": 30,
+        "wrong": 0
+      }
+    },
+    "correct_family": 210,
+    "invalid_dsl": 0,
+    "total": 210,
+    "valid_json": 210,
+    "wrong_family": 0
+  },
+  "translator_policy": "translator emits DSL only; AHR-CSP/verifier owns answers"
+}

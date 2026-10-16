@@ -1,0 +1,75 @@
+{
+  "checks": {
+    "active_game_and_search_restored": true,
+    "all_D4_policy_legality": true,
+    "dev_lockbox_never_sampled": true,
+    "error_resume_exact_trajectory": true,
+    "fresh_kernel_exact_resume": true,
+    "partial_optimizer_event_never_checkpointed": true,
+    "real_complete_game_and_optimizer_learning": true,
+    "split_before_augmentation": true,
+    "terminal_labels_match_02_oracle": true,
+    "unknown_policy_only": true
+  },
+  "fixtures": [
+    {
+      "completed_games": 2,
+      "device": "cpu",
+      "event_steps": 80,
+      "first_game_seconds": 0.582719497004291,
+      "fixture_notebook": "reports/ahr_v2/fixtures/training-resume-4fadf6d25.ipynb",
+      "fresh_kernel_exact_scientific_state": true,
+      "full_run": "ahr-v2-training-smoke-4fadf6d25-full",
+      "optimizer_steps": 6,
+      "paused_active_search": true,
+      "player_loader": true,
+      "resumed_run": "ahr-v2-training-smoke-4fadf6d25-resumed",
+      "status": "PASS",
+      "unknown_games": 0
+    },
+    {
+      "completed_games": 1,
+      "device": "cuda:1",
+      "event_steps": 57,
+      "first_game_seconds": 1.151845719981793,
+      "fixture_notebook": "reports/ahr_v2/fixtures/training-resume-88e4cf1bf.ipynb",
+      "fresh_kernel_exact_scientific_state": true,
+      "full_run": "ahr-v2-training-smoke-88e4cf1bf-full",
+      "optimizer_steps": 3,
+      "paused_active_search": true,
+      "player_loader": true,
+      "resumed_run": "ahr-v2-training-smoke-88e4cf1bf-resumed",
+      "status": "PASS",
+      "unknown_games": 0
+    }
+  ],
+  "production_shape": {
+    "active_seconds": 105.17119532200377,
+    "board_size": 9,
+    "completed_games": 1,
+    "device": "cuda:1",
+    "final_loss": 2.933983325958252,
+    "first_game_seconds": 67.67127060200801,
+    "game_plies": 194,
+    "is_smoke": true,
+    "network": {
+      "blocks": 4,
+      "width": 64
+    },
+    "optimizer_steps": 32,
+    "run_id": "ahr-v2-9x9-learning-smoke-7b7708fc4",
+    "status": "PASS",
+    "unknown_games": 0,
+    "wall_seconds": 109.85400400299841
+  },
+  "scope": "Disposable checks only; 12-hour production run is launched separately by 07",
+  "sources": {
+    "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+    "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+    "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+    "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+    "experiments/ahr_v2/04_selfplay_and_training.ipynb": "cb9ac31e64c6e8e50e3b37e1f5745f4bdb21a550361aac7edb69552668d58688"
+  },
+  "status": "PASS",
+  "validated_at_utc": "2026-10-06T18:44:52.422817+00:00"
+}

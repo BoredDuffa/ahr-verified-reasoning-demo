@@ -1,0 +1,55 @@
+{
+  "schema": "notebook15-status/v1",
+  "stage": "complete",
+  "status": "COMPLETE",
+  "updated_unix": 1791570863.1148956,
+  "elapsed_seconds": 5923.702954053879,
+  "report": {
+    "status": "COMPLETE",
+    "fixture_source": null,
+    "run_id": "vit-geometry-001",
+    "screening": {
+      "status": "NO_GO_UNCHANGED_GEOMETRY",
+      "quality_pass": false,
+      "n_pairs": 4,
+      "mean_delta_pp": -0.024752475247524552,
+      "paired_seed_deltas_pp": [
+        0.1980198019801982,
+        -0.0990099009900991,
+        -0.04950495049504866,
+        -0.14851485148514865
+      ],
+      "positive_pairs": 1,
+      "mean_own_initialization_gain_pp": 1.4480198019801978,
+      "mean_vit_initialization_gain_pp": 1.4727722772277223,
+      "paired_initialization_gains_pp": [
+        2.0792079207920793,
+        1.0396039603960388,
+        1.6831683168316838,
+        0.9900990099009892
+      ],
+      "mean_knn_delta_pp": -0.012376237623762387,
+      "raw_ci95_pp": [
+        -0.2696690016954054,
+        0.22016405120035631
+      ],
+      "role": "Four-pair reused-development screening; not confirmatory superiority"
+    },
+    "official_test": "NOT_RUN",
+    "no_notebook16_launched": true,
+    "evaluation": "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_15/vit-geometry-001/stage_evaluation.json",
+    "figures": [
+      "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_15/vit-geometry-001/visual_report/geometry_errors.png",
+      "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_15/vit-geometry-001/visual_report/paired_effects.png",
+      "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_15/vit-geometry-001/visual_report/quality.png",
+      "/home/benjamin/workspace/ahr_go/fmm_jeppa/artifacts/notebook_15/vit-geometry-001/visual_report/readout_stability.png"
+    ],
+    "limitations": [
+      "Reused development images; four pairs are screening only.",
+      "Candidate changes only optional spatial coefficient in this registered training screen.",
+      "Converged readout differs from Notebook14 fixed20 protocol; absolute reanalysis scores are not new pretraining results.",
+      "Dense candidate has no FMM speedup; compression and optimized full-JEPA scaling belong to Notebook16."
+    ]
+  },
+  "next_stage": "Notebook16 may be run separately; no automatic long-run launch"
+}

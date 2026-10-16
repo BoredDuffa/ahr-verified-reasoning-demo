@@ -1,0 +1,58 @@
+{
+  "augmentation": true,
+  "batch_size": 64,
+  "board_size": 9,
+  "checkpoint_optimizer_steps": 64,
+  "checkpoint_seconds": 120,
+  "cpu_threads": 4,
+  "device": "cuda:1",
+  "early_temperature": 1.0,
+  "gradient_clip": 5.0,
+  "is_smoke": false,
+  "komi": 7.5,
+  "late_temperature": 0.35,
+  "learning_rate": 0.001,
+  "loss": {
+    "l2_weight": 0.0,
+    "outcome_weight": 1.0,
+    "ownership_weight": 0.25,
+    "policy_weight": 1.0,
+    "score_weight": 0.25
+  },
+  "max_completed_games": null,
+  "max_plies": 729,
+  "max_total_games": null,
+  "network": {
+    "blocks": 4,
+    "width": 64
+  },
+  "replay_dev_games": 64,
+  "replay_lockbox_games": 64,
+  "replay_train_games": 128,
+  "root_dirichlet_alpha": 0.15,
+  "root_noise_fraction": 0.25,
+  "run_id": "ahr-v2-selfplay-20261006-12h",
+  "schema": "ahr-v2-selfplay-config-v1",
+  "search_batch_size": 8,
+  "search_schedule": [
+    [
+      0,
+      32
+    ],
+    [
+      32,
+      64
+    ],
+    [
+      128,
+      128
+    ]
+  ],
+  "seed": 2026100604,
+  "temperature_moves": 60,
+  "time_budget_hours": 12.0,
+  "training_source": "ahr_selfplay",
+  "unknown_updates": 4,
+  "updates_per_game": 32,
+  "weight_decay": 0.0001
+}

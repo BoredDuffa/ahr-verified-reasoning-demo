@@ -1,0 +1,62 @@
+{
+  "milestone": "Lean-AHR v3.5 ProofNet translation repair bridge",
+  "remote_host": "benjamin@34.70.49.55",
+  "remote_project": "/home/benjamin/03_ahr_lean_foundation_plan_20260508",
+  "date": "2026-06-16",
+  "base": "v3.4 ranker-guided ProofNet bridge",
+  "run_name": "lean_ahr_v3_5b_hf_proofnet50_translation_repair_bridge",
+  "smoke_run_name": "lean_ahr_v3_5_hf_proofnet50_translation_repair_smoke10",
+  "changes": [
+    "Opened Lean topology notation scope so ProofNet statements using 𝓝 parse under Mathlib.",
+    "Added verified Lean3/mathlib3-to-Lean4 normalizations for CompleteSpace, Dense, Monotone, TopologicalSpace.generateFrom, TendstoUniformly, IsClosedMap, connectedComponent, CountablyCompactSpace, and TopologicalSpace.IsTopologicalBasis cleanup.",
+    "Removed the over-broad unsupported token filter, which incorrectly marked translated Filter.Tendsto statements as unsupported."
+  ],
+  "configuration": {
+    "input": "datasets/lean_ahr_hf_proofnet50_questions.jsonl",
+    "limit": 50,
+    "retrieve_top_k": 12,
+    "max_clusters": 4,
+    "max_lean_calls": 24,
+    "timeout_s": 30,
+    "aesop": false,
+    "attempt_ranker_checkpoint": "checkpoints/lean_ahr_v3_3_proofnet_attempt_ranker_full.pt",
+    "ranker_candidate_pool": 96
+  },
+  "results": {
+    "record_count": 50,
+    "translated_count": 33,
+    "retrieval_cluster_success_count": 33,
+    "target_verified_count": 5,
+    "lean_calls_total": 697,
+    "elapsed_s": 4868.229,
+    "failure_reason_counts": {
+      "target_verified": 5,
+      "lean_unknown_identifier": 13,
+      "lean_verification_failed": 28,
+      "lean_type_mismatch": 2,
+      "lean_typeclass_synthesis_failed": 1,
+      "lean_unsolved_goals": 1
+    }
+  },
+  "baseline_v3_4": {
+    "translated_count": 26,
+    "retrieval_cluster_success_count": 26,
+    "target_verified_count": 5,
+    "lean_calls_total": 537,
+    "failure_reason_counts": {
+      "target_verified": 5,
+      "lean_unknown_identifier": 22,
+      "lean_verification_failed": 21,
+      "lean_type_mismatch": 1,
+      "lean_unsolved_goals": 1
+    }
+  },
+  "interpretation": {
+    "translation_change": "Translation and retrieval coverage improved by 7 rows, from 26/50 to 33/50.",
+    "unknown_identifier_change": "Unknown-identifier failures dropped from 22 to 13.",
+    "solve_rate_change": "Verified target proofs stayed flat at 5/50.",
+    "cost_change": "Lean calls increased from 537 to 697 because more previously unparsed rows now run the full proof-attempt budget.",
+    "frontier_shift": "The bottleneck moved from translation parsing toward proof-script synthesis for translated analysis/topology targets."
+  },
+  "next_step": "Build a failure-aware proof-script expansion pass for the 28 translated verification failures, starting with the newly translated 𝓝/Tendsto rows and dense/monotone/topology-generation rows."
+}

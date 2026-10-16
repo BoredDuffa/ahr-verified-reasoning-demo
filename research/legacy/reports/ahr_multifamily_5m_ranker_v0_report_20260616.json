@@ -1,0 +1,96 @@
+{
+  "acceptance": {
+    "nonzero_test_coverage": true,
+    "nonzero_val_coverage": true,
+    "publish": true,
+    "test_hard_energy_zero": true,
+    "test_zero_wrong": true,
+    "val_hard_energy_zero": true,
+    "val_zero_wrong": true
+  },
+  "architecture": {
+    "feature_buckets": 4096,
+    "hidden1": 1024,
+    "hidden2": 768,
+    "labels": 17
+  },
+  "checkpoint_path": "/home/benjamin/02_ahr_csp_math_words/.1AHR_maths&words/ahr_csp_v0/checkpoints/ahr_multifamily_5m_ranker_v0.pt",
+  "clinical_use": "forbidden",
+  "created_at_unix": 1781620219.4704163,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.33781841883764546,
+      "train_program_accuracy": 0.8985294117647059
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.008282873801448766,
+      "train_program_accuracy": 1.0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.00173948870780056,
+      "train_program_accuracy": 1.0
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.0008025147178319886,
+      "train_program_accuracy": 1.0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.0005155701443607754,
+      "train_program_accuracy": 1.0
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.0003880267062306623,
+      "train_program_accuracy": 1.0
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.00031925689887858053,
+      "train_program_accuracy": 1.0
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.00027438443879980375,
+      "train_program_accuracy": 1.0
+    }
+  ],
+  "parameter_count": 4998161,
+  "run_name": "ahr_multifamily_5m_ranker_v0",
+  "splits": {
+    "test": {
+      "abstained": 20,
+      "correct": 340,
+      "coverage": 0.9444444444444444,
+      "hard_valid": 340,
+      "hard_valid_rate": 1.0,
+      "mean_hard_energy": 0.0,
+      "total": 360,
+      "wrong": 0
+    },
+    "train": {
+      "abstained": 80,
+      "correct": 1360,
+      "coverage": 0.9444444444444444,
+      "hard_valid": 1360,
+      "hard_valid_rate": 1.0,
+      "mean_hard_energy": 0.0,
+      "total": 1440,
+      "wrong": 0
+    },
+    "val": {
+      "abstained": 20,
+      "correct": 340,
+      "coverage": 0.9444444444444444,
+      "hard_valid": 340,
+      "hard_valid_rate": 1.0,
+      "mean_hard_energy": 0.0,
+      "total": 360,
+      "wrong": 0
+    }
+  }
+}

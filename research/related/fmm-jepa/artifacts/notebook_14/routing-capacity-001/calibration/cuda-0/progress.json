@@ -1,0 +1,77 @@
+{
+  "rows": [
+    {
+      "variant": "vit",
+      "device": "cuda:0",
+      "median_step_seconds": 0.934613121098606,
+      "peak_bytes": 3689317376,
+      "wall_seconds": 10.387824282981455,
+      "raw_step_seconds": [
+        0.934613121098606,
+        0.931961168261012,
+        0.9431648559435271,
+        0.9470888658668846,
+        0.9206931810467505
+      ],
+      "round_overhead_seconds": 2.1316728949812234,
+      "checkpoint_directory": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/calibration/cuda-0/vit",
+      "trace_sha256": "c7cf003aa20229bbf341b8e248d0fdd2d40b971227f0c50786caef8be9167e6f",
+      "status": "PASS"
+    },
+    {
+      "variant": "normalized_kernel",
+      "device": "cuda:0",
+      "median_step_seconds": 1.0434490986955351,
+      "peak_bytes": 5250512896,
+      "wall_seconds": 10.403884922998259,
+      "raw_step_seconds": [
+        1.06016063012043,
+        1.0383296352406033,
+        1.0434490986955351,
+        1.0373615520773456,
+        1.047447887562681
+      ],
+      "round_overhead_seconds": 1.8826727112617814,
+      "checkpoint_directory": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/calibration/cuda-0/normalized_kernel",
+      "trace_sha256": "c7cf003aa20229bbf341b8e248d0fdd2d40b971227f0c50786caef8be9167e6f",
+      "status": "PASS"
+    },
+    {
+      "variant": "compensated_kernel",
+      "device": "cuda:0",
+      "median_step_seconds": 1.017580195550574,
+      "peak_bytes": 5451624448,
+      "wall_seconds": 10.124113191996003,
+      "raw_step_seconds": [
+        0.9999920352541376,
+        1.04034294724348,
+        1.0440721835226285,
+        1.0128281725919805,
+        1.017580195550574
+      ],
+      "round_overhead_seconds": 1.9440286834116556,
+      "checkpoint_directory": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/calibration/cuda-0/compensated_kernel",
+      "trace_sha256": "c7cf003aa20229bbf341b8e248d0fdd2d40b971227f0c50786caef8be9167e6f",
+      "status": "PASS"
+    },
+    {
+      "variant": "compensated_wide_kernel",
+      "device": "cuda:0",
+      "median_step_seconds": 1.0271429938958025,
+      "peak_bytes": 5569274368,
+      "wall_seconds": 10.244975197012536,
+      "raw_step_seconds": [
+        1.052196801962098,
+        1.0145776619946119,
+        1.016568306387635,
+        1.0361636711733881,
+        1.0271429938958025
+      ],
+      "round_overhead_seconds": 1.9457395479287953,
+      "checkpoint_directory": "/home/benjamin/workspace/ahr_go/fmm_jeppa/checkpoints/routing-capacity-001/calibration/cuda-0/compensated_wide_kernel",
+      "trace_sha256": "c7cf003aa20229bbf341b8e248d0fdd2d40b971227f0c50786caef8be9167e6f",
+      "status": "PASS"
+    }
+  ],
+  "status": "RUNNING"
+}

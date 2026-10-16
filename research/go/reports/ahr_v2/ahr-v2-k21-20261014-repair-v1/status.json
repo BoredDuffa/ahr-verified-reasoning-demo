@@ -1,0 +1,15 @@
+{
+  "checkpoint": {
+    "file": "step-000000001-1dd68728.pt",
+    "global_step": 1,
+    "sha256": "54c644d5b23ff6e8f3cfa5802289ef1405ccbdb8524175a57acbded43b990fe2"
+  },
+  "completed_stages": [
+    "diagnosis"
+  ],
+  "error": "RuntimeError('Teacher completed without any compatible searched action.')",
+  "run_id": "ahr-v2-k21-20261014-repair-v1",
+  "stage": "collect_0",
+  "status": "ERROR",
+  "updated_at_utc": "2026-10-14T15:44:57.464580+00:00"
+}

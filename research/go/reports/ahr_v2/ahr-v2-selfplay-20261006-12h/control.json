@@ -1,0 +1,63 @@
+{
+  "active_review": null,
+  "last_review_at_utc": "2026-10-07T08:15:45.562560+00:00",
+  "reviews": [
+    {
+      "eval_id": "ahr-v2-selfplay-20261006-12h-periodic-dev-1920",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-06T20:50:26.313590+00:00",
+      "optimizer_step": 1920,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-1920/report.json",
+      "status": "PASS"
+    },
+    {
+      "eval_id": "ahr-v2-selfplay-20261006-12h-periodic-dev-3264",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-06T22:56:18.395725+00:00",
+      "optimizer_step": 3264,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-3264/report.json",
+      "status": "PASS"
+    },
+    {
+      "eval_id": "ahr-v2-selfplay-20261006-12h-periodic-dev-3904",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-07T01:01:45.500825+00:00",
+      "optimizer_step": 3904,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-3904/report.json",
+      "status": "PASS"
+    },
+    {
+      "eval_id": "ahr-v2-selfplay-20261006-12h-periodic-dev-4512",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-07T03:07:05.160234+00:00",
+      "optimizer_step": 4512,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-4512/report.json",
+      "status": "PASS"
+    },
+    {
+      "eval_id": "ahr-v2-selfplay-20261006-12h-periodic-dev-5216",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-07T05:12:28.117328+00:00",
+      "optimizer_step": 5216,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-5216/report.json",
+      "status": "PASS"
+    },
+    {
+      "eval_id": "ahr-v2-selfplay-20261006-12h-periodic-dev-5856",
+      "final_development_review": false,
+      "finished_at_utc": "2026-10-07T07:16:59.199266+00:00",
+      "optimizer_step": 5856,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-5856/report.json",
+      "status": "PASS"
+    },
+    {
+      "eval_id": "ahr-v2-selfplay-20261006-12h-final-dev-6080",
+      "final_development_review": true,
+      "finished_at_utc": "2026-10-07T08:15:45.562560+00:00",
+      "optimizer_step": 6080,
+      "report_path": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-final-dev-6080/report.json",
+      "status": "PASS"
+    }
+  ],
+  "run_id": "ahr-v2-selfplay-20261006-12h"
+}

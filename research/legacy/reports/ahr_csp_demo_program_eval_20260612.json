@@ -1,0 +1,246 @@
+{
+  "rows": [
+    {
+      "abstain_reason": null,
+      "answer": "The probability is 1/6 = 0.166667 (16.6667%).",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "1/6",
+      "family": "probability_counting_program",
+      "question": "What is the probability of rolling a sum of 7 with two dice?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: dice_sum_exact.",
+        "State variables: dice=2, sides=6, target_sum=7.",
+        "Enumerated finite outcome space: 6^2 = 36 outcomes.",
+        "Verifier counted favorable outcomes where sum == 7: 6.",
+        "Exact probability = 1/6 = 0.166667 = 16.6667%.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "The probability is 1/6 = 0.166667 (16.6667%).",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "1/6",
+      "family": "probability_counting_program",
+      "question": "What is the probability of rolling a sum of seven with two dice?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: dice_sum_exact.",
+        "State variables: dice=2, sides=6, target_sum=7.",
+        "Enumerated finite outcome space: 6^2 = 36 outcomes.",
+        "Verifier counted favorable outcomes where sum == 7: 6.",
+        "Exact probability = 1/6 = 0.166667 = 16.6667%.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "The probability is 3/8 = 0.375000 (37.5000%).",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "3/8",
+      "family": "probability_counting_program",
+      "question": "A fair coin is tossed 3 times. What is the probability of getting exactly 2 heads?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: coin_binomial.",
+        "State variables: flips=3, successes=2, event=exactly.",
+        "Verifier favorable count = C(3,2) = 3.",
+        "Total sequences = 2^3 = 8.",
+        "Exact probability = 3/8 = 0.375000 = 37.5000%.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "The probability is 155339093675555/281474976710656 = 0.551875 (55.1875%).",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "155339093675555/281474976710656",
+      "family": "probability_counting_program",
+      "question": "If I flip 50 coins, what is the chance there is a sequence of 5 heads in a row?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: coin_run_at_least_one.",
+        "State variables: flips=50, target=heads, run_length=5.",
+        "Total sequences = 2^50 = 1125899906842624.",
+        "Dynamic-program verifier counted sequences with no run of 5 heads: 504543532140404.",
+        "Favorable sequences = 1125899906842624 - 504543532140404 = 621356374702220.",
+        "Exact probability = 155339093675555/281474976710656 = 0.551875 = 55.1875%.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "The probability is 38093904702297390785243708291056390518886454060947061/75091883268515350125426207425223147563269805908203125 = 0.507297 (50.7297%).",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "0.507297",
+      "family": "probability_counting_program",
+      "question": "In a room of 23 people, what is the probability at least two share a birthday?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: birthday_at_least_one_match.",
+        "State variables: people=23, days=365.",
+        "Verifier computes complement probability of all birthdays different.",
+        "P(no match) = product((365-i)/365 for i=0..22) = 36997978566217959340182499134166757044383351847256064/75091883268515350125426207425223147563269805908203125.",
+        "P(at least one match) = 1 - P(no match) = 38093904702297390785243708291056390518886454060947061/75091883268515350125426207425223147563269805908203125 = 0.507297 = 50.7297%.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "The mean is 17/2 = 8.500000. Population variance is 35/4 = 8.750000.",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "17/2",
+      "family": "statistics_program",
+      "question": "What is the mean of 4, 8, 10, and 12?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: mean_variance.",
+        "State variables: values=[4, 8, 10, 12].",
+        "Verifier sum = 34; count = 4.",
+        "Mean = sum/count = 17/2 = 8.500000.",
+        "Population variance = squared deviation sum / 4 = 35/4 = 8.750000.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "The mean is 5 = 5.000000. Population variance is 5 = 5.000000.",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "5",
+      "family": "statistics_program",
+      "question": "Find the mean and variance of 2, 4, 6, and 8.",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: mean_variance.",
+        "State variables: values=[2, 4, 6, 8].",
+        "Verifier sum = 20; count = 4.",
+        "Mean = sum/count = 5 = 5.000000.",
+        "Population variance = squared deviation sum / 4 = 5 = 5.000000.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "Alice is first in the verified ordering.",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "Alice",
+      "family": "finite_logic_constraints",
+      "question": "Alice is taller than Bob. Bob is taller than Cara. Who is tallest?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: ordering_topological_sort.",
+        "State variables: entities=['alice', 'bob', 'cara']; constraints=[('alice', 'bob'), ('bob', 'cara')].",
+        "Verifier built a directed acyclic ordering graph.",
+        "Topological order from greatest/tallest/oldest to least: ['alice', 'bob', 'cara'].",
+        "Answer entity = alice.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "Maria is first in the verified ordering.",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "Maria",
+      "family": "finite_logic_constraints",
+      "question": "Maria is older than John. John is older than Lee. Who is oldest?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: ordering_topological_sort.",
+        "State variables: entities=['john', 'lee', 'maria']; constraints=[('maria', 'john'), ('john', 'lee')].",
+        "Verifier built a directed acyclic ordering graph.",
+        "Topological order from greatest/tallest/oldest to least: ['maria', 'john', 'lee'].",
+        "Answer entity = maria.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "The answer is 31.",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "31",
+      "family": "short_arithmetic_program",
+      "question": "Add 12 and 19.",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: add_all.",
+        "State variables: numbers=[12, 19].",
+        "Verifier executed exact integer expression: 12 + 19 = 31.",
+        "Hard energy = 0 because the executable trace matches the verifier result.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": "The answer is 4.",
+      "backend_type": "trained_ahr_ranker",
+      "dsl_reason": "demo_program_backend",
+      "expected_fragment": "4",
+      "family": "short_arithmetic_program",
+      "question": "24 cookies are split equally among 6 kids. How many per kid?",
+      "status": "correct",
+      "trace": [
+        "AHR-CSP selected legal program: divide_exact.",
+        "State variables: numbers=[24, 6].",
+        "Verifier executed exact integer expression: 24 / 6 = 4.",
+        "Hard energy = 0 because the executable trace matches the verifier result.",
+        "CPU verifier accepted the program: valid=true, hard_energy=0."
+      ],
+      "verified": true
+    },
+    {
+      "abstain_reason": null,
+      "answer": null,
+      "backend_type": null,
+      "dsl_reason": "unsupported",
+      "expected_fragment": null,
+      "family": "unsupported",
+      "question": "Write me a poem about the model.",
+      "status": "abstained",
+      "trace": [],
+      "verified": false
+    },
+    {
+      "abstain_reason": null,
+      "answer": null,
+      "backend_type": null,
+      "dsl_reason": "unsupported",
+      "expected_fragment": null,
+      "family": "unsupported",
+      "question": "What is the weather tomorrow?",
+      "status": "abstained",
+      "trace": [],
+      "verified": false
+    }
+  ],
+  "summary": {
+    "abstained": 2,
+    "clinical_use": "forbidden",
+    "correct": 11,
+    "created_at_unix": 1781263044.4539123,
+    "mode": "qwen",
+    "total": 13,
+    "verified": 11,
+    "wrong": 0
+  }
+}

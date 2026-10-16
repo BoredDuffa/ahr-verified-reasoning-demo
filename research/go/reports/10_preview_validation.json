@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "code_cells": 8,
+  "code_cells_executed": 8,
+  "check_groups": 9,
+  "errors": 0,
+  "saved_outputs_reviewed": true,
+  "html_preview": "reports/previews/10_gtp_engine_interface.html",
+  "html_structure_checked": true,
+  "graphical_inspection": "NOT_PERFORMED: no graphical browser inspection",
+  "trained_player_subprocess": {
+    "device": "cpu",
+    "full_state_namespace_bridge": true,
+    "legality_verified": true,
+    "move": "F1",
+    "occupied_move_rejected": true,
+    "run_id": "go08-initial-warmup-v2",
+    "search_diagnostics": {
+      "action": 77,
+      "checkpoint": {
+        "checkpoint_file": "checkpoints/go08-initial-warmup-v2/step-000000004-d56193ce.pt",
+        "checkpoint_sha256": "f89578054d381e05604a1c45bab6ee9c6d876c3d75df97dd304711f8020a0a51",
+        "model_sha256": "5f6222557e4b7fa72fdfd655d336b953987c47dd281df3aedde8c4e32c6ac04b",
+        "optimizer_step": 32,
+        "run_id": "go08-initial-warmup-v2",
+        "selection": "best"
+      },
+      "deadline_exceeded": false,
+      "elapsed_s": 0.16975004699634155,
+      "legality_verified": true,
+      "player_identity": "go_ahr:go08-initial-warmup-v2:best",
+      "player_reported_status": "UNKNOWN",
+      "strategic_status": "UNKNOWN",
+      "time_budget_s": 1.0,
+      "vertex": "F1"
+    },
+    "status": "PASS",
+    "time_budget_s": 1.0,
+    "undo_board_verified": true
+  },
+  "source_sha256": "dcec872d36ab401b32cc79d371568ebd6ac2c21ccbd3790b4c1552ccbc73fa29"
+}

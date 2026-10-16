@@ -1,0 +1,22 @@
+{
+  "completed": 3,
+  "run_id": "benchmark17-gpu-speed-b2cfff98",
+  "status": "PASS",
+  "summary": [
+    {
+      "device": "cuda:0",
+      "errors": 0,
+      "max_overrun_seconds": 0.05004004100803286,
+      "max_seconds": 0.08004004100803286,
+      "max_visits": 8,
+      "measured": 3,
+      "median_seconds": 0.05565607303287834,
+      "median_visits": 8.0,
+      "min_visits": 8,
+      "move_seconds": 0.03,
+      "overruns": 3,
+      "p95_seconds": 0.0776016442105174
+    }
+  ],
+  "test_payload_consumed": false
+}

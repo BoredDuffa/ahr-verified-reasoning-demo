@@ -1,0 +1,13 @@
+{
+  "logical_device": "cuda:0",
+  "physical_gpu": {
+    "name": "NVIDIA A100-SXM4-80GB",
+    "physical_index": 0,
+    "uuid": "GPU-e1f3240a-eedb-bed2-dcc1-b9014449ca12"
+  },
+  "status": "ISOLATED",
+  "teacher_logical_gpu": 0,
+  "torch_device_name": "NVIDIA A100-SXM4-80GB",
+  "verified_at_utc": "2026-10-16T10:31:12.538378+00:00",
+  "visible_devices": "GPU-e1f3240a-eedb-bed2-dcc1-b9014449ca12"
+}

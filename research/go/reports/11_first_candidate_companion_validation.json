@@ -1,0 +1,23 @@
+{
+  "notebook": "reports/11_first_candidate_evaluation.ipynb",
+  "code_sha256": "0ccfedf9dcc71469b85eacab1ada89dc1f24a09c8b57e369d2a12899efe98824",
+  "fresh_kernel_prepare_run": "PASS",
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "errors": [],
+  "actual_arena_run": "NOT_STARTED_WAITING_FOR_COMPLETED_CANDIDATE",
+  "html_preview": "reports/previews/11_first_candidate_evaluation.html",
+  "html_structural_checks": {
+    "First self-play candidate": true,
+    "PREPARED_ONLY": true,
+    "WRITER_ACTIVE": true,
+    "NOT_ESTABLISHED": true,
+    "Exact launch and resume": true
+  },
+  "graphical_review": "NOT_PERFORMED: no graphical viewer available"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "ahr_encoding_validation_v1",
+  "status": "passed",
+  "checks": {
+    "quantifier_counterexample": {
+      "ordinary_exists_exists": "SAT",
+      "exists_forall": "UNSAT",
+      "forall_exists": "SAT",
+      "missing_reply_rejected": true,
+      "wrong_response_rejected": true,
+      "json_roundtrip": true
+    },
+    "csp_reference_comparison": {
+      "ordinary_instances": 96,
+      "quantified_instances": 208,
+      "quantified_sat_certificates": 86,
+      "finite_ternary_domain": true,
+      "zero_variable_truth_and_falsehood": true,
+      "budget_unknown_preserved": true
+    },
+    "go_reference_comparison": {
+      "reachable_histories_through_two_plies": 27,
+      "bounded_instances": 162,
+      "sat_certificates_checked": 60,
+      "every_legal_opponent_reply_included": true,
+      "missing_pass_certificate_rejected": true,
+      "nonterminal_cutoff_unknown": true,
+      "node_budget_unknown": true,
+      "terminal_score_both_colors": true,
+      "input_history_unchanged": true
+    }
+  },
+  "completed_utc": "2026-09-23T00:43:36.624866+00:00",
+  "runtime_seconds": 0.1133,
+  "rules_notebook": "01_go_rules_and_independent_verifier.ipynb",
+  "rules_notebook_sha256": "d2c1beca3df3183a82d3b99481b60e634ff7165439738eeaee0021a1a41730c1",
+  "scope": "Finite CSP/QCSP correctness and exhaustive tiny bounded Go checks; no model training",
+  "go_objectives": {
+    "area_at_horizon": "signed area >= threshold at terminal or horizon; bounded proxy only",
+    "terminal_win": "terminal signed area > threshold; nonterminal horizon UNKNOWN"
+  }
+}

@@ -1,0 +1,4149 @@
+\documentclass[11pt,oneside]{book}
+
+\usepackage[a4paper,margin=27mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric,matrix,decorations.pathreplacing}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+
+\definecolor{AHRInk}{HTML}{17212B}
+\definecolor{AHRBlue}{HTML}{2D5B88}
+\definecolor{AHRTeal}{HTML}{2A7F78}
+\definecolor{AHRGold}{HTML}{C18B2F}
+\definecolor{AHRRed}{HTML}{A64B45}
+\definecolor{AHRGreen}{HTML}{4F7D4A}
+\definecolor{AHRLight}{HTML}{F3F6F7}
+\definecolor{AHRGray}{HTML}{65727C}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=AHRBlue,
+  citecolor=AHRTeal,
+  urlcolor=AHRBlue,
+  pdftitle={Ant Hill Reasoning: Unified Mathematical Theory},
+  pdfauthor={Benjamin A. Aenlle Falkenburg},
+  pdfsubject={Mathematical foundations of Ant Hill Reasoning}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Ant Hill Reasoning}}
+\fancyhead[R]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setstretch{1.06}
+\setlist{itemsep=0.3em,topsep=0.4em}
+
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{assumption}[definition]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{example}[definition]{Example}
+\newtheorem{openproblem}[definition]{Open Problem}
+
+\newcommand{\AHR}{\operatorname{AHR}}
+\newcommand{\Sol}{\mathrm{Sol}}
+\newcommand{\QWS}{\mathcal A_{\mathrm{QWS}}}
+\newcommand{\AQWS}{\mathcal A_{\mathrm{QWS}}}
+\newcommand{\Om}{\Omega}
+\newcommand{\cB}{\mathcal C_B}
+\newcommand{\Rext}{\overline{\mathbb R}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\given}{\,\middle|\,}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\botans}{\bot}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\ProofCheck}{Check}
+\DeclareMathOperator{\cost}{cost}
+\DeclareMathOperator{\Pref}{Pref}
+\DeclareMathOperator{\Comp}{Comp}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Auth}{Auth}
+\DeclareMathOperator{\Rel}{Rel}
+\DeclareMathOperator{\Adm}{Adm}
+\DeclareMathOperator{\Rules}{Rules}
+\DeclareMathOperator{\Front}{Front}
+\DeclareMathOperator{\Prop}{Prop}
+\DeclareMathOperator{\Prune}{Prune}
+\DeclareMathOperator{\Use}{Use}
+\DeclareMathOperator{\Rule}{Rule}
+\DeclareMathOperator{\Sel}{Sel}
+\DeclareMathOperator{\Decision}{Decision}
+\DeclareMathOperator{\Stop}{Stop}
+\DeclareMathOperator{\Verify}{Verify}
+\DeclareMathOperator{\vstat}{vstat}
+\DeclareMathOperator{\concl}{concl}
+\DeclareMathOperator{\softmax}{softmax}
+\DeclareMathOperator{\Clamp}{Clamp}
+\DeclareMathOperator{\KL}{KL}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+
+\newcommand{\keybox}[1]{%
+  \begin{center}
+  \fcolorbox{AHRBlue}{AHRLight}{\begin{minipage}{0.88\textwidth}\centering\vspace{0.45em}#1\vspace{0.45em}\end{minipage}}
+  \end{center}}
+
+\tikzset{
+  role/.style={draw,very thick,rounded corners=2pt,minimum width=31mm,minimum height=13mm,align=center,font=\small\bfseries},
+  sys/.style={draw,thick,rounded corners=2pt,minimum width=31mm,minimum height=11mm,align=center,font=\small},
+  flow/.style={-{Latex[length=2.2mm]},thick,AHRInk},
+  feedback/.style={-{Latex[length=2.2mm]},thick,dashed,AHRGray},
+  note/.style={font=\scriptsize,align=center,text=AHRGray},
+  queen/.style={role,fill=AHRGold!18,draw=AHRGold!90!black},
+  worker/.style={role,fill=AHRBlue!12,draw=AHRBlue},
+  scout/.style={role,fill=AHRTeal!12,draw=AHRTeal},
+  verifier/.style={role,fill=AHRGreen!12,draw=AHRGreen},
+  reject/.style={role,fill=AHRRed!10,draw=AHRRed}
+}
+
+\begin{document}
+
+\frontmatter
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{20mm}
+{\color{AHRBlue}\rule{0.82\textwidth}{1.2pt}}\\[11mm]
+{\Huge\bfseries Ant Hill Reasoning (AHR)\\[4mm]}
+{\LARGE Unified Mathematical Theory\\[8mm]}
+{\large Hierarchical energy-based reasoning with Queen, Worker, Scout,\\
+stigmergic memory, hard verification, and principled abstention}
+\\[14mm]
+{\color{AHRBlue}\rule{0.82\textwidth}{1.2pt}}\\[18mm]
+
+\begin{tikzpicture}[node distance=13mm]
+  \node[queen] (q) {QUEEN\\governance};
+  \node[worker,right=of q] (w) {WORKER\\construction};
+  \node[scout,right=of w] (u) {SCOUT\\exploration};
+  \draw[flow] (u.north) to[out=110,in=70,looseness=1.15] (q.north);
+  \draw[flow] (q) -- (w);
+  \draw[flow] (w) -- (u);
+  \draw[feedback] (w.south) to[bend left=24] (q.south);
+\end{tikzpicture}
+
+\vfill
+{\Large Benjamin A. Aenlle Falkenburg}\\[13mm]
+{\small This monograph consolidates the AHR mathematical foundation, original recurrent/stigmergic design, verifier-backed CSP and proof-search theory, and the finite formal model.}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\setcounter{page}{1}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Ant Hill Reasoning (AHR) is formalized here as a verifier-constrained, energy-based search over structured reasoning trajectories whose state and action spaces contain three primitive roles: a slow Queen governing strategy, budget, pruning, verification, and stopping; a Worker constructing local derivations or assignments; and a fast Scout proposing branches and gathering evidence. The architecture combines the multi-timescale recurrence of hierarchical reasoning models, the variational and optimization viewpoint of energy-based models, and a bounded stigmergic memory inspired by pheromone dynamics. The defining object is not the biological metaphor but the Queen/Worker/Scout compatibility relation
+\[
+\AQWS\subseteq Q\times W\times U\times S\times A,
+\]
+which specifies when the three roles are coordinated.
+
+The document gives the complete finite base theory: semantic solution relation, role spaces, dynamic and strict transition relations, legal trajectories, terminal extraction, verifier, hard and soft energy terms, bounded candidate sets, deterministic tie-breaking, abstention, and role-factored search. It proves finite, compact, and finite-sublevel argmin existence; verifier-relative and domain soundness; abstention safety; alignment coherence; energy-margin recovery; perturbation stability; safe Queen pruning; deterministic and stochastic completeness under Scout coverage; bounded pheromone stability; and a conditional hierarchical work advantage. A fully finite modus-ponens model keeps semantic answers independent of proof certificates and proves checker and verifier soundness by induction. The same substrate is then instantiated for finite CSPs, temporal constraints, proof-assistant search, symbolic Diophantine proof search, and Sudoku-style structured prediction. A self-contained reader's toolkit introduces every non-elementary convention needed by an undergraduate in mathematics or computer science.
+
+The central definition is:
+
+\keybox{\Large
+\textbf{AHR is Queen/Worker/Scout hierarchical energy minimization}\\
+\textbf{over verified reasoning trajectories.}}
+
+\chapter*{Status of Claims}
+\addcontentsline{toc}{chapter}{Status of Claims}
+
+This document deliberately separates five kinds of statement.
+
+\begin{longtable}{>{\bfseries\RaggedRight\arraybackslash}p{0.20\textwidth}
+>{\RaggedRight\arraybackslash}p{0.70\textwidth}}
+\toprule
+Status & Meaning \\
+\midrule
+Definition & A mathematical choice that fixes what an AHR system is. \\
+Theorem & A proved implication under explicit assumptions stated in this document. \\
+Instantiation & A domain-specific realization, such as the finite proof model or a finite CSP. \\
+Empirical observation & A measurement from a named saved artifact. It is evidence about that run, not a theorem about AHR in general. \\
+Conjecture & A research claim not established by the base theory, including broad generalization, learned-energy convergence, and universal-reasoner claims. \\
+\bottomrule
+\end{longtable}
+
+In particular, a fixed parameter count with respect to recurrent depth is not constant-time inference, verifier-relative soundness is not domain soundness unless the verifier itself is proved sound, and a successful verifier-backed experiment is not a proof of search completeness or out-of-distribution generalization.
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter*{How to Read This Monograph}
+\addcontentsline{toc}{chapter}{How to Read This Monograph}
+
+\section*{Audience and prerequisites}
+
+The core theory is written for a reader who has completed an introductory
+course in discrete mathematics and at least one course in programming,
+algorithms, or mathematical proof. Calculus and linear algebra are needed only
+for the differentiable-learning sections. Elementary probability is needed for
+the stochastic-completeness theorem. The compact-space existence theorem uses
+a small amount of real analysis or topology, but every topological term used
+there is defined in the next chapter.
+
+\begin{longtable}{>{\bfseries\RaggedRight\arraybackslash}p{0.24\textwidth}
+>{\RaggedRight\arraybackslash}p{0.31\textwidth}
+>{\RaggedRight\arraybackslash}p{0.35\textwidth}}
+\caption{Suggested reading paths.}\\
+\toprule
+Goal & Read first & Then read \\
+\midrule
+\endfirsthead
+\toprule
+Goal & Read first & Then read \\
+\midrule
+\endhead
+Understand the formal AHR contract & Reader's toolkit; Origin and Design Commitments & Semantic Contract through Objective, Search, Repair, and Halting \\
+Check the guarantees & Reader's toolkit; Semantic Contract; The AHR Mathematical Object & All chapters in Part II, in order \\
+Understand the neural/EBM interpretation & Reader's toolkit; Stigmergic Memory; AHR Energy Functional & Complexity and Training; Learning Hierarchical Energies \\
+Understand exact verification & Reader's toolkit; Semantic Contract & Finite Modus-Ponens AHR; CSP; Proof-Assistant Search; Sudoku \\
+Reproduce the logical core only & Reader's toolkit & Semantic Contract; AHR Mathematical Object; Energy Functional; Objective; Soundness; Unified Definition \\
+\bottomrule
+\end{longtable}
+
+\section*{Four questions to ask at every claim}
+
+Every formal statement in this monograph can be audited by asking:
+\begin{enumerate}
+  \item \textbf{What are the types?} For example, is the object a state,
+  action, trajectory, answer, set, relation, or real number?
+  \item \textbf{What is assumed?} A theorem proves only an implication from
+  its hypotheses. Coverage, sound pruning, and verifier soundness are not
+  automatic properties of an implementation.
+  \item \textbf{What is concluded?} Soundness, completeness, optimality, and
+  low empirical error are different conclusions.
+  \item \textbf{Is the claim formal or empirical?} A theorem follows from
+  definitions and assumptions. A measured rate follows from a particular
+  dataset, split, program, checkpoint, and evaluation procedure.
+\end{enumerate}
+
+\section*{Proof-reading convention}
+
+A displayed implication $P\Rightarrow Q$ should be read as: whenever all
+conditions collected in $P$ hold, $Q$ must hold. It does not assert that $P$
+holds in every AHR implementation. Proofs in this edition expand every
+algebraic step that carries logical weight. Familiar one-line facts, such as
+``a finite nonempty set of real numbers has a minimum,'' are stated explicitly
+when they are used.
+
+\keybox{\textbf{The verifier protects emitted answers only if the verifier is
+itself sound for the intended domain. Search quality cannot manufacture that
+missing premise.}}
+
+\chapter*{Mathematical and Computer-Science Toolkit}
+\addcontentsline{toc}{chapter}{Mathematical and Computer-Science Toolkit}
+
+\section*{Sets, elements, and products}
+
+A \emph{set} is a collection of objects. The notation $x\in X$ says that
+$x$ is an element of the set $X$. The notation $A\subseteq B$ says that every
+element of $A$ also belongs to $B$. These statements have different types:
+$x\in X$ relates an element to a set, whereas $A\subseteq B$ relates two sets.
+
+The Cartesian product
+\[
+A\times B=\{(a,b):a\in A,\ b\in B\}
+\]
+is the set of ordered pairs. Thus $(a,b)\in A\times B$ means simultaneously
+$a\in A$ and $b\in B$. A five-coordinate AHR compatibility tuple has type
+\[
+(q,w,u,s,a)\in Q\times W\times U\times S\times A.
+\]
+If $h=(q,w,u,s)\in H$, then the same information may be written as $(h,a)$,
+but $(h,a)$ belongs to $H\times A$, not literally to
+$Q\times W\times U\times S\times A$. Coordinate expansion is required before
+testing membership in the latter set.
+
+For a set $K$, the notation $2^K$ means its power set, the set of all subsets
+of $K$. For sets $A$ and $B$, the notation $B^A$ means the set of all
+functions from $A$ to $B$. Therefore
+\[
+F_U\in2^{\mathcal K}
+\quad\text{and}\quad
+e_U\in\mathcal E_K^{\mathcal K}
+\]
+mean, respectively, that $F_U$ is a subset of the branch universe and that
+$e_U$ assigns one energy-grid value to every branch.
+
+\section*{Functions, relations, and correspondences}
+
+A function $f:A\to B$ assigns exactly one value $f(a)\in B$ to each
+$a\in A$. A relation $R\subseteq A\times B$ may associate one input with zero,
+one, or many outputs. A correspondence $I:X\to2^H$ is a function whose value
+$I(x)$ is itself a set; it can therefore specify several admissible initial
+states.
+
+The verifier has a \emph{dependent domain}:
+\[
+\{(x,\tau,y):x\in X,\ \tau\in\Omega(x),\ y\in Y\}.
+\]
+The allowed trajectory set depends on the selected problem $x$. Writing this
+domain explicitly prevents the verifier from being applied to an ill-typed
+trajectory from another problem.
+
+\section*{Logic and quantifiers}
+
+The universal quantifier $\forall$ means ``for every,'' and the existential
+quantifier $\exists$ means ``there exists.'' The implication
+$P\Rightarrow Q$ can fail only when $P$ is true and $Q$ is false. The
+equivalence $P\Longleftrightarrow Q$ abbreviates the two implications
+$P\Rightarrow Q$ and $Q\Rightarrow P$.
+
+The order of quantifiers matters. The coverage statement
+\[
+\forall i\ \exists t:\text{ branch }i\text{ is proposed at time }t
+\]
+does not require one common time for all branches. By contrast,
+$\exists t\ \forall i$ would.
+
+\section*{Finite sequences and trajectories}
+
+A trajectory with $L$ transitions is
+\[
+\tau=(h_0,a_0,h_1,\ldots,a_{L-1},h_L).
+\]
+It contains $L+1$ states and $L$ actions. This monograph calls $L$ the
+\emph{transition length}; the symbol $|\tau|$ denotes that value when no
+ambiguity is possible. The index range $0\le t<L$ is exactly
+$t\in\{0,\ldots,L-1\}$.
+
+Induction on a nonnegative integer proves a claim for all finite stages. It
+requires a base case, usually stage $0$, and a step showing that truth at stage
+$i$ implies truth at stage $i+1$. The completeness and checker proofs later in
+the monograph use this pattern.
+
+\section*{Indicators, extended-real energy, and minimization}
+
+For a proposition $P$, the indicator
+\[
+\one\{P\}=
+\begin{cases}
+1,&P\text{ is true},\\
+0,&P\text{ is false}
+\end{cases}
+\]
+turns a logical violation into a number. A sum of nonnegative indicators is
+zero if and only if every summand is zero.
+
+The extended real line used here is
+\[
+\mathbb R\cup\{+\infty\}.
+\]
+The value $+\infty$ is not a very large trainable penalty. It means that the
+candidate is forbidden in the exact optimization problem. For finite
+$r\in\mathbb R$, the arithmetic conventions used here include
+$r+(+\infty)=+\infty$.
+
+For a function $E:D\to\mathbb R\cup\{+\infty\}$,
+\[
+\argmin_{z\in D}E(z)
+=\{z\in D:E(z)\le E(z')\text{ for every }z'\in D\}
+\]
+is a set of minimizers. It may contain more than one point. A deterministic
+tie-break converts that set-valued choice into one output. The infimum
+$\inf_{z\in D}E(z)$ is the greatest lower bound and need not be attained;
+the minimum is an attained infimum. Likewise, $\sup$ is the least upper bound.
+
+A function $E$ is \emph{proper} in this monograph when it never takes
+$-\infty$ and is finite at at least one point. This is the standard
+extended-real optimization convention relevant to the existence theorems.
+
+\section*{Probability used by Scout coverage}
+
+For a finite nonempty set $D$, write
+\[
+\Delta(D)
+=\left\{p:D\to[0,1]:\sum_{d\in D}p(d)=1\right\}.
+\]
+Thus $\Delta(D)$ is the set of probability distributions on $D$. A
+stochastic policy maps its available information to an element of such a
+simplex. A deterministic policy is included as the special case that assigns
+probability one to a single action.
+
+For events $A$ and $B$ with $\Pr(B)>0$,
+\[
+\Pr(A\mid B)=\frac{\Pr(A\cap B)}{\Pr(B)}.
+\]
+The union bound,
+\[
+\Pr\!\left(\bigcup_{i=1}^L A_i\right)
+\le\sum_{i=1}^L\Pr(A_i),
+\]
+does not require independence. The stochastic-completeness theorem also uses
+conditional expectation: if $\mathcal H$ records the current history and
+$A$ is already determined by that history, then
+\[
+\Pr(A\cap B)
+=\mathbb E\!\left[\one_A\Pr(B\mid\mathcal H)\right].
+\]
+This identity is the tower property applied to event indicators.
+
+\section*{Optional topology for one existence theorem}
+
+A metric $d$ measures distance and satisfies nonnegativity, identity of
+indiscernibles, symmetry, and the triangle inequality. A sequence $z_n$
+converges to $z$ when $d(z_n,z)\to0$. A metric space is compact when every
+sequence has a convergent subsequence whose limit remains in the space. A
+function $E$ is lower semicontinuous when
+\[
+z_n\to z
+\quad\Longrightarrow\quad
+E(z)\le\liminf_{n\to\infty}E(z_n).
+\]
+These sequential formulations are sufficient for the compact metric theorem
+proved later.
+
+\section*{State machines, search trees, and verifiers}
+
+A transition relation specifies which state-action-state triples are allowed.
+It need not be a deterministic function: the same state and action may have
+several possible successors. A search tree is the unrolling of such choices
+from initial states. A node is a partial trajectory; an edge is a legal
+extension.
+
+A verifier is mathematically a total Boolean function on its declared
+dependent domain. An executable instantiation supplies a terminating procedure
+that computes that function for a claimed answer and certificate.
+``Independent'' means that final acceptance is not defined merely as agreement
+with the learned score that proposed the answer. It does not mean that the
+verifier is infallible. Domain soundness of the verifier must be proved or
+inherited from a trusted exact checker.
+
+Four properties must not be conflated:
+\begin{description}[style=nextline,leftmargin=32mm,labelwidth=29mm]
+\item[Soundness] Every emitted answer is correct.
+\item[Completeness] Every target answer in the stated class is eventually found
+under the stated search assumptions.
+\item[Optimality] The selected feasible answer minimizes a named objective.
+\item[Empirical accuracy] A measured fraction of examples was answered
+correctly under a named evaluation.
+\end{description}
+None of these properties implies all the others.
+
+\section*{A complete two-variable example}
+
+Let $x_1,x_2\in\{0,1\}$ and impose two constraints:
+\[
+c_1:\ x_1\ne x_2,
+\qquad
+c_2:\ x_1=1.
+\]
+Define
+\[
+E_{\mathrm{hard}}(x_1,x_2)
+=\one\{x_1=x_2\}+\one\{x_1\ne1\}.
+\]
+Evaluating every assignment gives
+\[
+\begin{array}{c|cc|c}
+(x_1,x_2)&\one\{x_1=x_2\}&\one\{x_1\ne1\}&E_{\mathrm{hard}}\\
+\hline
+(0,0)&1&1&2\\
+(0,1)&0&1&1\\
+(1,0)&0&0&0\\
+(1,1)&1&0&1
+\end{array}
+\]
+so $(1,0)$ is the unique zero-energy assignment.
+
+An AHR realization can make the three roles explicit. The Queen authorizes
+the subgoal ``assign $x_1$ and $x_2$,'' sets a two-step budget, and requires
+verification. The Scout proposes variable-value branches. The Worker turns a
+retained proposal into a partial and then complete assignment. The exact
+verifier evaluates $c_1$ and $c_2$. A learned soft energy may choose which
+branch to try first, but only the zero-hard-energy assignment may be emitted.
+If the budget expires before that assignment is verified, the output is
+$\bot$, not the best unverified guess.
+
+\mainmatter
+
+\part{Foundations}
+
+\chapter{Origin and Design Commitments}
+
+\section{The synthesis}
+
+AHR began as a synthesis of four ideas:
+
+\begin{enumerate}
+  \item \textbf{Hierarchical recurrence.} Slow strategic state modulates faster local computation, extending the two-timescale HRM idea to Queen, Worker, and Scout recurrence \cite{WangHRM2025,FalkenburgAHRDesign2026}.
+  \item \textbf{Energy-based reasoning.} Correctness and preference are expressed through low energy, with hard constraints represented by extended-real indicator energies \cite{LeCunEBM2006,BelangerSPEN2016}.
+  \item \textbf{Stigmergic shared memory.} A bounded pheromone tensor records and redistributes evidence through evaporation and deposition \cite{DorigoACO1996,DorigoStutzle2004,TheraulazStigmergy1999}.
+  \item \textbf{Independent verification.} AHR may propose, rank, repair, and search, but an external domain verifier controls final emission \cite{FalkenburgVerified2026}.
+\end{enumerate}
+
+These ideas are complementary. Hierarchy allocates computation; energy ranks trajectories; stigmergy carries distributed evidence; verification separates plausible reasoning from certified correctness.
+
+\section{Non-negotiable architecture}
+
+Queen, Worker, and Scout are not labels attached after the fact. They are coordinates of the state and action spaces, coupled by an explicit compatibility relation. Removing any coordinate changes the formal system.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \node[sys,fill=AHRLight,minimum width=25mm] (x) at (0,0) {Problem $x$\\task state $s_t$};
+  \node[queen,minimum width=28mm] (q) at (4.0,2.25) {QUEEN $q_t$\\strategy and budget};
+  \node[worker,minimum width=28mm] (w) at (4.0,0) {WORKER $w_t$\\local construction};
+  \node[scout,minimum width=28mm] (u) at (4.0,-2.25) {SCOUT $u_t$\\frontier and novelty};
+  \node[sys,fill=AHRGold!10,draw=AHRGold,minimum width=28mm] (tau) at (8.0,0)
+    {Shared memory $\varrho_t$\\facts and pheromone};
+  \node[verifier,minimum width=28mm] (v) at (8.0,-3.6) {VERIFIER $V$\\certificate check};
+  \node[sys,fill=AHRGreen!8,draw=AHRGreen,minimum width=25mm] (y) at (12.3,-2.75) {pass: emit $y$};
+  \node[reject,minimum width=25mm] (b) at (12.3,-4.45) {fail: abstain $\bot$};
+
+  \draw[flow] (x) -- (q);
+  \draw[flow] (x) -- (w);
+  \draw[flow] (x) -- (u);
+  \draw[flow] (q) -- node[note,right]{authorize} (w);
+  \draw[feedback] (w.west) to[bend left=18] node[note,left]{evidence} (q.west);
+  \draw[flow] (u) -- node[note,right]{propose} (w);
+  \draw[feedback] (u.west) to[bend right=24] node[note,left]{frontier} (q.west);
+  \draw[flow] (q) -- (tau);
+  \draw[flow] (w) -- (tau);
+  \draw[flow] (u) -- (tau);
+  \draw[feedback] (tau) -- (q);
+  \draw[feedback] (tau) -- (w);
+  \draw[feedback] (tau) -- (u);
+  \draw[flow] (tau) -- node[note,right]{candidate\\and trace} (v);
+  \draw[flow] (v) -- (y);
+  \draw[flow] (v) -- (b);
+\end{tikzpicture}
+\caption{The AHR contract. Search is internal; final correctness is controlled by an external verifier.}
+\label{fig:architecture}
+\end{figure}
+
+\section{Design requirements}
+
+The foundational theory must satisfy the following requirements.
+
+\begin{itemize}
+  \item Correctness is defined externally by a semantic solution relation.
+  \item The verifier is distinct from the semantic relation and from the learned energy.
+  \item Hard constraints cannot be traded against soft preferences.
+  \item The Queen may prune only under a stated safety condition if completeness is claimed.
+  \item The Scout must receive an explicit coverage condition if eventual discovery is claimed.
+  \item The Worker must receive a local completeness condition for the construction language in use.
+  \item AHR returns $\bot$ when no verified bounded candidate is found.
+\end{itemize}
+
+\chapter{Semantic Contract}
+
+\section{Problems, answers, and truth}
+
+\begin{definition}[Semantic solution relation]
+A problem domain consists of a problem space $X$, an answer space $Y$, and a relation
+\[
+\Sol\subseteq X\times Y.
+\]
+The statement $(x,y)\in\Sol$ means that $y$ is correct for $x$ under the intended external semantics of the domain.
+\end{definition}
+
+The answer may be a value, assignment, proof object, plan, or certificate. The definition does not require uniqueness. For proof search it is often strongest to let $Y$ contain proof objects rather than only theorem conclusions.
+
+\begin{definition}[Verifier]
+Let $\Om(x)$ be the legal trajectory space for $x$. A verifier is a function on the dependent domain
+\[
+V:\{(x,\tau,y):x\in X,\ \tau\in\Om(x),\ y\in Y\}\longrightarrow\{0,1\}.
+\]
+$V(x,\tau,y)=1$ means that the trajectory contains a certificate accepted for answer $y$.
+\end{definition}
+
+\begin{definition}[Verifier soundness]
+$V$ is sound with respect to $\Sol$ when
+\[
+V(x,\tau,y)=1\quad\Longrightarrow\quad (x,y)\in\Sol
+\]
+for every admissible triple $(x,\tau,y)$.
+\end{definition}
+
+Verifier soundness is domain-specific. AHR cannot obtain it merely by architectural design. A proof assistant, exact CSP checker, or symbolic certificate checker must justify its own soundness.
+
+\section{Three correctness levels}
+
+\begin{definition}[Verifier-relative soundness]
+A bounded solver $\AHR_B:X\to Y\cup\{\bot\}$ is verifier-sound when
+\[
+\AHR_B(x)=y\in Y\quad\Longrightarrow\quad
+\exists\tau\in\Om(x):V(x,\tau,y)=1.
+\]
+\end{definition}
+
+\begin{definition}[Domain soundness]
+$\AHR_B$ is domain-sound when
+\[
+\AHR_B(x)=y\in Y\quad\Longrightarrow\quad (x,y)\in\Sol.
+\]
+\end{definition}
+
+The logical chain is
+\[
+\boxed{
+\text{AHR verifier-soundness}+\text{verifier domain-soundness}
+\Longrightarrow\text{AHR domain-soundness}.}
+\]
+
+\section{Abstention semantics}
+
+The symbol $\bot$ is a fresh symbol with $\bot\notin Y$ and means ``no
+certified answer was emitted.'' It does not by itself distinguish
+impossibility, budget exhaustion, inadequate representation, incomplete
+verification, or search failure. An implementation may attach a reason code,
+but the mathematical output remains in $Y\cup\{\bot\}$.
+
+\chapter{The AHR Mathematical Object}
+
+\section{Primitive spaces}
+
+The finite base theory assumes all primitive sets are finite and nonempty unless stated otherwise. Let
+\[
+X,\ Y,\ G,\ F,\ M,\ \mathcal P,\ C
+\]
+denote problems, answers, goals, facts, memory, partial constructions, and constraints. Define
+\[
+S=G\times F\times M\times\mathcal P\times C,
+\qquad s=(g,f,m,p,c).
+\]
+
+Let $Q,W,U$ be the Queen, Worker, and Scout state spaces. The hierarchical state space is
+\[
+H=Q\times W\times U\times S,
+\qquad h=(q,w,u,s).
+\]
+
+Let $A_Q,A_W,A_U$ be role action spaces and
+\[
+A=A_Q\times A_W\times A_U,
+\qquad a=(a^Q,a^W,a^U).
+\]
+
+\section{Dynamics and trajectories}
+
+\begin{definition}[Syntactic dynamics]
+The dynamic relation
+\[
+T_{\mathrm{dyn}}\subseteq X\times H\times A\times H
+\]
+contains syntactically possible state updates, including failed or incompatible attempts that may be useful for analysis.
+\end{definition}
+
+\begin{definition}[Initialization]
+An initialization correspondence $I:X\to 2^H$ assigns each problem a nonempty finite set $I(x)$ of allowed initial states.
+\end{definition}
+
+The strict AHR relation will be defined after compatibility:
+\[
+T_{\mathrm{AHR}}
+=\{(x,h,a,h')\in T_{\mathrm{dyn}}:(q,w,u,s,a)\in\AQWS\},
+\]
+where $h=(q,w,u,s)$.
+
+\begin{definition}[Raw trajectory]
+For a problem $x$, let $\Om_{\mathrm{raw}}(x)$ be the set of all finite
+alternating strings
+\[
+\tau=(h_0,a_0,h_1,\ldots,a_{L-1},h_L)
+\]
+with $L\ge0$, $h_0\in I(x)$, $h_t\in H$, and $a_t\in A$, before any transition
+or compatibility test is imposed.
+\end{definition}
+
+\begin{definition}[Strict legal trajectory]
+A finite trajectory with transition length $L$ is
+\[
+\tau=(h_0,a_0,h_1,\ldots,a_{L-1},h_L).
+\]
+It contains $L$ actions and $L+1$ states. For $L=0$ it consists only of an
+initial state $h_0$.
+It is strict-legal for $x$ when $h_0\in I(x)$ and
+\[
+(x,h_t,a_t,h_{t+1})\in T_{\mathrm{AHR}}
+\quad\text{for every }0\le t<L.
+\]
+The set of all such trajectories is $\Om_{\mathrm{AHR}}(x)$, abbreviated $\Om(x)$.
+\end{definition}
+
+The intermediate space $\Om_{\mathrm{dyn}}(x)$ consists of raw trajectories
+whose every transition belongs to $T_{\mathrm{dyn}}$. It may contain
+QWS-incompatible attempts and is useful for training on negative examples.
+The three spaces satisfy
+\[
+\Om_{\mathrm{AHR}}(x)
+\subseteq\Om_{\mathrm{dyn}}(x)
+\subseteq\Om_{\mathrm{raw}}(x).
+\]
+This separation prevents an invalid attempt from being both ``outside the
+declared domain'' and ``an in-domain example assigned infinite hard energy.''
+
+\begin{definition}[Terminal extraction]
+The extraction map
+\[
+R:H\longrightarrow Y\cup\{\bot\}
+\]
+returns the answer or certificate claimed by the final state.
+\end{definition}
+
+\section{Budget and policy}
+
+Let
+$\operatorname{stepCost}:X\times H\times A\times H\to\mathbb R_{\ge0}$.
+For a trajectory associated with problem $x$, define the additive,
+problem-indexed cost
+\[
+\cost_x(\tau)
+=\sum_{t=0}^{L-1}\operatorname{stepCost}(x,h_t,a_t,h_{t+1}).
+\]
+For budget $B\ge0$,
+\[
+\Om_B(x)=\{\tau\in\Om(x):\cost_x(\tau)\le B\}.
+\]
+
+The finite base theory additionally assumes that there is a constant
+$\eps>0$ such that
+\[
+\operatorname{stepCost}(x,h,a,h')\ge\eps
+\]
+for every strict-legal transition $(x,h,a,h')\in T_{\mathrm{AHR}}$.
+Consequently a finite budget bounds transition length; the exact counting
+argument is proved in the existence chapter. A domain that needs zero-cost
+bookkeeping steps must either group them with a positive-cost transition or
+add an explicit finite transition cap. Generalized infinite-space variants
+may replace this standing assumption by one of the later compactness or
+finite-sublevel hypotheses, but then minimizer existence must be checked
+separately.
+
+The search policy is role-factored:
+\[
+\Pi=(\Pi_Q,\Pi_W,\Pi_U).
+\]
+One explicit Markov, autoregressive typing is
+\begin{align*}
+\Pi_Q&:X\times H\to\Delta(A_Q),\\
+\Pi_U&:X\times H\times A_Q\to\Delta(A_U),\\
+\Pi_W&:X\times H\times A_Q\times A_U\to\Delta(A_W).
+\end{align*}
+It induces the joint action probability
+\[
+\Pr_\Pi(a^Q,a^W,a^U\mid x,h)
+=\Pi_Q(a^Q\mid x,h)\,
+\Pi_U(a^U\mid x,h,a^Q)\,
+\Pi_W(a^W\mid x,h,a^Q,a^U).
+\]
+Successively summing this product over $a^W$, then $a^U$, then $a^Q$
+gives one because each conditional factor belongs to its displayed
+probability simplex. It is therefore a normalized joint distribution on
+$A$.
+The order of the three components in the tuple $\Pi$ is only a naming
+convention; the displayed conditioning gives the common
+Queen--Scout--Worker sampling order. A history-dependent implementation
+either replaces $H$ by the set of strict prefixes or augments $H$ with all
+information needed to make the policy Markov. Policies may be masked to put
+zero mass on known-incompatible actions; regardless of masking, only actions
+that produce a strict transition belong to an AHR trajectory.
+The ideal AHR objective is independent of a particular policy. The policy determines how the ideal candidate set is enumerated or approximated.
+
+\section{Compact specification}
+
+\begin{definition}[Finite strict AHR system]
+A finite strict AHR system is the tuple
+\[
+\begin{aligned}
+\mathfrak A=(&X,Y,\Sol,G,F,M,\mathcal P,C,S,Q,W,U,H,\\
+&A_Q,A_W,A_U,A,\mathcal K,\AQWS,I,T_{\mathrm{dyn}},T_{\mathrm{AHR}},\\
+&\Om_{\mathrm{raw}},\Om_{\mathrm{dyn}},\Om,R,V,E_{\mathrm{AHR}},
+\operatorname{stepCost},\{\cost_x\}_{x\in X},B,\Pi).
+\end{aligned}
+\]
+Every symbol is typed by the definitions above and below.
+\end{definition}
+
+\chapter{Queen, Worker, and Scout as Primitive Structure}
+
+Consistently with the finite base theory, every component set introduced in
+this chapter is finite and nonempty unless explicitly stated otherwise.
+The products below are canonical uncompressed schemas. A domain
+instantiation may suppress coordinates whose sets are singletons, but it must
+state the resulting bijection; suppressing a singleton changes notation, not
+the mathematical state space. Non-singleton coordinates may be combined only
+when the required typed projections remain defined.
+
+\section{Queen state}
+
+Let $\Sigma$ be a strategy set, $\mathcal B$ a budget-state set, $\mathcal V$ a verification-policy set, $\Theta$ an acceptance-threshold set, $\mathcal Z$ a stopping-rule set, and $\mathcal A_M$ an arbitration-memory set. Define
+\[
+Q=\Sigma\times\mathcal B\times\mathcal V\times\Theta\times\mathcal Z\times\mathcal A_M.
+\]
+A Queen state $q=(\sigma,b,\nu,\theta,z,\alpha)$ governs subgoals, resource allocation, pruning, verification, arbitration, acceptance, and stopping. The Queen does not need to construct domain proof steps.
+
+\section{Worker state}
+
+Let $\varnothing\ne G_W\subseteq G$ contain active subgoals, $L$ local
+construction states, $\mathcal R$ domain rules, $D$ derivation states,
+$\Lambda$ local feedback, and $\Gamma_P$ progress scores. Define
+\[
+W=G_W\times L\times\mathcal R\times D\times\Lambda\times\Gamma_P.
+\]
+A Worker state $w=(\widehat g,\ell,r,d,\lambda,\pi)$ records the authorized local obligation and its partial construction.
+
+\section{Scout state}
+
+Fix a finite nonempty branch universe $\mathcal K$. A branch may denote a
+hypothesis, rule, premise, variable-value choice, lemma, mutation, local plan,
+or search direction. Let $\mathcal E_K,\mathcal N_K,\mathcal U_K$ be finite
+nonempty grids of energy, novelty, and uncertainty values. Define
+\[
+U=2^{\mathcal K}\times2^{\mathcal K}\times2^{\mathcal K}
+\times\mathcal E_K^{\mathcal K}\times\mathcal N_K^{\mathcal K}\times\mathcal U_K^{\mathcal K}.
+\]
+A Scout state is
+\[
+u=(F_U,H_U,B_U,e_U,n_U,\xi_U),
+\]
+where $F_U$ is the active frontier, $H_U$ stores hypotheses, and $B_U$
+contains unexplored branches. The maps $e_U$, $n_U$, and $\xi_U$ store branch
+estimates. The Scout proposes; it does not certify correctness.
+
+\section{Nested time scales}
+
+For positive integers $N,K,T,d$, the original recurrent realization uses Queen
+updates $n=0,\ldots,N-1$, Worker updates $k=0,\ldots,K-1$ inside each Queen
+cycle, and Scout micro-steps $t=0,\ldots,T-1$ inside each Worker cycle. This is
+an AHR
+formalization of hierarchical temporal processing rather than a claim that
+biological and computational time scales are identical
+\cite{WangHRM2025,KiebelTimescales2008}:
+\begin{align}
+u_{n,k,t+1}&=\operatorname{Step}_U
+(u_{n,k,t};x,w_{n,k},q_n,\varrho_{n,k,t}),\\
+\varrho_{n,k,t+1}&=\operatorname{Step}_{\varrho}
+(\varrho_{n,k,t};x,q_n,w_{n,k},u_{n,k,t},s_{n,k,t}),\\
+w_{n,k+1}&=\operatorname{Step}_W
+(w_{n,k};x,q_n,\mathcal U_{n,k},\varrho_{n,k,T}),\\
+q_{n+1}&=\operatorname{Step}_Q
+(q_n;x,\mathcal W_n,\varrho_{n,K-1,T}).
+\end{align}
+The names $\operatorname{Step}_U,\operatorname{Step}_W,\operatorname{Step}_Q$
+denote update functions and are deliberately distinct from the Scout frontier
+coordinate $F_U$. One fully typed choice is
+\begin{align*}
+\operatorname{Step}_U&:U\times X\times W\times Q\times\mathbb R^d\to U,\\
+\operatorname{Step}_{\varrho}
+&:\mathbb R^d\times X\times Q\times W\times U\times S\to\mathbb R^d,\\
+\operatorname{Step}_W&:W\times X\times Q\times U^T\times\mathbb R^d\to W,\\
+\operatorname{Step}_Q&:Q\times X\times W^K\times\mathbb R^d\to Q.
+\end{align*}
+The task state $s_{n,k,t}\in S$ is supplied by the domain dynamics. Here take
+\[
+\mathcal U_{n,k}=(u_{n,k,1},\ldots,u_{n,k,T})\in U^T,
+\qquad
+\mathcal W_n=(w_{n,1},\ldots,w_{n,K})\in W^K,
+\]
+or replace either tuple by another explicitly typed summary of the same
+inner-loop states. An implementation also supplies
+\[
+q_0\in Q,\qquad \varrho_{0,0,0}\in\mathbb R^d,\qquad
+\operatorname{Reset}_W:Q\times X\to W,\qquad
+\operatorname{Reset}_U:Q\times W\times X\to U,
+\]
+with
+\[
+w_{n,0}=\operatorname{Reset}_W(q_n,x),
+\qquad
+u_{n,k,0}=\operatorname{Reset}_U(q_n,w_{n,k},x).
+\]
+Shared memory is carried across the nested-loop boundaries by
+\[
+\varrho_{n,k+1,0}=\varrho_{n,k,T}\quad(0\le k<K-1),
+\qquad
+\varrho_{n+1,0,0}=\varrho_{n,K-1,T}\quad(0\le n<N-1).
+\]
+The bounded evaporation--deposition rule in the next chapter is the canonical
+choice for $\operatorname{Step}_{\varrho}$. These reset and carry equations
+define every displayed Queen, Worker, Scout, and memory index without an
+implicit off-by-one convention.
+The displayed $\mathbb R^d$ signatures describe the continuous recurrent
+realization. The finite base theory instead uses the finite encoded pheromone
+space and quantized update defined in the next chapter.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=10.8mm,y=9mm]
+  \draw[->,thick] (0,0) -- (12.8,0);
+  \node[font=\small,below left=1.5mm] at (12.8,0) {reasoning time};
+  \foreach \x in {0,4,8,12} {\draw[thick,AHRGold] (\x,-0.22)--(\x,3.25);}
+  \foreach \x in {0,1.33,2.66,4,5.33,6.66,8,9.33,10.66,12} {\draw[thick,AHRBlue] (\x,-0.12)--(\x,2.05);}
+  \foreach \x in {0,0.33,...,12} {\draw[AHRTeal] (\x,-0.07)--(\x,0.92);}
+  \draw[decorate,decoration={brace,amplitude=5pt},AHRGold,thick] (0,3.45)--(4,3.45)
+    node[midway,above=5pt,font=\small\bfseries,text=AHRGold!80!black]{Queen cycle: strategy};
+  \draw[decorate,decoration={brace,amplitude=4pt},AHRBlue,thick] (0,2.25)--(1.33,2.25)
+    node[midway,above=4pt,font=\scriptsize\bfseries,text=AHRBlue]{Worker cycle};
+  \draw[decorate,decoration={brace,amplitude=3pt},AHRTeal,thick] (0,1.10)--(0.33,1.10)
+    node[midway,above=3pt,font=\scriptsize,text=AHRTeal]{Scout};
+  \node[align=left,font=\small] at (10.2,3.85) {slow governance};
+  \node[align=left,font=\small] at (10.2,2.48) {mid-level construction};
+  \node[align=left,font=\small] at (10.2,1.32) {fast exploration};
+\end{tikzpicture}
+\caption{Three nested recurrence scales. The count $NKT$ is computational depth, not parameter depth.}
+\label{fig:timescales}
+\end{figure}
+
+\chapter{The QWS Compatibility Relation}
+
+\section{Auxiliary maps}
+
+The signature object of AHR is
+\[
+\AQWS\subseteq Q\times W\times U\times S\times A.
+\]
+To define it, fix the following maps and predicates:
+\begin{align*}
+\Auth &:Q\times S\to2^G, &
+\Rel &:Q\times S\to2^{\mathcal K},\\
+\Adm &:Q\times S\times U\to2^{\mathcal K}, &
+\Rules &:Q\times S\times G\to2^{\mathcal R}.
+\end{align*}
+Let
+\[
+\mathcal D_{\mathrm{dec}}
+=\{\mathrm{undecided},\mathrm{accept},\mathrm{reject},\mathrm{abstain}\},
+\qquad
+\mathcal V_{\mathrm{stat}}
+=\{\mathrm{unchecked},\mathrm{pass},\mathrm{fail}\}.
+\]
+The required action projections have types
+\begin{align*}
+\Sel&:A_Q\to2^G,&
+\Prune&:A_Q\to2^{\mathcal K},&
+\Verify&:A_Q\to\{0,1\},\\
+\Decision&:A_Q\to\mathcal D_{\mathrm{dec}},&
+\Stop&:A_Q\to\{0,1\},&
+\operatorname{Sub}&:A_W\to2^G,\\
+\Rule&:A_W\to\mathcal R\cup\{\mathrm{none}\},&
+\Use&:A_W\to2^{\mathcal K},&
+\Prop&:A_U\to2^{\mathcal K}.
+\end{align*}
+The bit $\Verify(a^Q)$ requests an exact verifier call; it is not itself a
+claim that verification passed. A concrete $T_{\mathrm{dyn}}$ must give that
+bit operational meaning: a requested call records its returned status in the
+successor memory, while an unrequested call cannot manufacture a
+\texttt{pass} status. Moreover, $\vstat(m,w)=\mathrm{pass}$ may hold only
+when the recorded check applies to that exact Worker state or certificate;
+changing the checked construction invalidates or supersedes the pass. Clause
+QWS-5 below reads the status already present in the current state.
+Consequently the canonical transition model verifies first and accepts on a
+later transition. An atomic verify-and-accept variant must instead expose the
+prospective verifier result explicitly in its transition and compatibility
+semantics; the finite toy model later does this through its status $v^+$.
+Use the state projections
+\[
+\widehat g:W\to G,\qquad
+\Front:U\to2^{\mathcal K},\qquad
+\operatorname{mem}:S\to M,
+\]
+and a status map
+\[
+\vstat:M\times W\to\mathcal V_{\mathrm{stat}}.
+\]
+Finally, let $\operatorname{RequiresVerify}:Q\to\{0,1\}$ and type the evidence
+predicates as
+\begin{align*}
+\operatorname{PruneOK}&:Q\times S\times U\times\mathcal K\to\{0,1\},\\
+\operatorname{AcceptOK},\operatorname{RejectOK},
+\operatorname{FailureOK}
+&:Q\times W\times U\times S\times A\to\{0,1\}.
+\end{align*}
+Their domain-specific definitions make governance evidence-dependent.
+The relation $\AQWS$ checks whether the three roles make a coordinated
+request at the current state; it does not contain the successor $h'$.
+Accordingly, a faithful domain-specific $T_{\mathrm{dyn}}$ must also realize
+the declared action effects. For example, a branch named by $\Prune(a^Q)$
+cannot remain in the retained successor frontier, selected subgoals must be
+reflected in the successor task/Worker state, and verifier status must obey
+the update contract above. A relation that ignores these effects is
+well-typed as a subset of $X\times H\times A\times H$ but is not a faithful
+AHR instantiation.
+
+\section{Exact compatibility clauses}
+
+For $q\in Q,w\in W,u\in U,s\in S,a\in A$, define
+\[
+(q,w,u,s,a)\in\AQWS
+\]
+if and only if all six clauses hold.
+
+\begin{description}[style=nextline,leftmargin=15mm,labelwidth=13mm]
+\item[QWS-1: authorization]
+\[
+\widehat g(w)\in\Auth(q,s),
+\qquad
+\Sel(a^Q)\cup\operatorname{Sub}(a^W)\subseteq\Auth(q,s).
+\]
+
+\item[QWS-2: relevance]
+$\Front(u)\subseteq\Rel(q,s)$ and
+\[
+\Prop(a^U)\setminus\Prune(a^Q)\subseteq\Rel(q,s).
+\]
+The Scout may surface poor candidates only if they are prevented from entering the retained frontier.
+
+\item[QWS-3: admissible use]
+\[
+\Use(a^W)\subseteq
+(\Front(u)\cup\Prop(a^U))\cap\Adm(q,s,u),
+\]
+and
+\[
+\Rule(a^W)=\mathrm{none}
+\quad\text{or}\quad
+\Rule(a^W)\in\Rules(q,s,\widehat g(w)).
+\]
+
+\item[QWS-4: evidence-bound governance]
+\[
+\Prune(a^Q)\subseteq\Front(u)\cup\Prop(a^U),
+\]
+and for every $k\in\Prune(a^Q)$,
+$\operatorname{PruneOK}(q,s,u,k)=1$. Moreover,
+\begin{align*}
+\Decision(a^Q)=\mathrm{accept}
+&\Longrightarrow
+\operatorname{AcceptOK}(q,w,u,s,a)=1,\\
+\Decision(a^Q)=\mathrm{reject}
+&\Longrightarrow
+\operatorname{RejectOK}(q,w,u,s,a)=1.
+\end{align*}
+
+\item[QWS-5: verification policy]
+\[
+\left.
+\begin{aligned}
+\operatorname{RequiresVerify}(q)&=1,\\
+\Decision(a^Q)&=\mathrm{accept}
+\end{aligned}
+\right\}
+\Longrightarrow
+\vstat(\operatorname{mem}(s),w)=\mathrm{pass}.
+\]
+
+\item[QWS-6: justified stopping]
+$\Stop(a^Q)=1$ implies either
+\[
+\Decision(a^Q)=\mathrm{accept}
+\quad\text{and}\quad
+\vstat(\operatorname{mem}(s),w)=\mathrm{pass},
+\]
+or
+\[
+\Decision(a^Q)\in\{\mathrm{reject},\mathrm{abstain}\}
+\quad\text{and}\quad
+\operatorname{FailureOK}(q,w,u,s,a)=1.
+\]
+\end{description}
+
+These clauses coordinate roles but do not replace local rule checking or final verification. A role-compatible trajectory can still contain a domain-invalid proof attempt.
+
+\section{Hard and soft alignment}
+
+For $h=(q,w,u,s)$, define
+\[
+\ell_{\mathrm{align}}(h,a)=
+\begin{cases}
+0,&(q,w,u,s,a)\in\AQWS,\\
++\infty,&\text{otherwise}.
+\end{cases}
+\]
+For $\tau=(h_0,a_0,\ldots,h_L)$,
+\[
+E_{\mathrm{align}}(x,\tau)=\sum_{t=0}^{L-1}\ell_{\mathrm{align}}(h_t,a_t).
+\]
+
+Let
+\[
+\mathcal Z_{\mathrm{QWS}}=Q\times W\times U\times S\times A.
+\]
+On finite encoded spaces, assume $\AQWS\ne\varnothing$, fix
+$\lambda_A\ge0$, and equip
+$\mathcal Z_{\mathrm{QWS}}$ with a metric $d$. A relaxed version is
+\[
+d_{\mathrm{align}}(z,\AQWS)=\min_{z'\in\AQWS}d(z,z'),
+\qquad
+E_{\mathrm{align}}^{\mathrm{soft}}(\tau)
+=\lambda_A\sum_t d_{\mathrm{align}}(z_t,\AQWS).
+\]
+Here $z_t=(q_t,w_t,u_t,s_t,a_t)$ is the expanded state-action tuple, and the
+sum runs over $t=0,\ldots,L-1$.
+The hard relation defines AHR. The soft distance is a learning or repair surrogate.
+
+\chapter{Stigmergic Memory and Energy-Based Dynamics}
+
+\section{Pheromone state}
+
+Pheromone memory is part of the AHR state, not an untracked external variable.
+An instantiation that uses it chooses a memory space $M$ with a distinguished
+projection
+\[
+\operatorname{pher}:M\to\mathcal P_{\varrho},
+\qquad
+\varrho_t=\operatorname{pher}(\operatorname{mem}(s_t)).
+\]
+The transition relation $T_{\mathrm{dyn}}$ must update that memory coordinate
+consistently with the recurrence below.
+Fix an integer $d\ge1$ and scalars
+$\varrho_{\min},\varrho_{\max}\in\mathbb R$ satisfying
+$\varrho_{\min}\le\varrho_{\max}$. Fix $0<\rho\le1$ and deposits
+$\Delta\varrho_t\in\mathbb R^d$.
+
+There are two precise variants. In the continuous differentiable
+realization, take
+$\mathcal P_{\varrho}\subseteq\mathbb R^d$. In the finite base theory, choose
+a nonempty finite encoded grid
+\[
+\mathcal P_{\varrho}^{\mathrm{fin}}
+\subseteq[\varrho_{\min},\varrho_{\max}]^d
+\]
+and a deterministic quantizer
+\[
+\mathsf Q_{\varrho}:
+[\varrho_{\min},\varrho_{\max}]^d
+\to\mathcal P_{\varrho}^{\mathrm{fin}}.
+\]
+The finite update is
+\[
+\varrho_{t+1}
+=\mathsf Q_{\varrho}\!\left(
+\Clamp_{[\varrho_{\min},\varrho_{\max}]}
+\bigl((1-\rho)\varrho_t+\Delta\varrho_t\bigr)\right).
+\]
+Because its range is finite, placing this coordinate inside $M$ preserves the
+finiteness of $H$. The continuous model below omits $\mathsf Q_{\varrho}$; it
+belongs to the generalized, potentially infinite-state theory, so finite
+argmin existence cannot be invoked for it without a separate existence
+argument.
+
+For the continuous analysis, let $\varrho_t\in\mathbb R^d$ be the
+task-dependent shared memory and apply the clamp coordinatewise. Coordinates
+may index graph edges, cell-value assignments, proof actions, facts, rules, or
+factor-graph messages. The following bounded evaporation-deposition form is
+adapted from ant-colony and MAX--MIN pheromone dynamics, while its
+differentiable task-dependent deposit is specific to AHR
+\cite{DorigoACO1996,DorigoGambardella1997,StutzleHoos2000,DorigoStutzle2004}:
+\[
+\varrho_{t+1}=\Clamp_{[\varrho_{\min},\varrho_{\max}]}
+\bigl((1-\rho)\varrho_t+\Delta\varrho_t\bigr),
+\qquad 0<\rho\le1.
+\]
+The deposit map has type
+\[
+D_\theta:Q\times W\times U\times S\times X\to\mathbb R^d,
+\qquad
+\Delta\varrho_t=D_\theta(q_t,w_t,u_t,s_t,x),
+\]
+and may be hand-defined or learned. A low-rank realization
+is available when $d=d_1d_2$ and the vector is reshaped as
+$\operatorname{mat}(\varrho)\in\mathbb R^{d_1\times d_2}$: one may parameterize
+the pre-clamp field or the deposit as $UV^\top$ with
+$U\in\mathbb R^{d_1\times r}$ and
+$V\in\mathbb R^{d_2\times r}$. This reduces storage when
+$r(d_1+d_2)<d_1d_2$. An arbitrary coordinatewise clamp of a rank-$r$ matrix
+need not have rank at most $r$. Therefore an implementation that stores the
+\emph{clamped state itself} in low-rank form must either recompress it
+(generally approximately) or prove that its chosen update preserves the rank
+constraint. The low-rank parameterization is not asserted to be exactly
+closed under the canonical clamp.
+
+The exact linear expansion and variational formulas below concern this
+continuous analytical model. A quantized finite implementation remains
+bounded because its state lies in
+$\mathcal P_{\varrho}^{\mathrm{fin}}$, but it does not satisfy the unclamped
+linear expansion unless the quantizer acts as the identity along the
+trajectory.
+
+\begin{lemma}[Unclamped bound]
+Suppose $D\ge0$,
+$\widetilde\varrho_{t+1}=(1-\rho)\widetilde\varrho_t+\Delta\varrho_t$, and
+$\|\Delta\varrho_t\|_\infty\le D$. Then
+\[
+\|\widetilde\varrho_t\|_\infty
+\le(1-\rho)^t\|\widetilde\varrho_0\|_\infty
++\frac D\rho\bigl(1-(1-\rho)^t\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Set $a_t=\|\widetilde\varrho_t\|_\infty$. Since $0<\rho\le1$, the triangle inequality and absolute homogeneity give
+\[
+\begin{aligned}
+a_{t+1}
+&=\|(1-\rho)\widetilde\varrho_t+\Delta\varrho_t\|_\infty\\
+&\le (1-\rho)\|\widetilde\varrho_t\|_\infty+\|\Delta\varrho_t\|_\infty\\
+&\le (1-\rho)a_t+D.
+\end{aligned}
+\]
+We prove by induction that
+\[
+a_t\le (1-\rho)^t a_0+D\sum_{j=0}^{t-1}(1-\rho)^j.
+\]
+The assertion is equality at $t=0$, with the empty sum equal to zero. If it
+holds at $t$, then
+\[
+\begin{aligned}
+a_{t+1}
+&\le(1-\rho)\left((1-\rho)^t a_0+
+D\sum_{j=0}^{t-1}(1-\rho)^j\right)+D\\
+&=(1-\rho)^{t+1}a_0+
+D\sum_{j=1}^{t}(1-\rho)^j+D\\
+&=(1-\rho)^{t+1}a_0+
+D\sum_{j=0}^{t}(1-\rho)^j.
+\end{aligned}
+\]
+Thus the induction is complete. The finite geometric sum is
+\[
+\sum_{j=0}^{t-1}(1-\rho)^j
+=\frac{1-(1-\rho)^t}{1-(1-\rho)}
+=\frac{1-(1-\rho)^t}{\rho},
+\]
+for $t\ge1$, which yields the stated bound. The already-checked case $t=0$
+has an empty sum and does not require the geometric-sum identity.
+\end{proof}
+
+\begin{corollary}[Steady-state and clamped bounds]
+Under the hypotheses of the preceding lemma, suppose the clamp endpoints
+satisfy
+\[
+\varrho_{\min}\le\varrho_{\max}.
+\]
+Then
+\[
+\limsup_{t\to\infty}\|\widetilde\varrho_t\|_\infty\le \frac D\rho.
+\]
+Under the
+clamped update, every coordinate lies in
+$[\varrho_{\min},\varrho_{\max}]$ for every $t\ge1$; if $\varrho_0$ already lies in
+this box, the statement holds for every $t\ge0$.
+\end{corollary}
+
+\begin{proof}
+Because $0\le1-\rho<1$, one has $(1-\rho)^t\to0$. Taking the limit superior in the lemma's bound gives
+\[
+\limsup_{t\to\infty}\|\widetilde\varrho_t\|_\infty
+\le 0+\frac D\rho(1-0)=\frac D\rho.
+\]
+For the clamped recurrence, scalar clamping is defined by
+\[
+\Clamp_{[\varrho_{\min},\varrho_{\max}]}(r)
+=\min\{\varrho_{\max},\max\{\varrho_{\min},r\}\}.
+\]
+Its value is always in $[\varrho_{\min},\varrho_{\max}]$. Applying it
+coordinatewise therefore puts $\varrho_{t+1}$ in the box for every $t\ge0$,
+proving the claim from time $1$ onward. If $\varrho_0$ is also in the box, the
+claim includes $t=0$.
+\end{proof}
+
+\section{Exponential memory}
+
+\begin{proposition}[Exact exponential-memory expansion]
+For the unclamped recurrence and every integer $t\ge0$,
+\[
+\widetilde\varrho_t=(1-\rho)^t\widetilde\varrho_0
++\sum_{j=0}^{t-1}(1-\rho)^{t-1-j}\Delta\varrho_j.
+\]
+\end{proposition}
+
+\begin{proof}
+At $t=0$, the sum is empty and the right side equals
+$\widetilde\varrho_0$.
+Assume the formula holds at time $t$. Substitution into the recurrence gives
+\[
+\begin{aligned}
+\widetilde\varrho_{t+1}
+&=(1-\rho)\widetilde\varrho_t+\Delta\varrho_t\\
+&=(1-\rho)\left((1-\rho)^t\widetilde\varrho_0+
+\sum_{j=0}^{t-1}(1-\rho)^{t-1-j}\Delta\varrho_j\right)
++\Delta\varrho_t\\
+&=(1-\rho)^{t+1}\widetilde\varrho_0+
+\sum_{j=0}^{t-1}(1-\rho)^{t-j}\Delta\varrho_j+
+(1-\rho)^0\Delta\varrho_t\\
+&=(1-\rho)^{t+1}\widetilde\varrho_0+
+\sum_{j=0}^{t}(1-\rho)^{t-j}\Delta\varrho_j,
+\end{aligned}
+\]
+which is the required formula at $t+1$.
+\end{proof}
+
+Thus pheromone is an exponentially weighted history of deposits. Evaporation sets the memory horizon, while clamping prevents unbounded accumulation.
+
+\section{Pheromone as a variational prior}
+
+Let $n\ge1$, let the action index set be $\{1,\ldots,n\}$, let
+$\ell_j\in\mathbb R$, let
+$\kappa\in\mathbb R$ (normally $\kappa>0$), and let
+\[
+\pi_j=\frac{e^{\kappa\varrho_j}}{\sum_{i=1}^n e^{\kappa\varrho_i}}>0.
+\]
+On the probability simplex
+\[
+\Delta_n=\left\{p\in[0,1]^n:\sum_{j=1}^np_j=1\right\},
+\]
+use the convention $0\log(0/\pi_j)=0$ and consider
+\[
+p^*\in\argmin_{p\in\Delta_n}
+\left\{-\sum_{j=1}^np_j\ell_j+\KL(p\|\pi)\right\},
+\qquad
+\KL(p\|\pi)=\sum_{j=1}^np_j\log\frac{p_j}{\pi_j}.
+\]
+Throughout this section, $\log$ is the natural logarithm. The score
+$\ell_j$ is a log-preference: increasing it increases the preferred
+probability of action $j$.
+
+\begin{proposition}[Log-prior equivalence]
+The unique minimizer is
+\[
+p_j^*=
+\frac{\pi_je^{\ell_j}}{\sum_{i=1}^n\pi_i e^{\ell_i}}
+=\frac{\exp(\ell_j+\kappa\varrho_j)}
+{\sum_{i=1}^n\exp(\ell_i+\kappa\varrho_i)}.
+\]
+\end{proposition}
+
+\begin{proof}
+To identify the only possible interior stationary point, introduce a
+multiplier $\lambda$ for
+$\sum_jp_j=1$. Differentiating the Lagrangian coordinatewise gives
+\[
+0=-\ell_j+\frac{\partial}{\partial p_j}
+\left(p_j\log\frac{p_j}{\pi_j}\right)+\lambda
+=-\ell_j+\log\frac{p_j}{\pi_j}+1+\lambda.
+\]
+Hence
+\[
+\log\frac{p_j}{\pi_j}=\ell_j-1-\lambda,
+\qquad
+p_j=\pi_j e^{\ell_j}e^{-1-\lambda}.
+\]
+Summing over $j$ and using $\sum_jp_j=1$ yields
+\[
+1=e^{-1-\lambda}\sum_{i=1}^n\pi_i e^{\ell_i},
+\qquad
+e^{-1-\lambda}=
+\left(\sum_{i=1}^n\pi_i e^{\ell_i}\right)^{-1}.
+\]
+This gives the first displayed formula. Substituting the normalized
+pheromone prior cancels its common denominator and gives the second.
+
+It remains to prove global optimality and uniqueness, including boundary
+points. Put
+\[
+Z=\sum_{i=1}^n\pi_i e^{\ell_i},
+\qquad
+r_j=\frac{\pi_je^{\ell_j}}Z.
+\]
+Every $r_j$ is positive and $\sum_jr_j=1$. For arbitrary $p\in\Delta_n$,
+\[
+\begin{aligned}
+-\sum_jp_j\ell_j+\KL(p\|\pi)
+&=\sum_jp_j\left(\log\frac{p_j}{\pi_j}-\ell_j\right)\\
+&=\sum_jp_j\log\frac{p_j}{\pi_je^{\ell_j}}\\
+&=\sum_jp_j\log\frac{p_j}{Zr_j}\\
+&=\sum_jp_j\log\frac{p_j}{r_j}-\log Z\sum_jp_j\\
+&=\KL(p\|r)-\log Z.
+\end{aligned}
+\]
+For completeness, Gibbs' inequality follows here from
+$\log u\le u-1$. Let $S=\{j:p_j>0\}$. Then
+\[
+\begin{aligned}
+\KL(p\|r)
+&=\sum_{j\in S}-p_j\log\frac{r_j}{p_j}\\
+&\ge\sum_{j\in S}-p_j\left(\frac{r_j}{p_j}-1\right)\\
+&=\sum_{j\in S}(p_j-r_j)
+=1-\sum_{j\in S}r_j
+\ge0.
+\end{aligned}
+\]
+Equality in the last inequality requires $S=\{1,\ldots,n\}$ because every
+$r_j>0$. Equality in $\log u\le u-1$ then requires
+$r_j/p_j=1$ for every $j$, so $p=r$. Conversely, $p=r$ plainly gives zero.
+Therefore $\KL(p\|r)\ge0$ with equality if and only if $p=r$, and
+$r=p^*$ is the unique global minimizer.
+\end{proof}
+
+\begin{example}[Two-action calculation]
+Take $\kappa=\log2$, $\varrho_1=0$, and $\varrho_2=1$. Then
+\[
+\pi_1=\frac{1}{1+2}=\frac13,
+\qquad
+\pi_2=\frac{2}{1+2}=\frac23.
+\]
+The pheromone prior therefore favors action $2$. Now take
+$\ell_1=\log3$ and $\ell_2=0$. The unnormalized posterior weights are
+\[
+\pi_1e^{\ell_1}=\frac13\cdot3=1,
+\qquad
+\pi_2e^{\ell_2}=\frac23\cdot1=\frac23.
+\]
+Their sum is $5/3$, so
+\[
+p_1^*=\frac{1}{5/3}=\frac35,
+\qquad
+p_2^*=\frac{2/3}{5/3}=\frac25.
+\]
+The current action score can therefore outweigh, but does not erase, the
+pheromone prior.
+\end{example}
+
+This gives stigmergy a precise EBM interpretation: pheromone is a structured
+prior, possibly learned, not merely a biological analogy.
+
+\chapter{The AHR Energy Functional}
+
+\section{Extended-real formulation}
+
+Let the common raw candidate domain be
+\[
+\mathcal D_{\mathrm{raw}}
+=\{(x,\tau,y):x\in X,\ \tau\in\Om_{\mathrm{raw}}(x),\ y\in Y\}.
+\]
+The energy is
+\[
+E_{\mathrm{AHR}}:\mathcal D_{\mathrm{raw}}
+\to\mathbb R\cup\{+\infty\}.
+\]
+Its canonical decomposition is
+\[
+\boxed{
+E_{\mathrm{AHR}}
+=E_Q+E_W+E_U+E_{\mathrm{align}}+E_T+E_V+E_R+E_B.}
+\]
+
+The role terms have the common type
+\[
+E_Q,E_W,E_U:\mathcal D_{\mathrm{raw}}\to\mathbb R
+\]
+and the following intended meanings:
+\begin{align*}
+E_Q&=\text{governance, verification timing, arbitration, and stopping cost},\\
+E_W&=\text{local construction error, malformedness, and lack of progress},\\
+E_U&=\text{irrelevance, duplication, unsupported exploration, and uncertainty cost}.
+\end{align*}
+
+The remaining terms enforce structure:
+\begin{align*}
+E_{\mathrm{align}}&=\text{QWS compatibility},&
+E_T&=\text{transition legality},\\
+E_V&=\text{verification},&
+E_R&=\text{terminal answer consistency},\\
+E_B&=\text{budget feasibility}.
+\end{align*}
+Whenever a term is naturally defined only on $(x,\tau)$, this monograph uses
+its canonical lift to $\mathcal D_{\mathrm{raw}}$,
+\[
+\overline F(x,\tau,y)=F(x,\tau),
+\]
+and then reuses the symbol $F$ for the lift. In particular this convention
+applies to $E_{\mathrm{align}}$, $E_T$, and $E_B$. Hence every summand in
+$E_{\mathrm{AHR}}$ has exactly the same domain.
+
+\section{Hard indicators}
+
+For
+$\tau=(h_0,a_0,\ldots,a_{L-1},h_L)\in\Om_{\mathrm{raw}}(x)$, define the hard
+transition energy
+\[
+E_T(x,\tau)
+=\sum_{t=0}^{L-1}
+\begin{cases}
+0,&(x,h_t,a_t,h_{t+1})\in T_{\mathrm{dyn}},\\
++\infty,&\text{otherwise}.
+\end{cases}
+\]
+Extend the verifier to the raw domain by rejection:
+\[
+V^{\mathrm{ext}}(x,\tau,y)=
+\begin{cases}
+V(x,\tau,y),&\tau\in\Om(x),\\
+0,&\tau\notin\Om(x).
+\end{cases}
+\]
+This piecewise definition calls $V$ only in the branch on which its original
+dependent-domain requirement is satisfied. The hard verifier, extraction, and
+budget energies are
+\begin{align*}
+E_V(x,\tau,y)&=
+\begin{cases}
+0,&V^{\mathrm{ext}}(x,\tau,y)=1,\\
++\infty,&V^{\mathrm{ext}}(x,\tau,y)=0,
+\end{cases}\\
+E_R(x,\tau,y)&=
+\begin{cases}0,&R(h_L)=y,\\+\infty,&R(h_L)\ne y,\end{cases}\\
+E_B(x,\tau)&=
+\begin{cases}0,&\cost_x(\tau)\le B,\\+\infty,&\cost_x(\tau)>B.\end{cases}
+\end{align*}
+Likewise, $E_{\mathrm{align}}=+\infty$ for a QWS-incompatible step.
+Therefore finite $E_T+E_{\mathrm{align}}$ is equivalent to
+$\tau\in\Om_{\mathrm{AHR}}(x)$.
+
+\section{Hard constraints are not weights}
+
+A large finite penalty can be outweighed by enough soft reward. For example,
+if an invalid candidate has soft energy $0$, a valid candidate has soft energy
+$M+1$, and invalidity incurs only the finite penalty $M$, then the invalid
+candidate has total energy $M<M+1$. Therefore foundational verification uses
+$+\infty$, or equivalently optimizes only over the feasible set. Learned
+confidence may rank candidates before verification but cannot override final
+rejection.
+
+\begin{proposition}[Equivalence of hard-energy and feasible-set inference]
+Let $\mathcal D$ be a candidate domain, let
+$E_{\mathrm{soft}}:\mathcal D\to\mathbb R$ be finite-valued, and let
+$I_1,\ldots,I_m:\mathcal D\to\{0,+\infty\}$ be hard indicators. Define
+\[
+\mathcal F=\{z\in\mathcal D:I_j(z)=0\text{ for every }j\},
+\qquad
+E_{\mathrm{ext}}(z)=E_{\mathrm{soft}}(z)+\sum_{j=1}^m I_j(z).
+\]
+If $\mathcal F\ne\varnothing$, then
+\[
+\argmin_{z\in\mathcal D}E_{\mathrm{ext}}(z)
+=\argmin_{z\in\mathcal F}E_{\mathrm{soft}}(z).
+\]
+\end{proposition}
+
+\begin{proof}
+If $z\in\mathcal F$, every $I_j(z)=0$, so
+$E_{\mathrm{ext}}(z)=E_{\mathrm{soft}}(z)\in\mathbb R$. If
+$z\notin\mathcal F$, at least one indicator equals $+\infty$. Since
+$E_{\mathrm{soft}}(z)$ is finite,
+\[
+E_{\mathrm{ext}}(z)=E_{\mathrm{soft}}(z)+(+\infty)=+\infty.
+\]
+Because $\mathcal F$ is nonempty, some candidate has finite extended energy;
+therefore no point outside $\mathcal F$ can minimize $E_{\mathrm{ext}}$.
+On $\mathcal F$, the two objectives agree pointwise. Thus a point minimizes
+$E_{\mathrm{ext}}$ over $\mathcal D$ if and only if it minimizes
+$E_{\mathrm{soft}}$ over $\mathcal F$, proving equality of the two argmin
+sets.
+\end{proof}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=10mm,y=9mm]
+  \fill[AHRLight,rounded corners=2pt] (0,0) rectangle (12,5.5);
+  \draw[thick,AHRGray,rounded corners=2pt] (0,0) rectangle (12,5.5);
+  \node[anchor=north west,font=\small\bfseries] at (0.25,5.25) {all raw trajectory-answer pairs};
+  \fill[AHRGreen!13] (1.2,0.8) ellipse (4.2 and 1.95);
+  \draw[very thick,AHRGreen] (1.2,0.8) ellipse (4.2 and 1.95);
+  \node[font=\small\bfseries,text=AHRGreen!70!black] at (1.2,2.1) {finite-energy feasible set};
+  \node[draw=AHRBlue,fill=AHRBlue!15,circle,inner sep=2.5pt,label={[font=\scriptsize]below:$z^*$}] (best) at (-0.2,0.35) {};
+  \node[draw=AHRGold,fill=AHRGold!18,circle,inner sep=2.5pt,label={[font=\scriptsize]below:verified}] at (2.0,0.5) {};
+  \node[draw=AHRRed,fill=AHRRed!15,circle,inner sep=2.5pt,label={[font=\scriptsize]below:invalid}] at (7.8,3.7) {};
+  \node[draw=AHRRed,fill=AHRRed!15,circle,inner sep=2.5pt,label={[font=\scriptsize]below:over budget}] at (8.9,1.3) {};
+  \node[note,text width=38mm] at (8.6,4.9) {$E=+\infty$ outside feasibility};
+  \draw[flow,AHRBlue] (1.0,1.65) to[bend left=25] node[note,above]{soft energy ranks feasible candidates} (best);
+\end{tikzpicture}
+\caption{The extended-real EBM view. Hard constraints define feasibility; soft energy ranks only feasible candidates.}
+\label{fig:energy}
+\end{figure}
+
+\chapter{Objective, Search, Repair, and Halting}
+
+\section{Verified bounded candidates}
+
+For $x\in X$, define
+\[
+\cB(x)=\{(\tau,y):\tau\in\Om(x),\ R(h_L)=y,\ V(x,\tau,y)=1,\ \cost_x(\tau)\le B\}.
+\]
+Fix total orders on the finite primitive alphabets and use their induced
+shortlex order $\preceq$ on encoded trajectory--answer pairs: shorter
+encodings precede longer ones, and equal-length encodings are compared
+lexicographically.
+
+\begin{definition}[AHR output rule]
+If $\cB(x)=\varnothing$, set $\AHR_B(x)=\bot$. Otherwise choose
+\[
+(\tau^*,y^*)\in\argmin_{(\tau,y)\in\cB(x)}E_{\mathrm{AHR}}(x,\tau,y)
+\]
+as the $\preceq$-least minimizing pair, and return $\AHR_B(x)=y^*$.
+\end{definition}
+
+The standing finite-base and positive-step-cost assumptions make
+$\cB(x)$ finite. The existence chapter proves that the displayed argmin is
+therefore nonempty whenever $\cB(x)$ is nonempty. In a generalized
+infinite-space model, this definition is used only after one of the stated
+existence conditions has been verified.
+
+This is constrained EBM inference over trajectories. The preceding proposition
+makes precise the equivalence of the hard-energy and feasible-set formulations.
+
+\section{Role-factored search}
+
+At a partial trajectory $\bar\tau$, the Scout proposes branches, the Queen
+filters and allocates, and the Worker realizes local successors. For a
+nonempty finite available-action set $\mathcal A(h)$ and a finite-valued
+learned score $E_\theta:X\times H\times A\to\mathbb R$, a common induced
+distribution, for $a\in\mathcal A(h)$, is
+\[
+p_\theta(a\mid h,x)=\frac{\exp[-E_\theta(x,h,a)]}
+{\sum_{a'\in\mathcal A(h)}\exp[-E_\theta(x,h,a')]},
+\]
+with role factorization or autoregressive conditioning such as
+\[
+p(a^Q,a^W,a^U\mid h,x)
+=p_Q(a^Q\mid h,x)
+p_U(a^U\mid a^Q,h,x)
+p_W(a^W\mid a^Q,a^U,h,x).
+\]
+This factorization is a modeling choice; compatibility remains a hard relation.
+
+\section{Verifier-guided repair}
+
+Given a decoded candidate $y_0\in Y$, a metric $d:Y\times Y\to\mathbb
+R_{\ge0}$, and a hard candidate energy
+$E_{\mathrm{hard}}:X\times Y\to\mathbb R\cup\{+\infty\}$, bounded repair
+searches
+\[
+\mathcal B_r(y_0)=\{y\in Y:d(y,y_0)\le r\},
+\qquad
+y^*\in\argmin_{y\in\mathcal B_r(y_0)}E_{\mathrm{hard}}(x,y).
+\]
+Here $r\ge0$; in the finite base theory the ball is nonempty because it
+contains $y_0$, so the displayed argmin exists. The candidate is emitted only
+when a corresponding trajectory and certificate pass $V$. Repair is
+therefore a bounded extension of search, not a relaxation of correctness.
+
+\section{Adaptive computation}
+
+Fix a finite Queen-cycle horizon $N$. At decision stage
+$n\in\{0,\ldots,N-1\}$, let the Markov state be
+$z_n=(q_n,\varrho_n,s_n)$ and let
+$c_n\in\{\mathrm{halt},\mathrm{continue}\}$. Let $\ell(z)$ be a named task
+loss and let $\mathrm{Cons}(\varrho)$ be a named constraint-consistency
+score. A common reward for a continuing transition
+$z_n\to z_{n+1}$ is
+\[
+r_n^{\mathrm{cont}}
+=\ell(z_n)-\ell(z_{n+1})
++\mu\bigl(\mathrm{Cons}(\varrho_{n+1})
+-\mathrm{Cons}(\varrho_n)\bigr)-\lambda,
+\]
+where $\mu,\lambda\ge0$. The task must separately specify the terminal reward
+for halting and the forced terminal condition at stage $N$. This makes
+halting an optimal-stopping problem related to adaptive recurrent compute and
+temporal abstraction \cite{GravesACT2016,SuttonOptions1999}.
+
+For a specified finite-horizon Markov transition law with integrable rewards,
+define $Q_n^*(z,c)$ as the optimal expected cumulative reward from stage $n$
+onward after taking action $c$ in state $z$ at that stage. Equivalently, one
+may augment $z$ with the remaining horizon and use an unindexed $Q^*$. Because
+the action set has two elements, finite-horizon Bellman optimality gives
+\[
+c_n^*\in
+\argmax_{c\in\{\mathrm{halt},\mathrm{continue}\}}Q_n^*(z_n,c).
+\]
+This statement is exact but tautological; a useful theory must bound approximation error and relate the compute penalty $\lambda$ to expected budget.
+
+\part{Guarantees}
+
+\chapter*{Guarantee Roadmap}
+\addcontentsline{toc}{chapter}{Guarantee Roadmap}
+
+The guarantees are conditional and modular. The following table names the
+extra premise that does the essential work in each result.
+
+\begin{longtable}{>{\bfseries\RaggedRight\arraybackslash}p{0.25\textwidth}
+>{\RaggedRight\arraybackslash}p{0.34\textwidth}
+>{\RaggedRight\arraybackslash}p{0.31\textwidth}}
+\caption{Logical scope of the principal guarantees.}\\
+\toprule
+Result & Essential additional premises & What follows \\
+\midrule
+\endfirsthead
+\toprule
+Result & Essential additional premises & What follows \\
+\midrule
+\endhead
+Finite existence & Finite state/action sets, positive minimum step cost, finite budget & Finitely many bounded candidates and a selectable minimizer \\
+Topological existence & Nonempty compact candidate space, proper lower-semicontinuous energy & At least one minimizer exists \\
+Finite-sublevel existence & Proper energy and finite sublevel sets & At least one global minimizer exists \\
+Domain soundness & AHR emits only verifier passes and the verifier is domain-sound & Every emitted answer is semantically correct \\
+Margin recovery & A verified candidate exists and a positive score gap separates it from failures & Learned-score minimizers are verified on the visited set \\
+Safe pruning & A true lower bound exceeds a finite incumbent energy & No tying or improving completion is removed \\
+Deterministic completeness & Target representation, Scout coverage, safe retention, Worker realizability, fair scheduling, terminal verifier evaluation & The named finite target is reached and its verifier pass is observed \\
+Probabilistic completeness & The same structure plus conditional per-revisit success lower bounds & Target-failure probability tends to zero under staged revisits \\
+Role-work advantage & Fixed branching and cost model with $1<rm<b$ & A conditional asymptotic work ratio tends to zero \\
+\bottomrule
+\end{longtable}
+
+\chapter{Existence and Well-Posedness}
+
+\begin{proposition}[Finite bounded candidate set]
+Assume $H$ and $A$ are finite, every legal transition costs at least $\eps>0$, trajectory cost is additive, and $B<\infty$. Then $\Om_B(x)$ and $\cB(x)$ are finite.
+\end{proposition}
+
+\begin{proof}
+For a trajectory with $L$ transitions, put
+\[
+c_t=\operatorname{stepCost}(x,h_t,a_t,h_{t+1})
+\qquad(0\le t<L).
+\]
+Its additive cost is $\sum_{t=0}^{L-1}c_t$. Since each $c_t\ge\eps$,
+\[
+B\ge\cost_x(\tau)=\sum_{t=0}^{L-1}c_t
+\ge\sum_{t=0}^{L-1}\eps=L\eps.
+\]
+Hence $L\le B/\eps$, and because $L$ is an integer,
+$L\le L_{\max}:=\lfloor B/\eps\rfloor$. For fixed $L$, there are at most
+\[
+|H|^{L+1}|A|^L
+\]
+alternating state-action strings $(h_0,a_0,\ldots,a_{L-1},h_L)$.
+Consequently
+\[
+|\Om_B(x)|
+\le\sum_{L=0}^{L_{\max}}|H|^{L+1}|A|^L<\infty.
+\]
+Legal-initial-state and transition restrictions can only reduce this count.
+Finally, $\cB(x)$ is a subset of $\Om_B(x)\times Y$ whose answer is fixed by
+$y=R(h_L)$. Thus each trajectory contributes at most one answer and
+$|\cB(x)|\le|\Om_B(x)|<\infty$.
+\end{proof}
+
+\begin{corollary}[Finite argmin existence]
+If $\cB(x)$ is nonempty under the preceding assumptions, then the AHR argmin is nonempty and deterministic tie-breaking makes $\AHR_B(x)$ single-valued.
+\end{corollary}
+
+\begin{proof}
+Write $\cB(x)=\{z_1,\ldots,z_N\}$ with $N\ge1$. The image
+\[
+\{E_{\mathrm{AHR}}(x,z_i):1\le i\le N\}
+\subseteq\mathbb R
+\]
+is finite and nonempty: membership in $\cB(x)$ makes every hard term zero,
+while $E_Q,E_W,E_U$ are finite-valued by definition. A finite nonempty set of
+real numbers has a least value. Hence
+\[
+\argmin_{z\in\cB(x)}E_{\mathrm{AHR}}(x,z)\ne\varnothing.
+\]
+A fixed total order on the encoded finite set has a unique least element in
+this nonempty argmin set. The tie-breaking operator selects that element, so
+the returned answer is single-valued.
+\end{proof}
+
+\begin{theorem}[Topological existence]
+Let $\cB(x)$ be a nonempty compact metric space. If
+$E_{\mathrm{AHR}}(x,\cdot):\cB(x)\to\mathbb R\cup\{+\infty\}$ is proper
+(finite at one or more points) and lower semicontinuous, then it attains its
+minimum.
+\end{theorem}
+
+\begin{proof}
+Abbreviate $\cB(x)$ by $K$ and the energy by $E$. Properness supplies
+$z_0\in K$ with $E(z_0)<+\infty$, and $E$ never takes the value $-\infty$.
+Let
+\[
+m=\inf_{z\in K}E(z)\le E(z_0)<+\infty.
+\]
+First, $m>-\infty$. Otherwise, for every integer $n\ge1$ there would be
+$z_n\in K$ with $E(z_n)\le-n$. Compactness of the metric space gives a
+convergent subsequence $z_{n_k}\to z^*\in K$. Lower semicontinuity would imply
+\[
+E(z^*)\le\liminf_{k\to\infty}E(z_{n_k})=-\infty,
+\]
+because the strictly increasing subsequence indices satisfy
+$n_k\to\infty$ and hence
+$E(z_{n_k})\le-n_k\to-\infty$.
+The displayed inequality then forces $E(z^*)=-\infty$ in the extended order,
+but $-\infty$ is not in the codomain $\mathbb R\cup\{+\infty\}$. Equivalently,
+no permitted value of $E(z^*)$ can be less than or equal to $-\infty$. This is
+a contradiction.
+
+Thus $m\in\mathbb R$. By the definition of infimum, for every $n\ge1$ choose
+$z_n\in K$ satisfying
+\[
+m\le E(z_n)<m+\frac1n.
+\]
+Compactness again yields a subsequence $z_{n_k}\to\widehat z\in K$.
+The bounds on the minimizing sequence imply
+\[
+m\le\liminf_{k\to\infty}E(z_{n_k})
+\le\limsup_{k\to\infty}E(z_{n_k})
+\le\lim_{k\to\infty}\left(m+\frac1{n_k}\right)=m.
+\]
+Thus both the limit inferior and limit superior equal $m$. Lower
+semicontinuity now gives
+\[
+E(\widehat z)
+\le\liminf_{k\to\infty}E(z_{n_k})
+=m.
+\]
+Since $m$ is a lower bound, also $m\le E(\widehat z)$. Therefore
+$E(\widehat z)=m$, so $\widehat z$ is a minimizer.
+\end{proof}
+
+\begin{proposition}[Finite-sublevel existence]
+Let $\mathcal D$ be any set and let
+$E:\mathcal D\to\mathbb R\cup\{+\infty\}$ be proper. If every finite
+sublevel set
+\[
+\{z\in\mathcal D:E(z)\le c\}
+\]
+is finite for every $c\in\mathbb R$, then $E$ attains its minimum on
+$\mathcal D$.
+\end{proposition}
+
+\begin{proof}
+Properness gives $z_0\in\mathcal D$ with $c_0:=E(z_0)\in\mathbb R$. The
+sublevel set
+\[
+S_0=\{z\in\mathcal D:E(z)\le c_0\}
+\]
+is nonempty because it contains $z_0$, and it is finite by assumption. Hence
+there is $z^*\in S_0$ whose energy is least among the finitely many energies
+on $S_0$. If $z\in S_0$, then $E(z^*)\le E(z)$. If
+$z\notin S_0$, then $E(z)>c_0\ge E(z^*)$. Thus
+$E(z^*)\le E(z)$ for every $z\in\mathcal D$, so $z^*$ is a global minimizer.
+\end{proof}
+
+\chapter{Soundness and Abstention}
+
+\begin{proposition}[Verifier-relative soundness]
+The AHR output rule is sound relative to $V$.
+\end{proposition}
+
+\begin{proof}
+Fix $x\in X$ and suppose $\AHR_B(x)=y\in Y$. The output rule returns an
+element of $Y$ only in the nonempty case, so $\cB(x)\ne\varnothing$ and there
+is a selected pair $(\tau^*,y^*)\in\cB(x)$ with $y=y^*$. By the defining
+membership conditions of $\cB(x)$,
+\[
+V(x,\tau^*,y^*)=1.
+\]
+Substituting $y=y^*$ gives $V(x,\tau^*,y)=1$, which is verifier-relative
+soundness.
+\end{proof}
+
+\begin{theorem}[Domain soundness transfer]
+If $V$ is sound with respect to $\Sol$, then $\AHR_B$ is domain-sound.
+\end{theorem}
+
+\begin{proof}
+Fix $x\in X$ and $y\in Y$ and assume $\AHR_B(x)=y$. Verifier-relative
+soundness supplies a trajectory $\tau$ such that $V(x,\tau,y)=1$. The assumed
+domain soundness of $V$ is the implication
+\[
+\forall x'\in X,\ \forall\tau'\in\Om(x'),\ \forall y'\in Y,\qquad
+V(x',\tau',y')=1\Longrightarrow(x',y')\in\Sol.
+\]
+Instantiate it with $(x',\tau',y')=(x,\tau,y)$ to obtain
+$(x,y)\in\Sol$.
+\end{proof}
+
+\begin{proposition}[Abstention safety]
+If $\cB(x)=\varnothing$, AHR emits no element of $Y$. Therefore lack of a verified bounded candidate cannot produce an unverified answer.
+\end{proposition}
+
+\begin{proof}
+If $\cB(x)=\varnothing$, the second branch of the output definition applies
+and gives $\AHR_B(x)=\bot$. By construction $\bot\notin Y$. Hence there is no
+$y\in Y$ satisfying $\AHR_B(x)=y$, so in particular no unverified element of
+$Y$ is emitted.
+\end{proof}
+
+Abstention safety does not imply calibrated abstention. A system may abstain too often because the verifier is incomplete, the search policy is weak, or the representation omits valid solutions.
+
+\chapter{Alignment, Margins, and Robustness}
+
+\begin{theorem}[Alignment coherence]
+Let $\tau=(h_0,a_0,\ldots,a_{L-1},h_L)$ with
+$h_t=(q_t,w_t,u_t,s_t)$. If
+$E_{\mathrm{align}}(x,\tau)=0$, then
+\[
+(q_t,w_t,u_t,s_t,a_t)\in\AQWS
+\qquad\text{for every }t\in\{0,\ldots,L-1\}.
+\]
+\end{theorem}
+
+\begin{proof}
+Write $\tau=(h_0,a_0,\ldots,h_L)$. Every summand
+$\ell_{\mathrm{align}}(h_t,a_t)$ belongs to $\{0,+\infty\}$. If some step
+were outside $\AQWS$, its summand would be $+\infty$, and the finite sum would
+equal $+\infty$, not $0$. Therefore every summand is $0$. By the definition
+of the local loss,
+$(q_t,w_t,u_t,s_t,a_t)\in\AQWS$ for every
+$t\in\{0,\ldots,L-1\}$.
+\end{proof}
+
+\section{Two margin statements}
+
+Fix a problem instance $x$. Let $\mathcal D$ be a nonempty finite set of
+well-typed pairs $z=(\tau,y)$ with $\tau\in\Om(x)$ and $y\in Y$. Abbreviate
+$V_x(z)=V(x,\tau,y)$, and let
+$E_x:\mathcal D\to\mathbb R$ be the finite-valued score used in learned
+ranking. Define
+\[
+\mathcal D^+=\{z\in\mathcal D:V_x(z)=1\},
+\qquad
+\mathcal D^-=\{z\in\mathcal D:V_x(z)=0\}.
+\]
+Here and below $\inf\varnothing:=+\infty$.
+
+\begin{theorem}[Strong energy-margin recovery]
+If $\mathcal D^+\ne\varnothing$ and
+\[
+\sup_{z^+\in\mathcal D^+}E_x(z^+)+\gamma
+\le\inf_{z^-\in\mathcal D^-}E_x(z^-)
+\]
+for some $\gamma>0$, then every verified candidate has lower energy than
+every invalid candidate; hence every minimizer is verified.
+\end{theorem}
+
+\begin{proof}
+If $\mathcal D^-=\varnothing$, every candidate is verified and both
+conclusions are immediate. Assume henceforth that
+$\mathcal D^-\ne\varnothing$.
+Choose arbitrary $z^+\in\mathcal D^+$ and
+$z^-\in\mathcal D^-$. By the definitions of supremum and infimum,
+\[
+E_x(z^+)
+\le\sup_{\widetilde z^+\in\mathcal D^+}E_x(\widetilde z^+)
+\]
+and
+\[
+\inf_{\widetilde z^-\in\mathcal D^-}E_x(\widetilde z^-)
+\le E_x(z^-).
+\]
+Combining these inequalities with the assumed margin gives
+\[
+E_x(z^+)+\gamma
+\le\sup_{\widetilde z^+\in\mathcal D^+}E_x(\widetilde z^+)+\gamma
+\le\inf_{\widetilde z^-\in\mathcal D^-}E_x(\widetilde z^-)
+\le E_x(z^-).
+\]
+Since $\gamma>0$, $E_x(z^+)<E_x(z^-)$. Thus no invalid candidate can be a
+global minimizer because $\mathcal D^+$ is nonempty. A global minimizer
+exists because $\mathcal D$ is finite and nonempty and $E_x$ is real-valued.
+Therefore every global minimizer is verified.
+\end{proof}
+
+\begin{theorem}[Weak energy-margin recovery]
+If $\mathcal D^+\ne\varnothing$ and, for some $\gamma>0$,
+\[
+\min_{z^+\in\mathcal D^+}E_x(z^+)+\gamma
+\le\inf_{z^-\in\mathcal D^-}E_x(z^-),
+\]
+then every global minimizer of $E_x$ on $\mathcal D$ is verified.
+\end{theorem}
+
+\begin{proof}
+If $\mathcal D^-=\varnothing$, every candidate is verified and the conclusion
+is immediate. Assume henceforth that $\mathcal D^-\ne\varnothing$.
+Because $\mathcal D^+$ is finite and nonempty, choose
+$z_{\min}^+\in\mathcal D^+$ satisfying
+\[
+E_x(z_{\min}^+)=\min_{z^+\in\mathcal D^+}E_x(z^+).
+\]
+Let $z^*$ be any global minimizer on the nonempty finite set $\mathcal D$.
+Suppose for contradiction that $z^*\in\mathcal D^-$. Then
+\[
+\begin{aligned}
+E_x(z^*)
+&\ge\inf_{z^-\in\mathcal D^-}E_x(z^-)\\
+&\ge E_x(z_{\min}^+)+\gamma\\
+&>E_x(z_{\min}^+),
+\end{aligned}
+\]
+where the final inequality uses $\gamma>0$. This contradicts global
+minimality because $z_{\min}^+\in\mathcal D$. Hence $z^*\in\mathcal D^+$.
+Since $z^*$ was arbitrary, every global minimizer is verified.
+\end{proof}
+
+The strong condition separates \emph{every} verified candidate from every
+invalid one. The weak condition separates only the best verified candidate,
+which is already sufficient to exclude invalid global minimizers.
+
+\section{Perturbation stability}
+
+\begin{theorem}[Stable minimizer under energy perturbation]
+Let $\mathcal F$ be a nonempty finite feasible set, let
+$E,\widehat E:\mathcal F\to\mathbb R$, and let $z^*$ be the unique minimizer
+of $E$ on $\mathcal F$. Suppose, for some $\gamma>0$,
+\[
+E(z)\ge E(z^*)+\gamma
+\qquad\text{for every }z\in\mathcal F\setminus\{z^*\}.
+\]
+If
+\[
+\sup_{z\in\mathcal F}|\widehat E(z)-E(z)|<\frac{\gamma}{2},
+\]
+then $z^*$ is also the unique minimizer of $\widehat E$ on $\mathcal F$.
+\end{theorem}
+
+\begin{proof}
+For $z\in\mathcal F\setminus\{z^*\}$,
+\[
+\begin{aligned}
+\widehat E(z)
+&>E(z)-\frac\gamma2\\
+&\ge E(z^*)+\gamma-\frac\gamma2\\
+&=E(z^*)+\frac\gamma2\\
+&>\widehat E(z^*).
+\end{aligned}
+\]
+The first and last strict inequalities use
+$|\widehat E(\cdot)-E(\cdot)|<\gamma/2$, and the middle inequality uses the
+assumed gap. Thus every $z\ne z^*$ has strictly larger perturbed energy, so
+$z^*$ remains the unique minimizer.
+\end{proof}
+
+This theorem gives a precise target for learned energies: approximation error must be smaller than half the decision gap on the candidate set of interest.
+
+\chapter{Safe Pruning and Completeness}
+
+\section{Prefix notation}
+
+For trajectories $\bar\tau$ and $\tau$, write $\bar\tau\preceq\tau$ when $\bar\tau$ is an exact prefix of $\tau$. Define
+\[
+\Comp_x(\bar\tau)=
+\{(\tau,y):\bar\tau\preceq\tau,\ \tau\in\Om(x),\ y\in Y\}.
+\]
+Adopt the extended-real convention $\inf\varnothing=+\infty$.
+A lower bound $\underline E(x,\bar\tau)$ is admissible when
+\[
+\underline E(x,\bar\tau)
+\le\inf_{(\tau,y)\in\Comp_x(\bar\tau)}E_{\mathrm{AHR}}(x,\tau,y).
+\]
+
+\begin{theorem}[Safe Queen pruning]
+Let $E_{\mathrm{best}}\in\mathbb R$ be the energy of a verified feasible
+incumbent. If
+\[
+\underline E(x,\bar\tau)>E_{\mathrm{best}},
+\]
+then pruning $\bar\tau$ cannot remove a completion that improves or ties the incumbent.
+\end{theorem}
+
+\begin{proof}
+If $\Comp_x(\bar\tau)=\varnothing$, pruning removes no completion and is
+trivially safe. Otherwise, choose arbitrary
+$(\tau,y)\in\Comp_x(\bar\tau)$. Admissibility gives
+\[
+\underline E(x,\bar\tau)
+\le\inf_{(\tau',y')\in\Comp_x(\bar\tau)}
+E_{\mathrm{AHR}}(x,\tau',y')
+\le E_{\mathrm{AHR}}(x,\tau,y).
+\]
+Together with the pruning test,
+\[
+E_{\mathrm{best}}
+<\underline E(x,\bar\tau)
+\le E_{\mathrm{AHR}}(x,\tau,y).
+\]
+Thus every completion is strictly worse than the incumbent. Since the
+completion was arbitrary, no improving or tying completion is removed.
+\end{proof}
+
+\section{Deterministic coverage}
+
+For a target $\tau^*=(h_0,a_0,\ldots,h_L)$, let
+\[
+\Pref(\tau^*)=\{(h_0),(h_0,a_0,h_1),\ldots,\tau^*\}.
+\]
+
+\begin{theorem}[Coverage completeness]
+Suppose $(\tau^*,y^*)\in\cB(x)$ and:
+\begin{enumerate}
+  \item at every proper prefix of $\tau^*$, the Scout eventually proposes every branch needed for the next target action;
+  \item the Queen never prunes a prefix of $\tau^*$;
+  \item the Worker can realize the required next local construction whenever it is authorized and supplied;
+  \item the scheduler eventually selects and authorizes every retained target extension;
+  \item the verifier is evaluated when the reached terminal target is
+  considered for emission;
+  \item $|\tau^*|<\infty$.
+\end{enumerate}
+Then exhaustive AHR search eventually reaches $\tau^*$, evaluates
+$V(x,\tau^*,y^*)=1$, and finds a verified answer.
+\end{theorem}
+
+\begin{proof}
+Write
+\[
+\tau^*=(h_0,a_0,h_1,\ldots,a_{L-1},h_L)
+\]
+with finite $L$. For $i\in\{0,\ldots,L\}$, let
+$P_i=(h_0,a_0,\ldots,h_i)$ be the prefix ending at $h_i$. We prove by
+induction on $i$ that the search eventually reaches $P_i$.
+
+The base case $P_0=(h_0)$ is reached at initialization because
+$\tau^*\in\Om(x)$ implies $h_0\in I(x)$. Assume $P_i$ is reached for some
+$i<L$. By assumption 1, a Scout eventually proposes the branch data needed
+for target action $a_i$. By assumption 2, the Queen retains $P_i$ and its
+target extension. By assumption 4, the scheduler eventually selects and
+authorizes that retained extension. Assumption 3 then lets the Worker realize
+the required successor $h_{i+1}$, so the search reaches $P_{i+1}$.
+
+Finite induction yields $P_L=\tau^*$. Since
+$(\tau^*,y^*)\in\cB(x)$, one has $V(x,\tau^*,y^*)=1$. Assumption 5 invokes
+that verifier on the reached target, so the search finds a verified answer.
+\end{proof}
+
+\section{Stochastic coverage}
+
+\begin{theorem}[Probabilistic completeness]
+Fix $(\tau^*,y^*)\in\cB(x)$, where $\tau^*$ has $L\ge0$ required
+extensions, and suppose a staged fair scheduler works through them in order.
+Conditional on extensions $1,\ldots,i-1$ having been realized, the scheduler
+gives the active target prefix up to $n\ge1$ revisits, stopping that stage
+early if extension $i$ is proposed. On its $j$th revisit, conditional on the
+complete preceding history and on failures at its preceding revisits, the
+Scout proposes extension $i$ with probability at least $p_i\in(0,1]$. Assume
+safe Queen retention, that the Worker realizes every proposed target
+extension, and that the verifier is evaluated on a reached terminal target.
+Then
+\[
+\Pr[\text{target not reached}]\le\sum_{i=1}^L(1-p_i)^n,
+\]
+which tends to zero as $n\to\infty$. On the complementary event, evaluation
+returns $V(x,\tau^*,y^*)=1$.
+\end{theorem}
+
+\begin{proof}
+If $L=0$, the target is its initial state, so it is reached at initialization;
+the displayed sum is empty and equals zero. Verification then returns one
+because $(\tau^*,y^*)\in\cB(x)$. Assume henceforth that $L\ge1$.
+
+Fix extension $i$. Let $G_i$ be the event that extensions
+$1,\ldots,i-1$ have been realized, so stage $i$ becomes active. Let
+$F_{i,j}$ denote failure to propose extension $i$ on revisit $j$. Off
+histories on which that revisit is not reached, set $F_{i,j}$ to false; it is
+used below only together with the event that all earlier revisits failed.
+Define
+\[
+A_{i,0}=G_i,
+\qquad
+A_{i,j}=G_i\cap\bigcap_{r=1}^jF_{i,r}
+\quad (1\le j\le n).
+\]
+The event $A_{i,j-1}$ is determined by the complete history
+$\mathcal H_{i,j-1}$ before revisit $j$. On that event the conditional
+failure bound is
+\[
+\Pr(F_{i,j}\mid\mathcal H_{i,j-1})\le1-p_i
+\quad\text{almost surely}.
+\]
+Using the tower property for event indicators gives
+\[
+\begin{aligned}
+\Pr(A_{i,j})
+&=\mathbb E\!\left[
+\one_{A_{i,j-1}}\one_{F_{i,j}}\right]\\
+&=\mathbb E\!\left[
+\one_{A_{i,j-1}}
+\mathbb E[\one_{F_{i,j}}\mid\mathcal H_{i,j-1}]
+\right]\\
+&=\mathbb E\!\left[
+\one_{A_{i,j-1}}
+\Pr(F_{i,j}\mid\mathcal H_{i,j-1})
+\right]\\
+&\le(1-p_i)\Pr(A_{i,j-1}).
+\end{aligned}
+\]
+Iterating this inequality from $j=1$ to $j=n$ yields
+\[
+\Pr(A_{i,n})
+\le(1-p_i)^n\Pr(G_i)
+\le(1-p_i)^n.
+\]
+No independence assumption has been made.
+
+Under safe Queen retention, fair staging, and Worker realizability, failure to
+reach the full target means that some stage became active and then failed on
+all $n$ allocated revisits. Thus
+\[
+\{\text{target not reached}\}
+\subseteq\bigcup_{i=1}^L A_{i,n}.
+\]
+The union bound now gives
+\[
+\Pr[\text{target not reached}]
+\le\sum_{i=1}^L
+\Pr(A_{i,n})
+\le\sum_{i=1}^L(1-p_i)^n.
+\]
+For each $i$, $0\le1-p_i<1$, so $(1-p_i)^n\to0$. A finite sum of these terms
+also tends to zero.
+\end{proof}
+
+This theorem makes explicit what ``the Scout explores enough'' must mean. Completeness is conditional on representation, coverage, safe pruning, local realizability, and fair scheduling.
+
+\chapter{Complexity, Training Depth, and Compute}
+
+\section{Conditional branching advantage}
+
+Fix integer branching and role bounds
+$b\ge2$, $k\ge0$, $r\ge0$, and $m\ge0$, independent of the integer solution
+depth $D\ge1$. Measure both procedures in one fixed abstract operation unit,
+and suppose flat search has branching factor $b$. Normalize the cost of
+expanding one flat internal node to one such unit. Counting internal nodes
+at depths $0,\ldots,D-1$ gives
+\[
+C_{\mathrm{flat}}^{\mathrm{node}}(D)
+=\sum_{d=0}^{D-1}b^d=\frac{b^D-1}{b-1}.
+\]
+For AHR, express each role operation in the same unit. Assume each Scout
+proposes at most $k$ branches per retained node, the Queen retains at most
+$r$, and each retained branch yields at most $m$ Worker successors. Suppose
+the total Scout, Queen, Worker, and fixed bookkeeping work at one retained
+node is at most
+\[
+c_{\mathrm{role}}
+=c_0+c_Uk+c_Qk+c_Wrm,
+\]
+where the nonnegative constants $c_0,c_U,c_Q,c_W$ do not depend on $D$.
+
+\begin{theorem}[Hierarchical role-work bound]
+The AHR role-operation work satisfies
+\[
+C_{\mathrm{AHR}}^{\mathrm{op}}(D)
+\le c_{\mathrm{role}}\sum_{d=0}^{D-1}(rm)^d.
+\]
+If $1<rm<b$, then
+\[
+\frac{C_{\mathrm{AHR}}^{\mathrm{op}}(D)}
+{C_{\mathrm{flat}}^{\mathrm{node}}(D)}
+=O\!\left(\left(\frac{rm}{b}\right)^D\right)\to0.
+\]
+\end{theorem}
+
+\begin{proof}
+At depth $0$, at most one node is retained. If at most $r$ Scout branches
+per retained node survive Queen filtering and each retained branch produces
+at most $m$ Worker successors, then one retained node has at most $rm$
+retained children. Induction on depth therefore gives at most $(rm)^d$
+retained nodes at depth $d$. Expanding each such node costs at most
+$c_{\mathrm{role}}$ role-operation units, so
+\[
+C_{\mathrm{AHR}}^{\mathrm{op}}(D)
+\le\sum_{d=0}^{D-1}c_{\mathrm{role}}(rm)^d
+=c_{\mathrm{role}}\sum_{d=0}^{D-1}(rm)^d.
+\]
+Put $q=rm$. If $1<q<b$, evaluation of both geometric sums yields
+\[
+\frac{C_{\mathrm{AHR}}^{\mathrm{op}}(D)}
+{C_{\mathrm{flat}}^{\mathrm{node}}(D)}
+\le
+c_{\mathrm{role}}
+\frac{q^D-1}{q-1}
+\frac{b-1}{b^D-1}.
+\]
+For $D\ge1$,
+\[
+q^D-1\le q^D
+\quad\text{and}\quad
+b^D-1=b^D(1-b^{-D})\ge b^D(1-b^{-1}).
+\]
+Consequently
+\[
+\frac{C_{\mathrm{AHR}}^{\mathrm{op}}(D)}
+{C_{\mathrm{flat}}^{\mathrm{node}}(D)}
+\le
+\frac{c_{\mathrm{role}}(b-1)}
+{(q-1)(1-b^{-1})}
+\left(\frac qb\right)^D.
+\]
+The prefactor is independent of $D$, proving the stated big-$O$ bound.
+Because $0<q/b<1$, the final power tends to zero.
+\end{proof}
+
+If $rm=0$, no retained node has a retained child. Hence only the root can be
+expanded and
+\[
+C_{\mathrm{AHR}}^{\mathrm{op}}(D)\le c_{\mathrm{role}},
+\qquad
+\frac{C_{\mathrm{AHR}}^{\mathrm{op}}(D)}
+{C_{\mathrm{flat}}^{\mathrm{node}}(D)}
+\le c_{\mathrm{role}}\frac{b-1}{b^D-1}
+\le c_{\mathrm{role}}b\,b^{-D}\to0.
+\]
+If $rm=1$, the same calculation gives
+$C_{\mathrm{AHR}}^{\mathrm{op}}(D)\le c_{\mathrm{role}}D$. Using
+$b^D-1\ge b^D(1-b^{-1})$ gives
+\[
+\frac{C_{\mathrm{AHR}}^{\mathrm{op}}(D)}
+{C_{\mathrm{flat}}^{\mathrm{node}}(D)}
+\le c_{\mathrm{role}}D\frac{b-1}{b^D-1}
+\le c_{\mathrm{role}}bD\,b^{-D}.
+\]
+For $a_D=Db^{-D}$,
+\[
+\frac{a_{D+1}}{a_D}=\frac{D+1}{bD}
+=\frac{1+1/D}{b}\longrightarrow\frac1b<1,
+\]
+so the ratio test gives $Db^{-D}\to0$. This is a cost result, not a
+correctness result.
+Completeness additionally requires that Queen pruning preserve at least one
+valid path. It is also a conditional asymptotic comparison under the displayed
+cost model, not a measured wall-clock speedup. In particular, the constants,
+memory traffic, batching behavior, and the cost of obtaining a smaller
+effective branching factor must be measured in an implementation.
+When $rm\ge b$, this result asserts no asymptotic advantage.
+
+\section{Fixed parameters versus inference cost}
+
+Weight sharing can make parameter count independent of $NKT$. It does not make inference time independent of $NKT$. A careful claim is:
+\[
+\text{parameter count}=O(1)\text{ in recurrent depth},
+\qquad
+\text{inference work}=O(NKT\cdot c_{\mathrm{step}}).
+\]
+Calling AHR an ``$O(1)$ reasoner'' without naming the variable is therefore mathematically misleading.
+
+\section{Detached one-step gradients}
+
+Let recurrent state $z_t$ be detached before
+$z_{t+1}=F_\theta(\operatorname{stopgrad}(z_t),x)$, as in the efficient
+training motivation inherited from recurrent reasoning and decoupled-gradient
+methods \cite{WangHRM2025,JaderbergSynthetic2017}.
+
+\begin{proposition}[Local autograd memory]
+Assume each step has a fixed-size transition module, a local loss is
+backpropagated before advancing, and that step's graph is then released. The
+reverse-graph depth and peak activation memory are independent of total
+unrolled depth $T$, up to fixed module/state constants and deliberately
+retained heads.
+\end{proposition}
+
+\begin{proof}
+At step $t$, $\operatorname{stopgrad}(z_t)$ is a leaf with no graph edge to
+steps $0,\ldots,t-1$. The graph created for $F_\theta$ and the local loss
+therefore contains only the fixed computation for step $t$. Immediate
+backpropagation traverses this graph, after which releasing it frees its
+activations before step $t+1$ is constructed. Thus the maximum number of
+simultaneously retained step graphs is one, so both graph depth and peak
+activation storage are bounded by constants determined by one transition,
+one state, and retained heads, not by $T$.
+\end{proof}
+
+The immediate-backward condition is essential. If all $T$ local losses and
+their step graphs are retained for one final backward call, peak storage can
+again be $O(T)$ even though recurrent states are detached.
+
+For the next result, let $z_t\in\mathbb R^d$ and
+$\theta\in\mathbb R^p$. Under the stated row-gradient convention, the relevant
+types are
+\[
+\begin{array}{c|c}
+\text{object}&\text{shape}\\
+\hline
+J_t=\partial F_\theta/\partial z&d\times d\\
+G_t=\partial F_\theta/\partial\theta&d\times p\\
+\nabla_z\mathcal L(z_T)&1\times d\\
+\nabla_\theta\mathcal L&1\times p
+\end{array}
+\]
+so every product in the proposition is dimensionally well typed.
+
+\begin{proposition}[Exact detached-gradient bias bound]
+Let $T\ge1$, let $z_{t+1}=F_\theta(z_t,x)$ for
+$t=0,\ldots,T-1$, let $z_0$ be independent
+of $\theta$, and let the scalar terminal loss be $\mathcal L(z_T)$ with no
+other direct dependence on $\theta$. Assume $F_\theta$ and $\mathcal L$ are
+differentiable at every point used by this trajectory, and define
+\[
+J_t=\frac{\partial F_\theta}{\partial z}(z_t,x),
+\qquad
+G_t=\frac{\partial F_\theta}{\partial\theta}(z_t,x).
+\]
+Using row-gradient convention, the full gradient is
+\[
+\nabla_\theta\mathcal L
+=\sum_{j=0}^{T-1}
+\nabla_z\mathcal L(z_T)
+J_{T-1}J_{T-2}\cdots J_{j+1}G_j,
+\]
+where the product is the identity when $j=T-1$. Detaching at every step and
+backpropagating only the terminal loss retains only the $j=T-1$ term. If
+compatible submultiplicative operator/vector norms and constants
+$0\le L<1$, $G\ge0$, and $C\ge0$ satisfy
+\[
+\|J_t\|\le L,\qquad
+\|G_t\|\le G
+\quad\text{for every }t\in\{0,\ldots,T-1\},
+\qquad
+\|\nabla_z\mathcal L(z_T)\|\le C,
+\]
+then the omitted gradient $\Delta_T$ obeys
+\[
+\|\Delta_T\|
+\le CG\sum_{r=1}^{T-1}L^r
+=CG\,\frac{L(1-L^{T-1})}{1-L}
+\le CG\,\frac L{1-L}.
+\]
+\end{proposition}
+
+\begin{proof}
+Let $D_t=\partial z_t/\partial\theta$. Because $z_0$ is independent of
+$\theta$, $D_0=0$. The chain rule gives
+\[
+D_{t+1}=J_tD_t+G_t.
+\]
+We claim
+\[
+D_T=\sum_{j=0}^{T-1}J_{T-1}J_{T-2}\cdots J_{j+1}G_j.
+\]
+For $T=1$, $D_1=J_0D_0+G_0=G_0$, which is the formula with an empty
+Jacobian product. If it holds at $T$, then
+\[
+\begin{aligned}
+D_{T+1}
+&=J_TD_T+G_T\\
+&=J_T\sum_{j=0}^{T-1}
+J_{T-1}\cdots J_{j+1}G_j+G_T\\
+&=\sum_{j=0}^{T}
+J_TJ_{T-1}\cdots J_{j+1}G_j,
+\end{aligned}
+\]
+where the $j=T$ product is empty. This proves the claim by induction.
+Multiplying by the terminal row gradient yields the displayed full-gradient
+formula.
+
+Under stepwise detachment, $z_{T-1}$ is treated as constant in the final
+transition, so the terminal backward pass yields
+$\nabla_z\mathcal L(z_T)G_{T-1}$. Subtracting this retained term from the full
+gradient gives
+\[
+\Delta_T=\sum_{j=0}^{T-2}
+\nabla_z\mathcal L(z_T)J_{T-1}\cdots J_{j+1}G_j.
+\]
+The triangle inequality and submultiplicativity imply
+\[
+\begin{aligned}
+\|\Delta_T\|
+&\le\sum_{j=0}^{T-2}
+\|\nabla_z\mathcal L(z_T)\|
+\prod_{k=j+1}^{T-1}\|J_k\|\,\|G_j\|\\
+&\le CG\sum_{j=0}^{T-2}L^{T-1-j}.
+\end{aligned}
+\]
+Setting $r=T-1-j$ changes the final sum to
+$\sum_{r=1}^{T-1}L^r$. Its geometric-sum value and the inequality
+$1-L^{T-1}\le1$ give the claimed bound.
+\end{proof}
+
+The bound controls bias when transitions are contractive, but it does not
+make the bias zero. When $L$ is close to one, the factor $L/(1-L)$ can be
+large; when $L\ge1$, this argument provides no depth-uniform guarantee.
+
+\begin{example}[Two transitions without a skipped chain-rule term]
+For $T=2$,
+\[
+D_1=G_0,
+\qquad
+D_2=J_1D_1+G_1=J_1G_0+G_1.
+\]
+Therefore the full terminal-loss gradient is
+\[
+\nabla_\theta\mathcal L
+=\nabla_z\mathcal L(z_2)J_1G_0
++\nabla_z\mathcal L(z_2)G_1.
+\]
+Detaching $z_1$ before the second transition treats $z_1$ as constant and
+retains only the second term. The omitted term is exactly
+$\nabla_z\mathcal L(z_2)J_1G_0$, which is the $T=2$ instance of
+$\Delta_T$.
+\end{example}
+
+\part{Complete and Domain-Specific Instantiations}
+
+\chapter{Finite Modus-Ponens AHR}
+
+\section{Independent semantics}
+
+Let
+\[
+\Phi_{\mathrm{MP}}=\{\mathsf P,\mathsf Q,\mathsf P\to\mathsf Q\},
+\qquad
+\Gamma_0=\{\mathsf P,\mathsf P\to\mathsf Q\},
+\]
+and let $x_0=(\Gamma_0,\mathsf Q)$. A Boolean valuation is a map
+$v:\{\mathsf P,\mathsf Q\}\to\{0,1\}$, extended to implication by
+\[
+v(\varphi\to\psi)=\max\{1-v(\varphi),v(\psi)\}.
+\]
+Write $v\models\Gamma_0$ when $v(\gamma)=1$ for every
+$\gamma\in\Gamma_0$, and write
+\[
+\Gamma_0\models\varphi
+\quad\Longleftrightarrow\quad
+\forall v,\;v\models\Gamma_0\Longrightarrow v(\varphi)=1.
+\]
+The answer space and semantic solution relation are
+\[
+X_{\mathrm{MP}}=\{x_0\},
+\qquad
+Y_{\mathrm{MP}}=\Phi_{\mathrm{MP}},
+\]
+\[
+\Sol_{\mathrm{MP}}
+=\{(x_0,\varphi):\varphi=\mathsf Q
+\text{ and }\Gamma_0\models\varphi\}.
+\]
+This relation is defined by truth under valuations and contains no proof
+checker.
+
+\begin{lemma}[Semantic modus-ponens instance]
+$\Gamma_0\models\mathsf Q$.
+\end{lemma}
+
+\begin{proof}
+Let $v$ be arbitrary and assume $v\models\Gamma_0$. Then
+$v(\mathsf P)=1$ and $v(\mathsf P\to\mathsf Q)=1$. By the definition of
+implication,
+\[
+1=v(\mathsf P\to\mathsf Q)
+=\max\{1-v(\mathsf P),v(\mathsf Q)\}
+=\max\{0,v(\mathsf Q)\}
+=v(\mathsf Q).
+\]
+Thus every valuation satisfying $\Gamma_0$ also satisfies $\mathsf Q$, which
+is exactly $\Gamma_0\models\mathsf Q$.
+\end{proof}
+
+\section{Finite certificates and checker}
+
+A proof line is a triple (formula, rule, citations). Use the six-line universe
+\begin{align*}
+\ell_1&=(\mathsf P,\mathrm{Asm},\varnothing),&
+\ell_2&=(\mathsf P\to\mathsf Q,\mathrm{Asm},\varnothing),\\
+\ell_3&=(\mathsf Q,\mathrm{MP},(1,2)),&
+\ell_4&=(\mathsf Q,\mathrm{Asm},\varnothing),\\
+\ell_5&=(\mathsf Q,\mathrm{MP},\varnothing),&
+\ell_6&=(\mathsf P,\mathrm{AC},(2,3)).
+\end{align*}
+Here $\mathrm{AC}$ denotes the invalid rule \emph{affirm the consequent}. Let
+$\mathcal L_{\mathrm{MP}}=\{\ell_1,\ldots,\ell_6\}$ and
+\[
+\mathcal P_{\mathrm{MP}}
+=\bigcup_{n=0}^{3}\mathcal L_{\mathrm{MP}}^n.
+\]
+For $p=(p_1,\ldots,p_n)\in\mathcal P_{\mathrm{MP}}$ and
+$i\in\{1,\ldots,n\}$, write $\operatorname{form}(p_i)$ for the formula in
+line $i$. Define $\operatorname{LineOK}_{\Gamma_0}(i,p)=1$ recursively if and
+only if exactly one of the following clauses holds:
+\begin{enumerate}
+  \item $p_i=(\varphi,\mathrm{Asm},\varnothing)$ and
+  $\varphi\in\Gamma_0$;
+  \item $p_i=(\varphi,\mathrm{MP},(j,k))$, where
+  $1\le j,k<i$,
+  $\operatorname{LineOK}_{\Gamma_0}(j,p)=
+  \operatorname{LineOK}_{\Gamma_0}(k,p)=1$, and for some
+  $\psi\in\Phi_{\mathrm{MP}}$,
+  \[
+  \operatorname{form}(p_j)=\psi,
+  \qquad
+  \operatorname{form}(p_k)=\psi\to\varphi.
+  \]
+\end{enumerate}
+The recursion is well-founded because every citation index is strictly less
+than $i$. For $i\notin\{1,\ldots,n\}$, define
+$\operatorname{LineOK}_{\Gamma_0}(i,p)=0$. Define
+\[
+\ProofCheck_{\Gamma_0}(p)=1
+\]
+if and only if $1\le n\le3$, every line $i\le n$ is valid, and
+$\operatorname{form}(p_n)=\mathsf Q$. All other inputs receive value zero.
+
+Independently, define $\Gamma_0\vdash\varphi$ to be the least relation on
+$\Phi_{\mathrm{MP}}$ generated by the following two inference rules whenever
+all displayed formulas belong to $\Phi_{\mathrm{MP}}$:
+\[
+\frac{\varphi\in\Gamma_0}{\Gamma_0\vdash\varphi}
+\;(\mathrm{Asm}),
+\qquad
+\frac{\Gamma_0\vdash\psi\qquad
+\Gamma_0\vdash\psi\to\varphi}
+{\Gamma_0\vdash\varphi}
+\;(\mathrm{MP}).
+\]
+
+\begin{lemma}[Checked lines are derivable]
+Let $p\in\mathcal P_{\mathrm{MP}}$ and
+$i\in\{1,\ldots,|p|\}$. If
+\[
+\operatorname{LineOK}_{\Gamma_0}(i,p)=1,
+\]
+then
+\[
+\Gamma_0\vdash\operatorname{form}(p_i).
+\]
+\end{lemma}
+
+\begin{proof}
+We use strong induction on $i$. For $i=1$, the MP clause is impossible
+because it would require integers satisfying $1\le j,k<1$.
+Therefore a valid first line is an assumption
+$(\varphi,\mathrm{Asm},\varnothing)$ with $\varphi\in\Gamma_0$, and the
+assumption rule gives $\Gamma_0\vdash\varphi$.
+
+Now fix $i>1$ and assume the result for every valid line with index less than
+$i$. If line $i$ is valid by the assumption clause, the same assumption rule
+gives the conclusion. Otherwise it is valid by the MP clause. Then there are
+$j,k<i$ and $\psi$ such that the cited lines are valid,
+\[
+\operatorname{form}(p_j)=\psi,
+\qquad
+\operatorname{form}(p_k)=\psi\to\operatorname{form}(p_i).
+\]
+The strong induction hypothesis yields
+\[
+\Gamma_0\vdash\psi,
+\qquad
+\Gamma_0\vdash\psi\to\operatorname{form}(p_i).
+\]
+Applying the MP inference rule gives
+$\Gamma_0\vdash\operatorname{form}(p_i)$. These are the only checker clauses,
+so the induction is complete.
+\end{proof}
+
+\begin{theorem}[Semantic soundness of the toy calculus]
+For every $\varphi\in\Phi_{\mathrm{MP}}$,
+\[
+\Gamma_0\vdash\varphi
+\quad\Longrightarrow\quad
+\Gamma_0\models\varphi.
+\]
+\end{theorem}
+
+\begin{proof}
+Induct on the finite derivation of $\Gamma_0\vdash\varphi$.
+
+If the last rule is $\mathrm{Asm}$, then $\varphi\in\Gamma_0$. For any
+$v\models\Gamma_0$, the definition of satisfaction gives $v(\varphi)=1$.
+Therefore $\Gamma_0\models\varphi$.
+
+If the last rule is $\mathrm{MP}$, there is a formula $\psi$ with derivations
+of $\Gamma_0\vdash\psi$ and $\Gamma_0\vdash\psi\to\varphi$. The induction
+hypotheses give
+\[
+\Gamma_0\models\psi,
+\qquad
+\Gamma_0\models\psi\to\varphi.
+\]
+Let $v\models\Gamma_0$ be arbitrary. Then $v(\psi)=1$ and
+$v(\psi\to\varphi)=1$. Expanding implication,
+\[
+1=v(\psi\to\varphi)
+=\max\{1-v(\psi),v(\varphi)\}
+=\max\{0,v(\varphi)\}
+=v(\varphi).
+\]
+Hence every model of $\Gamma_0$ satisfies $\varphi$, so
+$\Gamma_0\models\varphi$.
+\end{proof}
+
+\begin{corollary}[Checker soundness]
+If $\ProofCheck_{\Gamma_0}(p)=1$, then
+$\Gamma_0\vdash\mathsf Q$ and $\Gamma_0\models\mathsf Q$.
+\end{corollary}
+
+\begin{proof}
+Checker acceptance gives a nonempty $p=(p_1,\ldots,p_n)$ whose final line is
+valid and has formula $\mathsf Q$. The checked-line lemma gives
+$\Gamma_0\vdash\mathsf Q$, and semantic soundness of the calculus then gives
+$\Gamma_0\models\mathsf Q$.
+\end{proof}
+
+\section{Exact finite Queen, Worker, and Scout spaces}
+
+Use the branch universe
+\[
+\mathcal K_{\mathrm{MP}}
+=\{k_P,k_{P\to Q},k_{\mathrm{MP}},
+k_Q^{\mathrm{asm}},k_{\mathrm{AC}},k_{\mathrm{irr}}\},
+\]
+with
+\[
+\mathcal K_{\mathrm{rel}}=\{k_P,k_{P\to Q},k_{\mathrm{MP}}\},
+\qquad
+\mathcal K_{\mathrm{bad}}
+=\mathcal K_{\mathrm{MP}}\setminus\mathcal K_{\mathrm{rel}}.
+\]
+Define finite coordinate sets
+\begin{align*}
+\mathcal B_Q&=\{0,1,\ldots,6\},&
+\mathcal V_Q&=\{\mathrm{mustVerify}\},\\
+\mathcal D_Q&=\{\mathrm{undecided},\mathrm{accept},
+\mathrm{reject},\mathrm{abstain}\},&
+\mathcal G_{\mathrm{MP}}&=\{
+\mathrm{derive}(\mathsf P),
+\mathrm{derive}(\mathsf P\to\mathsf Q),
+\mathrm{derive}(\mathsf Q)\},\\
+\mathcal F_W&=\{\mathrm{none},\mathrm{localPass},\mathrm{localFail}\},&
+\mathcal E_K&=\{0,1,2,+\infty\}.
+\end{align*}
+The role and task-state spaces are exactly
+\begin{align*}
+Q_{\mathrm{MP}}
+&=\mathcal B_Q\times\mathcal V_Q\times\mathcal D_Q
+\times2^{\mathcal K_{\mathrm{MP}}},\\
+W_{\mathrm{MP}}
+&=(\mathcal G_{\mathrm{MP}}\cup\{\mathrm{none}\})
+\times\mathcal P_{\mathrm{MP}}\times\mathcal F_W,\\
+U_{\mathrm{MP}}
+&=2^{\mathcal K_{\mathrm{MP}}}
+\times2^{\mathcal K_{\mathrm{MP}}}
+\times\mathcal E_K^{\mathcal K_{\mathrm{MP}}},\\
+S_{\mathrm{MP}}
+&=\{\Gamma_0\}\times\{\mathsf Q\}
+\times\{\mathrm{unchecked},\mathrm{pass},\mathrm{fail}\}
+\times\{\mathrm{running},\mathrm{stopped}\},\\
+H_{\mathrm{MP}}&=Q_{\mathrm{MP}}\times W_{\mathrm{MP}}
+\times U_{\mathrm{MP}}\times S_{\mathrm{MP}}.
+\end{align*}
+A Queen state is $q=(b,\nu,d,K_{\mathrm{pruned}})$, a Worker state is
+$w=(g,p,f)$, and a Scout state is $u=(F_U,B_U,e_U)$.
+
+These are compressed coordinates, not exceptions to the canonical schemas.
+To display the exact identification, fix singleton symbols
+$\sigma_0,z_0,r_0,d_0,\pi_0,p_0,n_0,\xi_0$. The corresponding uncompressed
+spaces are
+\begin{align*}
+Q_{\mathrm{MP}}^{\mathrm{full}}
+&=\{\sigma_0\}\times\mathcal B_Q\times\mathcal V_Q
+\times\mathcal D_Q\times\{z_0\}\times2^{\mathcal K_{\mathrm{MP}}},\\
+W_{\mathrm{MP}}^{\mathrm{full}}
+&=(\mathcal G_{\mathrm{MP}}\cup\{\mathrm{none}\})
+\times\mathcal P_{\mathrm{MP}}\times\{r_0\}\times\{d_0\}
+\times\mathcal F_W\times\{\pi_0\},\\
+U_{\mathrm{MP}}^{\mathrm{full}}
+&=2^{\mathcal K_{\mathrm{MP}}}\times\{\varnothing\}
+\times2^{\mathcal K_{\mathrm{MP}}}
+\times\mathcal E_K^{\mathcal K_{\mathrm{MP}}}
+\times\{n_0\}^{\mathcal K_{\mathrm{MP}}}
+\times\{\xi_0\}^{\mathcal K_{\mathrm{MP}}},\\
+S_{\mathrm{MP}}^{\mathrm{full}}
+&=\{\mathrm{derive}(\mathsf Q)\}\times\{\Gamma_0\}
+\times\{\mathrm{unchecked},\mathrm{pass},\mathrm{fail}\}
+\times\{p_0\}\times\{\mathrm{running},\mathrm{stopped}\}.
+\end{align*}
+The explicit bijections send
+\begin{align*}
+(b,\nu,d,K_{\mathrm{pruned}})
+&\longmapsto(\sigma_0,b,\nu,d,z_0,K_{\mathrm{pruned}}),\\
+(g,p,f)&\longmapsto(g,p,r_0,d_0,f,\pi_0),\\
+(F_U,B_U,e_U)
+&\longmapsto(F_U,\varnothing,B_U,e_U,
+\boldsymbol{n}_0,\boldsymbol{\xi}_0),\\
+(\Gamma_0,\mathsf Q,v_{\mathrm{stat}},r_{\mathrm{stat}})
+&\longmapsto
+(\mathrm{derive}(\mathsf Q),\Gamma_0,v_{\mathrm{stat}},p_0,r_{\mathrm{stat}}),
+\end{align*}
+where $\boldsymbol{n}_0$ and $\boldsymbol{\xi}_0$ are the constant maps on
+$\mathcal K_{\mathrm{MP}}$. We use the shorter tuples below through these
+bijections. All projections, transitions, and cardinalities are therefore
+well typed in the general six-coordinate role and five-coordinate task-state
+schemas.
+
+Let
+\[
+\mathcal R_{\mathrm{MP}}=\{\mathrm{Idle},\mathrm{Asm},\mathrm{MP},\mathrm{AC}\}.
+\]
+The action spaces are
+\begin{align*}
+A_Q^{\mathrm{MP}}
+&=(\mathcal G_{\mathrm{MP}}\cup\{\mathrm{none}\})
+\times2^{\mathcal K_{\mathrm{MP}}}\times\{0,1\}
+\times\mathcal D_Q\times\{0,1\},\\
+A_W^{\mathrm{MP}}
+&=\mathcal R_{\mathrm{MP}}\times2^{\mathcal K_{\mathrm{MP}}}
+\times(\mathcal L_{\mathrm{MP}}\cup\{\mathrm{none}\}),\\
+A_U^{\mathrm{MP}}&=2^{\mathcal K_{\mathrm{MP}}},\\
+A_{\mathrm{MP}}&=A_Q^{\mathrm{MP}}\times A_W^{\mathrm{MP}}
+\times A_U^{\mathrm{MP}}.
+\end{align*}
+Write
+\[
+a^Q=(g_A,K_{\mathrm{keep}},\chi_V,d_A,\chi_S),\quad
+a^W=(r_A,K_{\mathrm{use}},\ell_A),\quad
+a^U=P_U.
+\]
+
+\begin{proposition}[Finiteness of the toy AHR]
+Every set just defined is finite. In particular,
+\[
+|\mathcal P_{\mathrm{MP}}|
+=\sum_{n=0}^3 6^n=1+6+36+216=259,
+\]
+\[
+|Q_{\mathrm{MP}}|=7\cdot1\cdot4\cdot2^6=1792,
+\quad
+|W_{\mathrm{MP}}|=4\cdot259\cdot3=3108,
+\]
+and
+\[
+|U_{\mathrm{MP}}|=2^6\cdot2^6\cdot4^6.
+\]
+Consequently $H_{\mathrm{MP}}$ and $A_{\mathrm{MP}}$ are finite.
+\end{proposition}
+
+\begin{proof}
+The six-line alphabet has $6^n$ strings of length $n$, which gives the first
+calculation. A six-element set has $2^6$ subsets and there are $4^6$ maps
+from $\mathcal K_{\mathrm{MP}}$ to the four-element set $\mathcal E_K$.
+The displayed cardinalities now follow from the multiplication rule for
+finite Cartesian products. The remaining coordinate and action sets are
+finite products or finite unions of explicitly finite sets.
+\end{proof}
+
+\section{Exact compatibility and dynamics}
+
+Define line metadata by
+\[
+\begin{array}{c|cccccc}
+\ell&\ell_1&\ell_2&\ell_3&\ell_4&\ell_5&\ell_6\\
+\hline
+\beta(\ell)&k_P&k_{P\to Q}&k_{\mathrm{MP}}&
+k_Q^{\mathrm{asm}}&k_{\mathrm{MP}}&k_{\mathrm{AC}}\\
+g(\ell)&\mathrm{derive}(\mathsf P)&
+\mathrm{derive}(\mathsf P\to\mathsf Q)&
+\mathrm{derive}(\mathsf Q)&
+\mathrm{derive}(\mathsf Q)&
+\mathrm{derive}(\mathsf Q)&
+\mathrm{derive}(\mathsf P)\\
+r(\ell)&\mathrm{Asm}&\mathrm{Asm}&\mathrm{MP}&
+\mathrm{Asm}&\mathrm{MP}&\mathrm{AC}
+\end{array}
+\]
+For current proof $p$, define
+\[
+p^+=
+\begin{cases}
+p,&\ell_A=\mathrm{none},\\
+p\mathbin{\|}\ell_A,&\ell_A\in\mathcal L_{\mathrm{MP}}
+\text{ and }|p|<3,
+\end{cases}
+\]
+where $\|$ denotes append. Let
+\[
+K_{\mathrm{cand}}=F_U\cup P_U,
+\qquad
+K_{\mathrm{drop}}=K_{\mathrm{cand}}\setminus K_{\mathrm{keep}},
+\]
+and define the prospective verifier status
+\[
+v^+=
+\begin{cases}
+\mathrm{pass},&\chi_V=1\text{ and }\ProofCheck_{\Gamma_0}(p^+)=1,\\
+\mathrm{fail},&\chi_V=1\text{ and }\ProofCheck_{\Gamma_0}(p^+)=0,\\
+\mathrm{unchecked},&\chi_V=0\text{ and }\ell_A\ne\mathrm{none},\\
+v_{\mathrm{stat}},&\chi_V=0\text{ and }\ell_A=\mathrm{none}.
+\end{cases}
+\]
+The third case invalidates stale verification whenever the certificate
+changes.
+
+For $h=(q,w,u,s)$ and $a=(a^Q,a^W,a^U)$, declare the tuple incompatible when
+$p^+$ is undefined. When $p^+$ is defined, let
+$(q,w,u,s,a)\in\AQWS^{\mathrm{MP}}$ if and only if all of the following
+finite predicates hold:
+\begin{enumerate}
+  \item $K_{\mathrm{keep}}\subseteq
+  K_{\mathrm{cand}}\cap\mathcal K_{\mathrm{rel}}$ and
+  $K_{\mathrm{drop}}\subseteq\mathcal K_{\mathrm{bad}}$;
+  \item if $\ell_A=\mathrm{none}$, then
+  $r_A=\mathrm{Idle}$ and $K_{\mathrm{use}}=\varnothing$;
+  \item if $\ell_A\in\mathcal L_{\mathrm{MP}}$, then
+  \[
+  g_A=g(\ell_A),\quad
+  r_A=r(\ell_A),\quad
+  K_{\mathrm{use}}=\{\beta(\ell_A)\}
+  \subseteq K_{\mathrm{keep}};
+  \]
+  \item $d_A=\mathrm{accept}$ implies $v^+=\mathrm{pass}$;
+  \item $\chi_S=1$ implies either
+  \[
+  d_A=\mathrm{accept}\text{ and }v^+=\mathrm{pass},
+  \]
+  or
+  \[
+  d_A\in\{\mathrm{reject},\mathrm{abstain}\}
+  \text{ and }(b=1\text{ or }K_{\mathrm{keep}}=\varnothing).
+  \]
+\end{enumerate}
+Clause 3 admits $\ell_5$: it uses the authorized MP role, goal, and branch,
+but its missing citations remain a checker error. Clauses 1 and 3 exclude
+$\ell_4$ and $\ell_6$ at the role-compatibility level.
+
+The dynamic transition
+\[
+(x_0,h,a,h')\in T_{\mathrm{dyn}}^{\mathrm{MP}}
+\]
+holds exactly when the current run status is $\mathrm{running}$, $b\ge1$,
+$p^+$ is defined, and the following updates hold:
+\begin{align*}
+q'&=(b-1,\nu,d_A,K_{\mathrm{pruned}}\cup K_{\mathrm{drop}}),\\
+w'&=(g_A,p^+,f^+),\\
+u'&=(K_{\mathrm{keep}},B_U\cup P_U,e_U'),\\
+s'&=(\Gamma_0,\mathsf Q,v^+,r^+),
+\end{align*}
+where
+\[
+f^+=
+\begin{cases}
+\mathrm{none},&\ell_A=\mathrm{none},\\
+\mathrm{localPass},&
+\ell_A\ne\mathrm{none}\text{ and }
+\operatorname{LineOK}_{\Gamma_0}(|p^+|,p^+)=1,\\
+\mathrm{localFail},&\text{otherwise},
+\end{cases}
+\]
+\[
+e_U'(k)=
+\begin{cases}
+0,&k\in P_U,\\
+e_U(k),&k\notin P_U,
+\end{cases}
+\qquad
+r^+=
+\begin{cases}
+\mathrm{stopped},&\chi_S=1,\\
+\mathrm{running},&\chi_S=0.
+\end{cases}
+\]
+The strict transition relation is
+\[
+T_{\mathrm{AHR}}^{\mathrm{MP}}
+=T_{\mathrm{dyn}}^{\mathrm{MP}}\cap
+\{(x_0,h,a,h'):(q,w,u,s,a)\in\AQWS^{\mathrm{MP}}\}.
+\]
+
+Let $e_0(k)=2$ for every $k\in\mathcal K_{\mathrm{MP}}$. Initialization is
+the singleton
+\[
+I_{\mathrm{MP}}(x_0)=\{h_0\},
+\]
+\[
+h_0=\bigl(
+(6,\mathrm{mustVerify},\mathrm{undecided},\varnothing),
+(\mathrm{none},(),\mathrm{none}),
+(\varnothing,\varnothing,e_0),
+(\Gamma_0,\mathsf Q,\mathrm{unchecked},\mathrm{running})
+\bigr).
+\]
+These equations completely determine the finite toy transition system.
+
+\section{Extraction, verification, and domain soundness}
+
+For
+\[
+h=\bigl((b,\nu,d,K_{\mathrm{pruned}}),(g,p,f),u,
+(\Gamma_0,\mathsf Q,v_{\mathrm{stat}},r_{\mathrm{stat}})\bigr),
+\]
+define
+\[
+R_{\mathrm{MP}}(h)=
+\begin{cases}
+\operatorname{form}(p_{|p|}),&
+r_{\mathrm{stat}}=\mathrm{stopped},\
+d=\mathrm{accept},\text{ and }|p|\ge1,\\
+\bot,&\text{otherwise}.
+\end{cases}
+\]
+For a terminal strict-legal trajectory
+$\tau=(h_0,a_0,\ldots,h_L)\in\Om_{\mathrm{AHR}}^{\mathrm{MP}}(x_0)$ whose
+terminal Worker proof is $p_L$ and whose terminal Queen decision is $d_L$,
+define
+\[
+V_{\mathrm{MP}}(x_0,\tau,\varphi)=1
+\]
+if and only if
+\[
+\begin{aligned}
+r_{\mathrm{stat},L}&=\mathrm{stopped},&
+d_L&=\mathrm{accept},&
+v_{\mathrm{stat},L}&=\mathrm{pass},\\
+R_{\mathrm{MP}}(h_L)&=\varphi,&
+\ProofCheck_{\Gamma_0}(p_L)&=1.&&
+\end{aligned}
+\]
+As in the general construction, define
+$V_{\mathrm{MP}}^{\mathrm{ext}}$ on raw toy trajectories to equal
+$V_{\mathrm{MP}}$ on
+$\Om_{\mathrm{AHR}}^{\mathrm{MP}}(x_0)$ and zero outside that strict domain.
+For the bounded toy objective, set
+\[
+\operatorname{stepCost}_{\mathrm{MP}}(x_0,h,a,h')=1
+\quad\text{for every }(h,a,h')\in H_{\mathrm{MP}}\times
+A_{\mathrm{MP}}\times H_{\mathrm{MP}},
+\qquad
+B_{\mathrm{MP}}=6,
+\]
+and set the three role-specific soft energies to zero. The general hard
+alignment, transition, verifier, extraction, and budget energies then define
+the toy's full extended-real objective. In particular, every allowed
+transition has positive cost and every budget-feasible trajectory has at most
+six transitions.
+
+\begin{proposition}[Nonaccepting stops cannot extract an answer]
+Let $\tau\in\Om_{\mathrm{AHR}}^{\mathrm{MP}}(x_0)$. If the terminal Queen
+decision is $\mathrm{reject}$ or $\mathrm{abstain}$,
+then $R_{\mathrm{MP}}(h_L)=\bot$ and
+$V_{\mathrm{MP}}(x_0,\tau,\varphi)=0$ for every
+$\varphi\in Y_{\mathrm{MP}}$.
+\end{proposition}
+
+\begin{proof}
+Both $\mathrm{reject}$ and $\mathrm{abstain}$ differ from
+$\mathrm{accept}$. The acceptance condition in the first branch of
+$R_{\mathrm{MP}}$ therefore fails, so the second branch gives
+$R_{\mathrm{MP}}(h_L)=\bot$. Because $\bot\notin Y_{\mathrm{MP}}$, one has
+$R_{\mathrm{MP}}(h_L)\ne\varphi$ for every
+$\varphi\in Y_{\mathrm{MP}}$. The extraction equality required by
+$V_{\mathrm{MP}}=1$ is false; the explicit verifier requirement
+$d_L=\mathrm{accept}$ is false as well. Hence the verifier returns zero.
+\end{proof}
+
+\begin{theorem}[Toy verifier domain soundness]
+For every
+$\tau\in\Om_{\mathrm{AHR}}^{\mathrm{MP}}(x_0)$ and every
+$\varphi\in Y_{\mathrm{MP}}$,
+\[
+V_{\mathrm{MP}}(x_0,\tau,\varphi)=1
+\quad\Longrightarrow\quad
+(x_0,\varphi)\in\Sol_{\mathrm{MP}}.
+\]
+\end{theorem}
+
+\begin{proof}
+Assume $V_{\mathrm{MP}}(x_0,\tau,\varphi)=1$. Then the terminal certificate
+$p_L$ passes the checker. By checker soundness,
+$\Gamma_0\models\mathsf Q$. Checker acceptance also says that the final
+formula of $p_L$ is $\mathsf Q$. Extraction and verifier acceptance give
+\[
+\varphi=R_{\mathrm{MP}}(h_L)
+=\operatorname{form}((p_L)_{|p_L|})
+=\mathsf Q.
+\]
+Thus both defining conditions
+$\varphi=\mathsf Q$ and $\Gamma_0\models\varphi$ hold. By the independently
+defined semantic relation, $(x_0,\varphi)\in\Sol_{\mathrm{MP}}$.
+\end{proof}
+
+\section{Valid and invalid trajectories}
+
+Let
+$K_*=\{k_P,k_{P\to Q},k_{\mathrm{MP}}\}$. The following six actions, with
+unlisted Worker components determined by the metadata table and Idle used
+when no line is appended, define a strict trajectory from $h_0$:
+\[
+\begin{array}{c|c|c|c|c|c|c|c}
+t&P_U&K_{\mathrm{keep}}&g_A&\ell_A&\chi_V&d_A&\chi_S\\
+\hline
+0&K_*&K_*&\mathrm{none}&\mathrm{none}&0&\mathrm{undecided}&0\\
+1&\varnothing&K_*&\mathrm{derive}(\mathsf P)&\mathrm{none}
+&0&\mathrm{undecided}&0\\
+2&\varnothing&K_*&\mathrm{derive}(\mathsf P)&\ell_1
+&0&\mathrm{undecided}&0\\
+3&\varnothing&K_*&\mathrm{derive}(\mathsf P\to\mathsf Q)&\ell_2
+&0&\mathrm{undecided}&0\\
+4&\varnothing&K_*&\mathrm{derive}(\mathsf Q)&\ell_3
+&0&\mathrm{undecided}&0\\
+5&\varnothing&K_*&\mathrm{none}&\mathrm{none}
+&1&\mathrm{accept}&1
+\end{array}
+\]
+The terminal certificate is
+$p_*=(\ell_1,\ell_2,\ell_3)$, its checker status is pass, the terminal budget
+is zero, and
+\[
+R_{\mathrm{MP}}(h_6)=\mathsf Q,
+\qquad
+V_{\mathrm{MP}}(x_0,\tau_*,\mathsf Q)=1.
+\]
+
+Replacing $\ell_3$ at time $4$ by $\ell_5$ preserves role-level compatibility:
+the Queen authorizes the $\mathsf Q$ goal, the Worker declares MP, and it uses
+$k_{\mathrm{MP}}$. Nevertheless,
+\[
+\operatorname{LineOK}_{\Gamma_0}
+(3,(\ell_1,\ell_2,\ell_5))=0
+\]
+because $\ell_5$ has no earlier citation pair. Hence the prospective status
+at verification is fail and an accepting stop is QWS-incompatible. The
+resulting raw attempt is outside
+$\Om_{\mathrm{AHR}}^{\mathrm{MP}}(x_0)$, so the rejection extension
+$V_{\mathrm{MP}}^{\mathrm{ext}}$ equals zero. This exact counterexample shows
+that alignment among the Queen, Worker, and Scout and proof validity are
+distinct.
+
+\chapter{Finite Constraint Satisfaction and Temporal Reasoning}
+
+\section{CSP substrate}
+
+A finite CSP is
+\[
+\mathcal P_{\mathrm{CSP}}=(\mathcal X,\{D_i\}_{i=1}^n,\mathcal C,Q_{\mathrm{out}}),
+\]
+where $\mathcal X=\{x_1,\ldots,x_n\}$, every domain $D_i$ is finite,
+$\mathcal C=\{c_1,\ldots,c_m\}$, and $Q_{\mathrm{out}}$ specifies which part
+of a satisfying assignment is returned. Each constraint $c_j$ has scope
+$S_j\subseteq\mathcal X$ and predicate
+\[
+R_j:\prod_{x_i\in S_j}D_i\to\{0,1\}.
+\]
+The indexed product denotes assignments to the named variables in $S_j$
+(formally, functions choosing one value in each corresponding domain), so
+the predicate does not depend on an arbitrary ordering of the set $S_j$.
+For assignment $a$, define hard energy
+\[
+E_{\mathrm{CSP}}(a)=\sum_{j=1}^m\one\{R_j(a|_{S_j})=0\}.
+\]
+
+\begin{proposition}[Exact CSP energy]
+For every complete assignment
+$a\in\prod_{i=1}^nD_i$,
+\[
+E_{\mathrm{CSP}}(a)=0
+\quad\Longleftrightarrow\quad
+R_j(a|_{S_j})=1\text{ for every }j\in\{1,\ldots,m\}.
+\]
+\end{proposition}
+
+\begin{proof}
+Each indicator
+$\one\{R_j(a|_{S_j})=0\}$ is either zero or one and is therefore
+nonnegative. If every constraint predicate equals one, every indicator is
+zero, so their sum is zero.
+
+Conversely, suppose the sum is zero. If some predicate $R_k$ were zero, its
+indicator would equal one. Since all other indicators are nonnegative, this
+would imply
+\[
+E_{\mathrm{CSP}}(a)
+=\sum_{j=1}^m\one\{R_j(a|_{S_j})=0\}
+\ge\one\{R_k(a|_{S_k})=0\}=1,
+\]
+contradicting $E_{\mathrm{CSP}}(a)=0$. Hence every predicate equals one.
+\end{proof}
+
+Thus zero energy is equivalent to exact-checker acceptance. For a CSP-solving
+task whose contract accepts any satisfying assignment, verifier validity,
+rather than equality with one stored reference assignment, is the correct
+success criterion when solutions are non-unique
+\cite{FalkenburgVerified2026,FalkenburgAHRCSP2026}.
+
+\section{Role mapping}
+
+\begin{table}[H]
+\centering
+\caption{AHR roles in a finite CSP.}
+\begin{tabularx}{0.94\textwidth}{>{\bfseries}p{0.16\textwidth}X}
+\toprule
+Role & Mathematical responsibility \\
+\midrule
+Scout & Propose variable-value choices, factor messages, decompositions, or repair moves. \\
+Worker & Construct or revise a partial assignment and maintain local consistency information. \\
+Queen & Choose subproblems, allocate radius/budget, prune by admissible bounds, invoke the checker, accept, or abstain. \\
+Verifier & Evaluate all hard predicates independently of the learned score. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Temporal and revised constraints}
+
+Fix a represented finite horizon $t\in\{0,\ldots,T\}$. Temporal CSPs use
+variables $x_{t,i}\in D_i$ and legal transition predicates
+\[
+(x_t,x_{t+1})\in\mathcal T_t.
+\]
+A rule activated at time
+$\tau_r\in\{0,\ldots,T\}$ is represented by
+\[
+\forall t\in\{\tau_r,\ldots,T\},\qquad r_t(x_t)=1.
+\]
+Thus mid-trajectory rule revision is not an exception to AHR; it changes the constraint coordinate $c_t$ and therefore the strict transition relation from that time onward.
+
+\chapter{Proof-Assistant Search}
+
+Let $s_t$ be a formal proof state and $\mathcal A(s_t)=\{a_1,\ldots,a_k\}$ a finite generated action set. A proof assistant provides local checking
+\[
+V_{\mathrm{local}}(s_t,a)=1
+\]
+when $a$ typechecks. Only such a locally accepted pair lies in the domain of
+the successor function $T$. Local acceptance does not guarantee proof
+closure. Define the exact completion set without applying $T$ outside its
+domain:
+\[
+\mathcal C(s_t,a)=
+\begin{cases}
+\{\tau:\tau\text{ is a legal continuation from }T(s_t,a)
+\text{ to a closed proof}\},
+&V_{\mathrm{local}}(s_t,a)=1,\\
+\varnothing,&V_{\mathrm{local}}(s_t,a)=0.
+\end{cases}
+\]
+With $\inf\varnothing:=+\infty$, let
+$\cost_{\mathrm{PA}}(\tau)\in\mathbb R_{\ge0}$ be the proof-assistant cost of
+continuation $\tau$ and define exact branch energy
+\[
+E_{\mathrm{branch}}^*(s_t,a)
+=\inf_{\tau\in\mathcal C(s_t,a)}\cost_{\mathrm{PA}}(\tau).
+\]
+A finite-valued learned or heuristic energy
+$\widehat E_{\mathrm{branch}}(s_t,a)\in\mathbb R$ estimates this quantity:
+\[
+\widehat E_{\mathrm{branch}}(s_t,a)
+\approx E_{\mathrm{branch}}^*(s_t,a).
+\]
+If at least one action has a proof-closing continuation, the ideal local
+choice is
+\[
+a^*\in\argmin_{a\in\mathcal A(s_t)}
+E_{\mathrm{branch}}^*(s_t,a).
+\]
+
+For a nonempty generated action set, if a ranker induces
+$p(a\mid s)\propto e^{-\widehat E(s,a)}$, its entropy is
+\[
+H(A\mid s)=-\sum_{a\in\mathcal A(s)}p(a\mid s)\log p(a\mid s).
+\]
+Low entropy is useful only when it concentrates on locally accepted actions that lead to closure. Lean-AHR is this instantiation: Scouts generate tactics or lemmas, Workers construct proof-state transitions, the Queen controls top-$k$ expansion and budget, and Lean is the proof authority \cite{FalkenburgLeanAHR2026}.
+
+The main theory obligations are candidate-set coverage, safe pruning, domain soundness of the checker, and a useful approximation to continuation cost. High top-$k$ completion on a templated family is empirical evidence, not a completeness theorem for general theorem proving.
+
+\chapter{Symbolic and Diophantine Proof Search}
+
+A symbolic proof-search instantiation fixes an alphabet $\Sigma$, grammar $\mathcal G$, proof calculus $\mathcal R$, and deterministic verifier. A partial token sequence is a Worker construction; grammar-compatible continuations are Scout branches; the Queen controls normalization, case splitting, bounds, and beam retention.
+
+For prefix $p$, let $\mathcal N(p)$ be its grammar-valid next tokens and
+define $V_{\mathrm{prefix}}(p)=1$ exactly when no irreparable scope, syntax,
+or arithmetic error is detected. Thus zero denotes prefix rejection. The
+strict frontier is
+\[
+\{p\sigma:\sigma\in\mathcal N(p),\ V_{\mathrm{prefix}}(p\sigma)=1\}.
+\]
+Sound prefix rejection gives safe pruning only when every rejected prefix truly has no valid proof completion. The next proposition states the bounded conclusion precisely.
+
+\begin{proposition}[Bounded symbolic completeness]
+Assume $\Sigma$ is finite, $L<\infty$, and a target valid proof
+$p^*\in\Sigma^{\le L}$ exists, where $\Sigma^{\le L}$ denotes all strings
+over $\Sigma$ of length at most $L$. Suppose:
+\begin{enumerate}
+  \item every grammar-valid next token at every retained prefix is eventually enumerated;
+  \item prefix pruning rejects only prefixes having no valid proof completion;
+  \item the Worker realizes each enumerated token append; and
+  \item the final verifier accepts every proof that is valid in the fixed calculus.
+\end{enumerate}
+Then bounded AHR search eventually enumerates and accepts $p^*$.
+\end{proposition}
+
+\begin{proof}
+Write $p^*=\sigma_1\cdots\sigma_n$ with $n\le L$, and let
+$p_i=\sigma_1\cdots\sigma_i$ for $i=0,\ldots,n$, where $p_0$ is empty.
+We prove by induction that every $p_i$ is eventually reached and retained.
+The empty prefix $p_0$ is the initial search node. Assume $p_i$ is reached
+for some $i<n$. Because $p_i$ extends to the valid proof $p^*$, assumption 2
+forbids pruning it. The next token $\sigma_{i+1}$ is grammar-valid along
+$p^*$, so assumption 1 eventually enumerates it. Assumption 3 realizes the
+append and reaches $p_{i+1}$. The same sound-pruning argument retains that
+prefix because it still extends to $p^*$.
+
+Finite induction reaches $p_n=p^*$. Assumption 4 then makes the final
+verifier accept it. Finiteness of $\Sigma^{\le L}$ guarantees that the
+bounded exhaustive schedule is over a finite candidate universe; the
+coverage assumptions identify the target within it.
+\end{proof}
+
+There is no algorithm that always terminates and correctly decides, for every
+multivariate polynomial with integer coefficients, whether the equation
+$P(z_1,\ldots,z_n)=0$ has an integer solution. This is the negative solution
+to Hilbert's tenth problem; the usual natural-number and integer-solution
+forms are computably equivalent \cite{Matiyasevich1993}. This does not rule
+out semidecision completeness for positive instances: an unbounded
+enumerator may eventually find every existing integer tuple and its
+certificate while running forever on some no-solution inputs. The bounded
+proposition above avoids both claims by fixing a finite proof universe.
+
+The Diophantine Slot Machine and AHR-CSP arithmetic reports instantiate this certificate-first view: learned or heuristic search proposes proof tokens, congruence cases, valuations, or factor assignments, while exact arithmetic checks certificates \cite{FalkenburgDSM2025,FalkenburgBrocardAHR2026,FalkenburgBrocardCases2026}. Domain-specific number-theory claims remain separate from the general AHR theorems.
+
+\chapter{Sudoku and Structured Prediction}
+
+For Sudoku, let the clue grid be $x\in\{0,1,\ldots,9\}^{81}$, where zero
+marks an empty cell. Let $V$ be the 81 cells, let
+$D=\{1,\ldots,9\}$, and let $E$ be the set
+of unordered pairs $\{u,v\}$ of distinct cells sharing a row, column, or
+$3\times3$ box. Thus each peer conflict is counted once. A candidate
+$y\in D^{81}$ has conflict energy
+\[
+E_{\mathrm{Sudoku}}(y;x)=
+\sum_{\{u,v\}\in E}\one\{y_u=y_v\}
++\sum_{v:x_v\ne0}\one\{y_v\ne x_v\}.
+\]
+
+\begin{proposition}[Exact Sudoku energy]
+For $y\in D^{81}$,
+\[
+E_{\mathrm{Sudoku}}(y;x)=0
+\]
+if and only if $y$ agrees with every nonzero clue in $x$ and no two peer
+cells have the same digit.
+\end{proposition}
+
+\begin{proof}
+Every summand in both sums is a nonnegative $0$--$1$ indicator. If $y$
+agrees with every clue and all peer digits differ, every displayed predicate
+inside an indicator is false, so every summand is zero and the energy is
+zero.
+
+Conversely, suppose the energy is zero. If some clue cell $v$ had
+$y_v\ne x_v$, the corresponding clue indicator would be one and the total
+energy would be at least one, a contradiction. Hence all clues agree. If
+some peer pair $\{u,v\}\in E$ had $y_u=y_v$, its conflict indicator would
+likewise be one, again forcing total energy at least one. Hence all peer
+digits differ. These are precisely the stated validity conditions because
+$y$ is already a complete assignment in $D^{81}$. More explicitly, each row
+contains nine pairwise distinct values drawn from the nine-element set $D$;
+therefore each digit occurs exactly once in that row. The identical counting
+argument applies to every column and every $3\times3$ box. Thus the peer
+condition is exactly the usual completed-Sudoku condition.
+\end{proof}
+
+A pheromone tensor $\varrho\in\mathbb R^{81\times9}$ biases cell-digit
+choices. Scouts perform fast stochastic local exploration, Workers consolidate
+peer-graph evidence, and the Queen changes slower strategy, halting, and
+multi-colony selection. Exact Sudoku verification remains independent of the
+belief field.
+
+This instantiation supplied the original dynamical picture of AHR
+\cite{FalkenburgAHRDesign2026}. The general mathematical theory is broader:
+$\varrho$ need not be a neural tensor, and AHR need not be limited to
+structured prediction.
+
+\chapter{Empirical Evidence and Its Exact Scope}
+
+\section{Evidence-audit rule}
+
+This chapter records what saved local and repository artifacts demonstrate.
+It does not promote measurements into axioms. Each claim names the evaluated
+split, the relevant metric definition, and the principal limitation. The
+artifacts were audited at repository snapshot
+\texttt{0e57d184a118} for the consolidated
+verified-reasoning archive and
+\texttt{722d820c1e09} for the original
+\texttt{ahr} repository \cite{FalkenburgExperimentArchive2026,
+FalkenburgSudokuNotebooks2026}. The local hybrid notebook is byte-identical to
+the latter snapshot. The local pure-neural notebook is a distinct file
+version, so its result is anchored to its local SHA-256 digest and saved
+history rather than silently attributed to the committed source text. Exact
+local paths, version comparisons, and full SHA-256 digests for every private
+source used in this chapter are recorded in the accompanying provenance
+manifest \cite{FalkenburgProvenanceManifest2026}.
+
+Three distinctions are essential:
+\begin{enumerate}
+  \item a neural prediction, an exact repaired answer, and an answer that
+  matches one stored reference are different outcomes;
+  \item a validation measurement used for checkpoint selection is not an
+  independent test measurement; and
+  \item an implementation called ``AHR-lite'' need not instantiate the full
+  formal Queen, Worker, and Scout state and compatibility relation.
+\end{enumerate}
+
+\section{Sudoku evidence}
+
+\subsection{Early archive}
+
+The early local Sudoku archive contains 24 dated run directories from January
+and February 2026, with configurations and several checkpoints. The surviving
+metadata show a recurrent Worker, a slower Queen, stochastic Scout proposals,
+deep supervision, and a Sudoku constraint penalty. One checkpoint records the
+field \texttt{best\_solved\_long=0.05625}, but the archive does not preserve a
+sufficiently precise metric contract, split manifest, and end-to-end
+evaluation report to interpret that number as a publication-quality solve
+rate. It is therefore evidence of implementation history, not a quantitative
+result used by this theory.
+
+\subsection{AHR-lite hybrid notebook}
+
+The saved hybrid notebook used a 147,042-parameter recurrent model with a
+Worker update at every step, a Queen update every four steps, a pheromone-like
+logit state, and an annealed Gaussian perturbation called the Scout
+\cite{FalkenburgSudokuNotebooks2026,FalkenburgSudokuLocalBundle2026}. The
+Gaussian perturbation is not an explicit persistent Scout state with its own
+typed policy and compatibility clauses. This is therefore accurately described
+as an AHR-lite or HRM-style precursor, not the complete formal architecture.
+
+The recorded run did not use the public Sudoku-extreme data. It fell back to
+synthetically generated puzzles: 5,000 training, 500 validation, and 500 test
+examples. The notebook generated the three lists separately but applied no
+explicit duplicate or cross-split-overlap check. Puzzle uniqueness was also
+not checked. On the 500-example saved test evaluation, the notebook reports:
+\[
+\begin{array}{l|r}
+\text{metric}&\text{value}\\
+\hline
+\text{composite notebook loss}&1.233612\\
+\text{cell reference-match rate}&0.788355\\
+\text{whole-board reference-match rate}&0.075072\\
+\text{last-four-step stability rate}&0.207854\\
+\text{stable and reference-exact rate}&0.073336\\
+\text{mean Sudoku conflict energy}&9.884160
+\end{array}
+\]
+The saved loss combines deep-supervised cross-entropy, an additional
+blank-cell cross-entropy, a peer regularizer, an entropy term, and a
+last-step stability term; it is not a standalone negative log-likelihood.
+Whole-board reference match means that all 81 predicted digits equal the
+stored target. Last-four-step stability means that the discrete predictions
+at the final four recurrent steps are identical. Because the synthetic
+puzzles were not proved unique, a valid completion can disagree with the
+stored target.
+
+The same notebook saved a 250-puzzle stress table:
+\[
+\begin{array}{l|rr}
+\text{metric}&\text{raw neural}&\text{hybrid}\\
+\hline
+\text{whole-board reference match}&0.076&0.108\\
+\text{notebook validity flag}&0.180&1.000\\
+\text{mean conflict energy}&9.936&0.000\\
+\text{mean wall time per puzzle (seconds)}&0.057375&1.065677
+\end{array}
+\]
+The hybrid column is not a pure-neural solve rate. For each of 16 stochastic
+colonies, the notebook invoked an exact minimum-remaining-values backtracking
+solver, using neural logits only to order candidate digits. The saved
+``exact-repair'' field equals one on all 250 puzzles because backtracking found
+a completion in every case. The field name \texttt{solved\_exactly} in the
+notebook means that exact backtracking succeeded; it does not mean equality
+with the stored target.
+
+The notebook's standalone validity flag checks rows, columns, and boxes. Clues
+are clamped by the neural model and are never overwritten by the backtracking
+solver; moreover, the reported hybrid conflict energy is zero and that energy
+contains a clue-disagreement term. Thus the 100\% hybrid validity result is
+evidence that the exact repair path produced valid completions for this
+250-puzzle synthetic sample. It is not evidence that the neural system solved
+100\% of the puzzles unaided.
+
+\subsection{Pure-neural Sudoku-extreme run}
+
+A later saved local notebook used the public
+\texttt{sapientinc/sudoku-extreme} dataset, whose card reports about
+3.83 million training and 423 thousand test puzzles, exact deduplication,
+unique solutions, and mathematical inequivalence between train and test
+puzzles \cite{SapientSudokuExtreme2026,FalkenburgSudokuLocalBundle2026}. The
+run used 1,000,000 examples from the augmented official-training corpus for
+training and 50,000 different augmented-row indices from that same corpus for
+validation. The executed local source first generated ten Sudoku-symmetry
+variants per official training puzzle and only then randomly split augmented
+rows. The two index sets are disjoint, but the split is not grouped by
+original puzzle; it therefore does not prevent different symmetry variants
+of one source puzzle from appearing on both sides.
+
+The pure-neural notebook source at pinned GitHub commit
+\texttt{722d820c1e09} contains a replacement group-preserving split function.
+However, its saved output payload is identical to the local row-split
+notebook's output payload and lacks the diagnostic printed by that replacement
+function. Thus the archive does not evidence a completed run of the grouped
+version. The reported result is conservatively interpreted according to the
+executed local row-split source. Its validation set is consequently neither
+an official split nor documented as source-puzzle-independent. The model had
+708,450 parameters and 40 recurrent steps.
+
+The complete local 100-epoch history records its best
+\emph{validation-selected} point at epoch 93:
+\[
+\begin{array}{l|r}
+\text{validation metric}&\text{value}\\
+\hline
+\text{loss}&1.225052\\
+\text{cell reference-match rate}&0.837523\\
+\text{zero-conflict-energy rate}&0.474780\\
+\text{pure exact rate}&0.474780\\
+\text{mean conflict energy}&8.898020
+\end{array}
+\]
+The pure-exact predicate requires both all 81 digits to match the target and
+zero clue/peer conflict energy. The official test loader contained 422,786
+examples, but no completed independent test evaluation was saved. Therefore
+47.478\% is an augmented-row validation result used in model selection, not a
+source-puzzle-independent validation estimate or a test-set result.
+The model also uses a slower Queen-like update, a faster Worker-like update,
+pheromone logits, and Gaussian Scout noise rather than the complete formal
+Scout object.
+
+\section{Triple-role AHR-CSP evidence}
+
+The Phase 5r9 AHR-CSP artifact is the clearest saved experiment with explicit
+three-scale recurrence: two Queen cycles, two Worker cycles, and four Scout
+steps, with evaluation noise disabled
+\cite{FalkenburgAHRCSPPhase5r9}. Its synthetic satisfiable data comprise 4,096
+training, 1,024 validation, and 1,024 test instances drawn from the same
+generator families: all-different, Boolean SAT, and bounded arithmetic.
+
+On the 1,024-example test split, the saved report gives
+\[
+\begin{array}{l|r}
+\text{metric}&\text{value}\\
+\hline
+\text{assignment-coordinate reference accuracy}&0.924729\\
+\text{whole-assignment reference match}&0.711914\\
+\text{vectorized hard-valid rate}&1.000000\\
+\text{mean vectorized hard energy}&0.000000
+\end{array}
+\]
+The vectorized hard-valid computation covers all 1,024 test outputs. A
+separate CPU verifier checked 64 test outputs and accepted all 64; the reported
+CPU-valid rate of 1.0 therefore has denominator 64, not 1,024. The gap between
+71.1914\% reference match and 100\% hard validity is expected for CSPs with
+multiple satisfying assignments and directly motivates the distinction
+between semantic validity and equality with one reference label.
+
+This experiment supports feasibility of the Queen/Worker/Scout recurrent
+decomposition and exact constraint measurement on these bounded synthetic
+families. It does not establish the completeness assumptions, safe-pruning
+premise, asymptotic work bound, or generalization to arbitrary CSPs.
+
+\section{Abstaining multi-family ranker}
+
+The saved 4,998,161-parameter multi-family ranker has 17 output labels and
+split sizes 1,440 training, 360 validation, and 360 test
+\cite{FalkenburgMultiFamilyRanker2026}. On both validation and test, it records
+340 correct answers, zero wrong answers, and 20 abstentions:
+\[
+\text{coverage}=\frac{340}{360}=0.944444\ldots,
+\qquad
+\text{hard-valid rate among answers}=1.
+\]
+The equality follows by direct division: $340/360=17/18$. These results are
+consistent with the formal abstention contract on the saved synthetic task
+bundle. They do not estimate performance on open-domain reasoning, and the
+artifact explicitly forbids clinical use.
+
+\section{Lean proof-search evidence, including the negative result}
+
+The Lean-AHR v3.6 artifact used 50 ProofNet test rows with indices 50--99.
+ProofNet is a 371-example benchmark of undergraduate mathematics statements,
+informal proofs, and Lean 3 formal statements
+\cite{AzerbayevProofNet2023,FalkenburgLeanV36}. The parse/retrieval audit
+translated and retrieved 33 of 50 rows. The subsequent full bridge made 769
+Lean calls and produced exact Lean-verified target proofs for 2 of 50 rows.
+The saved failure counts are 29 verification failures, 10 unknown identifiers,
+5 type mismatches, 2 typeclass-synthesis failures, and 2 unsolved-goal
+failures; together with the 2 successes they sum to all 50 rows:
+\[
+29+10+5+2+2+2=50.
+\]
+
+The batch began as a held-out offset, but its translation failures were mined
+and repaired before the v3.6 rerun. The final 2/50 rate must consequently be
+treated as a development-set-style rerun, not an untouched test estimate. This
+negative result is important: exact local checking and a useful search
+architecture do not by themselves solve proof translation or proof-script
+synthesis.
+
+\section{What the evidence establishes}
+
+The saved artifacts establish only the following empirical facts:
+\begin{itemize}
+  \item Queen-like slow recurrence, Worker-like fast construction, and
+  pheromone-like memory have been trained in Sudoku precursors;
+  \item an explicit Queen/Worker/Scout recurrent configuration has achieved
+  zero measured hard energy on one 1,024-instance synthetic AHR-CSP test split;
+  \item exact repair can convert neural Sudoku guidance into valid solutions
+  on a small synthetic sample, at additional compute cost;
+  \item hard validity can differ substantially from reference equality on
+  non-unique tasks;
+  \item abstention can eliminate measured errors on a bounded synthetic
+  ranker split by reducing coverage; and
+  \item broad Lean proof synthesis remains largely unsolved in the audited
+  artifact.
+\end{itemize}
+
+No saved experiment yet proves that learned Queen pruning is safe, that Scout
+coverage satisfies the probability lower bounds of the completeness theorem,
+that the full formal compatibility relation is enforced during neural
+training, or that AHR has an empirical asymptotic advantage over matched HRM,
+EBM, and flat-search baselines. Those remain explicit research obligations.
+
+\part{Learning Theory and Research Program}
+
+\chapter{Learning Hierarchical Energies}
+
+\section{Parameterized energy}
+
+Let
+$E_\theta=E_{Q,\theta}+E_{W,\theta}+E_{U,\theta}
++E_{\mathrm{soft},\theta}$
+while hard verification, extraction, budget, and strict transition feasibility
+remain external. For verified and invalid candidate pairs $z^+,z^-$ and a
+fixed margin $\gamma>0$, a margin loss is
+\[
+\mathcal L_{\mathrm{margin}}(\theta)
+=\mathbb E\bigl[\max\{0,\gamma+E_\theta(z^+)-E_\theta(z^-)\}\bigr].
+\]
+A role-aware objective may add
+\[
+\mathcal L=\lambda_Q\mathcal L_Q+\lambda_W\mathcal L_W
++\lambda_U\mathcal L_U+\lambda_A\mathcal L_{\mathrm{align}}
++\lambda_M\mathcal L_{\mathrm{margin}}
++\lambda_C\mathbb E[\cost_x(\tau)].
+\]
+The canonical value $+\infty$ for hard verifier failure is not differentiated.
+Training may use verifier outcomes to label candidates or may introduce a
+separately named finite surrogate loss, but that surrogate does not replace
+the hard verification condition in the emission rule.
+
+\section{Ranking consistency target}
+
+For a distribution over states, assume each $\mathcal A(s)$ is finite and
+nonempty. Let
+$E^*(s,a)\in\mathbb R\cup\{+\infty\}$ be verified completion cost, assume
+$\min_{a\in\mathcal A(s)}E^*(s,a)<+\infty$, and let
+$\widehat E(s,a)\in\mathbb R$ be a finite learned score. The useful statistical
+target is not merely action-label accuracy. It is low regret relative to
+verified completion cost:
+\[
+\mathcal R(\widehat E)
+=\mathbb E\left[E^*(s,\widehat a(s))-
+\min_{a\in\mathcal A(s)}E^*(s,a)\right],
+\qquad
+\widehat a(s)=\operatorname{Tie}\!\left(
+\argmin_{a\in\mathcal A(s)}\widehat E(s,a)\right).
+\]
+Because the optimal completion cost is finite, the difference is
+well-defined in $[0,+\infty]$; choosing an action with no verified completion
+gives infinite regret rather than the undefined expression
+$+\infty-(+\infty)$.
+Search-level evaluation should measure completion, verifier calls, compute, and abstention at fixed correctness. A learned energy that ranks local actions accurately but increases total proof-search calls has failed the intended objective.
+
+\section{Calibration and abstention}
+
+Let $p_{\mathrm{succ}}(x,B)$ estimate the probability that bounded search will produce a verified solution. A calibrated stopping rule may abstain when
+\[
+p_{\mathrm{succ}}(x,B)<\theta
+\]
+or when the expected value of another search cycle is below its compute cost. Calibration must be evaluated against actual verifier outcomes and distinguish epistemic uncertainty, search exhaustion, and verifier incompleteness.
+
+\chapter{Open Mathematical Problems}
+
+\begin{openproblem}[Repairable alignment]
+Characterize metrics $d_{\mathrm{align}}$ for which every sufficiently low-distance state-action tuple can be repaired into $\AQWS$ with bounded cost while preserving a valid solution path.
+\end{openproblem}
+
+\begin{openproblem}[Infinite trajectory spaces]
+Choose natural topologies, such as prefix, proof-tree, edit, or graph-path
+topologies, under which realistic verified candidate sets are compact and
+energies are lower semicontinuous, or under which proper energies have finite
+sublevel sets.
+\end{openproblem}
+
+\begin{openproblem}[Stochastic convergence]
+Prove rates, not only asymptotic completeness, for energy-guided QWS search under admissible Queen bounds and nonuniform Scout coverage.
+\end{openproblem}
+
+\begin{openproblem}[Learnability]
+Derive capacity or sample-complexity bounds for hierarchical trajectory energies that preserve verifier-aligned margins under distribution shift.
+\end{openproblem}
+
+\begin{openproblem}[Incomplete verifiers]
+Quantify the tradeoff between sound but incomplete verification and abstention frequency. A true answer may exist while no certifiable trajectory exists in the representation.
+\end{openproblem}
+
+\begin{openproblem}[Global usefulness]
+Construct an energy that penalizes locally valid but globally useless Worker moves without pruning every completion of an optimal proof.
+\end{openproblem}
+
+\begin{openproblem}[Factorized inference]
+Determine when the decomposition $E_Q+E_W+E_U+E_{\mathrm{align}}$ supports exact dynamic programming, admissible lower bounds, or controlled approximation error.
+\end{openproblem}
+
+\begin{openproblem}[Translator soundness]
+For natural-language input, formalize a typed translator whose uncertainty and ambiguity are exposed to the Queen and whose malformed outputs force abstention rather than silent reinterpretation.
+\end{openproblem}
+
+\begin{openproblem}[Pheromone fixed points]
+Under stochastic deposits and bounded clamping, characterize invariant distributions, metastable false attractors, and conditions under which exploration prevents premature concentration.
+\end{openproblem}
+
+\chapter{Falsifiable AHR Research Program}
+
+\section{What the theory already establishes}
+
+Under explicit finite or compactness assumptions, the document establishes
+existence of a verified minimizer; the finite base theory additionally gives a
+deterministic selection. It also establishes soundness transfer, safe
+abstention, compatibility coherence, safe lower-bound pruning, conditional
+coverage completeness, perturbation robustness, and bounded pheromone memory.
+
+\section{What must be tested}
+
+The following claims are empirical and should be tested against flat, random, heuristic, and non-hierarchical energy baselines:
+
+\begin{itemize}
+  \item QWS factorization reduces verifier calls at fixed verified completion.
+  \item Pheromone memory improves long-range search rather than merely storing shortcut labels.
+  \item Three time scales outperform matched two-level and flat recurrence under equal parameters and compute.
+  \item Learned Queen lower bounds remain safe or expose quantified failure rates.
+  \item Scout novelty improves coverage without destroying sample efficiency.
+  \item Abstention is calibrated under representation and verifier shift.
+\end{itemize}
+
+\section{Minimal ablation lattice}
+
+Every serious AHR experiment should compare:
+\[
+\begin{array}{c}
+\text{flat search}\ \longrightarrow\ \text{energy ranking}\ \longrightarrow\
+\text{Queen/Worker}\ \longrightarrow\ \text{Queen/Worker/Scout}\\[2mm]
+\text{without pheromone}\ \longrightarrow\ \text{with pheromone}\\[2mm]
+\text{without hard verifier}\ \longrightarrow\ \text{with hard verifier and abstention}.
+\end{array}
+\]
+The last comparison is not a license to deploy an unverified system; it is an analysis of where correctness originates.
+
+\chapter{The Unified Definition}
+
+In the finite base theory, including its positive step-cost and finite-budget
+assumptions, for $\cB(x)\ne\varnothing$, let
+$\mathcal M_B(x)$ denote the minimizers of
+$E_{\mathrm{AHR}}(x,\cdot,\cdot)$ on $\cB(x)$, and select
+$(\tau^*,y^*)=\operatorname{Tie}(\mathcal M_B(x))$.
+
+\keybox{\large
+$\displaystyle
+\AHR_B(x)=
+\begin{cases}
+y^*,&\cB(x)\ne\varnothing,\\[2mm]
+\bot,&\cB(x)=\varnothing,
+\end{cases}$}
+
+where
+\[
+\cB(x)=\{(\tau,y):\tau\in\Om_{\mathrm{AHR}}(x),\ R(h_L)=y,\ V(x,\tau,y)=1,\ \cost_x(\tau)\le B\},
+\]
+\[
+T_{\mathrm{AHR}}=T_{\mathrm{dyn}}\cap
+\{(x,(q,w,u,s),a,h'):(q,w,u,s,a)\in\AQWS\},
+\]
+and
+\[
+E_{\mathrm{AHR}}=E_Q+E_W+E_U+E_{\mathrm{align}}+E_T+E_V+E_R+E_B.
+\]
+
+In one sentence:
+
+\keybox{\Large
+\textbf{AHR is a bounded, verifier-constrained, Queen/Worker/Scout-compatible energy search over structured reasoning trajectories.}}
+
+The mathematical identity of AHR lies in the simultaneous presence of:
+\begin{enumerate}[itemsep=0.12em,topsep=0.25em]
+  \item primitive Queen, Worker, and Scout role spaces;
+  \item the compatibility relation $\AQWS$;
+  \item hierarchical multi-timescale dynamics;
+  \item energy-based ranking with hard feasibility;
+  \item independent verification and abstention;
+  \item optional stigmergic shared memory linking exploration to later action.
+\end{enumerate}
+
+\appendix
+
+\chapter{Notation}
+
+{\small
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.22\textwidth}
+>{\RaggedRight\arraybackslash}p{0.68\textwidth}}
+\caption{Canonical AHR notation.}\\
+\toprule
+Symbol & Meaning \\
+\midrule
+\endfirsthead
+\toprule
+Symbol & Meaning \\
+\midrule
+\endhead
+$X,Y$ & Problem and answer spaces. \\
+$\Sol\subseteq X\times Y$ & External semantic solution relation. \\
+$G,F,M,\mathcal P,C$ & Goals, facts, memory, partial constructions, and constraints. \\
+$S=G\times F\times M\times\mathcal P\times C$ & Structured task state. \\
+$Q,W,U$ & Queen, Worker, and Scout state spaces. \\
+$H=Q\times W\times U\times S$ & Full hierarchical state space. \\
+$A_Q,A_W,A_U$ & Role action spaces. \\
+$A=A_Q\times A_W\times A_U$ & Joint action space. \\
+$\mathcal K$ & Scout branch universe. \\
+$\AQWS$ & QWS compatibility relation. \\
+$T_{\mathrm{dyn}}$ & Syntactically possible state evolution. \\
+$T_{\mathrm{AHR}}$ & Dynamic and QWS-compatible strict transitions. \\
+$I(x)$ & Admissible initial states for $x$. \\
+$\begin{gathered}\Om_{\mathrm{raw}}(x),\Om_{\mathrm{dyn}}(x),\\
+\Om_{\mathrm{AHR}}(x)\end{gathered}$ & Raw, dynamic, and strict trajectory spaces. \\
+$R$ & Terminal answer/certificate extraction. \\
+$V$ & Independent verifier. \\
+$V^{\mathrm{ext}}$ & Total rejection extension of $V$ to raw trajectories. \\
+$E_Q,E_W,E_U$ & Role-specific soft energies. \\
+$\begin{gathered}E_{\mathrm{align}},E_T,E_V,\\E_R,E_B\end{gathered}$ & Compatibility, transition, verifier, extraction, and budget energies. \\
+$\operatorname{stepCost},\cost_x$ & Problem-dependent step and trajectory costs. \\
+$\eps$ & Positive lower bound on the cost of every strict transition in the finite base theory. \\
+$B$ & Hard search budget. \\
+$\Delta(D)$ & Probability simplex on a finite nonempty set $D$. \\
+$\Pi=(\Pi_Q,\Pi_W,\Pi_U)$ & Role-factored search policy. \\
+$\varrho_t$ & Stigmergic or pheromone memory, when used. \\
+$\bot$ & Abstention/no certified answer. \\
+\bottomrule
+\end{longtable}
+}
+
+\chapter{Hard and Soft Energy Catalogue}
+
+\begin{longtable}{>{\bfseries\RaggedRight\arraybackslash}p{0.18\textwidth}
+>{\RaggedRight\arraybackslash}p{0.28\textwidth}
+>{\RaggedRight\arraybackslash}p{0.43\textwidth}}
+\caption{Energy semantics.}\\
+\toprule
+Term & Hard requirement & Typical finite preference \\
+\midrule
+\endfirsthead
+\toprule
+Term & Hard requirement & Typical finite preference \\
+\midrule
+\endhead
+$E_Q$ & Forbidden Queen decisions are excluded by compatibility or transitions. & Budget allocation, delayed verification, weak arbitration, unnecessary cycles. \\
+$E_W$ & Malformed Worker steps are excluded by compatibility or transitions. & Local detours, progress regression, repair cost, proof length. \\
+$E_U$ & Retained irrelevant branches violate compatibility. & Novelty, uncertainty, duplication, unsupported proposal cost. \\
+$E_{\mathrm{align}}$ & Its local summand is $0$ on $\AQWS$ and $+\infty$ outside; the trajectory term is zero exactly when every step is compatible. & Distance to compatibility for learning/repair only. \\
+$E_T$ & Its local summand is $0$ on $T_{\mathrm{dyn}}$ and $+\infty$ outside; the trajectory term is zero exactly when every transition is dynamic-legal. & None in the canonical hard term; finite smoothness belongs in a separate soft term. \\
+$E_V$ & $0$ for extended-verifier pass and $+\infty$ for fail or an out-of-domain trajectory. & None in the base emission rule. \\
+$E_R$ & $0$ when the trajectory claims $y$, otherwise $+\infty$. & None. \\
+$E_B$ & $0$ within budget and $+\infty$ beyond it. & Optional finite compute regularizer below the hard cap. \\
+\bottomrule
+\end{longtable}
+
+\chapter{Dependency Map of the Theory}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=9mm and 12mm, every node/.style={font=\scriptsize}]
+  \node[sys,fill=AHRLight] (sem) {$X,Y,\Sol$\\domain semantics};
+  \node[sys,right=of sem,fill=AHRLight] (prim) {$S,Q,W,U,H,A$\\primitive spaces};
+  \node[sys,right=of prim,fill=AHRLight] (comp) {$\AQWS$\\compatibility};
+  \node[sys,below=of prim,fill=AHRBlue!8,draw=AHRBlue] (traj) {$T_{\mathrm{AHR}},\Om,R$\\strict trajectories};
+  \node[sys,left=of traj,fill=AHRGreen!8,draw=AHRGreen] (ver) {$V$ and verifier\\domain soundness};
+  \node[sys,right=of traj,fill=AHRGold!10,draw=AHRGold] (energy) {$E_{\mathrm{AHR}}$\\hard + soft energy};
+  \node[sys,below=of traj,fill=AHRLight] (cand) {$\cB(x)$ and $\AHR_B$\\objective/abstention};
+  \node[sys,below left=of cand,fill=AHRGreen!8,draw=AHRGreen] (sound) {soundness\\transfer};
+  \node[sys,below right=of cand,fill=AHRTeal!8,draw=AHRTeal] (search) {pruning, coverage,\\complexity};
+
+  \draw[flow] (sem)--(ver);
+  \draw[flow] (prim)--(traj);
+  \draw[flow] (comp)--(traj);
+  \draw[flow] (comp)--(energy);
+  \draw[flow] (traj)--(cand);
+  \draw[flow] (energy)--(cand);
+  \draw[flow] (ver)--(cand);
+  \draw[flow] (cand)--(sound);
+  \draw[flow] (ver)--(sound);
+  \draw[flow] (cand)--(search);
+  \draw[flow] (energy)--(search);
+\end{tikzpicture}
+\caption[Logical dependencies of the AHR theory.]{Logical dependencies. The verifier bridges internal certificates to external semantics; search theorems depend on the objective and on extra coverage/pruning assumptions.}
+\label{fig:dependencies}
+\end{figure}
+
+\chapter{Source Synthesis Map}
+
+This monograph integrates the theory corpus by concept rather than concatenating duplicate drafts.
+
+\begin{longtable}{>{\bfseries\RaggedRight\arraybackslash}p{0.23\textwidth}
+>{\RaggedRight\arraybackslash}p{0.34\textwidth}
+>{\RaggedRight\arraybackslash}p{0.33\textwidth}}
+\caption{How the AHR paper corpus contributes to the unified theory.}\\
+\toprule
+Source family & Integrated contribution & Treatment here \\
+\midrule
+\endfirsthead
+\toprule
+Source family & Integrated contribution & Treatment here \\
+\midrule
+\endhead
+Original AntHill Reasoner paper \cite{FalkenburgAHRDesign2026} & Three time scales, pheromone memory, variational prior, stability, detached training, adaptive halting. & Origin and Design Commitments; Primitive Structure; Stigmergic Memory; Complexity and Training; Learning Hierarchical Energies. \\
+Mathematical foundation draft \cite{FalkenburgAHRFoundation2026} & Semantic relation, exact role spaces, QWS compatibility, energy decomposition, abstention, theorems, finite proof model. & The full foundational and guarantee parts, with domain, notation, and proof corrections. \\
+AHR verified-reasoning reports \cite{FalkenburgVerified2026} & Finite typed candidates, independent verifier, repair, branch cost, careful scope claims. & Semantic Contract; Objective and Search; Guarantees; domain instantiations; research program. \\
+AHR-CSP and medical-logic reports \cite{FalkenburgAHRCSP2026} & Finite CSP energy, non-unique validity, temporal constraints, rule revision, abstention need. & Finite Constraint Satisfaction and Temporal Reasoning; empirical metrics are not axioms. \\
+Lean-AHR reports \cite{FalkenburgLeanAHR2026} & Proof-state search, local versus future validity, top-$k$ branching, entropy view. & Proof-Assistant Search and the evidence ledger. \\
+Diophantine Slot Machine and Brocard AHR papers & Grammar-constrained symbolic search, exact certificates, bounded completeness, number-theory case states. & Symbolic and Diophantine Proof Search; domain claims remain separate. \\
+Saved experiment artifacts \cite{FalkenburgExperimentArchive2026,FalkenburgSudokuLocalBundle2026,FalkenburgProvenanceManifest2026} & Exact saved metrics, split sizes, architecture fields, verifier counts, failure counts, paths, and SHA-256 digests. & Empirical Evidence and Its Exact Scope, with explicit limitations. \\
+HRM and recurrent-reasoning literature & Multi-timescale recurrent computation and efficient depth. & Origin; Primitive Structure; Complexity and Training. AHR adds a third role, compatibility, stigmergy, and hard verification. \\
+Energy-based learning literature & Extended-real constraints, structured energies, margin learning, inference by minimization. & Stigmergic Memory; Energy Functional; margins; Learning Hierarchical Energies. \\
+ACO/stigmergy literature & Evaporation-deposition memory and distributed search. & Stigmergic Memory and Energy-Based Dynamics, translated into bounded differentiable dynamics. \\
+\bottomrule
+\end{longtable}
+
+\backmatter
+
+\begin{thebibliography}{99}
+
+\bibitem{FalkenburgAHRFoundation2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR: Ant Hill Reasoning -- Mathematical Foundation}.
+\newblock Unpublished local mathematical specification, source draft supplied
+5 July 2026.
+
+\bibitem{FalkenburgAHRDesign2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AntHill Reasoner (AHR): Stigmergic Hierarchical Recurrent
+Transformers for Single-Pass Reasoning}.
+\newblock Unpublished local design manuscript; audited PDF created
+2 January 2026.
+
+\bibitem{FalkenburgVerified2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR Verified Reasoning Full Progress Report: Mathematics, Engineering, Experiments, Results, and Next Roadmap}.
+\newblock Unpublished local research report, 9 May 2026.
+
+\bibitem{FalkenburgLeanAHR2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{Lean-AHR Focused Progress Report: Proof-State Search, Branch Energy, Current Capability, and Roadmap}.
+\newblock Unpublished local research report, 20 May 2026.
+
+\bibitem{FalkenburgAHRCSP2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR-CSP and Synthetic Medical Logic Focused Report: Finite Constraint Reasoning, Repair, Temporal Logic, and Next Roadmap}.
+\newblock Unpublished local research report, 20 May 2026.
+
+\bibitem{FalkenburgDSM2025}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{The Diophantine Slot Machine: A Token-Sequence Framework for Symbolic Proof Search in Number Theory}.
+\newblock Unpublished, undated local research manuscript; audited PDF created
+10 August 2025.
+
+\bibitem{FalkenburgBrocardAHR2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{A Rigorous Brocard--CSP and AHR--CSP Program: Pure
+Mathematics, Certificate Soundness, Arithmetic AHR Design, and a Codex
+Build--Train--Solve Contract}.
+\newblock Unpublished local mathematical specification, May 2026.
+
+\bibitem{FalkenburgBrocardCases2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{Brocard Cases as Explicit CSPs and an AHR Arithmetic Solver
+Program: A Detailed Analytical Case Descent, Certificate Framework, and Codex
+Build--Train--Solve Specification}.
+\newblock Unpublished local mathematical specification, May 2026.
+
+\bibitem{FalkenburgExperimentArchive2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR Verified Reasoning: Consolidated Experiment Archive}.
+\newblock Private GitHub repository snapshot,
+commit \texttt{0e57d184a118},
+25 June 2026.
+\newblock
+\href{https://github.com/BoredDuffa/ahr-verified-reasoning-20260509/tree/0e57d184a1189fd0abf084345bc4ecbad262f30a}
+{Repository snapshot}.
+
+\bibitem{FalkenburgSudokuNotebooks2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR Sudoku Notebooks: Hybrid and Pure-Neural AHR-Lite/HRM
+Solvers}.
+\newblock Private GitHub repository \texttt{BoredDuffa/ahr},
+commit \texttt{722d820c1e09},
+18 May 2026.
+\newblock
+\href{https://github.com/BoredDuffa/ahr/tree/722d820c1e098b0a7f85efc5735cbb5eecff3620/notebooks}
+{Notebook snapshot}.
+
+\bibitem{FalkenburgSudokuLocalBundle2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR Sudoku Local Result Bundle}.
+\newblock Unpublished experiment archive, 2026. Audited files:
+\texttt{ahr\_working\_hybrid\_sudoku\_notebook.ipynb},
+\texttt{ahr\_pure\_neural\_sudoku\_notebook.ipynb},
+\texttt{ahr\_stress\_test\_results.csv},
+\texttt{ahr\_stress\_test\_summary.csv}, and
+\texttt{ahr\_lite\_hrm\_pure\_best.history.json}.
+
+\bibitem{FalkenburgProvenanceManifest2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR Unified Mathematical Theory: Source and Evidence
+Provenance Manifest}.
+\newblock Local companion file
+\texttt{AHR\_Source\_and\_Evidence\_Manifest.txt}, 23 July 2026.
+
+\bibitem{FalkenburgAHRCSPPhase5r9}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR-CSP Phase 5r9: Sequence-Factored Length-3 Stable Full-GPU
+Milestone Package and Split Report}.
+\newblock Saved experiment artifact, 9 May 2026, in the consolidated private
+experiment archive.
+\newblock
+\href{https://github.com/BoredDuffa/ahr-verified-reasoning-20260509/tree/0e57d184a1189fd0abf084345bc4ecbad262f30a/plans/research_plans/ahr_csp_phase5r9_milestone_20260509}
+{Milestone directory}.
+
+\bibitem{FalkenburgMultiFamilyRanker2026}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{AHR Multifamily 5M Ranker v0 Report}.
+\newblock Saved experiment artifact, 16 June 2026, in the consolidated private
+experiment archive.
+\newblock
+\href{https://github.com/BoredDuffa/ahr-verified-reasoning-20260509/blob/0e57d184a1189fd0abf084345bc4ecbad262f30a/reports/ahr_multifamily_5m_ranker_v0_report_20260616.json}
+{Archived report}.
+
+\bibitem{FalkenburgLeanV36}
+Benjamin A. Aenlle Falkenburg.
+\newblock \emph{Lean-AHR v3.6 Offset-50 Translation Repair and Held-Out Proof
+Rerun: Milestone Summary}.
+\newblock Saved experiment artifact, 17 June 2026, in the consolidated private
+experiment archive.
+\newblock
+\href{https://github.com/BoredDuffa/ahr-verified-reasoning-20260509/blob/0e57d184a1189fd0abf084345bc4ecbad262f30a/remote_tools/remote_lean_34_70_49_55_20260617/v3_6_offset50_translation_repair/MILESTONE_SUMMARY.json}
+{Archived summary}.
+
+\bibitem{SapientSudokuExtreme2026}
+Sapient Intelligence.
+\newblock \emph{Hardest Sudoku Puzzle Dataset V2
+(\texttt{sapientinc/sudoku-extreme})}.
+\newblock Hugging Face dataset, revision
+\texttt{58942f96baeb},
+last modified 17 October 2024; accessed 23 July 2026.
+\newblock
+\href{https://huggingface.co/datasets/sapientinc/sudoku-extreme/tree/58942f96baeb572ca3127e2a9e9c70f330783d6b}
+{Dataset snapshot}.
+
+\bibitem{AzerbayevProofNet2023}
+Zhangir Azerbayev, Bartosz Piotrowski, Hailey Schoelkopf, Edward W. Ayers,
+Dragomir Radev, and Jeremy Avigad.
+\newblock ProofNet: Autoformalizing and formally proving undergraduate-level
+mathematics.
+\newblock arXiv:2302.12433v1 [cs.CL], 24 February 2023.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2302.12433}
+{doi:10.48550/arXiv.2302.12433}.
+
+\bibitem{WangHRM2025}
+Guan Wang, Jin Li, Yuhao Sun, Xing Chen, Changling Liu, Yue Wu, Meng Lu,
+Sen Song, and Yasin Abbasi Yadkori.
+\newblock Hierarchical reasoning model.
+\newblock arXiv:2506.21734v3 [cs.AI], 4 August 2025.
+\newblock \href{https://doi.org/10.48550/arXiv.2506.21734}
+{doi:10.48550/arXiv.2506.21734}.
+
+\bibitem{LeCunEBM2006}
+Yann LeCun, Sumit Chopra, Raia Hadsell, Marc'Aurelio Ranzato, and Fu-Jie
+Huang.
+\newblock A tutorial on energy-based learning.
+\newblock In G\"okhan Bak{\i}r, Thomas Hofmann, Bernhard Sch\"olkopf, Alexander J.
+Smola, Ben Taskar, and S. V. N. Vishwanathan, editors,
+\emph{Predicting Structured Data}. MIT Press, 27 July 2007.
+\newblock Author manuscript version 1.0 dated 19 August 2006.
+\newblock \url{https://yann.lecun.org/exdb/publis/pdf/lecun-06.pdf}.
+\newblock Book record:
+\url{https://mitpress.mit.edu/9780262528047/predicting-structured-data/}.
+
+\bibitem{BelangerSPEN2016}
+David Belanger and Andrew McCallum.
+\newblock Structured prediction energy networks.
+\newblock In Maria Florina Balcan and Kilian Q. Weinberger, editors,
+\emph{Proceedings of the 33rd International Conference on Machine Learning},
+volume 48 of \emph{Proceedings of Machine Learning Research}, pages 983--992,
+2016.
+\newblock \url{https://proceedings.mlr.press/v48/belanger16.html}.
+
+\bibitem{DorigoACO1996}
+Marco Dorigo, Vittorio Maniezzo, and Alberto Colorni.
+\newblock Ant system: Optimization by a colony of cooperating agents.
+\newblock \emph{IEEE Transactions on Systems, Man, and Cybernetics, Part B
+(Cybernetics)}, 26(1):29--41, February 1996.
+\newblock \href{https://doi.org/10.1109/3477.484436}
+{doi:10.1109/3477.484436}.
+
+\bibitem{DorigoGambardella1997}
+Marco Dorigo and Luca Maria Gambardella.
+\newblock Ant colony system: A cooperative learning approach to the traveling salesman problem.
+\newblock \emph{IEEE Transactions on Evolutionary Computation}, 1(1):53--66,
+April 1997.
+\newblock \href{https://doi.org/10.1109/4235.585892}
+{doi:10.1109/4235.585892}.
+
+\bibitem{StutzleHoos2000}
+Thomas St\"utzle and Holger H. Hoos.
+\newblock MAX--MIN ant system.
+\newblock \emph{Future Generation Computer Systems}, 16(8):889--914, June
+2000.
+\newblock \href{https://doi.org/10.1016/S0167-739X(00)00043-1}
+{doi:10.1016/S0167-739X(00)00043-1}.
+
+\bibitem{DorigoStutzle2004}
+Marco Dorigo and Thomas St\"utzle.
+\newblock \emph{Ant Colony Optimization}.
+\newblock MIT Press, 2004. Electronic ISBN 9780262256032.
+\newblock \href{https://doi.org/10.7551/mitpress/1290.001.0001}
+{doi:10.7551/mitpress/1290.001.0001}.
+
+\bibitem{TheraulazStigmergy1999}
+Guy Theraulaz and Eric Bonabeau.
+\newblock A brief history of stigmergy.
+\newblock \emph{Artificial Life}, 5(2):97--116, April 1999.
+\newblock \href{https://doi.org/10.1162/106454699568700}
+{doi:10.1162/106454699568700}.
+
+\bibitem{KiebelTimescales2008}
+Stefan J. Kiebel, Jean Daunizeau, and Karl J. Friston.
+\newblock A hierarchy of time-scales and the brain.
+\newblock \emph{PLoS Computational Biology}, 4(11):e1000209, 14 November 2008.
+\newblock \href{https://doi.org/10.1371/journal.pcbi.1000209}
+{doi:10.1371/journal.pcbi.1000209}.
+
+\bibitem{GravesACT2016}
+Alex Graves.
+\newblock Adaptive computation time for recurrent neural networks.
+\newblock arXiv:1603.08983v6 [cs.NE], submitted 29 March 2016; revised
+21 February 2017.
+\newblock \href{https://doi.org/10.48550/arXiv.1603.08983}
+{doi:10.48550/arXiv.1603.08983}.
+
+\bibitem{SuttonOptions1999}
+Richard S. Sutton, Doina Precup, and Satinder Singh.
+\newblock Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning.
+\newblock \emph{Artificial Intelligence}, 112(1--2):181--211, August 1999.
+\newblock \href{https://doi.org/10.1016/S0004-3702(99)00052-1}
+{doi:10.1016/S0004-3702(99)00052-1}.
+
+\bibitem{JaderbergSynthetic2017}
+Max Jaderberg, Wojciech Marian Czarnecki, Simon Osindero, Oriol Vinyals,
+Alex Graves, David Silver, and Koray Kavukcuoglu.
+\newblock Decoupled neural interfaces using synthetic gradients.
+\newblock In Doina Precup and Yee Whye Teh, editors,
+\emph{Proceedings of the 34th International Conference on Machine Learning},
+volume 70 of \emph{Proceedings of Machine Learning Research}, pages
+1627--1635, 2017.
+\newblock \url{https://proceedings.mlr.press/v70/jaderberg17a.html}.
+
+\bibitem{Matiyasevich1993}
+Yuri Matiyasevich.
+\newblock \emph{Hilbert's 10th Problem}.
+\newblock Foundations of Computing. MIT Press, 13 October 1993.
+\newblock ISBN 978-0-262-13295-4.
+\newblock
+\url{https://mitpress.mit.edu/9780262132954/hilberts-10th-problem/}.
+
+\end{thebibliography}
+
+\end{document}

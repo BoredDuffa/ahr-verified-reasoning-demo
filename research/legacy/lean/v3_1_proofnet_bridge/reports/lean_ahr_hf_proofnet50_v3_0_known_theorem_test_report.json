@@ -1,0 +1,17 @@
+{
+  "config": "plain_text",
+  "dataset": "hoskinson-center/proofnet",
+  "elapsed_s": 1036.464,
+  "failure_reason_counts": {
+    "no_verified_known_theorem_wrapper_found": 50
+  },
+  "input_path": "datasets/lean_ahr_hf_proofnet50_questions.jsonl",
+  "interpretation": "ProofNet questions are arbitrary theorem-proving tasks; current v3.0 only retrieves and wraps existing mathlib theorems. Wrapper verification alone does not prove the original dataset question unless semantic alignment is established.",
+  "known_theorem_wrapper_verified_count": 0,
+  "record_count": 50,
+  "records_path": "datasets/lean_ahr_hf_proofnet50_v3_0_known_theorem_test_records.jsonl",
+  "run_name": "lean_ahr_hf_proofnet50_v3_0_known_theorem_test",
+  "schema": "ahr_lean_hf_proofnet50_v3_0_report",
+  "semantic_alignment_heuristic_count": 7,
+  "split": "test"
+}

@@ -1,0 +1,451 @@
+{
+  "config": {
+    "batch_size": 2,
+    "board_size": 9,
+    "empty_board_baseline": true,
+    "komi": 7.5,
+    "max_opening_attempts": 128,
+    "opening_plies": 8,
+    "opening_temperature": 1.25,
+    "profiles": [
+      {
+        "games": 8,
+        "id": "gnugo10",
+        "kind": "gnugo",
+        "level": 10
+      }
+    ],
+    "run_id": "benchmark17-protocol-3da55e47-full",
+    "seed": 2026100917,
+    "speed_devices": [
+      "cpu"
+    ],
+    "speed_max_simulations": 8,
+    "speed_move_seconds": [
+      null
+    ],
+    "speed_positions": 3,
+    "speed_reading_wall_time_seconds": null
+  },
+  "coverage": {
+    "attempts": 5,
+    "balanced_pairs": 4,
+    "development_family_overlap": 0,
+    "empty_board_pairs": 1,
+    "fresh_opening_families": 3,
+    "games": 8,
+    "opening_plies": 8,
+    "prior_review_family_overlap": 0,
+    "training_family_overlap": 0
+  },
+  "games": [
+    {
+      "ahr_color": 1,
+      "family_sha": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "game_index": 0,
+      "opening_actions": [],
+      "opening_family": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "opening_id": "empty-baseline",
+      "opening_provenance": "empty-board reference",
+      "opponent_profile": "gnugo10",
+      "pair_id": 0,
+      "paired_game_index": 1,
+      "profile": "gnugo10",
+      "seed": 2026100917
+    },
+    {
+      "ahr_color": -1,
+      "family_sha": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "game_index": 1,
+      "opening_actions": [],
+      "opening_family": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "opening_id": "empty-baseline",
+      "opening_provenance": "empty-board reference",
+      "opponent_profile": "gnugo10",
+      "pair_id": 0,
+      "paired_game_index": 0,
+      "profile": "gnugo10",
+      "seed": 2026100917
+    },
+    {
+      "ahr_color": 1,
+      "family_sha": "0e00a9e0e2bd2047c7a5854d985a2718bb2e0b83869f2be18b86260fc8770f21",
+      "game_index": 2,
+      "opening_actions": [
+        42,
+        39,
+        56,
+        41,
+        33,
+        60,
+        38,
+        29
+      ],
+      "opening_family": "0e00a9e0e2bd2047c7a5854d985a2718bb2e0b83869f2be18b86260fc8770f21",
+      "opening_id": "opening-001",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "gnugo10",
+      "pair_id": 1,
+      "paired_game_index": 3,
+      "profile": "gnugo10",
+      "seed": 2026100918
+    },
+    {
+      "ahr_color": -1,
+      "family_sha": "0e00a9e0e2bd2047c7a5854d985a2718bb2e0b83869f2be18b86260fc8770f21",
+      "game_index": 3,
+      "opening_actions": [
+        42,
+        39,
+        56,
+        41,
+        33,
+        60,
+        38,
+        29
+      ],
+      "opening_family": "0e00a9e0e2bd2047c7a5854d985a2718bb2e0b83869f2be18b86260fc8770f21",
+      "opening_id": "opening-001",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "gnugo10",
+      "pair_id": 1,
+      "paired_game_index": 2,
+      "profile": "gnugo10",
+      "seed": 2026100918
+    },
+    {
+      "ahr_color": 1,
+      "family_sha": "33570bcb16a05dd72788c49ed7422223d25aa1a7015058dd3244ff6af14e9300",
+      "game_index": 4,
+      "opening_actions": [
+        9,
+        45,
+        32,
+        39,
+        49,
+        48,
+        57,
+        40
+      ],
+      "opening_family": "33570bcb16a05dd72788c49ed7422223d25aa1a7015058dd3244ff6af14e9300",
+      "opening_id": "opening-002",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "gnugo10",
+      "pair_id": 2,
+      "paired_game_index": 5,
+      "profile": "gnugo10",
+      "seed": 2026100919
+    },
+    {
+      "ahr_color": -1,
+      "family_sha": "33570bcb16a05dd72788c49ed7422223d25aa1a7015058dd3244ff6af14e9300",
+      "game_index": 5,
+      "opening_actions": [
+        9,
+        45,
+        32,
+        39,
+        49,
+        48,
+        57,
+        40
+      ],
+      "opening_family": "33570bcb16a05dd72788c49ed7422223d25aa1a7015058dd3244ff6af14e9300",
+      "opening_id": "opening-002",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "gnugo10",
+      "pair_id": 2,
+      "paired_game_index": 4,
+      "profile": "gnugo10",
+      "seed": 2026100919
+    },
+    {
+      "ahr_color": 1,
+      "family_sha": "4941b455bd3e36c0de1dacdc93dc6824e1a239b983632577be483706ae42b707",
+      "game_index": 6,
+      "opening_actions": [
+        41,
+        38,
+        39,
+        47,
+        29,
+        48,
+        58,
+        30
+      ],
+      "opening_family": "4941b455bd3e36c0de1dacdc93dc6824e1a239b983632577be483706ae42b707",
+      "opening_id": "opening-003",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "gnugo10",
+      "pair_id": 3,
+      "paired_game_index": 7,
+      "profile": "gnugo10",
+      "seed": 2026100920
+    },
+    {
+      "ahr_color": -1,
+      "family_sha": "4941b455bd3e36c0de1dacdc93dc6824e1a239b983632577be483706ae42b707",
+      "game_index": 7,
+      "opening_actions": [
+        41,
+        38,
+        39,
+        47,
+        29,
+        48,
+        58,
+        30
+      ],
+      "opening_family": "4941b455bd3e36c0de1dacdc93dc6824e1a239b983632577be483706ae42b707",
+      "opening_id": "opening-003",
+      "opening_provenance": "frozen champion Scout, sampled without replacement by canonical D4 opening family",
+      "opponent_profile": "gnugo10",
+      "pair_id": 3,
+      "paired_game_index": 6,
+      "profile": "gnugo10",
+      "seed": 2026100920
+    }
+  ],
+  "identity": {
+    "config": {
+      "batch_size": 2,
+      "board_size": 9,
+      "empty_board_baseline": true,
+      "komi": 7.5,
+      "max_opening_attempts": 128,
+      "opening_plies": 8,
+      "opening_temperature": 1.25,
+      "profiles": [
+        {
+          "games": 8,
+          "id": "gnugo10",
+          "kind": "gnugo",
+          "level": 10
+        }
+      ],
+      "run_id": "benchmark17-protocol-3da55e47-full",
+      "seed": 2026100917,
+      "speed_devices": [
+        "cpu"
+      ],
+      "speed_max_simulations": 8,
+      "speed_move_seconds": [
+        null
+      ],
+      "speed_positions": 3,
+      "speed_reading_wall_time_seconds": null
+    },
+    "data": {
+      "cache_identity": "dc1a57da4dc9e170e9d77d00219b5fdbc4106abf4caa518757bf2dc3332258ab",
+      "excluded_dev_sha": "e066b3e2d0b7f336f88fa45ba81d3d1e5226f4b108c46fda4c9397c2142eb0a2",
+      "excluded_prior_sha": "704cedde44fd069d71583434844cb47a0e25a68c72a76512371ae7f6920731f4",
+      "excluded_train_sha": "4fdd6a09d56a75a88c0bd76a1251d77831ffd0c1ca328eecc61bfc8d55404fc0",
+      "prior_reviews": [
+        {
+          "families": 5,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-final-dev-752/report.json",
+          "sha256": "b3c1d6e26d450bde6887a2826c749183e8db50354046858ec50ac172e3bfb3d6"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-256/report.json",
+          "sha256": "45808a027b0879750f5c9a27cc8cfa8f21bfe781339db579494ec243240f348a"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-456/report.json",
+          "sha256": "756392e6102fdaac4fc762aa9adf88e939d0a5c4aa8e50ac4d87893d2f4d8141"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-584/report.json",
+          "sha256": "7581fca18b07f2683dd61d015a1a3efa4834999cd9ee097ab23f5fd99a8c90cc"
+        },
+        {
+          "families": 2,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-repair-20261007-8h-periodic-dev-728/report.json",
+          "sha256": "a04df3bbfd31d1b513b2abe39491de90b8aa90026a0bf7ebf19ecba28cf0587c"
+        },
+        {
+          "families": 7,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-final-dev-6080/report.json",
+          "sha256": "8a4a625d44dbaf8e7c8746dc1840de45d4e42f9c1c9e6fc53cde8a07f37b8ced"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-1920/report.json",
+          "sha256": "27d28474f3e5eceb295892a209e68539f21d00ee1423db41bc9293207494ba98"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-3264/report.json",
+          "sha256": "c4fd39aa9d7e3c6cacf337b4046252c8a38cc570e39920a62d42d62bb998688b"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-3904/report.json",
+          "sha256": "dd410d9b59359f4c856f98108e5a71d84d3036a5ba419b09313e6222abac9d6a"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-4512/report.json",
+          "sha256": "4c96d19a2aed7a2557b80e919e1103a89ae7382bd985a3b1efc381a3be408ad6"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-5216/report.json",
+          "sha256": "69cd43e65432760b42e61932b3a74816b3ec111f639acb0654f10ed28cef9943"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-selfplay-20261006-12h-periodic-dev-5856/report.json",
+          "sha256": "16f09bd9957f952a748dc5cf77c32109a79c00b9a8aebc7e594a21e203e955e8"
+        },
+        {
+          "families": 5,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-comparison-dev-11724/report.json",
+          "sha256": "14e11f808e9b594c13812e4d6b1e682eb79d497ef19db1fa5955b6c22a5b7b91"
+        },
+        {
+          "families": 5,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-comparison-dev-8016/report.json",
+          "sha256": "845f8c70989d0a987b9ae7bf895dabd4ed3f8eef52195abba7a8e7fc29ebbd2a"
+        },
+        {
+          "families": 7,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-gnu-level-10-dev/report.json",
+          "sha256": "d956cf00eeb6c091bf81d90618008520009f0e7df4ec320f6d6183ee80875710"
+        },
+        {
+          "families": 7,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-gnu-level-5-dev/report.json",
+          "sha256": "137c7edab56ffc95be42807485653a2602b297354e7d65a083227d19ce40d8bf"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-periodic-dev-2054/report.json",
+          "sha256": "3f26b942a16063a465be367b62b7ce187c3090890bfe5402e1be4262e4a77cbe"
+        },
+        {
+          "families": 4,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-periodic-dev-8016/report.json",
+          "sha256": "e15b683c9a705b12fb92cda73a2c371d76684b5ac154011dc4477fae3d7ecccd"
+        },
+        {
+          "families": 11,
+          "file": "reports/ahr_v2/evaluations/ahr-v2-teacher-20261008-selected-confirmation-dev/report.json",
+          "sha256": "6cfb9baf80772cc129b187b45156d875751881389887fc83cd11c62ec9d18cb4"
+        }
+      ]
+    },
+    "model": {
+      "checkpoint_file": "playing_candidates/step-000008016-c19b207e.pt",
+      "checkpoint_sha256": "e7d1126c4ca962adb6eebcf5754341c4e6f1f3eb8396549e0fb8ee11e47fc1aa",
+      "model_identity": "0e8ba8c5405815f7499945d4b83f3020a2ecbedf403227e8d532260da5b1df71",
+      "run_id": "ahr-v2-teacher-20261008"
+    },
+    "sources": {
+      "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+      "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+      "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+      "experiments/ahr_v2/03_batched_puct_search.ipynb": "819dd5cdc7c47ee3b35bf8c8fc4d9b9b6770ef44892b914b73a47ab86d3c4faa",
+      "experiments/ahr_v2/05_evaluation_and_progress.ipynb": "6c37a715cb398228fcfe745ebef9be7c47e546fd7970b58f789cfc0075264928",
+      "experiments/ahr_v2/08_tactical_constraints_and_search.ipynb": "8a2f8ad6a6afc77b6243df2eb13a1827c1c855902cc901b27304a05006fde282",
+      "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+      "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c",
+      "experiments/ahr_v2/14_worker_reading_and_search.ipynb": "3681d59ac82497fe9d31ebe37ba39176c4608c1f87cfb0adb0b15ec8286070fa",
+      "experiments/ahr_v2/15_teacher_evaluation_and_launch.ipynb": "dae4174c601f16b2c0f1638b102891453530497967e4aaceb57cc46fb67ad4f7",
+      "experiments/ahr_v2/16_play_teacher_trained_player.ipynb": "abeab3a8a84d5d97d133c9522e1f9a698547ce4c42695d3d840af2bfa42d1b46",
+      "experiments/ahr_v2/17_strength_and_speed_benchmarks.ipynb": "db1b05319d84d897bba037b0246973ef882208821dd78d2c89a19d6cd481150b"
+    },
+    "stage": "opening-plan"
+  },
+  "model": {
+    "best_selection_basis": "Matched 8-game GNU Go level-1 development comparison, equal 128-visit AHR budget; selection is not a final/lockbox result",
+    "checkpoint_file": "playing_candidates/step-000008016-c19b207e.pt",
+    "checkpoint_sha256": "e7d1126c4ca962adb6eebcf5754341c4e6f1f3eb8396549e0fb8ee11e47fc1aa",
+    "config": {
+      "batch_size": 512,
+      "board_size": 9,
+      "cache_id": "go9x9-teacher-v1",
+      "checkpoint_optimizer_steps": 100,
+      "checkpoint_seconds": 120,
+      "cpu_threads": 4,
+      "development_rows": 2048,
+      "device": "cuda:1",
+      "evaluate_every_steps": 500,
+      "gradient_clip": 2.0,
+      "is_smoke": false,
+      "learning_rate": 0.0005,
+      "loss_weights": {
+        "game_outcome": 0.0,
+        "ownership": 0.25,
+        "policy": 1.0,
+        "score": 0.5,
+        "teacher_value": 1.0
+      },
+      "max_epochs": 12,
+      "max_optimizer_steps": 11724,
+      "minimum_lr_fraction": 0.1,
+      "network": {
+        "blocks": 6,
+        "width": 96
+      },
+      "precision": "bfloat16",
+      "run_id": "ahr-v2-teacher-20261008",
+      "schema": "ahr-go-v2-teacher-training-v1",
+      "seed": 260810,
+      "shuffle_block_rows": 16384,
+      "time_budget_hours": 8.0,
+      "train_rows_limit": null,
+      "training_source": "quintic_go9x9_katago_teacher_and_recorded_game_outcomes",
+      "value_target_mapping": "signed_teacher_scalar_to_soft_loss_win_no_draw_claim",
+      "warmup_steps": 200,
+      "weight_decay": 0.0001
+    },
+    "data_identity": {
+      "cache_id": "/home/benjamin/workspace/ahr_go/data/ahr_v2_teacher/prepared/go9x9-teacher-v1",
+      "dataset": "quintic/go9x9",
+      "manifest_sha256": "28395ffde1d3260400009b1c6564e0ea970bfc7d80e2c5932ad7162999c2b31e",
+      "target_provenance": "teacher_estimates_and_distinct_observed_outcomes"
+    },
+    "development": {
+      "duration_seconds": 0.0812443729955703,
+      "joint_loss": 2.451500177383423,
+      "observed_outcome_accuracy": 0.7986577181208053,
+      "observed_outcome_brier": 0.29730190046681654,
+      "observed_outcome_rows": 894,
+      "optimizer_step": 7816,
+      "policy_cross_entropy": 2.1012452244758606,
+      "policy_kl": 0.4232422709465027,
+      "policy_top1_agreement": 0.61279296875,
+      "rows": 2048,
+      "selection_basis": "fixed_official_development_joint_loss_not_playing_strength",
+      "selection_score": 2.451500177383423,
+      "teacher_score_mae_points": 5.067473338535301,
+      "teacher_score_rows": 1972,
+      "teacher_value_mse": 0.18511611968278885,
+      "teacher_win_probability_brier": 0.04627908766269684
+    },
+    "global_step": 8016,
+    "is_smoke": false,
+    "label": "Teacher-trained AHR playing candidate",
+    "model_identity": "0e8ba8c5405815f7499945d4b83f3020a2ecbedf403227e8d532260da5b1df71",
+    "optimizer_step": 8016,
+    "run_id": "ahr-v2-teacher-20261008",
+    "sources": {
+      "experiments/ahr_v2/00_contracts_and_recovery.ipynb": "e83e43366bca870d2a4f54649a6a19022cbbd575629932483eea318101f6773b",
+      "experiments/ahr_v2/01_rules_and_replay.ipynb": "0825e43112e5d4c36d1deaf048d368261bba113ab1a8bf0d450e0556528401a2",
+      "experiments/ahr_v2/02_scout_worker_network.ipynb": "4dc091ae17169ec3d435b2ab3f6549c2559d43961b8924df0e5441676b3970e8",
+      "experiments/ahr_v2/12_teacher_dataset_and_targets.ipynb": "aa10282ac29c59e8609629233724837db486467b4bc7c537c62bb356e58073ee",
+      "experiments/ahr_v2/13_teacher_pretraining_and_recovery.ipynb": "4c145a1e5312973eb231798494bdda237b796f55279277f29731d19de7f4166c"
+    },
+    "training_source": "quintic_go9x9_katago_teacher_and_recorded_game_outcomes"
+  },
+  "provenance": "Frozen champion Scout sampled legal openings; no outcomes or winning labels.",
+  "run_id": "benchmark17-protocol-3da55e47-full",
+  "schema": "ahr-v2-benchmark-plan-v1",
+  "status": "COMPLETE",
+  "test_payload_consumed": false,
+  "updated_at_utc": "2026-10-09T15:52:17.784886+00:00"
+}

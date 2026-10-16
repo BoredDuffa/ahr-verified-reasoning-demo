@@ -1,0 +1,8 @@
+{
+  "corruption_rejected": true,
+  "latest_two_and_best": true,
+  "resumed_child_step": 42,
+  "resumed_step": 2,
+  "run_id": "ahr-native-v4-controller-smoke-e093bbceec",
+  "status": "PASS"
+}

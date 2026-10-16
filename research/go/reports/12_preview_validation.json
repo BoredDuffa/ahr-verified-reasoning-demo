@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "html": "reports/12_play_preview.html",
+  "html_sha256": "8feef598f4e3f32d26ba9a030fd6aa4f706c043c6a100f6093c72415daa7ddd1",
+  "structural_checks": {
+    "Play and watch AHR Go": true,
+    "Saved-game integrity": true,
+    "Game controller": true,
+    "Board and notebook controls": true,
+    "Functional and recovery checks": true,
+    "Play or watch": true,
+    "Portable board and validation receipt": true,
+    "application/vnd.jupyter.widget-state+json": true,
+    "data:image/png;base64,": true
+  },
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "error_outputs": [],
+  "image_visual_review": "PASS: board PNG inspected with view_image",
+  "widget_browser_layout_review": "NOT_PERFORMED_NO_BROWSER_VIEWER"
+}

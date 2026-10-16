@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "points": 81,
+  "horizontal_overflow": false,
+  "widget_errors": 0,
+  "full_run_launched": false,
+  "screenshots": [
+    "presentation-top.png",
+    "presentation-evidence.png",
+    "presentation-player.png"
+  ],
+  "visual_review": "PASS: title, instructions, historical charts, progress controls and complete 81-intersection player panel inspected; no clipped labels or horizontal overflow."
+}
