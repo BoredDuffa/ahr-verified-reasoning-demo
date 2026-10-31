@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AHR Go — recorded 9×9 results</title>
+  <meta name="description" content="Recorded 9×9 Go results for AHR v2: 31/40 against GNU Go level 10, 0/60 against KataGo, with protocols, intervals and limitations.">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .research-shell { max-width: 1040px; margin: 0 auto; padding: 40px 24px 64px; }
+    .research-shell h1 { max-width: 800px; margin: 16px 0 20px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; }
+    .research-shell h2 { margin: 36px 0 12px; font-size: 1.3rem; }
+    .research-shell p, .research-shell li { line-height: 1.65; }
+    .research-shell a { color: #075e66; text-underline-offset: 3px; }
+    .intro { max-width: 780px; font-size: 1.08rem; }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 28px 0; }
+    .stat { background: white; border: 1px solid var(--line); padding: 20px 22px; }
+    .stat .big { font-size: 2.2rem; font-weight: 700; line-height: 1.1; }
+    .stat .big.win { color: var(--ok); }
+    .stat .big.loss { color: var(--accent-2); }
+    .stat p { margin: 6px 0 0; color: #526570; font-size: .92rem; line-height: 1.45; }
+    .panel { background: white; border: 1px solid var(--line); padding: 22px 24px; margin-top: 16px; }
+    .chart { width: 100%; height: auto; display: block; }
+    .legend { color: #526570; font-size: .85rem; margin: 8px 0 0; }
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; background: white; }
+    th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+    th { color: #526570; font-weight: 600; font-size: .82rem; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); }
+    .play { border-left: 4px solid var(--accent-2); background: #fbf6f3; padding: 22px 24px; margin-top: 16px; }
+    .research-note { margin-top: 16px; padding: 22px 24px; background: #f7fafc; border-left: 4px solid var(--accent); }
+    .research-note ul { margin: 8px 0 0; padding-left: 20px; }
+    .research-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 24px 0 8px; }
+    .research-footer { margin-top: 30px; color: #526570; font-size: .9rem; }
+    @media (max-width: 700px) { .stats { grid-template-columns: 1fr; } .research-shell { padding: 28px 18px 44px; } }
+  </style>
+</head>
+<body>
+  <main class="research-shell">
+    <p class="eyebrow">Benjamin Falkenburg · Ant Hill Reasoning · Go</p>
+    <h1>AHR plays 9×9 Go.<br>Here is what it did and did not win.</h1>
+    <p class="intro">A compact (1,053,799-parameter) teacher-trained network, searched with PUCT plus AHR's bounded tactical reading, was benchmarked against GNU Go and KataGo on 9×9 with 7.5 komi. It beats GNU Go at every level tested and loses every game to KataGo. Both results are shown below.</p>
+    <nav class="research-links" aria-label="Go resources">
+      <a href="./research/go/ahr_v2_research_note/ahr_v2_research_note.pdf">Read the 11-page research note (PDF)</a>
+      <a href="./research/go/ahr_v2_research_note/plotted_win_rates.csv">Win-rate data (CSV)</a>
+      <a href="./research/go/ahr_v2_research_note/ahr_v2_research_note_sources.zip">LaTeX and evidence bundle</a>
+      <a href="./research.html">Back to the research page</a>
+    </nav>
+
+    <div class="stats">
+      <div class="stat"><div class="big win">31 / 40</div><p>wins against GNU Go level 10 in the main benchmark (77.5%; descriptive 95% interval 62.5–87.7%)</p></div>
+      <div class="stat"><div class="big win">31 / 32</div><p>wins against GNU Go levels 1, 5 and 10 in the earlier 128-simulation preliminary runs (15/16, 8/8, 8/8)</p></div>
+      <div class="stat"><div class="big loss">0 / 60</div><p>wins against KataGo at 1, 4 and 16 visits (20 games each); median margins −73.5, −35.5 and −49.0 points</p></div>
+    </div>
+
+    <h2>Win rate by opponent</h2>
+    <div class="panel">
+      <svg viewBox="0 0 760 314" role="img" aria-label="AHR win rate by opponent with Wilson 95% intervals" class="chart">
+<line x1="250.0" y1="14" x2="250.0" y2="284" stroke="#d7e0e7"/><text x="250.0" y="302" text-anchor="middle" font-size="12" fill="#60707d">0%</text>
+<line x1="367.5" y1="14" x2="367.5" y2="284" stroke="#d7e0e7"/><text x="367.5" y="302" text-anchor="middle" font-size="12" fill="#60707d">25%</text>
+<line x1="485.0" y1="14" x2="485.0" y2="284" stroke="#d7e0e7"/><text x="485.0" y="302" text-anchor="middle" font-size="12" fill="#60707d">50%</text>
+<line x1="602.5" y1="14" x2="602.5" y2="284" stroke="#d7e0e7"/><text x="602.5" y="302" text-anchor="middle" font-size="12" fill="#60707d">75%</text>
+<line x1="720.0" y1="14" x2="720.0" y2="284" stroke="#d7e0e7"/><text x="720.0" y="302" text-anchor="middle" font-size="12" fill="#60707d">100%</text>
+<text x="240" y="37.0" text-anchor="end" font-size="13" fill="#172026">GNU Go level 10 — 31/40</text>
+<rect x="250" y="24.0" width="364.2" height="18" fill="#096b72" opacity="1"/>
+<line x1="543.7" y1="33.0" x2="662.1" y2="33.0" stroke="#172026" stroke-width="2"/><line x1="543.7" y1="27.0" x2="543.7" y2="39.0" stroke="#172026" stroke-width="2"/><line x1="662.1" y1="27.0" x2="662.1" y2="39.0" stroke="#172026" stroke-width="2"/>
+<text x="240" y="75.0" text-anchor="end" font-size="13" fill="#172026">KataGo, 1 visit — 0/20</text>
+<rect x="250" y="62.0" width="0.0" height="18" fill="#b64d2a" opacity="1"/>
+<line x1="250.0" y1="71.0" x2="325.7" y2="71.0" stroke="#172026" stroke-width="2"/><line x1="250.0" y1="65.0" x2="250.0" y2="77.0" stroke="#172026" stroke-width="2"/><line x1="325.7" y1="65.0" x2="325.7" y2="77.0" stroke="#172026" stroke-width="2"/>
+<text x="240" y="113.0" text-anchor="end" font-size="13" fill="#172026">KataGo, 4 visits — 0/20</text>
+<rect x="250" y="100.0" width="0.0" height="18" fill="#b64d2a" opacity="1"/>
+<line x1="250.0" y1="109.0" x2="325.7" y2="109.0" stroke="#172026" stroke-width="2"/><line x1="250.0" y1="103.0" x2="250.0" y2="115.0" stroke="#172026" stroke-width="2"/><line x1="325.7" y1="103.0" x2="325.7" y2="115.0" stroke="#172026" stroke-width="2"/>
+<text x="240" y="151.0" text-anchor="end" font-size="13" fill="#172026">KataGo, 16 visits — 0/20</text>
+<rect x="250" y="138.0" width="0.0" height="18" fill="#b64d2a" opacity="1"/>
+<line x1="250.0" y1="147.0" x2="325.7" y2="147.0" stroke="#172026" stroke-width="2"/><line x1="250.0" y1="141.0" x2="250.0" y2="153.0" stroke="#172026" stroke-width="2"/><line x1="325.7" y1="141.0" x2="325.7" y2="153.0" stroke="#172026" stroke-width="2"/>
+<text x="240" y="189.0" text-anchor="end" font-size="13" fill="#172026">GNU Go level 1 — 15/16</text>
+<rect x="250" y="176.0" width="440.6" height="18" fill="#096b72" opacity="0.55"/>
+<line x1="586.9" y1="185.0" x2="714.8" y2="185.0" stroke="#172026" stroke-width="2"/><line x1="586.9" y1="179.0" x2="586.9" y2="191.0" stroke="#172026" stroke-width="2"/><line x1="714.8" y1="179.0" x2="714.8" y2="191.0" stroke="#172026" stroke-width="2"/>
+<text x="240" y="227.0" text-anchor="end" font-size="13" fill="#172026">GNU Go level 5 — 8/8</text>
+<rect x="250" y="214.0" width="470.0" height="18" fill="#096b72" opacity="0.55"/>
+<line x1="567.5" y1="223.0" x2="720.0" y2="223.0" stroke="#172026" stroke-width="2"/><line x1="567.5" y1="217.0" x2="567.5" y2="229.0" stroke="#172026" stroke-width="2"/><line x1="720.0" y1="217.0" x2="720.0" y2="229.0" stroke="#172026" stroke-width="2"/>
+<text x="240" y="265.0" text-anchor="end" font-size="13" fill="#172026">GNU Go level 10 — 8/8</text>
+<rect x="250" y="252.0" width="470.0" height="18" fill="#096b72" opacity="0.55"/>
+<line x1="567.5" y1="261.0" x2="720.0" y2="261.0" stroke="#172026" stroke-width="2"/><line x1="567.5" y1="255.0" x2="567.5" y2="267.0" stroke="#172026" stroke-width="2"/><line x1="720.0" y1="255.0" x2="720.0" y2="267.0" stroke="#172026" stroke-width="2"/>
+</svg>
+      <p class="legend">Dark bars: main benchmark (soft 2 s move budget, ≤512 simulations). Light bars: preliminary runs (fixed 128 simulations). Whiskers: nominal Wilson 95% intervals. They treat games as independent, which they are not (openings are colour-paired), so read them as descriptive.</p>
+    </div>
+
+    <h2>All recorded numbers</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Protocol</th><th>Opponent</th><th class="num">Wins</th><th class="num">Rate</th><th class="num">Wilson 95%</th></tr></thead>
+        <tbody><tr><td>Benchmark (soft 2 s, ≤512 sims)</td><td>GNU Go level 10</td><td class="num">31/40</td><td class="num">77.5%</td><td class="num">62.5–87.7%</td></tr><tr><td>Benchmark (soft 2 s, ≤512 sims)</td><td>KataGo, 1 visit</td><td class="num">0/20</td><td class="num">0.0%</td><td class="num">0.0–16.1%</td></tr><tr><td>Benchmark (soft 2 s, ≤512 sims)</td><td>KataGo, 4 visits</td><td class="num">0/20</td><td class="num">0.0%</td><td class="num">0.0–16.1%</td></tr><tr><td>Benchmark (soft 2 s, ≤512 sims)</td><td>KataGo, 16 visits</td><td class="num">0/20</td><td class="num">0.0%</td><td class="num">0.0–16.1%</td></tr><tr><td>Preliminary (128 sims)</td><td>GNU Go level 1</td><td class="num">15/16</td><td class="num">93.8%</td><td class="num">71.7–98.9%</td></tr><tr><td>Preliminary (128 sims)</td><td>GNU Go level 5</td><td class="num">8/8</td><td class="num">100.0%</td><td class="num">67.6–100.0%</td></tr><tr><td>Preliminary (128 sims)</td><td>GNU Go level 10</td><td class="num">8/8</td><td class="num">100.0%</td><td class="num">67.6–100.0%</td></tr></tbody>
+      </table>
+    </div>
+
+    <h2>Play against AHR</h2>
+    <div class="play">
+      <p><strong>Not available yet.</strong> The trained checkpoint behind these results (<code>step-000008016-c19b207e.pt</code>) lived on a Google VM that has since been stopped, and its weights are still being recovered into backup storage. The recovered record has the code, configurations and results but not the tensor payload, and a hash cannot rebuild weights. I would rather leave this section empty than put a different, weaker network behind the same name.</p>
+      <p>Once the checkpoint is restored, the plan is to export it to run in the browser so anyone can play a 9×9 game against the same engine that produced these numbers.</p>
+    </div>
+
+    <h2>How to read these results</h2>
+    <section class="research-note" aria-label="Limitations">
+      <ul>
+        <li><strong>Teacher-dependent.</strong> The network was initialised by learning from KataGo-generated policy and value targets. This is not evidence that AHR can reach this strength through its own self-play.</li>
+        <li><strong>GNU Go is a weak opponent by modern standards.</strong> Beating level 10 is a real result for a network this small, but it does not imply amateur-dan, Elo or human-rank equivalence.</li>
+        <li><strong>The KataGo gap is large.</strong> A separate earlier model line recorded 3/100 against KataGo at one visit. Neither result estimates the compute needed to close the gap.</li>
+        <li><strong>Attribution is open.</strong> The benchmark did not isolate the contribution of the energy parameterisation, tactical priors, bounded reading or verification scheduling from standard neural tree search.</li>
+        <li><strong>Development-set results.</strong> Checkpoint selection used a development set; no sealed external test or independent replication exists.</li>
+        <li><strong>Soft time budget.</strong> The nominal 2 s per move was a soft target; 93.24% of moves exceeded it (mean 2.009 s).</li>
+        <li><strong>Reconstructed record.</strong> The per-opponent counts were reconciled from the retained diagnostic output and worker aggregate. The original game-by-game report was not available to re-hash.</li>
+      </ul>
+      <p style="margin-bottom:0"><a href="https://github.com/BoredDuffa/ahr-verified-reasoning-demo/blob/main/docs/RESULTS.md">Full results ledger, including the other Go experiments that did not succeed</a></p>
+    </section>
+    <p class="research-footer">The interactive demo on the home page does not use this network. No general reasoning, clinical efficacy, competitive Go rank or official ARC score is claimed.</p>
+  </main>
+</body>
+</html>

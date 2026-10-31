@@ -1,0 +1,8 @@
+protocol,label,wins,games,unknown,rate,wilson_low,wilson_high
+benchmark17_soft2s_cap512,GNU Go level 10,31,40,0,0.775,0.6249690325768998,0.8768390867645927
+benchmark17_soft2s_cap512,"KataGo, 1 visit",0,20,0,0.0,0.0,0.16112515805281938
+benchmark17_soft2s_cap512,"KataGo, 4 visits",0,20,0,0.0,0.0,0.16112515805281938
+benchmark17_soft2s_cap512,"KataGo, 16 visits",0,20,0,0.0,0.0,0.16112515805281938
+preliminary_fixed128,GNU Go level 1,15,16,0,0.9375,0.7167126242970107,0.9888806552353576
+preliminary_fixed128,GNU Go level 5,8,8,0,1.0,0.6755924351161198,1.0
+preliminary_fixed128,GNU Go level 10,8,8,0,1.0,0.6755924351161198,1.0

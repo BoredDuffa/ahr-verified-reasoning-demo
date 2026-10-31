@@ -11,6 +11,7 @@ This repository brings the June browser demonstration together with the subseque
 ## Try and read
 
 - [Research page](https://boredduffa.github.io/ahr-verified-reasoning-demo/research.html)
+- [AHR Go: recorded 9×9 results](https://boredduffa.github.io/ahr-verified-reasoning-demo/go.html) (31/40 vs GNU Go level 10, 0/60 vs KataGo, with limitations)
 - [Interactive exact-reasoning demo](https://boredduffa.github.io/ahr-verified-reasoning-demo/)
 - [Unified mathematical theory, v1.2 — PDF](papers/AHR_Unified_Theory.pdf) and [LaTeX source](papers/AHR_Unified_Theory.tex)
 - [Economics, reward design and the proposed AI-safety study](docs/ECONOMIC_REWARDS.md)
